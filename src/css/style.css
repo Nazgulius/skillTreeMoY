@@ -1,0 +1,93 @@
+.jobTree {
+  display: inline-block;
+  background-color: #bbbbcc;
+  color: #000000;
+  border: solid 1px;
+  background-repeat: no-repeat;
+  padding: 5px;
+}
+
+.skill {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  background-color: yellow;
+  border: solid 1px;
+  margin-bottom: 2px;
+}
+
+.skill-img {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+}
+
+.skill-block {
+  width: 160px;
+  height: 40px;
+}
+
+.skill-name-block {
+  display: flex;
+  height: 20px;
+  background-color: white;
+}
+
+.skill-name {
+  flex: auto;
+  text-align: center;
+  margin: 2px 5px 0px 5px;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.skill-progress {
+  flex: auto;
+  height: 20px;
+  text-align: center;
+  background-color: #add8e6;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 3px 2px;
+}
+
+.dot-reset {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 2px 5px;
+}
+
+.hidden {
+  background-color: blue;
+}
+
+.panel-statistic {
+  display: flex;
+  align-items: center;
+  border: solid 1px;
+  margin-bottom: 10px;
+}
+
+.btn-reset {
+  margin: 5px;
+}
+
+.statistic-text {
+  margin-right: 5px;
+}
