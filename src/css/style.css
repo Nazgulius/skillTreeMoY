@@ -1,5 +1,11 @@
-.jobTree {
-  display: inline-block;
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.job-tree {
+  display: flex;
+  flex-direction: row;
   background-color: #bbbbcc;
   color: #000000;
   border: solid 1px;
@@ -7,9 +13,17 @@
   padding: 5px;
 }
 
+.job-mage {
+  width: 300px;
+}
+
+.job-wizard {
+  width: 300px;
+}
+
 .skill {
   display: flex;
-  width: 200px;
+  width: 220px;
   height: 40px;
   background-color: yellow;
   border: solid 1px;
@@ -23,7 +37,7 @@
 }
 
 .skill-block {
-  width: 160px;
+  width: 180px;
   height: 40px;
 }
 
@@ -40,10 +54,6 @@
   padding: 0;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
 
 .skill-progress {
   flex: auto;
@@ -54,10 +64,10 @@ p {
 
 .line {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
-.dot {
+.dot {  
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -84,10 +94,14 @@ p {
   margin-bottom: 10px;
 }
 
-.btn-reset {
+.bnt-reset {
   margin: 5px;
 }
 
 .statistic-text {
   margin-right: 5px;
+}
+
+.red {
+  background-color: red;  
 }

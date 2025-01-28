@@ -10,93 +10,648 @@
 
 <body>
 
+  <div class="panel-statistic">
+    <button class="bnt-reset">Reset</button>
+    <p class="statistic-text">
+      Итого: <span class="st-total">98</span>
+    </p>
+    <p class="statistic-text">
+      Использовано: <span class="st-used">0</span>
+    </p>
+    <p class="statistic-text">
+      Осталось: <span class="st-balance">0</span>
+    </p>
+  </div>
+  
   <div class="job-tree">
-    <div class="panel-statistic">
-      <button class="btn-reset">Reset</button>
-      <p class="statistic-text">
-        Итого: <span class="t">49</span>
-      </p>
-      <p class="statistic-text">
-        Использовано: <span class="t">0</span>
-      </p>
-      <p class="statistic-text">
-        Осталось: <span class="t">0</span>
-      </p>
-    </div>
-
-    <!--  skill Fire Bolt  -->
-    <div class="skill" id="fireBolt">
-      <img src="" alt="" class="skill-img">
-      <div class="skill-block">
-        <div class="skill-name-block">
-          <p class="skill-name">Fire Bolt</p>
-          <div class="dot-reset"></div>
-        </div>
-        <div class="skill-progress">
-          <div class="line">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+    <div class="job-mage">
+      <!--  skill Fire Bolt  -->
+      <div class="skill" id="fireBolt">
+        <img src="./img/icon_mag.png" alt="Fire Bolt" class="skill-img" style="object-fit: none; object-position: 5px 3px;">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Fire Bolt</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--  skill Fire Ball  -->
-    <div class="skill" id="fireBall">
-      <img src="" alt="" class="skill-img">
-      <div class="skill-block">
-        <div class="skill-name-block">
-          <p class="skill-name">Fire Ball</p>
-          <div class="dot-reset"></div>
-        </div>
-        <div class="skill-progress">
-          <div class="line">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+      <!--  skill Fire Ball  -->
+      <div class="skill" id="fireBall">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Fire Ball</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!--  skill Fire Wall  -->
-    <div class="skill" id="fireWall">
-      <img src="" alt="" class="skill-img">
-      <div class="skill-block">
-        <div class="skill-name-block">
-          <p class="skill-name">Fire Wall</p>
-          <div class="dot-reset"></div>
-        </div>
-        <div class="skill-progress">
-          <div class="line">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+      <!--  skill Fire Wall  -->
+      <div class="skill" id="fireWall">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Fire Wall</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
+      <!-- skill Cold Bolt  -->
+      <div class="skill" id="coldBolt">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Cold Bolt</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- skill Frost Diver  -->
+      <div class="skill" id="frostDiver">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Frost Diver</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- skill Ice Wall  -->
+      <div class="skill" id="iceWall">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Ice Wall</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- skill Lightning Bolt  -->
+      <div class="skill" id="lightningBolt">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Lightning Bolt</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- skill Thunderstorm  -->
+      <div class="skill" id="thunderstorm">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Thunderstorm</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- skill Earth Spike  -->
+      <div class="skill" id="earthSpike">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Earth Spike</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- skill Stone Curse  -->
+      <div class="skill" id="stoneCurse">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Stone Curse</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Soul Strike  -->
+      <div class="skill" id="soulStrike">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Soul Strike</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Napalm Beat  -->
+      <div class="skill" id="napalmBeat">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Napalm Beat</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Safety Wall  -->
+      <div class="skill" id="safetyWall">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Safety Wall</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Increase SP Recovery  -->
+      <div class="skill incSPR" id="incSPRecovery">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Increase SP Recovery</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Sight  -->
+      <div class="skill" id="sight">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Sight</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  <!--  end mage  -->
+    <div class="job-wizard">
+      <!--  skill Sightrasher  -->
+      <div class="skill" id="sightrasher">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Sightrasher</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Meteor Storm  -->
+      <div class="skill" id="meteorStorm">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Meteor Storm</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Fire Pillar  -->
+      <div class="skill" id="firePillar">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Fire Pillar</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Water Ball  -->
+      <div class="skill" id="waterBall">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Water Ball</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Storm Gust  -->
+      <div class="skill" id="stormGust">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Storm Gust</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Frost Nova  -->
+      <div class="skill" id="frostNova">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Frost Nova</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!--  skill Jupitel Thunder  -->
+      <div class="skill" id="jupitelThunder">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Jupitel Thunder</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Lord of Vermilion  -->
+      <div class="skill" id="lordOfVermilion">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Lord of Vermilion</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Electrical Induction  -->
+      <div class="skill" id="electricalInduction">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Electrical Induction</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--  skill Heaven's Drive  -->
+      <div class="skill" id="heavensDrive">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Heaven's Drive</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Violent Quake  -->
+      <div class="skill" id="violentQuake">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Violent Quake</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  skill Quagmire  -->
+      <div class="skill" id="quagmire">
+        <img src="" alt="" class="skill-img">
+        <div class="skill-block">
+          <div class="skill-name-block">
+            <p class="skill-name">Quagmire</p>
+            <div class="dot-reset"></div>
+          </div>
+          <div class="skill-progress">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!--  end wizard  -->
+  </div> <!-- end job-tree  -->
+  
   </div>
 
 </body>
