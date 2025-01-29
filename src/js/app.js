@@ -265,7 +265,8 @@ function checkDependencies(skill) {
       // если зависимый скил меньше нужного, то он устанавливается на нужный лвл
       dependentSkill.element.querySelectorAll('.dot').forEach((dot, index) => {
         if (dep.minLevel === index) { 
-          dotToggle(dot); 
+          dotToggle(dot);
+          dependentSkill.level = index; // устанавливает лвл в зависимостях скиллов
         };
       });
     }
