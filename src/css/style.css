@@ -14,15 +14,24 @@ p {
 }
 
 .job-mage {
-  width: 300px;
+  width: 250px;
 }
 
 .job-wizard {
-  width: 300px;
+  width: 250px;
+}
+
+.job-hwiz {
+  width: 250px;
+}
+
+.job-name {
+  text-align: center;
 }
 
 .skill {
   display: flex;
+  white-space: nowrap;
   width: 220px;
   height: 40px;
   background-color: yellow;

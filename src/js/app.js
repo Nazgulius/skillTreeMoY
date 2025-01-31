@@ -10,12 +10,15 @@ document.querySelector(".bnt-reset").addEventListener("click", () => {
   });
   
   calcUsed();
+  calcUsedMage();
+  calcUsedWizard();
+  calcUsedHWiz();
 });
 
 // проверка зависимостей скилов
-// список скилов
+// список скилов / list skills
 const skills = [
-  {
+  { // skills mage
     id: "fireBolt",
     level: 0, 
     dependencies: [], 
@@ -118,7 +121,7 @@ const skills = [
     dependent: [],
     element: null
   },
-  {
+  { // skills wizard
     id: "sightrasher",
     level: 0,
     dependencies: [{ id: "fireBolt", minLevel: 3 }, { id: "fireBall", minLevel: 2 }], 
@@ -206,7 +209,35 @@ const skills = [
     dependencies: [{ id: "violentQuake", minLevel: 6 }, { id: "heavensDrive", minLevel: 2 }, { id: "stoneCurse", minLevel: 2 }, { id: "earthSpike", minLevel: 3 }], 
     dependent: [], 
     element: null
-  },
+  }, 
+  {  
+    id: "gemmancy",
+    level: 0,
+    dependencies: [], 
+    dependent: [], 
+    element: null
+  }, 
+  {  // skills High Wizard
+    id: "mysticalAmplification",
+    level: 0,
+    dependencies: [], 
+    dependent: [], 
+    element: null
+  }, 
+  {
+    id: "napalmVulcan",
+    level: 0,
+    dependencies: [{ id: "napalmBeat", minLevel: 4 }, { id: "soulStrike", minLevel: 3 }], 
+    dependent: [], 
+    element: null
+  }, 
+  {
+    id: "soulDrain",
+    level: 0,
+    dependencies: [{ id: "incSPRecovery", minLevel: 4 }, { id: "soulStrike", minLevel: 6 }], 
+    dependent: [], 
+    element: null
+  }, 
 ];
 
 // Инициализация и добавление обработчиков событий
@@ -226,6 +257,9 @@ skillElements.forEach((skillElement) => {
       skill.level = index;
       checkDependencies(skill); // Проверяем зависимости
       calcUsed();
+      calcUsedMage();
+      calcUsedWizard();
+      calcUsedHWiz();
     });
   });
 
@@ -246,6 +280,9 @@ skillElements.forEach((skillElement) => {
       
       checkDependent(skillReset); // Проверяем зависимых
       calcUsed();
+      calcUsedMage();
+      calcUsedWizard();
+      calcUsedHWiz();
     });
   });
 });
@@ -308,10 +345,69 @@ function calcUsed() {
   const stText = document.querySelector('.st-used');
   const stBalance = document.querySelector('.st-balance');  
   const panelStatistic = document.querySelector('.panel-statistic');
-  const totalSkillPoint = 98;
+  const totalSkillPoint = 118;
   
   stText.textContent = total.length;
-  if (total.length > 98) {
+  if (total.length > 118) {
+    panelStatistic.classList.add('red');
+  } else {
+    panelStatistic.classList.remove('red');
+  }
+  
+  const a = totalSkillPoint - total.length;
+  
+  stBalance.textContent = totalSkillPoint - total.length;
+}
+
+function calcUsedMage() {
+  const mage = document.querySelector('.job-mage');
+  const total = mage.querySelectorAll('.hidden');
+  const stText = document.querySelector('.st-used-mage');
+  const stBalance = document.querySelector('.st-balance-mage');  
+  const panelStatistic = document.querySelector('.panel-statistic-mage');
+  const totalSkillPoint = 49;
+  
+  stText.textContent = total.length;
+  if (total.length > 49) {
+    panelStatistic.classList.add('red');
+  } else {
+    panelStatistic.classList.remove('red');
+  }
+  
+  const a = totalSkillPoint - total.length;
+  
+  stBalance.textContent = totalSkillPoint - total.length;
+}
+
+function calcUsedWizard() {
+  const mage = document.querySelector('.job-wizard');
+  const total = mage.querySelectorAll('.hidden');
+  const stText = document.querySelector('.st-used-wizard');
+  const stBalance = document.querySelector('.st-balance-wizard');  
+  const panelStatistic = document.querySelector('.panel-statistic-wizard');
+  const totalSkillPoint = 49;
+  
+  stText.textContent = total.length;
+  if (total.length > 49) {
+    panelStatistic.classList.add('red');
+  } else {
+    panelStatistic.classList.remove('red');
+  }
+  
+  const a = totalSkillPoint - total.length;
+  
+  stBalance.textContent = totalSkillPoint - total.length;
+}
+function calcUsedHWiz() {
+  const mage = document.querySelector('.job-hwiz');
+  const total = mage.querySelectorAll('.hidden');
+  const stText = document.querySelector('.st-used-hwiz');
+  const stBalance = document.querySelector('.st-balance-hwiz');  
+  const panelStatistic = document.querySelector('.panel-statistic-hwiz');
+  const totalSkillPoint = 20;
+  
+  stText.textContent = total.length;
+  if (total.length > 20) {
     panelStatistic.classList.add('red');
   } else {
     panelStatistic.classList.remove('red');
