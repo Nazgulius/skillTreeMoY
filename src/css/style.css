@@ -6,6 +6,7 @@ p {
 .job-tree {
   display: flex;
   flex-direction: row;
+  width: 700px;
   background-color: #bbbbcc;
   color: #000000;
   border: solid 1px;
@@ -13,16 +14,23 @@ p {
   padding: 5px;
 }
 
+@media (max-width: 700px) {
+  .job-tree {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .job-mage {
-  width: 250px;
+  width: 222px;
 }
 
 .job-wizard {
-  width: 250px;
+  width: 222px;
 }
 
 .job-hwiz {
-  width: 250px;
+  width: 222px;
 }
 
 .job-name {
@@ -98,6 +106,7 @@ p {
 
 .panel-statistic {
   display: flex;
+  width: 700px;
   align-items: center;
   border: solid 1px;
   margin-bottom: 10px;
