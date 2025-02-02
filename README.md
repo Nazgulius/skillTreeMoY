@@ -14,6 +14,6 @@ v1.0.0 В текущей версии доступен только маг - в�
 
 
 ---
-author Chalyh Maksim 
-data 25.01.2025 
+author Chalyh Maksim  
+data 25.01.2025  
 email: <chalyh.maksim.88@mail.ru> 
