@@ -1,4 +1,4 @@
-/*  author Chalyh Maksim 
+/*  author Chalykh Maksim 
   # data 25.01.2025 
   # email: chalyh.maksim.88@mail.ru */
 
@@ -226,6 +226,6 @@ export const skills = [
 ];
 
 
-/*  author Chalyh Maksim 
+/*  author Chalykh Maksim 
   # data 25.01.2025 
   # email: chalyh.maksim.88@mail.ru */
