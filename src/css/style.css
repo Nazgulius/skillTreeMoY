@@ -14,30 +14,6 @@ p {
   padding: 5px;
 }
 
-@media (max-width: 700px) {
-  .job-tree {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.job-mage {
-  width: 222px;
-}
-
-.job-wizard {
-  width: 222px;
-}
-
-.job-hwiz {
-  width: 222px;
-}
-
-.job-name {
-  text-align: center;
-  margin-right: 10px;
-}
-
 .skill {
   display: flex;
   white-space: nowrap;
@@ -47,6 +23,23 @@ p {
   border: solid 1px;
   margin-bottom: 2px;
 }
+
+.job-mage {
+  width: 224px;
+}
+
+.job-wizard {
+  width: 224px;
+}
+
+.job-hwiz {
+  width: 224px;
+}
+
+.job-name {
+  text-align: center;
+  margin-right: 10px;
+}  
 
 .skill-img {
   width: 40px;
@@ -68,10 +61,9 @@ p {
 .skill-name {
   flex: auto;
   text-align: center;
-  margin: 2px 5px 0px 5px;
+  margin: 2px 0 2px 0;
   padding: 0;
 }
-
 
 .skill-progress {
   flex: auto;
@@ -80,47 +72,85 @@ p {
   background-color: #add8e6;
 }
 
-.line {
-  display: flex;
-  justify-content: center;
+@media (max-width: 699px) {
+  .job-tree {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+
+  .panel-statistic {
+    max-width: 360px;
+  }
+
+  .dot-reset {
+    margin: 2px 2px 0 0;
+  }
+
+  .job-mage {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .job-wizard {
+    width: 300px;
+  }
+  
+  .job-hwiz {
+    width: 300px;
+  }
+
+  .skill {
+    width: 300px;
+  }
+
+  .skill-block {
+    width: 260px;
+  }  
 }
 
-.dot {  
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: gray;
-  margin: 3px 2px;
-}
+  .line {
+    display: flex;
+    justify-content: center;
+  }
 
-.dot-reset {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: red;
-  margin: 2px 5px;
-}
+  .dot {  
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 3px 2px;
+  }
 
-.hidden {
-  background-color: blue;
-}
+  .dot-reset {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 2px 2px 0 0;
+  }
 
-.panel-statistic {
-  display: flex;
-  width: 700px;
-  align-items: center;
-  border: solid 1px;
-  margin-bottom: 10px;
-}
+  .hidden {
+    background-color: blue;
+  }
 
-.bnt-reset {
-  margin: 5px;
-}
+  .panel-statistic {
+    display: flex;
+    width: 710px;
+    align-items: center;
+    border: solid 1px;
+    margin-bottom: 10px;
+  }
 
-.statistic-text {
-  margin-right: 5px;
-}
+  .bnt-reset {
+    margin: 5px;
+  }
 
-.red {
-  background-color: red;  
-}
+  .statistic-text {
+    margin-right: 5px;
+  }
+
+  .red {
+    background-color: red;  
+  }
