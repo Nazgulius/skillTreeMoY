@@ -1,4 +1,6 @@
-// author Chalykh Maksim - 01.02.2025
+/*  author Chalyh Maksim 
+  # data 25.01.2025 
+  # email: chalyh.maksim.88@mail.ru */
 
 export const skills = [
   { // skills mage
@@ -223,4 +225,7 @@ export const skills = [
   }, 
 ];
 
-// author Chalykh Maksim - 01.02.2025
+
+/*  author Chalyh Maksim 
+  # data 25.01.2025 
+  # email: chalyh.maksim.88@mail.ru */

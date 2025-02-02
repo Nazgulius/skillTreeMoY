@@ -1,3 +1,7 @@
+/*  author Chalyh Maksim 
+  # data 25.01.2025 
+  # email: chalyh.maksim.88@mail.ru */
+
 import { skills } from './listSkills';
 
 // btn reset all skills
@@ -206,3 +210,7 @@ function calcUsedHWiz() {
   
   stBalance.textContent = totalSkillPoint - total.length;
 }
+
+/*  author Chalyh Maksim 
+  # data 25.01.2025 
+  # email: chalyh.maksim.88@mail.ru */

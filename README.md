@@ -10,3 +10,10 @@ https://nazgulius.github.io/skillTreeMoY/
 v1.0.0 В текущей версии доступен только маг - визард.  
 
 Калькулятор не завершён и будет подвержен различным изменениям. 
+
+
+
+---
+author Chalyh Maksim 
+data 25.01.2025 
+email: <chalyh.maksim.88@mail.ru> 
