@@ -10,7 +10,7 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
 
   // Spin up a server for quick development
-  devServer: {
+  devServer: { 
     historyApiFallback: true,
     open: true,
     compress: true,
