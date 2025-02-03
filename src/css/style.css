@@ -155,6 +155,7 @@ p {
     border-radius: 50%;
     background-color: gray;
     margin: 3px 2px;
+    cursor: pointer;
   }
 
   .dot-reset {
@@ -163,6 +164,7 @@ p {
     border-radius: 50%;
     background-color: red;
     margin: 2px 2px 0 0;
+    cursor: pointer;
   }
 
   .hidden {
@@ -179,6 +181,7 @@ p {
 
   .bnt-reset {
     margin: 5px;
+    cursor: pointer;
   }
 
   .statistic-text {
