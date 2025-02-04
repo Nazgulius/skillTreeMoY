@@ -55,8 +55,12 @@ module.exports = {
       filename: './index.html',
     }),
     new HtmlWebPackPlugin({
-      template: './src/mageWiz.html',
+      template: './src/html/mageWiz.html',
       filename: './mageWiz.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/mageSage.html',
+      filename: './mageSage.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
