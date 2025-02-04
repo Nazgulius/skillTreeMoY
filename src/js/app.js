@@ -138,10 +138,10 @@ function calcUsed() {
   const stText = document.querySelector('.st-used');
   const stBalance = document.querySelector('.st-balance');  
   const panelStatistic = document.querySelector('.panel-statistic');
-  const totalSkillPoint = 118;
+  const totalSkillPoint = 120;
   
   stText.textContent = total.length;
-  if (total.length > 118) {
+  if (total.length > 120) {
     panelStatistic.classList.add('red');
   } else {
     panelStatistic.classList.remove('red');
@@ -158,10 +158,10 @@ function calcUsedMage() {
   const stText = document.querySelector('.st-used-mage');
   const stBalance = document.querySelector('.st-balance-mage');  
   const panelStatistic = document.querySelector('.panel-statistic-mage');
-  const totalSkillPoint = 49;
+  const totalSkillPoint = 50;
   
   stText.textContent = total.length;
-  if (total.length > 49) {
+  if (total.length > 50) {
     panelStatistic.classList.add('red');
   } else {
     panelStatistic.classList.remove('red');
@@ -178,10 +178,10 @@ function calcUsedWizard() {
   const stText = document.querySelector('.st-used-wizard');
   const stBalance = document.querySelector('.st-balance-wizard');  
   const panelStatistic = document.querySelector('.panel-statistic-wizard');
-  const totalSkillPoint = 49;
+  const totalSkillPoint = 50;
   
   stText.textContent = total.length;
-  if (total.length > 49) {
+  if (total.length > 50) {
     panelStatistic.classList.add('red');
   } else {
     panelStatistic.classList.remove('red');
