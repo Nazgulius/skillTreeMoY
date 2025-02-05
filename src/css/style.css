@@ -7,6 +7,11 @@ p {
   padding: 0;
 }
 
+.centre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .title-select {
   text-align: center;
 }
