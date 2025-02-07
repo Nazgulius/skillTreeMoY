@@ -3,6 +3,7 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import { skills } from './listSkills';
+import { createSkill } from './createSkill';
 
 // btn reset all skills
 document.querySelector(".bnt-reset").addEventListener("click", () => {
@@ -32,6 +33,7 @@ const skillElements = document.querySelectorAll(".skill");
 
 // обработчик события кликапо скилу
 skillElements.forEach((skillElement) => {
+  if (!skillElement) return;
   const skillId = skillElement.id; // Убедитесь, что у каждого sкилла есть уникальный id
   const skill = skills.find((s) => s.id === skillId);
   skill.element = skillElement; // Сохраняем ссылку на HTML элемент
@@ -205,11 +207,17 @@ function calcUsedHWiz() {
   } else {
     panelStatistic.classList.remove('red');
   }
-  
-  const a = totalSkillPoint - total.length;
-  
+    
   stBalance.textContent = totalSkillPoint - total.length;
 }
+
+const skillImg = "../img/icon_mag.png";
+document.querySelector('.job-sage').appendChild(createSkill('scrollbending', 'Scrollbending', 5, skillImg));
+document.querySelector('.job-sage').appendChild(createSkill('scrollbending', 'Scrollbending', 5, skillImg));
+document.querySelector('.job-sage').appendChild(createSkill('scrollbending', 'Scrollbending', 5, skillImg));
+
+
+
 
 /*  author Chalykh Maksim 
   # data 25.01.2025 
