@@ -5,6 +5,109 @@
 
 // список скилов Sage
 export const skillsSage = [
+  { // skills mage
+    id: "fireBolt",
+    level: 0,
+    dependencies: [],
+    dependent: [{ id: "fireBall" }, { id: "fireWall" }, ],
+    element: null
+  },
+  {
+    id: "fireBall",
+    level: 0,
+    dependencies: [{ id: "fireBolt", minLevel: 3 }],
+    dependent: [{ id: "fireWall" }, ],
+    element: null
+  },
+  {
+    id: "fireWall",
+    level: 0,
+    dependencies: [{ id: "fireBolt", minLevel: 3 }, { id: "fireBall", minLevel: 4 }],
+    element: null
+  },
+  {
+    id: "coldBolt",
+    level: 0,
+    dependencies: [],
+    dependent: [{ id: "frostDiver" }, { id: "iceWall" },],
+    element: null
+  },
+  {
+    id: "frostDiver",
+    level: 0,
+    dependencies: [{ id: "coldBolt", minLevel: 3 }],
+    dependent: [{ id: "iceWall" }, ],
+    element: null
+  },
+  {
+    id: "iceWall",
+    level: 0,
+    dependencies: [{ id: "coldBolt", minLevel: 3 }, { id: "frostDiver", minLevel: 4 }],
+    dependent: [],
+    element: null
+  },
+  {
+    id: "lightningBolt",
+    level: 0,
+    dependencies: [],
+    dependent: [{ id: "thunderstorm" }, ],
+    element: null
+  },
+  {
+    id: "thunderstorm",
+    level: 0,
+    dependencies: [{ id: "lightningBolt", minLevel: 3 }],
+    dependent: [],
+    element: null
+  },
+  {
+    id: "earthSpike",
+    level: 0,
+    dependencies: [],
+    dependent: [{ id: "stoneCurse" }, ],
+    element: null
+  },
+  {
+    id: "stoneCurse",
+    level: 0,
+    dependencies: [{ id: "earthSpike", minLevel: 3 }],
+    dependent: [],
+    element: null
+  },
+  {
+    id: "soulStrike",
+    level: 0,
+    dependencies: [],
+    dependent: [{ id: "napalmBeat" }, { id: "safetyWall" }],
+    element: null
+  },
+  {
+    id: "napalmBeat",
+    level: 0,
+    dependencies: [{ id: "soulStrike", minLevel: 3 }],
+    dependent: [{ id: "safetyWall" }],
+    element: null
+  },
+  {
+    id: "safetyWall",
+    level: 0,
+    dependencies: [{ id: "soulStrike", minLevel: 6 }, { id: "napalmBeat", minLevel: 4 }],
+    element: null
+  },
+  {
+    id: "incSPRecovery",
+    level: 0,
+    dependencies: [],
+    dependent: [],
+    element: null
+  },
+  {
+    id: "sight",
+    level: 0,
+    dependencies: [],
+    dependent: [],
+    element: null
+  },
   {
     id: "advancedBook",
     level: 0,
@@ -107,6 +210,17 @@ export const skillsSage = [
     id: "spellwish",
     level: 0,
     dependencies: [{ id: "advancedBook", minLevel: 1 }, { id: "castCancel", minLevel: 0 }, { id: "freeCast", minLevel: 3 }],
+    dependent: [],
+    element: null
+  },
+  {
+    id: "scrollbending",
+    level: 0,
+    dependencies: [
+      { id: "advancedBook", minLevel: 1 }, 
+      { id: "castCancel", minLevel: 0 }, 
+      { id: "freeCast", minLevel: 3 
+    }],
     dependent: [],
     element: null
   },

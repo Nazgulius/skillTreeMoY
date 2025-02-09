@@ -68,15 +68,15 @@ p {
   margin-bottom: 2px;
 }
 
-.job-mage {
+.job-one {
   width: 224px;
 }
 
-.job-wizard {
+.job-two {
   width: 224px;
 }
 
-.job-hwiz {
+.job-two-hight {
   width: 224px;
 }
 
@@ -131,17 +131,17 @@ p {
     margin: 2px 2px 0 0;
   }
 
-  .job-mage {
+  .job-one {
     display: flex;
     flex-direction: column;
     width: 300px;
   }
   
-  .job-wizard {
+  .job-two {
     width: 300px;
   }
   
-  .job-hwiz {
+  .job-two-hight {
     width: 300px;
   }
 

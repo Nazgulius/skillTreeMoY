@@ -4,8 +4,8 @@
 
 // skills mage
 
-export const skills = [
-  {
+export const skillsWiz = [
+  { // skills mage
     id: "fireBolt",
     level: 0,
     dependencies: [],
@@ -43,7 +43,7 @@ export const skills = [
     id: "iceWall",
     level: 0,
     dependencies: [{ id: "coldBolt", minLevel: 3 }, { id: "frostDiver", minLevel: 4 }],
-    dependent: [{ id: "fireWall" }],
+    dependent: [],
     element: null
   },
   {
