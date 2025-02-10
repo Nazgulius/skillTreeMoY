@@ -2,7 +2,7 @@
   # data 25.01.2025 
   # email: chalyh.maksim.88@mail.ru */
 
-// skills wizard
+// skills Wizard
 
 export const skillsWiz = [   
   { 

@@ -2,7 +2,7 @@
   # data 10.02.2025 
   # email: chalyh.maksim.88@mail.ru */
 
-// skills mage
+// skills Mage
 export const skillsMage = [
   { 
     id: "fireBolt",
@@ -30,6 +30,7 @@ export const skillsMage = [
     [Lv 8]: 8 Hits, SP Consumption: 26,
     [Lv 9]: 9 Hits, SP Consumption: 28,
     [Lv 10]: 10 Hits, SP Consumption: 30`,
+    img: '../img/icon_mag.png',
   },
   {
     id: "fireBall",

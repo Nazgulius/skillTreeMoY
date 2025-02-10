@@ -62,6 +62,14 @@ module.exports = {
       template: './src/html/mageSage.html',
       filename: './mageSage.html',
     }),
+    new HtmlWebPackPlugin({
+      template: './src/html/merchantAlchemist.html',
+      filename: './merchantAlchemist.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/merchantBlacksmith.html',
+      filename: './merchantBlacksmith.html',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',

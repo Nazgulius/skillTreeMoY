@@ -18,7 +18,7 @@ p {
 
 .class-list {
   display: flex;
-  flex-direction: row; 
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -26,6 +26,7 @@ p {
   width: 300px;
   height: 150px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .button-select-mage-img {
@@ -35,6 +36,16 @@ p {
 .button-select-sage-img {
   background-image: url(../img/mage_class_h2.png);
 }
+
+.button-select-merchant-alchemist-img {
+  background-image: url(../img/merchant_class_h1.png);
+}
+
+.button-select-merchant-blacksmith-img {
+  background-image: url(../img/merchant_class_h2.png);
+}
+
+
 
 .button-select-img {
   width: 300px;
@@ -50,7 +61,7 @@ p {
 .job-tree {
   display: flex;
   flex-direction: row;  
-  width: 700px;
+  width: 780px;
   background-color: #bbbbcc;
   color: #000000;
   border: solid 1px;
@@ -61,7 +72,7 @@ p {
 .skill {
   display: flex;
   white-space: nowrap;
-  width: 220px;
+  width: 250px;
   height: 40px;
   background-color: yellow;
   border: solid 1px;
@@ -69,15 +80,15 @@ p {
 }
 
 .job-one {
-  width: 224px;
+  width: 254px;
 }
 
 .job-two {
-  width: 224px;
+  width: 254px;
 }
 
 .job-two-hight {
-  width: 224px;
+  width: 254px;
 }
 
 .job-name {
@@ -92,7 +103,7 @@ p {
 }
 
 .skill-block {
-  width: 180px;
+  width: 210px;
   height: 40px;
 }
 
@@ -166,6 +177,10 @@ p {
     background-color: gray;
     margin: 3px 2px;
     cursor: pointer;
+  }
+
+  .dot:hover {
+    background-color: rgb(81, 81, 252);
   }
 
   .dot-reset {
