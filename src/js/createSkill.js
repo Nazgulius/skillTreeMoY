@@ -2,13 +2,13 @@
   # data 05.02.2025 
   # email: chalyh.maksim.88@mail.ru */
 
-export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {  
+export function createSkill (skillName, skillNameAll, maxLevel, skillImg) { 
   const skillDiv = document.createElement('div');  
   skillDiv.className = 'skill';  
   skillDiv.id = skillName;  
 
   const img = document.createElement('img');  
-  img.src = skillImg; // Укажите путь к изображению  
+  img.src = skillImg; 
   img.alt = skillNameAll;  
   img.className = 'skill-img';  
 
@@ -43,7 +43,7 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
 
   // const jobSageDOM = document.querySelector('.job-sage');
   // jobSageDOM.appendChild(skillDiv); // куда вставить skillDiv  
-
+  
   return skillDiv;
 }  
 
