@@ -45,6 +45,14 @@ p {
   background-image: url(../img/merchant_class_h2.png);
 }
 
+.button-select-acolyte-priest-img {
+  background-image: url(../img/acolyte_class_h1.png);
+}
+
+.button-select-acolyte-monk-img {
+  background-image: url(../img/acolyte_class_h2.png);
+}
+
 
 
 .button-select-img {

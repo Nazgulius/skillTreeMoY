@@ -70,6 +70,14 @@ module.exports = {
       template: './src/html/merchantBlacksmith.html',
       filename: './merchantBlacksmith.html',
     }),
+    new HtmlWebPackPlugin({
+      template: './src/html/acolyteMonk.html',
+      filename: './acolyteMonk.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/acolytePriest.html',
+      filename: './acolytePriest.html',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
