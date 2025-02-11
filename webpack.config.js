@@ -78,6 +78,34 @@ module.exports = {
       template: './src/html/acolytePriest.html',
       filename: './acolytePriest.html',
     }),
+    new HtmlWebPackPlugin({
+      template: './src/html/swordmanCrusader.html',
+      filename: './swordmanCrusader.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/swordmanKnight.html',
+      filename: './swordmanKnight.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/thiefAssassin.html',
+      filename: './thiefAssassin.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/thiefRogue.html',
+      filename: './thiefRogue.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/archerHunter.html',
+      filename: './archerHunter.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/archerBard.html',
+      filename: './archerBard.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/html/archerDancer.html',
+      filename: './archerDancer.html',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',

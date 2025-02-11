@@ -4,8 +4,8 @@
 
 // skills Wizard Hight
 
-export const skillsWizHight = [
-  {  // skills High Wizard
+export const skillsWizardHight = [
+  {  
     id: "mysticalAmplification",
     level: 0,
     dependencies: [],

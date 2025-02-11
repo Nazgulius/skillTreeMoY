@@ -53,6 +53,34 @@ p {
   background-image: url(../img/acolyte_class_h2.png);
 }
 
+.button-select-swordman-crusader-img {
+  background-image: url(../img/swordman_class_h1.png);
+}
+
+.button-select-swordman-knight-img {
+  background-image: url(../img/swordman_class_h2.png);
+}
+
+.button-select-thief-assassin-img {
+  background-image: url(../img/thief_class_h1.png);
+}
+
+.button-select-thief-rogue-img {
+  background-image: url(../img/thief_class_h2.png);
+}
+
+.button-select-archer-hunter-img {
+  background-image: url(../img/archer_class_h1.png);
+}
+
+.button-select-archer-bard-img {
+  background-image: url(../img/archer_class_h2.png);
+}
+
+.button-select-archer-dancer-img {
+  background-image: url(../img/archer_class_h3.png);
+}
+
 
 
 .button-select-img {

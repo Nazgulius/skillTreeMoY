@@ -4,7 +4,7 @@
 
 // skills Wizard
 
-export const skillsWiz = [   
+export const skillsWizard = [   
   { 
     id: "sightrasher",
     level: 0,
