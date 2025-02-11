@@ -30,12 +30,12 @@ export const skillsMerchant = [
     [Lv 10]: One Handed Atk +20, Two Handed Atk +30, 2nd Class Additional Atk +10`,
   },
   {
-    id: "Mammonite",
+    id: "mammonite",
     level: 0,
     dependencies: [],
     dependent: [ ],
     element: null,
-    skillName: "mammonite",
+    skillName: "Mammonite",
     maxLevel: 10,
     inform: `Max Lv: 10
     Skill Form: Active

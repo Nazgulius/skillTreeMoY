@@ -52,102 +52,157 @@ export default class App {
     // ждём загрузку DOM елементов
     //document.addEventListener("DOMContentLoaded", () => {
 
-      // обработчик события клика по скилу
-      document.querySelectorAll(".skill").forEach((skillElement) => {
-        if (!skillElement) return;
-        const skillId = skillElement.id; // у каждого sкилла есть уникальный id
-        const allSkills = [
-          ...this._skillsJobOne,
-          ...this._skillsJobTwo,
-          ...this._skillsJobTwoHight,
-        ];
+    // обработчик события клика по скилу
+    document.querySelectorAll(".skill").forEach((skillElement) => {
+      if (!skillElement) return;
+      const skillId = skillElement.id; // у каждого sкилла есть уникальный id
+      const allSkills = [
+        ...this._skillsJobOne,
+        ...this._skillsJobTwo,
+        ...this._skillsJobTwoHight,
+      ];
 
-        const skill = allSkills.find((s) => s.id === skillId);
-        skill.element = skillElement; // Сохраняем ссылку на HTML элемент
-        
+      const skill = allSkills.find((s) => s.id === skillId);
+      skill.element = skillElement; // Сохраняем ссылку на HTML элемент
 
-        const dotArray = skillElement.querySelectorAll(".dot");
-        const dotResetArray = skillElement.querySelectorAll(".dot-reset");
 
-        dotArray.forEach((dot, index) => {
-          dot.addEventListener("click", () => {
-            this.dotToggle(dot);
-            skill.level = index;
-            this.checkDependencies(skill); // Проверяем зависимости
-            //this.checkDependent(skill); // Проверяем зависимых
+      const dotArray = skillElement.querySelectorAll(".dot");
+      const dotResetArray = skillElement.querySelectorAll(".dot-reset");
 
-            // считаем количество поинтов
-            this.calcUsed();
-            this.calcUsedJobOne();
-            this.calcUsedJobTwo();
-            this.calcUsedJobTwoHight();
-          });
-        });
+      dotArray.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          this.dotToggle(dot);
+          skill.level = index;
+          this.checkDependencies(skill); // Проверяем зависимости
+          //this.checkDependent(skill); // Проверяем зависимых
 
-        dotResetArray.forEach((resetBtn) => {
-          resetBtn.addEventListener("click", () => {
-            const skillDiv = resetBtn.closest('.skill');// Находим родительский элемент .skill 
-            const allSkills = [
-              ...this._skillsJobOne,
-              ...this._skillsJobTwo,
-              ...this._skillsJobTwoHight,
-            ];
-    
-            const skillReset = allSkills.find((s) => s.id === skillDiv.id);
-
-            //const skillReset = this._skills.find((s) => s.id === skillDiv.id);
-
-            skillReset.level = 0;
-            if (skillReset.dependent) {
-              skillReset.dependent.forEach((sr) => {
-                const allSkills = [
-                  ...this._skillsJobOne,
-                  ...this._skillsJobTwo,
-                  ...this._skillsJobTwoHight,
-                ];
-                const sReset = allSkills.find((s) => s.id === sr.id);
-                sReset.level = 0;
-              });
-            }
-
-            dotArray.forEach((dot) => {
-              dot.classList.remove("hidden");
-            });
-
-            this.checkDependent(skillReset); // Проверяем зависимых
-
-            // считаем количество поинтов
-            this.calcUsed();
-            this.calcUsedJobOne();
-            this.calcUsedJobTwo();
-            this.calcUsedJobTwoHight();
-          });
+          // считаем количество поинтов
+          this.calcUsed();
+          this.calcUsedJobOne();
+          this.calcUsedJobTwo();
+          this.calcUsedJobTwoHight();
         });
       });
 
-      // btn reset all skills
-      document.querySelector(".bnt-reset").addEventListener("click", () => {
-        const allDot = document.querySelectorAll(".dot");
-        for (let i = 0; i < allDot.length; i++) {
-          allDot[i].classList.remove("hidden");
+      dotResetArray.forEach((resetBtn) => {
+        resetBtn.addEventListener("click", () => {
+          const skillDiv = resetBtn.closest('.skill');// Находим родительский элемент .skill 
+          const allSkills = [
+            ...this._skillsJobOne,
+            ...this._skillsJobTwo,
+            ...this._skillsJobTwoHight,
+          ];
+
+          const skillReset = allSkills.find((s) => s.id === skillDiv.id);
+
+          //const skillReset = this._skills.find((s) => s.id === skillDiv.id);
+
+          skillReset.level = 0;
+          if (skillReset.dependent) {
+            skillReset.dependent.forEach((sr) => {
+              const allSkills = [
+                ...this._skillsJobOne,
+                ...this._skillsJobTwo,
+                ...this._skillsJobTwoHight,
+              ];
+              const sReset = allSkills.find((s) => s.id === sr.id);
+              sReset.level = 0;
+            });
+          }
+
+          dotArray.forEach((dot) => {
+            dot.classList.remove("hidden");
+          });
+
+          this.checkDependent(skillReset); // Проверяем зависимых
+
+          // считаем количество поинтов
+          this.calcUsed();
+          this.calcUsedJobOne();
+          this.calcUsedJobTwo();
+          this.calcUsedJobTwoHight();
+        });
+      });
+
+
+
+    });
+
+    // находим все картинки и вешаем на них слушателя клика или наведения мыши
+    // по клику или наведению отображаем подсказку inform из базы
+    const skillImgAll = document.querySelectorAll('.skill-img');
+    const allSkills2 = [
+      ...this._skillsJobOne,
+      ...this._skillsJobTwo,
+      ...this._skillsJobTwoHight,
+    ];
+
+    skillImgAll.forEach((eImg) => {
+      eImg.addEventListener('click', (e) => {
+        // Проверяем, уже есть ли попап  
+        const existingPop = document.querySelector('.ePopDiv');
+        if (existingPop) {
+          existingPop.remove(); // Убираем существующий попап, если есть  
         }
 
-        this._skillsJobOne.forEach((s) => {
-          s.level = 0;
-        });
-        this._skillsJobTwo.forEach((s) => {
-          s.level = 0;
-        });
-        this._skillsJobTwoHight.forEach((s) => {
-          s.level = 0;
-        });
+        const eSkill = allSkills2.find((s) => s.id === eImg.parentElement.id); // находим нужный скил
 
-        // считаем количество поинтов
-        this.calcUsed();
-        this.calcUsedJobOne();
-        this.calcUsedJobTwo();
-        this.calcUsedJobTwoHight();
+        // создаём элемент и информацией
+        const ePopDiv = document.createElement('div');
+        ePopDiv.className = 'ePopDiv';
+        ePopDiv.textContent = eSkill.inform;
+        ePopDiv.style.position = 'absolute';
+
+        // Вычисляем позицию попапа  
+        const popX = e.clientX;  
+        const popY = e.clientY + 30;  
+
+        // Проверка границ экрана  
+        const popDivWidth = 600; // Ширина попапа (max-width в CSS)  
+        const viewportWidth = window.innerWidth;  
+        const viewportHeight = window.innerHeight;  
+
+        // Устанавливаем позицию X  
+        ePopDiv.style.left = Math.min(popX, viewportWidth - popDivWidth - 20) + 'px'; // Отступ для избежания выхода за границы экрана  
+        // Устанавливаем позицию Y  
+        ePopDiv.style.top = Math.min(popY, viewportHeight - ePopDiv.offsetHeight - 20) + 'px'; // Отступ для избежания выхода за границы экрана  
+
+        eImg.parentElement.appendChild(ePopDiv); // добавляем pop к элементу скилл
+
+        // Добавляем обработчик на клик вне попапа  
+        document.addEventListener('click', function handleClickOutside(event) {
+          // Проверяем, кликнули ли вне попапа  
+          if (!ePopDiv.contains(event.target) && event.target !== eImg) {
+            ePopDiv.remove(); // Убираем попап  
+            document.removeEventListener('click', handleClickOutside); // Убираем обработчик  
+          }
+        });
       });
+    });
+
+    // btn reset all skills
+    document.querySelector(".bnt-reset").addEventListener("click", () => {
+      const allDot = document.querySelectorAll(".dot");
+      for (let i = 0; i < allDot.length; i++) {
+        allDot[i].classList.remove("hidden");
+      }
+
+      this._skillsJobOne.forEach((s) => {
+        s.level = 0;
+      });
+      this._skillsJobTwo.forEach((s) => {
+        s.level = 0;
+      });
+      this._skillsJobTwoHight.forEach((s) => {
+        s.level = 0;
+      });
+
+      // считаем количество поинтов
+      this.calcUsed();
+      this.calcUsedJobOne();
+      this.calcUsedJobTwo();
+      this.calcUsedJobTwoHight();
+    });
     //});
   }
 

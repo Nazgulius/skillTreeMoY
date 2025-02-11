@@ -8,7 +8,8 @@ https://nazgulius.github.io/skillTreeMoY/
 ### Описание  
 Калькулятор очков навыков (skill points) для нагладного подсчёта навыков и построения билда в игре Ragnarök Online на сервере Myth Of Yggdrasil.  
 
-v1.2.0 В текущей версии доступены все актуальгные классы / Job Classes: 
+v1.2.1 В текущей версии:  
+1) Доступены все актуальгные классы / Job Classes: 
 - Acolyte - Monk - Champion
 - Acolyte - Priest - High Priest
 - Archer - Hunter - Sniper
@@ -22,6 +23,8 @@ v1.2.0 В текущей версии доступены все актуальг
 - Swordman - Knight - Lord Knight
 - Thief - Assassin - Assassin Cross
 - Thief - Rogue - Stalker
+  
+2) Доступно опиание скиллов при нажатии на картинке.  
 
 
 Калькулятор не завершён и будет подвержен различным изменениям.  

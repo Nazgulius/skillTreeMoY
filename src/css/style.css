@@ -98,7 +98,7 @@ p {
   display: flex;
   flex-direction: row;  
   width: 780px;
-  background-color: #bbbbcc;
+  background-color: #d6d4d4;
   color: #000000;
   border: solid 1px;
   background-repeat: no-repeat;
@@ -113,6 +113,7 @@ p {
   background-color: yellow;
   border: solid 1px;
   margin-bottom: 2px;
+  
 }
 
 .job-one {
@@ -136,6 +137,12 @@ p {
   width: 40px;
   height: 40px;
   background-color: rgb(255, 255, 255);
+  position: relative;
+  box-sizing: border-box; 
+}
+
+.skill-img:hover {
+  border: solid rgb(252, 229, 127) 3px;  
 }
 
 .skill-block {
@@ -252,6 +259,30 @@ p {
   .red {
     background-color: red;  
   }
+
+
+.ePopDiv {
+  max-width: 600px;
+  width: auto;
+  height: auto;
+  border: solid #000000 3px;
+  background-color: rgb(250, 248, 229);  
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 3px;
+
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0px;
+
+  /* Скрывает переполнение текста   */
+  overflow: hidden; 
+  /* Переносит длинные слова на следующую строку */  
+  word-wrap: break-word; 
+  /* Позволяет перенос строк и сохраняет нужные переносы */    
+  white-space: pre-wrap; 
+}
+
 
 /*  author Chalykh Maksim 
   # data 25.01.2025 
