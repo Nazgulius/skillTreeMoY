@@ -22,7 +22,8 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   nameParagraph.textContent = skillNameAll;  
 
   skillNameBlock.appendChild(nameParagraph);  
-  skillNameBlock.appendChild(document.createElement('div')).className = 'dot-reset';  
+  // skillNameBlock.appendChild(document.createElement('div')).className = 'dot-reset';  
+ 
 
   const skillProgress = document.createElement('div');  
   skillProgress.className = 'skill-progress';  
@@ -34,8 +35,9 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
       dot.className = 'dot';  
       lineDiv.appendChild(dot);  
   }  
-
+  
   skillProgress.appendChild(lineDiv);  
+  skillProgress.appendChild(document.createElement('div')).className = 'dot-reset';  
   skillBlock.appendChild(skillNameBlock);  
   skillBlock.appendChild(skillProgress);  
   skillDiv.appendChild(img);  

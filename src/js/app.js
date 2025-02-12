@@ -158,7 +158,7 @@ export default class App {
         const popY = e.clientY + 30;  
 
         // Проверка границ экрана  
-        const popDivWidth = 600; // Ширина попапа (max-width в CSS)  
+        const popDivWidth = 200; // Ширина попапа (max-width в CSS)  
         const viewportWidth = window.innerWidth;  
         const viewportHeight = window.innerHeight;  
 
