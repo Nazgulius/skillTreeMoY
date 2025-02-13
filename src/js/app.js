@@ -218,7 +218,7 @@ export default class App {
       const dependentSkill = allSkills.find((s) => s.id === dep.id);
 
       // Проверяем, достигнут ли минимальный уровень
-      const isLevelMet = dependentSkill.level >= dep.minLevel;
+      const isLevelMet = dependentSkill.level > dep.minLevel;
 
       if (isLevelMet && dependentSkill.element) {
         // Если зависимый скил больше нужного, ...

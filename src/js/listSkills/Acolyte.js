@@ -4,11 +4,111 @@
 
 
 // список скилов Acolyte
-export const skillsAcolyte = [  
+export const skillsAcolyte = [ 
+  
+  {
+    id: "divineProtection",
+    level: 0,
+    dependencies: [],
+    dependent: [{ id: "angelus" }, { id: "blessing" }, { id: "demonBane" },],
+    element: null,
+    skillName: "Divine Protection",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+    Skill Form: Passive
+    Type: Physical
+    Requirement: None
+    Description: Passively raises Soft Defense and Soft Magic Defense against Demon and Undead race monsters. Base level affects damage reduction. When receiving damage from Demon and Undead race monsters, there is a chance to activate the Divine Protection effect for 10 seconds. This effect reduces the next damage you receive from Demon and Undead race monsters, with the reduction being equal to half of your base level in %.
+    [Lv 1]: Reduction: 3 + Base Level, Chance of effect: 1%,
+    [Lv 2]: Reduction: 6 + Base Level, Chance of effect: 2%,
+    [Lv 3]: Reduction: 9 + Base Level, Chance of effect: 3%,
+    [Lv 4]: Reduction: 12 + Base Level, Chance of effect: 4%,
+    [Lv 5]: Reduction: 15 + Base Level, Chance of effect: 5%,
+    [Lv 6]: Reduction: 18 + Base Level, Chance of effect: 6%,
+    [Lv 7]: Reduction: 21 + Base Level, Chance of effect: 7%,
+    [Lv 8]: Reduction: 24 + Base Level, Chance of effect: 8%,
+    [Lv 9]: Reduction: 27 + Base Level, Chance of effect: 9%,
+    [Lv 10]: Reduction: 30 + Base Level, Chance of effect: 10%`,
+  }, 
+  {
+    id: "demonBane",
+    level: 0,
+    dependencies: [{ id: "divineProtection", minLevel: 2 }],
+    dependent: [],
+    element: null,
+    skillName: "Demon Bane",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+    Skill Form: Passive
+    Type: Physical
+    Requirement: Divine Protection Lv: 3
+    Description: Passively raises damage against Demon and Undead race monsters. Base level affects damage bonus. Damage increased by this skill is added after final damage is calculated. When attacking Demon and Undead race monsters, there is a chance to activate the Demon Bane effect for 10 seconds. This effect increases the damage of your next attack or skill in Demon and Undead race monsters, with the increased damage being equal to half of your base level in %.
+    [Lv 1]: Damage: 3 + Base Level, Chance of effect: 1%,
+    [Lv 2]: Damage: 6 + Base Level, Chance of effect: 2%,
+    [Lv 3]: Damage: 9 + Base Level, Chance of effect: 3%,
+    [Lv 4]: Damage: 12 + Base Level, Chance of effect: 4%,
+    [Lv 5]: Damage: 15 + Base Level, Chance of effect: 5%,
+    [Lv 6]: Damage: 18 + Base Level, Chance of effect: 6%,
+    [Lv 7]: Damage: 21 + Base Level, Chance of effect: 7%,
+    [Lv 8]: Damage: 24 + Base Level, Chance of effect: 8%,
+    [Lv 9]: Damage: 27 + Base Level, Chance of effect: 9%,
+    [Lv 10]: Damage: 30 + Base Level, Chance of effect: 10%`,
+  },
+  {
+    id: "heal",
+    level: 0,
+    dependencies: [],
+    dependent: [
+      { id: "cure" },
+      { id: "increaseAgility" },
+      { id: "decreaseAgility" },
+    ], 
+    element: null,
+    skillName: "Heal",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+    Skill Form: Active
+    Type: Magical
+    Target: Ally
+    Range: 9
+    Requirement: None
+    Description: Restores HP of a single target. This skill is affected by Base Level, INT and MAtk. Versus Corrupt property targets, inflicts Holy property damage equal 75% the amount of the HP restored.
+    [Lv 1]: SP Cost: 13,
+    [Lv 2]: SP Cost: 16,
+    [Lv 3]: SP Cost: 19,
+    [Lv 4]: SP Cost: 22,
+    [Lv 5]: SP Cost: 25,
+    [Lv 6]: SP Cost: 28,
+    [Lv 7]: SP Cost: 31,
+    [Lv 8]: SP Cost: 34,
+    [Lv 9]: SP Cost: 37,
+    [Lv 10]: SP Cost: 40`,
+  },
+  {
+    id: "cure",
+    level: 0,
+    dependencies: [{ id: "heal", minLevel: 1 }],
+    dependent: [],
+    element: null,
+    skillName: "Cure",
+    maxLevel: 5,
+    inform: `Max Lv: 1 (or 5)
+    Skill Form: Active
+    Type: Magical
+    Target: Ally
+    Range: 9
+    Requirement: Heal Lv: 2
+    Description: Attempts to cleanse a single target from the Silence, Chaos and Blind status. If successful, grants a temporary 20% increase in resistance to the cured status. Caster INT and Base Level, target INT or LUK and Base Level increases chance of cleanse. This skill is initially learned at Level 1, with higher levels unlocked through special items.
+    [Lv 1]: Resistance duration: 10 seconds. Cooldown: 3 seconds,
+    [Lv 2]: Resistance duration: 20 seconds. Cooldown: 2.5 seconds,
+    [Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
+    [Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
+    [Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
+  },
   {
     id: "angelus",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "divineProtection", minLevel: 2 }],
     dependent: [],
     element: null,
     skillName: "Angelus",
@@ -33,7 +133,7 @@ export const skillsAcolyte = [
   {
     id: "blessing",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "divineProtection", minLevel: 4 }],
     dependent: [],
     element: null,
     skillName: "Blessing",
@@ -57,30 +157,35 @@ export const skillsAcolyte = [
     [Lv 10]: STR, INT, DEX +10, Variable Cast Time -10%`,
   },
   {
-    id: "cure",
+    id: "increaseAgility",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [{ id: "heal", minLevel: 2 }],
+    dependent: [{ id: "decreaseAgility" }],
     element: null,
-    skillName: "Cure",
-    maxLevel: 5,
-    inform: `Max Lv: 1 (or 5)
+    skillName: "Increase Agility",
+    maxLevel: 10,
+    inform: `Max Lv: 10
     Skill Form: Active
     Type: Magical
     Target: Ally
     Range: 9
-    Requirement: Heal Lv: 2
-    Description: Attempts to cleanse a single target from the Silence, Chaos and Blind status. If successful, grants a temporary 20% increase in resistance to the cured status. Caster INT and Base Level, target INT or LUK and Base Level increases chance of cleanse. This skill is initially learned at Level 1, with higher levels unlocked through special items.
-    [Lv 1]: Resistance duration: 10 seconds. Cooldown: 3 seconds,
-    [Lv 2]: Resistance duration: 20 seconds. Cooldown: 2.5 seconds,
-    [Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
-    [Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
-    [Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
-  },
+    Requirement: Heal Lv: 3
+    Description: Increases targeted characters AGI, Movement and Attack Speed for the duration of skill. Additionally, the bonus of AGI increases by +1 for every 14 job levels of the user. Drains 15 HP from the caster after each cast. When used on target that affected by Decrease Agility status, this skill will release target from that. When the user becomes a High Priest, Increase agility becomes a 5x5 area effect around the target, but the SP cost increases by 2 for each affected target. Duration of this ability is 240 seconds.
+    [Lv 1]: AGI +1, Atk Speed: +1%,
+    [Lv 2]: AGI +2, Atk Speed: +2%,
+    [Lv 3]: AGI +3, Atk Speed: +3%,
+    [Lv 4]: AGI +4, Atk Speed: +4%,
+    [Lv 5]: AGI +5, Atk Speed: +5%,
+    [Lv 6]: AGI +6, Atk Speed: +6%,
+    [Lv 7]: AGI +7, Atk Speed: +7%,
+    [Lv 8]: AGI +8, Atk Speed: +8%,
+    [Lv 9]: AGI +9, Atk Speed: +9%,
+    [Lv 10]: AGI +10, Atk Speed: +10%`,
+  },  
   {
     id: "decreaseAgility",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "increaseAgility", minLevel: 0 }],
     dependent: [],
     element: null,
     skillName: "Decrease Agility",
@@ -102,80 +207,6 @@ export const skillsAcolyte = [
     [Lv 8]: AGI -8, Movement Speed: -8%, Duration: 50 Seconds,
     [Lv 9]: AGI -9, Movement Speed: -9%, Duration: 55 Seconds,
     [Lv 10]: AGI -10, Movement Speed: -10%, Duration: 60 Seconds`,
-  },
-  {
-    id: "demonBane",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Demon Bane",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-    Skill Form: Passive
-    Type: Physical
-    Requirement: Divine Protection Lv: 3
-    Description: Passively raises damage against Demon and Undead race monsters. Base level affects damage bonus. Damage increased by this skill is added after final damage is calculated. When attacking Demon and Undead race monsters, there is a chance to activate the Demon Bane effect for 10 seconds. This effect increases the damage of your next attack or skill in Demon and Undead race monsters, with the increased damage being equal to half of your base level in %.
-    [Lv 1]: Damage: 3 + Base Level, Chance of effect: 1%,
-    [Lv 2]: Damage: 6 + Base Level, Chance of effect: 2%,
-    [Lv 3]: Damage: 9 + Base Level, Chance of effect: 3%,
-    [Lv 4]: Damage: 12 + Base Level, Chance of effect: 4%,
-    [Lv 5]: Damage: 15 + Base Level, Chance of effect: 5%,
-    [Lv 6]: Damage: 18 + Base Level, Chance of effect: 6%,
-    [Lv 7]: Damage: 21 + Base Level, Chance of effect: 7%,
-    [Lv 8]: Damage: 24 + Base Level, Chance of effect: 8%,
-    [Lv 9]: Damage: 27 + Base Level, Chance of effect: 9%,
-    [Lv 10]: Damage: 30 + Base Level, Chance of effect: 10%`,
-  },
-  {
-    id: "divineProtection",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Divine Protection",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-    Skill Form: Passive
-    Type: Physical
-    Requirement: None
-    Description: Passively raises Soft Defense and Soft Magic Defense against Demon and Undead race monsters. Base level affects damage reduction. When receiving damage from Demon and Undead race monsters, there is a chance to activate the Divine Protection effect for 10 seconds. This effect reduces the next damage you receive from Demon and Undead race monsters, with the reduction being equal to half of your base level in %.
-    [Lv 1]: Reduction: 3 + Base Level, Chance of effect: 1%,
-    [Lv 2]: Reduction: 6 + Base Level, Chance of effect: 2%,
-    [Lv 3]: Reduction: 9 + Base Level, Chance of effect: 3%,
-    [Lv 4]: Reduction: 12 + Base Level, Chance of effect: 4%,
-    [Lv 5]: Reduction: 15 + Base Level, Chance of effect: 5%,
-    [Lv 6]: Reduction: 18 + Base Level, Chance of effect: 6%,
-    [Lv 7]: Reduction: 21 + Base Level, Chance of effect: 7%,
-    [Lv 8]: Reduction: 24 + Base Level, Chance of effect: 8%,
-    [Lv 9]: Reduction: 27 + Base Level, Chance of effect: 9%,
-    [Lv 10]: Reduction: 30 + Base Level, Chance of effect: 10%`,
-  },
-  {
-    id: "heal",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Heal",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-    Skill Form: Active
-    Type: Magical
-    Target: Ally
-    Range: 9
-    Requirement: None
-    Description: Restores HP of a single target. This skill is affected by Base Level, INT and MAtk. Versus Corrupt property targets, inflicts Holy property damage equal 75% the amount of the HP restored.
-    [Lv 1]: SP Cost: 13,
-    [Lv 2]: SP Cost: 16,
-    [Lv 3]: SP Cost: 19,
-    [Lv 4]: SP Cost: 22,
-    [Lv 5]: SP Cost: 25,
-    [Lv 6]: SP Cost: 28,
-    [Lv 7]: SP Cost: 31,
-    [Lv 8]: SP Cost: 34,
-    [Lv 9]: SP Cost: 37,
-    [Lv 10]: SP Cost: 40`,
   },
   {
     id: "holyLight",
@@ -204,52 +235,14 @@ export const skillsAcolyte = [
     [Lv 10]: ATK or MATK 450%`,
   },
   {
-    id: "increaseAgility",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Increase Agility",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-    Skill Form: Active
-    Type: Magical
-    Target: Ally
-    Range: 9
-    Requirement: Heal Lv: 3
-    Description: Increases targeted characters AGI, Movement and Attack Speed for the duration of skill. Additionally, the bonus of AGI increases by +1 for every 14 job levels of the user. Drains 15 HP from the caster after each cast. When used on target that affected by Decrease Agility status, this skill will release target from that. When the user becomes a High Priest, Increase agility becomes a 5x5 area effect around the target, but the SP cost increases by 2 for each affected target. Duration of this ability is 240 seconds.
-    [Lv 1]: AGI +1, Atk Speed: +1%,
-    [Lv 2]: AGI +2, Atk Speed: +2%,
-    [Lv 3]: AGI +3, Atk Speed: +3%,
-    [Lv 4]: AGI +4, Atk Speed: +4%,
-    [Lv 5]: AGI +5, Atk Speed: +5%,
-    [Lv 6]: AGI +6, Atk Speed: +6%,
-    [Lv 7]: AGI +7, Atk Speed: +7%,
-    [Lv 8]: AGI +8, Atk Speed: +8%,
-    [Lv 9]: AGI +9, Atk Speed: +9%,
-    [Lv 10]: AGI +10, Atk Speed: +10%`,
-  },
-  {
-    id: "pneuma",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Pneuma",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-    Skill Form: Active
-    Type: Magical
-    Target: Ground
-    Range: 9
-    Requirement: Warp Portal Lv: 3
-    Description: Uses 10 SP to create, barrier in 3x3 cells around targeted, cell that for 10 sec will protect, anyone inside it from long range, physical attacks.`,
-  },
-  {
     id: "ruwach",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "teleport" },
+      { id: "warpPortal" },
+      { id: "pneuma" },
+    ],
     element: null,
     skillName: "Ruwach",
     maxLevel: 1,
@@ -263,8 +256,8 @@ export const skillsAcolyte = [
   {
     id: "teleport",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [{ id: "ruwach", minLevel: 0 }],
+    dependent: [{ id: "warpPortal" }],
     element: null,
     skillName: "Teleport",
     maxLevel: 2,
@@ -280,8 +273,8 @@ export const skillsAcolyte = [
   {
     id: "warpPortal",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [{ id: "teleport", minLevel: 1 }, { id: "ruwach", minLevel: 0 }],
+    dependent: [{ id: "pneuma" }], 
     element: null,
     skillName: "Warp Portal",
     maxLevel: 3,
@@ -295,6 +288,26 @@ export const skillsAcolyte = [
     [Lv 1]: 1 custom position available,
     [Lv 2]: 2 custom position available,
     [Lv 3]: 3 custom position available`,
+  },
+  {
+    id: "pneuma",
+    level: 0,
+    dependencies: [
+      { id: "warpPortal", minLevel: 2 }, 
+      { id: "teleport", minLevel: 1 },
+      { id: "ruwach", minLevel: 0 }
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Pneuma",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+    Skill Form: Active
+    Type: Magical
+    Target: Ground
+    Range: 9
+    Requirement: Warp Portal Lv: 3
+    Description: Uses 10 SP to create, barrier in 3x3 cells around targeted, cell that for 10 sec will protect, anyone inside it from long range, physical attacks.`,
   },
 ];
 
