@@ -11,6 +11,7 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   img.src = skillImg; 
   img.alt = skillNameAll;  
   img.className = 'skill-img';  
+  //img.id = skillName;  
 
   const skillBlock = document.createElement('div');  
   skillBlock.className = 'skill-block';  

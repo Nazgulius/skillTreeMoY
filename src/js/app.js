@@ -7,7 +7,6 @@ import { createSkill } from './createSkill';
 import skillImgNo from '../img/no_img.png';
 
 
-
 export default class App {
   constructor(skillsJobOne, skillsJobTwo, skillsJobTwoHight) {
     this._skillsJobOne = skillsJobOne;
@@ -19,10 +18,7 @@ export default class App {
   }
 
   logic() {
-    // генерации скилов в html code
-    //document.addEventListener("DOMContentLoaded", () => {
-    //});    
-    //const skillImgNo = '../img/no_img.png'; // картинка-заглушка
+    // генерации скилов в html code    
     const jobOne = document.querySelector('.job-one'); // находим блока класса
     const jobTwo = document.querySelector('.job-two'); // находим блока класса
     const jobTwoHight = document.querySelector('.job-two-hight'); // находим блока класса
@@ -32,25 +28,26 @@ export default class App {
       jobOne.appendChild(createSkill(this._skillsJobOne[i].id,
         this._skillsJobOne[i].skillName,
         this._skillsJobOne[i].maxLevel,
-        skillImgNo));
+        this._skillsJobOne[i].img));
     }
 
     for (let i = 0; i < this._skillsJobTwo.length; i++) {
       jobTwo.appendChild(createSkill(this._skillsJobTwo[i].id,
         this._skillsJobTwo[i].skillName,
         this._skillsJobTwo[i].maxLevel,
-        skillImgNo));
+        this._skillsJobTwo[i].img));
     }
 
     for (let i = 0; i < this._skillsJobTwoHight.length; i++) {
       jobTwoHight.appendChild(createSkill(this._skillsJobTwoHight[i].id,
         this._skillsJobTwoHight[i].skillName,
         this._skillsJobTwoHight[i].maxLevel,
-        skillImgNo));
+        this._skillsJobTwoHight[i].img));        
     }
 
+
     // ждём загрузку DOM елементов
-    //document.addEventListener("DOMContentLoaded", () => {
+    //document.addEventListener("DOMContentLoaded", () => {});
 
     // обработчик события клика по скилу
     document.querySelectorAll(".skill").forEach((skillElement) => {
@@ -64,8 +61,7 @@ export default class App {
 
       const skill = allSkills.find((s) => s.id === skillId);
       skill.element = skillElement; // Сохраняем ссылку на HTML элемент
-
-
+      
       const dotArray = skillElement.querySelectorAll(".dot");
       const dotResetArray = skillElement.querySelectorAll(".dot-reset");
 
