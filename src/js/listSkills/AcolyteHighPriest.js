@@ -11,7 +11,8 @@ export const skillsHighPriest = [
     level: 0,
     dependencies: [
       { id: "angelus", minLevel: 4 },
-      { id: "impositioManus", minLevel: 2 },      
+      { id: "impositioManus", minLevel: 2 },     
+      { id: "divineProtection", minLevel: 2 }
     ],
     dependent: [],
     element: null,
@@ -37,7 +38,8 @@ Description: Increases target's Defense, and recieved Healing amount for, the sk
     dependencies: [
       { id: "demonBane", minLevel: 2 },
       { id: "divineProtection", minLevel: 2 },
-      { id: "sanctuary", minLevel: 2 },      
+      { id: "sanctuary", minLevel: 2 },     
+      { id: "heal", minLevel: 0 },
     ],
     dependent: [],
     element: null,
@@ -86,7 +88,8 @@ Description: Reduces the amount of SP, that is consumed when using skills.
     dependencies: [
       { id: "impositioManus", minLevel: 2 },
       { id: "increaseSPRecovery", minLevel: 2 },
-      { id: "lexDivina", minLevel: 2 },      
+      { id: "lexDivina", minLevel: 2 },
+      { id: "ruwach", minLevel: 0 },
     ],
     dependent: [],
     element: null,
