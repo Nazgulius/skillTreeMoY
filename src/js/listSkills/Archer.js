@@ -118,7 +118,7 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
   {
     id: "improveConcentration",
     level: 0,
-    dependencies: [{ id: "vulturesEye", minLevel: 0 }],
+    dependencies: [{ id: "vulturesEye", minLevel: 0 }, { id: "owlsEye", minLevel: 2 }],
     dependent: [],
     element: null,
     skillName: "Improve Concentration",
