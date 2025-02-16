@@ -10,7 +10,10 @@ export const skillsPriest = [
     id: "aquaBenedicta",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "bSSacramenti" },
+      { id: "magnusExorcismus" },
+    ],
     element: null,
     skillName: "Aqua Benedicta",
     maxLevel: 5,
@@ -28,10 +31,41 @@ Description: Creates 1 Holy Water with 1 Empty Bottle while standing in water. T
     img: skillImgNo,
   },
   {
-    id: "aspersio",
+    id: "impositioManus",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "aspersio" },
+      { id: "bSSacramenti" },
+      { id: "magnusExorcismus" },
+    ],
+    element: null,
+    skillName: "Impositio Manus",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Self
+Requirement: None
+Description: Blesses others by placing, your hands on their head. Increases ATK and, MATK of yourself and nearby party members, for 120 seconds.
+[Lv 1]: ATK/MATK +5, ,
+[Lv 2]: ATK/MATK +10,
+[Lv 3]: ATK/MATK +15,
+[Lv 4]: ATK/MATK +20,
+[Lv 5]: ATK/MATK +25`,
+    img: skillImgNo,
+  },
+  {
+    id: "aspersio",
+    level: 0,
+    dependencies: [
+      { id: "aquaBenedicta", minLevel: 0 },
+      { id: "impositioManus", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "bSSacramenti" },
+      { id: "magnusExorcismus" },
+    ],
     element: null,
     skillName: "Aspersio",
     maxLevel: 5,
@@ -52,7 +86,12 @@ Description: Temporarily imbue a single target weapon with the Holy property. Co
   {
     id: "bSSacramenti",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "gloria", minLevel: 2 },
+      { id: "aspersio", minLevel: 4 },
+      { id: "aquaBenedicta", minLevel: 0 },
+      { id: "impositioManus", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "B.S. Sacramenti",
@@ -74,8 +113,14 @@ Description: Blesses a targeted location to endow the armor of all players withi
   {
     id: "gloria",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [ 
+      { id: "kyrieEleison", minLevel: 3 },
+      { id: "magnificat", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "bSSacramenti" },
+      
+    ],
     element: null,
     skillName: "Gloria",
     maxLevel: 5,
@@ -92,27 +137,7 @@ Description: Temporarily boosts LUK and CRIT DEF to the user and party members. 
 [Lv 5]: LUK: +30, CRIT DEF: +5, Duration: 30sec`,
     img: skillImgNo,
   },
-  {
-    id: "impositioManus",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Impositio Manus",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Magical
-Target: Self
-Requirement: None
-Description: Blesses others by placing, your hands on their head. Increases ATK and, MATK of yourself and nearby party members, for 120 seconds.
-[Lv 1]: ATK/MATK +5, ,
-[Lv 2]: ATK/MATK +10,
-[Lv 3]: ATK/MATK +15,
-[Lv 4]: ATK/MATK +20,
-[Lv 5]: ATK/MATK +25`,
-    img: skillImgNo,
-  },
+  
   {
     id: "increaseSPRecovery",
     level: 0,
@@ -141,7 +166,9 @@ Description: Increases the amount of SP recovered through your natural SP regene
   {
     id: "kyrieEleison",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "angelus", minLevel: 1 },
+    ],
     dependent: [],
     element: null,
     skillName: "Kyrie Eleison",
@@ -168,8 +195,12 @@ Description: Creates a perfect barrier, around a character that will be able to,
   {
     id: "lexAeterna",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "lexDivina", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "magnusExorcismus" },
+    ],
     element: null,
     skillName: "Lex Aeterna",
     maxLevel: 4,
@@ -189,8 +220,13 @@ Description: Decreases the resistance of the affected target, amplifying the dam
   {
     id: "lexDivina",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "ruwach", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "lexAeterna" },
+      { id: "magnusExorcismus" },
+    ],
     element: null,
     skillName: "Lex Divina",
     maxLevel: 5,
@@ -211,8 +247,12 @@ Description: Silences an enemy, temporarily disabling its use of skills, for a s
   {
     id: "maceMastery",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "demonBane", minLevel: 6 },
+    ],
+    dependent: [
+     
+    ],
     element: null,
     skillName: "Mace Mastery",
     maxLevel: 10,
@@ -237,7 +277,9 @@ Description: Increase attack with Mace Class Weapons. When [Lv 10], it increases
     id: "magnificat",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "gloria" },
+    ],
     element: null,
     skillName: "Magnificat",
     maxLevel: 5,
@@ -257,7 +299,13 @@ Description: Doubles the caster and, party's SP regen for the duration of the sk
   {
     id: "magnusExorcismus",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "holyLight", minLevel: 4 },
+      { id: "lexAeterna", minLevel: 2 },
+      { id: "aspersio", minLevel: 2 },
+      { id: "turnUndead", minLevel: 2 },
+      { id: "magnusExorcismus" },
+    ],
     dependent: [],
     element: null,
     skillName: "Magnus Exorcismus",
@@ -396,7 +444,9 @@ Description: Offers a prayer for others by reducing the Casting Time of yourself
     id: "turnUndead",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "magnusExorcismus" },
+    ],
     element: null,
     skillName: "Turn Undead",
     maxLevel: 10,
