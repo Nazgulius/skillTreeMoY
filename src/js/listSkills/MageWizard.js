@@ -3,6 +3,19 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import sightrasher from '../../img/icon_wiz/icon_wiz_12.png';
+import firePillar from '../../img/icon_wiz/icon_wiz_3.png';
+import frostNova from '../../img/icon_wiz/icon_wiz_4.png';
+import heavensDrive from '../../img/icon_wiz/icon_wiz_5.png';
+import jupitelThunder from '../../img/icon_wiz/icon_wiz_7.png';
+import lordOfVermilion from '../../img/icon_wiz/icon_wiz_8.png';
+import meteorStorm from '../../img/icon_wiz/icon_wiz_9.png';
+import quagmire from '../../img/icon_wiz/icon_wiz_10.png';
+import stormGust from '../../img/icon_wiz/icon_wiz_11.png';
+import waterBall from '../../img/icon_wiz/icon_wiz_13.png';
+import electricalInduction from '../../img/icon_wiz/icon_wiz_electricalinduction.png';
+import gemmancy from '../../img/icon_wiz/icon_wiz_gemmancy.png';
+import violentQuake from '../../img/icon_wiz/icon_wiz_violentquake.png';
 
 // skills Wizard
 
@@ -26,7 +39,7 @@ Description: Launches the fireball in 8 directions around the caster, dealing Fi
 [Lv 3]: MAtk 300%,
 [Lv 4]: MAtk 400%,
 [Lv 5]: MAtk 500%`,
-    img: skillImgNo,
+    img: sightrasher,
   },
   {
     id: "meteorStorm",
@@ -54,7 +67,7 @@ Description: Calls down a rain of meteors upon a targeted area, dealing 125% Fir
 [Lv 8]: Meteors: 6, Hits per Meteor: 6, Stun Chance: 24%,
 [Lv 9]: Meteors: 6, Hits per Meteor: 6, Stun Chance: 27%,
 [Lv 10]: Meteors: 7, Hits per Meteor: 7, Stun Chance: 30%`,
-    img: skillImgNo,
+    img: meteorStorm,
   },
   {
     id: "firePillar",
@@ -86,7 +99,7 @@ Description: Summons a towering pillar of flame at a designated location. The pi
 [Lv 8]: Hits Inflicted: 10, Auto-Cast Chance: 8%, Duration: 78 seconds,
 [Lv 9]: Hits Inflicted: 11, Auto-Cast Chance: 9%, Duration: 84 seconds,
 [Lv 10]: Hits Inflicted: 12, Auto-Cast Chance: 10%, Duration: 90 seconds`,
-    img: skillImgNo,
+    img: firePillar,
   },
   {
     id: "waterBall",
@@ -108,7 +121,7 @@ Description: Launches a Water Ball to deal Water property magic damage to all en
 [Lv 3]: Center: 220% MAtk, Edge: 110% MAtk,
 [Lv 4]: Center: 260% MAtk, Edge: 130% MAtk,
 [Lv 5]: Center: 300% MAtk, Edge: 150% MAtk`,
-    img: skillImgNo,
+    img: waterBall,
   },
   {
     id: "stormGust",
@@ -136,7 +149,7 @@ Description: Summons a fierce snowstorm in an 11x11 area, dealing Water magic da
 [Lv 8]: MAtk 470% per Hit,
 [Lv 9]: MAtk 520% per Hit,
 [Lv 10]: MAtk 570% per Hit`,
-    img: skillImgNo,
+    img: stormGust,
   },
   {
     id: "frostNova",
@@ -163,7 +176,7 @@ Description: Summons a ring of ice spikes around the user, dealing Water magic d
 [Lv 8]: MAtk 180%,
 [Lv 9]: MAtk 190%,
 [Lv 10]: MAtk 200%`,
-    img: skillImgNo,
+    img: frostNova,
   },
   {
     id: "jupitelThunder",
@@ -185,7 +198,7 @@ Description: Fires a ball of crackling lightning that inflicts 100% MATK Wind el
 [Lv 3]: Hits: 6, Knockback: 5,
 [Lv 4]: Hits: 8, Knockback: 6,
 [Lv 5]: Hits: 10, Knockback: 7`,
-    img: skillImgNo,
+    img: jupitelThunder,
   },
   {
     id: "lordOfVermilion",
@@ -213,7 +226,7 @@ Description: Calls down devastating lightning bolts from the skies to strike a c
 [Lv 8]: MAtk 160% per Hit, Blind Chance:50%,
 [Lv 9]: MAtk 180% per Hit, Blind Chance:55%,
 [Lv 10]: MAtk 200% per Hit, Blind Chance:60%`,
-    img: skillImgNo,
+    img: lordOfVermilion,
   },
   {
     id: "electricalInduction",
@@ -241,7 +254,7 @@ Description: Unleashes a wave of electrical energy that inflicts Wind property m
 [Lv 8]: MAtk 10%, Jumps: 10, Auto-Cast Chance: 8%,
 [Lv 9]: MAtk 10%, Jumps: 11, Auto-Cast Chance: 9%,
 [Lv 10]: MAtk 10%, Jumps: 12, Auto-Cast Chance: 10%`,
-    img: skillImgNo,
+    img: electricalInduction,
   },
   {
     id: "heavensDrive",
@@ -263,7 +276,7 @@ Description: Commands the earth to rise as spikes at a target location, dealing 
 [Lv 3]: MAtk 150% x 5 Hits,
 [Lv 4]: MAtk 200% x 5 Hits,
 [Lv 5]: MAtk 250% x 5 Hits`,
-    img: skillImgNo,
+    img: heavensDrive,
   },
   {
     id: "violentQuake",
@@ -291,7 +304,7 @@ Description: Causes an earthquake in the target area, with 10 rocks randomly ris
 [Lv 8]: MATK 540%, Confusion Chance: 40%,
 [Lv 9]: MATK 570%, Confusion Chance: 45%,
 [Lv 10]: MATK 600%, Confusion Chance: 50%`,
-    img: skillImgNo,
+    img: violentQuake,
   },
   {
     id: "quagmire",
@@ -319,7 +332,7 @@ Description: Creates a swamp at a target location, slowing and reducing AGI and 
 [Lv 8]: AGI/DEX -50%, Duration: 29 seconds,
 [Lv 9]: AGI/DEX -55%, Duration: 32 seconds,
 [Lv 10]: AGI/DEX -60%, Duration: 35 seconds`,
-    img: skillImgNo,
+    img: quagmire,
   },
   {
     id: "gemmancy",
@@ -340,7 +353,7 @@ Description: Master the art of Gemmancy, converting gemstones and gaining the ab
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
 [Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: gemmancy,
   },
 ];
 

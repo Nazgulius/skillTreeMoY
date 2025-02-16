@@ -9,7 +9,8 @@ export const skillsCrusader = [
   {
     id: "cavalryMastery",
     level: 0,
-    dependencies: [],
+    dependencies: [
+    ],
     dependent: [],
     element: null,
     skillName: "Cavalry Mastery",
@@ -29,7 +30,8 @@ Description: Removes the ASPD and Flee penalty while mounted. Increases Hit Rate
   {
     id: "defender",
     level: 0,
-    dependencies: [],
+    dependencies: [
+    ],
     dependent: [],
     element: null,
     skillName: "Defender",
@@ -50,7 +52,8 @@ Description: Requires the user to have a shield equipped. Produces an aura of pr
   {
     id: "devotion",
     level: 0,
-    dependencies: [],
+    dependencies: [
+    ],
     dependent: [],
     element: null,
     skillName: "Devotion",

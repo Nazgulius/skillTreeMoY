@@ -96,6 +96,7 @@ Description: Temporarily imbue a single target weapon with the Holy property. Co
       { id: "impositioManus", minLevel: 2 },
       { id: "kyrieEleison", minLevel: 3 },
       { id: "magnificat", minLevel: 2 },
+      { id: "angelus", minLevel: 1 },
     ],
     dependent: [],
     element: null,
