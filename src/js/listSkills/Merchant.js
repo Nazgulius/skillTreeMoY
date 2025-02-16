@@ -63,7 +63,11 @@ Description: Harness the power of greed to deliver a devastating blow to a singl
     id: "pushcart",
     level: 0,
     dependencies: [],
-    dependent: [ ],
+    dependent: [
+      { id: "cartRevolution" },
+      { id: "cartTwister" },
+      { id: "discount" },
+    ],
     element: null,
     skillName: "Pushcart",
     maxLevel: 10,
@@ -87,7 +91,7 @@ Description: Enables to rent a Pushcart and Increases maximum player Weight Limi
   {
     id: "cartRevolution",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "pushcart", minLevel: 0 }],
     dependent: [ ],
     element: null,
     skillName: "Cart Revolution",
@@ -114,7 +118,7 @@ Description: Slam your pushcart into a single target, dealing physical damage an
   {
     id: "cartTwister",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "cartRevolution", minLevel: 4 }, { id: "pushcart", minLevel: 0 }],
     dependent: [ ],
     element: null,
     skillName: "Cart Twister",
@@ -140,7 +144,7 @@ Description: Grab your cart and spin it like a whirlwind, dealing melee physical
   {
     id: "discount",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "pushcart", minLevel: 2 },],
     dependent: [ ],
     element: null,
     skillName: "Discount",
