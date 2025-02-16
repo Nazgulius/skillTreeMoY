@@ -92,7 +92,9 @@ Description: Enables to rent a Pushcart and Increases maximum player Weight Limi
     id: "cartRevolution",
     level: 0,
     dependencies: [{ id: "pushcart", minLevel: 0 }],
-    dependent: [ ],
+    dependent: [
+      { id: "cartTwister" },
+    ],
     element: null,
     skillName: "Cart Revolution",
     maxLevel: 10,
