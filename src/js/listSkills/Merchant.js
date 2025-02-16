@@ -67,6 +67,7 @@ Description: Harness the power of greed to deliver a devastating blow to a singl
       { id: "cartRevolution" },
       { id: "cartTwister" },
       { id: "discount" },
+      { id: "overcharge" },
     ],
     element: null,
     skillName: "Pushcart",
@@ -176,6 +177,7 @@ Description: Activate this skill to receive a buff that randomly slashes the SP 
     level: 0,
     dependencies: [
       { id: "discount", minLevel: 2 },
+      { id: "pushcart", minLevel: 2 },
     ],
     dependent: [ ],
     element: null,
