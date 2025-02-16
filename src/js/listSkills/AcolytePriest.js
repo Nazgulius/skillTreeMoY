@@ -38,6 +38,7 @@ Description: Creates 1 Holy Water with 1 Empty Bottle while standing in water. T
       { id: "aspersio" },
       { id: "bSSacramenti" },
       { id: "magnusExorcismus" },
+      { id: "suffragium" },
     ],
     element: null,
     skillName: "Impositio Manus",
@@ -118,8 +119,7 @@ Description: Blesses a targeted location to endow the armor of all players withi
       { id: "magnificat", minLevel: 2 },
     ],
     dependent: [
-      { id: "bSSacramenti" },
-      
+      { id: "bSSacramenti" },      
     ],
     element: null,
     skillName: "Gloria",
@@ -142,7 +142,9 @@ Description: Temporarily boosts LUK and CRIT DEF to the user and party members. 
     id: "increaseSPRecovery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+       { id: "resurrection" },
+    ],
     element: null,
     skillName: "Increase SP Recovery",
     maxLevel: 10,
@@ -226,6 +228,7 @@ Description: Decreases the resistance of the affected target, amplifying the dam
     dependent: [
       { id: "lexAeterna" },
       { id: "magnusExorcismus" },
+      { id: "turnUndead" },
     ],
     element: null,
     skillName: "Lex Divina",
@@ -250,8 +253,7 @@ Description: Silences an enemy, temporarily disabling its use of skills, for a s
     dependencies: [
       { id: "demonBane", minLevel: 6 },
     ],
-    dependent: [
-     
+    dependent: [     
     ],
     element: null,
     skillName: "Mace Mastery",
@@ -303,10 +305,10 @@ Description: Doubles the caster and, party's SP regen for the duration of the sk
       { id: "holyLight", minLevel: 4 },
       { id: "lexAeterna", minLevel: 2 },
       { id: "aspersio", minLevel: 2 },
-      { id: "turnUndead", minLevel: 2 },
-      { id: "magnusExorcismus" },
+      { id: "turnUndead", minLevel: 2 },     
     ],
-    dependent: [],
+    dependent: [      
+    ],
     element: null,
     skillName: "Magnus Exorcismus",
     maxLevel: 10,
@@ -332,8 +334,13 @@ Description: Summons a purifying cross on the ground, dealing Holy property magi
   {
     id: "resurrection",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "statusRecovery", minLevel: 0 },
+      { id: "increaseSPRecovery", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "turnUndead" },     
+    ],
     element: null,
     skillName: "Resurrection",
     maxLevel: 4,
@@ -353,8 +360,11 @@ Description: Revives KO'ed character. Catalyst: 1x Blue Gemstone.
   {
     id: "safetyWal",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "sanctuary", minLevel: 4 },
+    ],
+    dependent: [      
+    ],
     element: null,
     skillName: "Safety Wal",
     maxLevel: 10,
@@ -380,8 +390,10 @@ Description: Constructs a protective barrier at a targeted location that blocks 
   {
     id: "sanctuary",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [{ id: "heal", minLevel: 0 },],
+    dependent: [
+      { id: "safetyWal" },
+    ],
     element: null,
     skillName: "Sanctuary",
     maxLevel: 10,
@@ -408,7 +420,9 @@ Description: Creates a soothing area on a targeted location that will restore HP
     id: "statusRecovery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+       { id: "resurrection" },
+    ],
     element: null,
     skillName: "Status Recovery",
     maxLevel: 1,
@@ -424,7 +438,9 @@ Description: Cancels abnormal status, effects such as Stun, Frozen or Stone Curs
   {
     id: "suffragium",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "impositioManus", minLevel: 1 },
+    ],
     dependent: [],
     element: null,
     skillName: "Suffragium",
@@ -443,9 +459,13 @@ Description: Offers a prayer for others by reducing the Casting Time of yourself
   {
     id: "turnUndead",
     level: 0,
-    dependencies: [],
+    dependencies: [
+       { id: "resurrection", minLevel: 0 },
+       { id: "lexDivina", minLevel: 2 },
+       { id: "holyLight", minLevel: 4 },
+    ],
     dependent: [
-      { id: "magnusExorcismus" },
+      { id: "magnusExorcismus" },      
     ],
     element: null,
     skillName: "Turn Undead",
