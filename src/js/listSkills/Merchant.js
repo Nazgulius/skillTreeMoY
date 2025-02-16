@@ -147,7 +147,9 @@ Description: Grab your cart and spin it like a whirlwind, dealing melee physical
     id: "discount",
     level: 0,
     dependencies: [{ id: "pushcart", minLevel: 2 },],
-    dependent: [ ],
+    dependent: [      
+      { id: "overcharge" },
+    ],
     element: null,
     skillName: "Discount",
     maxLevel: 10,
@@ -172,7 +174,9 @@ Description: Activate this skill to receive a buff that randomly slashes the SP 
   {
     id: "overcharge",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "discount", minLevel: 2 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Overcharge",
