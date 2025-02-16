@@ -9,7 +9,10 @@ export const skillsHighPriest = [
   {
     id: "assumptio",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "angelus", minLevel: 4 },
+      { id: "impositioManus", minLevel: 2 },      
+    ],
     dependent: [],
     element: null,
     skillName: "Assumptio",
@@ -31,7 +34,11 @@ Description: Increases target's Defense, and recieved Healing amount for, the sk
   {
     id: "basilica",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "demonBane", minLevel: 2 },
+      { id: "divineProtection", minLevel: 2 },
+      { id: "sanctuary", minLevel: 2 },      
+    ],
     dependent: [],
     element: null,
     skillName: "Basilica",
@@ -53,7 +60,10 @@ Description: Creates a sacred basilica in a [5x5] area around the user, sharing 
   {
     id: "manaRecharge",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "maceMastery", minLevel: 9 }, 
+      { id: "demonBane", minLevel: 9 },       
+    ],
     dependent: [],
     element: null,
     skillName: "Mana Recharge",
@@ -73,7 +83,11 @@ Description: Reduces the amount of SP, that is consumed when using skills.
   {
     id: "meditatio",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "impositioManus", minLevel: 2 },
+      { id: "increaseSPRecovery", minLevel: 2 },
+      { id: "lexDivina", minLevel: 2 },      
+    ],
     dependent: [],
     element: null,
     skillName: "Meditatio",
