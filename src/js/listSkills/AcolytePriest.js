@@ -39,6 +39,8 @@ Description: Creates 1 Holy Water with 1 Empty Bottle while standing in water. T
       { id: "bSSacramenti" },
       { id: "magnusExorcismus" },
       { id: "suffragium" },
+      { id: "assumptio" },
+      { id: "meditatio" },
     ],
     element: null,
     skillName: "Impositio Manus",
@@ -143,7 +145,8 @@ Description: Temporarily boosts LUK and CRIT DEF to the user and party members. 
     level: 0,
     dependencies: [],
     dependent: [
-       { id: "resurrection" },
+      { id: "resurrection" },
+      { id: "meditatio" },
     ],
     element: null,
     skillName: "Increase SP Recovery",
@@ -229,6 +232,7 @@ Description: Decreases the resistance of the affected target, amplifying the dam
       { id: "lexAeterna" },
       { id: "magnusExorcismus" },
       { id: "turnUndead" },
+      { id: "meditatio" },
     ],
     element: null,
     skillName: "Lex Divina",
@@ -253,7 +257,8 @@ Description: Silences an enemy, temporarily disabling its use of skills, for a s
     dependencies: [
       { id: "demonBane", minLevel: 6 },
     ],
-    dependent: [     
+    dependent: [
+      { id: "manaRecharge" }, 
     ],
     element: null,
     skillName: "Mace Mastery",
@@ -393,6 +398,7 @@ Description: Constructs a protective barrier at a targeted location that blocks 
     dependencies: [{ id: "heal", minLevel: 0 },],
     dependent: [
       { id: "safetyWal" },
+      { id: "basilica" },
     ],
     element: null,
     skillName: "Sanctuary",
