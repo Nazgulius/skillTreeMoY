@@ -141,7 +141,7 @@ Description: Uses various items to craft arrows. The quantity of arrows crafted 
   {
     id: "quivery",
     level: 0,
-    dependencies: [{ id: "fletchery", minLevel: 2 }],
+    dependencies: [{ id: "fletchery", minLevel: 2 }, { id: "owlsEye", minLevel: 2 }],
     dependent: [],
     element: null,
     skillName: "Quivery",
@@ -157,7 +157,7 @@ Description: Allows the user to create a quiver using 500 arrows. The process re
   {
     id: "arrowShower",
     level: 0,
-    dependencies: [{ id: "doubleStrafe", minLevel: 2 }],
+    dependencies: [{ id: "doubleStrafe", minLevel: 4 }],
     dependent: [],
     element: null,
     skillName: "Arrow Shower",
