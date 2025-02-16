@@ -10,7 +10,7 @@ export const skillsArcher = [
     id: "doubleStrafe",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [{ id: "arrowShower" }],
     element: null,
     skillName: "Double Strafe",
     maxLevel: 10,
@@ -64,7 +64,12 @@ Description: Draw their bowstring to its maximum tension, firing a powerful voll
     id: "owlsEye",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "vulturesEye" },
+      { id: "fletchery" },
+      { id: "quivery" },
+      { id: "improveConcentration" },
+    ],
     element: null,
     skillName: "Owl's Eye",
     maxLevel: 10,
@@ -88,8 +93,8 @@ Description: Sharpens the user focus, increasing their DEX and enhancing their H
   {
     id: "vulturesEye",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [{ id: "owlsEye", minLevel: 2 }],
+    dependent: [{ id: "improveConcentration" }],
     element: null,
     skillName: "Vulture's Eye",
     maxLevel: 10,
@@ -113,8 +118,10 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
   {
     id: "fletchery",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [{ id: "owlsEye", minLevel: 2 }],
+    dependent: [
+      { id: "quivery" },
+    ],
     element: null,
     skillName: "Fletchery",
     maxLevel: 5,
@@ -134,7 +141,7 @@ Description: Uses various items to craft arrows. The quantity of arrows crafted 
   {
     id: "quivery",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "fletchery", minLevel: 2 }],
     dependent: [],
     element: null,
     skillName: "Quivery",
@@ -150,7 +157,7 @@ Description: Allows the user to create a quiver using 500 arrows. The process re
   {
     id: "arrowShower",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "doubleStrafe", minLevel: 2 }],
     dependent: [],
     element: null,
     skillName: "Arrow Shower",
@@ -177,7 +184,7 @@ Description: Unleashes a barrage of arrows, raining down on enemies within a 7x7
   {
     id: "improveConcentration",
     level: 0,
-    dependencies: [],
+    dependencies: [{ id: "vulturesEye", minLevel: 0 }],
     dependent: [],
     element: null,
     skillName: "Improve Concentration",
