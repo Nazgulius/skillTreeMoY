@@ -116,6 +116,32 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
     img: skillImgNo,
   },
   {
+    id: "improveConcentration",
+    level: 0,
+    dependencies: [{ id: "vulturesEye", minLevel: 0 }],
+    dependent: [],
+    element: null,
+    skillName: "Improve Concentration",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Self
+Requirement: Vulture's Eye Lv: 1
+Description: Boosts AGI and DEX for 240 seconds as well as detects nearby hidden characters in 3x3 AoE.
+[Lv 1]: DEX/AGI +3%,
+[Lv 2]: DEX/AGI +4%,
+[Lv 3]: DEX/AGI +5%,
+[Lv 4]: DEX/AGI +6%,
+[Lv 5]: DEX/AGI +7%,
+[Lv 6]: DEX/AGI +8%,
+[Lv 7]: DEX/AGI +9%,
+[Lv 8]: DEX/AGI +10%,
+[Lv 9]: DEX/AGI +11%,
+[Lv 10]: DEX/AGI +12%`,
+    img: skillImgNo,
+  },
+  {
     id: "fletchery",
     level: 0,
     dependencies: [{ id: "owlsEye", minLevel: 2 }],
@@ -179,32 +205,6 @@ Description: Unleashes a barrage of arrows, raining down on enemies within a 7x7
 [Lv 8]: Wave ATK 90%, Duration: 3.3 s,
 [Lv 9]: Wave ATK 95%, Duration: 3.5 s,
 [Lv 10]: Wave ATK 100%, Duration: 3.7 s,`,
-    img: skillImgNo,
-  },
-  {
-    id: "improveConcentration",
-    level: 0,
-    dependencies: [{ id: "vulturesEye", minLevel: 0 }],
-    dependent: [],
-    element: null,
-    skillName: "Improve Concentration",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Vulture's Eye Lv: 1
-Description: Boosts AGI and DEX for 240 seconds as well as detects nearby hidden characters in 3x3 AoE.
-[Lv 1]: DEX/AGI +3%,
-[Lv 2]: DEX/AGI +4%,
-[Lv 3]: DEX/AGI +5%,
-[Lv 4]: DEX/AGI +6%,
-[Lv 5]: DEX/AGI +7%,
-[Lv 6]: DEX/AGI +8%,
-[Lv 7]: DEX/AGI +9%,
-[Lv 8]: DEX/AGI +10%,
-[Lv 9]: DEX/AGI +11%,
-[Lv 10]: DEX/AGI +12%`,
     img: skillImgNo,
   },
 ];
