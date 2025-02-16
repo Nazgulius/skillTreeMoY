@@ -94,6 +94,8 @@ Description: Temporarily imbue a single target weapon with the Holy property. Co
       { id: "aspersio", minLevel: 4 },
       { id: "aquaBenedicta", minLevel: 0 },
       { id: "impositioManus", minLevel: 2 },
+      { id: "kyrieEleison", minLevel: 3 },
+      { id: "magnificat", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -119,6 +121,8 @@ Description: Blesses a targeted location to endow the armor of all players withi
     dependencies: [ 
       { id: "kyrieEleison", minLevel: 3 },
       { id: "magnificat", minLevel: 2 },
+      { id: "aquaBenedicta", minLevel: 0 },
+      { id: "impositioManus", minLevel: 2 },
     ],
     dependent: [
       { id: "bSSacramenti" },      
@@ -202,6 +206,7 @@ Description: Creates a perfect barrier, around a character that will be able to,
     level: 0,
     dependencies: [
       { id: "lexDivina", minLevel: 2 },
+      { id: "ruwach", minLevel: 0 },
     ],
     dependent: [
       { id: "magnusExorcismus" },
@@ -310,7 +315,15 @@ Description: Doubles the caster and, party's SP regen for the duration of the sk
       { id: "holyLight", minLevel: 4 },
       { id: "lexAeterna", minLevel: 2 },
       { id: "aspersio", minLevel: 2 },
-      { id: "turnUndead", minLevel: 2 },     
+      { id: "turnUndead", minLevel: 2 }, 
+      { id: "aquaBenedicta", minLevel: 0 },
+      { id: "impositioManus", minLevel: 2 },
+      { id: "lexDivina", minLevel: 2 },
+      { id: "ruwach", minLevel: 0 },
+      { id: "resurrection", minLevel: 0 },     
+      { id: "holyLight", minLevel: 4 },      
+      { id: "statusRecovery", minLevel: 0 },
+      { id: "increaseSPRecovery", minLevel: 3 },
     ],
     dependent: [      
     ],
@@ -367,6 +380,7 @@ Description: Revives KO'ed character. Catalyst: 1x Blue Gemstone.
     level: 0,
     dependencies: [
       { id: "sanctuary", minLevel: 4 },
+      { id: "heal", minLevel: 0 },
     ],
     dependent: [      
     ],
@@ -466,9 +480,12 @@ Description: Offers a prayer for others by reducing the Casting Time of yourself
     id: "turnUndead",
     level: 0,
     dependencies: [
-       { id: "resurrection", minLevel: 0 },
-       { id: "lexDivina", minLevel: 2 },
-       { id: "holyLight", minLevel: 4 },
+      { id: "resurrection", minLevel: 0 },
+      { id: "lexDivina", minLevel: 2 },
+      { id: "holyLight", minLevel: 4 },
+      { id: "ruwach", minLevel: 0 },
+      { id: "statusRecovery", minLevel: 0 },
+      { id: "increaseSPRecovery", minLevel: 3 },
     ],
     dependent: [
       { id: "magnusExorcismus" },      
