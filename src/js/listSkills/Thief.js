@@ -5,27 +5,30 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 
 // список скилов Thief
-export const skillsThief = [  
+export const skillsThief = [    
   {
-    id: "detoxify",
+    id: "improveDodge",
     level: 0,
     dependencies: [],
     dependent: [],
     element: null,
-    skillName: "Detoxify",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
+    skillName: "Improve Dodge",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
 Type: Physical
-Target: Ally
-Range: 9
-Requirement: Envenom Lv: 3
-Description: Attempts to cleanse a single target from the Poison status. If successful, it grants a temporary boost to Poison status resistance by 20%. Caster INT and Base Level, target VIT and Base Level increases chance of cleanse. This skill is initially learned at level 1, with higher levels unlocked through special items.
-[Lv 1]: Resistance duration: 10 seconds. Cooldown: 3 seconds,
-[Lv 2]: Resistance duration: 20 seconds. Cooldown: 2.5 seconds,
-[Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
-[Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
-[Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
+Requirement: None
+Description: Increases FLEE and Movement Speed.
+[Lv 1]: FLEE +3, Movement Speed: +1%,
+[Lv 2]: FLEE +6, Movement Speed: +2%,
+[Lv 3]: FLEE +9, Movement Speed: +3%,
+[Lv 4]: FLEE +12, Movement Speed: +4%,
+[Lv 5]: FLEE +15, Movement Speed: +5%,
+[Lv 6]: FLEE +18, Movement Speed: +6%,
+[Lv 7]: FLEE +21, Movement Speed: +7%,
+[Lv 8]: FLEE +24, Movement Speed: +8%,
+[Lv 9]: FLEE +27, Movement Speed: +9%,
+[Lv 10]: FLEE +30, Movement Speed: +10%`,
     img: skillImgNo,
   },
   {
@@ -58,7 +61,9 @@ Description: Grants a chance to inflict two hits instead of one when attacking w
     id: "envenom",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "detoxify" },
+    ],
     element: null,
     skillName: "Envenom",
     maxLevel: 10,
@@ -81,9 +86,62 @@ Range: 2
     img: skillImgNo,
   },
   {
-    id: "hiding",
+    id: "detoxify",
+    level: 0,
+    dependencies: [{ id: "envenom", minLevel: 2 }],
+    dependent: [],
+    element: null,
+    skillName: "Detoxify",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Physical
+Target: Ally
+Range: 9
+Requirement: Envenom Lv: 3
+Description: Attempts to cleanse a single target from the Poison status. If successful, it grants a temporary boost to Poison status resistance by 20%. Caster INT and Base Level, target VIT and Base Level increases chance of cleanse. This skill is initially learned at level 1, with higher levels unlocked through special items.
+[Lv 1]: Resistance duration: 10 seconds. Cooldown: 3 seconds,
+[Lv 2]: Resistance duration: 20 seconds. Cooldown: 2.5 seconds,
+[Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
+[Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
+[Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
+    img: skillImgNo,
+  },
+  {
+    id: "steal",
     level: 0,
     dependencies: [],
+    dependent: [
+      { id: "hiding" },
+    ],
+    element: null,
+    skillName: "Steal",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 1
+Requirement: None
+Description: Steals an item from a specified target. If target's DEX is higher than the caster, the success rate of stealing an item is decreased. This skill can't be used on Boss monsters and Players.
+[Lv 1]: 8% Base Chance,
+[Lv 2]: 14% Base Chance,
+[Lv 3]: 20% Base Chance,
+[Lv 4]: 26% Base Chance,
+[Lv 5]: 32% Base Chance,
+[Lv 6]: 38% Base Chance,
+[Lv 7]: 44% Base Chance,
+[Lv 8]: 50% Base Chance,
+[Lv 9]: 56% Base Chance,
+[Lv 10]: 62% Base Chance`,
+    img: skillImgNo,
+  },
+  {
+    id: "hiding",
+    level: 0,
+    dependencies: [
+      { id: "steal", minLevel: 3 },
+    ],
     dependent: [],
     element: null,
     skillName: "Hiding",
@@ -105,31 +163,6 @@ Description: Burrow underground to evade enemy attacks. The hidden status can be
 [Lv 8]: SP Drain: 1 SP every 8 seconds. After-cast delay: 0.3 seconds,
 [Lv 9]: SP Drain: 1 SP every 9 seconds. After-cast delay: 0.2 seconds,
 [Lv 10]: SP Drain: 1 SP every 10 second. After-cast delay: 0.1 seconds`,
-    img: skillImgNo,
-  },
-  {
-    id: "improveDodge",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Improve Dodge",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: None
-Description: Increases FLEE and Movement Speed.
-[Lv 1]: FLEE +3, Movement Speed: +1%,
-[Lv 2]: FLEE +6, Movement Speed: +2%,
-[Lv 3]: FLEE +9, Movement Speed: +3%,
-[Lv 4]: FLEE +12, Movement Speed: +4%,
-[Lv 5]: FLEE +15, Movement Speed: +5%,
-[Lv 6]: FLEE +18, Movement Speed: +6%,
-[Lv 7]: FLEE +21, Movement Speed: +7%,
-[Lv 8]: FLEE +24, Movement Speed: +8%,
-[Lv 9]: FLEE +27, Movement Speed: +9%,
-[Lv 10]: FLEE +30, Movement Speed: +10%`,
     img: skillImgNo,
   },
   {
@@ -159,33 +192,7 @@ Description: Kick up a cloud of sand, dealing Earth elemental damage to enemies 
 [Lv 10]: Atk 300%`,
     img: skillImgNo,
   },
-  {
-    id: "steal",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Steal",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 1
-Requirement: None
-Description: Steals an item from a specified target. If target's DEX is higher than the caster, the success rate of stealing an item is decreased. This skill can't be used on Boss monsters and Players.
-[Lv 1]: 8% Base Chance,
-[Lv 2]: 14% Base Chance,
-[Lv 3]: 20% Base Chance,
-[Lv 4]: 26% Base Chance,
-[Lv 5]: 32% Base Chance,
-[Lv 6]: 38% Base Chance,
-[Lv 7]: 44% Base Chance,
-[Lv 8]: 50% Base Chance,
-[Lv 9]: 56% Base Chance,
-[Lv 10]: 62% Base Chance`,
-    img: skillImgNo,
-  },
+  
   {
     id: "throwStone",
     level: 0,
