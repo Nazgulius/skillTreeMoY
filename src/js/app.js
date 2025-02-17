@@ -105,7 +105,12 @@ export default class App {
               const sReset = allSkills.find((s) => s.id === sr.id);
 
               console.log("sReset:", sReset);
-              sReset.level = 0;
+              if (sReset) {
+                console.log("sReset: OK");
+                sReset.level = 0;
+              } else {
+                return;
+              }
             });
           }
 
