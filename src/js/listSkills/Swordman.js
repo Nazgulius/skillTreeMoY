@@ -10,7 +10,9 @@ export const skillsSwordman = [
     id: "oneHandedSwordMastery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "swordQuicken" },
+    ],
     element: null,
     skillName: "One-Handed Sword Mastery",
     maxLevel: 10,
@@ -35,7 +37,10 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
     id: "oneSpearMastery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+       { id: "spearQuicken" },
+       { id: "twoHandedSpearMastery" },
+    ],
     element: null,
     skillName: "One-Spear Mastery",
     maxLevel: 10,
@@ -60,7 +65,9 @@ Description: Increase Attack with One-Handed Spear Weapons. Second Class The ben
     id: "bash",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "magnumBreak" }],
+    dependent: [
+      { id: "magnumBreak" }     
+    ],
     element: null,
     skillName: "Bash",
     maxLevel: 10,
@@ -141,8 +148,12 @@ Description: Enrage a single target to decrease players defense based on VIT or 
   {
     id: "endure",
     level: 0,
-    dependencies: [{ id: "provoke", minLevel: 4 }],
-    dependent: [],
+    dependencies: [
+      { id: "provoke", minLevel: 4 },      
+    ],
+    dependent: [
+      { id: "riding" },
+    ],
     element: null,
     skillName: "Endure",
     maxLevel: 10,
