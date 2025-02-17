@@ -93,6 +93,7 @@ export default class App {
 
           //const skillReset = this._skills.find((s) => s.id === skillDiv.id);
 
+          console.log("skillReset:", skillReset);
           skillReset.level = 0;
           if (skillReset.dependent) {
             skillReset.dependent.forEach((sr) => {
@@ -102,6 +103,8 @@ export default class App {
                 ...this._skillsJobTwoHight,
               ];
               const sReset = allSkills.find((s) => s.id === sr.id);
+
+              console.log("sReset:", sReset);
               sReset.level = 0;
             });
           }
