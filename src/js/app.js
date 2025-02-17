@@ -94,43 +94,56 @@ export default class App {
           //const skillReset = this._skills.find((s) => s.id === skillDiv.id);
 
           console.log("skillReset:", skillReset);
-          skillReset.level = 0;
-          if (skillReset.dependent) {
-            skillReset.dependent.forEach((sr) => {
-              const allSkills = [
-                ...this._skillsJobOne,
-                ...this._skillsJobTwo,
-                ...this._skillsJobTwoHight,
-              ];
-              const sReset = allSkills.find((s) => s.id === sr.id);
 
-              console.log("sReset:", sReset);
-              if (sReset) {
-                console.log("sReset: OK");
-                sReset.level = 0;
-              } else {
-                return;
-              }
-            });
-          }
-
-          dotArray.forEach((dot) => {
-            dot.classList.remove("hidden");
-          });
-
-          this.checkDependent(skillReset); // Проверяем зависимых
-
-          // считаем количество поинтов
-          this.calcUsed();
-          this.calcUsedJobOne();
-          this.calcUsedJobTwo();
-          this.calcUsedJobTwoHight();
+          if (skillReset) {
+            // Сбрасываем уровень скилла и его зависимостей  
+            this.resetSkillLevel(skillReset);  
+            
+            dotArray.forEach((dot) => {  
+              dot.classList.remove("hidden");  
+            });  
+      
+            // Проверяем зависимости  
+            this.checkDependent(skillReset);   
+      
+            // Считаем количество поинтов  
+            this.calcUsed();  
+            this.calcUsedJobOne();  
+            this.calcUsedJobTwo();  
+            this.calcUsedJobTwoHight();  
+          } else {  
+            console.warn("Skill not found:", skillDiv.id);  
+          } 
         });
       });
 
 
 
     });
+
+    resetSkillLevel(skillReset) {  
+      skillReset.level = 0;  
+      console.log("skillReset:", skillReset);  
+    
+      if (skillReset.dependent) {  
+        skillReset.dependent.forEach((sr) => {  
+          const allSkills = [  
+            ...this._skillsJobOne,  
+            ...this._skillsJobTwo,  
+            ...this._skillsJobTwoHight,  
+          ];  
+          const sReset = allSkills.find((s) => s.id === sr.id);  
+    
+          console.log("sReset:", sReset);  
+          if (sReset) {  
+            console.log("sReset: OK");  
+            this.resetSkillLevel(sReset); // Рекурсивный вызов для зависимых  
+          } else {  
+            console.warn("Dependent skill not found:", sr.id);  
+          }  
+        });  
+      }  
+    }
 
     // находим все картинки и вешаем на них слушателя клика или наведения мыши
     // по клику или наведению отображаем подсказку inform из базы
