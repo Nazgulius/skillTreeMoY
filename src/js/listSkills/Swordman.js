@@ -41,8 +41,7 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
     dependent: [
        { id: "spearQuicken" },
        { id: "twoHandedSpearMastery" },
-       { id: "pierce" },
-       { id: "spearQuicken" },       
+       { id: "pierce" },      
     ],
     element: null,
     skillName: "One-Spear Mastery",
