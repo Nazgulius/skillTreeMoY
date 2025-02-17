@@ -5,33 +5,64 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 
 // список скилов Hunter
-export const skillsHunter = [  
+export const skillsHunter = [ 
   {
-    id: "ankleSnare",
+    id: "falconryMastery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "steelCrow" },
+    ],
     element: null,
-    skillName: "Ankle Snare",
+    skillName: "Falconry Mastery",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
+Skill Form: Passive
 Type: Misc
-Target: Ground
-Range: 2
-Requirement: Trap Research Lv: 1
-Description: Deploys trap at a targeted location that immobilizes any enemy that steps on it. The duration of immobilization decreases based on the targets AGI. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5, Duration: 28 sec,
-[Lv 2]: Trap HP: 10, Duration: 56 sec,
-[Lv 3]: Trap HP: 15, Duration: 84 sec,
-[Lv 4]: Trap HP: 20, Duration: 112 sec,
-[Lv 5]: Trap HP: 25, Duration: 140 sec`,
+Requirement: None
+Description: Master the art of Falcon command. Increasing the chance to auto-cast Blitz Beat. Falcon Breeder.
+[Lv 1]: Auto Blitz chance +2%,
+[Lv 2]: Auto Blitz chance +4%,
+[Lv 3]: Auto Blitz chance +6%,
+[Lv 4]: Auto Blitz chance +8%,
+[Lv 5]: Auto Blitz chance +10%`,
+    img: skillImgNo,
+  }, 
+  {
+    id: "steelCrow",
+    level: 0,
+    dependencies: [
+      { id: "falconryMastery", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "falconAssault" },
+    ],
+    element: null,
+    skillName: "Steel Crow",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Misc
+Requirement: Falconry Mastery Lv: 1
+Description: Amplify the might of your falcon attacks.
+[Lv 1]: Damage: +10,
+[Lv 2]: Damage: +20,
+[Lv 3]: Damage: +30,
+[Lv 4]: Damage: +40,
+[Lv 5]: Damage: +50,
+[Lv 6]: Damage: +60,
+[Lv 7]: Damage: +70,
+[Lv 8]: Damage: +80,
+[Lv 9]: Damage: +90,
+[Lv 10]: Damage: +100`,
     img: skillImgNo,
   },
   {
     id: "beastBane",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "falconryMastery", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Beast Bane",
@@ -54,32 +85,14 @@ Description: Harness the power of the falcon to deliver devastating strikes agai
     img: skillImgNo,
   },
   {
-    id: "blastMine",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Blast Mine",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Ground
-Range: 2
-Requirement: Trap Research Lv: 1, Land Mine Lv: 1
-Description: Deploys a trap that explodes when triggered, dealing piercing Wind damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5,
-[Lv 2]: Trap HP: 10,
-[Lv 3]: Trap HP: 15,
-[Lv 4]: Trap HP: 20,
-[Lv 5]: Trap HP: 25`,
-    img: skillImgNo,
-  },
-  {
     id: "blitzBeat",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "falconryMastery", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "falconAssault" },
+    ],
     element: null,
     skillName: "Blitz Beat",
     maxLevel: 10,
@@ -103,31 +116,11 @@ Description: Commands the Falcon to dive at a single target and strike repeatedl
     img: skillImgNo,
   },
   {
-    id: "claymoreTrap",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Claymore Trap",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Ground
-Range: 2
-Requirement: Trap Research Lv: 1, Land Mine Lv: 3, Blast Mine Lv: 2, Glacial Trap Lv: 1
-Description: Deploys a trap that explodes when triggered, dealing piercing Fire damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5,
-[Lv 2]: Trap HP: 10,
-[Lv 3]: Trap HP: 15,
-[Lv 4]: Trap HP: 20,
-[Lv 5]: Trap HP: 25`,
-    img: skillImgNo,
-  },
-  {
     id: "detect",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "falconryMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Detect",
@@ -146,30 +139,122 @@ Description: Commands a Falcon to detect hidden characters from a distance.
     img: skillImgNo,
   },
   {
-    id: "falconryMastery",
+    id: "springTrap",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "falconryMastery", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
-    skillName: "Falconry Mastery",
+    skillName: "Spring Trap",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Passive
+Skill Form: Active
 Type: Misc
-Requirement: None
-Description: Master the art of Falcon command. Increasing the chance to auto-cast Blitz Beat. Falcon Breeder.
-[Lv 1]: Auto Blitz chance +2%,
-[Lv 2]: Auto Blitz chance +4%,
-[Lv 3]: Auto Blitz chance +6%,
-[Lv 4]: Auto Blitz chance +8%,
-[Lv 5]: Auto Blitz chance +10%`,
+Target: Trap
+Range: 5
+Requirement: Falconry Mastery Lv: 3
+Description: Commands Falcon to remove a set Trap from a distance.
+[Lv 1]: Range: 5 cells,
+[Lv 2]: Range: 6 cells,
+[Lv 3]: Range: 7 cells,
+[Lv 4]: Range: 8 cells,
+[Lv 5]: Range: 9 cells`,
+    img: skillImgNo,
+  },
+  {
+    id: "blastMine",
+    level: 0,
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+      { id: "landMine", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
+    element: null,
+    skillName: "Blast Mine",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Ground
+Range: 2
+Requirement: Trap Research Lv: 1, Land Mine Lv: 1
+Description: Deploys a trap that explodes when triggered, dealing piercing Wind damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
+[Lv 1]: Trap HP: 5,
+[Lv 2]: Trap HP: 10,
+[Lv 3]: Trap HP: 15,
+[Lv 4]: Trap HP: 20,
+[Lv 5]: Trap HP: 25`,
+    img: skillImgNo,
+  },
+  {
+    id: "claymoreTrap",
+    level: 0,
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+      { id: "landMine", minLevel: 2 },
+      { id: "blastMine", minLevel: 1 },
+      { id: "glacialTrap", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
+    element: null,
+    skillName: "Claymore Trap",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Ground
+Range: 2
+Requirement: Trap Research Lv: 1, Land Mine Lv: 3, Blast Mine Lv: 2, Glacial Trap Lv: 1
+Description: Deploys a trap that explodes when triggered, dealing piercing Fire damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
+[Lv 1]: Trap HP: 5,
+[Lv 2]: Trap HP: 10,
+[Lv 3]: Trap HP: 15,
+[Lv 4]: Trap HP: 20,
+[Lv 5]: Trap HP: 25`,
+    img: skillImgNo,
+  },
+  {
+    id: "ankleSnare",
+    level: 0,
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
+    element: null,
+    skillName: "Ankle Snare",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Misc
+Target: Ground
+Range: 2
+Requirement: Trap Research Lv: 1
+Description: Deploys trap at a targeted location that immobilizes any enemy that steps on it. The duration of immobilization decreases based on the targets AGI. Catalyst: 1x Trap.
+[Lv 1]: Trap HP: 5, Duration: 28 sec,
+[Lv 2]: Trap HP: 10, Duration: 56 sec,
+[Lv 3]: Trap HP: 15, Duration: 84 sec,
+[Lv 4]: Trap HP: 20, Duration: 112 sec,
+[Lv 5]: Trap HP: 25, Duration: 140 sec`,
     img: skillImgNo,
   },
   {
     id: "flasher",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+      { id: "skidTrap", minLevel: 1 },
+      { id: "ankleSnare", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
     element: null,
     skillName: "Flasher",
     maxLevel: 5,
@@ -190,8 +275,14 @@ Description: Deploys trap at a targeted location that releases a blinding flash 
   {
     id: "glacialTrap",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+      { id: "landMine", minLevel: 1 },
+      { id: "blastMine", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
     element: null,
     skillName: "Glacial Trap",
     maxLevel: 5,
@@ -212,8 +303,12 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Water
   {
     id: "landMine",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
     element: null,
     skillName: "Land Mine",
     maxLevel: 5,
@@ -234,7 +329,9 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Earth
   {
     id: "removeTrap",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "trapResearch", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Remove Trap",
@@ -251,8 +348,15 @@ Description: Removes a trap that has been set on the ground, as well as regain t
   {
     id: "sandman",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+      { id: "skidTrap", minLevel: 2 },
+      { id: "ankleSnare", minLevel: 1 },
+      { id: "flasher", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
     element: null,
     skillName: "Sandman",
     maxLevel: 5,
@@ -273,7 +377,16 @@ Description: Deploys trap at a targeted location that releases a sedative when t
   {
     id: "shockwaveTrap",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "landMine", minLevel: 3 },
+      { id: "skidTrap", minLevel: 3 },
+      { id: "blastMine", minLevel: 2 },
+      { id: "ankleSnare", minLevel: 2 },
+      { id: "glacialTrap", minLevel: 1 },
+      { id: "flasher", minLevel: 1 },
+      { id: "claymoreTrap", minLevel: 0 },
+      { id: "sandman", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Shockwave Trap",
@@ -295,8 +408,12 @@ Description: Deploys trap that releases a shockwave when triggered, drains the t
   {
     id: "skidTrap",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "trapResearch", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "detonator" },
+    ],
     element: null,
     skillName: "Skid Trap",
     maxLevel: 5,
@@ -315,50 +432,19 @@ Description: Deploys trap that causes any enemy that steps on it to slip and sli
     img: skillImgNo,
   },
   {
-    id: "springTrap",
+    id: "trapResearch",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      
+    ],
+    dependent: [
+      
+    ],
     element: null,
-    skillName: "Spring Trap",
+    skillName: "Trap Research",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Trap
-Range: 5
-Requirement: Falconry Mastery Lv: 3
-Description: Commands Falcon to remove a set Trap from a distance.
-[Lv 1]: Range: 5 cells,
-[Lv 2]: Range: 6 cells,
-[Lv 3]: Range: 7 cells,
-[Lv 4]: Range: 8 cells,
-[Lv 5]: Range: 9 cells`,
-    img: skillImgNo,
-  },
-  {
-    id: "steelCrow",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Steel Crow",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Misc
-Requirement: Falconry Mastery Lv: 1
-Description: Amplify the might of your falcon attacks.
-[Lv 1]: Damage: +10,
-[Lv 2]: Damage: +20,
-[Lv 3]: Damage: +30,
-[Lv 4]: Damage: +40,
-[Lv 5]: Damage: +50,
-[Lv 6]: Damage: +60,
-[Lv 7]: Damage: +70,
-[Lv 8]: Damage: +80,
-[Lv 9]: Damage: +90,
-[Lv 10]: Damage: +100`,
+??????????`,
     img: skillImgNo,
   },
 ];

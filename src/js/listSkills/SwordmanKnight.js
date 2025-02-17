@@ -35,8 +35,6 @@ Description: Increase Attack with Two-Handed Sword Weapons. When [Lv 10], it inc
 [Lv 10]: Atk +40`,
     img: skillImgNo,
   },
-  
-  
   {
     id: "counterAttack",
     level: 0,

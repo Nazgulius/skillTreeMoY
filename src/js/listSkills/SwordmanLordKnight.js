@@ -20,7 +20,6 @@ export const skillsLordKnight = [
 Skill Form: Active
 Type: Physical
 Target: Self
-Requirement: None
 Requirement: Sword Quicken Lv: 5
 Description: Requires Swords Class Weapon. Produces a special aura around the sword blade to strengthen its power temporarily. For every Job Level above 50, the user gains +25 True Damage.
 [Lv 1]: True Damage +50,
