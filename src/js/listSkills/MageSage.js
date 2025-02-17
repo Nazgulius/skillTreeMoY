@@ -10,10 +10,20 @@ export const skillsSage = [
     id: "advancedBook",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "frostWeapon" }, { id: "lightningWeapon" }, { id: "seismicWeapon" }, 
-    { id: "flameWeapon" }, { id: "deluge" }, { id: "whirlwind" }, { id: "sandstorm" }, 
-    { id: "volcano" }, { id: "castCancel" }, { id: "magicRod" }, { id: "spellBreaker" }, 
-    { id: "freeCast" }],
+    dependent: [
+      { id: "frostWeapon" }, 
+      { id: "lightningWeapon" }, 
+      { id: "seismicWeapon" },
+      { id: "flameWeapon" }, 
+      { id: "deluge" }, 
+      { id: "whirlwind" }, 
+      { id: "sandstorm" },
+      { id: "volcano" }, 
+      { id: "castCancel" }, 
+      { id: "magicRod" }, 
+      { id: "spellBreaker" },
+      { id: "freeCast" }
+    ],
     element: null,
     skillName: "Advanced Book",
     maxLevel: 10,
@@ -37,8 +47,14 @@ Description: Increase magical attack and attack speed with Book Weapons. When [L
   {
     id: "frostWeapon",
     level: 0,
-    dependencies: [{ id: "coldBolt", minLevel: 2 }, { id: "advancedBook", minLevel: 2 }],
-    dependent: [{ id: "deluge" },],
+    dependencies: [
+      { id: "coldBolt", minLevel: 2 }, 
+      { id: "advancedBook", minLevel: 2 }
+    ],
+    dependent: [
+      { id: "deluge" },
+      { id: "scrollbending" },
+    ],
     element: null,
     skillName: "Frost Weapon",
     maxLevel: 5,
@@ -59,8 +75,14 @@ Description: Temporarily imbues a single targets weapon with Water property, inc
   {
     id: "lightningWeapon",
     level: 0,
-    dependencies: [{ id: "lightningBolt", minLevel: 2 }, { id: "advancedBook", minLevel: 2 }],
-    dependent: [{ id: "whirlwind" }],
+    dependencies: [
+      { id: "lightningBolt", minLevel: 2 }, 
+      { id: "advancedBook", minLevel: 2 }
+    ],
+    dependent: [
+      { id: "whirlwind" },
+      { id: "scrollbending" },
+    ],
     element: null,
     skillName: "Lightning Weapon",
     maxLevel: 5,
@@ -81,8 +103,14 @@ Description: Temporarily imbues a single targets weapon with Wind property, incr
   {
     id: "seismicWeapon",
     level: 0,
-    dependencies: [{ id: "earthSpike", minLevel: 2 }, { id: "advancedBook", minLevel: 2 }],
-    dependent: [{ id: "sandstorm" }],
+    dependencies: [
+      { id: "earthSpike", minLevel: 2 }, 
+      { id: "advancedBook", minLevel: 2 }
+    ],
+    dependent: [
+      { id: "sandstorm" },
+      { id: "scrollbending" },
+    ],
     element: null,
     skillName: "Seismic Weapon",
     maxLevel: 5,
@@ -103,8 +131,14 @@ Description: Temporarily imbues a single targets weapon with Earth property, inc
   {
     id: "flameWeapon",
     level: 0,
-    dependencies: [{ id: "fireBolt", minLevel: 2 }, { id: "advancedBook", minLevel: 2 }],
-    dependent: [{ id: "volcano" }],
+    dependencies: [
+      { id: "fireBolt", minLevel: 2 }, 
+      { id: "advancedBook", minLevel: 2 }
+    ],
+    dependent: [
+      { id: "volcano" },
+      { id: "scrollbending" },
+    ],
     element: null,
     skillName: "Flame Weapon",
     maxLevel: 5,
@@ -128,9 +162,12 @@ Description: Temporarily imbues a single targets weapon with Fire property, incr
     dependencies: [
       { id: "advancedBook", minLevel: 2 },
       { id: "frostWeapon", minLevel: 1 }, 
-      { id: "coldBolt", minLevel: 2 }
+      { id: "coldBolt", minLevel: 2 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "landProtector" },
+      { id: "psychicWave" },
+    ],
     element: null,
     skillName: "Deluge",
     maxLevel: 3,
@@ -154,7 +191,10 @@ img: skillImgNo,
       { id: "lightningWeapon", minLevel: 1 }, 
       { id: "lightningBolt", minLevel: 2 }
     ],
-    dependent: [],
+    dependent: [
+      { id: "landProtector" },
+      { id: "psychicWave" },
+    ],
     element: null,
     skillName: "Whirlwind",
     maxLevel: 3,
@@ -178,7 +218,10 @@ Description: Creates a Whirlwind Terrain in a 7x7 cell area, enhancing all Wind 
       { id: "seismicWeapon", minLevel: 1 }, 
       { id: "earthSpike", minLevel: 2 }
     ],
-    dependent: [],
+    dependent: [
+      { id: "landProtector" },
+      { id: "psychicWave" },
+    ],
     element: null,
     skillName: "Sandstorm",
     maxLevel: 3,
@@ -202,7 +245,10 @@ Description: Creates a Sandstorm Terrain in a 7x7 cell area, amplifying all Wind
       { id: "advancedBook", minLevel: 2 },
       { id: "fireBolt", minLevel: 2 }
     ],
-    dependent: [],
+    dependent: [
+      { id: "landProtector" },
+      { id: "psychicWave" },
+    ],
     element: null,
     skillName: "Volcano",
     maxLevel: 3,
@@ -299,6 +345,7 @@ Description: Upon being attacked with a skill, using Magic Rod in the correct mo
     dependencies: [{ id: "advancedBook", minLevel: 3 }, { id: "magicRod", minLevel: 0 }],
     dependent: [
       { id: "soulChange" },
+      { id: "dispell" },
     ],
     element: null,
     skillName: "Spell Breaker",
@@ -326,6 +373,7 @@ Description: Interrupts a magic spell cast by an enemy and receive the SP the en
     ],
     dependent: [
        { id: "doubleCasting" },
+       { id: "spellwish" },
     ],
     element: null,
     skillName: "Free Cast",
