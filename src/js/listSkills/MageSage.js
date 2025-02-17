@@ -105,7 +105,7 @@ Description: Temporarily imbues a single targets weapon with Wind property, incr
     level: 0,
     dependencies: [
       { id: "earthSpike", minLevel: 2 }, 
-      { id: "advancedBook", minLevel: 2 }
+      { id: "advancedBook", minLevel: 2 },
     ],
     dependent: [
       { id: "sandstorm" },
@@ -133,7 +133,7 @@ Description: Temporarily imbues a single targets weapon with Earth property, inc
     level: 0,
     dependencies: [
       { id: "fireBolt", minLevel: 2 }, 
-      { id: "advancedBook", minLevel: 2 }
+      { id: "advancedBook", minLevel: 2 },
     ],
     dependent: [
       { id: "volcano" },
@@ -243,7 +243,7 @@ Description: Creates a Sandstorm Terrain in a 7x7 cell area, amplifying all Wind
     dependencies: [
       { id: "flameWeapon", minLevel: 1 }, 
       { id: "advancedBook", minLevel: 2 },
-      { id: "fireBolt", minLevel: 2 }
+      { id: "fireBolt", minLevel: 2 },
     ],
     dependent: [
       { id: "landProtector" },
@@ -342,7 +342,7 @@ Description: Upon being attacked with a skill, using Magic Rod in the correct mo
   {
     id: "spellBreaker",
     level: 0,
-    dependencies: [{ id: "advancedBook", minLevel: 3 }, { id: "magicRod", minLevel: 0 }],
+    dependencies: [{ id: "advancedBook", minLevel: 3 }, { id: "magicRod", minLevel: 0 },],
     dependent: [
       { id: "soulChange" },
       { id: "dispell" },
@@ -369,7 +369,7 @@ Description: Interrupts a magic spell cast by an enemy and receive the SP the en
     level: 0,
     dependencies: [
       { id: "advancedBook", minLevel: 1 },
-      { id: "castCancel", minLevel: 0 }
+      { id: "castCancel", minLevel: 0 },
     ],
     dependent: [
        { id: "doubleCasting" },
@@ -399,7 +399,7 @@ Description: Enables moving and attacking during the casting of magic spells.
     id: "spellwish",
     level: 0,
     dependencies: [{ id: "advancedBook", minLevel: 1 }, { id: "castCancel", minLevel: 0 }, 
-    { id: "freeCast", minLevel: 3 }],
+    { id: "freeCast", minLevel: 3 },],
     dependent: [],
     element: null,
     skillName: "Spellwish",
@@ -428,8 +428,8 @@ Description: Grants the ability to automatically cast a spell when performing ba
     dependencies: [
       { id: "advancedBook", minLevel: 1 }, 
       { id: "castCancel", minLevel: 0 }, 
-      { id: "freeCast", minLevel: 3 
-    }],
+      { id: "freeCast", minLevel: 3 },
+    ],
     dependent: [],
     element: null,
     skillName: "Scrollbending",
