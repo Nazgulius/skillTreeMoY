@@ -57,9 +57,11 @@ Description: Requires the user to have a shield equipped. Produces an aura of pr
     level: 0,
     dependencies: [
       { id: "heal", minLevel: 4 },
-      { id: "guard", minLevel: 2 },
+      { id: "guard", minLevel: 2 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "martyrsHeal" },
+    ],
     element: null,
     skillName: "Devotion",
     maxLevel: 5,
@@ -82,7 +84,13 @@ Description: Links to a single target to share part of its damage. The targets l
     level: 0,
     dependencies: [
     ],
-    dependent: [],
+    dependent: [
+      { id: "defender" },
+      { id: "heal" },
+      { id: "holyCross" },
+      { id: "reflectorShield" },
+      { id: "shieldCharge" },
+    ],
     element: null,
     skillName: "Faith",
     maxLevel: 10,
@@ -137,7 +145,11 @@ Description: Channel a divine cross around yourself and sacrificing 10% of your 
     id: "guard",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "defender" },
+      { id: "devotion" },
+      { id: "reflectorShield" },
+    ],
     element: null,
     skillName: "Guard",
     maxLevel: 10,
@@ -163,9 +175,11 @@ Description: Requires a Shield equipped. Allows the user to block physical attac
     id: "heal",
     level: 0,
     dependencies: [
-      { id: "faith", minLevel: 6 },
+      { id: "faith", minLevel: 6 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "devotion" },
+    ],
     element: null,
     skillName: "Heal",
     maxLevel: 10,
@@ -192,9 +206,11 @@ Description: Restores HP of a single target. This skill is affected by Base Leve
     id: "holyCross",
     level: 0,
     dependencies: [
-      { id: "faith", minLevel: 4 },
+      { id: "faith", minLevel: 4 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "grandCross" },
+    ],
     element: null,
     skillName: "Holy Cross",
     maxLevel: 10,
@@ -279,9 +295,11 @@ Description: Requires a Shield equipped. Produces an aura of retaliation to refl
     id: "riding",
     level: 0,
     dependencies: [
-      { id: "endure", minLevel: 0 },
+      { id: "endure", minLevel: 0 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "cavalryMastery" },
+    ],
     element: null,
     skillName: "Riding",
     maxLevel: 1,
@@ -325,9 +343,11 @@ Description: Requires a Shield equipped. Hurls the equipped shield like a boomer
     id: "shieldCharge",
     level: 0,
     dependencies: [
-      { id: "faith", minLevel: 4 },
+      { id: "faith", minLevel: 4 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "shieldBoomerang" },
+    ],
     element: null,
     skillName: "Shield Charge",
     maxLevel: 5,
