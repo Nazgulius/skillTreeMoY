@@ -203,8 +203,12 @@ Description: Increases the amount of HP recovered through your natural HP regene
   {
     id: "movingHPRecovery",
     level: 0,
-    dependencies: [{ id: "increaseHPRecovery", minLevel: 4 }],
-    dependent: [],
+    dependencies: [
+      { id: "increaseHPRecovery", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "sacrifice" },
+    ],
     element: null,
     skillName: "Moving HP Recovery",
     maxLevel: 10,
