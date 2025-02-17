@@ -77,6 +77,11 @@ Description: Instantly teleport to a targeted spot if there are no obstacles bet
     dependencies: [],
     dependent: [
       { id: "spiritSpheresCollect" },
+      { id: "absorbSpiritSphere" },
+      { id: "fallingBlossoms" },
+      { id: "pacify" },
+      { id: "spiritualCadence" },
+      { id: "tripleAttack" },
     ],
     element: null,
     skillName: "Call Spirit Sphere",
@@ -100,7 +105,9 @@ Description: Summons a Spirit Sphere that will orbit the user. Summoned sphere i
     dependencies: [
       { id: "spiritualCadence", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "devaRetaliation" },
+    ],
     element: null,
     skillName: "Calm Spirits",
     maxLevel: 5,
@@ -123,7 +130,9 @@ Description: Enter a meditative state that greatly boosting your Physical and Ma
     dependencies: [
       { id: "tripleAttack", minLevel: 4 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "comboFinish" },
+    ],
     element: null,
     skillName: "Chain Combo",
     maxLevel: 5,
@@ -149,7 +158,7 @@ Description: Chain Combo is a powerful melee attack that can be used after Ragin
     ],
     dependent: [
       { id: "tigerFist" },
-      { id: "chainCrushCombo" },
+      { id: "chainCrushCombo" },      
     ],
     element: null,
     skillName: "Combo Finish",
@@ -193,7 +202,9 @@ Description: Release the pain accumulated during your battles while in a state o
     dependencies: [
       { id: "callSpiritSphere", minLevel: 4 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "furiousSpirits" },
+    ],
     element: null,
     skillName: "Falling Blossoms",
     maxLevel: 5,
@@ -216,7 +227,9 @@ Description: Passively enhances evasion and grants a chance to dodge any physica
     dependencies: [
       { id: "fallingBlossoms", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "asuraStrike" },
+    ],
     element: null,
     skillName: "Furious Spirits",
     maxLevel: 5,
@@ -238,9 +251,11 @@ Description: Enter a heightened state of rage, boosting your Attack and Critical
     level: 0,
     dependencies: [
       { id: "demonBane", minLevel: 9 },
-      { id: "divineProtection", minLevel: 9 },
+      { id: "divineProtection", minLevel: 9 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "tripleAttack" },
+    ],
     element: null,
     skillName: "Iron Hand",
     maxLevel: 10,
@@ -265,9 +280,11 @@ Description: Increase attack with Knuckle Class Weapons or Bare Handed. When [Lv
     id: "occultImpaction",
     level: 0,
     dependencies: [
-      { id: "pacify", minLevel: 0 },
+      { id: "pacify", minLevel: 0 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "throwSpiritSphere" },
+    ],
     element: null,
     skillName: "Occult Impaction",
     maxLevel: 5,
@@ -293,6 +310,9 @@ Description: Strike with a force that scales with the targets DEF. Damage is alw
     ],
     dependent: [
       { id: "palmStrike" },
+      { id: "bodyRelocation" },
+      { id: "occultImpaction" },
+      { id: "throwSpiritSphere" },
     ],
     element: null,
     skillName: "Pacify",
@@ -317,7 +337,9 @@ Note: Duration is reduced to 2 seconds on elite, miniboss, and boss monsters.`,
     dependencies: [
       { id: "callSpiritSphere", minLevel: 4 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "calmSpirits" },
+    ],
     element: null,
     skillName: "Spiritual Cadence",
     maxLevel: 5,
@@ -340,8 +362,11 @@ Description: Passively recovers HP and SP recovery every 10 seconds when the cha
     dependencies: [
       { id: "occultImpaction", minLevel: 2 },
       { id: "pacify", minLevel: 1 },
+      { id: "bodyRelocation" },
     ],
-    dependent: [],
+    dependent: [
+      { id: "bodyRelocation" },
+    ],
     element: null,
     skillName: "Throw Spirit Sphere",
     maxLevel: 5,
@@ -369,6 +394,7 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
     dependent: [
       { id: "tigerFist" },
       { id: "chainCrushCombo" },
+      { id: "chainCombo" },
     ],
     element: null,
     skillName: "Triple Attack",
@@ -378,7 +404,7 @@ Skill Form: Active
 Type: Physical
 Target: Self
 Range: 1
-Requirement: Call Spirit Sphere Lv: 5, Iron Hand Lv: 3
+Requirement: Call Spirit Sphere Lv: 5, Iron Hand Lv: 3 
 Description: Triple Attack provides a chance to automatically unleash a triple strike during battle or can be manually activated. When activated manually, it costs SP. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 3x3 AoE. Chance to automatically activate on normal attacks is 30%. Triple Attack can be used after any combo to reset the combo chain.
 [Lv 1]: 120% Atk, Manual Activation SP Cost: 3,
 [Lv 2]: 140% Atk, Manual Activation SP Cost: 4,
