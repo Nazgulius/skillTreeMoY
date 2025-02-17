@@ -9,7 +9,10 @@ export const skillsKnight = [
   {
     id: "bowlingBash",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "swordQuicken", minLevel: 9 },
+      { id: "counterAttack", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Bowling Bash",
@@ -36,7 +39,9 @@ Description: Requires a Sword-class weapon. Deals physical damage to all enemies
   {
     id: "brandishSpear",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "spearStab", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Brandish Spear",
@@ -63,7 +68,9 @@ Description: Requires Spear Class Weapon. Swings the equipped spear forward to a
   {
     id: "cavalryMastery",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "riding", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Cavalry Mastery",
@@ -83,7 +90,9 @@ Description: Reduces the ASPD and Flee penalty while mounted.
   {
     id: "counterAttack",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "swordQuicken", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Counter Attack",
@@ -104,7 +113,9 @@ Description: Requires Swords Class Weapon. If an opponent physically attacks a p
   {
     id: "dashingBash",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "counterAttack", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Dashing Bash",
@@ -126,7 +137,9 @@ Description: Requires Swords Class Weapon. Quickly approach and attack a distant
   {
     id: "pierce",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "oneSpearMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Pierce",
@@ -153,7 +166,9 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear into a sing
   {
     id: "riding",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "endure", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Riding",
@@ -168,7 +183,9 @@ Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750
   {
     id: "spearBoomerang",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "spearStab", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Spear Boomerang",
@@ -195,7 +212,9 @@ Description: Requires Spear Class Weapon. Throws a spear at a target like a boom
   {
     id: "spearQuicken",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "oneSpearMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Spear Quicken",
@@ -221,7 +240,9 @@ Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critc
   {
     id: "spearStab",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "pierce", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Spear Stab",
@@ -243,8 +264,12 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear against a s
   {
     id: "swordQuicken",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "oneHandedSwordMastery", minLevel: 4 },      
+    ],
+    dependent: [
+      { id: "auraBlade" },
+    ],
     element: null,
     skillName: "Sword Quicken",
     maxLevel: 10,
@@ -269,7 +294,9 @@ Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Crit
   {
     id: "twoHandedSwordMastery",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "oneHandedSwordMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Two-Handed Sword Mastery",
