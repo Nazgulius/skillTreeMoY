@@ -90,6 +90,7 @@ Description: Links to a single target to share part of its damage. The targets l
       { id: "holyCross" },
       { id: "reflectorShield" },
       { id: "shieldCharge" },
+      { id: "sacrifice" },
     ],
     element: null,
     skillName: "Faith",
@@ -118,7 +119,9 @@ Description: Passively Enhances MaxHP. Activating removes all allies bound to [D
     dependencies: [
       { id: "holyCross", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "gloriaDomini" },
+    ],
     element: null,
     skillName: "Grand Cross",
     maxLevel: 10,
@@ -239,7 +242,9 @@ Description: Strikes the target with a divine cross of light, dealing Holy Prope
     dependencies: [
       { id: "devotion", minLevel: 0 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "gospel" },
+    ],
     element: null,
     skillName: "Martyr's Heal",
     maxLevel: 10,
@@ -316,7 +321,9 @@ Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750
     dependencies: [
       { id: "shieldCharge", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "shieldChain" },
+    ],
     element: null,
     skillName: "Shield Boomerang",
     maxLevel: 10,
@@ -346,7 +353,7 @@ Description: Requires a Shield equipped. Hurls the equipped shield like a boomer
       { id: "faith", minLevel: 4 },      
     ],
     dependent: [
-      { id: "shieldBoomerang" },
+      { id: "shieldBoomerang" },      
     ],
     element: null,
     skillName: "Shield Charge",
