@@ -121,30 +121,6 @@ export default class App {
 
     });
 
-    resetSkillLevel(skillReset) {  
-      skillReset.level = 0;  
-      console.log("skillReset:", skillReset);  
-    
-      if (skillReset.dependent) {  
-        skillReset.dependent.forEach((sr) => {  
-          const allSkills = [  
-            ...this._skillsJobOne,  
-            ...this._skillsJobTwo,  
-            ...this._skillsJobTwoHight,  
-          ];  
-          const sReset = allSkills.find((s) => s.id === sr.id);  
-    
-          console.log("sReset:", sReset);  
-          if (sReset) {  
-            console.log("sReset: OK");  
-            this.resetSkillLevel(sReset); // Рекурсивный вызов для зависимых  
-          } else {  
-            console.warn("Dependent skill not found:", sr.id);  
-          }  
-        });  
-      }  
-    }
-
     // находим все картинки и вешаем на них слушателя клика или наведения мыши
     // по клику или наведению отображаем подсказку inform из базы
     const skillImgAll = document.querySelectorAll('.skill-img');
@@ -223,6 +199,30 @@ export default class App {
     //});
   }
 
+  resetSkillLevel(skillReset) {  
+      skillReset.level = 0;  
+      console.log("skillReset:", skillReset);  
+    
+      if (skillReset.dependent) {  
+        skillReset.dependent.forEach((sr) => {  
+          const allSkills = [  
+            ...this._skillsJobOne,  
+            ...this._skillsJobTwo,  
+            ...this._skillsJobTwoHight,  
+          ];  
+          const sReset = allSkills.find((s) => s.id === sr.id);  
+    
+          console.log("sReset:", sReset);  
+          if (sReset) {  
+            console.log("sReset: OK");  
+            this.resetSkillLevel(sReset); // Рекурсивный вызов для зависимых  
+          } else {  
+            console.warn("Dependent skill not found:", sr.id);  
+          }  
+        });  
+      }  
+    };
+  
   // метод для проверки зависимостей (реиспользование внутри себя)
   checkDependencies(skill) {
     if (skill.dependencies) {
