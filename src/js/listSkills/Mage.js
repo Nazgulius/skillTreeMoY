@@ -26,8 +26,14 @@ export const skillsMage = [
     id: "fireBolt",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "fireBall" }, { id: "fireWall" }, { id: "sightrasher" }, 
-    { id: "meteorStorm" }, { id: "firePillar" }],
+    dependent: [
+      { id: "fireBall" }, 
+      { id: "fireWall" }, 
+      { id: "sightrasher" },
+      { id: "meteorStorm" }, 
+      { id: "firePillar" },
+      { id: "flameWeapon" },
+    ],
     element: null,
     skillName: "Fire Bolt",
     maxLevel: 10,
@@ -108,8 +114,14 @@ Description: Conjures a blazing wall of flames at a targeted location, dealing 5
     id: "coldBolt",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "frostDiver" }, { id: "iceWall" }, { id: "waterBall" }, 
-    { id: "stormGust" }, { id: "frostNova" }],
+    dependent: [
+      { id: "frostDiver" }, 
+      { id: "iceWall" }, 
+      { id: "waterBall" },
+      { id: "stormGust" }, 
+      { id: "frostNova" }
+      { id: "frostWeapon" }
+    ],
     element: null,
     skillName: "Cold Bolt",
     maxLevel: 10,
@@ -191,8 +203,13 @@ Description: Conjures a solid wall of ice in a 1x5 cell area, blocking enemies b
     id: "lightningBolt",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "thunderstorm" }, { id: "jupitelThunder" }, { id: "lordOfVermilion" }, 
-    { id: "electricalInduction" }],
+    dependent: [
+      { id: "thunderstorm" }, 
+      { id: "jupitelThunder" }, 
+      { id: "lordOfVermilion" },
+      { id: "electricalInduction" }
+      { id: "lightningWeapon" }
+    ],
     element: null,
     skillName: "Lightning Bolt",
     maxLevel: 10,
@@ -246,8 +263,13 @@ Description: Summons a lightning bolt to strike a specific location, dealing Win
     id: "earthSpike",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "stoneCurse" }, { id: "violentQuake" }, { id: "quagmire" }, 
-    { id: "heavensDrive" }],
+    dependent: [
+      { id: "stoneCurse" }, 
+      { id: "violentQuake" }, 
+      { id: "quagmire" },
+      { id: "heavensDrive" }
+      { id: "seismicWeapon" }
+    ],
     element: null,
     skillName: "Earth Spike",
     maxLevel: 10,
