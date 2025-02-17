@@ -10,8 +10,9 @@ export const skillsCrusader = [
     id: "cavalryMastery",
     level: 0,
     dependencies: [
+      { id: "riding", minLevel: 0 }
     ],
-    dependent: [{ id: "defender", minLevel: 1 }],
+    dependent: [],
     element: null,
     skillName: "Cavalry Mastery",
     maxLevel: 5,
@@ -31,7 +32,8 @@ Description: Removes the ASPD and Flee penalty while mounted. Increases Hit Rate
     id: "defender",
     level: 0,
     dependencies: [
-      { id: "devotion", minLevel: 1 }
+      { id: "guard", minLevel: 4 },
+      { id: "faith", minLevel: 4 },
     ],
     dependent: [],
     element: null,
@@ -54,7 +56,8 @@ Description: Requires the user to have a shield equipped. Produces an aura of pr
     id: "devotion",
     level: 0,
     dependencies: [
-      { id: "faith", minLevel: 1 }
+      { id: "heal", minLevel: 4 },
+      { id: "guard", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -78,7 +81,6 @@ Description: Links to a single target to share part of its damage. The targets l
     id: "faith",
     level: 0,
     dependencies: [
-      { id: "grandCross", minLevel: 1 }
     ],
     dependent: [],
     element: null,
@@ -105,7 +107,9 @@ Description: Passively Enhances MaxHP. Activating removes all allies bound to [D
   {
     id: "grandCross",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "holyCross", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Grand Cross",
@@ -158,7 +162,9 @@ Description: Requires a Shield equipped. Allows the user to block physical attac
   {
     id: "heal",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "faith", minLevel: 6 },
+    ],
     dependent: [],
     element: null,
     skillName: "Heal",
@@ -185,7 +191,9 @@ Description: Restores HP of a single target. This skill is affected by Base Leve
   {
     id: "holyCross",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "faith", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Holy Cross",
@@ -212,7 +220,9 @@ Description: Strikes the target with a divine cross of light, dealing Holy Prope
   {
     id: "martyrsHeal",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "devotion", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Martyr's Heal",
@@ -239,7 +249,10 @@ Description: Center a divine cross on yourself, sacrificing HP and SP to heal al
   {
     id: "reflectorShield",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "guard", minLevel: 4 },
+      { id: "faith", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Reflector Shield",
@@ -265,7 +278,9 @@ Description: Requires a Shield equipped. Produces an aura of retaliation to refl
   {
     id: "riding",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "endure", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Riding",
@@ -280,7 +295,9 @@ Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750
   {
     id: "shieldBoomerang",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "shieldCharge", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Shield Boomerang",
@@ -307,7 +324,9 @@ Description: Requires a Shield equipped. Hurls the equipped shield like a boomer
   {
     id: "shieldCharge",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "faith", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Shield Charge",
@@ -329,7 +348,9 @@ Description: Requires a Shield equipped. Smashes the equipped shield into a sing
   {
     id: "spearQuicken",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "oneSpearMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Spear Quicken",
@@ -355,7 +376,9 @@ Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critc
   {
     id: "swordQuicken",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "oneHandedSwordMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Sword Quicken",
@@ -381,7 +404,9 @@ Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Crit
   {
     id: "twoHandedSpearMastery",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "oneSpearMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Two-Handed Spear Mastery",
