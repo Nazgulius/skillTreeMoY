@@ -119,8 +119,8 @@ Description: Conjures a blazing wall of flames at a targeted location, dealing 5
       { id: "iceWall" }, 
       { id: "waterBall" },
       { id: "stormGust" }, 
-      { id: "frostNova" }
-      { id: "frostWeapon" }
+      { id: "frostNova" },
+      { id: "frostWeapon" },
     ],
     element: null,
     skillName: "Cold Bolt",
@@ -148,8 +148,12 @@ Description: Summons bolts of frigid ice to strike at an enemy which inflicts 10
     id: "frostDiver",
     level: 0,
     dependencies: [{ id: "coldBolt", minLevel: 3 }],
-    dependent: [{ id: "iceWall" }, { id: "waterBall" }, { id: "stormGust" }, 
-    { id: "frostNova" }],
+    dependent: [
+      { id: "iceWall" }, 
+      { id: "waterBall" }, 
+      { id: "stormGust" },
+      { id: "frostNova" },
+    ],
     element: null,
     skillName: "Frost Diver",
     maxLevel: 10,
@@ -175,7 +179,10 @@ Description: Inflicts Water Property Magic Damage with a chance to leave the tar
   {
     id: "iceWall",
     level: 0,
-    dependencies: [{ id: "coldBolt", minLevel: 3 }, { id: "frostDiver", minLevel: 4 }],
+    dependencies: [
+      { id: "coldBolt", minLevel: 3 }, 
+      { id: "frostDiver", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Ice Wall",
@@ -207,8 +214,8 @@ Description: Conjures a solid wall of ice in a 1x5 cell area, blocking enemies b
       { id: "thunderstorm" }, 
       { id: "jupitelThunder" }, 
       { id: "lordOfVermilion" },
-      { id: "electricalInduction" }
-      { id: "lightningWeapon" }
+      { id: "electricalInduction" },
+      { id: "lightningWeapon" },
     ],
     element: null,
     skillName: "Lightning Bolt",
@@ -236,7 +243,7 @@ Description: Drops lightning on target inflicting 100% MATK Wind elemental magic
     id: "thunderstorm",
     level: 0,
     dependencies: [{ id: "lightningBolt", minLevel: 3 }],
-    dependent: [{ id: "jupitelThunder" }, { id: "lordOfVermilion" }, { id: "electricalInduction" }],
+    dependent: [{ id: "jupitelThunder" }, { id: "lordOfVermilion" }, { id: "electricalInduction" },],
     element: null,
     skillName: "Thunderstorm",
     maxLevel: 10,
@@ -267,8 +274,8 @@ Description: Summons a lightning bolt to strike a specific location, dealing Win
       { id: "stoneCurse" }, 
       { id: "violentQuake" }, 
       { id: "quagmire" },
-      { id: "heavensDrive" }
-      { id: "seismicWeapon" }
+      { id: "heavensDrive" },
+      { id: "seismicWeapon" },
     ],
     element: null,
     skillName: "Earth Spike",
@@ -295,8 +302,8 @@ Description: Summons spikes from the ground beneath a single target, each dealin
   {
     id: "stoneCurse",
     level: 0,
-    dependencies: [{ id: "earthSpike", minLevel: 3 }],
-    dependent: [{ id: "violentQuake" }, { id: "quagmire" }, { id: "heavensDrive" }],
+    dependencies: [{ id: "earthSpike", minLevel: 3 },],
+    dependent: [{ id: "violentQuake" }, { id: "quagmire" }, { id: "heavensDrive" },],
     element: null,
     skillName: "Stone Curse",
     maxLevel: 10,
@@ -323,7 +330,7 @@ Description: Attempts to Petrifying a single target. If used on an already petri
     id: "soulStrike",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "napalmBeat" }, { id: "safetyWall" }],
+    dependent: [{ id: "napalmBeat" }, { id: "safetyWall" },],
     element: null,
     skillName: "Soul Strike",
     maxLevel: 10,
@@ -349,8 +356,8 @@ Description: Summon the Ancient Holy Spirit to deliver direct attacks, inflictin
   {
     id: "napalmBeat",
     level: 0,
-    dependencies: [{ id: "soulStrike", minLevel: 3 }],
-    dependent: [{ id: "safetyWall" }],
+    dependencies: [{ id: "soulStrike", minLevel: 3 },],
+    dependent: [{ id: "safetyWall" },],
     element: null,
     skillName: "Napalm Beat",
     maxLevel: 10,
@@ -376,7 +383,7 @@ Description: Unleashes a surge of psychokinetic energy, striking a target with G
   {
     id: "safetyWall",
     level: 0,
-    dependencies: [{ id: "soulStrike", minLevel: 6 }, { id: "napalmBeat", minLevel: 4 }],
+    dependencies: [{ id: "soulStrike", minLevel: 6 }, { id: "napalmBeat", minLevel: 4 },],
     element: null,
     skillName: "Safety Wall",
     maxLevel: 10,
