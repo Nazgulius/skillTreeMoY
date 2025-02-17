@@ -12,6 +12,7 @@ export const skillsSwordman = [
     dependencies: [],
     dependent: [
       { id: "swordQuicken" },
+      { id: "twoHandedSwordMastery" },
     ],
     element: null,
     skillName: "One-Handed Sword Mastery",
@@ -40,6 +41,8 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
     dependent: [
        { id: "spearQuicken" },
        { id: "twoHandedSpearMastery" },
+       { id: "pierce" },
+       { id: "spearQuicken" },       
     ],
     element: null,
     skillName: "One-Spear Mastery",
