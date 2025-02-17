@@ -314,7 +314,7 @@ Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750
     id: "shieldBoomerang",
     level: 0,
     dependencies: [
-      { id: "shieldCharge", minLevel: 0 },
+      { id: "shieldCharge", minLevel: 2 },
     ],
     dependent: [],
     element: null,
