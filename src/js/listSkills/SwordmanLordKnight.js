@@ -9,7 +9,9 @@ export const skillsLordKnight = [
   {
     id: "auraBlade",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "swordQuicken", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Aura Blade",
@@ -62,7 +64,9 @@ Description: Unleashes the power of rage to greatly enhance the user temporarily
   {
     id: "concentration",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "spearQuicken", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Concentration",
@@ -88,7 +92,9 @@ Description: Requires Spear Class Weapon. Boosts Attack Power and Hit Rate.
   {
     id: "jointBeat",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "brandishSpear", minLevel: 6 },
+    ],
     dependent: [],
     element: null,
     skillName: "Joint Beat",
@@ -115,7 +121,10 @@ Description: Requires Spear Class Weapon. Executes precision strikes at an enemy
   {
     id: "parry",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "counterAttack", minLevel: 4 },
+      { id: "twoHandedSwordMastery", minLevel: 9 },
+    ],
     dependent: [],
     element: null,
     skillName: "Parry",
@@ -141,7 +150,9 @@ Description: Requires Two-Handed Sword Class Weapon. Allows the user to block ph
   {
     id: "spiralPierce",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "spearBoomerang", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Spiral Pierce",
