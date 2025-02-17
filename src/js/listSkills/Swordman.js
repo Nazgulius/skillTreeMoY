@@ -13,6 +13,7 @@ export const skillsSwordman = [
     dependent: [
       { id: "swordQuicken" },
       { id: "twoHandedSwordMastery" },
+      { id: "oneHandedSwordMastery" },
     ],
     element: null,
     skillName: "One-Handed Sword Mastery",
