@@ -381,7 +381,10 @@ Description: Constructs a protective barrier at a targeted location that blocks 
     id: "increaseSPRecovery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "indulge" },
+      { id: "mindBreaker" },
+    ],
     element: null,
     skillName: "Increase SP Recovery",
     maxLevel: 10,
