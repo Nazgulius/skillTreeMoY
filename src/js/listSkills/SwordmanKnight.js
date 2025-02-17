@@ -7,6 +7,64 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 // список скилов Knight
 export const skillsKnight = [  
   {
+    id: "twoHandedSwordMastery",
+    level: 0,
+    dependencies: [
+      { id: "oneHandedSwordMastery", minLevel: 4 },      
+    ],
+    dependent: [
+      { id: "parry" },
+    ],
+    element: null,
+    skillName: "Two-Handed Sword Mastery",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Physical
+Requirement: One-Handed Sword Mastery Lv: 5
+Description: Increase Attack with Two-Handed Sword Weapons. When [Lv 10], it increases Crital Rate in +6. Attack bonus granted by this skill is of the Equipment type.
+[Lv 1]: Atk +4,
+[Lv 2]: Atk +8,
+[Lv 3]: Atk +12,
+[Lv 4]: Atk +16,
+[Lv 5]: Atk +20,
+[Lv 6]: Atk +24,
+[Lv 7]: Atk +28,
+[Lv 8]: Atk +32,
+[Lv 9]: Atk +36,
+[Lv 10]: Atk +40`,
+    img: skillImgNo,
+  },
+  
+  
+  {
+    id: "counterAttack",
+    level: 0,
+    dependencies: [
+      { id: "swordQuicken", minLevel: 4 },      
+    ],
+    dependent: [
+      { id: "bowlingBash" },
+      { id: "dashingBash" },
+      { id: "parry" },
+    ],
+    element: null,
+    skillName: "Counter Attack",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Self
+Requirement: Sword Quicken Lv: 5
+Description: Requires Swords Class Weapon. If an opponent physically attacks a player casting Auto Counter while facing it, the attack will be blocked and the caster will perform one Critical attack on them. Weapon Attack plus Weapon Weight increase the attack multiplier for this skill.
+[Lv 1]: Auto Counter Duration: 0.4 sec,
+[Lv 2]: Auto Counter Duration: 0.6 sec,
+[Lv 3]: Auto Counter Duration: 0.8 sec,
+[Lv 4]: Auto Counter Duration: 1.0 sec,
+[Lv 5]: Auto Counter Duration: 1.2 sec`,
+    img: skillImgNo,
+  },
+  {
     id: "bowlingBash",
     level: 0,
     dependencies: [
@@ -37,32 +95,79 @@ Description: Requires a Sword-class weapon. Deals physical damage to all enemies
     img: skillImgNo,
   },
   {
-    id: "brandishSpear",
+    id: "dashingBash",
     level: 0,
     dependencies: [
-      { id: "spearStab", minLevel: 4 },
+      { id: "counterAttack", minLevel: 4 },
     ],
     dependent: [],
     element: null,
-    skillName: "Brandish Spear",
+    skillName: "Dashing Bash",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 6 ~ 10
+Requirement: Counter Attack Lv: 5
+Description: Requires Swords Class Weapon. Quickly approach and attack a distant target. Movement Speed multiplies the skill's damage, and can even double it.
+[Lv 1]: Atk 200%, Range: 6,
+[Lv 2]: Atk 300%, Range: 7,
+[Lv 3]: Atk 400%, Range: 8,
+[Lv 4]: Atk 500%, Range: 9,
+[Lv 5]: Atk 600%, Range: 10`,
+    img: skillImgNo,
+  },
+  {
+    id: "swordQuicken",
+    level: 0,
+    dependencies: [
+      { id: "oneHandedSwordMastery", minLevel: 4 },      
+    ],
+    dependent: [
+      { id: "auraBlade" },
+      { id: "bowlingBash" },
+      { id: "counterAttack" },
+    ],
+    element: null,
+    skillName: "Sword Quicken",
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
-Target: Enemy
-Range: 3
-Requirement: Spear Stab Lv: 5
-Description: Requires Spear Class Weapon. Swings the equipped spear forward to a single target to inflict Ranged Physical Damage to all enemies in front of the user. Every 30 VIT increases the SkillRatio by 1% per Base Level. The player cannot change weapons during this time.
-[Lv 1]: Atk 130% + VIT and B. Level Bonus,
-[Lv 2]: Atk 160% + VIT and B. Level Bonus,
-[Lv 3]: Atk 190% + VIT and B. Level Bonus,
-[Lv 4]: Atk 220% + VIT and B. Level Bonus,
-[Lv 5]: Atk 250% + VIT and B. Level Bonus,
-[Lv 6]: Atk 280% + VIT and B. Level Bonus,
-[Lv 7]: Atk 310% + VIT and B. Level Bonus,
-[Lv 8]: Atk 340% + VIT and B. Level Bonus,
-[Lv 9]: Atk 370% + VIT and B. Level Bonus,
-[Lv 10]: Atk 400% + VIT and B. Level Bonus`,
+Target: Self
+Requirement: One-Handed Sword Mastery Lv: 5
+Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Critcal and Hit. This effect is also knocked off by Decrease AGI and Quagmire.
+[Lv 1]: Duration: 84sec, Critcal +1, Hit +2,
+[Lv 2]: Duration: 108sec, Critcal +2, Hit +4,
+[Lv 3]: Duration: 132sec, Critcal +3, Hit +6,
+[Lv 4]: Duration: 156sec, Critcal +4, Hit +8,
+[Lv 5]: Duration: 180sec, Critcal +5, Hit +10,
+[Lv 6]: Duration: 204sec, Critcal +6, Hit +12,
+[Lv 7]: Duration: 228sec, Critcal +7, Hit +14,
+[Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
+[Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
+[Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
+    img: skillImgNo,
+  },
+  
+  {
+    id: "riding",
+    level: 0,
+    dependencies: [
+      { id: "endure", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "cavalryMastery" },
+    ],
+    element: null,
+    skillName: "Riding",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Passive
+Type: Physical
+Requirement: Endure Lv: 1
+Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750 but reduces ASPD and Flee by 50% while mounted. Riding affects Weapon Size Modifiers as follows:, One-Handed Sword: Small 100%, Medium 125%, Large 100%, Two-Handed Sword: Small 100%, Medium 100%, Large 125%, Spear: Small 100%, Medium 100%, Large 125%, PecoPeco Breeder.`,
     img: skillImgNo,
   },
   {
@@ -88,59 +193,14 @@ Description: Reduces the ASPD and Flee penalty while mounted.
     img: skillImgNo,
   },
   {
-    id: "counterAttack",
-    level: 0,
-    dependencies: [
-      { id: "swordQuicken", minLevel: 4 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Counter Attack",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Sword Quicken Lv: 5
-Description: Requires Swords Class Weapon. If an opponent physically attacks a player casting Auto Counter while facing it, the attack will be blocked and the caster will perform one Critical attack on them. Weapon Attack plus Weapon Weight increase the attack multiplier for this skill.
-[Lv 1]: Auto Counter Duration: 0.4 sec,
-[Lv 2]: Auto Counter Duration: 0.6 sec,
-[Lv 3]: Auto Counter Duration: 0.8 sec,
-[Lv 4]: Auto Counter Duration: 1.0 sec,
-[Lv 5]: Auto Counter Duration: 1.2 sec`,
-    img: skillImgNo,
-  },
-  {
-    id: "dashingBash",
-    level: 0,
-    dependencies: [
-      { id: "counterAttack", minLevel: 4 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Dashing Bash",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 6 ~ 10
-Requirement: Counter Attack Lv: 5
-Description: Requires Swords Class Weapon. Quickly approach and attack a distant target. Movement Speed multiplies the skill's damage, and can even double it.
-[Lv 1]: Atk 200%, Range: 6,
-[Lv 2]: Atk 300%, Range: 7,
-[Lv 3]: Atk 400%, Range: 8,
-[Lv 4]: Atk 500%, Range: 9,
-[Lv 5]: Atk 600%, Range: 10`,
-    img: skillImgNo,
-  },
-  {
     id: "pierce",
     level: 0,
     dependencies: [
       { id: "oneSpearMastery", minLevel: 4 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "spearStab" },
+    ],
     element: null,
     skillName: "Pierce",
     maxLevel: 10,
@@ -163,30 +223,16 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear into a sing
 [Lv 10]: Atk 200% x Hits`,
     img: skillImgNo,
   },
-  {
-    id: "riding",
-    level: 0,
-    dependencies: [
-      { id: "endure", minLevel: 0 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Riding",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Passive
-Type: Physical
-Requirement: Endure Lv: 1
-Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750 but reduces ASPD and Flee by 50% while mounted. Riding affects Weapon Size Modifiers as follows:, One-Handed Sword: Small 100%, Medium 125%, Large 100%, Two-Handed Sword: Small 100%, Medium 100%, Large 125%, Spear: Small 100%, Medium 100%, Large 125%, PecoPeco Breeder.`,
-    img: skillImgNo,
-  },
+  
   {
     id: "spearBoomerang",
     level: 0,
     dependencies: [
-      { id: "spearStab", minLevel: 2 },
+      { id: "spearStab", minLevel: 2 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "spiralPierce" },
+    ],
     element: null,
     skillName: "Spear Boomerang",
     maxLevel: 10,
@@ -213,9 +259,11 @@ Description: Requires Spear Class Weapon. Throws a spear at a target like a boom
     id: "spearQuicken",
     level: 0,
     dependencies: [
-      { id: "oneSpearMastery", minLevel: 4 },
+      { id: "oneSpearMastery", minLevel: 4 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "concentration" },
+    ],
     element: null,
     skillName: "Spear Quicken",
     maxLevel: 10,
@@ -241,9 +289,12 @@ Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critc
     id: "spearStab",
     level: 0,
     dependencies: [
-      { id: "pierce", minLevel: 4 },
+      { id: "pierce", minLevel: 4 },      
     ],
-    dependent: [],
+    dependent: [
+      { id: "brandishSpear" },
+      { id: "spearBoomerang" },
+    ],
     element: null,
     skillName: "Spear Stab",
     maxLevel: 5,
@@ -262,60 +313,34 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear against a s
     img: skillImgNo,
   },
   {
-    id: "swordQuicken",
+    id: "brandishSpear",
     level: 0,
     dependencies: [
-      { id: "oneHandedSwordMastery", minLevel: 4 },      
+      { id: "spearStab", minLevel: 4 },      
     ],
     dependent: [
-      { id: "auraBlade" },
+      { id: "jointBeat" },
     ],
     element: null,
-    skillName: "Sword Quicken",
+    skillName: "Brandish Spear",
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
-Target: Self
-Requirement: One-Handed Sword Mastery Lv: 5
-Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Critcal and Hit. This effect is also knocked off by Decrease AGI and Quagmire.
-[Lv 1]: Duration: 84sec, Critcal +1, Hit +2,
-[Lv 2]: Duration: 108sec, Critcal +2, Hit +4,
-[Lv 3]: Duration: 132sec, Critcal +3, Hit +6,
-[Lv 4]: Duration: 156sec, Critcal +4, Hit +8,
-[Lv 5]: Duration: 180sec, Critcal +5, Hit +10,
-[Lv 6]: Duration: 204sec, Critcal +6, Hit +12,
-[Lv 7]: Duration: 228sec, Critcal +7, Hit +14,
-[Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
-[Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
-[Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
-    img: skillImgNo,
-  },
-  {
-    id: "twoHandedSwordMastery",
-    level: 0,
-    dependencies: [
-      { id: "oneHandedSwordMastery", minLevel: 4 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Two-Handed Sword Mastery",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: One-Handed Sword Mastery Lv: 5
-Description: Increase Attack with Two-Handed Sword Weapons. When [Lv 10], it increases Crital Rate in +6. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +4,
-[Lv 2]: Atk +8,
-[Lv 3]: Atk +12,
-[Lv 4]: Atk +16,
-[Lv 5]: Atk +20,
-[Lv 6]: Atk +24,
-[Lv 7]: Atk +28,
-[Lv 8]: Atk +32,
-[Lv 9]: Atk +36,
-[Lv 10]: Atk +40`,
+Target: Enemy
+Range: 3
+Requirement: Spear Stab Lv: 5
+Description: Requires Spear Class Weapon. Swings the equipped spear forward to a single target to inflict Ranged Physical Damage to all enemies in front of the user. Every 30 VIT increases the SkillRatio by 1% per Base Level. The player cannot change weapons during this time.
+[Lv 1]: Atk 130% + VIT and B. Level Bonus,
+[Lv 2]: Atk 160% + VIT and B. Level Bonus,
+[Lv 3]: Atk 190% + VIT and B. Level Bonus,
+[Lv 4]: Atk 220% + VIT and B. Level Bonus,
+[Lv 5]: Atk 250% + VIT and B. Level Bonus,
+[Lv 6]: Atk 280% + VIT and B. Level Bonus,
+[Lv 7]: Atk 310% + VIT and B. Level Bonus,
+[Lv 8]: Atk 340% + VIT and B. Level Bonus,
+[Lv 9]: Atk 370% + VIT and B. Level Bonus,
+[Lv 10]: Atk 400% + VIT and B. Level Bonus`,
     img: skillImgNo,
   },
 ];
