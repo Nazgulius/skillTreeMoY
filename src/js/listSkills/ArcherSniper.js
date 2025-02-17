@@ -9,7 +9,16 @@ export const skillsSniper = [
   {
     id: "detonator",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "landMine", minLevel: 3 },
+      { id: "skidTrap", minLevel: 3 },
+      { id: "blastMine", minLevel: 2 },
+      { id: "ankleSnare", minLevel: 2 },
+      { id: "glacialTrap", minLevel: 1 },
+      { id: "flasher", minLevel: 1 },
+      { id: "claymoreTrap", minLevel: 0 },
+      { id: "sandman", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Detonator",
@@ -26,7 +35,10 @@ Description: Instantly activates all traps within a 7x7 area. Traps triggered by
   {
     id: "falconAssault",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "steelCrow", minLevel: 5 },
+      { id: "blitzBeat", minLevel: 6 },
+    ],
     dependent: [],
     element: null,
     skillName: "Falcon Assault",
@@ -53,7 +65,11 @@ Description: Command your falcon to execute a swift dive, delivering a physical 
   {
     id: "quickDraw",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "owlsEye", minLevel: 9 },
+      { id: "vulturesEye", minLevel: 9 },
+      { id: "improveConcentration", minLevel: 9 },
+    ],
     dependent: [],
     element: null,
     skillName: "Quick Draw",
@@ -79,7 +95,11 @@ Description: Enters the Quickdraw state, reducing your Flee Rate to increase you
   {
     id: "sharpShooting",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "improveConcentration", minLevel: 9 },
+      { id: "doubleStrafe", minLevel: 6 },
+      { id: "chargeArrow", minLevel: 9 },
+    ],
     dependent: [],
     element: null,
     skillName: "Sharp Shooting",
@@ -106,7 +126,11 @@ Description: Fires a powerful arrow towards a target point, dealing heavy damage
   {
     id: "trueSight",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "owlsEye", minLevel: 9 },
+      { id: "vulturesEye", minLevel: 9 },
+      { id: "improveConcentration", minLevel: 9 },
+    ],
     dependent: [],
     element: null,
     skillName: "True Sight",
@@ -132,7 +156,9 @@ Description: Enters the True Sight state, reducing your attack speed to increase
   {
     id: "windWalk",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "improveConcentration", minLevel: 8 },
+    ],
     dependent: [],
     element: null,
     skillName: "Wind Walk",
