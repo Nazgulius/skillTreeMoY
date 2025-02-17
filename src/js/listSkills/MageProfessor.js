@@ -9,7 +9,9 @@ export const skillsProfessort = [
   {
     id: "abracadabra",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "dispell", minLevel: 0 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Abracadabra",
@@ -35,7 +37,9 @@ Description: Unleash a touch of magic mayhem. When you use an offensive skill af
   {
     id: "doubleCasting",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "freeCast", minLevel: 4 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Double Casting",
@@ -78,7 +82,10 @@ Description: Creates a wall of fog in a 5x3 cell area that will cause the Blind 
   {
     id: "indulge",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "magicRod", minLevel: 0 },
+      { id: "increaseSPRecovery", minLevel: 0 },     
+    ],
     dependent: [ ],
     element: null,
     skillName: "Indulge",
@@ -115,7 +122,10 @@ Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, 
   {
     id: "mindBreaker",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "soulBurn", minLevel: 1 },
+      { id: "increaseSPRecovery", minLevel: 2 },      
+    ],
     dependent: [ ],
     element: null,
     skillName: "Mind Breaker",
@@ -137,8 +147,14 @@ Description: Induces mental turmoil in an enemy that will reduce it's MDEF, but 
   {
     id: "soulBurn",
     level: 0,
-    dependencies: [],
-    dependent: [ ],
+    dependencies: [
+      { id: "magicRod", minLevel: 2 },
+      { id: "castCancel", minLevel: 4 },
+      { id: "dispell", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "mindBreaker" },      
+    ],
     element: null,
     skillName: "Soul Burn",
     maxLevel: 5,
@@ -159,7 +175,10 @@ Description: Casts a spell that has a chance to burn the targets SP. The amount 
   {
     id: "soulChange",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "magicRod", minLevel: 2 },
+      { id: "spellBreaker", minLevel: 1 },      
+    ],
     dependent: [ ],
     element: null,
     skillName: "Soul Change",
