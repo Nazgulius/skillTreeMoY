@@ -202,36 +202,7 @@ export default class App {
     //});
   }
 
-
-  // метод для проверки зависимостей
-  // checkDependencies(skill) {
-  //   skill.dependencies.forEach((dep) => {
-  //     const allSkills = [
-  //       ...this._skillsJobOne,
-  //       ...this._skillsJobTwo,
-  //       ...this._skillsJobTwoHight,
-  //     ];
-  //     const dependentSkill = allSkills.find((s) => s.id === dep.id);
-
-  //     // Проверяем, достигнут ли минимальный уровень
-  //     const isLevelMet = dependentSkill.level > dep.minLevel;
-
-  //     if (isLevelMet && dependentSkill.element) {
-  //       // Если зависимый скил больше нужного, ...
-  //       console.log('isLevelMet true');
-  //     } else if (dependentSkill.element) {
-  //       // если зависимый скил меньше нужного, то он устанавливается на нужный лвл
-  //       dependentSkill.element.querySelectorAll('.dot').forEach((dot, index) => {
-  //         if (dep.minLevel === index) {
-  //           this.dotToggle(dot);
-  //           dependentSkill.level = index; // устанавливает лвл в зависимостях скиллов
-  //         };
-  //       });
-  //     }
-  //   });
-  // }
-
-  // test - метод для проверки зависимостей (реиспользование внутри себя)
+  // метод для проверки зависимостей (реиспользование внутри себя)
   checkDependencies(skill) {
     if (skill.dependencies) {
       skill.dependencies.forEach((dep) => {
@@ -257,7 +228,6 @@ export default class App {
             };
           });
         }
-        console.log(dependentSkill);
 
         if(Boolean(dependentSkill && dependentSkill.dependencies)){
           this.checkDependencies(dependentSkill);
