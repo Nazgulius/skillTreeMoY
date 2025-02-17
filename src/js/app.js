@@ -282,6 +282,10 @@ export default class App {
             dot.classList.remove("hidden");
           });
         }
+
+        if(Boolean(dependentSkill && dependentSkill.dependent)){
+          this.checkDependent(dependentSkill);
+        }
       });
     }
   }
