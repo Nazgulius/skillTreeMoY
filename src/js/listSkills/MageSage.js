@@ -222,7 +222,10 @@ Description: Transforms a 7x7 area into a Volcano Terrain, enhancing all Fire pr
     id: "castCancel",
     level: 0,
     dependencies: [{ id: "advancedBook", minLevel: 1 }],
-    dependent: [{ id: "freeCast" }],
+    dependent: [
+      { id: "freeCast" },
+      { id: "soulBurn" },
+    ],
     element: null,
     skillName: "Cast Cancel",
     maxLevel: 5,
@@ -243,7 +246,10 @@ Description: Only usable while casting a magic spell. Immediately cancels a spel
     id: "dispell",
     level: 0,
     dependencies: [{ id: "spellBreaker", minLevel: 2 }],
-    dependent: [],
+    dependent: [
+      { id: "abracadabra" },
+      { id: "soulBurn" },
+    ],
     element: null,
     skillName: "Dispell",
     maxLevel: 5,
@@ -265,7 +271,12 @@ Description: Casting Dispell has a chance of canceling all magic effects that ha
     id: "magicRod",
     level: 0,
     dependencies: [{ id: "advancedBook", minLevel: 3 }],
-    dependent: [{ id: "spellBreaker" }],
+    dependent: [
+      { id: "spellBreaker" },
+      { id: "indulge" },
+      { id: "soulBurn" },
+      { id: "soulChange" },
+    ],
     element: null,
     skillName: "Magic Rod",
     maxLevel: 5,
@@ -286,7 +297,9 @@ Description: Upon being attacked with a skill, using Magic Rod in the correct mo
     id: "spellBreaker",
     level: 0,
     dependencies: [{ id: "advancedBook", minLevel: 3 }, { id: "magicRod", minLevel: 0 }],
-    dependent: [],
+    dependent: [
+      { id: "soulChange" },
+    ],
     element: null,
     skillName: "Spell Breaker",
     maxLevel: 5,
@@ -307,8 +320,13 @@ Description: Interrupts a magic spell cast by an enemy and receive the SP the en
   {
     id: "freeCast",
     level: 0,
-    dependencies: [{ id: "advancedBook", minLevel: 1 }, { id: "castCancel", minLevel: 0 }],
-    dependent: [],
+    dependencies: [
+      { id: "advancedBook", minLevel: 1 },
+      { id: "castCancel", minLevel: 0 }
+    ],
+    dependent: [
+       { id: "doubleCasting" },
+    ],
     element: null,
     skillName: "Free Cast",
     maxLevel: 10,
