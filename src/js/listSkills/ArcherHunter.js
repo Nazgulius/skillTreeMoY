@@ -12,6 +12,10 @@ export const skillsHunter = [
     dependencies: [],
     dependent: [
       { id: "steelCrow" },
+      { id: "beastBane" },
+      { id: "blitzBeat" },
+      { id: "detect" },
+      { id: "springTrap" },
     ],
     element: null,
     skillName: "Falconry Mastery",
@@ -36,6 +40,7 @@ Description: Master the art of Falcon command. Increasing the chance to auto-cas
     ],
     dependent: [
       { id: "falconAssault" },
+      { id: "falconryMastery" },
     ],
     element: null,
     skillName: "Steel Crow",
@@ -170,7 +175,10 @@ Description: Commands Falcon to remove a set Trap from a distance.
       { id: "landMine", minLevel: 0 },
     ],
     dependent: [
-      { id: "detonator" },
+      { id: "detonator" },      
+      { id: "claymoreTrap" },      
+      { id: "glacialTrap" },      
+      { id: "shockwaveTrap" },      
     ],
     element: null,
     skillName: "Blast Mine",
@@ -200,6 +208,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Wind 
     ],
     dependent: [
       { id: "detonator" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Claymore Trap",
@@ -226,6 +235,9 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Fire 
     ],
     dependent: [
       { id: "detonator" },
+      { id: "flasher" },
+      { id: "sandman" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Ankle Snare",
@@ -254,6 +266,8 @@ Description: Deploys trap at a targeted location that immobilizes any enemy that
     ],
     dependent: [
       { id: "detonator" },
+      { id: "sandman" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Flasher",
@@ -282,6 +296,8 @@ Description: Deploys trap at a targeted location that releases a blinding flash 
     ],
     dependent: [
       { id: "detonator" },
+      { id: "claymoreTrap" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Glacial Trap",
@@ -308,6 +324,10 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Water
     ],
     dependent: [
       { id: "detonator" },
+      { id: "blastMine" },
+      { id: "claymoreTrap" },
+      { id: "glacialTrap" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Land Mine",
@@ -356,6 +376,7 @@ Description: Removes a trap that has been set on the ground, as well as regain t
     ],
     dependent: [
       { id: "detonator" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Sandman",
@@ -413,6 +434,9 @@ Description: Deploys trap that releases a shockwave when triggered, drains the t
     ],
     dependent: [
       { id: "detonator" },
+      { id: "flasher" },
+      { id: "sandman" },
+      { id: "shockwaveTrap" },
     ],
     element: null,
     skillName: "Skid Trap",
@@ -435,10 +459,17 @@ Description: Deploys trap that causes any enemy that steps on it to slip and sli
     id: "trapResearch",
     level: 0,
     dependencies: [
-      
     ],
     dependent: [
-      
+      { id: "blastMine" },
+      { id: "claymoreTrap" },
+      { id: "ankleSnare" },
+      { id: "flasher" },
+      { id: "glacialTrap" },
+      { id: "landMine" },
+      { id: "removeTrap" },
+      { id: "sandman" },
+      { id: "skidTrap" },
     ],
     element: null,
     skillName: "Trap Research",
