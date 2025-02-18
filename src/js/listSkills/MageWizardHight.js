@@ -61,7 +61,7 @@ Description: Unleashes a barrage of Napalm Beat, dealing Ghost Property Magic Da
   {
     id: "soulDrain",
     level: 0,
-    dependencies: [{ id: "incSPRecovery", minLevel: 4 }, { id: "soulStrike", minLevel: 6 }],
+    dependencies: [{ id: "increaseSPRecovery", minLevel: 4 }, { id: "soulStrike", minLevel: 6 }],
     dependent: [],
     element: null,
     skillName: "Soul Drain",
