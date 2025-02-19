@@ -40,7 +40,6 @@ Description: Master the art of Falcon command. Increasing the chance to auto-cas
     ],
     dependent: [
       { id: "falconAssault" },
-      { id: "falconryMastery" },
     ],
     element: null,
     skillName: "Steel Crow",
