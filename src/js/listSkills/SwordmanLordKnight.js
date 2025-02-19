@@ -172,7 +172,8 @@ Description: Requires Spear Class Weapon. Throws your spear with a spiraling mot
 [Lv 7]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
 [Lv 8]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
 [Lv 9]: Variable C.Time: 0.6 Seconds, Range: 10 cells,
-[Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells`,
+[Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
+Formula: ATK%: (100 + (((W.Weight / 10) + (20 - Spear Boomerang Lv)) x Skill Lv)) x Hits`,
     img: skillImgNo,
   },
 ];
