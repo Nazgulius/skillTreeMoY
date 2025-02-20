@@ -9,7 +9,11 @@ export const skillsGypsy = [
   {
     id: "arrowVulcan",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "arrowShower", minLevel: 4 },
+      { id: "slingingStrike", minLevel: 0 },
+      { id: "doubleStrafe", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Arrow Vulcan",
@@ -36,7 +40,10 @@ Description: Fires a rapid flurry of arrows at a targeted enemy, with damage inc
   {
     id: "moonlitWaterMill",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "improveConcentration", minLevel: 4 },
+      { id: "dancingLesson", minLevel: 6 },
+    ],
     dependent: [],
     element: null,
     skillName: "Moonlit Water Mill",
@@ -57,7 +64,9 @@ Description: The Moonlight Watermill performance can be executed by both Minstre
   {
     id: "reverberation",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "cringeDance", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Reverberation",
@@ -79,7 +88,10 @@ Description: Emits a high-frequency sound wave at an enemy, causing magical dama
   {
     id: "tarotCardOfFate",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "cringeDance", minLevel: 2 },
+      { id: "improveConcentration", minLevel: 9 },
+    ],
     dependent: [],
     element: null,
     skillName: "Tarot Card of Fate",
