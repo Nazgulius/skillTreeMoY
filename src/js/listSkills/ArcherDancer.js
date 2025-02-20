@@ -191,6 +191,29 @@ Description: Extends the duration of all active songs, dances, and party buff du
     img: skillImgNo,
   },
   {
+    id: "medusaScream",
+    level: 0,
+    dependencies: [
+      { id: "encore", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Medusa Scream",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Encore Lv: 3
+Description: Inflicts the Petrifying status to enemies within the casters view.
+[Lv 1]: Chance: 20%,
+[Lv 2]: Chance: 25%,
+[Lv 3]: Chance: 30%,
+[Lv 4]: Chance: 35%,
+[Lv 5]: Chance: 40%`,
+    img: skillImgNo,
+  },
+  {
     id: "humming",
     level: 0,
     dependencies: [
@@ -260,30 +283,7 @@ Target: Self
 Requirement: Into the Abyss Lv: 3
 Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 100% chance to be inflicted with Sleep every 10 seconds while they remain in the area. The Sleep effect lasts for 4 seconds. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
     img: skillImgNo,
-  },
-  {
-    id: "medusaScream",
-    level: 0,
-    dependencies: [
-      { id: "encore", minLevel: 2 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Medusa Scream",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Encore Lv: 3
-Description: Inflicts the Petrifying status to enemies within the casters view.
-[Lv 1]: Chance: 20%,
-[Lv 2]: Chance: 25%,
-[Lv 3]: Chance: 30%,
-[Lv 4]: Chance: 35%,
-[Lv 5]: Chance: 40%`,
-    img: skillImgNo,
-  },
+  },  
   {
     id: "fortunesKiss",
     level: 0,
