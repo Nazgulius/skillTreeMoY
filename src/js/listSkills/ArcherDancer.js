@@ -122,8 +122,74 @@ Description: Performs a dance that will boost Max SP and reduce SP Cost of the u
 [Lv 10]: MaxSP +20%, SP consumption: -15%`,
     img: skillImgNo,
   },
-  
-  
+  {
+    id: "drumOfBattlefield",
+    level: 0,
+    dependencies: [
+      { id: "bellyDance", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "lokisWail" },
+    ],
+    element: null,
+    skillName: "Drum of Battlefield",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Belly Dance Lv: 10
+Description: Initiates a battle duet that temporarily increases both physical and magical attack power for you and your party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.
+[Lv 1]: Atk +15, MAtk +15,
+[Lv 2]: Atk +20, MAtk +20,
+[Lv 3]: Atk +25, MAtk +25,
+[Lv 4]: Atk +30, MAtk +30,
+[Lv 5]: Atk +35, MAtk +35`,
+    img: skillImgNo,
+  },
+  {
+    id: "lokisWail",
+    level: 0,
+    dependencies: [
+      { id: "drumOfBattlefield", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Loki's Wail",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Drum of Battlefield Lv: 3
+Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
+    img: skillImgNo,
+  },
+  {
+    id: "encore",
+    level: 0,
+    dependencies: [
+      { id: "dancingLesson", minLevel: 4 },
+    ],
+    dependent: [      
+      { id: "medusaScream" },
+    ],
+    element: null,
+    skillName: "Encore",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Dancing Lesson Lv: 5
+Description: Extends the duration of all active songs, dances, and party buff duets for you and your allies by 15 seconds. Upon use, you gain a special status effect that enhances your abilities based on the number of active songs, dances, and duets. For Melody Strike and Slinging Strike, it increases skill damage by +10%. For Dissonance and Cringe Dance, it reduces the interval between attacks by 0.4 seconds. For Arrow Vulcan and Reverberation, it reduces the cooldown by 0.107 seconds. SP cost increases by 35 for each active song, dance, and duet. SP cost increases by 35 for each active song, dance, and duet.
+[Lv 1]: Encore duration: 40 seconds,
+[Lv 2]: Encore duration: 60 seconds,
+[Lv 3]: Encore duration: 80 seconds,
+[Lv 4]: Encore duration: 100 seconds,
+[Lv 5]: Encore duration: 120 seconds`,
+    img: skillImgNo,
+  },
   {
     id: "dontForgetMe",
     level: 0,
@@ -154,74 +220,9 @@ Description: Perform a dance that increases the movement speed of you and your p
 [Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds`,
     img: skillImgNo,
   },
-  {
-    id: "drumOfBattlefield",
-    level: 0,
-    dependencies: [
-      { id: "bellyDance", minLevel: 9 },
-    ],
-    dependent: [      
-      { id: "lokisWail" },
-    ],
-    element: null,
-    skillName: "Drum of Battlefield",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Belly Dance Lv: 10
-Description: Initiates a battle duet that temporarily increases both physical and magical attack power for you and your party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.
-[Lv 1]: Atk +15, MAtk +15,
-[Lv 2]: Atk +20, MAtk +20,
-[Lv 3]: Atk +25, MAtk +25,
-[Lv 4]: Atk +30, MAtk +30,
-[Lv 5]: Atk +35, MAtk +35`,
-    img: skillImgNo,
-  },
-  {
-    id: "encore",
-    level: 0,
-    dependencies: [
-      { id: "dancingLesson", minLevel: 4 },
-    ],
-    dependent: [      
-      { id: "medusaScream" },
-    ],
-    element: null,
-    skillName: "Encore",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Dancing Lesson Lv: 5
-Description: Extends the duration of all active songs, dances, and party buff duets for you and your allies by 15 seconds. Upon use, you gain a special status effect that enhances your abilities based on the number of active songs, dances, and duets. For Melody Strike and Slinging Strike, it increases skill damage by +10%. For Dissonance and Cringe Dance, it reduces the interval between attacks by 0.4 seconds. For Arrow Vulcan and Reverberation, it reduces the cooldown by 0.107 seconds. SP cost increases by 35 for each active song, dance, and duet. SP cost increases by 35 for each active song, dance, and duet.
-[Lv 1]: Encore duration: 40 seconds,
-[Lv 2]: Encore duration: 60 seconds,
-[Lv 3]: Encore duration: 80 seconds,
-[Lv 4]: Encore duration: 100 seconds,
-[Lv 5]: Encore duration: 120 seconds`,
-    img: skillImgNo,
-  },
-  {
-    id: "eternalChaos",
-    level: 0,
-    dependencies: [
-      { id: "theRingOfNibelungen", minLevel: 2 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Eternal Chaos",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: The Ring of Nibelungen Lv: 3
-Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
-    img: skillImgNo,
-  },
+  
+  
+  
   {
     id: "fortunesKiss",
     level: 0,
@@ -306,50 +307,6 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
     img: skillImgNo,
   },
   {
-    id: "invulnerableSiegfried",
-    level: 0,
-    dependencies: [
-      { id: "fortunesKiss", minLevel: 9 },
-    ],
-    dependent: [
-      
-      { id: "mrKimARichMan" },
-    ],
-    element: null,
-    skillName: "Invulnerable Siegfried",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Fortune's Kiss Lv: 10
-Description: Initiates a comforting duet that grants temporary resistance to various negative effects and increases Fire, Water, Wind, and Earth resistances for you and party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Negative Effects Affected: Blind, Petrification, Freezing, Stun, Curse, Sleep, Silence, Chaos,
-[Lv 1]: Elemental Resistences +3%, Tolerance to negative effects +5%,
-[Lv 2]: Elemental Resistences +6%, Tolerance to negative effects +10%,
-[Lv 3]: Elemental Resistences +9%, Tolerance to negative effects +15%,
-[Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
-[Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
-    img: skillImgNo,
-  },
-  {
-    id: "lokisWail",
-    level: 0,
-    dependencies: [
-      { id: "drumOfBattlefield", minLevel: 2 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Loki's Wail",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Drum of Battlefield Lv: 3
-Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
-    img: skillImgNo,
-  },
-  {
     id: "lullaby",
     level: 0,
     dependencies: [
@@ -408,7 +365,31 @@ Requirement: Invulnerable Siegfried Lv: 3
 Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
     img: skillImgNo,
   },
-  
+  {
+    id: "invulnerableSiegfried",
+    level: 0,
+    dependencies: [
+      { id: "fortunesKiss", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "mrKimARichMan" },
+    ],
+    element: null,
+    skillName: "Invulnerable Siegfried",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Fortune's Kiss Lv: 10
+Description: Initiates a comforting duet that grants temporary resistance to various negative effects and increases Fire, Water, Wind, and Earth resistances for you and party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Negative Effects Affected: Blind, Petrification, Freezing, Stun, Curse, Sleep, Silence, Chaos,
+[Lv 1]: Elemental Resistences +3%, Tolerance to negative effects +5%,
+[Lv 2]: Elemental Resistences +6%, Tolerance to negative effects +10%,
+[Lv 3]: Elemental Resistences +9%, Tolerance to negative effects +15%,
+[Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
+[Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
+    img: skillImgNo,
+  },
   {
     id: "theRingOfNibelungen",
     level: 0,
@@ -432,6 +413,24 @@ Description: Initiates a refined duet that grants a random temporary effect to y
 [Lv 3]: Attack Speed +12%, Atk +12%, MAtk +12%, Max HP +18%, Max SP +18%, All Stats +9, Hit +30, Flee +30, SP consumption -18%, HP recovery +60%, SP recovery +60%,
 [Lv 4]: Attack Speed +16%, Atk +16%, MAtk +16%, Max HP +24%, Max SP +24%, All Stats +12, Hit +40, Flee +40, SP consumption -24%, HP recovery +80%, SP recovery +80%,
 [Lv 5]: Attack Speed +20%, Atk +20%, MAtk +20%, Max HP +30%, Max SP +30%, All Stats +15, Hit +50, Flee +50, SP consumption -30%, HP recovery +100%, SP recovery +100%`,
+    img: skillImgNo,
+  },
+  {
+    id: "eternalChaos",
+    level: 0,
+    dependencies: [
+      { id: "theRingOfNibelungen", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Eternal Chaos",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: The Ring of Nibelungen Lv: 3
+Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
     img: skillImgNo,
   },
 ];
