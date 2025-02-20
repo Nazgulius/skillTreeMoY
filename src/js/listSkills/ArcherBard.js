@@ -5,38 +5,14 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 
 // список скилов Bard
-export const skillsBard = [  
-  {
-    id: "appleOfIdun",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Apple of Idun",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Dissonance Lv: 3
-Description: Performs a song that will boost Max HP and Healings Received of the user and nearby party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: MaxHP +10%, Healings Received + 2%,
-[Lv 2]: MaxHP +11%, Healings Received + 4%,
-[Lv 3]: MaxHP +12%, Healings Received + 6%,
-[Lv 4]: MaxHP +13%, Healings Received + 8%,
-[Lv 5]: MaxHP +14%, Healings Received +10%,
-[Lv 6]: MaxHP +15%, Healings Received +12%,
-[Lv 7]: MaxHP +16%, Healings Received +14%,
-[Lv 8]: MaxHP +17%, Healings Received +16%,
-[Lv 9]: MaxHP +18%, Healings Received +18%,
-[Lv 10]: MaxHP +20%, Healings Received +20%`,
-    img: skillImgNo,
-  },
+export const skillsBard = [    
   {
     id: "assassinCrossOfSunset",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [      
+      { id: "theRingOfNibelungen" },
+    ],
     element: null,
     skillName: "Assassin Cross of Sunset",
     maxLevel: 10,
@@ -61,8 +37,16 @@ Description: Performs a song that will boost attack speed of the user and party 
   {
     id: "dissonance",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "musicalLesson", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "reverberation" },
+      { id: "tarotCardOfFate" },
+      { id: "appleOfIdun" },
+      { id: "poemOfBragi" },
+      { id: "whistle" },
+    ],
     element: null,
     skillName: "Dissonance",
     maxLevel: 5,
@@ -80,10 +64,44 @@ Description: Plays a discordant tune, dealing Neutral magic damage to all enemie
     img: skillImgNo,
   },
   {
+    id: "appleOfIdun",
+    level: 0,
+    dependencies: [
+      { id: "dissonance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "drumOfBattlefield" },
+    ],
+    element: null,
+    skillName: "Apple of Idun",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Dissonance Lv: 3
+Description: Performs a song that will boost Max HP and Healings Received of the user and nearby party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
+[Lv 1]: MaxHP +10%, Healings Received + 2%,
+[Lv 2]: MaxHP +11%, Healings Received + 4%,
+[Lv 3]: MaxHP +12%, Healings Received + 6%,
+[Lv 4]: MaxHP +13%, Healings Received + 8%,
+[Lv 5]: MaxHP +14%, Healings Received +10%,
+[Lv 6]: MaxHP +15%, Healings Received +12%,
+[Lv 7]: MaxHP +16%, Healings Received +14%,
+[Lv 8]: MaxHP +17%, Healings Received +16%,
+[Lv 9]: MaxHP +18%, Healings Received +18%,
+[Lv 10]: MaxHP +20%, Healings Received +20%`,
+    img: skillImgNo,
+  },
+  {
     id: "drumOfBattlefield",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "appleOfIdun", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "lokisWail" },
+    ],
     element: null,
     skillName: "Drum of Battlefield",
     maxLevel: 5,
@@ -103,8 +121,12 @@ Description: Initiates a battle duet that temporarily increases both physical an
   {
     id: "encore",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "musicalLesson", minLevel: 4 },
+    ],
+    dependent: [      
+      { id: "frostJoke" },
+    ],
     element: null,
     skillName: "Encore",
     maxLevel: 5,
@@ -124,7 +146,9 @@ Description: Extends the duration of all active songs, dances, and party buff du
   {
     id: "eternalChaos",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "theRingOfNibelungen", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Eternal Chaos",
@@ -140,7 +164,9 @@ Description: Initiates a discordant duet that randomly reduces the physical and 
   {
     id: "frostJoke",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "encore", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Frost Joke",
@@ -161,8 +187,12 @@ Description: Inflicts the Freezing status to enemies within the casters view.
   {
     id: "intoTheAbyss",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "whistle", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "lullaby" },
+    ],
     element: null,
     skillName: "Into the Abyss",
     maxLevel: 5,
@@ -182,8 +212,12 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
   {
     id: "invulnerableSiegfried",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "poemOfBragi", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "mrKimARichMan" },
+    ],
     element: null,
     skillName: "Invulnerable Siegfried",
     maxLevel: 5,
@@ -203,7 +237,9 @@ Description: Initiates a comforting duet that grants temporary resistance to var
   {
     id: "lokisWail",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "drumOfBattlefield", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Loki's Wail",
@@ -219,7 +255,9 @@ Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 
   {
     id: "lullaby",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "IntoTheAbyss", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Lullaby",
@@ -235,7 +273,9 @@ Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 10
   {
     id: "mrKimARichMan",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "invulnerableSiegfried", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Mr. Kim A Rich Man",
@@ -252,7 +292,11 @@ Description: Initiates a greedy duet that increases Base and Job experience gain
     id: "musicalLesson",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "moonlitWaterMill" },
+      { id: "encore" },
+      { id: "musicalStrike" },
+    ],
     element: null,
     skillName: "Musical Lesson",
     maxLevel: 10,
@@ -276,8 +320,12 @@ Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. 
   {
     id: "musicalStrike",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "musicalLesson", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "arrowVulcan" },
+    ],
     element: null,
     skillName: "Musical Strike",
     maxLevel: 5,
@@ -298,8 +346,12 @@ Description: Fires a powerful volley of arrows using an instrument. The Arrows e
   {
     id: "poemOfBragi",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "dissonance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "invulnerableSiegfried" },
+    ],
     element: null,
     skillName: "Poem of Bragi",
     maxLevel: 10,
@@ -324,8 +376,12 @@ Description: Performs a song that will shorten Variable Cast Time and After Cast
   {
     id: "theRingOfNibelungen",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "assassinCrossOfSunset", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "eternalChaos" },
+    ],
     element: null,
     skillName: "The Ring of Nibelungen",
     maxLevel: 5,
@@ -345,8 +401,12 @@ Description: Initiates a refined duet that grants a random temporary effect to y
   {
     id: "whistle",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "dissonance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "intoTheAbyss" },
+    ],
     element: null,
     skillName: "Whistle",
     maxLevel: 10,
