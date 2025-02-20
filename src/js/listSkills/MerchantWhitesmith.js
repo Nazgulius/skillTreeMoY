@@ -10,7 +10,11 @@ export const skillsWhitesmith = [
   {
     id: "cartTermination",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "cartRevolution", minLevel: 9 },
+      { id: "cartBoost", minLevel: 0 },
+      { id: "cartTwister", minLevel: 4 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Cart Termination",
@@ -37,7 +41,16 @@ Description: While under the effect of Cart Boost, unleash a devastating attack 
   {
     id: "foundryPowerUp",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "reforge", minLevel: 4 },
+      { id: "exoticWeaponReforging", minLevel: 0 },
+      { id: "repairWeapon", minLevel: 0 },
+      { id: "bladeWeaponReforging", minLevel: 0 },
+      { id: "bluntWeaponReforging", minLevel: 0 },
+      { id: "pierceWeaponReforging", minLevel: 0 }, 
+      { id: "magicWeaponReforging", minLevel: 0 }, 
+      { id: "stringWeaponReforging", minLevel: 0 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Foundry Power-Up",
@@ -54,7 +67,9 @@ Description: Harness the power of the anvil to temporarily enhance a party membe
   {
     id: "maximumPowerThrust",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "powerThrust", minLevel: 9 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Maximum Power Thrust",
@@ -75,7 +90,10 @@ Description: Strap Zeny Pouches onto your weapon for increases your weapons dama
   {
     id: "meltdown",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "skinTempering", minLevel: 4 },
+      { id: "hammerfall", minLevel: 4 },
+    ],
     dependent: [ ],
     element: null,
     skillName: "Meltdown",
