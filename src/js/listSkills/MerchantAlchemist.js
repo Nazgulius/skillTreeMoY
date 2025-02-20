@@ -15,6 +15,7 @@ export const skillsAlchemist = [
     ],
     dependent: [
       { id: "acidDemonstration" },
+      { id: "chemicalReaction" },
     ],
     element: null,
     skillName: "Acid Terror",
@@ -46,6 +47,7 @@ Description: Unleash a bottle of corrosive acid on a single target, causing seve
     ],
     dependent: [
       { id: "fullChemicalProtection" },
+      { id: "weaponChemicalProtection" },
     ],
     element: null,
     skillName: "Armor Chemical Protection",
@@ -72,6 +74,7 @@ Description: Temporarily protects the equipped armor of a single target from dam
     ],
     dependent: [      
       { id: "hyperFertilize" },
+      { id: "briarVines" },
     ],
     element: null,
     skillName: "Bio Cannibalize",
@@ -156,6 +159,7 @@ Description: Unleash explosive versatility with Chemical Reaction, altering the 
     ],
     dependent: [      
       { id: "acidDemonstration" },
+      { id: "acidTerror" },
     ],
     element: null,
     skillName: "Demonstration",
@@ -187,6 +191,7 @@ Description: Unleash fiery devastation with a bottle of flammable liquid, hurlin
     ],
     dependent: [
       { id: "hyperFertilize" },
+      { id: "briarVines" },
     ],
     element: null,
     skillName: "Deplant",
@@ -287,7 +292,7 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
     id: "pharmacy",
     level: 0,
     dependencies: [],
-    dependent: [ ],
+    dependent: [],
     element: null,
     skillName: "Pharmacy",
     maxLevel: 5,
@@ -307,8 +312,10 @@ Description: Allows the creation of Potions and Chemical Bottles. Requires the a
   {
     id: "potionPitcher",
     level: 0,
-    dependencies: [],
-    dependent: [ ],
+    dependencies: [
+      { id: "marineSphereBomb", minLevel: 4 },
+    ],
+    dependent: [],
     element: null,
     skillName: "Potion Pitcher",
     maxLevel: 10,
@@ -359,9 +366,12 @@ Description: Boosts the success rate for creating potions and chemicals while al
   {
     id: "shieldChemicalProtection",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "helmChemicalProtection", minLevel: 0 },
+    ],
     dependent: [
       { id: "fullChemicalProtection" },
+      { id: "armorChemicalProtection" },
     ],
     element: null,
     skillName: "Shield Chemical Protection",
@@ -383,7 +393,9 @@ Description: Temporarily protects the equipped shield of a single target from da
   {
     id: "slingItem",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "potionPitcher", minLevel: 4 },
+    ],
     dependent: [      
       { id: "potionSpreader" },
     ],
@@ -408,7 +420,10 @@ Description: Throws Fruit Bombs or Throwing Items. Status reduction and damage f
     id: "throwingPotionsTechniques",
     level: 0,
     dependencies: [],
-    dependent: [ ],
+    dependent: [      
+      { id: "bioCannibalize" },
+      { id: "demonstration" },
+    ],
     element: null,
     skillName: "Throwing Potions Techniques",
     maxLevel: 10,
@@ -429,7 +444,9 @@ Description: Master the art of potion-throwing with this skill, enhancing both t
   {
     id: "weaponChemicalProtection",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "armorChemicalProtection", minLevel: 0 },
+    ],
     dependent: [      
       { id: "fullChemicalProtection" },
     ],
