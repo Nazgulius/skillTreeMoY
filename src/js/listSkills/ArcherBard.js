@@ -7,31 +7,33 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 // список скилов Bard
 export const skillsBard = [    
   {
-    id: "assassinCrossOfSunset",
+    id: "musicalLesson",
     level: 0,
     dependencies: [],
-    dependent: [      
-      { id: "theRingOfNibelungen" },
+    dependent: [
+      { id: "moonlitWaterMill" },
+      { id: "encore" },
+      { id: "musicalStrike" },
+      { id: "dissonance" },
     ],
     element: null,
-    skillName: "Assassin Cross of Sunset",
+    skillName: "Musical Lesson",
     maxLevel: 10,
     inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
-Target: Self
+Skill Form: Passive
+Type: Physical
 Requirement: None
-Description: Performs a song that will boost attack speed of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: Aspd +2%,
-[Lv 2]: Aspd +4%,
-[Lv 3]: Aspd +6%,
-[Lv 4]: Aspd +8%,
-[Lv 5]: Aspd +10%,
-[Lv 6]: Aspd +12%,
-[Lv 7]: Aspd +14%,
-[Lv 8]: Aspd +16%,
-[Lv 9]: Aspd +18%,
-[Lv 10]: Aspd +20%`,
+Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. When [Lv 10], it increases Max SP in 6%.
+[Lv 1]: Atk +2, MAtk +2, Aspd +1%,
+[Lv 2]: Atk +4, MAtk +4, Aspd +2%,
+[Lv 3]: Atk +6, MAtk +6, Aspd +3%,
+[Lv 4]: Atk +8, MAtk +8, Aspd +4%,
+[Lv 5]: Atk +10, MAtk +10, Aspd +5%,
+[Lv 6]: Atk +12, MAtk +12, Aspd +6%,
+[Lv 7]: Atk +14, MAtk +14, Aspd +7%,
+[Lv 8]: Atk +16, MAtk +16, Aspd +8%,
+[Lv 9]: Atk +18, MAtk +18, Aspd +9%,
+[Lv 10]: Atk +20, MAtk +20, Aspd +10%`,
     img: skillImgNo,
   },
   {
@@ -256,7 +258,7 @@ Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 
     id: "lullaby",
     level: 0,
     dependencies: [
-      { id: "IntoTheAbyss", minLevel: 2 },
+      { id: "intoTheAbyss", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -288,35 +290,7 @@ Requirement: Invulnerable Siegfried Lv: 3
 Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
     img: skillImgNo,
   },
-  {
-    id: "musicalLesson",
-    level: 0,
-    dependencies: [],
-    dependent: [
-      { id: "moonlitWaterMill" },
-      { id: "encore" },
-      { id: "musicalStrike" },
-    ],
-    element: null,
-    skillName: "Musical Lesson",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: None
-Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. When [Lv 10], it increases Max SP in 6%.
-[Lv 1]: Atk +2, MAtk +2, Aspd +1%,
-[Lv 2]: Atk +4, MAtk +4, Aspd +2%,
-[Lv 3]: Atk +6, MAtk +6, Aspd +3%,
-[Lv 4]: Atk +8, MAtk +8, Aspd +4%,
-[Lv 5]: Atk +10, MAtk +10, Aspd +5%,
-[Lv 6]: Atk +12, MAtk +12, Aspd +6%,
-[Lv 7]: Atk +14, MAtk +14, Aspd +7%,
-[Lv 8]: Atk +16, MAtk +16, Aspd +8%,
-[Lv 9]: Atk +18, MAtk +18, Aspd +9%,
-[Lv 10]: Atk +20, MAtk +20, Aspd +10%`,
-    img: skillImgNo,
-  },
+  
   {
     id: "musicalStrike",
     level: 0,
@@ -371,6 +345,34 @@ Description: Performs a song that will shorten Variable Cast Time and After Cast
 [Lv 8]: VCT -16%, Cast Delay -24%,
 [Lv 9]: VCT -18%, Cast Delay -27%,
 [Lv 10]: VCT -20%, Cast Delay -30%`,
+    img: skillImgNo,
+  },
+  {
+    id: "assassinCrossOfSunset",
+    level: 0,
+    dependencies: [],
+    dependent: [      
+      { id: "theRingOfNibelungen" },
+    ],
+    element: null,
+    skillName: "Assassin Cross of Sunset",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: None
+Description: Performs a song that will boost attack speed of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
+[Lv 1]: Aspd +2%,
+[Lv 2]: Aspd +4%,
+[Lv 3]: Aspd +6%,
+[Lv 4]: Aspd +8%,
+[Lv 5]: Aspd +10%,
+[Lv 6]: Aspd +12%,
+[Lv 7]: Aspd +14%,
+[Lv 8]: Aspd +16%,
+[Lv 9]: Aspd +18%,
+[Lv 10]: Aspd +20%`,
     img: skillImgNo,
   },
   {
