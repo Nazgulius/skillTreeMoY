@@ -37,6 +37,32 @@ Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. 
     img: skillImgNo,
   },
   {
+    id: "musicalStrike",
+    level: 0,
+    dependencies: [
+      { id: "musicalLesson", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "arrowVulcan" },
+    ],
+    element: null,
+    skillName: "Musical Strike",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 12
+Requirement: Musical Lesson Lv: 3
+Description: Fires a powerful volley of arrows using an instrument. The Arrows element determines the element of this attack. Consumes: 2x Arrow.
+[Lv 1]: Atk 130% x 2 Hits,
+[Lv 2]: Atk 160% x 2 Hits,
+[Lv 3]: Atk 190% x 2 Hits,
+[Lv 4]: Atk 220% x 2 Hits,
+[Lv 5]: Atk 250% x 2 Hits`,
+    img: skillImgNo,
+  },
+  {
     id: "dissonance",
     level: 0,
     dependencies: [
@@ -118,6 +144,24 @@ Description: Initiates a battle duet that temporarily increases both physical an
 [Lv 3]: Atk +25, MAtk +25,
 [Lv 4]: Atk +30, MAtk +30,
 [Lv 5]: Atk +35, MAtk +35`,
+    img: skillImgNo,
+  },
+  {
+    id: "lokisWail",
+    level: 0,
+    dependencies: [
+      { id: "drumOfBattlefield", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Loki's Wail",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Drum of Battlefield Lv: 3
+Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
     img: skillImgNo,
   },
   {
@@ -225,6 +269,24 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
     img: skillImgNo,
   },
   {
+    id: "lullaby",
+    level: 0,
+    dependencies: [
+      { id: "intoTheAbyss", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Lullaby",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Into the Abyss Lv: 3
+Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 100% chance to be inflicted with Sleep every 10 seconds while they remain in the area. The Sleep effect lasts for 4 seconds. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown`,
+    img: skillImgNo,
+  },
+  {
     id: "poemOfBragi",
     level: 0,
     dependencies: [
@@ -278,43 +340,7 @@ Description: Initiates a comforting duet that grants temporary resistance to var
 [Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
 [Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
     img: skillImgNo,
-  },
-  {
-    id: "lokisWail",
-    level: 0,
-    dependencies: [
-      { id: "drumOfBattlefield", minLevel: 2 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Loki's Wail",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Drum of Battlefield Lv: 3
-Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
-    img: skillImgNo,
-  },
-  {
-    id: "lullaby",
-    level: 0,
-    dependencies: [
-      { id: "intoTheAbyss", minLevel: 2 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Lullaby",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Into the Abyss Lv: 3
-Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 100% chance to be inflicted with Sleep every 10 seconds while they remain in the area. The Sleep effect lasts for 4 seconds. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown`,
-    img: skillImgNo,
-  },
+  }, 
   {
     id: "mrKimARichMan",
     level: 0,
@@ -333,34 +359,6 @@ Requirement: Invulnerable Siegfried Lv: 3
 Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
     img: skillImgNo,
   },
-  
-  {
-    id: "musicalStrike",
-    level: 0,
-    dependencies: [
-      { id: "musicalLesson", minLevel: 2 },
-    ],
-    dependent: [
-      { id: "arrowVulcan" },
-    ],
-    element: null,
-    skillName: "Musical Strike",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 12
-Requirement: Musical Lesson Lv: 3
-Description: Fires a powerful volley of arrows using an instrument. The Arrows element determines the element of this attack. Consumes: 2x Arrow.
-[Lv 1]: Atk 130% x 2 Hits,
-[Lv 2]: Atk 160% x 2 Hits,
-[Lv 3]: Atk 190% x 2 Hits,
-[Lv 4]: Atk 220% x 2 Hits,
-[Lv 5]: Atk 250% x 2 Hits`,
-    img: skillImgNo,
-  },
-  
   {
     id: "assassinCrossOfSunset",
     level: 0,
