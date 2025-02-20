@@ -8,6 +8,64 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 // список скилов Alchemist
 export const skillsAlchemist = [ 
   {
+    id: "throwingPotionsTechniques",
+    level: 0,
+    dependencies: [],
+    dependent: [      
+      { id: "bioCannibalize" },
+      { id: "demonstration" },
+      { id: "marineSphereBomb" },
+    ],
+    element: null,
+    skillName: "Throwing Potions Techniques",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Physical
+Requirement: None
+Description: Master the art of potion-throwing with this skill, enhancing both the efficiency and impact of your potion and bottle-based abilities. This technique has a chance to recover empty bottles or empty potion bottles used in your throws, while boosting the healing, damage, and duration of a variety of related skills. [Demonstration]: Adds +1% damage per Learned Level for every 10 Base Levels.
+[Acid Terror]: Adds +1% damage per Learned Level for each Base Level.
+[Marine Sphere Bomb]: Increases Marine Sphere Base HP by +1 per Learned Level.
+[Potion Pitcher]: Increases Healing Value by 5% per Learned Level.
+[Potion Spreader]: Increases Healing Value by 5% per Learned Level.
+[Bio Cannibalize]: Increases Plant Status by 1.5% per Learned Level. [Deplant]: Increases chance of success by 1% per Learned Level.
+[Briar Vines]: Adds 10% of user MATK to damage per Learned Level.
+[Hyper Fertilize]: Increases Fertilization effect duration by 6 seconds per Learned Level.`,
+    img: skillImgNo,
+  },
+   {
+    id: "demonstration",
+    level: 0,
+    dependencies: [
+      { id: "throwingPotionsTechniques", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "acidDemonstration" },
+      { id: "acidTerror" },
+    ],
+    element: null,
+    skillName: "Demonstration",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Ground
+Range: 9
+Requirement: Throwing Potions Techniques Lv: 3
+Description: Unleash fiery devastation with a bottle of flammable liquid, hurling it at a target location to inflict Fire property physical damage every half second to all enemies within the area. If the target is affected by [Chemical Corrosion], theres a chance to break their weapon. A maximum of 9 Demonstrations can be active at once. Mini Fire Bottle at Lv.1 ~ 5, Fire Bottle at Lv.6 ~ 10,
+[Lv 1]: Atk 120%,
+[Lv 2]: Atk 140%,
+[Lv 3]: Atk 160%,
+[Lv 4]: Atk 180%,
+[Lv 5]: Atk 200%,
+[Lv 6]: Atk 220%,
+[Lv 7]: Atk 240%,
+[Lv 8]: Atk 260%,
+[Lv 9]: Atk 280%,
+[Lv 10]: Atk 300%`,
+    img: skillImgNo,
+  },
+  {
     id: "acidTerror",
     level: 0,
     dependencies: [
@@ -37,6 +95,87 @@ Description: Unleash a bottle of corrosive acid on a single target, causing seve
 [Lv 8]: Atk 800%,
 [Lv 9]: Atk 900%,
 [Lv 10]: Atk 1000%`,
+    img: skillImgNo,
+  },
+  {
+    id: "potionResearch",
+    level: 0,
+    dependencies: [],
+    dependent: [
+      { id: "helmChemicalProtection" },
+    ],
+    element: null,
+    skillName: "Potion Research",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Misc
+Requirement: None
+Description: Boosts the success rate for creating potions and chemicals while also enhancing the effectiveness of healing potions consumed. Your expertise in potion-making not only improves your chances of crafting success but also amplifies the benefits of the potions you use.
+[Lv 1]: Rate Bonus: +1%, Potion Effectiveness: +8%,
+[Lv 2]: Rate Bonus: +2%, Potion Effectiveness: +11%,
+[Lv 3]: Rate Bonus: +3%, Potion Effectiveness: +14%,
+[Lv 4]: Rate Bonus: +4%, Potion Effectiveness: +17%,
+[Lv 5]: Rate Bonus: +5%, Potion Effectiveness: +20%,
+[Lv 6]: Rate Bonus: +6%, Potion Effectiveness: +23%,
+[Lv 7]: Rate Bonus: +7%, Potion Effectiveness: +26%,
+[Lv 8]: Rate Bonus: +8%, Potion Effectiveness: +29%,
+[Lv 9]: Rate Bonus: +9%, Potion Effectiveness: +32%,
+[Lv 10]: Rate Bonus: +10%, Potion Effectiveness: +35%`,
+    img: skillImgNo,
+  },
+  {
+    id: "helmChemicalProtection",
+    level: 0,
+    dependencies: [
+      { id: "potionResearch", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "fullChemicalProtection" },
+      { id: "shieldChemicalProtection" },
+    ],
+    element: null,
+    skillName: "Helm Chemical Protection",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Ally
+Range: 1
+Requirement: Potion Research Lv: 5
+Description: Temporarily protects the equipped headgear of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
+[Lv 1]: Duration: 60 seconds,
+[Lv 2]: Duration: 120 seconds,
+[Lv 3]: Duration: 180 seconds,
+[Lv 4]: Duration: 360 seconds,
+[Lv 5]: Duration: 720 seconds`,
+    img: skillImgNo,
+  },
+  {
+    id: "shieldChemicalProtection",
+    level: 0,
+    dependencies: [
+      { id: "helmChemicalProtection", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "fullChemicalProtection" },
+      { id: "armorChemicalProtection" },
+    ],
+    element: null,
+    skillName: "Shield Chemical Protection",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Ally
+Range: 1
+Requirement: Helm Chemical Protection Lv: 1
+Description: Temporarily protects the equipped shield of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
+[Lv 1]: Duration: 60 seconds,
+[Lv 2]: Duration: 120 seconds,
+[Lv 3]: Duration: 180 seconds,
+[Lv 4]: Duration: 360 seconds,
+[Lv 5]: Duration: 720 seconds`,
     img: skillImgNo,
   },
   {
@@ -152,38 +291,7 @@ Description: Unleash explosive versatility with Chemical Reaction, altering the 
 [Lv 5] Acid Bottle: Ignites a powerful explosion that spreads acid, transforming the Bombs area into an AoE Acid Terror. Replaces Bomb tiles and casts Acid Demonstration at level 5 or highest learned level.`,
     img: skillImgNo,
   },
-  {
-    id: "demonstration",
-    level: 0,
-    dependencies: [
-      { id: "throwingPotionsTechniques", minLevel: 2 },
-    ],
-    dependent: [      
-      { id: "acidDemonstration" },
-      { id: "acidTerror" },
-    ],
-    element: null,
-    skillName: "Demonstration",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Ground
-Range: 9
-Requirement: Throwing Potions Techniques Lv: 3
-Description: Unleash fiery devastation with a bottle of flammable liquid, hurling it at a target location to inflict Fire property physical damage every half second to all enemies within the area. If the target is affected by [Chemical Corrosion], theres a chance to break their weapon. A maximum of 9 Demonstrations can be active at once. Mini Fire Bottle at Lv.1 ~ 5, Fire Bottle at Lv.6 ~ 10,
-[Lv 1]: Atk 120%,
-[Lv 2]: Atk 140%,
-[Lv 3]: Atk 160%,
-[Lv 4]: Atk 180%,
-[Lv 5]: Atk 200%,
-[Lv 6]: Atk 220%,
-[Lv 7]: Atk 240%,
-[Lv 8]: Atk 260%,
-[Lv 9]: Atk 280%,
-[Lv 10]: Atk 300%`,
-    img: skillImgNo,
-  },
+ 
   {
     id: "deplant",
     level: 0,
@@ -211,33 +319,7 @@ Description: Removes Summon Flora plants within the selected area and grants a c
 [Lv 5]: Chance: 60%, AoE 11x11`,
     img: skillImgNo,
   },
-  {
-    id: "helmChemicalProtection",
-    level: 0,
-    dependencies: [
-      { id: "potionResearch", minLevel: 4 },
-    ],
-    dependent: [
-      { id: "fullChemicalProtection" },
-      { id: "shieldChemicalProtection" },
-    ],
-    element: null,
-    skillName: "Helm Chemical Protection",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Ally
-Range: 1
-Requirement: Potion Research Lv: 5
-Description: Temporarily protects the equipped headgear of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
-    img: skillImgNo,
-  },
+  
   {
     id: "largeScalePharmacy",
     level: 0,
@@ -344,60 +426,8 @@ Description: Throws a potion at a single target, instantly applying a healing ef
 [Lv 10]: Condensed White Potion`,
     img: skillImgNo,
   },
-  {
-    id: "potionResearch",
-    level: 0,
-    dependencies: [],
-    dependent: [
-      { id: "helmChemicalProtection" },
-    ],
-    element: null,
-    skillName: "Potion Research",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Misc
-Requirement: None
-Description: Boosts the success rate for creating potions and chemicals while also enhancing the effectiveness of healing potions consumed. Your expertise in potion-making not only improves your chances of crafting success but also amplifies the benefits of the potions you use.
-[Lv 1]: Rate Bonus: +1%, Potion Effectiveness: +8%,
-[Lv 2]: Rate Bonus: +2%, Potion Effectiveness: +11%,
-[Lv 3]: Rate Bonus: +3%, Potion Effectiveness: +14%,
-[Lv 4]: Rate Bonus: +4%, Potion Effectiveness: +17%,
-[Lv 5]: Rate Bonus: +5%, Potion Effectiveness: +20%,
-[Lv 6]: Rate Bonus: +6%, Potion Effectiveness: +23%,
-[Lv 7]: Rate Bonus: +7%, Potion Effectiveness: +26%,
-[Lv 8]: Rate Bonus: +8%, Potion Effectiveness: +29%,
-[Lv 9]: Rate Bonus: +9%, Potion Effectiveness: +32%,
-[Lv 10]: Rate Bonus: +10%, Potion Effectiveness: +35%`,
-    img: skillImgNo,
-  },
-  {
-    id: "shieldChemicalProtection",
-    level: 0,
-    dependencies: [
-      { id: "helmChemicalProtection", minLevel: 0 },
-    ],
-    dependent: [
-      { id: "fullChemicalProtection" },
-      { id: "armorChemicalProtection" },
-    ],
-    element: null,
-    skillName: "Shield Chemical Protection",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Ally
-Range: 1
-Requirement: Helm Chemical Protection Lv: 1
-Description: Temporarily protects the equipped shield of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
-    img: skillImgNo,
-  },
+  
+  
   {
     id: "slingItem",
     level: 0,
@@ -424,32 +454,7 @@ Description: Throws Fruit Bombs or Throwing Items. Status reduction and damage f
 [Lv 5]: Stats Drop Duration: 50 Seconds, Cooldown: 1 S`,
     img: skillImgNo,
   },
-  {
-    id: "throwingPotionsTechniques",
-    level: 0,
-    dependencies: [],
-    dependent: [      
-      { id: "bioCannibalize" },
-      { id: "demonstration" },
-      { id: "marineSphereBomb" },
-    ],
-    element: null,
-    skillName: "Throwing Potions Techniques",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: None
-Description: Master the art of potion-throwing with this skill, enhancing both the efficiency and impact of your potion and bottle-based abilities. This technique has a chance to recover empty bottles or empty potion bottles used in your throws, while boosting the healing, damage, and duration of a variety of related skills. [Demonstration]: Adds +1% damage per Learned Level for every 10 Base Levels.
-[Acid Terror]: Adds +1% damage per Learned Level for each Base Level.
-[Marine Sphere Bomb]: Increases Marine Sphere Base HP by +1 per Learned Level.
-[Potion Pitcher]: Increases Healing Value by 5% per Learned Level.
-[Potion Spreader]: Increases Healing Value by 5% per Learned Level.
-[Bio Cannibalize]: Increases Plant Status by 1.5% per Learned Level. [Deplant]: Increases chance of success by 1% per Learned Level.
-[Briar Vines]: Adds 10% of user MATK to damage per Learned Level.
-[Hyper Fertilize]: Increases Fertilization effect duration by 6 seconds per Learned Level.`,
-    img: skillImgNo,
-  },
+  
   {
     id: "weaponChemicalProtection",
     level: 0,
