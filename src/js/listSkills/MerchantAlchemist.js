@@ -427,7 +427,9 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
     dependencies: [
       { id: "marineSphereBomb", minLevel: 4 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "slingItem" },
+    ],
     element: null,
     skillName: "Potion Pitcher",
     maxLevel: 10,
