@@ -13,6 +13,7 @@ export const skillsArcher = [
     dependent: [
       { id: "arrowShower" },
       { id: "sharpShooting" },
+      { id: "arrowVulcan" },
     ],
     element: null,
     skillName: "Double Strafe",
@@ -135,6 +136,8 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
       { id: "sharpShooting" },
       { id: "trueSight" },
       { id: "windWalk" },
+      { id: "moonlitWaterMill" },
+      { id: "tarotCardOfFate" },
     ],
     element: null,
     skillName: "Improve Concentration",
@@ -200,7 +203,9 @@ Description: Allows the user to create a quiver using 500 arrows. The process re
     id: "arrowShower",
     level: 0,
     dependencies: [{ id: "doubleStrafe", minLevel: 4 }],
-    dependent: [],
+    dependent: [      
+      { id: "arrowVulcan" },
+    ],
     element: null,
     skillName: "Arrow Shower",
     maxLevel: 10,
