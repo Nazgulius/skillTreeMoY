@@ -75,6 +75,7 @@ Description: Temporarily protects the equipped armor of a single target from dam
     dependent: [      
       { id: "hyperFertilize" },
       { id: "briarVines" },
+      { id: "deplant" },
     ],
     element: null,
     skillName: "Bio Cannibalize",
@@ -218,6 +219,7 @@ Description: Removes Summon Flora plants within the selected area and grants a c
     ],
     dependent: [
       { id: "fullChemicalProtection" },
+      { id: "shieldChemicalProtection" },
     ],
     element: null,
     skillName: "Helm Chemical Protection",
@@ -260,12 +262,14 @@ Description: Brew a large batch of potions all at once, with each potions creati
     img: skillImgNo,
   },
   {
-    id: "Marine Sphere Bomb",
+    id: "marineSphereBomb",
     level: 0,
     dependencies: [
       { id: "throwingPotionsTechniques", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [      
+      { id: "potionPitcher" },
+    ],
     element: null,
     skillName: "Marine Sphere Bomb",
     maxLevel: 10,
@@ -292,7 +296,9 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
     id: "pharmacy",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [      
+      { id: "largeScalePharmacy" },
+    ],
     element: null,
     skillName: "Pharmacy",
     maxLevel: 5,
@@ -342,7 +348,9 @@ Description: Throws a potion at a single target, instantly applying a healing ef
     id: "potionResearch",
     level: 0,
     dependencies: [],
-    dependent: [ ],
+    dependent: [
+      { id: "helmChemicalProtection" },
+    ],
     element: null,
     skillName: "Potion Research",
     maxLevel: 10,
@@ -423,6 +431,7 @@ Description: Throws Fruit Bombs or Throwing Items. Status reduction and damage f
     dependent: [      
       { id: "bioCannibalize" },
       { id: "demonstration" },
+      { id: "marineSphereBomb" },
     ],
     element: null,
     skillName: "Throwing Potions Techniques",
