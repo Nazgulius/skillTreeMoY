@@ -191,69 +191,6 @@ Description: Extends the duration of all active songs, dances, and party buff du
     img: skillImgNo,
   },
   {
-    id: "dontForgetMe",
-    level: 0,
-    dependencies: [
-      { id: "cringeDance", minLevel: 2 },
-    ],
-    dependent: [      
-      { id: "theRingOfNibelungen" },
-    ],
-    element: null,
-    skillName: "Don't Forget Me",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Cringe Dance Lv: 3
-Description: Perform a dance that increases the movement speed of you and your party around the performer. While the effect is active, when you take damage, the attackers movement speed and attack speed are reduced. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: Allies MS +7%, Attacker MS and ASPD -11% for 9.5 seconds,
-[Lv 2]: Allies MS +9%, Attacker MS and ASPD -12% for 9 seconds,
-[Lv 3]: Allies MS +11%, Attacker MS and ASPD -13% for 8.5 seconds,
-[Lv 4]: Allies MS +13%, Attacker MS and ASPD -14% for 8 seconds,
-[Lv 5]: Allies MS +15%, Attacker MS and ASPD -15% for 7.5 seconds,
-[Lv 6]: Allies MS +17%, Attacker MS and ASPD -16% for 7 seconds,
-[Lv 7]: Allies MS +19%, Attacker MS and ASPD -17% for 6.5 seconds,
-[Lv 8]: Allies MS +21%, Attacker MS and ASPD -18% for 6 seconds,
-[Lv 9]: Allies MS +23%, Attacker MS and ASPD -19% for 5.5 seconds,
-[Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds`,
-    img: skillImgNo,
-  },
-  
-  
-  
-  {
-    id: "fortunesKiss",
-    level: 0,
-    dependencies: [
-      { id: "cringeDance", minLevel: 2 },
-    ],
-    dependent: [      
-      { id: "invulnerableSiegfried" },
-    ],
-    element: null,
-    skillName: "Fortune's Kiss",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Cringe Dance Lv: 3
-Description: Performs a dance that will boost the Crit and Critical Damage of the user and party members around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: Crit +1, Critical Damage + 2%,
-[Lv 2]: Crit +2, Critical Damage + 4%,
-[Lv 3]: Crit +3, Critical Damage + 6%,
-[Lv 4]: Crit +4, Critical Damage + 8%,
-[Lv 5]: Crit +5, Critical Damage + 10%,
-[Lv 6]: Crit +6, Critical Damage + 12%,
-[Lv 7]: Crit +7, Critical Damage + 14%,
-[Lv 8]: Crit +8, Critical Damage + 16%,
-[Lv 9]: Crit +9, Critical Damage + 18%,
-[Lv 10]: Crit +10, Critical Damage + 20%`,
-    img: skillImgNo,
-  },
-  {
     id: "humming",
     level: 0,
     dependencies: [
@@ -348,21 +285,33 @@ Description: Inflicts the Petrifying status to enemies within the casters view.
     img: skillImgNo,
   },
   {
-    id: "mrKimARichMan",
+    id: "fortunesKiss",
     level: 0,
     dependencies: [
-      { id: "invulnerableSiegfried", minLevel: 2 },
+      { id: "cringeDance", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [      
+      { id: "invulnerableSiegfried" },
+    ],
     element: null,
-    skillName: "Mr. Kim A Rich Man",
-    maxLevel: 1,
-    inform: `Max Lv: 1
+    skillName: "Fortune's Kiss",
+    maxLevel: 10,
+    inform: `Max Lv: 10
 Skill Form: Active
 Type: Misc
 Target: Self
-Requirement: Invulnerable Siegfried Lv: 3
-Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
+Requirement: Cringe Dance Lv: 3
+Description: Performs a dance that will boost the Crit and Critical Damage of the user and party members around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
+[Lv 1]: Crit +1, Critical Damage + 2%,
+[Lv 2]: Crit +2, Critical Damage + 4%,
+[Lv 3]: Crit +3, Critical Damage + 6%,
+[Lv 4]: Crit +4, Critical Damage + 8%,
+[Lv 5]: Crit +5, Critical Damage + 10%,
+[Lv 6]: Crit +6, Critical Damage + 12%,
+[Lv 7]: Crit +7, Critical Damage + 14%,
+[Lv 8]: Crit +8, Critical Damage + 16%,
+[Lv 9]: Crit +9, Critical Damage + 18%,
+[Lv 10]: Crit +10, Critical Damage + 20%`,
     img: skillImgNo,
   },
   {
@@ -388,6 +337,54 @@ Description: Initiates a comforting duet that grants temporary resistance to var
 [Lv 3]: Elemental Resistences +9%, Tolerance to negative effects +15%,
 [Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
 [Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
+    img: skillImgNo,
+  },
+  {
+    id: "mrKimARichMan",
+    level: 0,
+    dependencies: [
+      { id: "invulnerableSiegfried", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Mr. Kim A Rich Man",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Invulnerable Siegfried Lv: 3
+Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
+    img: skillImgNo,
+  },
+  {
+    id: "dontForgetMe",
+    level: 0,
+    dependencies: [
+      { id: "cringeDance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "theRingOfNibelungen" },
+    ],
+    element: null,
+    skillName: "Don't Forget Me",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Cringe Dance Lv: 3
+Description: Perform a dance that increases the movement speed of you and your party around the performer. While the effect is active, when you take damage, the attackers movement speed and attack speed are reduced. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
+[Lv 1]: Allies MS +7%, Attacker MS and ASPD -11% for 9.5 seconds,
+[Lv 2]: Allies MS +9%, Attacker MS and ASPD -12% for 9 seconds,
+[Lv 3]: Allies MS +11%, Attacker MS and ASPD -13% for 8.5 seconds,
+[Lv 4]: Allies MS +13%, Attacker MS and ASPD -14% for 8 seconds,
+[Lv 5]: Allies MS +15%, Attacker MS and ASPD -15% for 7.5 seconds,
+[Lv 6]: Allies MS +17%, Attacker MS and ASPD -16% for 7 seconds,
+[Lv 7]: Allies MS +19%, Attacker MS and ASPD -17% for 6.5 seconds,
+[Lv 8]: Allies MS +21%, Attacker MS and ASPD -18% for 6 seconds,
+[Lv 9]: Allies MS +23%, Attacker MS and ASPD -19% for 5.5 seconds,
+[Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds`,
     img: skillImgNo,
   },
   {
