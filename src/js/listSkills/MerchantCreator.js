@@ -10,8 +10,12 @@ export const skillsCreator = [
   {
     id: "acidDemonstration",
     level: 0,
-    dependencies: [],
-    dependent: [ ],
+    dependencies: [
+      { id: "demonstration", minLevel: 9 },
+      { id: "acidTerror", minLevel: 9 },
+      { id: "chemicalReaction", minLevel: 4 },
+    ],
+    dependent: [],
     element: null,
     skillName: "Acid Demonstration",
     maxLevel: 10,
@@ -37,8 +41,13 @@ Description: Toss 1 Bottle Grenade and 1 Acid Bottle at a targeted enemy, unleas
   {
     id: "fullChemicalProtection",
     level: 0,
-    dependencies: [],
-    dependent: [ ],
+    dependencies: [
+      { id: "weaponChemicalProtection", minLevel: 0 },
+      { id: "shieldChemicalProtection", minLevel: 0 },
+      { id: "armorChemicalProtection", minLevel: 0 },
+      { id: "helmChemicalProtection", minLevel: 0 },
+    ],
+    dependent: [],
     element: null,
     skillName: "Full Chemical Protection",
     maxLevel: 1,
@@ -54,8 +63,12 @@ Description: Temporarily protects the target's equipped weapon, shield, armor, a
   {
     id: "hyperFertilize",
     level: 0,
-    dependencies: [],
-    dependent: [ ],
+    dependencies: [
+      { id: "bioCannibalize", minLevel: 9 },
+      { id: "briarVines", minLevel: 4 },
+      { id: "deplant", minLevel: 4 },
+    ],
+    dependent: [],
     element: null,
     skillName: "Hyper Fertilize",
     maxLevel: 10,
@@ -81,8 +94,10 @@ Description: Fertilizes the ground to grow a variety of plants that deal Poison 
   {
     id: "potionSpreader",
     level: 0,
-    dependencies: [],
-    dependent: [ ],
+    dependencies: [
+      { id: "slingItem", minLevel: 4 },
+    ],
+    dependent: [],
     element: null,
     skillName: "Potion Spreader",
     maxLevel: 10,
