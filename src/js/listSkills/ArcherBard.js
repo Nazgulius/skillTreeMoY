@@ -145,24 +145,7 @@ Description: Extends the duration of all active songs, dances, and party buff du
 [Lv 5]: Encore duration: 120 seconds`,
     img: skillImgNo,
   },
-  {
-    id: "eternalChaos",
-    level: 0,
-    dependencies: [
-      { id: "theRingOfNibelungen", minLevel: 2 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Eternal Chaos",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: The Ring of Nibelungen Lv: 3
-Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
-    img: skillImgNo,
-  },
+  
   {
     id: "frostJoke",
     level: 0,
@@ -184,6 +167,36 @@ Description: Inflicts the Freezing status to enemies within the casters view.
 [Lv 3]: Chance: 30%,
 [Lv 4]: Chance: 35%,
 [Lv 5]: Chance: 40%`,
+    img: skillImgNo,
+  },
+  {
+    id: "whistle",
+    level: 0,
+    dependencies: [
+      { id: "dissonance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "intoTheAbyss" },
+    ],
+    element: null,
+    skillName: "Whistle",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Dissonance Lv: 3
+Description: Performs a song that will boost Flee and Perfect Dodge of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
+[Lv 1]: Flee +20, Perfect Dodge +1,
+[Lv 2]: Flee +22, Perfect Dodge +2,
+[Lv 3]: Flee +24, Perfect Dodge +3,
+[Lv 4]: Flee +26, Perfect Dodge +4,
+[Lv 5]: Flee +28, Perfect Dodge +5,
+[Lv 6]: Flee +30, Perfect Dodge +6,
+[Lv 7]: Flee +32, Perfect Dodge +7,
+[Lv 8]: Flee +34, Perfect Dodge +8,
+[Lv 9]: Flee +36, Perfect Dodge +9,
+[Lv 10]: Flee +40, Perfect Dodge +10`,
     img: skillImgNo,
   },
   {
@@ -209,6 +222,36 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
 [Lv 3]: Grants a 12% chance to negate catalyst consumption.
 [Lv 4]: Grants a 16% chance to negate catalyst consumption.
 [Lv 5]: Grants a 20% chance to negate catalyst consumption.`,
+    img: skillImgNo,
+  },
+  {
+    id: "poemOfBragi",
+    level: 0,
+    dependencies: [
+      { id: "dissonance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "invulnerableSiegfried" },
+    ],
+    element: null,
+    skillName: "Poem of Bragi",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Dissonance Lv: 3
+Description: Performs a song that will shorten Variable Cast Time and After Cast Delay of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
+[Lv 1]: VCT -2%, Cast Delay -3%,
+[Lv 2]: VCT -4%, Cast Delay -6%,
+[Lv 3]: VCT -6%, Cast Delay -9%,
+[Lv 4]: VCT -8%, Cast Delay -12%,
+[Lv 5]: VCT -10%, Cast Delay -15%,
+[Lv 6]: VCT -12%, Cast Delay -18%,
+[Lv 7]: VCT -14%, Cast Delay -21%,
+[Lv 8]: VCT -16%, Cast Delay -24%,
+[Lv 9]: VCT -18%, Cast Delay -27%,
+[Lv 10]: VCT -20%, Cast Delay -30%`,
     img: skillImgNo,
   },
   {
@@ -317,36 +360,7 @@ Description: Fires a powerful volley of arrows using an instrument. The Arrows e
 [Lv 5]: Atk 250% x 2 Hits`,
     img: skillImgNo,
   },
-  {
-    id: "poemOfBragi",
-    level: 0,
-    dependencies: [
-      { id: "dissonance", minLevel: 2 },
-    ],
-    dependent: [      
-      { id: "invulnerableSiegfried" },
-    ],
-    element: null,
-    skillName: "Poem of Bragi",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Dissonance Lv: 3
-Description: Performs a song that will shorten Variable Cast Time and After Cast Delay of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: VCT -2%, Cast Delay -3%,
-[Lv 2]: VCT -4%, Cast Delay -6%,
-[Lv 3]: VCT -6%, Cast Delay -9%,
-[Lv 4]: VCT -8%, Cast Delay -12%,
-[Lv 5]: VCT -10%, Cast Delay -15%,
-[Lv 6]: VCT -12%, Cast Delay -18%,
-[Lv 7]: VCT -14%, Cast Delay -21%,
-[Lv 8]: VCT -16%, Cast Delay -24%,
-[Lv 9]: VCT -18%, Cast Delay -27%,
-[Lv 10]: VCT -20%, Cast Delay -30%`,
-    img: skillImgNo,
-  },
+  
   {
     id: "assassinCrossOfSunset",
     level: 0,
@@ -401,33 +415,21 @@ Description: Initiates a refined duet that grants a random temporary effect to y
     img: skillImgNo,
   },
   {
-    id: "whistle",
+    id: "eternalChaos",
     level: 0,
     dependencies: [
-      { id: "dissonance", minLevel: 2 },
+      { id: "theRingOfNibelungen", minLevel: 2 },
     ],
-    dependent: [      
-      { id: "intoTheAbyss" },
-    ],
+    dependent: [],
     element: null,
-    skillName: "Whistle",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    skillName: "Eternal Chaos",
+    maxLevel: 1,
+    inform: `Max Lv: 1
 Skill Form: Active
 Type: Misc
 Target: Self
-Requirement: Dissonance Lv: 3
-Description: Performs a song that will boost Flee and Perfect Dodge of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: Flee +20, Perfect Dodge +1,
-[Lv 2]: Flee +22, Perfect Dodge +2,
-[Lv 3]: Flee +24, Perfect Dodge +3,
-[Lv 4]: Flee +26, Perfect Dodge +4,
-[Lv 5]: Flee +28, Perfect Dodge +5,
-[Lv 6]: Flee +30, Perfect Dodge +6,
-[Lv 7]: Flee +32, Perfect Dodge +7,
-[Lv 8]: Flee +34, Perfect Dodge +8,
-[Lv 9]: Flee +36, Perfect Dodge +9,
-[Lv 10]: Flee +40, Perfect Dodge +10`,
+Requirement: The Ring of Nibelungen Lv: 3
+Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
     img: skillImgNo,
   },
 ];
