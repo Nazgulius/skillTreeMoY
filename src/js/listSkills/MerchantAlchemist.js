@@ -98,6 +98,32 @@ Description: Unleash a bottle of corrosive acid on a single target, causing seve
     img: skillImgNo,
   },
   {
+    id: "chemicalReaction",
+    level: 0,
+    dependencies: [
+      { id: "acidTerror", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "acidDemonstration" },
+    ],
+    element: null,
+    skillName: "Chemical Reaction",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Ground
+Range: 9
+Requirement: Acid Terror Lv: 5
+Description: Unleash explosive versatility with Chemical Reaction, altering the Bomb skills effects by tossing specialized Chemical Bottles into the mix, each providing unique and powerful results.
+[Lv 1] Oil Bottle: Bombs Damage is boosted by Strength and base level.
+[Lv 2] Explosive Powder: Triggers a massive fiery explosion with fire magic damage, pushing targets 4 cells away. Damage is enhanced by Strength.
+[Lv 3] Smoke Powder: Burns plants and creates a dense smoke cloud, reducing physical damage taken by 20% and increasing evasion by 20%. Duration scales with Bombs level.
+[Lv 4] Tear Gas: Releases potent tear gas, lowering evasion and accuracy by 40%. Entities lose 3% of their max health every 3 seconds and are forced to use /snif. Duration scales with Bombs level.
+[Lv 5] Acid Bottle: Ignites a powerful explosion that spreads acid, transforming the Bombs area into an AoE Acid Terror. Replaces Bomb tiles and casts Acid Demonstration at level 5 or highest learned level.`,
+    img: skillImgNo,
+  },
+  {
     id: "potionResearch",
     level: 0,
     dependencies: [],
@@ -206,6 +232,32 @@ Description: Temporarily protects the equipped armor of a single target from dam
     img: skillImgNo,
   },
   {
+    id: "weaponChemicalProtection",
+    level: 0,
+    dependencies: [
+      { id: "armorChemicalProtection", minLevel: 0 },
+    ],
+    dependent: [      
+      { id: "fullChemicalProtection" },
+    ],
+    element: null,
+    skillName: "Weapon Chemical Protection",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Ally
+Range: 1
+Requirement: Armor Chemical Protection Lv: 1
+Description: Temporarily protects the equipped weapon of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
+[Lv 1]: Duration: 60 seconds,
+[Lv 2]: Duration: 120 seconds,
+[Lv 3]: Duration: 180 seconds,
+[Lv 4]: Duration: 360 seconds,
+[Lv 5]: Duration: 720 seconds`,
+    img: skillImgNo,
+  },
+  {
     id: "bioCannibalize",
     level: 0,
     dependencies: [
@@ -239,6 +291,33 @@ Description: Summons a living plant at the target location to assist the user in
     img: skillImgNo,
   },
   {
+    id: "deplant",
+    level: 0,
+    dependencies: [
+      { id: "bioCannibalize", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "hyperFertilize" },
+      { id: "briarVines" },
+    ],
+    element: null,
+    skillName: "Deplant",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Ground
+Range: 2
+Requirement: Bio Cannibalize Lv: 5
+Description: Removes Summon Flora plants within the selected area and grants a chance to recover the potion used.
+[Lv 1]: Chance: 36%, AoE 3x3,
+[Lv 2]: Chance: 42%, AoE 5x5,
+[Lv 3]: Chance: 48%, AoE 7x7,
+[Lv 4]: Chance: 54%, AoE 9x9,
+[Lv 5]: Chance: 60%, AoE 11x11`,
+    img: skillImgNo,
+  },
+  {
     id: "briarVines",
     level: 0,
     dependencies: [
@@ -266,60 +345,28 @@ Description: Throws a vine bomb that immobilizes the target and deals damage ove
     img: skillImgNo,
   },
   {
-    id: "chemicalReaction",
+    id: "pharmacy",
     level: 0,
-    dependencies: [
-      { id: "acidTerror", minLevel: 4 },
-    ],
-    dependent: [
-      { id: "acidDemonstration" },
+    dependencies: [],
+    dependent: [      
+      { id: "largeScalePharmacy" },
     ],
     element: null,
-    skillName: "Chemical Reaction",
+    skillName: "Pharmacy",
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Magical
-Target: Ground
-Range: 9
-Requirement: Acid Terror Lv: 5
-Description: Unleash explosive versatility with Chemical Reaction, altering the Bomb skills effects by tossing specialized Chemical Bottles into the mix, each providing unique and powerful results.
-[Lv 1] Oil Bottle: Bombs Damage is boosted by Strength and base level.
-[Lv 2] Explosive Powder: Triggers a massive fiery explosion with fire magic damage, pushing targets 4 cells away. Damage is enhanced by Strength.
-[Lv 3] Smoke Powder: Burns plants and creates a dense smoke cloud, reducing physical damage taken by 20% and increasing evasion by 20%. Duration scales with Bombs level.
-[Lv 4] Tear Gas: Releases potent tear gas, lowering evasion and accuracy by 40%. Entities lose 3% of their max health every 3 seconds and are forced to use /snif. Duration scales with Bombs level.
-[Lv 5] Acid Bottle: Ignites a powerful explosion that spreads acid, transforming the Bombs area into an AoE Acid Terror. Replaces Bomb tiles and casts Acid Demonstration at level 5 or highest learned level.`,
+Type: Misc
+Target: Self
+Requirement: None
+Description: Allows the creation of Potions and Chemical Bottles. Requires the appropriate Potion Creation Guide for each specific potion. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Pharmacy Creation Guide ,
+[Lv 1]: No Additional Bonus,
+[Lv 2]: Additional Efficiency -75%,
+[Lv 3]: Additional Efficiency -50%,
+[Lv 4]: Additional Efficiency -25%,
+[Lv 5]: Full Efficiency`,
     img: skillImgNo,
   },
- 
-  {
-    id: "deplant",
-    level: 0,
-    dependencies: [
-      { id: "bioCannibalize", minLevel: 4 },
-    ],
-    dependent: [
-      { id: "hyperFertilize" },
-      { id: "briarVines" },
-    ],
-    element: null,
-    skillName: "Deplant",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Magical
-Target: Ground
-Range: 2
-Requirement: Bio Cannibalize Lv: 5
-Description: Removes Summon Flora plants within the selected area and grants a chance to recover the potion used.
-[Lv 1]: Chance: 36%, AoE 3x3,
-[Lv 2]: Chance: 42%, AoE 5x5,
-[Lv 3]: Chance: 48%, AoE 7x7,
-[Lv 4]: Chance: 54%, AoE 9x9,
-[Lv 5]: Chance: 60%, AoE 11x11`,
-    img: skillImgNo,
-  },
-  
   {
     id: "largeScalePharmacy",
     level: 0,
@@ -375,29 +422,6 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
     img: skillImgNo,
   },
   {
-    id: "pharmacy",
-    level: 0,
-    dependencies: [],
-    dependent: [      
-      { id: "largeScalePharmacy" },
-    ],
-    element: null,
-    skillName: "Pharmacy",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: None
-Description: Allows the creation of Potions and Chemical Bottles. Requires the appropriate Potion Creation Guide for each specific potion. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Pharmacy Creation Guide ,
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
-    img: skillImgNo,
-  },
-  {
     id: "potionPitcher",
     level: 0,
     dependencies: [
@@ -426,8 +450,6 @@ Description: Throws a potion at a single target, instantly applying a healing ef
 [Lv 10]: Condensed White Potion`,
     img: skillImgNo,
   },
-  
-  
   {
     id: "slingItem",
     level: 0,
@@ -452,33 +474,6 @@ Description: Throws Fruit Bombs or Throwing Items. Status reduction and damage f
 [Lv 3]: Stats Drop Duration: 30 Seconds, Cooldown: 2 S ,
 [Lv 4]: Stats Drop Duration: 40 Seconds, Cooldown: 1.5 S ,
 [Lv 5]: Stats Drop Duration: 50 Seconds, Cooldown: 1 S`,
-    img: skillImgNo,
-  },
-  
-  {
-    id: "weaponChemicalProtection",
-    level: 0,
-    dependencies: [
-      { id: "armorChemicalProtection", minLevel: 0 },
-    ],
-    dependent: [      
-      { id: "fullChemicalProtection" },
-    ],
-    element: null,
-    skillName: "Weapon Chemical Protection",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Ally
-Range: 1
-Requirement: Armor Chemical Protection Lv: 1
-Description: Temporarily protects the equipped weapon of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
     img: skillImgNo,
   },
 ];
