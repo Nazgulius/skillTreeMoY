@@ -7,57 +7,15 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 // список скилов Dancer
 export const skillsDancer = [  
   {
-    id: "bellyDance",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Belly Dance",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Cringe Dance Lv: 3
-Description: Performs a dance that will boost Max SP and reduce SP Cost of the user and party members around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: MaxSP +10%, SP consumption: -6%,
-[Lv 2]: MaxSP +11%, SP consumption: -7%,
-[Lv 3]: MaxSP +12%, SP consumption: -8%,
-[Lv 4]: MaxSP +13%, SP consumption: -9%,
-[Lv 5]: MaxSP +14%, SP consumption: -10%,
-[Lv 6]: MaxSP +15%, SP consumption: -11%,
-[Lv 7]: MaxSP +16%, SP consumption: -12%,
-[Lv 8]: MaxSP +17%, SP consumption: -13%,
-[Lv 9]: MaxSP +18%, SP consumption: -14%,
-[Lv 10]: MaxSP +20%, SP consumption: -15%`,
-    img: skillImgNo,
-  },
-  {
-    id: "cringeDance",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Cringe Dance",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Magical
-Target: Self
-Requirement: Dancing Lesson Lv: 2
-Description: Performs a corny dance, dealing Neutral magic damage to all enemies in a 9x9 radius every 3 seconds. Reduces movement speed by 25% and consumes 3 SP per second while active. Can trigger auto-cast items. You can still use basic attacks and skills while active. Requires a Whip class weapon. Cannot switch weapons while active.
-[Lv 1]: (Atk + MAtk) x 30% every 3 seconds,
-[Lv 2]: (Atk + MAtk) x 60% every 3 seconds,
-[Lv 3]: (Atk + MAtk) x 90% every 3 seconds,
-[Lv 4]: (Atk + MAtk) x 120% every 3 seconds,
-[Lv 5]: (Atk + MAtk) x 150% every 3 seconds`,
-    img: skillImgNo,
-  },
-  {
     id: "dancingLesson",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "moonlitWaterMill" },
+      { id: "cringeDance" },
+      { id: "encore" },
+      { id: "slingingStrike" },
+    ],
     element: null,
     skillName: "Dancing Lesson",
     maxLevel: 10,
@@ -79,10 +37,102 @@ Description: Increase Atk, MAtk and Aspd with Whip Class Weapon. When [Lv 10], i
     img: skillImgNo,
   },
   {
+    id: "slingingStrike",
+    level: 0,
+    dependencies: [
+      { id: "dancingLesson", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "arrowVulcan" },
+    ],
+    element: null,
+    skillName: "Slinging Strike",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 12
+Requirement: Dancing Lesson Lv: 3
+Description: Fires a powerful volley of arrows using an whip. The Arrows element determines the element of this attack. Consumes: 2x Arrow.
+[Lv 1]: Atk 130% x 2 Hits,
+[Lv 2]: Atk 160% x 2 Hits,
+[Lv 3]: Atk 190% x 2 Hits,
+[Lv 4]: Atk 220% x 2 Hits,
+[Lv 5]: Atk 250% x 2 Hits`,
+    img: skillImgNo,
+  },
+  {
+    id: "cringeDance",
+    level: 0,
+    dependencies: [
+      { id: "dancingLesson", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "tarotCardOfFate" },
+      { id: "reverberation" },
+      { id: "bellyDance" },
+      { id: "dontForgetMe" },
+      { id: "fortunesKiss" },
+      { id: "humming" },
+    ],
+    element: null,
+    skillName: "Cringe Dance",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Self
+Requirement: Dancing Lesson Lv: 2
+Description: Performs a corny dance, dealing Neutral magic damage to all enemies in a 9x9 radius every 3 seconds. Reduces movement speed by 25% and consumes 3 SP per second while active. Can trigger auto-cast items. You can still use basic attacks and skills while active. Requires a Whip class weapon. Cannot switch weapons while active.
+[Lv 1]: (Atk + MAtk) x 30% every 3 seconds,
+[Lv 2]: (Atk + MAtk) x 60% every 3 seconds,
+[Lv 3]: (Atk + MAtk) x 90% every 3 seconds,
+[Lv 4]: (Atk + MAtk) x 120% every 3 seconds,
+[Lv 5]: (Atk + MAtk) x 150% every 3 seconds`,
+    img: skillImgNo,
+  },
+  {
+    id: "bellyDance",
+    level: 0,
+    dependencies: [
+      { id: "cringeDance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "drumOfBattlefield" },
+    ],
+    element: null,
+    skillName: "Belly Dance",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Cringe Dance Lv: 3
+Description: Performs a dance that will boost Max SP and reduce SP Cost of the user and party members around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
+[Lv 1]: MaxSP +10%, SP consumption: -6%,
+[Lv 2]: MaxSP +11%, SP consumption: -7%,
+[Lv 3]: MaxSP +12%, SP consumption: -8%,
+[Lv 4]: MaxSP +13%, SP consumption: -9%,
+[Lv 5]: MaxSP +14%, SP consumption: -10%,
+[Lv 6]: MaxSP +15%, SP consumption: -11%,
+[Lv 7]: MaxSP +16%, SP consumption: -12%,
+[Lv 8]: MaxSP +17%, SP consumption: -13%,
+[Lv 9]: MaxSP +18%, SP consumption: -14%,
+[Lv 10]: MaxSP +20%, SP consumption: -15%`,
+    img: skillImgNo,
+  },
+  
+  
+  {
     id: "dontForgetMe",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "cringeDance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "theRingOfNibelungen" },
+    ],
     element: null,
     skillName: "Don't Forget Me",
     maxLevel: 10,
@@ -107,8 +157,12 @@ Description: Perform a dance that increases the movement speed of you and your p
   {
     id: "drumOfBattlefield",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "bellyDance", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "lokisWail" },
+    ],
     element: null,
     skillName: "Drum of Battlefield",
     maxLevel: 5,
@@ -128,8 +182,12 @@ Description: Initiates a battle duet that temporarily increases both physical an
   {
     id: "encore",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "dancingLesson", minLevel: 4 },
+    ],
+    dependent: [      
+      { id: "medusaScream" },
+    ],
     element: null,
     skillName: "Encore",
     maxLevel: 5,
@@ -149,7 +207,9 @@ Description: Extends the duration of all active songs, dances, and party buff du
   {
     id: "eternalChaos",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "theRingOfNibelungen", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Eternal Chaos",
@@ -165,8 +225,12 @@ Description: Initiates a discordant duet that randomly reduces the physical and 
   {
     id: "fortunesKiss",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "cringeDance", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "invulnerableSiegfried" },
+    ],
     element: null,
     skillName: "Fortune's Kiss",
     maxLevel: 10,
@@ -191,7 +255,9 @@ Description: Performs a dance that will boost the Crit and Critical Damage of th
   {
     id: "humming",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "cringeDance", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Humming",
@@ -217,8 +283,12 @@ Description: Performs a dance that will boost Hit and Long Range Damage of all p
   {
     id: "intoTheAbyss",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "humming", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "lullaby" },
+    ],
     element: null,
     skillName: "Into the Abyss",
     maxLevel: 5,
@@ -238,8 +308,13 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
   {
     id: "invulnerableSiegfried",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "fortunesKiss", minLevel: 9 },
+    ],
+    dependent: [
+      
+      { id: "mrKimARichMan" },
+    ],
     element: null,
     skillName: "Invulnerable Siegfried",
     maxLevel: 5,
@@ -259,7 +334,9 @@ Description: Initiates a comforting duet that grants temporary resistance to var
   {
     id: "lokisWail",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "drumOfBattlefield", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Loki's Wail",
@@ -275,7 +352,9 @@ Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 
   {
     id: "lullaby",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "intoTheAbyss", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Lullaby",
@@ -291,7 +370,9 @@ Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 10
   {
     id: "medusaScream",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "encore", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Medusa Scream",
@@ -312,7 +393,9 @@ Description: Inflicts the Petrifying status to enemies within the casters view.
   {
     id: "mrKimARichMan",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "invulnerableSiegfried", minLevel: 2 },
+    ],
     dependent: [],
     element: null,
     skillName: "Mr. Kim A Rich Man",
@@ -325,33 +408,16 @@ Requirement: Invulnerable Siegfried Lv: 3
 Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
     img: skillImgNo,
   },
-  {
-    id: "slingingStrike",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Slinging Strike",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 12
-Requirement: Dancing Lesson Lv: 3
-Description: Fires a powerful volley of arrows using an whip. The Arrows element determines the element of this attack. Consumes: 2x Arrow.
-[Lv 1]: Atk 130% x 2 Hits,
-[Lv 2]: Atk 160% x 2 Hits,
-[Lv 3]: Atk 190% x 2 Hits,
-[Lv 4]: Atk 220% x 2 Hits,
-[Lv 5]: Atk 250% x 2 Hits`,
-    img: skillImgNo,
-  },
+  
   {
     id: "theRingOfNibelungen",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "dontForgetMe", minLevel: 9 },
+    ],
+    dependent: [      
+      { id: "eternalChaos" },
+    ],
     element: null,
     skillName: "The Ring of Nibelungen",
     maxLevel: 5,
