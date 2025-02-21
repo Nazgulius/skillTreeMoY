@@ -39,7 +39,9 @@ Description: Amplifies MATK for 60 seconds.
   {
     id: "napalmVulcan",
     level: 0,
-    dependencies: [{ id: "napalmBeat", minLevel: 4 }, { id: "soulStrike", minLevel: 3 }],
+    dependencies: [
+      { id: "napalmBeat", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Napalm Vulcan",
