@@ -206,6 +206,17 @@ export default class App {
     const pInfoEng = document.createElement('p');  
     pInfoEng.textContent = this.infoEng; 
 
+    // кнопка "Home"
+    const btnHome = document.createElement('button'); 
+    btnHome.setAttribute('type', 'button');
+    btnHome.classList.add('btn-home');
+    btnHome.textContent = 'Home';    
+    btnHome.addEventListener('click', (e) => { 
+      e.preventDefault();
+      window.location.href = 'https://nazgulius.github.io/skillTreeMoY/';
+    });
+    document.body.append(btnHome);
+
     document.querySelector('.job-tree').insertAdjacentElement('afterend', pInfoRu);
     document.querySelector('.job-tree').insertAdjacentElement('afterend', pInfoEng);
                            
