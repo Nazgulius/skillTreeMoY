@@ -5,34 +5,43 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 
 // список скилов Rogue
-export const skillsRogue = [  
+export const skillsRogue = [ 
   {
-    id: "armorStripping",
+    id: "oneHandedSwordMastery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "counterInstinct" },
+    ],
     element: null,
-    skillName: "Armor Stripping",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
+    skillName: "One-Handed Sword Mastery",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
 Type: Physical
-Target: Enemy
-Range: 1
-Requirement: Shield Stripping Lv: 2
-Description: Attempts to forcibly remove the equipped armor of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total DEF temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster DEF -5%,
-[Lv 2]: Success Chance: 13%, Monster DEF -10%,
-[Lv 3]: Success Chance: 17%, Monster DEF -15%,
-[Lv 4]: Success Chance: 21%, Monster DEF -20%,
-[Lv 5]: Success Chance: 25%, Monster DEF -25%`,
-    img: skillImgNo,
+Requirement: None
+Description: Increase Attack with One Handed Sword. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10], it increases Attack in 6%. Attack bonus granted by this skill is of the Equipment type.
+[Lv 1]: Atk +2, 2nd Class Additional Atk +1,
+[Lv 2]: Atk +4, 2nd Class Additional Atk +2,
+[Lv 3]: Atk +6, 2nd Class Additional Atk +3,
+[Lv 4]: Atk +8, 2nd Class Additional Atk +4,
+[Lv 5]: Atk +10, 2nd Class Additional Atk +5,
+[Lv 6]: Atk +12, 2nd Class Additional Atk +6,
+[Lv 7]: Atk +14, 2nd Class Additional Atk +7,
+[Lv 8]: Atk +16, 2nd Class Additional Atk +8,
+[Lv 9]: Atk +18, 2nd Class Additional Atk +9,
+[Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
+img: skillImgNo,
   },
   {
     id: "backStab",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "gashingBlow", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "raid" },
+    ],
     element: null,
     skillName: "Back Stab",
     maxLevel: 10,
@@ -56,10 +65,43 @@ Description: Attacks the target from behind, causing physical damage. The skill 
     img: skillImgNo,
   },
   {
+    id: "vulturesEye",
+    level: 0,
+    dependencies: [
+      { id: "throwStone", minLevel: 6 },
+    ],
+    dependent: [
+      { id: "doubleStrafe" },
+    ],
+    element: null,
+    skillName: "Vulture's Eye",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Misc
+Requirement: Throw Stone Lv: 7
+Description: Enhances Attack and Attack Range with Bow class weapons. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10] increases Hit Rate in 6%.
+[Lv 1]: Atk +2, Range +2, 2nd Class Additional Atk +1,
+[Lv 2]: Atk +4, Range +2, 2nd Class Additional Atk +2,
+[Lv 3]: Atk +6, Range +3, 2nd Class Additional Atk +3,
+[Lv 4]: Atk +8, Range +3, 2nd Class Additional Atk +4,
+[Lv 5]: Atk +10, Range +4, 2nd Class Additional Atk +5,
+[Lv 6]: Atk +12, Range +4, 2nd Class Additional Atk +6,
+[Lv 7]: Atk +14, Range +5, 2nd Class Additional Atk +7,
+[Lv 8]: Atk +16, Range +5, 2nd Class Additional Atk +8,
+[Lv 9]: Atk +18, Range +6, 2nd Class Additional Atk +9,
+[Lv 10]: Atk +20, Range +6, 2nd Class Additional Atk +10`,
+    img: skillImgNo,
+  },
+  {
     id: "doubleStrafe",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "vulturesEye", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "tripleStrafe" },
+    ],
     element: null,
     skillName: "Double Strafe",
     maxLevel: 10,
@@ -85,7 +127,9 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
   {
     id: "gangland",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "gangsterParadise", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Gangland",
@@ -100,8 +144,12 @@ Description: Increases the bonuses granted by Gangster Paradise for the user by 
   {
     id: "gangsterParadise",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "plagiarism", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "gangland" },  
+    ],
     element: null,
     skillName: "Gangster Paradise",
     maxLevel: 5,
@@ -120,8 +168,12 @@ Description: When two or more Rogues with this skill sit next to each other, and
   {
     id: "gashingBlow",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "snatcher", minLevel: 3 },
+    ],
+    dependent: [      
+      { id: "backStab" },
+    ],
     element: null,
     skillName: "Gashing Blow",
     maxLevel: 10,
@@ -144,32 +196,13 @@ Description: Delivers a powerful strike that has a chance to apply the Gashing W
 [Lv 10]: Atk 600%, Gashing Wound Chance: 30%`,
     img: skillImgNo,
   },
-  {
-    id: "helmStripping",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Helm Stripping",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 1
-Requirement: Snatcher Lv: 5
-Description: Attempts to forcibly remove the equipped helmet of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total MATK temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster MATK -5%,
-[Lv 2]: Success Chance: 13%, Monster MATK -10%,
-[Lv 3]: Success Chance: 17%, Monster MATK -15%,
-[Lv 4]: Success Chance: 21%, Monster MATK -20%,
-[Lv 5]: Success Chance: 25%, Monster MATK -25%`,
-    img: skillImgNo,
-  },
+  
   {
     id: "intimidate",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "raid", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Intimidate",
@@ -188,36 +221,18 @@ Description: Strikes a target and, forcibly teleport it with the caster to, a ra
 [Lv 5]: ATK 250%`,
     img: skillImgNo,
   },
-  {
-    id: "oneHandedSwordMastery",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "One-Handed Sword Mastery",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: None
-Description: Increase Attack with One Handed Sword. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10], it increases Attack in 6%. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +2, 2nd Class Additional Atk +1,
-[Lv 2]: Atk +4, 2nd Class Additional Atk +2,
-[Lv 3]: Atk +6, 2nd Class Additional Atk +3,
-[Lv 4]: Atk +8, 2nd Class Additional Atk +4,
-[Lv 5]: Atk +10, 2nd Class Additional Atk +5,
-[Lv 6]: Atk +12, 2nd Class Additional Atk +6,
-[Lv 7]: Atk +14, 2nd Class Additional Atk +7,
-[Lv 8]: Atk +16, 2nd Class Additional Atk +8,
-[Lv 9]: Atk +18, 2nd Class Additional Atk +9,
-[Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
-img: skillImgNo,
-  },
+  
   {
     id: "plagiarism",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "steal", minLevel: 9 },
+      { id: "snatcher", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "simulation" },
+      { id: "gangsterParadise" },
+    ],
     element: null,
     skillName: "Plagiarism",
     maxLevel: 10,
@@ -243,8 +258,14 @@ Description: Copies a skill from an ally, enemy, or monster by selecting from a 
   {
     id: "raid",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "sprinkleSand", minLevel: 4 },
+      { id: "backStab", minLevel: 1 },
+      { id: "tunnelDrive", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "intimidate" },
+    ],
     element: null,
     skillName: "Raid",
     maxLevel: 5,
@@ -261,33 +282,46 @@ Description: Execute a sneak attack on nearby enemies within a [7*7] area. If us
 [Lv 5]: Atk 800%, Amplified Damage +30%, Duration: 5 Second`,
     img: skillImgNo,
   },
+  
+  
   {
-    id: "shieldStripping",
+    id: "tunnelDrive",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "hiding", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "stealth" },
+      { id: "raid" },
+    ],
     element: null,
-    skillName: "Shield Stripping",
+    skillName: "Tunnel Drive",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 1
-Requirement: Helm Stripping Lv: 2
-Description: Attempts to forcibly remove the equipped shield of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total MDEF temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster MDEF -5%,
-[Lv 2]: Success Chance: 13%, Monster MDEF -10%,
-[Lv 3]: Success Chance: 17%, Monster MDEF -15%,
-[Lv 4]: Success Chance: 21%, Monster MDEF -20%,
-[Lv 5]: Success Chance: 25%, Monster MDEF -25%`,
+Skill Form: Passive
+Type: Misc
+Requirement: Hiding Lv: 1
+Description: Enables Movement while in, Hiding status. Movement Speed is slower, than normal walk.
+[Lv 1]: Movement Speed: 26%,
+[Lv 2]: Movement Speed: 32%,
+[Lv 3]: Movement Speed: 38%,
+[Lv 4]: Movement Speed: 44%,
+[Lv 5]: Movement Speed: 50%`,
     img: skillImgNo,
   },
+  
+
   {
     id: "snatcher",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "steal", minLevel: 0 },
+    ],
+    dependent: [      
+      { id: "gashingBlow" },
+      { id: "plagiarism" },
+      { id: "helmStripping" },
+    ],
     element: null,
     skillName: "Snatcher",
     maxLevel: 10,
@@ -309,55 +343,91 @@ Description: Automatically steals items, from a monster while attacking it with,
     img: skillImgNo,
   },
   {
-    id: "tunnelDrive",
+    id: "helmStripping",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "snatcher", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "fullStrip" },
+    ],
     element: null,
-    skillName: "Tunnel Drive",
+    skillName: "Helm Stripping",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Passive
-Type: Misc
-Requirement: Hiding Lv: 1
-Description: Enables Movement while in, Hiding status. Movement Speed is slower, than normal walk.
-[Lv 1]: Movement Speed: 26%,
-[Lv 2]: Movement Speed: 32%,
-[Lv 3]: Movement Speed: 38%,
-[Lv 4]: Movement Speed: 44%,
-[Lv 5]: Movement Speed: 50%`,
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 1
+Requirement: Snatcher Lv: 5
+Description: Attempts to forcibly remove the equipped helmet of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total MATK temporarily. Has double base chance of success.
+[Lv 1]: Success Chance: 9%, Monster MATK -5%,
+[Lv 2]: Success Chance: 13%, Monster MATK -10%,
+[Lv 3]: Success Chance: 17%, Monster MATK -15%,
+[Lv 4]: Success Chance: 21%, Monster MATK -20%,
+[Lv 5]: Success Chance: 25%, Monster MATK -25%`,
     img: skillImgNo,
   },
   {
-    id: "vulturesEye",
+    id: "shieldStripping",
     level: 0,
-    dependencies: [],
-    dependent: [],
+    dependencies: [
+      { id: "helmStripping", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "fullStrip" },
+    ],
     element: null,
-    skillName: "Vulture's Eye",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Misc
-Requirement: Throw Stone Lv: 7
-Description: Enhances Attack and Attack Range with Bow class weapons. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10] increases Hit Rate in 6%.
-[Lv 1]: Atk +2, Range +2, 2nd Class Additional Atk +1,
-[Lv 2]: Atk +4, Range +2, 2nd Class Additional Atk +2,
-[Lv 3]: Atk +6, Range +3, 2nd Class Additional Atk +3,
-[Lv 4]: Atk +8, Range +3, 2nd Class Additional Atk +4,
-[Lv 5]: Atk +10, Range +4, 2nd Class Additional Atk +5,
-[Lv 6]: Atk +12, Range +4, 2nd Class Additional Atk +6,
-[Lv 7]: Atk +14, Range +5, 2nd Class Additional Atk +7,
-[Lv 8]: Atk +16, Range +5, 2nd Class Additional Atk +8,
-[Lv 9]: Atk +18, Range +6, 2nd Class Additional Atk +9,
-[Lv 10]: Atk +20, Range +6, 2nd Class Additional Atk +10`,
+    skillName: "Shield Stripping",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 1
+Requirement: Helm Stripping Lv: 2
+Description: Attempts to forcibly remove the equipped shield of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total MDEF temporarily. Has double base chance of success.
+[Lv 1]: Success Chance: 9%, Monster MDEF -5%,
+[Lv 2]: Success Chance: 13%, Monster MDEF -10%,
+[Lv 3]: Success Chance: 17%, Monster MDEF -15%,
+[Lv 4]: Success Chance: 21%, Monster MDEF -20%,
+[Lv 5]: Success Chance: 25%, Monster MDEF -25%`,
     img: skillImgNo,
   },
+  {
+    id: "armorStripping",
+    level: 0,
+    dependencies: [
+      { id: "shieldStripping", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "fullStrip" },
+    ],
+    element: null,
+    skillName: "Armor Stripping",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 1
+Requirement: Shield Stripping Lv: 2
+Description: Attempts to forcibly remove the equipped armor of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total DEF temporarily. Has double base chance of success.
+[Lv 1]: Success Chance: 9%, Monster DEF -5%,
+[Lv 2]: Success Chance: 13%, Monster DEF -10%,
+[Lv 3]: Success Chance: 17%, Monster DEF -15%,
+[Lv 4]: Success Chance: 21%, Monster DEF -20%,
+[Lv 5]: Success Chance: 25%, Monster DEF -25%`,
+    img: skillImgNo,
+  },
+  
   {
     id: "weaponStripping",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "fullStrip" },
+    ],
     element: null,
     skillName: "Weapon Stripping",
     maxLevel: 5,
