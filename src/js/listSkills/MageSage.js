@@ -160,9 +160,7 @@ Description: Temporarily imbues a single targets weapon with Fire property, incr
     id: "deluge",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 2 },
-      { id: "frostWeapon", minLevel: 1 }, 
-      { id: "coldBolt", minLevel: 2 },      
+      { id: "frostWeapon", minLevel: 1 },    
     ],
     dependent: [
       { id: "landProtector" },
@@ -187,9 +185,7 @@ img: skillImgNo,
     id: "whirlwind",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 2 },
       { id: "lightningWeapon", minLevel: 1 }, 
-      { id: "lightningBolt", minLevel: 2 }
     ],
     dependent: [
       { id: "landProtector" },
@@ -214,9 +210,7 @@ Description: Creates a Whirlwind Terrain in a 7x7 cell area, enhancing all Wind 
     id: "sandstorm",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 2 },
       { id: "seismicWeapon", minLevel: 1 }, 
-      { id: "earthSpike", minLevel: 2 }
     ],
     dependent: [
       { id: "landProtector" },
@@ -242,8 +236,6 @@ Description: Creates a Sandstorm Terrain in a 7x7 cell area, amplifying all Wind
     level: 0,
     dependencies: [
       { id: "flameWeapon", minLevel: 1 }, 
-      { id: "advancedBook", minLevel: 2 },
-      { id: "fireBolt", minLevel: 2 },
     ],
     dependent: [
       { id: "landProtector" },
@@ -267,7 +259,9 @@ Description: Transforms a 7x7 area into a Volcano Terrain, enhancing all Fire pr
   {
     id: "castCancel",
     level: 0,
-    dependencies: [{ id: "advancedBook", minLevel: 1 }],
+    dependencies: [
+      { id: "advancedBook", minLevel: 1 }
+    ],
     dependent: [
       { id: "freeCast" },
       { id: "soulBurn" },
@@ -291,7 +285,9 @@ Description: Only usable while casting a magic spell. Immediately cancels a spel
   {
     id: "dispell",
     level: 0,
-    dependencies: [{ id: "spellBreaker", minLevel: 2 }],
+    dependencies: [
+      { id: "spellBreaker", minLevel: 2 }
+    ],
     dependent: [
       { id: "abracadabra" },
       { id: "soulBurn" },
@@ -316,7 +312,9 @@ Description: Casting Dispell has a chance of canceling all magic effects that ha
   {
     id: "magicRod",
     level: 0,
-    dependencies: [{ id: "advancedBook", minLevel: 3 }],
+    dependencies: [
+      { id: "advancedBook", minLevel: 3 }
+    ],
     dependent: [
       { id: "spellBreaker" },
       { id: "indulge" },
@@ -342,7 +340,9 @@ Description: Upon being attacked with a skill, using Magic Rod in the correct mo
   {
     id: "spellBreaker",
     level: 0,
-    dependencies: [{ id: "advancedBook", minLevel: 3 }, { id: "magicRod", minLevel: 0 },],
+    dependencies: [
+      { id: "magicRod", minLevel: 0 },
+    ],
     dependent: [
       { id: "soulChange" },
       { id: "dispell" },
@@ -368,7 +368,6 @@ Description: Interrupts a magic spell cast by an enemy and receive the SP the en
     id: "freeCast",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 1 },
       { id: "castCancel", minLevel: 0 },
     ],
     dependent: [
@@ -398,8 +397,9 @@ Description: Enables moving and attacking during the casting of magic spells.
   {
     id: "spellwish",
     level: 0,
-    dependencies: [{ id: "advancedBook", minLevel: 1 }, { id: "castCancel", minLevel: 0 }, 
-    { id: "freeCast", minLevel: 3 },],
+    dependencies: [
+      { id: "freeCast", minLevel: 3 },
+    ],
     dependent: [],
     element: null,
     skillName: "Spellwish",
@@ -426,9 +426,10 @@ Description: Grants the ability to automatically cast a spell when performing ba
     id: "scrollbending",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 1 }, 
-      { id: "castCancel", minLevel: 0 }, 
-      { id: "freeCast", minLevel: 3 },
+      { id: "flameWeapon", minLevel: 3 },
+      { id: "frostWeapon", minLevel: 3 },
+      { id: "lightningWeapon", minLevel: 3 },
+      { id: "seismicWeapon", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -451,19 +452,10 @@ Description: Uses scrollbending techniques to bind a chosen element to a 1 blank
     id: "landProtector",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 2 },
       { id: "volcano", minLevel: 1 },
       { id: "deluge", minLevel: 1 },
       { id: "sandstorm", minLevel: 1 },
       { id: "whirlwind", minLevel: 1 },
-      { id: "flameWeapon", minLevel: 1 }, 
-      { id: "frostWeapon", minLevel: 1 }, 
-      { id: "seismicWeapon", minLevel: 1 }, 
-      { id: "lightningWeapon", minLevel: 1 }, 
-      { id: "fireBolt", minLevel: 2 },
-      { id: "coldBolt", minLevel: 2 },
-      { id: "earthSpike", minLevel: 2 },
-      { id: "lightningBolt", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -487,19 +479,10 @@ Description: Creates a protective area on the targeted location that nullifies a
     id: "psychicWave",
     level: 0,
     dependencies: [
-      { id: "advancedBook", minLevel: 2 },
       { id: "volcano", minLevel: 1 },
       { id: "deluge", minLevel: 1 },
       { id: "sandstorm", minLevel: 1 },
       { id: "whirlwind", minLevel: 1 },
-      { id: "flameWeapon", minLevel: 1 }, 
-      { id: "frostWeapon", minLevel: 1 }, 
-      { id: "seismicWeapon", minLevel: 1 }, 
-      { id: "lightningWeapon", minLevel: 1 }, 
-      { id: "fireBolt", minLevel: 2 },
-      { id: "coldBolt", minLevel: 2 },
-      { id: "earthSpike", minLevel: 2 },
-      { id: "lightningBolt", minLevel: 2 },
     ],
     dependent: [],
     element: null,
