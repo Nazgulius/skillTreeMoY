@@ -23,8 +23,13 @@ export const skillsWizard = [
   { 
     id: "sightrasher",
     level: 0,
-    dependencies: [{ id: "fireBolt", minLevel: 3 }, { id: "fireBall", minLevel: 2 }],
-    dependent: [{ id: "meteorStorm" }, { id: "firePillar" }],
+    dependencies: [
+      { id: "fireBolt", minLevel: 3 }, 
+      { id: "fireBall", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "meteorStorm" },
+    ],
     element: null,
     skillName: "Sightrasher",
     maxLevel: 5,
@@ -44,9 +49,12 @@ Description: Launches the fireball in 8 directions around the caster, dealing Fi
   {
     id: "meteorStorm",
     level: 0,
-    dependencies: [{ id: "sightrasher", minLevel: 2 }, { id: "fireBolt", minLevel: 3 }, 
-    { id: "fireBall", minLevel: 2 }],
-    dependent: [{ id: "firePillar" }],
+    dependencies: [
+      { id: "sightrasher", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "firePillar" },
+    ],
     element: null,
     skillName: "Meteor Storm",
     maxLevel: 10,
@@ -74,9 +82,6 @@ Description: Calls down a rain of meteors upon a targeted area, dealing 125% Fir
     level: 0,
     dependencies: [
       { id: "meteorStorm", minLevel: 6 },
-      { id: "sightrasher", minLevel: 2 },
-      { id: "fireBolt", minLevel: 3 },
-      { id: "fireBall", minLevel: 2 }
     ],
     dependent: [],
     element: null,
@@ -104,8 +109,12 @@ Description: Summons a towering pillar of flame at a designated location. The pi
   {
     id: "waterBall",
     level: 0,
-    dependencies: [{ id: "frostDiver", minLevel: 2 }, { id: "coldBolt", minLevel: 3 }],
-    dependent: [{ id: "stormGust" }, { id: "frostNova" }],
+    dependencies: [
+      { id: "frostDiver", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "stormGust" },
+    ],
     element: null,
     skillName: "Water Ball",
     maxLevel: 5,
@@ -126,9 +135,12 @@ Description: Launches a Water Ball to deal Water property magic damage to all en
   {
     id: "stormGust",
     level: 0,
-    dependencies: [{ id: "waterBall", minLevel: 2 }, { id: "frostDiver", minLevel: 2 }, 
-    { id: "coldBolt", minLevel: 3 }],
-    dependent: [{ id: "frostNova" }],
+    dependencies: [
+      { id: "waterBall", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "frostNova" },
+    ],
     element: null,
     skillName: "Storm Gust",
     maxLevel: 10,
@@ -154,8 +166,9 @@ Description: Summons a fierce snowstorm in an 11x11 area, dealing Water magic da
   {
     id: "frostNova",
     level: 0,
-    dependencies: [{ id: "stormGust", minLevel: 6 }, { id: "waterBall", minLevel: 2 }, 
-    { id: "frostDiver", minLevel: 2 }, { id: "coldBolt", minLevel: 3 }],
+    dependencies: [
+      { id: "stormGust", minLevel: 6 }, 
+    ],
     dependent: [],
     element: null,
     skillName: "Frost Nova",
@@ -181,8 +194,12 @@ Description: Summons a ring of ice spikes around the user, dealing Water magic d
   {
     id: "jupitelThunder",
     level: 0,
-    dependencies: [{ id: "thunderstorm", minLevel: 2 }, { id: "lightningBolt", minLevel: 3 }],
-    dependent: [{ id: "lordOfVermilion" }, { id: "electricalInduction" }],
+    dependencies: [
+      { id: "thunderstorm", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "lordOfVermilion" }, 
+    ],
     element: null,
     skillName: "Jupitel Thunder",
     maxLevel: 5,
@@ -203,9 +220,12 @@ Description: Fires a ball of crackling lightning that inflicts 100% MATK Wind el
   {
     id: "lordOfVermilion",
     level: 0,
-    dependencies: [{ id: "jupitelThunder", minLevel: 2 }, { id: "thunderstorm", minLevel: 2 }, 
-    { id: "lightningBolt", minLevel: 3 }],
-    dependent: [{ id: "electricalInduction" }],
+    dependencies: [
+      { id: "jupitelThunder", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "electricalInduction" },
+    ],
     element: null,
     skillName: "Lord of Vermilion",
     maxLevel: 10,
@@ -231,8 +251,9 @@ Description: Calls down devastating lightning bolts from the skies to strike a c
   {
     id: "electricalInduction",
     level: 0,
-    dependencies: [{ id: "lordOfVermilion", minLevel: 6 }, { id: "jupitelThunder", minLevel: 2 }, 
-    { id: "thunderstorm", minLevel: 2 }, { id: "lightningBolt", minLevel: 3 }],
+    dependencies: [
+      { id: "lordOfVermilion", minLevel: 6 }, 
+    ],
     dependent: [],
     element: null,
     skillName: "Electrical Induction",
@@ -259,8 +280,12 @@ Description: Unleashes a wave of electrical energy that inflicts Wind property m
   {
     id: "heavensDrive",
     level: 0,
-    dependencies: [{ id: "stoneCurse", minLevel: 2 }, { id: "earthSpike", minLevel: 3 }],
-    dependent: [{ id: "violentQuake" }, { id: "quagmire" }],
+    dependencies: [
+      { id: "stoneCurse", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "violentQuake" },
+    ],
     element: null,
     skillName: "Heaven's Drive ",
     maxLevel: 5,
@@ -281,9 +306,12 @@ Description: Commands the earth to rise as spikes at a target location, dealing 
   {
     id: "violentQuake",
     level: 0,
-    dependencies: [{ id: "heavensDrive", minLevel: 2 }, { id: "stoneCurse", minLevel: 2 }, 
-    { id: "earthSpike", minLevel: 3 }],
-    dependent: [{ id: "quagmire" }],
+    dependencies: [
+      { id: "heavensDrive", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "quagmire" }
+    ],
     element: null,
     skillName: "Violent Quake",
     maxLevel: 10,
@@ -309,8 +337,9 @@ Description: Causes an earthquake in the target area, with 10 rocks randomly ris
   {
     id: "quagmire",
     level: 0,
-    dependencies: [{ id: "violentQuake", minLevel: 6 }, { id: "heavensDrive", minLevel: 2 }, 
-    { id: "stoneCurse", minLevel: 2 }, { id: "earthSpike", minLevel: 3 }],
+    dependencies: [
+      { id: "violentQuake", minLevel: 6 }, 
+    ],
     dependent: [],
     element: null,
     skillName: "Quagmire",
