@@ -34,37 +34,6 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
 img: skillImgNo,
   },
   {
-    id: "backStab",
-    level: 0,
-    dependencies: [
-      { id: "gashingBlow", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "raid" },
-    ],
-    element: null,
-    skillName: "Back Stab",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 1
-Requirement: Gashing Blow Lv: 4
-Description: Attacks the target from behind, causing physical damage. The skill teleports the caster immediately behind the enemy. When used with a Dagger class weapon, the damage is doubled. When in Hiding status, this skill deals additional damage equal to the casters STR.
-[Lv 1]: Atk 330%,
-[Lv 2]: Atk 360%,
-[Lv 3]: Atk 390%,
-[Lv 4]: Atk 420%,
-[Lv 5]: Atk 450%,
-[Lv 6]: Atk 480%,
-[Lv 7]: Atk 510%,
-[Lv 8]: Atk 540%,
-[Lv 9]: Atk 570%,
-[Lv 10]: Atk 600%`,
-    img: skillImgNo,
-  },
-  {
     id: "vulturesEye",
     level: 0,
     dependencies: [
@@ -125,23 +94,6 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
     img: skillImgNo,
   },
   {
-    id: "gangland",
-    level: 0,
-    dependencies: [
-      { id: "gangsterParadise", minLevel: 4 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Gangland",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Passive
-Type: Misc
-Requirement: Gangster Paradise Lv: 5
-Description: Increases the bonuses granted by Gangster Paradise for the user by +5%.`,
-    img: skillImgNo,
-  },
-  {
     id: "gangsterParadise",
     level: 0,
     dependencies: [
@@ -163,6 +115,54 @@ Description: When two or more Rogues with this skill sit next to each other, and
 [Lv 3]: +HP% and +SP%,
 [Lv 4]: +Hit Rate% and +Critical Rate%,
 [Lv 5]: +Atk% and +MAtk%`,
+    img: skillImgNo,
+  },
+  {
+    id: "gangland",
+    level: 0,
+    dependencies: [
+      { id: "gangsterParadise", minLevel: 4 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Gangland",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Passive
+Type: Misc
+Requirement: Gangster Paradise Lv: 5
+Description: Increases the bonuses granted by Gangster Paradise for the user by +5%.`,
+    img: skillImgNo,
+  },
+  {
+    id: "snatcher",
+    level: 0,
+    dependencies: [
+      { id: "steal", minLevel: 0 },
+    ],
+    dependent: [      
+      { id: "gashingBlow" },
+      { id: "plagiarism" },
+      { id: "helmStripping" },
+    ],
+    element: null,
+    skillName: "Snatcher",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Physical
+Requirement: Steal Lv: 1
+Description: Automatically steals items, from a monster while attacking it with, physical melee attacks. The success, rate of stealing items is affected by, the skill level of the Thief skill, , Steal and by this skill's level.
+[Lv 1]: Steal Chance: 7%,
+[Lv 2]: Steal Chance: 8%,
+[Lv 3]: Steal Chance: 10%,
+[Lv 4]: Steal Chance: 11%,
+[Lv 5]: Steal Chance: 13%,
+[Lv 6]: Steal Chance: 14%,
+[Lv 7]: Steal Chance: 16%,
+[Lv 8]: Steal Chance: 17%,
+[Lv 9]: Steal Chance: 19%,
+[Lv 10]: Steal Chance: 20%`,
     img: skillImgNo,
   },
   {
@@ -196,32 +196,37 @@ Description: Delivers a powerful strike that has a chance to apply the Gashing W
 [Lv 10]: Atk 600%, Gashing Wound Chance: 30%`,
     img: skillImgNo,
   },
-  
   {
-    id: "intimidate",
+    id: "backStab",
     level: 0,
     dependencies: [
-      { id: "raid", minLevel: 4 },
+      { id: "gashingBlow", minLevel: 3 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "raid" },
+    ],
     element: null,
-    skillName: "Intimidate",
-    maxLevel: 5,
-    inform: `Max Lv: 5
+    skillName: "Back Stab",
+    maxLevel: 10,
+    inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
 Target: Enemy
 Range: 1
-Requirement: Raid Lv: 5
-Description: Strikes a target and, forcibly teleport it with the caster to, a random location on the same map. This skill's success rate is affected by, the level of the skill. Boss monsters, are unaffected by Intimidate.
-[Lv 1]: ATK 130%,
-[Lv 2]: ATK 160%,
-[Lv 3]: ATK 190%,
-[Lv 4]: ATK 220%,
-[Lv 5]: ATK 250%`,
+Requirement: Gashing Blow Lv: 4
+Description: Attacks the target from behind, causing physical damage. The skill teleports the caster immediately behind the enemy. When used with a Dagger class weapon, the damage is doubled. When in Hiding status, this skill deals additional damage equal to the casters STR.
+[Lv 1]: Atk 330%,
+[Lv 2]: Atk 360%,
+[Lv 3]: Atk 390%,
+[Lv 4]: Atk 420%,
+[Lv 5]: Atk 450%,
+[Lv 6]: Atk 480%,
+[Lv 7]: Atk 510%,
+[Lv 8]: Atk 540%,
+[Lv 9]: Atk 570%,
+[Lv 10]: Atk 600%`,
     img: skillImgNo,
   },
-  
   {
     id: "plagiarism",
     level: 0,
@@ -256,6 +261,31 @@ Description: Copies a skill from an ally, enemy, or monster by selecting from a 
     img: skillImgNo,
   },
   {
+    id: "tunnelDrive",
+    level: 0,
+    dependencies: [
+      { id: "hiding", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "stealth" },
+      { id: "raid" },
+    ],
+    element: null,
+    skillName: "Tunnel Drive",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Passive
+Type: Misc
+Requirement: Hiding Lv: 1
+Description: Enables Movement while in, Hiding status. Movement Speed is slower, than normal walk.
+[Lv 1]: Movement Speed: 26%,
+[Lv 2]: Movement Speed: 32%,
+[Lv 3]: Movement Speed: 38%,
+[Lv 4]: Movement Speed: 44%,
+[Lv 5]: Movement Speed: 50%`,
+    img: skillImgNo,
+  },
+  {
     id: "raid",
     level: 0,
     dependencies: [
@@ -282,64 +312,28 @@ Description: Execute a sneak attack on nearby enemies within a [7*7] area. If us
 [Lv 5]: Atk 800%, Amplified Damage +30%, Duration: 5 Second`,
     img: skillImgNo,
   },
-  
-  
   {
-    id: "tunnelDrive",
+    id: "intimidate",
     level: 0,
     dependencies: [
-      { id: "hiding", minLevel: 0 },
+      { id: "raid", minLevel: 4 },
     ],
-    dependent: [
-      { id: "stealth" },
-      { id: "raid" },
-    ],
+    dependent: [],
     element: null,
-    skillName: "Tunnel Drive",
+    skillName: "Intimidate",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Passive
-Type: Misc
-Requirement: Hiding Lv: 1
-Description: Enables Movement while in, Hiding status. Movement Speed is slower, than normal walk.
-[Lv 1]: Movement Speed: 26%,
-[Lv 2]: Movement Speed: 32%,
-[Lv 3]: Movement Speed: 38%,
-[Lv 4]: Movement Speed: 44%,
-[Lv 5]: Movement Speed: 50%`,
-    img: skillImgNo,
-  },
-  
-
-  {
-    id: "snatcher",
-    level: 0,
-    dependencies: [
-      { id: "steal", minLevel: 0 },
-    ],
-    dependent: [      
-      { id: "gashingBlow" },
-      { id: "plagiarism" },
-      { id: "helmStripping" },
-    ],
-    element: null,
-    skillName: "Snatcher",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
+Skill Form: Active
 Type: Physical
-Requirement: Steal Lv: 1
-Description: Automatically steals items, from a monster while attacking it with, physical melee attacks. The success, rate of stealing items is affected by, the skill level of the Thief skill, , Steal and by this skill's level.
-[Lv 1]: Steal Chance: 7%,
-[Lv 2]: Steal Chance: 8%,
-[Lv 3]: Steal Chance: 10%,
-[Lv 4]: Steal Chance: 11%,
-[Lv 5]: Steal Chance: 13%,
-[Lv 6]: Steal Chance: 14%,
-[Lv 7]: Steal Chance: 16%,
-[Lv 8]: Steal Chance: 17%,
-[Lv 9]: Steal Chance: 19%,
-[Lv 10]: Steal Chance: 20%`,
+Target: Enemy
+Range: 1
+Requirement: Raid Lv: 5
+Description: Strikes a target and, forcibly teleport it with the caster to, a random location on the same map. This skill's success rate is affected by, the level of the skill. Boss monsters, are unaffected by Intimidate.
+[Lv 1]: ATK 130%,
+[Lv 2]: ATK 160%,
+[Lv 3]: ATK 190%,
+[Lv 4]: ATK 220%,
+[Lv 5]: ATK 250%`,
     img: skillImgNo,
   },
   {
@@ -350,6 +344,7 @@ Description: Automatically steals items, from a monster while attacking it with,
     ],
     dependent: [
       { id: "fullStrip" },
+      { id: "shieldStripping" },
     ],
     element: null,
     skillName: "Helm Stripping",
@@ -376,6 +371,7 @@ Description: Attempts to forcibly remove the equipped helmet of a single target,
     ],
     dependent: [
       { id: "fullStrip" },
+      { id: "armorStripping" },
     ],
     element: null,
     skillName: "Shield Stripping",
@@ -402,6 +398,7 @@ Description: Attempts to forcibly remove the equipped shield of a single target,
     ],
     dependent: [
       { id: "fullStrip" },
+      { id: "weaponStripping" },
     ],
     element: null,
     skillName: "Armor Stripping",
@@ -420,11 +417,12 @@ Description: Attempts to forcibly remove the equipped armor of a single target, 
 [Lv 5]: Success Chance: 25%, Monster DEF -25%`,
     img: skillImgNo,
   },
-  
   {
     id: "weaponStripping",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "armorStripping", minLevel: 1 },
+    ],
     dependent: [
       { id: "fullStrip" },
     ],
