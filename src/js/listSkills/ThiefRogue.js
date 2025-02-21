@@ -94,6 +94,70 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
     img: skillImgNo,
   },
   {
+    id: "snatcher",
+    level: 0,
+    dependencies: [
+      { id: "steal", minLevel: 0 },
+    ],
+    dependent: [      
+      { id: "gashingBlow" },
+      { id: "plagiarism" },
+      { id: "helmStripping" },
+    ],
+    element: null,
+    skillName: "Snatcher",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Physical
+Requirement: Steal Lv: 1
+Description: Automatically steals items, from a monster while attacking it with, physical melee attacks. The success, rate of stealing items is affected by, the skill level of the Thief skill, , Steal and by this skill's level.
+[Lv 1]: Steal Chance: 7%,
+[Lv 2]: Steal Chance: 8%,
+[Lv 3]: Steal Chance: 10%,
+[Lv 4]: Steal Chance: 11%,
+[Lv 5]: Steal Chance: 13%,
+[Lv 6]: Steal Chance: 14%,
+[Lv 7]: Steal Chance: 16%,
+[Lv 8]: Steal Chance: 17%,
+[Lv 9]: Steal Chance: 19%,
+[Lv 10]: Steal Chance: 20%`,
+    img: skillImgNo,
+  },
+  {
+    id: "plagiarism",
+    level: 0,
+    dependencies: [
+      { id: "steal", minLevel: 9 },
+      { id: "snatcher", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "simulation" },
+      { id: "gangsterParadise" },
+    ],
+    element: null,
+    skillName: "Plagiarism",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Magical
+Target: Ally
+Range: 9
+Requirement: Steal Lv: 10, Snatcher Lv: 4
+Description: Copies a skill from an ally, enemy, or monster by selecting from a list of eligible skills they have learned. The level of the copied skill matches the level learned by the target. It cannot exceed the Maximum level of this skill. Skills already possessed by the user, including those from equipment, cannot be copied.
+[Lv 1]: Lv. 1 Able to memorize, Increase Atk Speed: 1%,
+[Lv 2]: Lv. 2 Able to memorize, Increase Atk Speed: 2%,
+[Lv 3]: Lv. 3 Able to memorize, Increase Atk Speed: 3%,
+[Lv 4]: Lv. 4 Able to memorize, Increase Atk Speed: 4%,
+[Lv 5]: Lv. 5 Able to memorize, Increase Atk Speed: 5%,
+[Lv 6]: Lv. 6 Able to memorize, Increase Atk Speed: 6%,
+[Lv 7]: Lv. 7 Able to memorize, Increase Atk Speed: 7%,
+[Lv 8]: Lv. 8 Able to memorize, Increase Atk Speed: 8%,
+[Lv 9]: Lv. 9 Able to memorize, Increase Atk Speed: 9%,
+[Lv 10]: Lv.10 Able to memorize, Increase Atk Speed: 10%`,
+    img: skillImgNo,
+  },
+  {
     id: "gangsterParadise",
     level: 0,
     dependencies: [
@@ -132,37 +196,6 @@ Skill Form: Passive
 Type: Misc
 Requirement: Gangster Paradise Lv: 5
 Description: Increases the bonuses granted by Gangster Paradise for the user by +5%.`,
-    img: skillImgNo,
-  },
-  {
-    id: "snatcher",
-    level: 0,
-    dependencies: [
-      { id: "steal", minLevel: 0 },
-    ],
-    dependent: [      
-      { id: "gashingBlow" },
-      { id: "plagiarism" },
-      { id: "helmStripping" },
-    ],
-    element: null,
-    skillName: "Snatcher",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: Steal Lv: 1
-Description: Automatically steals items, from a monster while attacking it with, physical melee attacks. The success, rate of stealing items is affected by, the skill level of the Thief skill, , Steal and by this skill's level.
-[Lv 1]: Steal Chance: 7%,
-[Lv 2]: Steal Chance: 8%,
-[Lv 3]: Steal Chance: 10%,
-[Lv 4]: Steal Chance: 11%,
-[Lv 5]: Steal Chance: 13%,
-[Lv 6]: Steal Chance: 14%,
-[Lv 7]: Steal Chance: 16%,
-[Lv 8]: Steal Chance: 17%,
-[Lv 9]: Steal Chance: 19%,
-[Lv 10]: Steal Chance: 20%`,
     img: skillImgNo,
   },
   {
@@ -225,39 +258,6 @@ Description: Attacks the target from behind, causing physical damage. The skill 
 [Lv 8]: Atk 540%,
 [Lv 9]: Atk 570%,
 [Lv 10]: Atk 600%`,
-    img: skillImgNo,
-  },
-  {
-    id: "plagiarism",
-    level: 0,
-    dependencies: [
-      { id: "steal", minLevel: 9 },
-      { id: "snatcher", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "simulation" },
-      { id: "gangsterParadise" },
-    ],
-    element: null,
-    skillName: "Plagiarism",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Ally
-Range: 9
-Requirement: Steal Lv: 10, Snatcher Lv: 4
-Description: Copies a skill from an ally, enemy, or monster by selecting from a list of eligible skills they have learned. The level of the copied skill matches the level learned by the target. It cannot exceed the Maximum level of this skill. Skills already possessed by the user, including those from equipment, cannot be copied.
-[Lv 1]: Lv. 1 Able to memorize, Increase Atk Speed: 1%,
-[Lv 2]: Lv. 2 Able to memorize, Increase Atk Speed: 2%,
-[Lv 3]: Lv. 3 Able to memorize, Increase Atk Speed: 3%,
-[Lv 4]: Lv. 4 Able to memorize, Increase Atk Speed: 4%,
-[Lv 5]: Lv. 5 Able to memorize, Increase Atk Speed: 5%,
-[Lv 6]: Lv. 6 Able to memorize, Increase Atk Speed: 6%,
-[Lv 7]: Lv. 7 Able to memorize, Increase Atk Speed: 7%,
-[Lv 8]: Lv. 8 Able to memorize, Increase Atk Speed: 8%,
-[Lv 9]: Lv. 9 Able to memorize, Increase Atk Speed: 9%,
-[Lv 10]: Lv.10 Able to memorize, Increase Atk Speed: 10%`,
     img: skillImgNo,
   },
   {
