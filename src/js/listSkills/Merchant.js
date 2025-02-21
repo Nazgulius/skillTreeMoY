@@ -11,7 +11,9 @@ export const skillsMerchant = [
     id: "axeMastery",
     level: 0,
     dependencies: [],
-    dependent: [ ],
+    dependent: [
+      { id: "adrenalineRush" },
+    ],
     element: null,
     skillName: "Axe Mastery",
     maxLevel: 10,
@@ -68,6 +70,7 @@ Description: Harness the power of greed to deliver a devastating blow to a singl
       { id: "cartTwister" },
       { id: "discount" },
       { id: "overcharge" },
+      { id: "cartBoost" },
     ],
     element: null,
     skillName: "Pushcart",
@@ -95,6 +98,7 @@ Description: Enables to rent a Pushcart and Increases maximum player Weight Limi
     dependencies: [{ id: "pushcart", minLevel: 0 }],
     dependent: [
       { id: "cartTwister" },
+      { id: "cartTermination" },
     ],
     element: null,
     skillName: "Cart Revolution",
@@ -122,7 +126,9 @@ Description: Slam your pushcart into a single target, dealing physical damage an
     id: "cartTwister",
     level: 0,
     dependencies: [{ id: "cartRevolution", minLevel: 4 }, { id: "pushcart", minLevel: 0 }],
-    dependent: [ ],
+    dependent: [
+      { id: "cartTermination" },
+    ],
     element: null,
     skillName: "Cart Twister",
     maxLevel: 5,
