@@ -9,7 +9,10 @@ export const skillsAssassinCross = [
   {
     id: "crossLethality",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "dualWieldingMastery", minLevel: 4 },
+      { id: "katarMastery", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Cross Lethality",
@@ -29,7 +32,9 @@ Description: Equipping Katars Class Weapons reduces the Attack Power of the weap
   {
     id: "deadlyPoisonMastery",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "poisonery", minLevel: 0 },
+    ],
     dependent: [],
     element: null,
     skillName: "Deadly Poison Mastery",
@@ -49,7 +54,11 @@ Description: Grants advanced expertise with poisons, enabling the creation of st
   {
     id: "meteorAssault",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "dualWieldingMastery", minLevel: 9 },
+      { id: "cloaking", minLevel: 4 },
+      { id: "poisonWeapon", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Meteor Assault",
@@ -75,7 +84,12 @@ Description: Unleashes a powerful attack that damages all enemies in a 5x5 area 
   {
     id: "soulDestroyer",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "doubleAttack", minLevel: 4 },
+      { id: "cloaking", minLevel: 2 },
+      { id: "poisonWeapon", minLevel: 4 },
+      { id: "Envenom", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Soul Destroyer",
