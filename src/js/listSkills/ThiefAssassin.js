@@ -7,10 +7,46 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 // список скилов Assassin
 export const skillsAssassin = [  
   {
-    id: "cloaking",
+    id: "katarMastery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "crossLethality" },
+      { id: "grimtooth" },
+    ],
+    element: null,
+    skillName: "Katar Mastery",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Physical
+Requirement: None
+Requirement: None
+Description: Increase attack with Katars Weapons. When [Lv 10], it increases Attack in 6%. Also increases the Critical rate when using Katars Class Weapons. Unlike other two-handed weapons, the katar allows assassins to strike twice with each basic attack, once with the right hand and once with the left. Each hit deals 60% of the normal damage. Attack bonus granted by this skill is of the Equipment type.
+[Lv 1]: Atk +4, Critical Rate +10%,
+[Lv 2]: Atk +8, Critical Rate +20%,
+[Lv 3]: Atk +12, Critical Rate +30%,
+[Lv 4]: Atk +16, Critical Rate +40%,
+[Lv 5]: Atk +20, Critical Rate +50%,
+[Lv 6]: Atk +24, Critical Rate +60%,
+[Lv 7]: Atk +28, Critical Rate +70%,
+[Lv 8]: Atk +32, Critical Rate +80%,
+[Lv 9]: Atk +36, Critical Rate +90%,
+[Lv 10]: Atk +40, Critical Rate +100%`,
+    img: skillImgNo,
+  },
+  {
+    id: "cloaking",
+    level: 0,
+    dependencies: [
+      { id: "hiding", minLevel: 0 }
+    ],
+    dependent: [
+      { id: "meteorAssault" },
+      { id: "soulDestroyer" },
+      { id: "grimtooth" },
+      { id: "throwingKnife" },
+    ],
     element: null,
     skillName: "Cloaking",
     maxLevel: 10,
@@ -36,7 +72,11 @@ Description: Conceals yourself, allowing movement while hidden. Movement Speed i
     id: "dualWieldingMastery",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "crossLethality" },
+      { id: "meteorAssault" },
+      { id: "throwingKnife" },
+    ],
     element: null,
     skillName: "Dual Wielding Mastery",
     maxLevel: 10,
@@ -58,158 +98,12 @@ Description: Increase attack with Dual Wielding Weapons. Equipping two weapons a
     img: skillImgNo,
   },
   {
-    id: "grimtooth",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Grimtooth",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 5 ~ 9
-Requirement: Cloaking Lv: 2, Katar Mastery Lv: 4
-Description: Strikes a single target with the equipped katar while hidden, dealing physical damage to all enemies in a 3x3 area. User AGI increases the damage. When used against normal monsters, it reduces their Move Speed by 50% for 1 second. Can be used from Cloaking, but this negates the AGI scaling, and doubles the SP cost.
-[Lv 1]: Atk (120 + AGI)%, Range 5 cells,
-[Lv 2]: Atk (140 + AGI)%, Range 5 cells,
-[Lv 3]: Atk (160 + AGI)%, Range 6 cells,
-[Lv 4]: Atk (180 + AGI)%, Range 6 cells,
-[Lv 5]: Atk (200 + AGI)%, Range 7 cells,
-[Lv 6]: Atk (220 + AGI)%, Range 7 cells,
-[Lv 7]: Atk (240 + AGI)%, Range 8 cells,
-[Lv 8]: Atk (260 + AGI)%, Range 8 cells,
-[Lv 9]: Atk (280 + AGI)%, Range 9 cells,
-[Lv 10]: Atk (300 + AGI)%, Range 9 cells`,
-    img: skillImgNo,
-  },
-  {
-    id: "katarMastery",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Katar Mastery",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Passive
-Type: Physical
-Requirement: None
-Requirement: None
-Description: Increase attack with Katars Weapons. When [Lv 10], it increases Attack in 6%. Also increases the Critical rate when using Katars Class Weapons. Unlike other two-handed weapons, the katar allows assassins to strike twice with each basic attack, once with the right hand and once with the left. Each hit deals 60% of the normal damage. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +4, Critical Rate +10%,
-[Lv 2]: Atk +8, Critical Rate +20%,
-[Lv 3]: Atk +12, Critical Rate +30%,
-[Lv 4]: Atk +16, Critical Rate +40%,
-[Lv 5]: Atk +20, Critical Rate +50%,
-[Lv 6]: Atk +24, Critical Rate +60%,
-[Lv 7]: Atk +28, Critical Rate +70%,
-[Lv 8]: Atk +32, Critical Rate +80%,
-[Lv 9]: Atk +36, Critical Rate +90%,
-[Lv 10]: Atk +40, Critical Rate +100%`,
-    img: skillImgNo,
-  },
-  {
-    id: "poisonReact",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Poison React",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Poison Weapon Lv: 3
-Description: Amplifies and redirects 70% of the Poison damage received as magic damage to the attacker. When attacked by other properties, casts Envenom at the learned level. Reflection and auto-casting chances are influenced by Venom Dust and Venom Splasher levels. Chance to cast Envenom is reduced to 1/3 if the target misses.
-[Lv 1]: Amplifies in 130%, Chance: 6%, Duration: 20 sec,
-[Lv 2]: Amplifies in 160%, Chance: 12%, Duration: 20 sec,
-[Lv 3]: Amplifies in 190%, Chance: 18%, Duration: 30 sec,
-[Lv 4]: Amplifies in 220%, Chance: 24%, Duration: 30 sec,
-[Lv 5]: Amplifies in 250%, Chance: 30%, Duration: 40 sec,
-[Lv 6]: Amplifies in 280%, Chance: 36%, Duration: 40 sec,
-[Lv 7]: Amplifies in 310%, Chance: 42%, Duration: 50 sec,
-[Lv 8]: Amplifies in 340%, Chance: 48%, Duration: 50 sec,
-[Lv 9]: Amplifies in 370%, Chance: 54%, Duration: 60 sec,
-[Lv 10]: Amplifies in 400%, Chance: 60%, Duration: 60 sec`,
-    img: skillImgNo,
-  },
-  {
-    id: "poisonWeapon",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Poison Weapon",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-  Skill Form: Active
-  Type: Physical
-  Target: Ally
-  Range: 9
-  Requirement: Envenom Lv: 1
-  Description: Temporarily imbue a single target weapon with the Poison property, giving a chance to poison enemies upon physical attack. At Lv 5, the effect expands to a 5x5 area around the target but costs double the SP and triple the catalyst. Catalyst: 1x Condensed Poison.
-  [Lv 1]: Poison Damage by 2%, Duration: 75 secs, Poisoning chance: 2%,
-  [Lv 2]: Poison Damage by 3%, Duration: 150 secs, Poisoning chance: 4%,
-  [Lv 3]: Poison Damage by 4%, Duration: 225 secs, Poisoning chance: 6%,
-  [Lv 4]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 8%,
-  [Lv 5]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 10%`,
-    img: skillImgNo,
-  },
-  {
-    id: "poisonery",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Poisonery",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Magical
-Target: Self
-Requirement: Envenom Lv: 10, Detoxify Lv: 1, Poison Weapon Lv: 5
-Description: Creates Poison Bottles. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with DEX being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Poisonery Creation Guide ,
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
-    img: skillImgNo,
-  },
-  {
-    id: "sonicBlow",
-    level: 0,
-    dependencies: [],
-    dependent: [],
-    element: null,
-    skillName: "Sonic Blow",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 1
-Requirement: Grimtooth Lv: 5
-Description: Unleashes a flurry of rapid Katar strikes on the target, with a chance to inflict the Stun status.
-[Lv 1]: Atk 300%, Stun Chance: 12%,
-[Lv 2]: Atk 400%, Stun Chance: 14%,
-[Lv 3]: Atk 500%, Stun Chance: 16%,
-[Lv 4]: Atk 600%, Stun Chance: 18%,
-[Lv 5]: Atk 700%, Stun Chance: 20%,
-[Lv 6]: Atk 800%, Stun Chance: 22%,
-[Lv 7]: Atk 900%, Stun Chance: 24%,
-[Lv 8]: Atk 1000%, Stun Chance: 26%,
-[Lv 9]: Atk 1100%, Stun Chance: 28%,
-[Lv 10]: Atk 1200%, Stun Chance: 30%`,
-    img: skillImgNo,
-  },
-  {
     id: "throwingKnife",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "dualWieldingMastery", minLevel: 4 },
+      { id: "cloaking", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Throwing Knife",
@@ -234,9 +128,157 @@ Description: Precisely aims and throws a knife at the target, inflicting physica
     img: skillImgNo,
   },
   {
+    id: "grimtooth",
+    level: 0,
+    dependencies: [
+      { id: "cloaking", minLevel: 1 },
+      { id: "katarMastery", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "sonicBlow" },
+    ],
+    element: null,
+    skillName: "Grimtooth",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 5 ~ 9
+Requirement: Cloaking Lv: 2, Katar Mastery Lv: 4
+Description: Strikes a single target with the equipped katar while hidden, dealing physical damage to all enemies in a 3x3 area. User AGI increases the damage. When used against normal monsters, it reduces their Move Speed by 50% for 1 second. Can be used from Cloaking, but this negates the AGI scaling, and doubles the SP cost.
+[Lv 1]: Atk (120 + AGI)%, Range 5 cells,
+[Lv 2]: Atk (140 + AGI)%, Range 5 cells,
+[Lv 3]: Atk (160 + AGI)%, Range 6 cells,
+[Lv 4]: Atk (180 + AGI)%, Range 6 cells,
+[Lv 5]: Atk (200 + AGI)%, Range 7 cells,
+[Lv 6]: Atk (220 + AGI)%, Range 7 cells,
+[Lv 7]: Atk (240 + AGI)%, Range 8 cells,
+[Lv 8]: Atk (260 + AGI)%, Range 8 cells,
+[Lv 9]: Atk (280 + AGI)%, Range 9 cells,
+[Lv 10]: Atk (300 + AGI)%, Range 9 cells`,
+    img: skillImgNo,
+  },
+  {
+    id: "sonicBlow",
+    level: 0,
+    dependencies: [
+      { id: "grimtooth", minLevel: 4 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Sonic Blow",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Enemy
+Range: 1
+Requirement: Grimtooth Lv: 5
+Description: Unleashes a flurry of rapid Katar strikes on the target, with a chance to inflict the Stun status.
+[Lv 1]: Atk 300%, Stun Chance: 12%,
+[Lv 2]: Atk 400%, Stun Chance: 14%,
+[Lv 3]: Atk 500%, Stun Chance: 16%,
+[Lv 4]: Atk 600%, Stun Chance: 18%,
+[Lv 5]: Atk 700%, Stun Chance: 20%,
+[Lv 6]: Atk 800%, Stun Chance: 22%,
+[Lv 7]: Atk 900%, Stun Chance: 24%,
+[Lv 8]: Atk 1000%, Stun Chance: 26%,
+[Lv 9]: Atk 1100%, Stun Chance: 28%,
+[Lv 10]: Atk 1200%, Stun Chance: 30%`,
+    img: skillImgNo,
+  },
+   {
+    id: "poisonWeapon",
+    level: 0,
+    dependencies: [
+      { id: "envenom", minLevel: 0 },
+    ],
+    dependent: [
+      { id: "meteorAssault" },
+      { id: "soulDestroyer" },
+      { id: "poisonReact" },
+      { id: "poisonery" },
+      { id: "venomDust" },
+    ],
+    element: null,
+    skillName: "Poison Weapon",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+  Skill Form: Active
+  Type: Physical
+  Target: Ally
+  Range: 9
+  Requirement: Envenom Lv: 1
+  Description: Temporarily imbue a single target weapon with the Poison property, giving a chance to poison enemies upon physical attack. At Lv 5, the effect expands to a 5x5 area around the target but costs double the SP and triple the catalyst. Catalyst: 1x Condensed Poison.
+  [Lv 1]: Poison Damage by 2%, Duration: 75 secs, Poisoning chance: 2%,
+  [Lv 2]: Poison Damage by 3%, Duration: 150 secs, Poisoning chance: 4%,
+  [Lv 3]: Poison Damage by 4%, Duration: 225 secs, Poisoning chance: 6%,
+  [Lv 4]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 8%,
+  [Lv 5]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 10%`,
+    img: skillImgNo,
+  },
+  {
+    id: "poisonReact",
+    level: 0,
+    dependencies: [
+      { id: "poisonWeapon", minLevel: 2 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Poison React",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Self
+Requirement: Poison Weapon Lv: 3
+Description: Amplifies and redirects 70% of the Poison damage received as magic damage to the attacker. When attacked by other properties, casts Envenom at the learned level. Reflection and auto-casting chances are influenced by Venom Dust and Venom Splasher levels. Chance to cast Envenom is reduced to 1/3 if the target misses.
+[Lv 1]: Amplifies in 130%, Chance: 6%, Duration: 20 sec,
+[Lv 2]: Amplifies in 160%, Chance: 12%, Duration: 20 sec,
+[Lv 3]: Amplifies in 190%, Chance: 18%, Duration: 30 sec,
+[Lv 4]: Amplifies in 220%, Chance: 24%, Duration: 30 sec,
+[Lv 5]: Amplifies in 250%, Chance: 30%, Duration: 40 sec,
+[Lv 6]: Amplifies in 280%, Chance: 36%, Duration: 40 sec,
+[Lv 7]: Amplifies in 310%, Chance: 42%, Duration: 50 sec,
+[Lv 8]: Amplifies in 340%, Chance: 48%, Duration: 50 sec,
+[Lv 9]: Amplifies in 370%, Chance: 54%, Duration: 60 sec,
+[Lv 10]: Amplifies in 400%, Chance: 60%, Duration: 60 sec`,
+    img: skillImgNo,
+  },
+  {
+    id: "poisonery",
+    level: 0,
+    dependencies: [
+      { id: "envenom", minLevel: 9 },
+      { id: "detoxify", minLevel: 0 },
+      { id: "poisonWeapon", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "deadlyPoisonMastery" },
+    ],
+    element: null,
+    skillName: "Poisonery",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Self
+Requirement: Envenom Lv: 10, Detoxify Lv: 1, Poison Weapon Lv: 5
+Description: Creates Poison Bottles. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with DEX being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Poisonery Creation Guide ,
+[Lv 1]: No Additional Bonus,
+[Lv 2]: Additional Efficiency -75%,
+[Lv 3]: Additional Efficiency -50%,
+[Lv 4]: Additional Efficiency -25%,
+[Lv 5]: Full Efficiency`,
+    img: skillImgNo,
+  },  
+  {
     id: "venomDust",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "poisonWeapon", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Venom Dust",
@@ -263,7 +305,10 @@ Description: Contaminates a targeted location with a toxic cloud, reducing the r
   {
     id: "venomSplasher",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "poisonReact", minLevel: 4 },
+      { id: "venomDust", minLevel: 4 },
+    ],
     dependent: [],
     element: null,
     skillName: "Venom Splasher",
