@@ -122,6 +122,8 @@ Description: Attempts to cleanse a single target from the Poison status. If succ
     dependencies: [],
     dependent: [
       { id: "hiding" },
+      { id: "plagiarism" },
+      { id: "snatcher" },
     ],
     element: null,
     skillName: "Steal",
@@ -153,6 +155,8 @@ Description: Steals an item from a specified target. If target's DEX is higher t
     ],
     dependent: [
       { id: "cloaking" },
+      { id: "stealth" },
+      { id: "tunnelDrive" },
     ],
     element: null,
     skillName: "Hiding",
@@ -180,7 +184,9 @@ Description: Burrow underground to evade enemy attacks. The hidden status can be
     id: "sprinkleSand",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "raid" },
+    ],
     element: null,
     skillName: "Sprinkle Sand",
     maxLevel: 10,
@@ -208,7 +214,9 @@ Description: Kick up a cloud of sand, dealing Earth elemental damage to enemies 
     id: "throwStone",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "vulturesEye" },
+    ],
     element: null,
     skillName: "Throw Stone",
     maxLevel: 10,
