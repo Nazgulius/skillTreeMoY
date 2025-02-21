@@ -206,8 +206,8 @@ export default class App {
     const pInfoEng = document.createElement('p');  
     pInfoEng.textContent = this.infoEng; 
 
-    document.querySelector('.job-tree').appendChild(pInfoRu);
-    document.querySelector('.job-tree').appendChild(pInfoEng);
+    document.querySelector('.job-tree').insertAdjacentElement('afterend', pInfoRu);
+    document.querySelector('.job-tree').insertAdjacentElement('afterend', pInfoEng);
                            
   }
 
