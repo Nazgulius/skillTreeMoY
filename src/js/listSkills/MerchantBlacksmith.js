@@ -109,28 +109,7 @@ Description: Allows the blacksmith to reforge weapons. Reforging lets you apply 
 [Lv 4]: Reforge Chance +12%,
 [Lv 5]: Reforge Chance +15%`,
     img: skillImgNo,
-  },
-  {
-    id: "cartBoost",
-    level: 0,
-    dependencies: [
-      { id: "pushcart", minLevel: 4 },
-    ],
-    dependent: [
-      { id: "cartTermination" },
-    ],
-    element: null,
-    skillName: "Cart Boost",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Pushcart Lv: 5
-Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
-    img: skillImgNo,
-  },
-  
+  },  
   {
     id: "bladeWeaponReforging",
     level: 0,
@@ -396,29 +375,7 @@ Description: Unleash a surge of strength with Power Thrust. Temporarily amplify 
 [Lv 9]: Boosts Self Attack by 23% and Party Attack by 14%, lasting 140 seconds,
 [Lv 10]: Boosts Self Attack by 25% and Party Attack by 15%, lasting 150 seconds`,
     img: skillImgNo,
-  },
-   
-  {
-    id: "hiltBinding",
-    level: 0,
-    dependencies: [
-      { id: "adrenalineRush", minLevel: 6 },
-      { id: "powerThrust", minLevel: 6 },
-      { id: "weaponPerfection", minLevel: 2 },
-    ],
-    dependent: [      
-      { id: "weaponryResearch" },
-    ],
-    element: null,
-    skillName: "Hilt Binding",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Passive
-Type: Physical
-Requirement: Adrenaline Rush Lv: 7, Power Thrust Lv: 7, Weapon Perfection Lv: 3
-Description: Infuse your combat prowess. This skill prolongs the effects of Adrenaline Rush, Power Thrust, and Weapon Perfection by 20%, giving your buffs extra staying power. Plus, it enhances these abilities with a bonus +1 STR and +4 Atk.`,
-    img: skillImgNo,
-  },
+  },  
   {
     id: "maximizePower",
     level: 0,
@@ -443,6 +400,27 @@ Description: Channel the full potential of your weapon with Maximize Power. This
     img: skillImgNo,
   },
   {
+    id: "hiltBinding",
+    level: 0,
+    dependencies: [
+      { id: "adrenalineRush", minLevel: 6 },
+      { id: "powerThrust", minLevel: 6 },
+      { id: "weaponPerfection", minLevel: 2 },
+    ],
+    dependent: [      
+      { id: "weaponryResearch" },
+    ],
+    element: null,
+    skillName: "Hilt Binding",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Passive
+Type: Physical
+Requirement: Adrenaline Rush Lv: 7, Power Thrust Lv: 7, Weapon Perfection Lv: 3
+Description: Infuse your combat prowess. This skill prolongs the effects of Adrenaline Rush, Power Thrust, and Weapon Perfection by 20%, giving your buffs extra staying power. Plus, it enhances these abilities with a bonus +1 STR and +4 Atk.`,
+    img: skillImgNo,
+  },
+  {
     id: "weaponryResearch",
     level: 0,
     dependencies: [
@@ -462,6 +440,26 @@ Description: Sharpens your understanding of weapon mechanics, boosting your Stat
 [Lv 3]: Status Atk +12, Hit Rate +12%,
 [Lv 4]: Status Atk +16, Hit Rate +16%,
 [Lv 5]: Status Atk +20, Hit Rate +20%`,
+    img: skillImgNo,
+  },
+  {
+    id: "cartBoost",
+    level: 0,
+    dependencies: [
+      { id: "pushcart", minLevel: 4 },
+    ],
+    dependent: [
+      { id: "cartTermination" },
+    ],
+    element: null,
+    skillName: "Cart Boost",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Physical
+Target: Self
+Requirement: Pushcart Lv: 5
+Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
     img: skillImgNo,
   },
 ];
