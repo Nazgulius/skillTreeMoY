@@ -21,7 +21,6 @@ export const skillsAssassin = [
 Skill Form: Passive
 Type: Physical
 Requirement: None
-Requirement: None
 Description: Increase attack with Katars Weapons. When [Lv 10], it increases Attack in 6%. Also increases the Critical rate when using Katars Class Weapons. Unlike other two-handed weapons, the katar allows assassins to strike twice with each basic attack, once with the right hand and once with the left. Each hit deals 60% of the normal damage. Attack bonus granted by this skill is of the Equipment type.
 [Lv 1]: Atk +4, Critical Rate +10%,
 [Lv 2]: Atk +8, Critical Rate +20%,
@@ -205,17 +204,17 @@ Description: Unleashes a flurry of rapid Katar strikes on the target, with a cha
     skillName: "Poison Weapon",
     maxLevel: 5,
     inform: `Max Lv: 5
-  Skill Form: Active
-  Type: Physical
-  Target: Ally
-  Range: 9
-  Requirement: Envenom Lv: 1
-  Description: Temporarily imbue a single target weapon with the Poison property, giving a chance to poison enemies upon physical attack. At Lv 5, the effect expands to a 5x5 area around the target but costs double the SP and triple the catalyst. Catalyst: 1x Condensed Poison.
-  [Lv 1]: Poison Damage by 2%, Duration: 75 secs, Poisoning chance: 2%,
-  [Lv 2]: Poison Damage by 3%, Duration: 150 secs, Poisoning chance: 4%,
-  [Lv 3]: Poison Damage by 4%, Duration: 225 secs, Poisoning chance: 6%,
-  [Lv 4]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 8%,
-  [Lv 5]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 10%`,
+Skill Form: Active
+Type: Physical
+Target: Ally
+Range: 9
+Requirement: Envenom Lv: 1
+Description: Temporarily imbue a single target weapon with the Poison property, giving a chance to poison enemies upon physical attack. At Lv 5, the effect expands to a 5x5 area around the target but costs double the SP and triple the catalyst. Catalyst: 1x Condensed Poison.
+[Lv 1]: Poison Damage by 2%, Duration: 75 secs, Poisoning chance: 2%,
+[Lv 2]: Poison Damage by 3%, Duration: 150 secs, Poisoning chance: 4%,
+[Lv 3]: Poison Damage by 4%, Duration: 225 secs, Poisoning chance: 6%,
+[Lv 4]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 8%,
+[Lv 5]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 10%`,
     img: skillImgNo,
   },
   {
