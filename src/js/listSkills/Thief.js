@@ -35,7 +35,9 @@ Description: Increases FLEE and Movement Speed.
     id: "doubleAttack",
     level: 0,
     dependencies: [],
-    dependent: [],
+    dependent: [
+      { id: "soulDestroyer" },
+    ],
     element: null,
     skillName: "Double Attack",
     maxLevel: 10,
@@ -63,6 +65,9 @@ Description: Grants a chance to inflict two hits instead of one when attacking w
     dependencies: [],
     dependent: [
       { id: "detoxify" },
+      { id: "soulDestroyer" },
+      { id: "poisonWeapon" },
+      { id: "poisonery" },
     ],
     element: null,
     skillName: "Envenom",
@@ -88,8 +93,12 @@ Range: 2
   {
     id: "detoxify",
     level: 0,
-    dependencies: [{ id: "envenom", minLevel: 2 }],
-    dependent: [],
+    dependencies: [
+      { id: "envenom", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "poisonery" },
+    ],
     element: null,
     skillName: "Detoxify",
     maxLevel: 1,
@@ -142,7 +151,9 @@ Description: Steals an item from a specified target. If target's DEX is higher t
     dependencies: [
       { id: "steal", minLevel: 3 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "cloaking" },
+    ],
     element: null,
     skillName: "Hiding",
     maxLevel: 10,
