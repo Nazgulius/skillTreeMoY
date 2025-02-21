@@ -15,6 +15,8 @@ export default class App {
     this.totalSkillPoint = 120;
     this.totalSkillPointJob = 50;
     this.totalSkillPointJovHight = 20;
+    this.infoRu = 'Инфо: Для просмотра описания скилла нажмите на его картинку.';
+    this.infoEng = 'Info: Click on its picture to view the description of the skill.';    
   }
 
   logic() {
@@ -197,6 +199,16 @@ export default class App {
       this.calcUsedJobTwoHight();
     });
     //});
+
+    // появнение по нажатию на картинки и отображению описания скилла
+    const pInfoRu = document.createElement('p');  
+    pInfoRu.textContent = this.infoRu;
+    const pInfoEng = document.createElement('p');  
+    pInfoEng.textContent = this.infoEng; 
+
+    document.querySelector('.job-tree').appendChild(pInfoRu);
+    document.querySelector('.job-tree').appendChild(pInfoEng);
+                           
   }
 
   resetSkillLevel(skillReset) {  
