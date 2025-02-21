@@ -27,11 +27,8 @@ export const skillsMage = [
     level: 0,
     dependencies: [],
     dependent: [
-      { id: "fireBall" }, 
-      { id: "fireWall" }, 
+      { id: "fireBall" },
       { id: "sightrasher" },
-      { id: "meteorStorm" }, 
-      { id: "firePillar" },
       { id: "flameWeapon" },
     ],
     element: null,
@@ -59,9 +56,13 @@ Description: Attacks a target with arrow, made of fire inflicting 100% MATK Fire
   {
     id: "fireBall",
     level: 0,
-    dependencies: [{ id: "fireBolt", minLevel: 3 }],
-    dependent: [{ id: "fireWall" }, { id: "sightrasher" }, { id: "meteorStorm" }, 
-    { id: "firePillar" }],
+    dependencies: [
+      { id: "fireBolt", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "fireWall" }, 
+      { id: "sightrasher" },       
+    ],
     element: null,
     skillName: "Fire Ball",
     maxLevel: 10,
@@ -87,7 +88,9 @@ Description: Unleashes a scorching fireball that explodes on impact, dealing Fir
   {
     id: "fireWall",
     level: 0,
-    dependencies: [{ id: "fireBolt", minLevel: 3 }, { id: "fireBall", minLevel: 4 }],
+    dependencies: [
+      { id: "fireBall", minLevel: 4 }
+    ],
     element: null,
     skillName: "Fire Wall",
     maxLevel: 10,
@@ -116,10 +119,6 @@ Description: Conjures a blazing wall of flames at a targeted location, dealing 5
     dependencies: [],
     dependent: [
       { id: "frostDiver" }, 
-      { id: "iceWall" }, 
-      { id: "waterBall" },
-      { id: "stormGust" }, 
-      { id: "frostNova" },
       { id: "frostWeapon" },
     ],
     element: null,
@@ -147,12 +146,12 @@ Description: Summons bolts of frigid ice to strike at an enemy which inflicts 10
   {
     id: "frostDiver",
     level: 0,
-    dependencies: [{ id: "coldBolt", minLevel: 3 }],
+    dependencies: [
+      { id: "coldBolt", minLevel: 3 },
+    ],
     dependent: [
       { id: "iceWall" }, 
       { id: "waterBall" }, 
-      { id: "stormGust" },
-      { id: "frostNova" },
     ],
     element: null,
     skillName: "Frost Diver",
@@ -179,8 +178,7 @@ Description: Inflicts Water Property Magic Damage with a chance to leave the tar
   {
     id: "iceWall",
     level: 0,
-    dependencies: [
-      { id: "coldBolt", minLevel: 3 }, 
+    dependencies: [       
       { id: "frostDiver", minLevel: 4 },
     ],
     dependent: [],
@@ -212,9 +210,6 @@ Description: Conjures a solid wall of ice in a 1x5 cell area, blocking enemies b
     dependencies: [],
     dependent: [
       { id: "thunderstorm" }, 
-      { id: "jupitelThunder" }, 
-      { id: "lordOfVermilion" },
-      { id: "electricalInduction" },
       { id: "lightningWeapon" },
     ],
     element: null,
@@ -242,8 +237,12 @@ Description: Drops lightning on target inflicting 100% MATK Wind elemental magic
   {
     id: "thunderstorm",
     level: 0,
-    dependencies: [{ id: "lightningBolt", minLevel: 3 }],
-    dependent: [{ id: "jupitelThunder" }, { id: "lordOfVermilion" }, { id: "electricalInduction" },],
+    dependencies: [
+      { id: "lightningBolt", minLevel: 3 }
+    ],
+    dependent: [
+      { id: "jupitelThunder" }, 
+    ],
     element: null,
     skillName: "Thunderstorm",
     maxLevel: 10,
@@ -272,9 +271,6 @@ Description: Summons a lightning bolt to strike a specific location, dealing Win
     dependencies: [],
     dependent: [
       { id: "stoneCurse" }, 
-      { id: "violentQuake" }, 
-      { id: "quagmire" },
-      { id: "heavensDrive" },
       { id: "seismicWeapon" },
     ],
     element: null,
@@ -302,8 +298,12 @@ Description: Summons spikes from the ground beneath a single target, each dealin
   {
     id: "stoneCurse",
     level: 0,
-    dependencies: [{ id: "earthSpike", minLevel: 3 },],
-    dependent: [{ id: "violentQuake" }, { id: "quagmire" }, { id: "heavensDrive" },],
+    dependencies: [
+      { id: "earthSpike", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "heavensDrive" },
+    ],
     element: null,
     skillName: "Stone Curse",
     maxLevel: 10,
@@ -330,7 +330,11 @@ Description: Attempts to Petrifying a single target. If used on an already petri
     id: "soulStrike",
     level: 0,
     dependencies: [],
-    dependent: [{ id: "napalmBeat" }, { id: "safetyWall" },],
+    dependent: [
+      { id: "napalmBeat" }, 
+      { id: "safetyWall" },
+      { id: "soulDrain" },
+    ],
     element: null,
     skillName: "Soul Strike",
     maxLevel: 10,
@@ -356,8 +360,13 @@ Description: Summon the Ancient Holy Spirit to deliver direct attacks, inflictin
   {
     id: "napalmBeat",
     level: 0,
-    dependencies: [{ id: "soulStrike", minLevel: 3 },],
-    dependent: [{ id: "safetyWall" },],
+    dependencies: [
+      { id: "soulStrike", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "safetyWall" },
+      { id: "napalmVulcan" },
+    ],
     element: null,
     skillName: "Napalm Beat",
     maxLevel: 10,
@@ -383,7 +392,9 @@ Description: Unleashes a surge of psychokinetic energy, striking a target with G
   {
     id: "safetyWall",
     level: 0,
-    dependencies: [{ id: "soulStrike", minLevel: 6 }, { id: "napalmBeat", minLevel: 4 },],
+    dependencies: [
+      { id: "napalmBeat", minLevel: 4 },
+    ],
     element: null,
     skillName: "Safety Wall",
     maxLevel: 10,
@@ -413,6 +424,7 @@ Description: Constructs a protective barrier at a targeted location that blocks 
     dependent: [
       { id: "indulge" },
       { id: "mindBreaker" },
+      { id: "soulDrain" },
     ],
     element: null,
     skillName: "Increase SP Recovery",
