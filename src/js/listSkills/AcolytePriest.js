@@ -62,8 +62,8 @@ Description: Blesses others by placing, your hands on their head. Increases ATK 
     id: "aspersio",
     level: 0,
     dependencies: [
-      { id: "aquaBenedicta", minLevel: 0 },
-      { id: "impositioManus", minLevel: 2 },
+      { id: "aquaBenedicta", minLevel: 1 },
+      { id: "impositioManus", minLevel: 3 },
     ],
     dependent: [
       { id: "bSSacramenti" },
@@ -90,13 +90,8 @@ Description: Temporarily imbue a single target weapon with the Holy property. Co
     id: "bSSacramenti",
     level: 0,
     dependencies: [
-      { id: "gloria", minLevel: 2 },
-      { id: "aspersio", minLevel: 4 },
-      { id: "aquaBenedicta", minLevel: 0 },
-      { id: "impositioManus", minLevel: 2 },
-      { id: "kyrieEleison", minLevel: 3 },
-      { id: "magnificat", minLevel: 2 },
-      { id: "angelus", minLevel: 1 },
+      { id: "gloria", minLevel: 3 },
+      { id: "aspersio", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -120,10 +115,8 @@ Description: Blesses a targeted location to endow the armor of all players withi
     id: "gloria",
     level: 0,
     dependencies: [ 
-      { id: "kyrieEleison", minLevel: 3 },
-      { id: "magnificat", minLevel: 2 },
-      { id: "aquaBenedicta", minLevel: 0 },
-      { id: "impositioManus", minLevel: 2 },
+      { id: "kyrieEleison", minLevel: 4 },
+      { id: "magnificat", minLevel: 3 },
     ],
     dependent: [
       { id: "bSSacramenti" },      
@@ -177,7 +170,7 @@ Description: Increases the amount of SP recovered through your natural SP regene
     id: "kyrieEleison",
     level: 0,
     dependencies: [
-      { id: "angelus", minLevel: 1 },
+      { id: "angelus", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -206,8 +199,7 @@ Description: Creates a perfect barrier, around a character that will be able to,
     id: "lexAeterna",
     level: 0,
     dependencies: [
-      { id: "lexDivina", minLevel: 2 },
-      { id: "ruwach", minLevel: 0 },
+      { id: "lexDivina", minLevel: 3 },
     ],
     dependent: [
       { id: "magnusExorcismus" },
@@ -232,7 +224,7 @@ Description: Decreases the resistance of the affected target, amplifying the dam
     id: "lexDivina",
     level: 0,
     dependencies: [
-      { id: "ruwach", minLevel: 0 },
+      { id: "ruwach", minLevel: 1 },
     ],
     dependent: [
       { id: "lexAeterna" },
@@ -261,7 +253,7 @@ Description: Silences an enemy, temporarily disabling its use of skills, for a s
     id: "maceMastery",
     level: 0,
     dependencies: [
-      { id: "demonBane", minLevel: 6 },
+      { id: "demonBane", minLevel: 7 },
     ],
     dependent: [
       { id: "manaRecharge" }, 
@@ -313,18 +305,10 @@ Description: Doubles the caster and, party's SP regen for the duration of the sk
     id: "magnusExorcismus",
     level: 0,
     dependencies: [
-      { id: "holyLight", minLevel: 4 },
-      { id: "lexAeterna", minLevel: 2 },
-      { id: "aspersio", minLevel: 2 },
-      { id: "turnUndead", minLevel: 2 }, 
-      { id: "aquaBenedicta", minLevel: 0 },
-      { id: "impositioManus", minLevel: 2 },
-      { id: "lexDivina", minLevel: 2 },
-      { id: "ruwach", minLevel: 0 },
-      { id: "resurrection", minLevel: 0 },     
-      { id: "holyLight", minLevel: 4 },      
-      { id: "statusRecovery", minLevel: 0 },
-      { id: "increaseSPRecovery", minLevel: 3 },
+      { id: "holyLight", minLevel: 5 },
+      { id: "lexAeterna", minLevel: 3 },
+      { id: "aspersio", minLevel: 3 },
+      { id: "turnUndead", minLevel: 3 }, 
     ],
     dependent: [      
     ],
@@ -354,8 +338,8 @@ Description: Summons a purifying cross on the ground, dealing Holy property magi
     id: "resurrection",
     level: 0,
     dependencies: [
-      { id: "statusRecovery", minLevel: 0 },
-      { id: "increaseSPRecovery", minLevel: 3 },
+      { id: "statusRecovery", minLevel: 1 },
+      { id: "increaseSPRecovery", minLevel: 4 },
     ],
     dependent: [
       { id: "turnUndead" },     
@@ -380,8 +364,7 @@ Description: Revives KO'ed character. Catalyst: 1x Blue Gemstone.
     id: "safetyWal",
     level: 0,
     dependencies: [
-      { id: "sanctuary", minLevel: 4 },
-      { id: "heal", minLevel: 0 },
+      { id: "sanctuary", minLevel: 5 },
     ],
     dependent: [      
     ],
@@ -410,7 +393,7 @@ Description: Constructs a protective barrier at a targeted location that blocks 
   {
     id: "sanctuary",
     level: 0,
-    dependencies: [{ id: "heal", minLevel: 0 },],
+    dependencies: [{ id: "heal", minLevel: 1 },],
     dependent: [
       { id: "safetyWal" },
       { id: "basilica" },
@@ -460,7 +443,7 @@ Description: Cancels abnormal status, effects such as Stun, Frozen or Stone Curs
     id: "suffragium",
     level: 0,
     dependencies: [
-      { id: "impositioManus", minLevel: 1 },
+      { id: "impositioManus", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -481,12 +464,9 @@ Description: Offers a prayer for others by reducing the Casting Time of yourself
     id: "turnUndead",
     level: 0,
     dependencies: [
-      { id: "resurrection", minLevel: 0 },
-      { id: "lexDivina", minLevel: 2 },
-      { id: "holyLight", minLevel: 4 },
-      { id: "ruwach", minLevel: 0 },
-      { id: "statusRecovery", minLevel: 0 },
-      { id: "increaseSPRecovery", minLevel: 3 },
+      { id: "resurrection", minLevel: 1 },
+      { id: "lexDivina", minLevel: 3 },
+      { id: "holyLight", minLevel: 5 },
     ],
     dependent: [
       { id: "magnusExorcismus" },      
