@@ -96,7 +96,7 @@ Formula: ATK%: 100 + (30 x Skill Lv)`,
   {
     id: "magnumBreak",
     level: 0,
-    dependencies: [{ id: "bash", minLevel: 4 }],
+    dependencies: [{ id: "bash", minLevel: 5 }],
     dependent: [],
     element: null,
     skillName: "Magnum Break",
@@ -151,7 +151,7 @@ Description: Enrage a single target to decrease players defense based on VIT or 
     id: "endure",
     level: 0,
     dependencies: [
-      { id: "provoke", minLevel: 4 },      
+      { id: "provoke", minLevel: 5 },      
     ],
     dependent: [
       { id: "riding" },
@@ -206,7 +206,7 @@ Description: Increases the amount of HP recovered through your natural HP regene
     id: "movingHPRecovery",
     level: 0,
     dependencies: [
-      { id: "increaseHPRecovery", minLevel: 4 },
+      { id: "increaseHPRecovery", minLevel: 5 },
     ],
     dependent: [
       { id: "sacrifice" },
