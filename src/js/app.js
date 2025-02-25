@@ -27,21 +27,24 @@ export default class App {
 
 
     for (let i = 0; i < this._skillsJobOne.length; i++) {
-      jobOne.appendChild(createSkill(this._skillsJobOne[i].id,
+      jobOne.appendChild(createSkill(
+        this._skillsJobOne[i].id,
         this._skillsJobOne[i].skillName,
         this._skillsJobOne[i].maxLevel,
-        this._skillsJobOne[i].img));
+        this._skillsJobOne[i].img,));
     }
 
     for (let i = 0; i < this._skillsJobTwo.length; i++) {
-      jobTwo.appendChild(createSkill(this._skillsJobTwo[i].id,
+      jobTwo.appendChild(createSkill(
+        this._skillsJobTwo[i].id,
         this._skillsJobTwo[i].skillName,
         this._skillsJobTwo[i].maxLevel,
         this._skillsJobTwo[i].img));
     }
 
     for (let i = 0; i < this._skillsJobTwoHight.length; i++) {
-      jobTwoHight.appendChild(createSkill(this._skillsJobTwoHight[i].id,
+      jobTwoHight.appendChild(createSkill(
+        this._skillsJobTwoHight[i].id,
         this._skillsJobTwoHight[i].skillName,
         this._skillsJobTwoHight[i].maxLevel,
         this._skillsJobTwoHight[i].img));        
@@ -79,6 +82,7 @@ export default class App {
           this.calcUsedJobOne();
           this.calcUsedJobTwo();
           this.calcUsedJobTwoHight();
+          this.calcSkillDotSum();
         });
       });
 
@@ -113,15 +117,13 @@ export default class App {
             this.calcUsedJobOne();  
             this.calcUsedJobTwo();  
             this.calcUsedJobTwoHight();  
+            this.calcSkillDotSum();
           } else {  
             console.warn("Skill not found:", skillDiv.id);  
           } 
         });
       });
-
-
-
-    });
+    }); // end обработсик события по клику
 
     // находим все картинки и вешаем на них слушателя клика или наведения мыши
     // по клику или наведению отображаем подсказку inform из базы
@@ -197,6 +199,7 @@ export default class App {
       this.calcUsedJobOne();
       this.calcUsedJobTwo();
       this.calcUsedJobTwoHight();
+      this.calcSkillDotSum();
     });
     //});
 
@@ -219,8 +222,9 @@ export default class App {
 
     document.querySelector('.job-tree').insertAdjacentElement('afterend', pInfoRu);
     document.querySelector('.job-tree').insertAdjacentElement('afterend', pInfoEng);
-                           
-  }
+
+    
+  } // end основной метод logic
 
   resetSkillLevel(skillReset) {  
       skillReset.level = 0;  
@@ -317,6 +321,8 @@ export default class App {
       dotNext.classList.remove("hidden");
       dotNext = dotNext.nextElementSibling;
     }
+
+    
   }
 
   calcUsed() {
@@ -384,6 +390,36 @@ export default class App {
     }
 
     stBalance.textContent = this.totalSkillPointJovHight - total.length;
+  }
+
+  calcSkillDotSum() {
+    const skillAll =  document.querySelectorAll(".skill");
+    skillAll.forEach((skill) => {
+      skill.id
+      const skillLvl = skill.querySelector('.dot_sum');
+
+      const allSkills = [
+            ...this._skillsJobOne,
+            ...this._skillsJobTwo,
+            ...this._skillsJobTwoHight,
+          ];
+
+      const skillBase = allSkills.find((s) => s.id === skill.id);
+      
+      skillLvl.textContent = skillBase.level + 1;
+    });
+    
+    // если известен скилл
+    // const skillParent = document.getElementById(skill.id);    
+    // const skillLvl = skillParent.querySelector('.dot_sum');
+    // skillLvl.textContent = skill.level + 1;    // получаем лвл скила и вставляем его в dot_sum
+
+    // вариант с поиском всех товек скила и подсчётом их
+    // const dotTotalSkill = skillParent.querySelectorAll('.dot');
+    // const dotHiddenSkill = skillParent.querySelectorAll('.hidden');    
+    // skillLvl.textContent = dotTotalSkill - dotHiddenSkill;   
+
+    
   }
 
 }
