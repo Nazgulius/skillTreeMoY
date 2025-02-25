@@ -10,7 +10,7 @@ export const skillsStalker = [
     id: "counterInstinct",
     level: 0,
     dependencies: [
-      { id: "oneHandedSwordMastery", minLevel: 2 },
+      { id: "oneHandedSwordMastery", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -33,10 +33,10 @@ Description: Deflects incoming attacks, reducing damage by half. If the attacker
     id: "fullStrip",
     level: 0,
     dependencies: [
-      { id: "helmStripping", minLevel: 1 },
-      { id: "shieldStripping", minLevel: 1 },
-      { id: "armorStripping", minLevel: 1 },
-      { id: "weaponStripping", minLevel: 1 },
+      { id: "helmStripping", minLevel: 2 },
+      { id: "shieldStripping", minLevel: 2 },
+      { id: "armorStripping", minLevel: 2 },
+      { id: "weaponStripping", minLevel: 2 },
     ],
     dependent: [],
     element: null,
@@ -55,7 +55,7 @@ Description: Attempts to forcibly remove the equipped weapon, shield, armor and 
     id: "simulation",
     level: 0,
     dependencies: [
-      { id: "plagiarism", minLevel: 9 },
+      { id: "plagiarism", minLevel: 10 },
     ],
     dependent: [],
     element: null,
@@ -83,8 +83,8 @@ Description: Adds +5 True ATK and MATK per level learned. Each basic attack has 
     id: "stealth",
     level: 0,
     dependencies: [
-      { id: "hiding", minLevel: 4 },
-      { id: "tunnelDrive", minLevel: 2 },
+      { id: "hiding", minLevel: 5 },
+      { id: "tunnelDrive", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -107,7 +107,7 @@ Description: Enter a special Hiding status in which caster can move without bein
     id: "tripleStrafe",
     level: 0,
     dependencies: [
-      { id: "doubleStrafe", minLevel: 9 },
+      { id: "doubleStrafe", minLevel: 10 },
     ],
     dependent: [],
     element: null,
