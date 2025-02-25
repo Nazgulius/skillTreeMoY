@@ -38,7 +38,7 @@ Description: Increase attack with Katars Weapons. When [Lv 10], it increases Att
     id: "cloaking",
     level: 0,
     dependencies: [
-      { id: "hiding", minLevel: 0 }
+      { id: "hiding", minLevel: 1 }
     ],
     dependent: [
       { id: "meteorAssault" },
@@ -100,8 +100,8 @@ Description: Increase attack with Dual Wielding Weapons. Equipping two weapons a
     id: "throwingKnife",
     level: 0,
     dependencies: [
-      { id: "dualWieldingMastery", minLevel: 4 },
-      { id: "cloaking", minLevel: 4 },
+      { id: "dualWieldingMastery", minLevel: 5 },
+      { id: "cloaking", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -130,8 +130,8 @@ Description: Precisely aims and throws a knife at the target, inflicting physica
     id: "grimtooth",
     level: 0,
     dependencies: [
-      { id: "cloaking", minLevel: 1 },
-      { id: "katarMastery", minLevel: 3 },
+      { id: "cloaking", minLevel: 2 },
+      { id: "katarMastery", minLevel: 4 },
     ],
     dependent: [
       { id: "sonicBlow" },
@@ -162,7 +162,7 @@ Description: Strikes a single target with the equipped katar while hidden, deali
     id: "sonicBlow",
     level: 0,
     dependencies: [
-      { id: "grimtooth", minLevel: 4 },
+      { id: "grimtooth", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -191,7 +191,7 @@ Description: Unleashes a flurry of rapid Katar strikes on the target, with a cha
     id: "poisonWeapon",
     level: 0,
     dependencies: [
-      { id: "envenom", minLevel: 0 },
+      { id: "envenom", minLevel: 1 },
     ],
     dependent: [
       { id: "meteorAssault" },
@@ -221,7 +221,7 @@ Description: Temporarily imbue a single target weapon with the Poison property, 
     id: "poisonReact",
     level: 0,
     dependencies: [
-      { id: "poisonWeapon", minLevel: 2 },
+      { id: "poisonWeapon", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -249,9 +249,9 @@ Description: Amplifies and redirects 70% of the Poison damage received as magic 
     id: "poisonery",
     level: 0,
     dependencies: [
-      { id: "envenom", minLevel: 9 },
-      { id: "detoxify", minLevel: 0 },
-      { id: "poisonWeapon", minLevel: 4 },
+      { id: "envenom", minLevel: 10 },
+      { id: "detoxify", minLevel: 1 },
+      { id: "poisonWeapon", minLevel: 5 },
     ],
     dependent: [
       { id: "deadlyPoisonMastery" },
@@ -276,7 +276,7 @@ Description: Creates Poison Bottles. The success rate is determined by your Base
     id: "venomDust",
     level: 0,
     dependencies: [
-      { id: "poisonWeapon", minLevel: 4 },
+      { id: "poisonWeapon", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -305,8 +305,8 @@ Description: Contaminates a targeted location with a toxic cloud, reducing the r
     id: "venomSplasher",
     level: 0,
     dependencies: [
-      { id: "poisonReact", minLevel: 4 },
-      { id: "venomDust", minLevel: 4 },
+      { id: "poisonReact", minLevel: 5 },
+      { id: "venomDust", minLevel: 5 },
     ],
     dependent: [],
     element: null,
