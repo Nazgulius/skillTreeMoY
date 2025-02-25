@@ -101,7 +101,7 @@ Description: Sharpens the user focus, increasing their DEX and enhancing their H
   {
     id: "vulturesEye",
     level: 0,
-    dependencies: [{ id: "owlsEye", minLevel: 2 },],
+    dependencies: [{ id: "owlsEye", minLevel: 3 },],
     dependent: [
       { id: "improveConcentration" },
       { id: "quickDraw" },
@@ -130,7 +130,9 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
   {
     id: "improveConcentration",
     level: 0,
-    dependencies: [{ id: "vulturesEye", minLevel: 0 }, { id: "owlsEye", minLevel: 2 }],
+    dependencies: [
+      { id: "vulturesEye", minLevel: 1 },
+    ],
     dependent: [
       { id: "quickDraw" },
       { id: "sharpShooting" },
@@ -163,7 +165,7 @@ Description: Boosts AGI and DEX for 240 seconds as well as detects nearby hidden
   {
     id: "fletchery",
     level: 0,
-    dependencies: [{ id: "owlsEye", minLevel: 2 }],
+    dependencies: [{ id: "owlsEye", minLevel: 3 }],
     dependent: [
       { id: "quivery" },
     ],
@@ -186,7 +188,9 @@ Description: Uses various items to craft arrows. The quantity of arrows crafted 
   {
     id: "quivery",
     level: 0,
-    dependencies: [{ id: "fletchery", minLevel: 2 }, { id: "owlsEye", minLevel: 2 }],
+    dependencies: [
+      { id: "fletchery", minLevel: 3 },
+    ],
     dependent: [],
     element: null,
     skillName: "Quivery",
@@ -202,7 +206,9 @@ Description: Allows the user to create a quiver using 500 arrows. The process re
   {
     id: "arrowShower",
     level: 0,
-    dependencies: [{ id: "doubleStrafe", minLevel: 4 }],
+    dependencies: [
+      { id: "doubleStrafe", minLevel: 5 }
+    ],
     dependent: [      
       { id: "arrowVulcan" },
     ],
