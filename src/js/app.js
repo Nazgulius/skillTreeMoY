@@ -73,7 +73,7 @@ export default class App {
       dotArray.forEach((dot, index) => {
         dot.addEventListener("click", () => {
           this.dotToggle(dot);
-          skill.level = index;
+          skill.level = index +1;
           this.checkDependencies(skill); // Проверяем зависимости
           //this.checkDependent(skill); // Проверяем зависимых
 
@@ -270,9 +270,9 @@ export default class App {
         } else if (dependentSkill.element) {
           // если зависимый скил меньше нужного, то он устанавливается на нужный лвл
           dependentSkill.element.querySelectorAll('.dot').forEach((dot, index) => {
-            if (dep.minLevel === index) {
+            if (dep.minLevel === (index + 1)) {
               this.dotToggle(dot);
-              dependentSkill.level = index; // устанавливает лвл в зависимостях скиллов
+              dependentSkill.level = index + 1; // устанавливает лвл в зависимостях скиллов
             };
           });
         }
@@ -407,7 +407,8 @@ export default class App {
       const skillBase = allSkills.find((s) => s.id === skill.id);
       
       if (skillBase) {
-        skillLvl.textContent = skillBase.level === 0 ? 1 : skillBase.level + 1;
+        skillLvl.textContent = skillBase.level;
+        // skillLvl.textContent = skillBase.level === 0 ? 1 : skillBase.level + 1;
       } else {
         skillLvl.textContent = 0;        
       }
