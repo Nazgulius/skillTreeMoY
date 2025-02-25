@@ -10,7 +10,7 @@ export const skillsPaladin = [
     id: "gloriaDomini",
     level: 0,
     dependencies: [
-       { id: "grandCross", minLevel: 4 },
+       { id: "grandCross", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -34,7 +34,7 @@ Description: Unleashes a divine cross with immense pressure on a single target, 
     id: "gospel",
     level: 0,
     dependencies: [
-      { id: "martyrsHeal", minLevel: 3 },
+      { id: "martyrsHeal", minLevel: 4 },
     ],
     dependent: [],
     element: null,
@@ -57,8 +57,8 @@ Description: Center a divine cross on yourself, granting various effects to part
     id: "sacrifice",
     level: 0,
     dependencies: [
-      { id: "faith", minLevel: 9 },
-      { id: "movingHPRecovery", minLevel: 0 },
+      { id: "faith", minLevel: 10 },
+      { id: "movingHPRecovery", minLevel: 1 },
     ],
     dependent: [],
     element: null,
@@ -81,7 +81,7 @@ Description: Embrace the power of sacrifice to boost your Attack and Skill Damag
     id: "shieldChain",
     level: 0,
     dependencies: [
-      { id: "shieldBoomerang", minLevel: 4 },
+      { id: "shieldBoomerang", minLevel: 5 },
     ],
     dependent: [],
     element: null,
