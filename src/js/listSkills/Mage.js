@@ -57,7 +57,7 @@ Description: Attacks a target with arrow, made of fire inflicting 100% MATK Fire
     id: "fireBall",
     level: 0,
     dependencies: [
-      { id: "fireBolt", minLevel: 3 },
+      { id: "fireBolt", minLevel: 4 },
     ],
     dependent: [
       { id: "fireWall" }, 
@@ -89,7 +89,7 @@ Description: Unleashes a scorching fireball that explodes on impact, dealing Fir
     id: "fireWall",
     level: 0,
     dependencies: [
-      { id: "fireBall", minLevel: 4 }
+      { id: "fireBall", minLevel: 5 }
     ],
     element: null,
     skillName: "Fire Wall",
@@ -147,7 +147,7 @@ Description: Summons bolts of frigid ice to strike at an enemy which inflicts 10
     id: "frostDiver",
     level: 0,
     dependencies: [
-      { id: "coldBolt", minLevel: 3 },
+      { id: "coldBolt", minLevel: 4 },
     ],
     dependent: [
       { id: "iceWall" }, 
@@ -179,7 +179,7 @@ Description: Inflicts Water Property Magic Damage with a chance to leave the tar
     id: "iceWall",
     level: 0,
     dependencies: [       
-      { id: "frostDiver", minLevel: 4 },
+      { id: "frostDiver", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -238,7 +238,7 @@ Description: Drops lightning on target inflicting 100% MATK Wind elemental magic
     id: "thunderstorm",
     level: 0,
     dependencies: [
-      { id: "lightningBolt", minLevel: 3 }
+      { id: "lightningBolt", minLevel: 4 }
     ],
     dependent: [
       { id: "jupitelThunder" }, 
@@ -299,7 +299,7 @@ Description: Summons spikes from the ground beneath a single target, each dealin
     id: "stoneCurse",
     level: 0,
     dependencies: [
-      { id: "earthSpike", minLevel: 3 },
+      { id: "earthSpike", minLevel: 4 },
     ],
     dependent: [
       { id: "heavensDrive" },
@@ -361,7 +361,7 @@ Description: Summon the Ancient Holy Spirit to deliver direct attacks, inflictin
     id: "napalmBeat",
     level: 0,
     dependencies: [
-      { id: "soulStrike", minLevel: 3 },
+      { id: "soulStrike", minLevel: 4 },
     ],
     dependent: [
       { id: "safetyWall" },
@@ -393,7 +393,7 @@ Description: Unleashes a surge of psychokinetic energy, striking a target with G
     id: "safetyWall",
     level: 0,
     dependencies: [
-      { id: "napalmBeat", minLevel: 4 },
+      { id: "napalmBeat", minLevel: 5 },
     ],
     element: null,
     skillName: "Safety Wall",
