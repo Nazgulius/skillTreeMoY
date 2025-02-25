@@ -30,6 +30,9 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   skillProgress.className = 'skill-progress';  
   const lineDiv = document.createElement('div');  
   lineDiv.className = 'line';  
+  const dotSum = document.createElement('div');
+  dotSum.className = 'dot_sum';
+  dotSum.nextContent = '0';
 
   for (let i = 0; i < maxLevel; i++) {  
       const dot = document.createElement('div');  
