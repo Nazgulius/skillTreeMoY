@@ -45,7 +45,7 @@ Description: Passively raises Soft Defense and Soft Magic Defense against Demon 
   {
     id: "demonBane",
     level: 0,
-    dependencies: [{ id: "divineProtection", minLevel: 2 }],
+    dependencies: [{ id: "divineProtection", minLevel: 3 }],
     dependent: [
       { id: "maceMastery" },
       { id: "basilica" },
@@ -109,7 +109,7 @@ Description: Restores HP of a single target. This skill is affected by Base Leve
   {
     id: "cure",
     level: 0,
-    dependencies: [{ id: "heal", minLevel: 1 }],
+    dependencies: [{ id: "heal", minLevel: 2 }],
     dependent: [],
     element: null,
     skillName: "Cure",
@@ -131,7 +131,7 @@ Description: Attempts to cleanse a single target from the Silence, Chaos and Bli
   {
     id: "angelus",
     level: 0,
-    dependencies: [{ id: "divineProtection", minLevel: 2 }],
+    dependencies: [{ id: "divineProtection", minLevel: 3 }],
     dependent: [
       { id: "kyrieEleison" }, 
       { id: "assumptio" },
@@ -160,7 +160,7 @@ Description: Increases VIT, Soft Defense and MaxHP on the user and all party mem
   {
     id: "blessing",
     level: 0,
-    dependencies: [{ id: "divineProtection", minLevel: 4 }],
+    dependencies: [{ id: "divineProtection", minLevel: 5 }],
     dependent: [],
     element: null,
     skillName: "Blessing",
@@ -187,7 +187,7 @@ Description: Temporarily increases STR, INT, DEX and reduces Variable Cast Time 
   {
     id: "increaseAgility",
     level: 0,
-    dependencies: [{ id: "heal", minLevel: 2 }],
+    dependencies: [{ id: "heal", minLevel: 3 }],
     dependent: [{ id: "decreaseAgility" }],
     element: null,
     skillName: "Increase Agility",
@@ -214,7 +214,7 @@ Description: Increases targeted characters AGI, Movement and Attack Speed for th
   {
     id: "decreaseAgility",
     level: 0,
-    dependencies: [{ id: "increaseAgility", minLevel: 0 }],
+    dependencies: [{ id: "increaseAgility", minLevel: 1 }],
     dependent: [],
     element: null,
     skillName: "Decrease Agility",
@@ -296,7 +296,7 @@ Description: Uses 10 SP to summon Holy Spirit that will detect hidden characters
   {
     id: "teleport",
     level: 0,
-    dependencies: [{ id: "ruwach", minLevel: 0 }],
+    dependencies: [{ id: "ruwach", minLevel: 1 }],
     dependent: [{ id: "warpPortal" }],
     element: null,
     skillName: "Teleport",
@@ -314,7 +314,7 @@ Description: Teleports caster to other area. Cant be used in an area that protec
   {
     id: "warpPortal",
     level: 0,
-    dependencies: [{ id: "teleport", minLevel: 1 }, { id: "ruwach", minLevel: 0 }],
+    dependencies: [{ id: "teleport", minLevel: 2 },],
     dependent: [{ id: "pneuma" }], 
     element: null,
     skillName: "Warp Portal",
@@ -335,9 +335,7 @@ Description: Creates a Warp Portal that will transport those that enter to the p
     id: "pneuma",
     level: 0,
     dependencies: [
-      { id: "warpPortal", minLevel: 2 }, 
-      { id: "teleport", minLevel: 1 },
-      { id: "ruwach", minLevel: 0 }
+      { id: "warpPortal", minLevel: 3 }, 
     ],
     dependent: [],
     element: null,
