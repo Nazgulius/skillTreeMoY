@@ -37,7 +37,7 @@ img: skillImgNo,
     id: "vulturesEye",
     level: 0,
     dependencies: [
-      { id: "throwStone", minLevel: 6 },
+      { id: "throwStone", minLevel: 7 },
     ],
     dependent: [
       { id: "doubleStrafe" },
@@ -66,7 +66,7 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
     id: "doubleStrafe",
     level: 0,
     dependencies: [
-      { id: "vulturesEye", minLevel: 4 },
+      { id: "vulturesEye", minLevel: 5 },
     ],
     dependent: [
       { id: "tripleStrafe" },
@@ -97,7 +97,7 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
     id: "snatcher",
     level: 0,
     dependencies: [
-      { id: "steal", minLevel: 0 },
+      { id: "steal", minLevel: 1 },
     ],
     dependent: [      
       { id: "gashingBlow" },
@@ -128,8 +128,8 @@ Description: Automatically steals items, from a monster while attacking it with,
     id: "plagiarism",
     level: 0,
     dependencies: [
-      { id: "steal", minLevel: 9 },
-      { id: "snatcher", minLevel: 3 },
+      { id: "steal", minLevel: 10 },
+      { id: "snatcher", minLevel: 4 },
     ],
     dependent: [
       { id: "simulation" },
@@ -161,7 +161,7 @@ Description: Copies a skill from an ally, enemy, or monster by selecting from a 
     id: "gangsterParadise",
     level: 0,
     dependencies: [
-      { id: "plagiarism", minLevel: 4 },
+      { id: "plagiarism", minLevel: 5 },
     ],
     dependent: [
       { id: "gangland" },  
@@ -185,7 +185,7 @@ Description: When two or more Rogues with this skill sit next to each other, and
     id: "gangland",
     level: 0,
     dependencies: [
-      { id: "gangsterParadise", minLevel: 4 },
+      { id: "gangsterParadise", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -202,7 +202,7 @@ Description: Increases the bonuses granted by Gangster Paradise for the user by 
     id: "gashingBlow",
     level: 0,
     dependencies: [
-      { id: "snatcher", minLevel: 3 },
+      { id: "snatcher", minLevel: 4 },
     ],
     dependent: [      
       { id: "backStab" },
@@ -233,7 +233,7 @@ Description: Delivers a powerful strike that has a chance to apply the Gashing W
     id: "backStab",
     level: 0,
     dependencies: [
-      { id: "gashingBlow", minLevel: 3 },
+      { id: "gashingBlow", minLevel: 4 },
     ],
     dependent: [
       { id: "raid" },
@@ -264,7 +264,7 @@ Description: Attacks the target from behind, causing physical damage. The skill 
     id: "tunnelDrive",
     level: 0,
     dependencies: [
-      { id: "hiding", minLevel: 0 },
+      { id: "hiding", minLevel: 1 },
     ],
     dependent: [
       { id: "stealth" },
@@ -289,9 +289,9 @@ Description: Enables Movement while in, Hiding status. Movement Speed is slower,
     id: "raid",
     level: 0,
     dependencies: [
-      { id: "sprinkleSand", minLevel: 4 },
-      { id: "backStab", minLevel: 1 },
-      { id: "tunnelDrive", minLevel: 1 },
+      { id: "sprinkleSand", minLevel: 5 },
+      { id: "backStab", minLevel: 2 },
+      { id: "tunnelDrive", minLevel: 2 },
     ],
     dependent: [
       { id: "intimidate" },
@@ -316,7 +316,7 @@ Description: Execute a sneak attack on nearby enemies within a [7*7] area. If us
     id: "intimidate",
     level: 0,
     dependencies: [
-      { id: "raid", minLevel: 4 },
+      { id: "raid", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -340,7 +340,7 @@ Description: Strikes a target and, forcibly teleport it with the caster to, a ra
     id: "helmStripping",
     level: 0,
     dependencies: [
-      { id: "snatcher", minLevel: 4 },
+      { id: "snatcher", minLevel: 5 },
     ],
     dependent: [
       { id: "fullStrip" },
@@ -367,7 +367,7 @@ Description: Attempts to forcibly remove the equipped helmet of a single target,
     id: "shieldStripping",
     level: 0,
     dependencies: [
-      { id: "helmStripping", minLevel: 1 },
+      { id: "helmStripping", minLevel: 2 },
     ],
     dependent: [
       { id: "fullStrip" },
@@ -394,7 +394,7 @@ Description: Attempts to forcibly remove the equipped shield of a single target,
     id: "armorStripping",
     level: 0,
     dependencies: [
-      { id: "shieldStripping", minLevel: 1 },
+      { id: "shieldStripping", minLevel: 2 },
     ],
     dependent: [
       { id: "fullStrip" },
@@ -421,7 +421,7 @@ Description: Attempts to forcibly remove the equipped armor of a single target, 
     id: "weaponStripping",
     level: 0,
     dependencies: [
-      { id: "armorStripping", minLevel: 1 },
+      { id: "armorStripping", minLevel: 2 },
     ],
     dependent: [
       { id: "fullStrip" },
