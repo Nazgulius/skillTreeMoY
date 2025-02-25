@@ -95,7 +95,7 @@ Description: Enables to rent a Pushcart and Increases maximum player Weight Limi
   {
     id: "cartRevolution",
     level: 0,
-    dependencies: [{ id: "pushcart", minLevel: 0 }],
+    dependencies: [{ id: "pushcart", minLevel: 1 }],
     dependent: [
       { id: "cartTwister" },
       { id: "cartTermination" },
@@ -125,7 +125,9 @@ Description: Slam your pushcart into a single target, dealing physical damage an
   {
     id: "cartTwister",
     level: 0,
-    dependencies: [{ id: "cartRevolution", minLevel: 4 }, { id: "pushcart", minLevel: 0 }],
+    dependencies: [
+      { id: "cartRevolution", minLevel: 5 },
+    ],
     dependent: [
       { id: "cartTermination" },
     ],
@@ -153,7 +155,7 @@ Description: Grab your cart and spin it like a whirlwind, dealing melee physical
   {
     id: "discount",
     level: 0,
-    dependencies: [{ id: "pushcart", minLevel: 2 },],
+    dependencies: [{ id: "pushcart", minLevel: 3 },],
     dependent: [      
       { id: "overcharge" },
     ],
@@ -182,8 +184,7 @@ Description: Activate this skill to receive a buff that randomly slashes the SP 
     id: "overcharge",
     level: 0,
     dependencies: [
-      { id: "discount", minLevel: 2 },
-      { id: "pushcart", minLevel: 2 },
+      { id: "discount", minLevel: 3 },
     ],
     dependent: [ ],
     element: null,
