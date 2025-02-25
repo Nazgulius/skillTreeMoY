@@ -40,7 +40,7 @@ Description: Increase Atk, MAtk and Aspd with Whip Class Weapon. When [Lv 10], i
     id: "slingingStrike",
     level: 0,
     dependencies: [
-      { id: "dancingLesson", minLevel: 2 },
+      { id: "dancingLesson", minLevel: 3 },
     ],
     dependent: [
       { id: "arrowVulcan" },
@@ -66,7 +66,7 @@ Description: Fires a powerful volley of arrows using an whip. The Arrows element
     id: "cringeDance",
     level: 0,
     dependencies: [
-      { id: "dancingLesson", minLevel: 1 },
+      { id: "dancingLesson", minLevel: 2 },
     ],
     dependent: [
       { id: "tarotCardOfFate" },
@@ -96,7 +96,7 @@ Description: Performs a corny dance, dealing Neutral magic damage to all enemies
     id: "bellyDance",
     level: 0,
     dependencies: [
-      { id: "cringeDance", minLevel: 2 },
+      { id: "cringeDance", minLevel: 3 },
     ],
     dependent: [      
       { id: "drumOfBattlefield" },
@@ -126,7 +126,7 @@ Description: Performs a dance that will boost Max SP and reduce SP Cost of the u
     id: "drumOfBattlefield",
     level: 0,
     dependencies: [
-      { id: "bellyDance", minLevel: 9 },
+      { id: "bellyDance", minLevel: 10 },
     ],
     dependent: [      
       { id: "lokisWail" },
@@ -151,7 +151,7 @@ Description: Initiates a battle duet that temporarily increases both physical an
     id: "lokisWail",
     level: 0,
     dependencies: [
-      { id: "drumOfBattlefield", minLevel: 2 },
+      { id: "drumOfBattlefield", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -169,7 +169,7 @@ Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 
     id: "encore",
     level: 0,
     dependencies: [
-      { id: "dancingLesson", minLevel: 4 },
+      { id: "dancingLesson", minLevel: 5 },
     ],
     dependent: [      
       { id: "medusaScream" },
@@ -194,7 +194,7 @@ Description: Extends the duration of all active songs, dances, and party buff du
     id: "medusaScream",
     level: 0,
     dependencies: [
-      { id: "encore", minLevel: 2 },
+      { id: "encore", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -217,7 +217,7 @@ Description: Inflicts the Petrifying status to enemies within the casters view.
     id: "humming",
     level: 0,
     dependencies: [
-      { id: "cringeDance", minLevel: 2 },
+      { id: "cringeDance", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -245,7 +245,7 @@ Description: Performs a dance that will boost Hit and Long Range Damage of all p
     id: "intoTheAbyss",
     level: 0,
     dependencies: [
-      { id: "humming", minLevel: 9 },
+      { id: "humming", minLevel: 10 },
     ],
     dependent: [      
       { id: "lullaby" },
@@ -270,7 +270,7 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
     id: "lullaby",
     level: 0,
     dependencies: [
-      { id: "intoTheAbyss", minLevel: 2 },
+      { id: "intoTheAbyss", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -288,7 +288,7 @@ Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 10
     id: "fortunesKiss",
     level: 0,
     dependencies: [
-      { id: "cringeDance", minLevel: 2 },
+      { id: "cringeDance", minLevel: 3 },
     ],
     dependent: [      
       { id: "invulnerableSiegfried" },
@@ -318,7 +318,7 @@ Description: Performs a dance that will boost the Crit and Critical Damage of th
     id: "invulnerableSiegfried",
     level: 0,
     dependencies: [
-      { id: "fortunesKiss", minLevel: 9 },
+      { id: "fortunesKiss", minLevel: 10 },
     ],
     dependent: [      
       { id: "mrKimARichMan" },
@@ -343,7 +343,7 @@ Description: Initiates a comforting duet that grants temporary resistance to var
     id: "mrKimARichMan",
     level: 0,
     dependencies: [
-      { id: "invulnerableSiegfried", minLevel: 2 },
+      { id: "invulnerableSiegfried", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -361,7 +361,7 @@ Description: Initiates a greedy duet that increases Base and Job experience gain
     id: "dontForgetMe",
     level: 0,
     dependencies: [
-      { id: "cringeDance", minLevel: 2 },
+      { id: "cringeDance", minLevel: 3 },
     ],
     dependent: [      
       { id: "theRingOfNibelungen" },
@@ -391,7 +391,7 @@ Description: Perform a dance that increases the movement speed of you and your p
     id: "theRingOfNibelungen",
     level: 0,
     dependencies: [
-      { id: "dontForgetMe", minLevel: 9 },
+      { id: "dontForgetMe", minLevel: 10 },
     ],
     dependent: [      
       { id: "eternalChaos" },
@@ -416,7 +416,7 @@ Description: Initiates a refined duet that grants a random temporary effect to y
     id: "eternalChaos",
     level: 0,
     dependencies: [
-      { id: "theRingOfNibelungen", minLevel: 2 },
+      { id: "theRingOfNibelungen", minLevel: 3 },
     ],
     dependent: [],
     element: null,
