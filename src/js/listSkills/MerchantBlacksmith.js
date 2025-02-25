@@ -80,8 +80,8 @@ Description: Enable to create [Elemental Stones] by using a Mini Furnace and 10 
     id: "reforge",
     level: 0,
     dependencies: [
-      { id: "enchantedStoneCraft", minLevel: 0 },
-      { id: "metalTempering", minLevel: 0 },
+      { id: "enchantedStoneCraft", minLevel: 1 },
+      { id: "metalTempering", minLevel: 1 },
     ],
     dependent: [      
       { id: "foundryPowerUp" },
@@ -114,7 +114,7 @@ Description: Allows the blacksmith to reforge weapons. Reforging lets you apply 
     id: "bladeWeaponReforging",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 0 },
+      { id: "reforge", minLevel: 1 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -136,7 +136,7 @@ Description: With an [Anvil] in your inventory, you can reforge Dagger, Axes and
     id: "bluntWeaponReforging",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 0 },
+      { id: "reforge", minLevel: 1 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -158,7 +158,7 @@ Description: With an [Anvil] in your inventory, you can reforge Mace and Knuckle
     id: "pierceWeaponReforging",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 0 },
+      { id: "reforge", minLevel: 1 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -180,7 +180,7 @@ Description: With an [Anvil] in your inventory, you can reforge One and Two-Hand
     id: "magicWeaponReforging",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 0 },
+      { id: "reforge", minLevel: 1 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -202,7 +202,7 @@ Description: With an [Anvil] in your inventory, you can reforge One, Two Handed 
     id: "stringWeaponReforging",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 0 },
+      { id: "reforge", minLevel: 1 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -224,7 +224,7 @@ Description: With an [Anvil] in your inventory, you can reforge Bow, Musical Ins
     id: "exoticWeaponReforging",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 0 },
+      { id: "reforge", minLevel: 1 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -246,7 +246,7 @@ Description: With an [Anvil] in your inventory, you can reforge Humma Shuriken, 
     id: "repairWeapon",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 1 },
+      { id: "reforge", minLevel: 2 },
     ],
     dependent: [
       { id: "foundryPowerUp" },
@@ -267,7 +267,7 @@ Description: With an [Anvil] in your inventory, you can restore a single targets
     id: "skinTempering",
     level: 0,
     dependencies: [
-      { id: "reforge", minLevel: 1 },
+      { id: "reforge", minLevel: 2 },
     ],
     dependent: [
       { id: "meltdown" },
@@ -291,7 +291,7 @@ Description: Harden your skin with the power of the forge, enhancing your resist
     id: "adrenalineRush",
     level: 0,
     dependencies: [
-      { id: "axeMastery", minLevel: 2 },
+      { id: "axeMastery", minLevel: 3 },
     ],
     dependent: [
       { id: "hiltBinding" },
@@ -322,7 +322,7 @@ Description: Requires Axes or Maces Class Weapon. Temporarily boosts Attack spee
     id: "weaponPerfection",
     level: 0,
     dependencies: [
-      { id: "adrenalineRush", minLevel: 2 },
+      { id: "adrenalineRush", minLevel: 3 },
     ],
     dependent: [
       { id: "hiltBinding" },
@@ -348,7 +348,7 @@ Description: This skill temporarily erases any size penalties from the equipped 
     id: "powerThrust",
     level: 0,
     dependencies: [
-      { id: "weaponPerfection", minLevel: 2 },
+      { id: "weaponPerfection", minLevel: 3 },
     ],
     dependent: [
       { id: "maximumPowerThrust" },
@@ -380,7 +380,7 @@ Description: Unleash a surge of strength with Power Thrust. Temporarily amplify 
     id: "maximizePower",
     level: 0,
     dependencies: [
-      { id: "powerThrust", minLevel: 4 },
+      { id: "powerThrust", minLevel: 5 },
     ],
     dependent: [ ],
     element: null,
@@ -403,9 +403,9 @@ Description: Channel the full potential of your weapon with Maximize Power. This
     id: "hiltBinding",
     level: 0,
     dependencies: [
-      { id: "adrenalineRush", minLevel: 6 },
-      { id: "powerThrust", minLevel: 6 },
-      { id: "weaponPerfection", minLevel: 2 },
+      { id: "adrenalineRush", minLevel: 7 },
+      { id: "powerThrust", minLevel: 7 },
+      { id: "weaponPerfection", minLevel: 3 },
     ],
     dependent: [      
       { id: "weaponryResearch" },
@@ -424,7 +424,7 @@ Description: Infuse your combat prowess. This skill prolongs the effects of Adre
     id: "weaponryResearch",
     level: 0,
     dependencies: [
-      { id: "hiltBinding", minLevel: 0 },
+      { id: "hiltBinding", minLevel: 1 },
     ],
     dependent: [ ],
     element: null,
@@ -446,7 +446,7 @@ Description: Sharpens your understanding of weapon mechanics, boosting your Stat
     id: "cartBoost",
     level: 0,
     dependencies: [
-      { id: "pushcart", minLevel: 4 },
+      { id: "pushcart", minLevel: 5 },
     ],
     dependent: [
       { id: "cartTermination" },
