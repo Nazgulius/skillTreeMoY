@@ -36,7 +36,7 @@ Description: Master the art of Falcon command. Increasing the chance to auto-cas
     id: "steelCrow",
     level: 0,
     dependencies: [
-      { id: "falconryMastery", minLevel: 0 },
+      { id: "falconryMastery", minLevel: 1 },
     ],
     dependent: [
       { id: "falconAssault" },
@@ -65,7 +65,7 @@ Description: Amplify the might of your falcon attacks.
     id: "beastBane",
     level: 0,
     dependencies: [
-      { id: "falconryMastery", minLevel: 0 },
+      { id: "falconryMastery", minLevel: 1 },
     ],
     dependent: [],
     element: null,
@@ -92,7 +92,7 @@ Description: Harness the power of the falcon to deliver devastating strikes agai
     id: "blitzBeat",
     level: 0,
     dependencies: [
-      { id: "falconryMastery", minLevel: 0 },
+      { id: "falconryMastery", minLevel: 1 },
     ],
     dependent: [
       { id: "falconAssault" },
@@ -123,7 +123,7 @@ Description: Commands the Falcon to dive at a single target and strike repeatedl
     id: "detect",
     level: 0,
     dependencies: [
-      { id: "falconryMastery", minLevel: 4 },
+      { id: "falconryMastery", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -146,7 +146,7 @@ Description: Commands a Falcon to detect hidden characters from a distance.
     id: "springTrap",
     level: 0,
     dependencies: [
-      { id: "falconryMastery", minLevel: 2 },
+      { id: "falconryMastery", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -170,8 +170,8 @@ Description: Commands Falcon to remove a set Trap from a distance.
     id: "blastMine",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
-      { id: "landMine", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
+      { id: "landMine", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },      
@@ -200,10 +200,10 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Wind 
     id: "claymoreTrap",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
-      { id: "landMine", minLevel: 2 },
-      { id: "blastMine", minLevel: 1 },
-      { id: "glacialTrap", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
+      { id: "landMine", minLevel: 3 },
+      { id: "blastMine", minLevel: 2 },
+      { id: "glacialTrap", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
@@ -230,7 +230,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Fire 
     id: "ankleSnare",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
@@ -259,9 +259,9 @@ Description: Deploys trap at a targeted location that immobilizes any enemy that
     id: "flasher",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
-      { id: "skidTrap", minLevel: 1 },
-      { id: "ankleSnare", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
+      { id: "skidTrap", minLevel: 2 },
+      { id: "ankleSnare", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
@@ -289,9 +289,9 @@ Description: Deploys trap at a targeted location that releases a blinding flash 
     id: "glacialTrap",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
-      { id: "landMine", minLevel: 1 },
-      { id: "blastMine", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
+      { id: "landMine", minLevel: 2 },
+      { id: "blastMine", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
@@ -319,7 +319,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Water
     id: "landMine",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
@@ -349,7 +349,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Earth
     id: "removeTrap",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 4 },
+      { id: "trapResearch", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -368,10 +368,10 @@ Description: Removes a trap that has been set on the ground, as well as regain t
     id: "sandman",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
-      { id: "skidTrap", minLevel: 2 },
-      { id: "ankleSnare", minLevel: 1 },
-      { id: "flasher", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
+      { id: "skidTrap", minLevel: 3 },
+      { id: "ankleSnare", minLevel: 2 },
+      { id: "flasher", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
@@ -398,14 +398,14 @@ Description: Deploys trap at a targeted location that releases a sedative when t
     id: "shockwaveTrap",
     level: 0,
     dependencies: [
-      { id: "landMine", minLevel: 3 },
-      { id: "skidTrap", minLevel: 3 },
-      { id: "blastMine", minLevel: 2 },
-      { id: "ankleSnare", minLevel: 2 },
-      { id: "glacialTrap", minLevel: 1 },
-      { id: "flasher", minLevel: 1 },
-      { id: "claymoreTrap", minLevel: 0 },
-      { id: "sandman", minLevel: 0 },
+      { id: "landMine", minLevel: 4 },
+      { id: "skidTrap", minLevel: 4 },
+      { id: "blastMine", minLevel: 3 },
+      { id: "ankleSnare", minLevel: 3 },
+      { id: "glacialTrap", minLevel: 2 },
+      { id: "flasher", minLevel: 2 },
+      { id: "claymoreTrap", minLevel: 1 },
+      { id: "sandman", minLevel: 1 },
     ],
     dependent: [],
     element: null,
@@ -429,7 +429,7 @@ Description: Deploys trap that releases a shockwave when triggered, drains the t
     id: "skidTrap",
     level: 0,
     dependencies: [
-      { id: "trapResearch", minLevel: 0 },
+      { id: "trapResearch", minLevel: 1 },
     ],
     dependent: [
       { id: "detonator" },
