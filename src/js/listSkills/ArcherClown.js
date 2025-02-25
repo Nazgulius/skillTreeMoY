@@ -10,9 +10,9 @@ export const skillsClown = [
     id: "arrowVulcan",
     level: 0,
     dependencies: [
-      { id: "arrowShower", minLevel: 4 },
-      { id: "musicalStrike", minLevel: 0},
-      { id: "doubleStrafe", minLevel: 4},
+      { id: "arrowShower", minLevel: 5 },
+      { id: "musicalStrike", minLevel: 1},
+      { id: "doubleStrafe", minLevel: 5},
     ],
     dependent: [],
     element: null,
@@ -41,8 +41,8 @@ Description: Fires a rapid flurry of arrows at a targeted enemy, with damage inc
     id: "moonlitWaterMill",
     level: 0,
     dependencies: [
-      { id: "improveConcentration", minLevel: 4 },
-      { id: "musicalLesson", minLevel: 6 },
+      { id: "improveConcentration", minLevel: 5 },
+      { id: "musicalLesson", minLevel: 7 },
     ],
     dependent: [],
     element: null,
@@ -65,7 +65,7 @@ Description: The Moonlight Watermill performance can be executed by both Minstre
     id: "reverberation",
     level: 0,
     dependencies: [
-      { id: "dissonance", minLevel: 4 },
+      { id: "dissonance", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -89,8 +89,8 @@ Description: Emits a high-frequency sound wave at an enemy, causing magical dama
     id: "tarotCardOfFate",
     level: 0,
     dependencies: [
-      { id: "improveConcentration", minLevel: 9 },
-      { id: "dissonance", minLevel: 2 },
+      { id: "improveConcentration", minLevel: 10 },
+      { id: "dissonance", minLevel: 3 },
     ],
     dependent: [],
     element: null,
