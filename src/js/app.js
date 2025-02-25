@@ -406,7 +406,11 @@ export default class App {
 
       const skillBase = allSkills.find((s) => s.id === skill.id);
       
-      skillLvl.textContent = skillBase.level + 1;
+      if (skillBase.level != 0) {
+        skillLvl.textContent = skillBase.level + 1;
+      } else {
+        skillLvl.textContent = 0;        
+      }
     });
     
     // если известен скилл
