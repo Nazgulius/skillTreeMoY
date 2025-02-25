@@ -94,7 +94,7 @@ Range: 2
     id: "detoxify",
     level: 0,
     dependencies: [
-      { id: "envenom", minLevel: 2 },
+      { id: "envenom", minLevel: 3 },
     ],
     dependent: [
       { id: "poisonery" },
@@ -151,7 +151,7 @@ Description: Steals an item from a specified target. If target's DEX is higher t
     id: "hiding",
     level: 0,
     dependencies: [
-      { id: "steal", minLevel: 3 },
+      { id: "steal", minLevel: 4 },
     ],
     dependent: [
       { id: "cloaking" },
