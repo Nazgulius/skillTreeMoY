@@ -37,7 +37,7 @@ Description: Master the art of potion-throwing with this skill, enhancing both t
     id: "demonstration",
     level: 0,
     dependencies: [
-      { id: "throwingPotionsTechniques", minLevel: 2 },
+      { id: "throwingPotionsTechniques", minLevel: 3 },
     ],
     dependent: [      
       { id: "acidDemonstration" },
@@ -69,7 +69,7 @@ Description: Unleash fiery devastation with a bottle of flammable liquid, hurlin
     id: "acidTerror",
     level: 0,
     dependencies: [
-      { id: "demonstration", minLevel: 4 },
+      { id: "demonstration", minLevel: 5 },
     ],
     dependent: [
       { id: "acidDemonstration" },
@@ -101,7 +101,7 @@ Description: Unleash a bottle of corrosive acid on a single target, causing seve
     id: "chemicalReaction",
     level: 0,
     dependencies: [
-      { id: "acidTerror", minLevel: 4 },
+      { id: "acidTerror", minLevel: 5 },
     ],
     dependent: [
       { id: "acidDemonstration" },
@@ -154,7 +154,7 @@ Description: Boosts the success rate for creating potions and chemicals while al
     id: "helmChemicalProtection",
     level: 0,
     dependencies: [
-      { id: "potionResearch", minLevel: 4 },
+      { id: "potionResearch", minLevel: 5 },
     ],
     dependent: [
       { id: "fullChemicalProtection" },
@@ -181,7 +181,7 @@ Description: Temporarily protects the equipped headgear of a single target from 
     id: "shieldChemicalProtection",
     level: 0,
     dependencies: [
-      { id: "helmChemicalProtection", minLevel: 0 },
+      { id: "helmChemicalProtection", minLevel: 1 },
     ],
     dependent: [
       { id: "fullChemicalProtection" },
@@ -208,7 +208,7 @@ Description: Temporarily protects the equipped shield of a single target from da
     id: "armorChemicalProtection",
     level: 0,
     dependencies: [
-      { id: "shieldChemicalProtection", minLevel: 0 },
+      { id: "shieldChemicalProtection", minLevel: 1 },
     ],
     dependent: [
       { id: "fullChemicalProtection" },
@@ -235,7 +235,7 @@ Description: Temporarily protects the equipped armor of a single target from dam
     id: "weaponChemicalProtection",
     level: 0,
     dependencies: [
-      { id: "armorChemicalProtection", minLevel: 0 },
+      { id: "armorChemicalProtection", minLevel: 1 },
     ],
     dependent: [      
       { id: "fullChemicalProtection" },
@@ -261,7 +261,7 @@ Description: Temporarily protects the equipped weapon of a single target from da
     id: "bioCannibalize",
     level: 0,
     dependencies: [
-      { id: "throwingPotionsTechniques", minLevel: 2 },
+      { id: "throwingPotionsTechniques", minLevel: 3 },
     ],
     dependent: [      
       { id: "hyperFertilize" },
@@ -294,7 +294,7 @@ Description: Summons a living plant at the target location to assist the user in
     id: "deplant",
     level: 0,
     dependencies: [
-      { id: "bioCannibalize", minLevel: 4 },
+      { id: "bioCannibalize", minLevel: 5 },
     ],
     dependent: [
       { id: "hyperFertilize" },
@@ -321,8 +321,8 @@ Description: Removes Summon Flora plants within the selected area and grants a c
     id: "briarVines",
     level: 0,
     dependencies: [
-      { id: "deplant", minLevel: 2 },
-      { id: "bioCannibalize", minLevel: 6 },
+      { id: "deplant", minLevel: 3 },
+      { id: "bioCannibalize", minLevel: 7 },
     ],
     dependent: [
       { id: "hyperFertilize" },
@@ -371,7 +371,7 @@ Description: Allows the creation of Potions and Chemical Bottles. Requires the a
     id: "largeScalePharmacy",
     level: 0,
     dependencies: [
-      { id: "pharmacy", minLevel: 4 },
+      { id: "pharmacy", minLevel: 5 },
     ],
     dependent: [ ],
     element: null,
@@ -394,7 +394,7 @@ Description: Brew a large batch of potions all at once, with each potions creati
     id: "marineSphereBomb",
     level: 0,
     dependencies: [
-      { id: "throwingPotionsTechniques", minLevel: 2 },
+      { id: "throwingPotionsTechniques", minLevel: 3 },
     ],
     dependent: [      
       { id: "potionPitcher" },
@@ -425,7 +425,7 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
     id: "potionPitcher",
     level: 0,
     dependencies: [
-      { id: "marineSphereBomb", minLevel: 4 },
+      { id: "marineSphereBomb", minLevel: 5 },
     ],
     dependent: [
       { id: "slingItem" },
@@ -456,7 +456,7 @@ Description: Throws a potion at a single target, instantly applying a healing ef
     id: "slingItem",
     level: 0,
     dependencies: [
-      { id: "potionPitcher", minLevel: 4 },
+      { id: "potionPitcher", minLevel: 5 },
     ],
     dependent: [      
       { id: "potionSpreader" },
