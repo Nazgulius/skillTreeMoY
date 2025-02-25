@@ -10,7 +10,7 @@ export const skillsMonk = [
     id: "absorbSpiritSphere",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 4 },
+      { id: "callSpiritSphere", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -29,7 +29,7 @@ Description: Allows the user to absorb Spirit Spheres, restoring their SP. Recov
     id: "asuraStrike",
     level: 0,
     dependencies: [
-      { id: "furiousSpirits", minLevel: 4 },
+      { id: "furiousSpirits", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -48,8 +48,8 @@ Description: Unleash the full force of your spiritual energy, dealing devastatin
     id: "bodyRelocation",
     level: 0,
     dependencies: [
-      { id: "throwSpiritSphere", minLevel: 2 },
-      { id: "pacify", minLevel: 2 },
+      { id: "throwSpiritSphere", minLevel: 3 },
+      { id: "pacify", minLevel: 3 },
     ],
     dependent: [
       { id: "palmStrike" },
@@ -103,7 +103,7 @@ Description: Summons a Spirit Sphere that will orbit the user. Summoned sphere i
     id: "calmSpirits",
     level: 0,
     dependencies: [
-      { id: "spiritualCadence", minLevel: 2 },
+      { id: "spiritualCadence", minLevel: 3 },
     ],
     dependent: [
       { id: "devaRetaliation" },
@@ -128,7 +128,7 @@ Description: Enter a meditative state that greatly boosting your Physical and Ma
     id: "chainCombo",
     level: 0,
     dependencies: [
-      { id: "tripleAttack", minLevel: 4 },
+      { id: "tripleAttack", minLevel: 5 },
     ],
     dependent: [
       { id: "comboFinish" },
@@ -154,7 +154,7 @@ Description: Chain Combo is a powerful melee attack that can be used after Ragin
     id: "comboFinish",
     level: 0,
     dependencies: [
-      { id: "chainCombo", minLevel: 2 },
+      { id: "chainCombo", minLevel: 3 },
     ],
     dependent: [
       { id: "tigerFist" },
@@ -181,7 +181,7 @@ Description: Combo Finish delivers a powerful melee strike that can be used afte
     id: "devaRetaliation",
     level: 0,
     dependencies: [
-      { id: "calmSpirits", minLevel: 4 },
+      { id: "calmSpirits", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -200,7 +200,7 @@ Description: Release the pain accumulated during your battles while in a state o
     id: "fallingBlossoms",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 4 },
+      { id: "callSpiritSphere", minLevel: 5 },
     ],
     dependent: [
       { id: "furiousSpirits" },
@@ -225,7 +225,7 @@ Description: Passively enhances evasion and grants a chance to dodge any physica
     id: "furiousSpirits",
     level: 0,
     dependencies: [
-      { id: "fallingBlossoms", minLevel: 2 },
+      { id: "fallingBlossoms", minLevel: 3 },
     ],
     dependent: [
       { id: "asuraStrike" },
@@ -250,8 +250,8 @@ Description: Enter a heightened state of rage, boosting your Attack and Critical
     id: "ironHand",
     level: 0,
     dependencies: [
-      { id: "demonBane", minLevel: 9 },
-      { id: "divineProtection", minLevel: 9 },      
+      { id: "demonBane", minLevel: 10 },
+      { id: "divineProtection", minLevel: 10 },      
     ],
     dependent: [
       { id: "tripleAttack" },
@@ -280,7 +280,7 @@ Description: Increase attack with Knuckle Class Weapons or Bare Handed. When [Lv
     id: "occultImpaction",
     level: 0,
     dependencies: [
-      { id: "pacify", minLevel: 0 },      
+      { id: "pacify", minLevel: 1 },      
     ],
     dependent: [
       { id: "throwSpiritSphere" },
@@ -306,7 +306,7 @@ Description: Strike with a force that scales with the targets DEF. Damage is alw
     id: "pacify",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 4 },
+      { id: "callSpiritSphere", minLevel: 5 },
     ],
     dependent: [
       { id: "palmStrike" },
@@ -335,7 +335,7 @@ Note: Duration is reduced to 2 seconds on elite, miniboss, and boss monsters.`,
     id: "spiritualCadence",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 4 },
+      { id: "callSpiritSphere", minLevel: 5 },
     ],
     dependent: [
       { id: "calmSpirits" },
@@ -360,9 +360,8 @@ Description: Passively recovers HP and SP recovery every 10 seconds when the cha
     id: "throwSpiritSphere",
     level: 0,
     dependencies: [
-      { id: "occultImpaction", minLevel: 2 },
-      { id: "pacify", minLevel: 1 },
-      { id: "bodyRelocation" },
+      { id: "occultImpaction", minLevel: 3 },
+      { id: "pacify", minLevel: 2 },
     ],
     dependent: [
       { id: "bodyRelocation" },
@@ -388,8 +387,8 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
     id: "tripleAttack",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 4 },
-      { id: "ironHand", minLevel: 2 },
+      { id: "callSpiritSphere", minLevel: 5 },
+      { id: "ironHand", minLevel: 3 },
     ],
     dependent: [
       { id: "tigerFist" },
