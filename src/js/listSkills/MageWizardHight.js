@@ -40,7 +40,7 @@ Description: Amplifies MATK for 60 seconds.
     id: "napalmVulcan",
     level: 0,
     dependencies: [
-      { id: "napalmBeat", minLevel: 4 },
+      { id: "napalmBeat", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -63,7 +63,10 @@ Description: Unleashes a barrage of Napalm Beat, dealing Ghost Property Magic Da
   {
     id: "soulDrain",
     level: 0,
-    dependencies: [{ id: "increaseSPRecovery", minLevel: 4 }, { id: "soulStrike", minLevel: 6 }],
+    dependencies: [
+      { id: "increaseSPRecovery", minLevel: 5 }, 
+      { id: "soulStrike", minLevel: 7 },
+    ],
     dependent: [],
     element: null,
     skillName: "Soul Drain",
