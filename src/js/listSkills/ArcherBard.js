@@ -40,7 +40,7 @@ Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. 
     id: "musicalStrike",
     level: 0,
     dependencies: [
-      { id: "musicalLesson", minLevel: 2 },
+      { id: "musicalLesson", minLevel: 3 },
     ],
     dependent: [
       { id: "arrowVulcan" },
@@ -66,7 +66,7 @@ Description: Fires a powerful volley of arrows using an instrument. The Arrows e
     id: "dissonance",
     level: 0,
     dependencies: [
-      { id: "musicalLesson", minLevel: 1 },
+      { id: "musicalLesson", minLevel: 2 },
     ],
     dependent: [
       { id: "reverberation" },
@@ -95,7 +95,7 @@ Description: Plays a discordant tune, dealing Neutral magic damage to all enemie
     id: "appleOfIdun",
     level: 0,
     dependencies: [
-      { id: "dissonance", minLevel: 2 },
+      { id: "dissonance", minLevel: 3 },
     ],
     dependent: [      
       { id: "drumOfBattlefield" },
@@ -125,7 +125,7 @@ Description: Performs a song that will boost Max HP and Healings Received of the
     id: "drumOfBattlefield",
     level: 0,
     dependencies: [
-      { id: "appleOfIdun", minLevel: 9 },
+      { id: "appleOfIdun", minLevel: 10 },
     ],
     dependent: [      
       { id: "lokisWail" },
@@ -150,7 +150,7 @@ Description: Initiates a battle duet that temporarily increases both physical an
     id: "lokisWail",
     level: 0,
     dependencies: [
-      { id: "drumOfBattlefield", minLevel: 2 },
+      { id: "drumOfBattlefield", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -168,7 +168,7 @@ Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 
     id: "encore",
     level: 0,
     dependencies: [
-      { id: "musicalLesson", minLevel: 4 },
+      { id: "musicalLesson", minLevel: 5 },
     ],
     dependent: [      
       { id: "frostJoke" },
@@ -194,7 +194,7 @@ Description: Extends the duration of all active songs, dances, and party buff du
     id: "frostJoke",
     level: 0,
     dependencies: [
-      { id: "encore", minLevel: 2 },
+      { id: "encore", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -217,7 +217,7 @@ Description: Inflicts the Freezing status to enemies within the casters view.
     id: "whistle",
     level: 0,
     dependencies: [
-      { id: "dissonance", minLevel: 2 },
+      { id: "dissonance", minLevel: 3 },
     ],
     dependent: [      
       { id: "intoTheAbyss" },
@@ -247,7 +247,7 @@ Description: Performs a song that will boost Flee and Perfect Dodge of the user 
     id: "intoTheAbyss",
     level: 0,
     dependencies: [
-      { id: "whistle", minLevel: 9 },
+      { id: "whistle", minLevel: 10 },
     ],
     dependent: [      
       { id: "lullaby" },
@@ -272,7 +272,7 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
     id: "lullaby",
     level: 0,
     dependencies: [
-      { id: "intoTheAbyss", minLevel: 2 },
+      { id: "intoTheAbyss", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -290,7 +290,7 @@ Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 10
     id: "poemOfBragi",
     level: 0,
     dependencies: [
-      { id: "dissonance", minLevel: 2 },
+      { id: "dissonance", minLevel: 3 },
     ],
     dependent: [      
       { id: "invulnerableSiegfried" },
@@ -320,7 +320,7 @@ Description: Performs a song that will shorten Variable Cast Time and After Cast
     id: "invulnerableSiegfried",
     level: 0,
     dependencies: [
-      { id: "poemOfBragi", minLevel: 9 },
+      { id: "poemOfBragi", minLevel: 10 },
     ],
     dependent: [      
       { id: "mrKimARichMan" },
@@ -345,7 +345,7 @@ Description: Initiates a comforting duet that grants temporary resistance to var
     id: "mrKimARichMan",
     level: 0,
     dependencies: [
-      { id: "invulnerableSiegfried", minLevel: 2 },
+      { id: "invulnerableSiegfried", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -391,7 +391,7 @@ Description: Performs a song that will boost attack speed of the user and party 
     id: "theRingOfNibelungen",
     level: 0,
     dependencies: [
-      { id: "assassinCrossOfSunset", minLevel: 9 },
+      { id: "assassinCrossOfSunset", minLevel: 10 },
     ],
     dependent: [      
       { id: "eternalChaos" },
@@ -416,7 +416,7 @@ Description: Initiates a refined duet that grants a random temporary effect to y
     id: "eternalChaos",
     level: 0,
     dependencies: [
-      { id: "theRingOfNibelungen", minLevel: 2 },
+      { id: "theRingOfNibelungen", minLevel: 3 },
     ],
     dependent: [],
     element: null,
