@@ -10,7 +10,7 @@ export const skillsProfessort = [
     id: "abracadabra",
     level: 0,
     dependencies: [
-      { id: "dispell", minLevel: 0 },
+      { id: "dispell", minLevel: 1 },
     ],
     dependent: [ ],
     element: null,
@@ -38,7 +38,7 @@ Description: Unleash a touch of magic mayhem. When you use an offensive skill af
     id: "doubleCasting",
     level: 0,
     dependencies: [
-      { id: "freeCast", minLevel: 4 },
+      { id: "freeCast", minLevel: 5 },
     ],
     dependent: [ ],
     element: null,
@@ -83,8 +83,8 @@ Description: Creates a wall of fog in a 5x3 cell area that will cause the Blind 
     id: "indulge",
     level: 0,
     dependencies: [
-      { id: "magicRod", minLevel: 0 },
-      { id: "increaseSPRecovery", minLevel: 0 },     
+      { id: "magicRod", minLevel: 1 },
+      { id: "increaseSPRecovery", minLevel: 1 },     
     ],
     dependent: [ ],
     element: null,
@@ -123,8 +123,8 @@ Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, 
     id: "mindBreaker",
     level: 0,
     dependencies: [
-      { id: "soulBurn", minLevel: 1 },
-      { id: "increaseSPRecovery", minLevel: 2 },      
+      { id: "increaseSPRecovery", minLevel: 3 },      
+      { id: "soulBurn", minLevel: 2 },
     ],
     dependent: [ ],
     element: null,
@@ -148,9 +148,9 @@ Description: Induces mental turmoil in an enemy that will reduce it's MDEF, but 
     id: "soulBurn",
     level: 0,
     dependencies: [
-      { id: "magicRod", minLevel: 2 },
-      { id: "castCancel", minLevel: 4 },
-      { id: "dispell", minLevel: 2 },
+      { id: "castCancel", minLevel: 5 },
+      { id: "magicRod", minLevel: 3 },
+      { id: "dispell", minLevel: 3 },
     ],
     dependent: [
       { id: "mindBreaker" },      
@@ -176,8 +176,8 @@ Description: Casts a spell that has a chance to burn the targets SP. The amount 
     id: "soulChange",
     level: 0,
     dependencies: [
-      { id: "magicRod", minLevel: 2 },
-      { id: "spellBreaker", minLevel: 1 },      
+      { id: "magicRod", minLevel: 3 },
+      { id: "spellBreaker", minLevel: 2 },      
     ],
     dependent: [ ],
     element: null,
