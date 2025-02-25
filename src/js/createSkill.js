@@ -10,8 +10,7 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   const img = document.createElement('img');  
   img.src = skillImg; 
   img.alt = skillNameAll;  
-  img.className = 'skill-img';  
-  //img.id = skillName;  
+  img.className = 'skill-img'; 
 
   const skillBlock = document.createElement('div');  
   skillBlock.className = 'skill-block';  
@@ -22,9 +21,7 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   nameParagraph.className = 'skill-name';  
   nameParagraph.textContent = skillNameAll;  
 
-  skillNameBlock.appendChild(nameParagraph);  
-  // skillNameBlock.appendChild(document.createElement('div')).className = 'dot-reset';  
- 
+  skillNameBlock.appendChild(nameParagraph);
 
   const skillProgress = document.createElement('div');  
   skillProgress.className = 'skill-progress';  
@@ -33,6 +30,8 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   const dotSum = document.createElement('div');
   dotSum.className = 'dot_sum';
   dotSum.nextContent = '0';
+
+  skillProgress.appendChild(dotSum);
 
   for (let i = 0; i < maxLevel; i++) {  
       const dot = document.createElement('div');  
@@ -45,10 +44,7 @@ export function createSkill (skillName, skillNameAll, maxLevel, skillImg) {
   skillBlock.appendChild(skillNameBlock);  
   skillBlock.appendChild(skillProgress);  
   skillDiv.appendChild(img);  
-  skillDiv.appendChild(skillBlock);  
-
-  // const jobSageDOM = document.querySelector('.job-sage');
-  // jobSageDOM.appendChild(skillDiv); // куда вставить skillDiv  
+  skillDiv.appendChild(skillBlock); 
   
   return skillDiv;
 }  
