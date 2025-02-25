@@ -10,8 +10,8 @@ export const skillsChampion = [
     id: "chainCrushCombo",
     level: 0,
     dependencies: [
-      { id: "tripleAttack", minLevel: 7 },
-      { id: "comboFinish", minLevel: 3 },
+      { id: "tripleAttack", minLevel: 8 },
+      { id: "comboFinish", minLevel: 4 },
     ],
     dependent: [],
     element: null,
@@ -35,8 +35,8 @@ Description: Chain Crush Combo is a devastating melee attack that can be used af
     id: "palmStrike",
     level: 0,
     dependencies: [
-      { id: "pacify", minLevel: 3 },
-      { id: "bodyRelocation", minLevel: 2 },
+      { id: "pacify", minLevel: 4 },
+      { id: "bodyRelocation", minLevel: 3 },
     ],
     dependent: [],
     element: null,
@@ -60,7 +60,7 @@ Description: Rush toward the enemy and deliver a powerful palm strike, pushing t
     id: "spiritSpheresCollect",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 4 },
+      { id: "callSpiritSphere", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -83,8 +83,8 @@ Description: Extends the limit of Spirit Spheres the user can have and increases
     id: "tigerFist",
     level: 0,
     dependencies: [
-      { id: "tripleAttack", minLevel: 7 },
-      { id: "comboFinish", minLevel: 3 },
+      { id: "tripleAttack", minLevel: 8 },
+      { id: "comboFinish", minLevel: 4 },
     ],
     dependent: [],
     element: null,
