@@ -3,6 +3,11 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import doubleStrafe from '../../img/icon_arc/icon_arc_3.png';
+import improveConcentration from '../../img/icon_arc/icon_arc_2.png';
+import arrowShower from '../../img/icon_arc/icon_arc_1.png';
+import owlsEye from '../../img/icon_arc/icon_arc_4.png';
+import vulturesEye from '../../img/icon_arc/icon_arc_5.png';
 
 // список скилов Archer
 export const skillsArcher = [  
@@ -35,7 +40,7 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
 [Lv 8]: Atk 180% x 2 Hits,
 [Lv 9]: Atk 190% x 2 Hits,
 [Lv 10]: Atk 200% x 2 Hits`,
-    img: skillImgNo,
+    img: doubleStrafe,
   },
   {
     id: "chargeArrow",
@@ -96,7 +101,7 @@ Description: Sharpens the user focus, increasing their DEX and enhancing their H
 [Lv 8]: DEX +8, Hit Rate +8%,
 [Lv 9]: DEX +9, Hit Rate +9%,
 [Lv 10]: DEX +10, Hit Rate +10%`,
-    img: skillImgNo,
+    img: owlsEye,
   },
   {
     id: "vulturesEye",
@@ -125,7 +130,7 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
 [Lv 8]: Atk +16, Range +5, 2nd Class Additional Atk +8,
 [Lv 9]: Atk +18, Range +6, 2nd Class Additional Atk +9,
 [Lv 10]: Atk +20, Range +6, 2nd Class Additional Atk +10`,
-    img: skillImgNo,
+    img: vulturesEye,
   },
   {
     id: "improveConcentration",
@@ -160,7 +165,7 @@ Description: Boosts AGI and DEX for 240 seconds as well as detects nearby hidden
 [Lv 8]: DEX/AGI +10%,
 [Lv 9]: DEX/AGI +11%,
 [Lv 10]: DEX/AGI +12%`,
-    img: skillImgNo,
+    img: improveConcentration,
   },
   {
     id: "fletchery",
@@ -232,7 +237,7 @@ Description: Unleashes a barrage of arrows, raining down on enemies within a 7x7
 [Lv 8]: Wave ATK 90%, Duration: 3.3 s,
 [Lv 9]: Wave ATK 95%, Duration: 3.5 s,
 [Lv 10]: Wave ATK 100%, Duration: 3.7 s,`,
-    img: skillImgNo,
+    img: arrowShower,
   },
 ];
 
