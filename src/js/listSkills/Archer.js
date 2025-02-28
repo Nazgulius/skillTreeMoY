@@ -8,6 +8,9 @@ import improveConcentration from '../../img/icon_arc/icon_arc_2.png';
 import arrowShower from '../../img/icon_arc/icon_arc_1.png';
 import owlsEye from '../../img/icon_arc/icon_arc_4.png';
 import vulturesEye from '../../img/icon_arc/icon_arc_5.png';
+import chargeArrow from '../../img/icon_arc/icon_arc_7.png';
+import fletchery from '../../img/icon_arc/icon_arc_8.png';
+import quivery from '../../img/icon_arc/icon_arc_9.png';
 
 // список скилов Archer
 export const skillsArcher = [  
@@ -43,6 +46,37 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
     img: doubleStrafe,
   },
   {
+    id: "arrowShower",
+    level: 0,
+    dependencies: [
+      { id: "doubleStrafe", minLevel: 5 }
+    ],
+    dependent: [      
+      { id: "arrowVulcan" },
+    ],
+    element: null,
+    skillName: "Arrow Shower",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Physical
+Target: Ground
+Range: 12
+Requirement: Double Strafe Lv: 5
+Description: Unleashes a barrage of arrows, raining down on enemies within a 7x7 area and dealing damage in multiple waves. Each wave delivers four hits. Number of waves increases based on the user's ASPD. Consumes: 6x Arrow.
+[Lv 1]: Wave ATK 55%, Duration: 1.9 s,
+[Lv 2]: Wave ATK 60%, Duration: 2.1 s,
+[Lv 3]: Wave ATK 65%, Duration: 2.3 s,
+[Lv 4]: Wave ATK 70%, Duration: 2.5 s,
+[Lv 5]: Wave ATK 75%, Duration: 2.7 s,
+[Lv 6]: Wave ATK 80%, Duration: 2.9 s,
+[Lv 7]: Wave ATK 85%, Duration: 3.1 s,
+[Lv 8]: Wave ATK 90%, Duration: 3.3 s,
+[Lv 9]: Wave ATK 95%, Duration: 3.5 s,
+[Lv 10]: Wave ATK 100%, Duration: 3.7 s,`,
+    img: arrowShower,
+  },
+  {
     id: "chargeArrow",
     level: 0,
     dependencies: [],
@@ -69,7 +103,7 @@ Description: Draw their bowstring to its maximum tension, firing a powerful voll
 [Lv 8]: Atk 420%,
 [Lv 9]: Atk 460%,
 [Lv 10]: Atk 500%`,
-    img: skillImgNo,
+    img: chargeArrow,
   },
   {
     id: "owlsEye",
@@ -188,7 +222,7 @@ Description: Uses various items to craft arrows. The quantity of arrows crafted 
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
 [Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: fletchery,
   },
   {
     id: "quivery",
@@ -206,38 +240,7 @@ Type: Physical
 Target: Self
 Requirement: Fletchery Lv: 3
 Description: Allows the user to create a quiver using 500 arrows. The process requires an Empty Quiver as the base item for crafting.`,
-    img: skillImgNo,
-  },
-  {
-    id: "arrowShower",
-    level: 0,
-    dependencies: [
-      { id: "doubleStrafe", minLevel: 5 }
-    ],
-    dependent: [      
-      { id: "arrowVulcan" },
-    ],
-    element: null,
-    skillName: "Arrow Shower",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Ground
-Range: 12
-Requirement: Double Strafe Lv: 5
-Description: Unleashes a barrage of arrows, raining down on enemies within a 7x7 area and dealing damage in multiple waves. Each wave delivers four hits. Number of waves increases based on the user's ASPD. Consumes: 6x Arrow.
-[Lv 1]: Wave ATK 55%, Duration: 1.9 s,
-[Lv 2]: Wave ATK 60%, Duration: 2.1 s,
-[Lv 3]: Wave ATK 65%, Duration: 2.3 s,
-[Lv 4]: Wave ATK 70%, Duration: 2.5 s,
-[Lv 5]: Wave ATK 75%, Duration: 2.7 s,
-[Lv 6]: Wave ATK 80%, Duration: 2.9 s,
-[Lv 7]: Wave ATK 85%, Duration: 3.1 s,
-[Lv 8]: Wave ATK 90%, Duration: 3.3 s,
-[Lv 9]: Wave ATK 95%, Duration: 3.5 s,
-[Lv 10]: Wave ATK 100%, Duration: 3.7 s,`,
-    img: arrowShower,
+    img: quivery,
   },
 ];
 
