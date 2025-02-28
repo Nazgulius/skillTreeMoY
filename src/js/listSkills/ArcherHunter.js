@@ -3,6 +3,23 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import ankleSnare from '../../img/icon_hnt/icon_hnt_1.png'; 
+import blastMine from '../../img/icon_hnt/icon_hnt_2.png'; 
+import blitzBeat from '../../img/icon_hnt/icon_hnt_3.png'; 
+import beastBane from '../../img/icon_hnt/icon_hnt_4.png'; 
+import claymoreTrap from '../../img/icon_hnt/icon_hnt_5.png'; 
+import detect from '../../img/icon_hnt/icon_hnt_6.png'; 
+import falconryMastery from '../../img/icon_hnt/icon_hnt_7.png'; 
+import flasher from '../../img/icon_hnt/icon_hnt_8.png'; 
+import glacialTrap from '../../img/icon_hnt/icon_hnt_9.png'; 
+import landMine from '../../img/icon_hnt/icon_hnt_10.png'; 
+import removeTrap from '../../img/icon_hnt/icon_hnt_11.png'; 
+import skidTrap from '../../img/icon_hnt/icon_hnt_12.png'; 
+import shockwaveTrap from '../../img/icon_hnt/icon_hnt_13.png'; 
+import sandman from '../../img/icon_hnt/icon_hnt_14.png'; 
+import springTrap from '../../img/icon_hnt/icon_hnt_15.png'; 
+import steelCrow from '../../img/icon_hnt/icon_hnt_16.png'; 
+//import icon from '../../img/icon_hnt/icon_hnt_17.png'; 
 
 // список скилов Hunter
 export const skillsHunter = [ 
@@ -59,7 +76,7 @@ Description: Amplify the might of your falcon attacks.
 [Lv 8]: Damage: +80,
 [Lv 9]: Damage: +90,
 [Lv 10]: Damage: +100`,
-    img: skillImgNo,
+    img: steelCrow,
   },
   {
     id: "beastBane",
@@ -86,7 +103,7 @@ Description: Harness the power of the falcon to deliver devastating strikes agai
 [Lv 8]: Damage +32, Falcon skills damage +8%,
 [Lv 9]: Damage +36, Falcon skills damage +9%,
 [Lv 10]: Damage +40, Falcon skills damage +10%`,
-    img: skillImgNo,
+    img: beastBane,
   },
   {
     id: "blitzBeat",
@@ -117,7 +134,7 @@ Description: Commands the Falcon to dive at a single target and strike repeatedl
 [Lv 8]: Hits: 5,
 [Lv 9]: Hits: 6,
 [Lv 10]: Hits: 6`,
-    img: skillImgNo,
+    img: blitzBeat,
   },
   {
     id: "detect",
@@ -140,7 +157,7 @@ Description: Commands a Falcon to detect hidden characters from a distance.
 [Lv 2]: Range: 7 cells,
 [Lv 3]: Range: 8 cells,
 [Lv 4]: Range: 9 cells`,
-    img: skillImgNo,
+    img: detect,
   },
   {
     id: "springTrap",
@@ -164,7 +181,7 @@ Description: Commands Falcon to remove a set Trap from a distance.
 [Lv 3]: Range: 7 cells,
 [Lv 4]: Range: 8 cells,
 [Lv 5]: Range: 9 cells`,
-    img: skillImgNo,
+    img: springTrap,
   },
   {
     id: "blastMine",
@@ -194,7 +211,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Wind 
 [Lv 3]: Trap HP: 15,
 [Lv 4]: Trap HP: 20,
 [Lv 5]: Trap HP: 25`,
-    img: skillImgNo,
+    img: blastMine,
   },
   {
     id: "claymoreTrap",
@@ -224,7 +241,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Fire 
 [Lv 3]: Trap HP: 15,
 [Lv 4]: Trap HP: 20,
 [Lv 5]: Trap HP: 25`,
-    img: skillImgNo,
+    img: claymoreTrap,
   },
   {
     id: "ankleSnare",
@@ -253,7 +270,7 @@ Description: Deploys trap at a targeted location that immobilizes any enemy that
 [Lv 3]: Trap HP: 15, Duration: 84 sec,
 [Lv 4]: Trap HP: 20, Duration: 112 sec,
 [Lv 5]: Trap HP: 25, Duration: 140 sec`,
-    img: skillImgNo,
+    img: ankleSnare,
   },
   {
     id: "flasher",
@@ -283,7 +300,7 @@ Description: Deploys trap at a targeted location that releases a blinding flash 
 [Lv 3]: Trap HP: 15, Duration: 84 sec, Blind chance: 70%,
 [Lv 4]: Trap HP: 20, Duration: 112 sec, Blind chance: 80%,
 [Lv 5]: Trap HP: 25, Duration: 140 sec, Blind chance: 90%`,
-    img: skillImgNo,
+    img: flasher,
   },
   {
     id: "glacialTrap",
@@ -313,7 +330,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Water
 [Lv 3]: Trap HP: 15,
 [Lv 4]: Trap HP: 20,
 [Lv 5]: Trap HP: 25`,
-    img: skillImgNo,
+    img: glacialTrap,
   },
   {
     id: "landMine",
@@ -343,7 +360,7 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Earth
 [Lv 3]: Trap HP: 15,
 [Lv 4]: Trap HP: 20,
 [Lv 5]: Trap HP: 25`,
-    img: skillImgNo,
+    img: landMine,
   },
   {
     id: "removeTrap",
@@ -362,7 +379,7 @@ Target: Trap
 Range: 2
 Requirement: Trap Research Lv: 5
 Description: Removes a trap that has been set on the ground, as well as regain that Trap.`,
-    img: skillImgNo,
+    img: removeTrap,
   },
   {
     id: "sandman",
@@ -392,7 +409,7 @@ Description: Deploys trap at a targeted location that releases a sedative when t
 [Lv 3]: Trap HP: 15, Duration: 84 sec, Sleep chance: 70%,
 [Lv 4]: Trap HP: 20, Duration: 112 sec, Sleep chance: 80%,
 [Lv 5]: Trap HP: 25, Duration: 140 sec, Sleep chance: 90%`,
-    img: skillImgNo,
+    img: sandman,
   },
   {
     id: "shockwaveTrap",
@@ -423,7 +440,7 @@ Description: Deploys trap that releases a shockwave when triggered, drains the t
 [Lv 3]: Trap HP: 15, Duration: 69 sec, SP Burn: 6%,
 [Lv 4]: Trap HP: 20, Duration: 92 sec, SP Burn: 7%,
 [Lv 5]: Trap HP: 25, Duration: 115 sec, SP Burn: 8%`,
-    img: skillImgNo,
+    img: shockwaveTrap,
   },
   {
     id: "skidTrap",
@@ -452,7 +469,7 @@ Description: Deploys trap that causes any enemy that steps on it to slip and sli
 [Lv 3]: Trap HP: 15, Duration: 84 sec, Knock Back: 8 cells,
 [Lv 4]: Trap HP: 20, Duration: 112 sec, Knock Back: 9 cells,
 [Lv 5]: Trap HP: 25, Duration: 140 sec, Knock Back: 10 cells`,
-    img: skillImgNo,
+    img: skidTrap,
   },
   {
     id: "trapResearch",
