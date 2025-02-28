@@ -47,7 +47,7 @@ Description: Master the art of Falcon command. Increasing the chance to auto-cas
 [Lv 3]: Auto Blitz chance +6%,
 [Lv 4]: Auto Blitz chance +8%,
 [Lv 5]: Auto Blitz chance +10%`,
-    img: skillImgNo,
+    img: falconryMastery,
   }, 
   {
     id: "steelCrow",
