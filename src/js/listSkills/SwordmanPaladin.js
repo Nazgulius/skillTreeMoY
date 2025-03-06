@@ -27,7 +27,8 @@ Description: Unleashes a divine cross with immense pressure on a single target, 
 [Lv 2]: Atk or MAtk 400%,
 [Lv 3]: Atk or MAtk 550%,
 [Lv 4]: Atk or MAtk 750%,
-[Lv 5]: Atk or MAtk 850%`,
+[Lv 5]: Atk or MAtk 850%
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 1400; Fixed Cast Time: 600.`,
     img: skillImgNo,
   },
   {
@@ -74,7 +75,9 @@ Description: Embrace the power of sacrifice to boost your Attack and Skill Damag
 [Lv 2]: Extra Damage 1.1 x HP Drained,
 [Lv 3]: Extra Damage 1.2 x HP Drained,
 [Lv 4]: Extra Damage 1.3 x HP Drained,
-[Lv 5]: Extra Damage 1.4 x HP Drained`,
+[Lv 5]: Extra Damage 1.4 x HP Drained
+Now, HP consumption occurs only once per use of the skill.
+`,
     img: skillImgNo,
   },
   {
@@ -103,7 +106,8 @@ Description: Requires a Shield equipped. Enable the chance of striking an enemy 
 [Lv 7]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
 [Lv 8]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
 [Lv 9]: Variable C.Time: 0.6 Seconds, Range: 10 cells,
-[Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells`,
+[Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
+Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 600.`,
     img: skillImgNo,
   },
 ];

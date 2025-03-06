@@ -206,7 +206,8 @@ Description: Kick up a cloud of sand, dealing Earth elemental damage to enemies 
 [Lv 7]: Atk 240%,
 [Lv 8]: Atk 260%,
 [Lv 9]: Atk 280%,
-[Lv 10]: Atk 300%`,
+[Lv 10]: Atk 300%
+Details: AfterCastActDelay set as ASPD; Cooldown of 1000.`,
     img: skillImgNo,
   },
   

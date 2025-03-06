@@ -141,7 +141,8 @@ Description: Channel a divine cross around yourself and sacrificing 10% of your 
 [Lv 7]: Atk or MAtk 275% x Hits,
 [Lv 8]: Atk or MAtk 300% x Hits,
 [Lv 9]: Atk or MAtk 325% x Hits,
-[Lv 10]: Atk or MAtk 350% x Hits`,
+[Lv 10]: Atk or MAtk 350% x Hits
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 1100; Fixed Cast Time: 400; Cooldown: 1500.`,
     img: skillImgNo,
   },
   {

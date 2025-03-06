@@ -59,7 +59,11 @@ Description: Command your falcon to execute a swift dive, delivering a physical 
 [Lv 7]: Blitz Beat Damage x [1.7 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 7% + one third of the Auto-Blitz Beat chance.
 [Lv 8]: Blitz Beat Damage x [1.8 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 8% + one third of the Auto-Blitz Beat chance.
 [Lv 9]: Blitz Beat Damage x [1.9 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 9% + one third of the Auto-Blitz Beat chance.
-[Lv 10]: Blitz Beat Damage x [2 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 10% + one third of the Auto-Blitz Beat chance.`,
+[Lv 10]: Blitz Beat Damage x [2 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 10% + one third of the Auto-Blitz Beat chance.
+New calculation:
+Damage = ((Skill Lv × 10) + (Steel Crow Lv × 10) + Agi + (Dex ÷ 5) + (Luk ÷ 3) + (Matk × (Int / 80)) × BlitzBeat Hits) × ((Int / 80) + (Skill Lv × 0.1)).
+Details: AfterCastActDelay set as ASPD + 220; CastTime varying between 410 and 1400; Fixed Cast Time: 600; Cooldown: 1500.
+`,
     img: skillImgNo,
   },
   {
@@ -120,7 +124,8 @@ Description: Fires a powerful arrow towards a target point, dealing heavy damage
 [Lv 7]: Atk 870%,
 [Lv 8]: Atk 980%,
 [Lv 9]: Atk 1090%,
-[Lv 10]: Atk 1200%`,
+[Lv 10]: Atk 1200%
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 200 + (100 × Skill Lv); Fixed Cast Time: 500; Cooldown: 2000.`,
     img: skillImgNo,
   },
   {
@@ -178,7 +183,9 @@ Description: Increases Movement Speed and Flee Rate for you and party members fo
 [Lv 7]: Move Speed +29%, Flee Rate +7%,
 [Lv 8]: Move Speed +31%, Flee Rate +8%,
 [Lv 9]: Move Speed +33%, Flee Rate +9%,
-[Lv 10]: Move Speed +35%, Flee Rate +10%`,
+[Lv 10]: Move Speed +35%, Flee Rate +10%
+New calculation: Bonus% = 5 + (Skill Lv × 2).
+`,
     img: skillImgNo,
   },
 ];

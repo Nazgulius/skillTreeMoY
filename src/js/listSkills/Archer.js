@@ -73,7 +73,10 @@ Description: Unleashes a barrage of arrows, raining down on enemies within a 7x7
 [Lv 7]: Wave ATK 85%, Duration: 3.1 s,
 [Lv 8]: Wave ATK 90%, Duration: 3.3 s,
 [Lv 9]: Wave ATK 95%, Duration: 3.5 s,
-[Lv 10]: Wave ATK 100%, Duration: 3.7 s,`,
+[Lv 10]: Wave ATK 100%, Duration: 3.7 s,
+New calculation: ATK% = 50 + (5 × Skill Lv) * (1 + (BaseLevel² / 10000)).
+Details: AfterCastActDelay set as ASPD + 220; CastTime between 70 and 700; AmmoAmount: 1.
+`,
     img: arrowShower,
   },
   {
@@ -93,6 +96,7 @@ Target: Enemy
 Range: Bow + Vulture's Eye Range
 Requirement: None
 Description: Draw their bowstring to its maximum tension, firing a powerful volley that not only deals damage but also knocksback the target 6 cells and reduces their Movement Speed by 15%. Consumes: 1x Arrow.
+Targets pushed by Charge Arrow cannot be pushed again for 4 seconds.
 [Lv 1]: Atk 140%,
 [Lv 2]: Atk 180%,
 [Lv 3]: Atk 220%,
@@ -102,7 +106,8 @@ Description: Draw their bowstring to its maximum tension, firing a powerful voll
 [Lv 7]: Atk 380%,
 [Lv 8]: Atk 420%,
 [Lv 9]: Atk 460%,
-[Lv 10]: Atk 500%`,
+[Lv 10]: Atk 500%
+`,
     img: chargeArrow,
   },
   {

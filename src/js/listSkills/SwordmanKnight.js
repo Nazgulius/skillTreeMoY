@@ -89,7 +89,9 @@ Description: Requires a Sword-class weapon. Deals physical damage to all enemies
 [Lv 7]: Atk 170% x Hits,
 [Lv 8]: Atk 180% x Hits,
 [Lv 9]: Atk 190% x Hits,
-[Lv 10]: Atk 200% x Hits`,
+[Lv 10]: Atk 200% x Hits
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 200; Fixed Cast Time: 400; Cooldown: 1000.
+`,
     img: skillImgNo,
   },
   {
@@ -113,7 +115,8 @@ Description: Requires Swords Class Weapon. Quickly approach and attack a distant
 [Lv 2]: Atk 300%, Range: 7,
 [Lv 3]: Atk 400%, Range: 8,
 [Lv 4]: Atk 500%, Range: 9,
-[Lv 5]: Atk 600%, Range: 10`,
+[Lv 5]: Atk 600%, Range: 10
+Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 400.`,
     img: skillImgNo,
   },
   {
@@ -218,7 +221,8 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear into a sing
 [Lv 7]: Atk 170% x Hits,
 [Lv 8]: Atk 180% x Hits,
 [Lv 9]: Atk 190% x Hits,
-[Lv 10]: Atk 200% x Hits`,
+[Lv 10]: Atk 200% x Hits
+New calculation: ATK% = (20 × Skill Lv) + (Stabbing Stacks × 2).`,
     img: skillImgNo,
   },
   
@@ -338,7 +342,8 @@ Description: Requires Spear Class Weapon. Swings the equipped spear forward to a
 [Lv 7]: Atk 310% + VIT and B. Level Bonus,
 [Lv 8]: Atk 340% + VIT and B. Level Bonus,
 [Lv 9]: Atk 370% + VIT and B. Level Bonus,
-[Lv 10]: Atk 400% + VIT and B. Level Bonus`,
+[Lv 10]: Atk 400% + VIT and B. Level Bonus
+Details: AfterCastActDelay set as ASPD + 220; Note: Has Hit -4.`,
     img: skillImgNo,
   },
 ];

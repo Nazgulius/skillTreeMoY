@@ -34,7 +34,11 @@ Description: Fires a rapid flurry of arrows at a targeted enemy, with damage inc
 [Lv 7]: Atk 1270%,
 [Lv 8]: Atk 1380%,
 [Lv 9]: Atk 1490%,
-[Lv 10]: Atk 1600%`,
+[Lv 10]: Atk 1600%
+using Arrow Vulcan after Slinging/Musical Strike now adds 3 hits to the skill.
+New calculation: ATK% = (100 + (8 × Skill Lv)) × Hits.
+Details: HitCount of 9; AfterCastActDelay set as ASPD + 220; CastTime: 400 + (100 × Skill Lv); Fixed Cast Time: 600; Cooldown: 1500; AmmoAmount: 1.
+`,
     img: skillImgNo,
   },
   {
@@ -82,7 +86,9 @@ Description: Emits a high-frequency sound wave at an enemy, causing magical dama
 [Lv 2]: MAtk 900%,
 [Lv 3]: MAtk 1100%,
 [Lv 4]: MAtk 1300%,
-[Lv 5]: MAtk 1500%`,
+[Lv 5]: MAtk 1500%
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (200 × Skill Lv); Fixed Cast Time: 600; Cooldown: 1500.
+`,
     img: skillImgNo,
   },
   {

@@ -31,7 +31,9 @@ Description: Requires Swords Class Weapon. Produces a special aura around the sw
 [Lv 7]: True Damage +350,
 [Lv 8]: True Damage +400,
 [Lv 9]: True Damage +450,
-[Lv 10]: True Damage +500`,
+[Lv 10]: True Damage +500
+Now, in addition to granting true damage, the skill also increases the user’s total true damage by (5 + Skill Lv)%.
+True Damage Bonus: 50 + Skill Lv + Crit (for Basic Attacks, the bonus is doubled).`,
     img: skillImgNo,
   },
   {
@@ -143,7 +145,9 @@ Description: Requires Two-Handed Sword Class Weapon. Allows the user to block ph
 [Lv 7]: Block +41%,
 [Lv 8]: Block +44%,
 [Lv 9]: Block +47%,
-[Lv 10]: Block +50%`,
+[Lv 10]: Block +50%
+To prevent abuse, the user no longer dodges attacks; instead, they mitigate 50% of the damage received, and the mitigated damage is added as bonus damage (not exceeding the user’s maximum HP).
+Details: AfterCastActDelay set as ASPD + 220.`,
     img: skillImgNo,
   },
   {
@@ -173,7 +177,8 @@ Description: Requires Spear Class Weapon. Throws your spear with a spiraling mot
 [Lv 8]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
 [Lv 9]: Variable C.Time: 0.6 Seconds, Range: 10 cells,
 [Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
-Formula: ATK%: (100 + (((W.Weight / 10) + (20 - Spear Boomerang Lv)) x Skill Lv)) x Hits`,
+Formula: ATK%: (100 + (((W.Weight / 10) + (20 - Spear Boomerang Lv)) x Skill Lv)) x Hits
+Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 600.`,
     img: skillImgNo,
   },
 ];

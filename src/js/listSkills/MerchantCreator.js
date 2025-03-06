@@ -35,7 +35,8 @@ Description: Toss 1 Bottle Grenade and 1 Acid Bottle at a targeted enemy, unleas
 [Lv 7]: 7 Hits, Chemical Corrosion chance: 7%,
 [Lv 8]: 8 Hits, Chemical Corrosion chance: 8%,
 [Lv 9]: 9 Hits, Chemical Corrosion chance: 9%,
-[Lv 10]: 10 Hits, Chemical Corrosion chance: 10%`,
+[Lv 10]: 10 Hits, Chemical Corrosion chance: 10%
+New calculation: ATK% = ((1000 + (150 × Skill Lv)) × T.Vit) / 100.`,
     img: skillImgNo,
   },
   {

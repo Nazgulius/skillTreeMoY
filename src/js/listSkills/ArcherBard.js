@@ -33,7 +33,8 @@ Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. 
 [Lv 7]: Atk +14, MAtk +14, Aspd +7%,
 [Lv 8]: Atk +16, MAtk +16, Aspd +8%,
 [Lv 9]: Atk +18, MAtk +18, Aspd +9%,
-[Lv 10]: Atk +20, MAtk +20, Aspd +10%`,
+[Lv 10]: Atk +20, MAtk +20, Aspd +10%
+`,
     img: skillImgNo,
   },
   {
@@ -59,7 +60,10 @@ Description: Fires a powerful volley of arrows using an instrument. The Arrows e
 [Lv 2]: Atk 160% x 2 Hits,
 [Lv 3]: Atk 190% x 2 Hits,
 [Lv 4]: Atk 220% x 2 Hits,
-[Lv 5]: Atk 250% x 2 Hits`,
+[Lv 5]: Atk 250% x 2 Hits
+New calculation: ATK% = (50 + Crit) + (30 × Skill Lv).
+Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed Cast Time: 400; AmmoAmount: 1.
+`,
     img: skillImgNo,
   },
   {
@@ -88,7 +92,13 @@ Description: Plays a discordant tune, dealing Neutral magic damage to all enemie
 [Lv 2]: (Atk + MAtk) x 60% every 3 seconds,
 [Lv 3]: (Atk + MAtk) x 90% every 3 seconds,
 [Lv 4]: (Atk + MAtk) x 120% every 3 seconds,
-[Lv 5]: (Atk + MAtk) x 150% every 3 seconds`,
+[Lv 5]: (Atk + MAtk) x 150% every 3 seconds
+The interval between hits is now calculated based on the user’s attack speed.
+New Hit/Sec calculation:
+Hit/Sec = 1000 ÷ ((4000 - (20 × ASPD)) × 3).
+Now the skill can trigger autocast for both physical and magical modes.
+It does not disable SP regeneration, but reduces regeneration by 70% and increases the regeneration time by 30%.
+`,
     img: skillImgNo,
   },
   {
@@ -118,7 +128,9 @@ Description: Performs a song that will boost Max HP and Healings Received of the
 [Lv 7]: MaxHP +16%, Healings Received +14%,
 [Lv 8]: MaxHP +17%, Healings Received +16%,
 [Lv 9]: MaxHP +18%, Healings Received +18%,
-[Lv 10]: MaxHP +20%, Healings Received +20%`,
+[Lv 10]: MaxHP +20%, Healings Received +20%
+Additional Benefits and Adjustments: Heals 5% of allies’ HP when using the skill; increases MaxHP by (2 × Skill Lv)%; heals 2% of the user’s HP every (25 - (Skill Lv × 2)) seconds.
+`,
     img: skillImgNo,
   },
   {
@@ -186,7 +198,15 @@ Description: Extends the duration of all active songs, dances, and party buff du
 [Lv 2]: Encore duration: 60 seconds,
 [Lv 3]: Encore duration: 80 seconds,
 [Lv 4]: Encore duration: 100 seconds,
-[Lv 5]: Encore duration: 120 seconds`,
+[Lv 5]: Encore duration: 120 seconds
+The functionality has been modified to improve usability.
+When activated, it reduces the Cooldown of all active songs/dances by 50% and increases their duration by 50% (based on their current duration).
+Synergies:
+Slinging/Musical Strike: increases the final ATK% by 10% per active song/dance.
+Arrow Vulcan: increases the final ATK% by 5% per active song/dance.
+Reverberation: reduces SP cost and Cooldown by 5% per active song/dance.
+Dissonance/Cringe Dance: reduces physical damage received by 5% per active song/dance.
+`,
     img: skillImgNo,
   },
   
@@ -240,7 +260,9 @@ Description: Performs a song that will boost Flee and Perfect Dodge of the user 
 [Lv 7]: Flee +32, Perfect Dodge +7,
 [Lv 8]: Flee +34, Perfect Dodge +8,
 [Lv 9]: Flee +36, Perfect Dodge +9,
-[Lv 10]: Flee +40, Perfect Dodge +10`,
+[Lv 10]: Flee +40, Perfect Dodge +10
+Additional Benefits and Adjustments: Perfect Dodge +1 × Skill Lv; Flee: +20 + (Skill Lv × 2); adds 1% × Skill Lv chance to dodge any damage.
+`,
     img: skillImgNo,
   },
   {
@@ -313,7 +335,9 @@ Description: Performs a song that will shorten Variable Cast Time and After Cast
 [Lv 7]: VCT -14%, Cast Delay -21%,
 [Lv 8]: VCT -16%, Cast Delay -24%,
 [Lv 9]: VCT -18%, Cast Delay -27%,
-[Lv 10]: VCT -20%, Cast Delay -30%`,
+[Lv 10]: VCT -20%, Cast Delay -30%
+Additional Benefits and Adjustments: Reduces VariableCastTime, FixedCastTime, and AfterCastDelay by (5 + (Skill Lv × 2))%.
+`,
     img: skillImgNo,
   },
   {
@@ -384,7 +408,10 @@ Description: Performs a song that will boost attack speed of the user and party 
 [Lv 7]: Aspd +14%,
 [Lv 8]: Aspd +16%,
 [Lv 9]: Aspd +18%,
-[Lv 10]: Aspd +20%`,
+[Lv 10]: Aspd +20%
+Additional Benefits and Adjustments: Reduces the user’s After Attack Delay by 5 + (Skill Lv × 2)%; increases enemies’ After Attack Delay by 5 + (Skill Lv × 2)% for 5 seconds (only for the summoner); True ATK/MATK +10 × Skill Lv.
+
+`,
     img: skillImgNo,
   },
   {

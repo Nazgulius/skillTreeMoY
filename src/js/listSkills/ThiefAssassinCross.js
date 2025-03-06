@@ -78,7 +78,9 @@ Description: Unleashes a powerful attack that damages all enemies in a 5x5 area 
 [Lv 7]: Atk 1040%, Status Chance: 40%,
 [Lv 8]: Atk 1160%, Status Chance: 45%,
 [Lv 9]: Atk 1280%, Status Chance: 50%,
-[Lv 10]: Atk 1400%, Status Chance: 55%`,
+[Lv 10]: Atk 1400%, Status Chance: 55%
+Details: AfterCastActDelay set as ASPD + 220; CastTime and Fixed Cast Time of 500; Cooldown of 1000.
+`,
     img: skillImgNo,
   },
   {
@@ -110,7 +112,9 @@ Description: Deals powerful Magical Poison Damage to a target. Damage scales wit
 [Lv 7]: Matk 1410%,
 [Lv 8]: Matk 1540%,
 [Lv 9]: Matk 1670%,
-[Lv 10]: Matk 1800%`,
+[Lv 10]: Matk 1800%
+Details: AfterCastActDelay set as ASPD + 220; CastTime of 500 + (100 × Skill Lv); Fixed Cast Time: 500; Cooldown of 1500.
+`,
     img: skillImgNo,
   },
 ];

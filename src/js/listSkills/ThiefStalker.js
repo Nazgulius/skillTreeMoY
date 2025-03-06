@@ -76,7 +76,9 @@ Description: Adds +5 True ATK and MATK per level learned. Each basic attack has 
 [Lv 7]: Auto-Cast Level: 6, Auto-Cast Chance: 18%, Auto-Cast SP Cost: +15%,
 [Lv 8]: Auto-Cast Level: 6, Auto-Cast Chance: 17%, Auto-Cast SP Cost: +10%,
 [Lv 9]: Auto-Cast Level: 7, Auto-Cast Chance: 16%, Auto-Cast SP Cost: +5%,
-[Lv 10]: Auto-Cast Level: 7, Auto-Cast Chance: 15%, Auto-Cast SP Cost: +0%`,
+[Lv 10]: Auto-Cast Level: 7, Auto-Cast Chance: 15%, Auto-Cast SP Cost: +0%
+Now, Simulation opens up a list of possible skills to be autocast, including the user’s own skills.
+`,
     img: skillImgNo,
   },
   {

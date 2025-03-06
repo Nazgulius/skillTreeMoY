@@ -269,7 +269,13 @@ Description: Creates Poison Bottles. The success rate is determined by your Base
 [Lv 2]: Additional Efficiency -75%,
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
+[Lv 5]: Full Efficiency
+
+Poison Bottle
+New calculation:
+For Basic Attacks: ATK% + (15 + Skill Lv × 7),
+For Skills: ATK%/MATK% + (5 + Skill Lv × 7)
+`,
     img: skillImgNo,
   },  
   {

@@ -59,7 +59,10 @@ Description: Fires a powerful volley of arrows using an whip. The Arrows element
 [Lv 2]: Atk 160% x 2 Hits,
 [Lv 3]: Atk 190% x 2 Hits,
 [Lv 4]: Atk 220% x 2 Hits,
-[Lv 5]: Atk 250% x 2 Hits`,
+[Lv 5]: Atk 250% x 2 Hits
+New calculation: ATK% = (50 + Crit) + (30 × Skill Lv).
+Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed Cast Time: 400; AmmoAmount: 1.
+`,
     img: skillImgNo,
   },
   {
@@ -89,7 +92,13 @@ Description: Performs a corny dance, dealing Neutral magic damage to all enemies
 [Lv 2]: (Atk + MAtk) x 60% every 3 seconds,
 [Lv 3]: (Atk + MAtk) x 90% every 3 seconds,
 [Lv 4]: (Atk + MAtk) x 120% every 3 seconds,
-[Lv 5]: (Atk + MAtk) x 150% every 3 seconds`,
+[Lv 5]: (Atk + MAtk) x 150% every 3 seconds
+The interval between hits is now calculated based on the user’s attack speed.
+New Hit/Sec calculation:
+Hit/Sec = 1000 ÷ ((4000 - (20 × ASPD)) × 3).
+Now the skill can trigger autocast for both physical and magical modes.
+It does not disable SP regeneration, but reduces regeneration by 70% and increases the regeneration time by 30%.
+`,
     img: skillImgNo,
   },
   {
@@ -119,7 +128,9 @@ Description: Performs a dance that will boost Max SP and reduce SP Cost of the u
 [Lv 7]: MaxSP +16%, SP consumption: -12%,
 [Lv 8]: MaxSP +17%, SP consumption: -13%,
 [Lv 9]: MaxSP +18%, SP consumption: -14%,
-[Lv 10]: MaxSP +20%, SP consumption: -15%`,
+[Lv 10]: MaxSP +20%, SP consumption: -15%
+Additional Benefits and Adjustments: Increases MaxSP by (Skill Lv × 2)%; reduces SP Consumption by (Skill Lv × 2)%; increases SP Recovery by (Skill Lv × 2)%.
+`,
     img: skillImgNo,
   },
   {
@@ -187,7 +198,15 @@ Description: Extends the duration of all active songs, dances, and party buff du
 [Lv 2]: Encore duration: 60 seconds,
 [Lv 3]: Encore duration: 80 seconds,
 [Lv 4]: Encore duration: 100 seconds,
-[Lv 5]: Encore duration: 120 seconds`,
+[Lv 5]: Encore duration: 120 seconds
+The functionality has been modified to improve usability.
+When activated, it reduces the Cooldown of all active songs/dances by 50% and increases their duration by 50% (based on their current duration).
+Synergies:
+Slinging/Musical Strike: increases the final ATK% by 10% per active song/dance.
+Arrow Vulcan: increases the final ATK% by 5% per active song/dance.
+Reverberation: reduces SP cost and Cooldown by 5% per active song/dance.
+Dissonance/Cringe Dance: reduces physical damage received by 5% per active song/dance.
+`,
     img: skillImgNo,
   },
   {
@@ -238,7 +257,9 @@ Description: Performs a dance that will boost Hit and Long Range Damage of all p
 [Lv 7]: Perfect Hit +7, Ranged Damage +14%,
 [Lv 8]: Perfect Hit +8, Ranged Damage +16%,
 [Lv 9]: Perfect Hit +9, Ranged Damage +18%,
-[Lv 10]: Perfect Hit +10, Ranged Damage +20%`,
+[Lv 10]: Perfect Hit +10, Ranged Damage +20%
+Additional Benefits and Adjustments: Perfect Hit +1 × Skill Lv; Ranged Damage: +(5 + Skill Lv)%; adds 1% × Skill Lv chance to ignore the target’s defense.
+`,
     img: skillImgNo,
   },
   {
@@ -311,7 +332,8 @@ Description: Performs a dance that will boost the Crit and Critical Damage of th
 [Lv 7]: Crit +7, Critical Damage + 14%,
 [Lv 8]: Crit +8, Critical Damage + 16%,
 [Lv 9]: Crit +9, Critical Damage + 18%,
-[Lv 10]: Crit +10, Critical Damage + 20%`,
+[Lv 10]: Crit +10, Critical Damage + 20%
+Additional Benefits and Adjustments: Crit +1 × Skill Lv; Critical Shield +1 × Skill Lv; Critical Damage + (5 + Skill Lv)%.`,
     img: skillImgNo,
   },
   {
@@ -384,7 +406,8 @@ Description: Perform a dance that increases the movement speed of you and your p
 [Lv 7]: Allies MS +19%, Attacker MS and ASPD -17% for 6.5 seconds,
 [Lv 8]: Allies MS +21%, Attacker MS and ASPD -18% for 6 seconds,
 [Lv 9]: Allies MS +23%, Attacker MS and ASPD -19% for 5.5 seconds,
-[Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds`,
+[Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds
+Additional Benefits and Adjustments: Increases movement speed by (5 + (Skill Lv × 2))%; reduces enemies’ movement speed by 5 + (Skill Lv × 2)% for 5 seconds (only for the summoner); True Defense +10 × Skill Lv.`,
     img: skillImgNo,
   },
   {

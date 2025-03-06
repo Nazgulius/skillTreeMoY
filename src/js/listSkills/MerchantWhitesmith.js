@@ -113,7 +113,8 @@ Description: Ignite your attacks with the power of fire, adding flat Fire damage
 [Lv 7]: Chance of Break Weapon: 7%, Armor: 4.9%, Duration: 45 seconds,
 [Lv 8]: Chance of Break Weapon: 8%, Armor: 5.6%, Duration: 50 seconds,
 [Lv 9]: Chance of Break Weapon: 9%, Armor: 6.3%, Duration: 55 seconds,
-[Lv 10]: Chance of Break Weapon: 10%, Armor: 7.0%, Duration: 60 seconds`,
+[Lv 10]: Chance of Break Weapon: 10%, Armor: 7.0%, Duration: 60 seconds
+`,
     img: skillImgNo,
   },
 ];

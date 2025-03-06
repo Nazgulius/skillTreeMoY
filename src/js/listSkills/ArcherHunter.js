@@ -124,6 +124,7 @@ Target: Enemy
 Range: 12
 Requirement: Falconry Mastery Lv: 1
 Description: Commands the Falcon to dive at a single target and strike repeatedly to inflict special ranged damage to all enemies in a [3*3] area around the target. Falcon damage increases with owners AGI, DEX, INT and MATK. For Bows: Every 3 LUK points, auto-cast chance is increased by 1%. For Daggers: Every 2 LUK points, auto-cast chance is increased by 1%.
+The skill no longer ignores DEF.
 [Lv 1]: Hits: 2,
 [Lv 2]: Hits: 2,
 [Lv 3]: Hits: 3,
@@ -133,7 +134,10 @@ Description: Commands the Falcon to dive at a single target and strike repeatedl
 [Lv 7]: Hits: 5,
 [Lv 8]: Hits: 5,
 [Lv 9]: Hits: 6,
-[Lv 10]: Hits: 6`,
+[Lv 10]: Hits: 6
+New calculation: Damage = (Skill Lv × 10) + (Steel Crow Lv × 10) + Agi + (Dex ÷ 5) + (Luk ÷ 3) + (Matk × (Int / 80)).
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (50 × Skill Lv); Fixed Cast Time: 600.
+`,
     img: blitzBeat,
   },
   {
