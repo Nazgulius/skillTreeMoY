@@ -3,6 +3,12 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import doubleAttack from '../../img/icon_thf/icon_thf_1.png';
+import detoxify from '../../img/icon_thf/icon_thf_2.png';
+import envenom from '../../img/icon_thf/icon_thf_3.png';
+import hiding from '../../img/icon_thf/icon_thf_4.png';
+import improveDodge from '../../img/icon_thf/icon_thf_5.png';
+import steal from '../../img/icon_thf/icon_thf_6.png';
 
 // список скилов Thief
 export const skillsThief = [    
@@ -29,7 +35,7 @@ Description: Increases FLEE and Movement Speed.
 [Lv 8]: FLEE +24, Movement Speed: +8%,
 [Lv 9]: FLEE +27, Movement Speed: +9%,
 [Lv 10]: FLEE +30, Movement Speed: +10%`,
-    img: skillImgNo,
+    img: improveDodge,
   },
   {
     id: "doubleAttack",
@@ -57,7 +63,7 @@ Description: Grants a chance to inflict two hits instead of one when attacking w
 [Lv 8]: 56% chance,
 [Lv 9]: 63% chance,
 [Lv 10]: 70% chance`,
-    img: skillImgNo,
+    img: doubleAttack,
   },
   {
     id: "envenom",
@@ -88,7 +94,7 @@ Range: 2
 [Lv 8]: MAtk 260%, Poison Chance: 42%,
 [Lv 9]: MAtk 280%, Poison Chance: 46%,
 [Lv 10]: MAtk 300%, Poison Chance: 50%`,
-    img: skillImgNo,
+    img: envenom,
   },
   {
     id: "detoxify",
@@ -114,7 +120,7 @@ Description: Attempts to cleanse a single target from the Poison status. If succ
 [Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
 [Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
 [Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
-    img: skillImgNo,
+    img: detoxify,
   },
   {
     id: "steal",
@@ -145,7 +151,7 @@ Description: Steals an item from a specified target. If target's DEX is higher t
 [Lv 8]: 50% Base Chance,
 [Lv 9]: 56% Base Chance,
 [Lv 10]: 62% Base Chance`,
-    img: skillImgNo,
+    img: steal,
   },
   {
     id: "hiding",
@@ -178,7 +184,7 @@ Description: Burrow underground to evade enemy attacks. The hidden status can be
 [Lv 8]: SP Drain: 1 SP every 8 seconds. After-cast delay: 0.3 seconds,
 [Lv 9]: SP Drain: 1 SP every 9 seconds. After-cast delay: 0.2 seconds,
 [Lv 10]: SP Drain: 1 SP every 10 second. After-cast delay: 0.1 seconds`,
-    img: skillImgNo,
+    img: hiding,
   },
   {
     id: "sprinkleSand",
