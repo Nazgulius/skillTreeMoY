@@ -3,6 +3,10 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import assumptio from '../../img/icon_hpr/icon_hpr_1.png'; 
+import basilica from '../../img/icon_hpr/icon_hpr_2.png'; 
+import meditatio from '../../img/icon_hpr/icon_hpr_3.png'; 
+import manaRecharge from '../../img/icon_hpr/icon_hpr_4.png'; 
 
 // список скилов HighPriest
 export const skillsHighPriest = [  
@@ -29,7 +33,7 @@ Description: Increases target's Defense, and recieved Healing amount for, the sk
 [Lv 3]: DEF +150, Healing +6%, Duration: 60 seconds,
 [Lv 4]: DEF +200, Healing +8%, Duration: 80 seconds,
 [Lv 5]: DEF +250, Healing +10%, Duration: 100 seconds`,
-    img: skillImgNo,
+    img: assumptio,
   },
   {
     id: "basilica",
@@ -55,7 +59,7 @@ Description: Creates a sacred basilica in a [5x5] area around the user, sharing 
 [Lv 3]: SP Cost: 80, Duration: 40,
 [Lv 4]: SP Cost: 90, Duration: 50,
 [Lv 5]: SP Cost: 100, Duration: 60`,
-    img: skillImgNo,
+    img: basilica,
   },
   {
     id: "manaRecharge",
@@ -78,7 +82,7 @@ Description: Reduces the amount of SP, that is consumed when using skills.
 [Lv 3]: -12% SP Consumption,
 [Lv 4]: -16% SP Consumption,
 [Lv 5]: -20% SP Consumption`,
-    img: skillImgNo,
+    img: manaRecharge,
   },
   {
     id: "meditatio",
@@ -107,7 +111,7 @@ Description: Increases SP and, MaxSP Recovery, as well as the amount of, HP rest
 [Lv 8]: MaxSP +8%, SP Recovery +24%,
 [Lv 9]: MaxSP +9%, SP Recovery +27%,
 [Lv 10]: MaxSP +10%, SP Recovery +30%`,
-    img: skillImgNo,
+    img: meditatio,
   },
 ];
 

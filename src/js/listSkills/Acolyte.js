@@ -3,6 +3,20 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import angelus from '../../img/icon_aco/icon_aco_1.png';
+import blessing from '../../img/icon_aco/icon_aco_3.png';
+import cure from '../../img/icon_aco/icon_aco_4.png';
+import decreaseAgility from '../../img/icon_aco/icon_aco_5.png';
+import demonBane from '../../img/icon_aco/icon_aco_6.png';
+import divineProtection from '../../img/icon_aco/icon_aco_7.png';
+import heal from '../../img/icon_aco/icon_aco_8.png';
+import increaseAgility from '../../img/icon_aco/icon_aco_9.png';
+import pneuma from '../../img/icon_aco/icon_aco_10.png';
+import ruwach from '../../img/icon_aco/icon_aco_11.png';
+import teleport from '../../img/icon_aco/icon_aco_13.png';
+import warpPortal from '../../img/icon_aco/icon_aco_14.png';
+import holyLight from '../../img/icon_aco/icon_aco_15.png';
+
 
 // список скилов Acolyte
 export const skillsAcolyte = [ 
@@ -40,7 +54,7 @@ Description: Passively raises Soft Defense and Soft Magic Defense against Demon 
 [Lv 8]: Reduction: 24 + Base Level, Chance of effect: 8%,
 [Lv 9]: Reduction: 27 + Base Level, Chance of effect: 9%,
 [Lv 10]: Reduction: 30 + Base Level, Chance of effect: 10%`,
-    img: skillImgNo,    
+    img: divineProtection,    
   }, 
   {
     id: "demonBane",
@@ -70,7 +84,7 @@ Description: Passively raises damage against Demon and Undead race monsters. Bas
 [Lv 8]: Damage: 24 + Base Level, Chance of effect: 8%,
 [Lv 9]: Damage: 27 + Base Level, Chance of effect: 9%,
 [Lv 10]: Damage: 30 + Base Level, Chance of effect: 10%`,
-    img: skillImgNo, 
+    img: demonBane, 
   },
   {
     id: "heal",
@@ -104,7 +118,7 @@ Description: Restores HP of a single target. This skill is affected by Base Leve
 [Lv 8]: SP Cost: 34,
 [Lv 9]: SP Cost: 37,
 [Lv 10]: SP Cost: 40`,
-    img: skillImgNo, 
+    img: heal, 
   },
   {
     id: "cure",
@@ -126,7 +140,7 @@ Description: Attempts to cleanse a single target from the Silence, Chaos and Bli
 [Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
 [Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
 [Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
-    img: skillImgNo, 
+    img: cure, 
   },
   {
     id: "angelus",
@@ -155,7 +169,7 @@ Description: Increases VIT, Soft Defense and MaxHP on the user and all party mem
 [Lv 8]: VIT +8, Soft Def +40%, HP +400,
 [Lv 9]: VIT +9, Soft Def +45%, HP +450, 
 [Lv 10]: VIT +10, Soft Def +50%, HP +500`,
-    img: skillImgNo, 
+    img: angelus, 
   },
   {
     id: "blessing",
@@ -182,7 +196,7 @@ Description: Temporarily increases STR, INT, DEX and reduces Variable Cast Time 
 [Lv 8]: STR, INT, DEX +8, Variable Cast Time -8%,
 [Lv 9]: STR, INT, DEX +9, Variable Cast Time -9%,
 [Lv 10]: STR, INT, DEX +10, Variable Cast Time -10%`,
-    img: skillImgNo, 
+    img: blessing, 
   },
   {
     id: "increaseAgility",
@@ -209,7 +223,7 @@ Description: Increases targeted characters AGI, Movement and Attack Speed for th
 [Lv 8]: AGI +8, Atk Speed: +8%,
 [Lv 9]: AGI +9, Atk Speed: +9%,
 [Lv 10]: AGI +10, Atk Speed: +10%`,
-    img: skillImgNo, 
+    img: increaseAgility, 
   },  
   {
     id: "decreaseAgility",
@@ -236,7 +250,7 @@ Description: Decreases targeted characters AGI, Movement and Attack Speed for th
 [Lv 8]: AGI -8, Movement Speed: -8%, Duration: 50 Seconds,
 [Lv 9]: AGI -9, Movement Speed: -9%, Duration: 55 Seconds,
 [Lv 10]: AGI -10, Movement Speed: -10%, Duration: 60 Seconds`,
-    img: skillImgNo, 
+    img: decreaseAgility, 
   },
   {
     id: "holyLight",
@@ -266,7 +280,7 @@ Description: Summon holy light to counter evil. When used with Staffs or Books, 
 [Lv 8]: ATK or MATK 380%,
 [Lv 9]: ATK or MATK 415%,
 [Lv 10]: ATK or MATK 450%`,
-    img: skillImgNo, 
+    img: holyLight, 
   },
   {
     id: "ruwach",
@@ -291,7 +305,7 @@ Type: Magical
 Target: Self
 Requirement: None
 Description: Uses 10 SP to summon Holy Spirit that will detect hidden characters in 5x5 cells area around the caster for 10 sec.`,
-    img: skillImgNo, 
+    img: ruwach, 
   },
   {
     id: "teleport",
@@ -309,7 +323,7 @@ Requirement: Ruwach Lv: 1
 Description: Teleports caster to other area. Cant be used in an area that protected by Land Protector.
 [Lv 1]: Random Spot, SP Consumption: 10,
 [Lv 2]: Save Point, SP Consumption: 9`,
-    img: skillImgNo, 
+    img: teleport, 
   },
   {
     id: "warpPortal",
@@ -329,7 +343,7 @@ Description: Creates a Warp Portal that will transport those that enter to the p
 [Lv 1]: 1 custom position available,
 [Lv 2]: 2 custom position available,
 [Lv 3]: 3 custom position available`,
-    img: skillImgNo, 
+    img: warpPortal, 
   },
   {
     id: "pneuma",
@@ -348,7 +362,7 @@ Target: Ground
 Range: 9
 Requirement: Warp Portal Lv: 3
 Description: Uses 10 SP to create, barrier in 3x3 cells around targeted, cell that for 10 sec will protect, anyone inside it from long range, physical attacks.`,
-    img: skillImgNo, 
+    img: pneuma, 
   },
 ];
 

@@ -3,6 +3,24 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import aquaBenedicta from '../../img/icon_aco/icon_aco_2.png';
+import aspersio from '../../img/icon_pri/icon_pri_1.png';
+import bSSacramenti from '../../img/icon_pri/icon_pri_2.png';
+import increaseSPRecovery from '../../img/icon_pri/icon_pri_3.png';
+import gloria from '../../img/icon_pri/icon_pri_4.png';
+import impositioManus from '../../img/icon_pri/icon_pri_5.png';
+import kyrieEleison from '../../img/icon_pri/icon_pri_6.png';
+import lexAeterna from '../../img/icon_pri/icon_pri_7.png';
+import lexDivina from '../../img/icon_pri/icon_pri_8.png';
+import maceMastery from '../../img/icon_pri/icon_pri_9.png';
+import magnusExorcismus from '../../img/icon_pri/icon_pri_10.png';
+import magnificat from '../../img/icon_pri/icon_pri_11.png';
+import statusRecovery from '../../img/icon_pri/icon_pri_12.png';
+import resurrection from '../../img/icon_pri/icon_pri_13.png';
+import safetyWal from '../../img/icon_pri/icon_pri_14.png';
+import sanctuary from '../../img/icon_pri/icon_pri_15.png';
+import suffragium from '../../img/icon_pri/icon_pri_17.png';
+import turnUndead from '../../img/icon_pri/icon_pri_18.png';
 
 // список скилов Priest
 export const skillsPriest = [  
@@ -28,7 +46,7 @@ Description: Creates 1 Holy Water with 1 Empty Bottle while standing in water. T
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
 [Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: aquaBenedicta,
   },
   {
     id: "impositioManus",
@@ -56,7 +74,7 @@ Description: Blesses others by placing, your hands on their head. Increases ATK 
 [Lv 3]: ATK/MATK +15,
 [Lv 4]: ATK/MATK +20,
 [Lv 5]: ATK/MATK +25`,
-    img: skillImgNo,
+    img: impositioManus,
   },
   {
     id: "aspersio",
@@ -84,7 +102,7 @@ Description: Temporarily imbue a single target weapon with the Holy property. Co
 [Lv 3]: Physical and Magical Holy Damage +4%, Duration: 225 sec.
 [Lv 4]: Physical and Magical Holy Damage +5%, Duration: 300 sec.
 [Lv 5]: Physical and Magical Holy Damage +5%, Duration: 300 sec.`,
-    img: skillImgNo,
+    img: aspersio,
   },
   {
     id: "bSSacramenti",
@@ -109,7 +127,7 @@ Description: Blesses a targeted location to endow the armor of all players withi
 [Lv 3]: Area of Effect: 5x5, Duration: 90sec,
 [Lv 4]: Area of Effect: 5x5, Duration: 120sec,
 [Lv 5]: Area of Effect: 7x7, Duration: 150sec`,
-    img: skillImgNo,
+    img: bSSacramenti,
   },
   {
     id: "gloria",
@@ -135,7 +153,7 @@ Description: Temporarily boosts LUK and CRIT DEF to the user and party members. 
 [Lv 3]: LUK: +22, CRIT DEF: +3, Duration: 20sec,
 [Lv 4]: LUK: +26, CRIT DEF: +4, Duration: 25sec,
 [Lv 5]: LUK: +30, CRIT DEF: +5, Duration: 30sec`,
-    img: skillImgNo,
+    img: gloria,
   },
   
   {
@@ -164,7 +182,7 @@ Description: Increases the amount of SP recovered through your natural SP regene
 [Lv 8]: SP Recovery +[24 + 0.8% of MaxSP],
 [Lv 9]: SP Recovery +[27 + 0.9% of MaxSP],
 [Lv 10]: SP Recovery +[30 + 1% of MaxSP]`,
-    img: skillImgNo,
+    img: increaseSPRecovery,
   },
   {
     id: "kyrieEleison",
@@ -193,7 +211,7 @@ Description: Creates a perfect barrier, around a character that will be able to,
 [Lv 8]: Barrier: 26% MaxHP, Blocks 9 Hits,
 [Lv 9]: Barrier: 28% MaxHP, Blocks 9 Hits,
 [Lv 10]: Barrier: 30% MaxHP, Blocks 10 Hits`,
-    img: skillImgNo,
+    img: kyrieEleison,
   },
   {
     id: "lexAeterna",
@@ -218,7 +236,7 @@ Description: Decreases the resistance of the affected target, amplifying the dam
 [Lv 2]: Amplification: [1.4x], AoE: 3x3, Duration: 5 sec,
 [Lv 3]: Amplification: [1.3x], AoE: 5x5, Duration: 6 sec,
 [Lv 4]: Amplification: [1.2x], AoE: 7x7, Duration: 7 sec`,
-    img: skillImgNo,
+    img: lexAeterna,
   },
   {
     id: "lexDivina",
@@ -247,7 +265,7 @@ Description: Silences an enemy, temporarily disabling its use of skills, for a s
 [Lv 3]: Silence Duration: 40sec,
 [Lv 4]: Silence Duration: 50sec,
 [Lv 5]: Silence Duration: 60sec`,
-    img: skillImgNo,
+    img: lexDivina,
   },
   {
     id: "maceMastery",
@@ -276,7 +294,7 @@ Description: Increase attack with Mace Class Weapons. When [Lv 10], it increases
 [Lv 8]: Atk +24, Critcal +8,
 [Lv 9]: Atk +27, Critcal +9,
 [Lv 10]: Atk +30, Critcal +10`,
-    img: skillImgNo,
+    img: maceMastery,
   },
   {
     id: "magnificat",
@@ -299,7 +317,7 @@ Description: Doubles the caster and, party's SP regen for the duration of the sk
 [Lv 3]: Duration: 60 seconds,
 [Lv 4]: Duration: 75 seconds,
 [Lv 5]: Duration: 90 seconds`,
-    img: skillImgNo,
+    img: magnificat,
   },
   {
     id: "magnusExorcismus",
@@ -332,7 +350,7 @@ Description: Summons a purifying cross on the ground, dealing Holy property magi
 [Lv 8]: 5 Waves, Hits x 86% MAtk,
 [Lv 9]: 5 Waves, Hits x 93% MAtk,
 [Lv 10]: 6 Waves, Hits x 100% MAtk`,
-    img: skillImgNo,
+    img: magnusExorcismus,
   },
   {
     id: "resurrection",
@@ -358,7 +376,7 @@ Description: Revives KO'ed character. Catalyst: 1x Blue Gemstone.
 [Lv 2]: Revives with 30% of Max HP,
 [Lv 3]: Revives with 50% of Max HP,
 [Lv 4]: Revives with 80% of Max HP`,
-    img: skillImgNo,
+    img: resurrection,
   },
   {
     id: "safetyWal",
@@ -388,7 +406,7 @@ Description: Constructs a protective barrier at a targeted location that blocks 
 [Lv 8]: Durability: 2400, Blocks Damage 9 times,
 [Lv 9]: Durability: 2700, Blocks Damage 10 times,
 [Lv 10]: Durability: 3000, Blocks Damage 11 times`,
-    img: skillImgNo,
+    img: safetyWal,
   },
   {
     id: "sanctuary",
@@ -418,7 +436,7 @@ Description: Creates a soothing area on a targeted location that will restore HP
 [Lv 8]: Targets: 11, Healing: 800, Duration: 21 sec.
 [Lv 9]: Targets: 12, Healing: 900, Duration: 23 sec.
 [Lv 10]: Targets: 13, Healing: 1000, Duration: 25 sec.`,
-    img: skillImgNo,
+    img: sanctuary,
   },
   {
     id: "statusRecovery",
@@ -437,7 +455,7 @@ Target: Ally
 Range: 9
 Requirement: None
 Description: Cancels abnormal status, effects such as Stun, Frozen or Stone Curse. Inflicts Blind status on Undead monsters.`,
-    img: skillImgNo,
+    img: statusRecovery,
   },
   {
     id: "suffragium",
@@ -458,7 +476,7 @@ Description: Offers a prayer for others by reducing the Casting Time of yourself
 [Lv 1]: 10% reduction in variable casting,
 [Lv 2]: 15% reduction in variable casting,
 [Lv 3]: 20% reduction in variable casting and 0.1 second in fix cast time`,
-    img: skillImgNo,
+    img: suffragium,
   },
   {
     id: "turnUndead",
@@ -491,7 +509,7 @@ Description: Cleanse the darkness with a holy incantation, reducing the Holy res
 [Lv 8]: Holy Resistance -16%, 50% success rate, 53 SP,
 [Lv 9]: Holy Resistance -18%, 50% success rate, 56 SP,
 [Lv 10]: Holy Resistance -20%, 50% success rate, 59 SP`,
-    img: skillImgNo,
+    img: turnUndead,
   },
 ];
 

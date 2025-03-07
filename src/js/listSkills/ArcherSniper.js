@@ -3,6 +3,12 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import trueSight from '../../img/icon_snp/icon_snp_1.png';
+import falconAssault from '../../img/icon_snp/icon_snp_2.png';
+import sharpShooting from '../../img/icon_snp/icon_snp_3.png';
+import windWalk from '../../img/icon_snp/icon_snp_4.png';
+import quickDraw from '../../img/icon_snp/icon_snp_5.png';
+import detonator from '../../img/icon_snp/icon_snp_6.png';
 
 // список скилов Sniper
 export const skillsSniper = [  
@@ -30,7 +36,7 @@ Target: Ground
 Range: 9
 Requirement: Land Mine Lv: 4, Skid Trap Lv: 4, Blast Mine Lv: 3, Ankle Snare Lv: 3, Glacial Trap Lv: 2, Flasher Lv: 2, Claymore Trap Lv: 1, Sandman Lv: 1
 Description: Instantly activates all traps within a 7x7 area. Traps triggered by this skill have their detonation area expanded to 7x7. This skill does not activate traps set by other players. Can activate the following traps: Glacial Trap, Blast Mine, Land Mine, Claymore Trap, Flasher, Sandman.`,
-    img: skillImgNo,
+    img: detonator,
   },
   {
     id: "falconAssault",
@@ -64,7 +70,7 @@ New calculation:
 Damage = ((Skill Lv × 10) + (Steel Crow Lv × 10) + Agi + (Dex ÷ 5) + (Luk ÷ 3) + (Matk × (Int / 80)) × BlitzBeat Hits) × ((Int / 80) + (Skill Lv × 0.1)).
 Details: AfterCastActDelay set as ASPD + 220; CastTime varying between 410 and 1400; Fixed Cast Time: 600; Cooldown: 1500.
 `,
-    img: skillImgNo,
+    img: falconAssault,
   },
   {
     id: "quickDraw",
@@ -94,7 +100,7 @@ Description: Enters the Quickdraw state, reducing your Flee Rate to increase you
 [Lv 8]: Flee -26%, Aspd +16%, Crit +16, Double Attack Chance 21%,
 [Lv 9]: Flee -23%, Aspd +18%, Crit +18, Double Attack Chance 23%,
 [Lv 10]: Flee -20%, Aspd +20%, Crit +20, Double Attack Chance 25%`,
-    img: skillImgNo,
+    img: quickDraw,
   },
   {
     id: "sharpShooting",
@@ -126,7 +132,7 @@ Description: Fires a powerful arrow towards a target point, dealing heavy damage
 [Lv 9]: Atk 1090%,
 [Lv 10]: Atk 1200%
 Details: AfterCastActDelay set as ASPD + 220; CastTime: 200 + (100 × Skill Lv); Fixed Cast Time: 500; Cooldown: 2000.`,
-    img: skillImgNo,
+    img: sharpShooting,
   },
   {
     id: "trueSight",
@@ -156,7 +162,7 @@ Description: Enters the True Sight state, reducing your attack speed to increase
 [Lv 8]: Aspd -26%, Hit +16%, Damage +21%, Crit +16,
 [Lv 9]: Aspd -23%, Hit +18%, Damage +23%, Crit +18,
 [Lv 10]: Aspd -20%, Hit +20%, Damage +25%, Crit +20`,
-    img: skillImgNo,
+    img: trueSight,
   },
   {
     id: "windWalk",
@@ -186,7 +192,7 @@ Description: Increases Movement Speed and Flee Rate for you and party members fo
 [Lv 10]: Move Speed +35%, Flee Rate +10%
 New calculation: Bonus% = 5 + (Skill Lv × 2).
 `,
-    img: skillImgNo,
+    img: windWalk,
   },
 ];
 
