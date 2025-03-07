@@ -3,6 +3,14 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import cloaking from '../../img/icon_ass/icon_ass_1.png'; 
+import poisonWeapon from '../../img/icon_ass/icon_ass_2.png'; 
+import grimtooth from '../../img/icon_ass/icon_ass_3.png'; 
+import katarMastery from '../../img/icon_ass/icon_ass_4.png'; 
+import sonicBlow from '../../img/icon_ass/icon_ass_8.png'; 
+import poisonReact from '../../img/icon_ass/icon_ass_6.png'; 
+import venomDust from '../../img/icon_ass/icon_ass_9.png'; 
+import venomSplasher from '../../img/icon_ass/icon_ass_10.png'; 
 
 // список скилов Assassin
 export const skillsAssassin = [  
@@ -32,7 +40,7 @@ Description: Increase attack with Katars Weapons. When [Lv 10], it increases Att
 [Lv 8]: Atk +32, Critical Rate +80%,
 [Lv 9]: Atk +36, Critical Rate +90%,
 [Lv 10]: Atk +40, Critical Rate +100%`,
-    img: skillImgNo,
+    img: katarMastery,
   },
   {
     id: "cloaking",
@@ -65,7 +73,7 @@ Description: Conceals yourself, allowing movement while hidden. Movement Speed i
 [Lv 8]: Off Wall: 94%, On Wall:124%, 1 SP per 7.0sec,
 [Lv 9]: Off Wall: 97%, On Wall:127%, 1 SP per 8.0sec,
 [Lv 10]: Off Wall:100%, On Wall:130%, 1 SP per 9.0sec`,
-    img: skillImgNo,
+    img: cloaking,
   },
   {
     id: "dualWieldingMastery",
@@ -156,7 +164,7 @@ Description: Strikes a single target with the equipped katar while hidden, deali
 [Lv 8]: Atk (260 + AGI)%, Range 8 cells,
 [Lv 9]: Atk (280 + AGI)%, Range 9 cells,
 [Lv 10]: Atk (300 + AGI)%, Range 9 cells`,
-    img: skillImgNo,
+    img: grimtooth,
   },
   {
     id: "sonicBlow",
@@ -185,7 +193,7 @@ Description: Unleashes a flurry of rapid Katar strikes on the target, with a cha
 [Lv 8]: Atk 1000%, Stun Chance: 26%,
 [Lv 9]: Atk 1100%, Stun Chance: 28%,
 [Lv 10]: Atk 1200%, Stun Chance: 30%`,
-    img: skillImgNo,
+    img: sonicBlow,
   },
    {
     id: "poisonWeapon",
@@ -215,7 +223,7 @@ Description: Temporarily imbue a single target weapon with the Poison property, 
 [Lv 3]: Poison Damage by 4%, Duration: 225 secs, Poisoning chance: 6%,
 [Lv 4]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 8%,
 [Lv 5]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 10%`,
-    img: skillImgNo,
+    img: poisonWeapon,
   },
   {
     id: "poisonReact",
@@ -243,7 +251,7 @@ Description: Amplifies and redirects 70% of the Poison damage received as magic 
 [Lv 8]: Amplifies in 340%, Chance: 48%, Duration: 50 sec,
 [Lv 9]: Amplifies in 370%, Chance: 54%, Duration: 60 sec,
 [Lv 10]: Amplifies in 400%, Chance: 60%, Duration: 60 sec`,
-    img: skillImgNo,
+    img: poisonReact,
   },
   {
     id: "poisonery",
@@ -305,7 +313,7 @@ Description: Contaminates a targeted location with a toxic cloud, reducing the r
 [Lv 8]: Poison resistance Drop: 40% ~ 8%, Durarion: 48 sec,
 [Lv 9]: Poison resistance Drop: 45% ~ 9%, Durarion: 54 sec,
 [Lv 10]: Poison resistance Drop: 50% ~ 10%, Durarion: 60 sec`,
-    img: skillImgNo,
+    img: venomDust,
   },
   {
     id: "venomSplasher",
@@ -335,7 +343,7 @@ Description: Attaches a deadly toxin to a single target, causing a venomous expl
 [Lv 8]: MAtk 1300%, Cooldown: 16 sec,
 [Lv 9]: MAtk 1400%, Cooldown: 18 sec,
 [Lv 10]: MAtk 1500%, Cooldown: 20 sec`,
-    img: skillImgNo,
+    img: venomSplasher,
   },
 ];
 

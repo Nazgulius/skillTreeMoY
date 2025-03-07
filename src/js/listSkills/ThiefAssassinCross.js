@@ -3,6 +3,7 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import meteorAssault from '../../img/icon_asx/icon_asx_3.png'; 
 
 // список скилов Assassin Cross
 export const skillsAssassinCross = [  
@@ -81,7 +82,7 @@ Description: Unleashes a powerful attack that damages all enemies in a 5x5 area 
 [Lv 10]: Atk 1400%, Status Chance: 55%
 Details: AfterCastActDelay set as ASPD + 220; CastTime and Fixed Cast Time of 500; Cooldown of 1000.
 `,
-    img: skillImgNo,
+    img: meteorAssault,
   },
   {
     id: "soulDestroyer",
