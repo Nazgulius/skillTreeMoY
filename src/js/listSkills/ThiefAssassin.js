@@ -11,6 +11,10 @@ import sonicBlow from '../../img/icon_ass/icon_ass_8.png';
 import poisonReact from '../../img/icon_ass/icon_ass_6.png'; 
 import venomDust from '../../img/icon_ass/icon_ass_9.png'; 
 import venomSplasher from '../../img/icon_ass/icon_ass_10.png'; 
+import dualWieldingMastery from '../../img/icon_ass/icon_ass_11.png'; 
+import throwingKnife from '../../img/icon_ass/icon_ass_12.png'; 
+import poisonery from '../../img/icon_ass/icon_ass_13.png'; 
+import vSAnt from '../../img/icon_ass/icon_ass_14.png'; 
 
 // список скилов Assassin
 export const skillsAssassin = [  
@@ -102,7 +106,7 @@ Description: Increase attack with Dual Wielding Weapons. Equipping two weapons a
 [Lv 8]: Atk +32, Dual Wielding Penalty -40%,
 [Lv 9]: Atk +36, Dual Wielding Penalty -45%,
 [Lv 10]: Atk +40, Dual Wielding Penalty -50%`,
-    img: skillImgNo,
+    img: dualWieldingMastery,
   },
   {
     id: "throwingKnife",
@@ -132,7 +136,7 @@ Description: Precisely aims and throws a knife at the target, inflicting physica
 [Lv 8]: Atk 220%,
 [Lv 9]: Atk 235%,
 [Lv 10]: Atk 250%`,
-    img: skillImgNo,
+    img: throwingKnife,
   },
   {
     id: "grimtooth",
@@ -284,7 +288,7 @@ New calculation:
 For Basic Attacks: ATK% + (15 + Skill Lv × 7),
 For Skills: ATK%/MATK% + (5 + Skill Lv × 7)
 `,
-    img: skillImgNo,
+    img: poisonery,
   },  
   {
     id: "venomDust",
@@ -344,6 +348,21 @@ Description: Attaches a deadly toxin to a single target, causing a venomous expl
 [Lv 9]: MAtk 1400%, Cooldown: 18 sec,
 [Lv 10]: MAtk 1500%, Cooldown: 20 sec`,
     img: venomSplasher,
+  },
+  },
+  {
+    id: "vSAnt",
+    level: 0,
+    dependencies: [
+     
+    ],
+    dependent: [],
+    element: null,
+    skillName: "V.S. Ant..",
+    maxLevel: 10,
+    inform: `Max Lv: 5
+V.S. Ant..`,
+    img: vSAnt,
   },
 ];
 
