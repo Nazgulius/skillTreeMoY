@@ -9,6 +9,8 @@ import envenom from '../../img/icon_thf/icon_thf_3.png';
 import hiding from '../../img/icon_thf/icon_thf_4.png';
 import improveDodge from '../../img/icon_thf/icon_thf_5.png';
 import steal from '../../img/icon_thf/icon_thf_6.png';
+import sprinkleSand from '../../img/icon_thf/icon_thf_7.png';
+import throwStone from '../../img/icon_thf/icon_thf_8.png';
 
 // список скилов Thief
 export const skillsThief = [    
@@ -214,7 +216,7 @@ Description: Kick up a cloud of sand, dealing Earth elemental damage to enemies 
 [Lv 9]: Atk 280%,
 [Lv 10]: Atk 300%
 Details: AfterCastActDelay set as ASPD; Cooldown of 1000.`,
-    img: skillImgNo,
+    img: sprinkleSand,
   },
   
   {
@@ -244,7 +246,7 @@ Description: Flings a stone at a single target, dealing damage that ignores defe
 [Lv 8]: Atk 180 + STR%, Stun chance: 34%,
 [Lv 9]: Atk 190 + STR%, Stun chance: 37%,
 [Lv 10]: Atk 200 + STR%, Stun chance: 40%`,
-    img: skillImgNo,
+    img: throwStone,
   },
 ];
 
