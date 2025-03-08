@@ -348,18 +348,15 @@ Description: Attaches a deadly toxin to a single target, causing a venomous expl
 [Lv 9]: MAtk 1400%, Cooldown: 18 sec,
 [Lv 10]: MAtk 1500%, Cooldown: 20 sec`,
     img: venomSplasher,
-  },
-  },
+  },  
   {
     id: "vSAnt",
     level: 0,
-    dependencies: [
-     
-    ],
+    dependencies: [],
     dependent: [],
     element: null,
     skillName: "V.S. Ant..",
-    maxLevel: 10,
+    maxLevel: 5,
     inform: `Max Lv: 5
 V.S. Ant..`,
     img: vSAnt,
