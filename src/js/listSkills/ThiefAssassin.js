@@ -14,7 +14,7 @@ import venomSplasher from '../../img/icon_ass/icon_ass_10.png';
 import dualWieldingMastery from '../../img/icon_ass/icon_ass_11.png'; 
 import throwingKnife from '../../img/icon_ass/icon_ass_12.png'; 
 import poisonery from '../../img/icon_ass/icon_ass_13.png'; 
-import vSAnt from '../../img/icon_ass/icon_ass_14.png'; 
+import vSAnticipation from '../../img/icon_ass/icon_ass_14.png'; 
 
 // список скилов Assassin
 export const skillsAssassin = [  
@@ -350,16 +350,26 @@ Description: Attaches a deadly toxin to a single target, causing a venomous expl
     img: venomSplasher,
   },  
   {
-    id: "vSAnt",
+    id: "vSAnticipation",
     level: 0,
     dependencies: [],
     dependent: [],
     element: null,
-    skillName: "V.S. Ant..",
+    skillName: "V.S. Anticipation",
     maxLevel: 5,
     inform: `Max Lv: 5
-V.S. Ant..`,
-    img: vSAnt,
+Skill Form: Active 
+Type: Misc 
+Target: Self 
+Range: 9 
+Cooldown: 3.0 s
+Description: Instantly detonates your Venom Splasher in a large 21x21 area and reduces its cooldown. Can be used while Cloaking without breaking it.
+[Lv 1]: Cooldown Reduction: 4 secs 
+[Lv 2]: Cooldown Reduction: 8 secs 
+[Lv 3]: Cooldown Reduction: 12 secs 
+[Lv 4]: Cooldown Reduction: 16 secs 
+[Lv 5]: Cooldown Reduction: 20 secs`,
+    img: vSAnticipation,
   },
 ];
 
