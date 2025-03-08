@@ -5,6 +5,8 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import meteorAssault from '../../img/icon_asx/icon_asx_3.png'; 
 import soulDestroyer from '../../img/icon_asx/icon_asx_2.png'; 
+import deadlyPoisonMastery from '../../img/icon_asx/icon_asx_6.png'; 
+import crossLethality from '../../img/icon_asx/icon_asx_7.png'; 
 
 // список скилов Assassin Cross
 export const skillsAssassinCross = [  
@@ -29,7 +31,7 @@ Description: Equipping Katars Class Weapons reduces the Attack Power of the weap
 [Lv 3]: Katar Penalty -12%, Dual Wielding Critical Rate +30%,
 [Lv 4]: Katar Penalty -16%, Dual Wielding Critical Rate +40%,
 [Lv 5]: Katar Penalty -20%, Dual Wielding Critical Rate +50%`,
-    img: skillImgNo,
+    img: crossLethality,
   },
   {
     id: "deadlyPoisonMastery",
@@ -42,6 +44,7 @@ Description: Equipping Katars Class Weapons reduces the Attack Power of the weap
     skillName: "Deadly Poison Mastery",
     maxLevel: 5,
     inform: `Max Lv: 5
+Advanced..
 Skill Form: Passive
 Type: Physical
 Requirement: Poisonery Lv: 1
@@ -51,7 +54,7 @@ Description: Grants advanced expertise with poisons, enabling the creation of st
 [Lv 3]: Strong Poisons Apply Chance: 12%, User Duration: 116 sec, Target Duration: 40 sec,
 [Lv 4]: Strong Poisons Apply Chance: 16%, User Duration: 148 sec, Target Duration: 50 sec,
 [Lv 5]: Strong Poisons Apply Chance: 20%, User Duration: 180 sec, Target Duration: 60 sec`,
-    img: skillImgNo,
+    img: deadlyPoisonMastery,
   },
   {
     id: "meteorAssault",
