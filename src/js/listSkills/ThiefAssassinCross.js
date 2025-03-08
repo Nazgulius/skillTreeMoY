@@ -4,6 +4,7 @@
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import meteorAssault from '../../img/icon_asx/icon_asx_3.png'; 
+import soulDestroyer from '../../img/icon_asx/icon_asx_2.png'; 
 
 // список скилов Assassin Cross
 export const skillsAssassinCross = [  
@@ -116,7 +117,7 @@ Description: Deals powerful Magical Poison Damage to a target. Damage scales wit
 [Lv 10]: Matk 1800%
 Details: AfterCastActDelay set as ASPD + 220; CastTime of 500 + (100 × Skill Lv); Fixed Cast Time: 500; Cooldown of 1500.
 `,
-    img: skillImgNo,
+    img: soulDestroyer,
   },
 ];
 
