@@ -3,6 +3,13 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import oneHandedSwordMastery from '../../img/icon_swd/icon_swd_1.gif'; 
+import increaseHPRecovery from '../../img/icon_swd/icon_swd_3.gif'; 
+import bash from '../../img/icon_swd/icon_swd_4.gif'; 
+import provoke from '../../img/icon_swd/icon_swd_5.gif'; 
+import magnumBreak from '../../img/icon_swd/icon_swd_6.gif'; 
+import endure from '../../img/icon_swd/icon_swd_7.gif'; 
+import movingHPRecovery from '../../img/icon_swd/icon_swd_8.gif'; 
 
 // список скилов Swordman
 export const skillsSwordman = [  
@@ -32,7 +39,7 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
 [Lv 8]: Atk +16, 2nd Class Additional Atk +8,
 [Lv 9]: Atk +18, 2nd Class Additional Atk +9,
 [Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
-    img: skillImgNo,
+    img: oneHandedSwordMastery,
   },
   {
     id: "oneSpearMastery",
@@ -91,7 +98,7 @@ Description: Hits an enemy with crushing force.
 [Lv 9]: 370% Damage, HIT +45%,
 [Lv 10]: 400% Damage, HIT +50%
 Formula: ATK%: 100 + (30 x Skill Lv)`,
-    img: skillImgNo,
+    img: bash,
   },
   {
     id: "magnumBreak",
@@ -118,7 +125,7 @@ Description: Drain a small amount of the casters HP to inflict Fire property dam
 [Lv 9]: Atk 280%, Edge: Atk 140%, HP Cost: 22,
 [Lv 10]: Atk 300%, Edge: Atk 150%, HP Cost: 21
 Formula: ATK%: 100 + (20 x Skill Lv)`,
-    img: skillImgNo,
+    img: magnumBreak,
   },
   {
     id: "provoke",
@@ -145,7 +152,7 @@ Description: Enrage a single target to decrease players defense based on VIT or 
 [Lv 8]: Success Rate: 90%, Enemys Atk +26%, DEF -45%,
 [Lv 9]: Success Rate: 95%, Enemys Atk +29%, DEF -50%,
 [Lv 10]: Success Rate: 100%, Enemys Atk +32%, DEF -55%,`,
-    img: skillImgNo,
+    img: provoke,
   },
   {
     id: "endure",
@@ -175,7 +182,7 @@ Description: Removes the attack and movement delay that typically occurs when a 
 [Lv 8]: DEF +40, CRIT DEF +8, Duration: 21 seconds,
 [Lv 9]: DEF +45, CRIT DEF +9, Duration: 23 seconds,
 [Lv 10]: DEF +50, CRIT DEF +10, Duration: 25 seconds,`,
-    img: skillImgNo,
+    img: endure,
   },
   {
     id: "increaseHPRecovery",
@@ -229,7 +236,7 @@ Description: Enables natural HP regeneration while moving or fighting.
 [Lv 8]: Natural recovery every 10 seconds.
 [Lv 9]: Natural recovery every 8 seconds.
 [Lv 10]: Natural recovery every 6 seconds.`,
-    img: skillImgNo,
+    img: movingHPRecovery,
   },
 ];
 
