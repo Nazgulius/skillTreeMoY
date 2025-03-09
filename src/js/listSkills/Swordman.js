@@ -10,6 +10,7 @@ import provoke from '../../img/icon_swd/icon_swd_5.gif';
 import magnumBreak from '../../img/icon_swd/icon_swd_6.gif'; 
 import endure from '../../img/icon_swd/icon_swd_7.gif'; 
 import movingHPRecovery from '../../img/icon_swd/icon_swd_8.gif'; 
+import oneSpearMastery from '../../img/icon_swd/icon_swd_9.gif'; 
 
 // список скилов Swordman
 export const skillsSwordman = [  
@@ -68,7 +69,7 @@ Description: Increase Attack with One-Handed Spear Weapons. Second Class The ben
 [Lv 8]: Atk +16, 2nd Class Additional Atk +8,
 [Lv 9]: Atk +18, 2nd Class Additional Atk +9,
 [Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
-    img: skillImgNo,
+    img: oneSpearMastery,
   },
   {
     id: "bash",
