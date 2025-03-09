@@ -207,7 +207,7 @@ Description: Increases the amount of HP recovered through your natural HP regene
 [Lv 8]: HP Recovery +[40 + 0.8% of MaxHP],
 [Lv 9]: HP Recovery +[45 + 0.9% of MaxHP],
 [Lv 10]: HP Recovery +[50 + 1.0% of MaxHP]`,
-    img: skillImgNo,
+    img: increaseHPRecovery,
   },
   {
     id: "movingHPRecovery",
