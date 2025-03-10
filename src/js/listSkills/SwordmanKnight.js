@@ -3,6 +3,16 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import pierce from '../../img/icon_knt/icon_knt_1.gif';
+import brandishSpear from '../../img/icon_knt/icon_knt_2.gif';
+import spearStab from '../../img/icon_knt/icon_knt_3.gif';
+import spearBoomerang from '../../img/icon_knt/icon_knt_4.gif';
+import swordQuicken from '../../img/icon_knt/icon_knt_5.gif';
+import counterAttack from '../../img/icon_knt/icon_knt_6.gif';
+import bowlingBash from '../../img/icon_knt/icon_knt_7.gif';
+import riding from '../../img/icon_knt/icon_knt_8.gif';
+import cavalryMastery from '../../img/icon_knt/icon_knt_9.gif';
+import twoHandedSwordMastery from '../../img/icon_knt/icon_knt_10.gif';
 
 // список скилов Knight
 export const skillsKnight = [  
@@ -33,7 +43,7 @@ Description: Increase Attack with Two-Handed Sword Weapons. When [Lv 10], it inc
 [Lv 8]: Atk +32,
 [Lv 9]: Atk +36,
 [Lv 10]: Atk +40`,
-    img: skillImgNo,
+    img: twoHandedSwordMastery,
   },
   {
     id: "counterAttack",
@@ -60,7 +70,7 @@ Description: Requires Swords Class Weapon. If an opponent physically attacks a p
 [Lv 3]: Auto Counter Duration: 0.8 sec,
 [Lv 4]: Auto Counter Duration: 1.0 sec,
 [Lv 5]: Auto Counter Duration: 1.2 sec`,
-    img: skillImgNo,
+    img: counterAttack,
   },
   {
     id: "bowlingBash",
@@ -92,7 +102,7 @@ Description: Requires a Sword-class weapon. Deals physical damage to all enemies
 [Lv 10]: Atk 200% x Hits
 Details: AfterCastActDelay set as ASPD + 220; CastTime: 200; Fixed Cast Time: 400; Cooldown: 1000.
 `,
-    img: skillImgNo,
+    img: bowlingBash,
   },
   {
     id: "dashingBash",
@@ -149,7 +159,7 @@ Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Crit
 [Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
 [Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
 [Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
-    img: skillImgNo,
+    img: swordQuicken,
   },
   
   {
@@ -169,7 +179,7 @@ Skill Form: Passive
 Type: Physical
 Requirement: Endure Lv: 1
 Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750 but reduces ASPD and Flee by 50% while mounted. Riding affects Weapon Size Modifiers as follows:, One-Handed Sword: Small 100%, Medium 125%, Large 100%, Two-Handed Sword: Small 100%, Medium 100%, Large 125%, Spear: Small 100%, Medium 100%, Large 125%, PecoPeco Breeder.`,
-    img: skillImgNo,
+    img: riding,
   },
   {
     id: "cavalryMastery",
@@ -191,7 +201,7 @@ Description: Reduces the ASPD and Flee penalty while mounted.
 [Lv 3]: -24% ASPD and Flee penalty.
 [Lv 4]: -32% ASPD and Flee penalty.
 [Lv 5]: -40% ASPD and Flee penalty.`,
-    img: skillImgNo,
+    img: cavalryMastery,
   },
   {
     id: "pierce",
@@ -223,7 +233,7 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear into a sing
 [Lv 9]: Atk 190% x Hits,
 [Lv 10]: Atk 200% x Hits
 New calculation: ATK% = (20 × Skill Lv) + (Stabbing Stacks × 2).`,
-    img: skillImgNo,
+    img: pierce,
   },
   
   {
@@ -255,7 +265,7 @@ Description: Requires Spear Class Weapon. Throws a spear at a target like a boom
 [Lv 8]: Atk 380% + 80% of Weapon Weight,
 [Lv 9]: Atk 415% + 90% of Weapon Weight,
 [Lv 10]: Atk 450% + 100% of Weapon Weight`,
-    img: skillImgNo,
+    img: spearBoomerang,
   },
   {
     id: "spearQuicken",
@@ -312,7 +322,7 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear against a s
 [Lv 3]: Atk 340%, Knockback: 7 cells,
 [Lv 4]: Atk 420%, Knockback: 8 cells,
 [Lv 5]: Atk 500%, Knockback: 9 cells`,
-    img: skillImgNo,
+    img: spearStab,
   },
   {
     id: "brandishSpear",
@@ -344,7 +354,7 @@ Description: Requires Spear Class Weapon. Swings the equipped spear forward to a
 [Lv 9]: Atk 370% + VIT and B. Level Bonus,
 [Lv 10]: Atk 400% + VIT and B. Level Bonus
 Details: AfterCastActDelay set as ASPD + 220; Note: Has Hit -4.`,
-    img: skillImgNo,
+    img: brandishSpear,
   },
 ];
 
