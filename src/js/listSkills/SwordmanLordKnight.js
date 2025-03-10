@@ -3,6 +3,12 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import auraBlade from '../../img/icon_lkn/icon_lkn_1.png';
+import parry from '../../img/icon_lkn/icon_lkn_2.png';
+import concentration from '../../img/icon_lkn/icon_lkn_3.png';
+import berserk from '../../img/icon_lkn/icon_lkn_5.png';
+import spiralPierce from '../../img/icon_lkn/icon_lkn_6.png';
+import jointBeat from '../../img/icon_lkn/icon_lkn_8.png';
 
 // список скилов Lord Knight
 export const skillsLordKnight = [  
@@ -34,10 +40,10 @@ Description: Requires Swords Class Weapon. Produces a special aura around the sw
 [Lv 10]: True Damage +500
 Now, in addition to granting true damage, the skill also increases the user’s total true damage by (5 + Skill Lv)%.
 True Damage Bonus: 50 + Skill Lv + Crit (for Basic Attacks, the bonus is doubled).`,
-    img: skillImgNo,
+    img: auraBlade,
   },
   {
-    id: "Berserk",
+    id: "berserk",
     level: 0,
     dependencies: [],
     dependent: [],
@@ -60,7 +66,7 @@ Description: Unleashes the power of rage to greatly enhance the user temporarily
 [Lv 8]: Max HP +130%, FLEE -60%, DEF/MDEF -80%, Received healing -60%,
 [Lv 9]: Max HP +140%, FLEE -55%, DEF/MDEF -75%, Received healing -50%,
 [Lv 10]: Max HP +150%, FLEE -50%, DEF/MDEF -75%, Received healing -50%`,
-    img: skillImgNo,
+    img: berserk,
   },
   {
     id: "concentration",
@@ -88,7 +94,7 @@ Description: Requires Spear Class Weapon. Boosts Attack Power and Hit Rate.
 [Lv 8]: Atk and Hit +16%,
 [Lv 9]: Atk and Hit +18%,
 [Lv 10]: Atk and Hit +20%`,
-    img: skillImgNo,
+    img: concentration,
   },
   {
     id: "jointBeat",
@@ -117,7 +123,7 @@ Description: Requires Spear Class Weapon. Executes precision strikes at an enemy
 [Lv 8]: Atk 180%, Shoulder Break: Halves soft defense,
 [Lv 9]: Atk 190%, Waist Break: Decreases soft defense by 25% and attack by 25%,
 [Lv 10]: Atk 200%, Neck Break: Doubles damage from this skill and inflicts Bleeding`,
-    img: skillImgNo,
+    img: jointBeat,
   },
   {
     id: "parry",
@@ -148,7 +154,7 @@ Description: Requires Two-Handed Sword Class Weapon. Allows the user to block ph
 [Lv 10]: Block +50%
 To prevent abuse, the user no longer dodges attacks; instead, they mitigate 50% of the damage received, and the mitigated damage is added as bonus damage (not exceeding the user’s maximum HP).
 Details: AfterCastActDelay set as ASPD + 220.`,
-    img: skillImgNo,
+    img: parry,
   },
   {
     id: "spiralPierce",
@@ -179,7 +185,7 @@ Description: Requires Spear Class Weapon. Throws your spear with a spiraling mot
 [Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
 Formula: ATK%: (100 + (((W.Weight / 10) + (20 - Spear Boomerang Lv)) x Skill Lv)) x Hits
 Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 600.`,
-    img: skillImgNo,
+    img: spiralPierce,
   },
 ];
 

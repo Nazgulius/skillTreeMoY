@@ -13,6 +13,7 @@ import bowlingBash from '../../img/icon_knt/icon_knt_7.gif';
 import riding from '../../img/icon_knt/icon_knt_8.gif';
 import cavalryMastery from '../../img/icon_knt/icon_knt_9.gif';
 import twoHandedSwordMastery from '../../img/icon_knt/icon_knt_10.gif';
+import spearQuicken from '../../img/icon_knt/icon_knt_11.png';
 
 // список скилов Knight
 export const skillsKnight = [  
@@ -295,7 +296,7 @@ Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critc
 [Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
 [Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
 [Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
-    img: skillImgNo,
+    img: spearQuicken,
   },
   {
     id: "spearStab",
