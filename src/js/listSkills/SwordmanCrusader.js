@@ -3,6 +3,13 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import cavalryMastery from '../../img/icon_cru/icon_cru_6.gif';
+import heal from '../../img/icon_cru/icon_cru_3.gif';
+import holyCross from '../../img/icon_cru/icon_cru_13.gif';
+import grandCross from '../../img/icon_cru/icon_cru_14.gif';
+import faith from '../../img/icon_cru/icon_cru_8.gif';
+import riding from '../../img/icon_cru/icon_cru_7.gif';
+import spearQuicken from '../../img/icon_cru/icon_cru_18.gif';
 
 // список скилов Crusader
 export const skillsCrusader = [  
@@ -26,7 +33,7 @@ Description: Removes the ASPD and Flee penalty while mounted. Increases Hit Rate
 [Lv 3]: -24% ASPD and Flee penalty.
 [Lv 4]: -32% ASPD and Flee penalty.
 [Lv 5]: -40% ASPD and Flee penalty.`,
-    img: skillImgNo,
+    img: cavalryMastery,
   },
   {
     id: "defender",
@@ -111,7 +118,7 @@ Description: Passively Enhances MaxHP. Activating removes all allies bound to [D
 [Lv 8]: MaxHP +1600, MaxHP + 8%,
 [Lv 9]: MaxHP +1800, MaxHP + 9%,
 [Lv 10]: MaxHP +2000, MaxHP + 10%`,
-    img: skillImgNo,
+    img: faith,
   },
   {
     id: "grandCross",
@@ -143,7 +150,7 @@ Description: Channel a divine cross around yourself and sacrificing 10% of your 
 [Lv 9]: Atk or MAtk 325% x Hits,
 [Lv 10]: Atk or MAtk 350% x Hits
 Details: AfterCastActDelay set as ASPD + 220; CastTime: 1100; Fixed Cast Time: 400; Cooldown: 1500.`,
-    img: skillImgNo,
+    img: grandCross,
   },
   {
     id: "guard",
@@ -204,7 +211,7 @@ Description: Restores HP of a single target. This skill is affected by Base Leve
 [Lv 8]: SP Cost: 34,
 [Lv 9]: SP Cost: 37,
 [Lv 10]: SP Cost: 40`,
-    img: skillImgNo,
+    img: heal,
   },
   {
     id: "holyCross",
@@ -235,7 +242,7 @@ Description: Strikes the target with a divine cross of light, dealing Holy Prope
 [Lv 8]: Atk or MAtk 380%,
 [Lv 9]: Atk or MAtk 415%,
 [Lv 10]: Atk or MAtk 450%`,
-    img: skillImgNo,
+    img: holyCross,
   },
   {
     id: "martyrsHeal",
@@ -314,7 +321,7 @@ Skill Form: Passive
 Type: Physical
 Requirement: Endure Lv: 1
 Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750 but reduces ASPD and Flee by 50% while mounted. Riding affects Weapon Size Modifiers as follows:, One-Handed Sword: Small 100%, Medium 125%, Large 100%, Two-Handed Sword: Small 100%, Medium 100%, Large 125%, Spear: Small 100%, Medium 100%, Large 125%, PecoPeco Breeder.`,
-    img: skillImgNo,
+    img: riding,
   },
   {
     id: "shieldBoomerang",
@@ -399,7 +406,7 @@ Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critc
 [Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
 [Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
 [Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
-    img: skillImgNo,
+    img: spearQuicken,
   },
   {
     id: "swordQuicken",
