@@ -14,6 +14,7 @@ import riding from '../../img/icon_knt/icon_knt_8.gif';
 import cavalryMastery from '../../img/icon_knt/icon_knt_9.gif';
 import twoHandedSwordMastery from '../../img/icon_knt/icon_knt_10.gif';
 import spearQuicken from '../../img/icon_knt/icon_knt_11.png';
+import dashingBash from '../../img/icon_knt/icon_knt_12.png';
 
 // список скилов Knight
 export const skillsKnight = [  
@@ -128,7 +129,7 @@ Description: Requires Swords Class Weapon. Quickly approach and attack a distant
 [Lv 4]: Atk 500%, Range: 9,
 [Lv 5]: Atk 600%, Range: 10
 Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 400.`,
-    img: skillImgNo,
+    img: dashingBash,
   },
   {
     id: "swordQuicken",
