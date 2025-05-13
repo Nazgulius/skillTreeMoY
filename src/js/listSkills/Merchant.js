@@ -4,6 +4,13 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import discount from '../../img/icon_mer/icon_mer_2.gif'; 
+import overcharge from '../../img/icon_mer/icon_mer_3.gif'; 
+import pushcart from '../../img/icon_mer/icon_mer_4.gif'; 
+import mammonite from '../../img/icon_mer/icon_mer_6.gif'; 
+import cartRevolution from '../../img/icon_mer/icon_mer_7.gif'; 
+import cartTwister from '../../img/icon_mer/icon_mer_8.gif'; 
+import axeMastery from '../../img/icon_mer/icon_mer_13.gif'; 
 
 // список скилов Merchant
 export const skillsMerchant = [  
@@ -32,7 +39,7 @@ Description: Increase attack with One Handed or Two Handed Axes Weapons. Second 
 [Lv 8]: One Handed Atk +16, Two Handed Atk +24, 2nd Class Additional Atk +8,
 [Lv 9]: One Handed Atk +18, Two Handed Atk +27, 2nd Class Additional Atk +9,
 [Lv 10]: One Handed Atk +20, Two Handed Atk +30, 2nd Class Additional Atk +10`,
-    img: skillImgNo,
+    img: axeMastery,
   },
   {
     id: "mammonite",
@@ -59,7 +66,7 @@ Description: Harness the power of greed to deliver a devastating blow to a singl
 [Lv 8]: Atk 500%, Stun chance 12%,
 [Lv 9]: Atk 550%, Stun chance 16%,
 [Lv 10]: Atk 600%, Stun chance 20%`,
-    img: skillImgNo,
+    img: mammonite,
   },
   {
     id: "pushcart",
@@ -90,7 +97,7 @@ Description: Enables to rent a Pushcart and Increases maximum player Weight Limi
 [Lv 8]: Maximum player Weight +1600,
 [Lv 9]: Maximum player Weight +1800,
 [Lv 10]: Maximum player Weight +2000`,
-    img: skillImgNo,
+    img: pushcart,
   },
   {
     id: "cartRevolution",
@@ -120,7 +127,7 @@ Description: Slam your pushcart into a single target, dealing physical damage an
 [Lv 8]: Atk 100% + 8% for every 200 of Cart Weight,
 [Lv 9]: Atk 100% + 9% for every 200 of Cart Weight,
 [Lv 10]: Atk 100% + 10% for every 200 of Cart Weight`,
-    img: skillImgNo,
+    img: cartRevolution,
   },
   {
     id: "cartTwister",
@@ -150,7 +157,7 @@ Description: Grab your cart and spin it like a whirlwind, dealing melee physical
 [Lv 8]: Atk 100% + 8% for every 400 of Cart Weight,
 [Lv 9]: Atk 100% + 9% for every 400 of Cart Weight,
 [Lv 10]: Atk 100% + 10% for every 400 of Cart Weight`,
-    img: skillImgNo,
+    img: cartTwister,
   },
   {
     id: "discount",
@@ -178,7 +185,7 @@ Description: Activate this skill to receive a buff that randomly slashes the SP 
 [Lv 8]: SP reduction: 8%, 16%, or 40%,
 [Lv 9]: SP reduction: 9%, 18%, or 45%,
 [Lv 10]: SP reduction: 10%, 20%, or 50%`,
-    img: skillImgNo,
+    img: discount,
   },
   {
     id: "overcharge",
@@ -206,6 +213,6 @@ Description: Activate this skill to unleash a buff that ramps up the SP Cost of 
 [Lv 8]: SP increase cost: 8%, 16%, or 40%, Status Attack: +8, +16, or +40,
 [Lv 9]: SP increase cost: 9%, 18%, or 45%, Status Attack: +9, +18, or +45,
 [Lv 10]: SP increase cost: 10%, 20%, or 50%, Status Attack: +10, +20, or +50,`,
-    img: skillImgNo,
+    img: overcharge,
   },
 ];

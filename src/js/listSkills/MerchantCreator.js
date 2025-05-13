@@ -4,6 +4,8 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import fullChemicalProtection from '../../img/icon_cre/icon_cre_2.gif'; // заглушка
+import acidDemonstration from '../../img/icon_cre/icon_cre_3.gif'; // заглушка
 
 // список скилов Creator
 export const skillsCreator = [
@@ -37,7 +39,7 @@ Description: Toss 1 Bottle Grenade and 1 Acid Bottle at a targeted enemy, unleas
 [Lv 9]: 9 Hits, Chemical Corrosion chance: 9%,
 [Lv 10]: 10 Hits, Chemical Corrosion chance: 10%
 New calculation: ATK% = ((1000 + (150 × Skill Lv)) × T.Vit) / 100.`,
-    img: skillImgNo,
+    img: acidDemonstration,
   },
   {
     id: "fullChemicalProtection",
@@ -59,7 +61,7 @@ Target: Ally
 Range: 1
 Requirement: Weapon Chemical Protection Lv: 1, Shield Chemical Protection Lv: 1, Armor Chemical Protection Lv: 1, Helm Chemical Protection Lv: 1
 Description: Temporarily protects the target's equipped weapon, shield, armor, and helmet from damage and removal. Protection level and duration depend on the learned level of individual protections. Catalyst: 1x Glistening Bottle.`,
-    img: skillImgNo,
+    img: fullChemicalProtection,
   },
   {
     id: "hyperFertilize",

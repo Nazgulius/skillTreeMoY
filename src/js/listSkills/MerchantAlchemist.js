@@ -4,6 +4,17 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import potionResearch from '../../img/icon_alc/icon_alc_1.gif'; 
+import pharmacy from '../../img/icon_alc/icon_alc_2.gif'; 
+import demonstration from '../../img/icon_alc/icon_alc_3.gif'; 
+import acidTerror from '../../img/icon_alc/icon_alc_4.gif'; 
+import potionPitcher from '../../img/icon_alc/icon_alc_5.gif'; 
+import bioCannibalize from '../../img/icon_alc/icon_alc_6.gif'; 
+import marineSphereBomb from '../../img/icon_alc/icon_alc_7.gif'; 
+import weaponChemicalProtection from '../../img/icon_alc/icon_alc_8.gif'; 
+import shieldChemicalProtection from '../../img/icon_alc/icon_alc_9.gif'; 
+import armorChemicalProtection from '../../img/icon_alc/icon_alc_10.gif'; 
+import helmChemicalProtection from '../../img/icon_alc/icon_alc_11.gif'; 
 
 // список скилов Alchemist
 export const skillsAlchemist = [ 
@@ -63,7 +74,7 @@ Description: Unleash fiery devastation with a bottle of flammable liquid, hurlin
 [Lv 8]: Atk 260%,
 [Lv 9]: Atk 280%,
 [Lv 10]: Atk 300%`,
-    img: skillImgNo,
+    img: demonstration,
   },
   {
     id: "acidTerror",
@@ -95,7 +106,7 @@ Description: Unleash a bottle of corrosive acid on a single target, causing seve
 [Lv 8]: Atk 800%,
 [Lv 9]: Atk 900%,
 [Lv 10]: Atk 1000%`,
-    img: skillImgNo,
+    img: acidTerror,
   },
   {
     id: "chemicalReaction",
@@ -148,7 +159,7 @@ Description: Boosts the success rate for creating potions and chemicals while al
 [Lv 8]: Rate Bonus: +8%, Potion Effectiveness: +29%,
 [Lv 9]: Rate Bonus: +9%, Potion Effectiveness: +32%,
 [Lv 10]: Rate Bonus: +10%, Potion Effectiveness: +35%`,
-    img: skillImgNo,
+    img: potionResearch,
   },
   {
     id: "helmChemicalProtection",
@@ -175,7 +186,7 @@ Description: Temporarily protects the equipped headgear of a single target from 
 [Lv 3]: Duration: 180 seconds,
 [Lv 4]: Duration: 360 seconds,
 [Lv 5]: Duration: 720 seconds`,
-    img: skillImgNo,
+    img: helmChemicalProtection,
   },
   {
     id: "shieldChemicalProtection",
@@ -202,7 +213,7 @@ Description: Temporarily protects the equipped shield of a single target from da
 [Lv 3]: Duration: 180 seconds,
 [Lv 4]: Duration: 360 seconds,
 [Lv 5]: Duration: 720 seconds`,
-    img: skillImgNo,
+    img: shieldChemicalProtection,
   },
   {
     id: "armorChemicalProtection",
@@ -229,7 +240,7 @@ Description: Temporarily protects the equipped armor of a single target from dam
 [Lv 3]: Duration: 180 seconds,
 [Lv 4]: Duration: 360 seconds,
 [Lv 5]: Duration: 720 seconds`,
-    img: skillImgNo,
+    img: armorChemicalProtection,
   },
   {
     id: "weaponChemicalProtection",
@@ -255,7 +266,7 @@ Description: Temporarily protects the equipped weapon of a single target from da
 [Lv 3]: Duration: 180 seconds,
 [Lv 4]: Duration: 360 seconds,
 [Lv 5]: Duration: 720 seconds`,
-    img: skillImgNo,
+    img: weaponChemicalProtection,
   },
   {
     id: "bioCannibalize",
@@ -288,7 +299,7 @@ Description: Summons a living plant at the target location to assist the user in
 [Lv 8]: Summons Flora,
 [Lv 9]: Summons Parasite,
 [Lv 10]: Summons Geographer`,
-    img: skillImgNo,
+    img: bioCannibalize,
   },
   {
     id: "deplant",
@@ -365,7 +376,7 @@ Description: Allows the creation of Potions and Chemical Bottles. Requires the a
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
 [Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: pharmacy,
   },
   {
     id: "largeScalePharmacy",
@@ -419,7 +430,7 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
 [Lv 8]: Sphere Base HP: 32 x Base Level,
 [Lv 9]: Sphere Base HP: 36 x Base Level,
 [Lv 10]: Sphere Base HP: 40 x Base Level`,
-    img: skillImgNo,
+    img: marineSphereBomb,
   },
   {
     id: "potionPitcher",
@@ -450,7 +461,7 @@ Description: Throws a potion at a single target, instantly applying a healing ef
 [Lv 8]: Condensed Yellow Potion,
 [Lv 9]: Condensed Green Potion,
 [Lv 10]: Condensed White Potion`,
-    img: skillImgNo,
+    img: potionPitcher,
   },
   {
     id: "slingItem",
