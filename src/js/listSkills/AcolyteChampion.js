@@ -3,6 +3,10 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import palmStrike from '../../img/icon_chp/icon_chp_1.gif'; 
+import tigerFist from '../../img/icon_chp/icon_chp_2.gif'; 
+import chainCrushCombo from '../../img/icon_chp/icon_chp_3.gif'; 
+import spiritSpheresCollect from '../../img/icon_chp/icon_chp_4.gif'; 
 
 // список скилов Champion
 export const skillsChampion = [  
@@ -29,7 +33,7 @@ Description: Chain Crush Combo is a devastating melee attack that can be used af
 [Lv 3]: Atk 1200%, SP Cost: 28,
 [Lv 4]: Atk 1600%, SP Cost: 34,
 [Lv 5]: Atk 2000%, SP Cost: 40`,
-    img: skillImgNo, 
+    img: chainCrushCombo, 
   },
   {
     id: "palmStrike",
@@ -54,7 +58,7 @@ Description: Rush toward the enemy and deliver a powerful palm strike, pushing t
 [Lv 3]: Atk 600%, 11 SP, Range and Knock Back: 3 cells,
 [Lv 4]: Atk 750%, 13 SP, Range and Knock Back: 4 cells,
 [Lv 5]: Atk 900%, 15 SP, Range and Knock Back: 5 cells`,
-    img: skillImgNo,
+    img: palmStrike,
   },
   {
     id: "spiritSpheresCollect",
@@ -77,7 +81,7 @@ Description: Extends the limit of Spirit Spheres the user can have and increases
 [Lv 3]: Spirit Spheres Limit: +3, Duration: 160 sec,
 [Lv 4]: Spirit Spheres Limit: +4, Duration: 200 sec,
 [Lv 5]: Spirit Spheres Limit: +5, Duration: 240 sec`,
-    img: skillImgNo,
+    img: spiritSpheresCollect,
   },
   {
     id: "tigerFist",
@@ -102,7 +106,7 @@ Description: Tiger Fist is a powerful area-of-effect strike that can be used aft
 [Lv 3]: Atk 650%, SP Cost: 17,
 [Lv 4]: Atk 800%, SP Cost: 21,
 [Lv 5]: Atk 950%, SP Cost: 25`,
-    img: skillImgNo,
+    img: tigerFist,
   },
 ];
 

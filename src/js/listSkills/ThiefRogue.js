@@ -3,6 +3,20 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import oneHandedSwordMastery from '../../img/icon_rog/icon_rog_1.gif'; 
+import vulturesEye from '../../img/icon_rog/icon_rog_2.gif'; 
+import doubleStrafe from '../../img/icon_rog/icon_rog_3.gif'; 
+import snatcher from '../../img/icon_rog/icon_rog_5.gif'; 
+import backStab from '../../img/icon_rog/icon_rog_7.gif'; 
+import tunnelDrive from '../../img/icon_rog/icon_rog_8.gif'; 
+import raid from '../../img/icon_rog/icon_rog_9.gif'; 
+import weaponStripping from '../../img/icon_rog/icon_rog_10.gif'; 
+import shieldStripping from '../../img/icon_rog/icon_rog_11.gif'; 
+import armorStripping from '../../img/icon_rog/icon_rog_12.gif'; 
+import helmStripping from '../../img/icon_rog/icon_rog_13.gif'; 
+import intimidate from '../../img/icon_rog/icon_rog_14.gif'; 
+import gangsterParadise from '../../img/icon_rog/icon_rog_18.gif'; 
+import plagiarism from '../../img/icon_rog/icon_rog_20.gif'; 
 
 // список скилов Rogue
 export const skillsRogue = [ 
@@ -31,7 +45,7 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
 [Lv 8]: Atk +16, 2nd Class Additional Atk +8,
 [Lv 9]: Atk +18, 2nd Class Additional Atk +9,
 [Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
-img: skillImgNo,
+img: oneHandedSwordMastery,
   },
   {
     id: "vulturesEye",
@@ -60,7 +74,7 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
 [Lv 8]: Atk +16, Range +5, 2nd Class Additional Atk +8,
 [Lv 9]: Atk +18, Range +6, 2nd Class Additional Atk +9,
 [Lv 10]: Atk +20, Range +6, 2nd Class Additional Atk +10`,
-    img: skillImgNo,
+    img: vulturesEye,
   },
   {
     id: "doubleStrafe",
@@ -91,7 +105,7 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
 [Lv 8]: Atk 180% x 2 Hits,
 [Lv 9]: Atk 190% x 2 Hits,
 [Lv 10]: Atk 200% x 2 Hits`,
-    img: skillImgNo,
+    img: doubleStrafe,
   },
   {
     id: "snatcher",
@@ -122,7 +136,7 @@ Description: Automatically steals items, from a monster while attacking it with,
 [Lv 8]: Steal Chance: 17%,
 [Lv 9]: Steal Chance: 19%,
 [Lv 10]: Steal Chance: 20%`,
-    img: skillImgNo,
+    img: snatcher,
   },
   {
     id: "plagiarism",
@@ -155,7 +169,7 @@ Description: Copies a skill from an ally, enemy, or monster by selecting from a 
 [Lv 8]: Lv. 8 Able to memorize, Increase Atk Speed: 8%,
 [Lv 9]: Lv. 9 Able to memorize, Increase Atk Speed: 9%,
 [Lv 10]: Lv.10 Able to memorize, Increase Atk Speed: 10%`,
-    img: skillImgNo,
+    img: plagiarism,
   },
   {
     id: "gangsterParadise",
@@ -179,7 +193,7 @@ Description: When two or more Rogues with this skill sit next to each other, and
 [Lv 3]: +HP% and +SP%,
 [Lv 4]: +Hit Rate% and +Critical Rate%,
 [Lv 5]: +Atk% and +MAtk%`,
-    img: skillImgNo,
+    img: gangsterParadise,
   },
   {
     id: "gangland",
@@ -258,7 +272,7 @@ Description: Attacks the target from behind, causing physical damage. The skill 
 [Lv 8]: Atk 540%,
 [Lv 9]: Atk 570%,
 [Lv 10]: Atk 600%`,
-    img: skillImgNo,
+    img: backStab,
   },
   {
     id: "tunnelDrive",
@@ -283,7 +297,7 @@ Description: Enables Movement while in, Hiding status. Movement Speed is slower,
 [Lv 3]: Movement Speed: 38%,
 [Lv 4]: Movement Speed: 44%,
 [Lv 5]: Movement Speed: 50%`,
-    img: skillImgNo,
+    img: tunnelDrive,
   },
   {
     id: "raid",
@@ -310,7 +324,7 @@ Description: Execute a sneak attack on nearby enemies within a [7*7] area. If us
 [Lv 3]: Atk 500%, Amplified Damage +18%, Duration: 3 Second,
 [Lv 4]: Atk 650%, Amplified Damage +24%, Duration: 4 Second,
 [Lv 5]: Atk 800%, Amplified Damage +30%, Duration: 5 Second`,
-    img: skillImgNo,
+    img: raid,
   },
   {
     id: "intimidate",
@@ -334,7 +348,7 @@ Description: Strikes a target and, forcibly teleport it with the caster to, a ra
 [Lv 3]: ATK 190%,
 [Lv 4]: ATK 220%,
 [Lv 5]: ATK 250%`,
-    img: skillImgNo,
+    img: intimidate,
   },
   {
     id: "helmStripping",
@@ -361,7 +375,7 @@ Description: Attempts to forcibly remove the equipped helmet of a single target,
 [Lv 3]: Success Chance: 17%, Monster MATK -15%,
 [Lv 4]: Success Chance: 21%, Monster MATK -20%,
 [Lv 5]: Success Chance: 25%, Monster MATK -25%`,
-    img: skillImgNo,
+    img: helmStripping,
   },
   {
     id: "shieldStripping",
@@ -388,7 +402,7 @@ Description: Attempts to forcibly remove the equipped shield of a single target,
 [Lv 3]: Success Chance: 17%, Monster MDEF -15%,
 [Lv 4]: Success Chance: 21%, Monster MDEF -20%,
 [Lv 5]: Success Chance: 25%, Monster MDEF -25%`,
-    img: skillImgNo,
+    img: shieldStripping,
   },
   {
     id: "armorStripping",
@@ -415,7 +429,7 @@ Description: Attempts to forcibly remove the equipped armor of a single target, 
 [Lv 3]: Success Chance: 17%, Monster DEF -15%,
 [Lv 4]: Success Chance: 21%, Monster DEF -20%,
 [Lv 5]: Success Chance: 25%, Monster DEF -25%`,
-    img: skillImgNo,
+    img: armorStripping,
   },
   {
     id: "weaponStripping",
@@ -441,7 +455,7 @@ Description: Attempts to forcibly remove the equipped weapon of a single target,
 [Lv 3]: Success Chance: 17%, Monster ATK -15%,
 [Lv 4]: Success Chance: 21%, Monster ATK -20%,
 [Lv 5]: Success Chance: 25%, Monster ATK -25%`,
-    img: skillImgNo,
+    img: weaponStripping,
   },
 ];
 

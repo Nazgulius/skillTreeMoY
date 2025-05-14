@@ -3,6 +3,20 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import encore from '../../img/icon_bnd/icon_bnd_2.gif';
+import lullaby from '../../img/icon_bnd/icon_bnd_3.gif';
+import mrKimARichMan from '../../img/icon_bnd/icon_bnd_4.gif';
+import eternalChaos from '../../img/icon_bnd/icon_bnd_5.gif';
+import drumOfBattlefield from '../../img/icon_bnd/icon_bnd_6.gif';
+import theRingOfNibelungen from '../../img/icon_bnd/icon_bnd_7.gif';
+import lokisWail from '../../img/icon_bnd/icon_bnd_8.gif';
+import intoTheAbyss from '../../img/icon_bnd/icon_bnd_9.gif';
+import invulnerableSiegfried from '../../img/icon_bnd/icon_bnd_10.gif';
+import dancingLesson from '../../img/icon_dan/icon_dan_1.gif';
+import slingingStrike from '../../img/icon_dan/icon_dan_2.gif';
+import humming from '../../img/icon_dan/icon_dan_5.gif';
+import dontForgetMe from '../../img/icon_dan/icon_dan_6.gif';
+import fortunesKiss from '../../img/icon_dan/icon_dan_7.gif';
 
 // список скилов Dancer
 export const skillsDancer = [  
@@ -34,7 +48,7 @@ Description: Increase Atk, MAtk and Aspd with Whip Class Weapon. When [Lv 10], i
 [Lv 8]: Atk +16, MAtk +16, Aspd +8%,
 [Lv 9]: Atk +18, MAtk +18, Aspd +9%,
 [Lv 10]: Atk +20, MAtk +20, Aspd +10%`,
-    img: skillImgNo,
+    img: dancingLesson,
   },
   {
     id: "slingingStrike",
@@ -63,7 +77,7 @@ Description: Fires a powerful volley of arrows using an whip. The Arrows element
 New calculation: ATK% = (50 + Crit) + (30 × Skill Lv).
 Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed Cast Time: 400; AmmoAmount: 1.
 `,
-    img: skillImgNo,
+    img: slingingStrike,
   },
   {
     id: "cringeDance",
@@ -156,7 +170,7 @@ Description: Initiates a battle duet that temporarily increases both physical an
 [Lv 3]: Atk +25, MAtk +25,
 [Lv 4]: Atk +30, MAtk +30,
 [Lv 5]: Atk +35, MAtk +35`,
-    img: skillImgNo,
+    img: drumOfBattlefield,
   },
   {
     id: "lokisWail",
@@ -174,7 +188,7 @@ Type: Misc
 Target: Self
 Requirement: Drum of Battlefield Lv: 3
 Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
-    img: skillImgNo,
+    img: lokisWail,
   },
   {
     id: "encore",
@@ -207,7 +221,7 @@ Arrow Vulcan: increases the final ATK% by 5% per active song/dance.
 Reverberation: reduces SP cost and Cooldown by 5% per active song/dance.
 Dissonance/Cringe Dance: reduces physical damage received by 5% per active song/dance.
 `,
-    img: skillImgNo,
+    img: encore,
   },
   {
     id: "medusaScream",
@@ -260,7 +274,7 @@ Description: Performs a dance that will boost Hit and Long Range Damage of all p
 [Lv 10]: Perfect Hit +10, Ranged Damage +20%
 Additional Benefits and Adjustments: Perfect Hit +1 × Skill Lv; Ranged Damage: +(5 + Skill Lv)%; adds 1% × Skill Lv chance to ignore the target’s defense.
 `,
-    img: skillImgNo,
+    img: humming,
   },
   {
     id: "intoTheAbyss",
@@ -285,7 +299,7 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
 [Lv 3]: Grants a 12% chance to negate catalyst consumption.
 [Lv 4]: Grants a 16% chance to negate catalyst consumption.
 [Lv 5]: Grants a 20% chance to negate catalyst consumption.`,
-    img: skillImgNo,
+    img: intoTheAbyss,
   },
   {
     id: "lullaby",
@@ -303,7 +317,7 @@ Type: Misc
 Target: Self
 Requirement: Into the Abyss Lv: 3
 Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 100% chance to be inflicted with Sleep every 10 seconds while they remain in the area. The Sleep effect lasts for 4 seconds. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
-    img: skillImgNo,
+    img: lullaby,
   },  
   {
     id: "fortunesKiss",
@@ -334,7 +348,7 @@ Description: Performs a dance that will boost the Crit and Critical Damage of th
 [Lv 9]: Crit +9, Critical Damage + 18%,
 [Lv 10]: Crit +10, Critical Damage + 20%
 Additional Benefits and Adjustments: Crit +1 × Skill Lv; Critical Shield +1 × Skill Lv; Critical Damage + (5 + Skill Lv)%.`,
-    img: skillImgNo,
+    img: fortunesKiss,
   },
   {
     id: "invulnerableSiegfried",
@@ -359,7 +373,7 @@ Description: Initiates a comforting duet that grants temporary resistance to var
 [Lv 3]: Elemental Resistences +9%, Tolerance to negative effects +15%,
 [Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
 [Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
-    img: skillImgNo,
+    img: invulnerableSiegfried,
   },
   {
     id: "mrKimARichMan",
@@ -377,7 +391,7 @@ Type: Misc
 Target: Self
 Requirement: Invulnerable Siegfried Lv: 3
 Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
-    img: skillImgNo,
+    img: mrKimARichMan,
   },
   {
     id: "dontForgetMe",
@@ -408,7 +422,7 @@ Description: Perform a dance that increases the movement speed of you and your p
 [Lv 9]: Allies MS +23%, Attacker MS and ASPD -19% for 5.5 seconds,
 [Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds
 Additional Benefits and Adjustments: Increases movement speed by (5 + (Skill Lv × 2))%; reduces enemies’ movement speed by 5 + (Skill Lv × 2)% for 5 seconds (only for the summoner); True Defense +10 × Skill Lv.`,
-    img: skillImgNo,
+    img: dontForgetMe,
   },
   {
     id: "theRingOfNibelungen",
@@ -433,7 +447,7 @@ Description: Initiates a refined duet that grants a random temporary effect to y
 [Lv 3]: Attack Speed +12%, Atk +12%, MAtk +12%, Max HP +18%, Max SP +18%, All Stats +9, Hit +30, Flee +30, SP consumption -18%, HP recovery +60%, SP recovery +60%,
 [Lv 4]: Attack Speed +16%, Atk +16%, MAtk +16%, Max HP +24%, Max SP +24%, All Stats +12, Hit +40, Flee +40, SP consumption -24%, HP recovery +80%, SP recovery +80%,
 [Lv 5]: Attack Speed +20%, Atk +20%, MAtk +20%, Max HP +30%, Max SP +30%, All Stats +15, Hit +50, Flee +50, SP consumption -30%, HP recovery +100%, SP recovery +100%`,
-    img: skillImgNo,
+    img: theRingOfNibelungen,
   },
   {
     id: "eternalChaos",
@@ -451,7 +465,7 @@ Type: Misc
 Target: Self
 Requirement: The Ring of Nibelungen Lv: 3
 Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
-    img: skillImgNo,
+    img: eternalChaos,
   },
 ];
 

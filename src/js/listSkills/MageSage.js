@@ -3,6 +3,21 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import advancedBook from '../../img/icon_sag/icon_sag_1.gif'; 
+import castCancel from '../../img/icon_sag/icon_sag_2.gif'; 
+import magicRod from '../../img/icon_sag/icon_sag_3.gif'; 
+import spellBreaker from '../../img/icon_sag/icon_sag_4.gif'; 
+import freeCast from '../../img/icon_sag/icon_sag_5.gif'; 
+import flameWeapon from '../../img/icon_sag/icon_sag_7.gif'; 
+import frostWeapon from '../../img/icon_sag/icon_sag_8.gif'; 
+import lightningWeapon from '../../img/icon_sag/icon_sag_9.gif'; 
+import seismicWeapon from '../../img/icon_sag/icon_sag_10.gif'; 
+import volcano from '../../img/icon_sag/icon_sag_12.gif'; 
+import deluge from '../../img/icon_sag/icon_sag_13.gif'; 
+import whirlwind from '../../img/icon_sag/icon_sag_14.gif'; 
+import sandstorm from '../../img/icon_sag/icon_sag_15.gif'; 
+import landProtector from '../../img/icon_sag/icon_sag_15.gif'; 
+import dispell from '../../img/icon_sag/icon_sag_16.gif'; 
 
 // список скилов Sage
 export const skillsSage = [  
@@ -42,7 +57,7 @@ Description: Increase magical attack and attack speed with Book Weapons. When [L
 [Lv 8]: MAtk +24, Attack Speed +4%,
 [Lv 9]: MAtk +27, Attack Speed +4.5%,
 [Lv 10]: MAtk +30, Attack Speed +5%`,
-    img: skillImgNo,
+    img: advancedBook,
   },
   {
     id: "frostWeapon",
@@ -70,7 +85,7 @@ Description: Temporarily imbues a single targets weapon with Water property, inc
 [Lv 3]: Water Damage +4%, Duration: 225 sec,
 [Lv 4]: Water Damage +5%, Duration: 300 sec,
 [Lv 5]: Water Damage +5%, Duration: 300 sec`,
-    img: skillImgNo,
+    img: frostWeapon,
   },
   {
     id: "lightningWeapon",
@@ -98,7 +113,7 @@ Description: Temporarily imbues a single targets weapon with Wind property, incr
 [Lv 3]: Wind Damage +4%, Duration: 225 sec,
 [Lv 4]: Wind Damage +5%, Duration: 300 sec,
 [Lv 5]: Wind Damage +5%, Duration: 300 sec`,
-    img: skillImgNo,
+    img: lightningWeapon,
   },
   {
     id: "seismicWeapon",
@@ -126,7 +141,7 @@ Description: Temporarily imbues a single targets weapon with Earth property, inc
 [Lv 3]: Earth Damage +4%, Duration: 225 sec,
 [Lv 4]: Earth Damage +5%, Duration: 300 sec,
 [Lv 5]: Earth Damage +5%, Duration: 300 sec`,
-    img: skillImgNo,
+    img: seismicWeapon,
   },
   {
     id: "flameWeapon",
@@ -154,7 +169,7 @@ Description: Temporarily imbues a single targets weapon with Fire property, incr
 [Lv 3]: Fire Damage +4%, Duration: 225 sec,
 [Lv 4]: Fire Damage +5%, Duration: 300 sec,
 [Lv 5]: Fire Damage +5%, Duration: 300 sec`,
-    img: skillImgNo,
+    img: flameWeapon,
   },
   {
     id: "deluge",
@@ -179,7 +194,7 @@ Description: Creates a Deluge Terrain in a 7x7 cell area, amplifying all Water p
 [Lv 1]: Water Damage +10%, MaxHP +5%, Duration: 1 min.
 [Lv 2]: Water Damage +15%, MaxHP +10%, Duration: 2 min.
 [Lv 3]: Water Damage +20%, MaxHP +15%, Duration: 3 min.`,
-img: skillImgNo,
+img: deluge,
   },
   {
     id: "whirlwind",
@@ -204,7 +219,7 @@ Description: Creates a Whirlwind Terrain in a 7x7 cell area, enhancing all Wind 
 [Lv 1]: Wind Damage +10%, Flee +10, Duration: 1 min,
 [Lv 2]: Wind Damage +15%, Flee +20, Duration: 2 min,
 [Lv 3]: Wind Damage +20%, Flee +30, Duration: 3 min`,
-    img: skillImgNo,
+    img: whirlwind,
   },
   {
     id: "sandstorm",
@@ -229,7 +244,7 @@ Description: Creates a Sandstorm Terrain in a 7x7 cell area, amplifying all Wind
 [Lv 1]: Earth Damage +10%, Def +20, Duration: 1 min,
 [Lv 2]: Earth Damage +15%, Def +30, Duration: 2 min,
 [Lv 3]: Earth Damage +20%, Def +40, Duration: 3 min`,
-    img: skillImgNo,
+    img: sandstorm,
   },
   {
     id: "volcano",
@@ -254,7 +269,7 @@ Description: Transforms a 7x7 area into a Volcano Terrain, enhancing all Fire pr
 [Lv 1]: Fire Damage +10%, Atk/MAtk +10, Duration: 1 min,
 [Lv 2]: Fire Damage +15%, Atk/MAtk +20, Duration: 2 min,
 [Lv 3]: Fire Damage +20%, Atk/MAtk +30, Duration: 3 min`,
-    img: skillImgNo,
+    img: volcano,
   },
   {
     id: "castCancel",
@@ -280,7 +295,7 @@ Description: Only usable while casting a magic spell. Immediately cancels a spel
 [Lv 3]: SP Consumption: 50%,
 [Lv 4]: SP Consumption: 30%,
 [Lv 5]: SP Consumption: 10%`,
-    img: skillImgNo,
+    img: castCancel,
   },
   {
     id: "dispell",
@@ -307,7 +322,7 @@ Description: Casting Dispell has a chance of canceling all magic effects that ha
 [Lv 3]: Success Chance: 80%,
 [Lv 4]: Success Chance: 90%,
 [Lv 5]: Success Chance: 100%`,
-    img: skillImgNo,
+    img: dispell,
   },
   {
     id: "magicRod",
@@ -335,7 +350,7 @@ Description: Upon being attacked with a skill, using Magic Rod in the correct mo
 [Lv 3]: Timing: 0.8 seconds, SP Absorption: 60%,
 [Lv 4]: Timing: 1.0 second, SP Absorption: 80%,
 [Lv 5]: Timing: 1.2 seconds, SP Absorption: 100%`,
-    img: skillImgNo,
+    img: magicRod,
   },
   {
     id: "spellBreaker",
@@ -362,7 +377,7 @@ Description: Interrupts a magic spell cast by an enemy and receive the SP the en
 [Lv 3]: SP Absorption: 50%,
 [Lv 4]: SP Absorption: 75%,
 [Lv 5]: SP Absorption: 100%`,
-    img: skillImgNo,
+    img: spellBreaker,
   },
   {
     id: "freeCast",
@@ -392,7 +407,7 @@ Description: Enables moving and attacking during the casting of magic spells.
 [Lv 8]: Movement Speed: 65%, , Attack Speed: 90%,
 [Lv 9]: Movement Speed: 70%, , Attack Speed: 95%,
 [Lv 10]: Movement Speed: 75%, , Attack Speed: 100%`,
-    img: skillImgNo,
+    img: freeCast,
   },
   {
     id: "spellwish",
@@ -473,7 +488,7 @@ Description: Creates a protective area on the targeted location that nullifies a
 [Lv 3]: Duration: 3 min, Effective AoE: 7x7,
 [Lv 4]: Duration: 4 min, Effective AoE: 9x9,
 [Lv 5]: Duration: 5 min, Effective AoE: 11x11`,
-    img: skillImgNo,
+    img: landProtector,
   },
   {
     id: "psychicWave",

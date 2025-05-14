@@ -4,6 +4,9 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import meltdown from '../../img/icon_wsm/icon_wsm_1.gif'; 
+import cartTermination from '../../img/icon_wsm/icon_wsm_4.gif'; 
+import maximumPowerThrust from '../../img/icon_wsm/icon_wsm_5.gif'; 
 
 // список скилов Whitesmith
 export const skillsWhitesmith = [
@@ -36,7 +39,7 @@ Description: While under the effect of Cart Boost, unleash a devastating attack 
 [Lv 8]: Stun Chance: 40%,
 [Lv 9]: Stun Chance: 45%,
 [Lv 10]: Stun Chance: 50%`,
-    img: skillImgNo,
+    img: cartTermination,
   },
   {
     id: "foundryPowerUp",
@@ -85,7 +88,7 @@ Description: Strap Zeny Pouches onto your weapon for increases your weapons dama
 [Lv 3]: Atk +60%, Duration: 228 sec,
 [Lv 4]: Atk +80%, Duration: 264 sec,
 [Lv 5]: Atk +100%, Duration: 300 sec`,
-    img: skillImgNo,
+    img: maximumPowerThrust,
   },
   {
     id: "meltdown",
@@ -115,6 +118,6 @@ Description: Ignite your attacks with the power of fire, adding flat Fire damage
 [Lv 9]: Chance of Break Weapon: 9%, Armor: 6.3%, Duration: 55 seconds,
 [Lv 10]: Chance of Break Weapon: 10%, Armor: 7.0%, Duration: 60 seconds
 `,
-    img: skillImgNo,
+    img: meltdown,
   },
 ];

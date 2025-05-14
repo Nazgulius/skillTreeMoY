@@ -3,6 +3,22 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import encore from '../../img/icon_bnd/icon_bnd_2.gif';
+import lullaby from '../../img/icon_bnd/icon_bnd_3.gif';
+import mrKimARichMan from '../../img/icon_bnd/icon_bnd_4.gif';
+import eternalChaos from '../../img/icon_bnd/icon_bnd_5.gif';
+import drumOfBattlefield from '../../img/icon_bnd/icon_bnd_6.gif';
+import theRingOfNibelungen from '../../img/icon_bnd/icon_bnd_7.gif';
+import lokisWail from '../../img/icon_bnd/icon_bnd_8.gif';
+import intoTheAbyss from '../../img/icon_bnd/icon_bnd_9.gif';
+import invulnerableSiegfried from '../../img/icon_bnd/icon_bnd_10.gif';
+import musicalLesson from '../../img/icon_bnd/icon_bnd_11.gif';
+import musicalStrike from '../../img/icon_bnd/icon_bnd_12.gif'; 
+import dissonance from '../../img/icon_bnd/icon_bnd_13.gif'; 
+import whistle from '../../img/icon_bnd/icon_bnd_14.gif'; 
+import assassinCrossOfSunset from '../../img/icon_bnd/icon_bnd_15.gif'; 
+import poemOfBragi from '../../img/icon_bnd/icon_bnd_16.gif'; 
+import appleOfIdun from '../../img/icon_bnd/icon_bnd_17.gif'; 
 
 // список скилов Bard
 export const skillsBard = [    
@@ -35,7 +51,7 @@ Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. 
 [Lv 9]: Atk +18, MAtk +18, Aspd +9%,
 [Lv 10]: Atk +20, MAtk +20, Aspd +10%
 `,
-    img: skillImgNo,
+    img: musicalLesson,
   },
   {
     id: "musicalStrike",
@@ -64,7 +80,7 @@ Description: Fires a powerful volley of arrows using an instrument. The Arrows e
 New calculation: ATK% = (50 + Crit) + (30 × Skill Lv).
 Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed Cast Time: 400; AmmoAmount: 1.
 `,
-    img: skillImgNo,
+    img: musicalStrike,
   },
   {
     id: "dissonance",
@@ -99,7 +115,7 @@ Hit/Sec = 1000 ÷ ((4000 - (20 × ASPD)) × 3).
 Now the skill can trigger autocast for both physical and magical modes.
 It does not disable SP regeneration, but reduces regeneration by 70% and increases the regeneration time by 30%.
 `,
-    img: skillImgNo,
+    img: dissonance,
   },
   {
     id: "appleOfIdun",
@@ -131,7 +147,7 @@ Description: Performs a song that will boost Max HP and Healings Received of the
 [Lv 10]: MaxHP +20%, Healings Received +20%
 Additional Benefits and Adjustments: Heals 5% of allies’ HP when using the skill; increases MaxHP by (2 × Skill Lv)%; heals 2% of the user’s HP every (25 - (Skill Lv × 2)) seconds.
 `,
-    img: skillImgNo,
+    img: appleOfIdun,
   },
   {
     id: "drumOfBattlefield",
@@ -156,7 +172,7 @@ Description: Initiates a battle duet that temporarily increases both physical an
 [Lv 3]: Atk +25, MAtk +25,
 [Lv 4]: Atk +30, MAtk +30,
 [Lv 5]: Atk +35, MAtk +35`,
-    img: skillImgNo,
+    img: drumOfBattlefield,
   },
   {
     id: "lokisWail",
@@ -174,7 +190,7 @@ Type: Misc
 Target: Self
 Requirement: Drum of Battlefield Lv: 3
 Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
-    img: skillImgNo,
+    img: lokisWail,
   },
   {
     id: "encore",
@@ -207,7 +223,7 @@ Arrow Vulcan: increases the final ATK% by 5% per active song/dance.
 Reverberation: reduces SP cost and Cooldown by 5% per active song/dance.
 Dissonance/Cringe Dance: reduces physical damage received by 5% per active song/dance.
 `,
-    img: skillImgNo,
+    img: encore,
   },
   
   {
@@ -263,7 +279,7 @@ Description: Performs a song that will boost Flee and Perfect Dodge of the user 
 [Lv 10]: Flee +40, Perfect Dodge +10
 Additional Benefits and Adjustments: Perfect Dodge +1 × Skill Lv; Flee: +20 + (Skill Lv × 2); adds 1% × Skill Lv chance to dodge any damage.
 `,
-    img: skillImgNo,
+    img: whistle,
   },
   {
     id: "intoTheAbyss",
@@ -288,7 +304,7 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
 [Lv 3]: Grants a 12% chance to negate catalyst consumption.
 [Lv 4]: Grants a 16% chance to negate catalyst consumption.
 [Lv 5]: Grants a 20% chance to negate catalyst consumption.`,
-    img: skillImgNo,
+    img: intoTheAbyss,
   },
   {
     id: "lullaby",
@@ -306,7 +322,7 @@ Type: Misc
 Target: Self
 Requirement: Into the Abyss Lv: 3
 Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 100% chance to be inflicted with Sleep every 10 seconds while they remain in the area. The Sleep effect lasts for 4 seconds. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown`,
-    img: skillImgNo,
+    img: lullaby,
   },
   {
     id: "poemOfBragi",
@@ -338,7 +354,7 @@ Description: Performs a song that will shorten Variable Cast Time and After Cast
 [Lv 10]: VCT -20%, Cast Delay -30%
 Additional Benefits and Adjustments: Reduces VariableCastTime, FixedCastTime, and AfterCastDelay by (5 + (Skill Lv × 2))%.
 `,
-    img: skillImgNo,
+    img: poemOfBragi,
   },
   {
     id: "invulnerableSiegfried",
@@ -363,7 +379,7 @@ Description: Initiates a comforting duet that grants temporary resistance to var
 [Lv 3]: Elemental Resistences +9%, Tolerance to negative effects +15%,
 [Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
 [Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
-    img: skillImgNo,
+    img: invulnerableSiegfried,
   }, 
   {
     id: "mrKimARichMan",
@@ -381,7 +397,7 @@ Type: Misc
 Target: Self
 Requirement: Invulnerable Siegfried Lv: 3
 Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
-    img: skillImgNo,
+    img: mrKimARichMan,
   },
   {
     id: "assassinCrossOfSunset",
@@ -412,7 +428,7 @@ Description: Performs a song that will boost attack speed of the user and party 
 Additional Benefits and Adjustments: Reduces the user’s After Attack Delay by 5 + (Skill Lv × 2)%; increases enemies’ After Attack Delay by 5 + (Skill Lv × 2)% for 5 seconds (only for the summoner); True ATK/MATK +10 × Skill Lv.
 
 `,
-    img: skillImgNo,
+    img: assassinCrossOfSunset,
   },
   {
     id: "theRingOfNibelungen",
@@ -437,7 +453,7 @@ Description: Initiates a refined duet that grants a random temporary effect to y
 [Lv 3]: Attack Speed +12%, Atk +12%, MAtk +12%, Max HP +18%, Max SP +18%, All Stats +9, Hit +30, Flee +30, SP consumption -18%, HP recovery +60%, SP recovery +60%,
 [Lv 4]: Attack Speed +16%, Atk +16%, MAtk +16%, Max HP +24%, Max SP +24%, All Stats +12, Hit +40, Flee +40, SP consumption -24%, HP recovery +80%, SP recovery +80%,
 [Lv 5]: Attack Speed +20%, Atk +20%, MAtk +20%, Max HP +30%, Max SP +30%, All Stats +15, Hit +50, Flee +50, SP consumption -30%, HP recovery +100%, SP recovery +100%`,
-    img: skillImgNo,
+    img: theRingOfNibelungen,
   },
   {
     id: "eternalChaos",
@@ -455,7 +471,7 @@ Type: Misc
 Target: Self
 Requirement: The Ring of Nibelungen Lv: 3
 Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
-    img: skillImgNo,
+    img: eternalChaos,
   },
 ];
 

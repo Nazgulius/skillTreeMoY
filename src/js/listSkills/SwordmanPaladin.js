@@ -3,6 +3,11 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import gloriaDomini from '../../img/icon_pld/icon_pld_1.gif'; 
+import sacrifice from '../../img/icon_pld/icon_pld_2.gif'; 
+import gospel from '../../img/icon_pld/icon_pld_3.gif'; 
+import shieldChain from '../../img/icon_pld/icon_pld_4.gif'; 
+
 
 // список скилов Paladin
 export const skillsPaladin = [  
@@ -29,7 +34,7 @@ Description: Unleashes a divine cross with immense pressure on a single target, 
 [Lv 4]: Atk or MAtk 750%,
 [Lv 5]: Atk or MAtk 850%
 Details: AfterCastActDelay set as ASPD + 220; CastTime: 1400; Fixed Cast Time: 600.`,
-    img: skillImgNo,
+    img: gloriaDomini,
   },
   {
     id: "gospel",
@@ -52,7 +57,7 @@ Description: Center a divine cross on yourself, granting various effects to part
 [Lv 3]: Protection Aura - Grants a Physical Defense bonus based on the users defense and increases the Max HP of affected targets by 10%.
 [Lv 4]: Salvation Aura - Grants Property Resistance based on the users INT and increases Hard Magic Defense of affected targets by 10.
 [Lv 5]: Inspiration Aura - Grants a Sacred property bonus to magical and physical damage, and increases Attack and Magic Attack by 50.`,
-    img: skillImgNo,
+    img: gospel,
   },
   {
     id: "sacrifice",
@@ -78,7 +83,7 @@ Description: Embrace the power of sacrifice to boost your Attack and Skill Damag
 [Lv 5]: Extra Damage 1.4 x HP Drained
 Now, HP consumption occurs only once per use of the skill.
 `,
-    img: skillImgNo,
+    img: sacrifice,
   },
   {
     id: "shieldChain",
@@ -108,7 +113,7 @@ Description: Requires a Shield equipped. Enable the chance of striking an enemy 
 [Lv 9]: Variable C.Time: 0.6 Seconds, Range: 10 cells,
 [Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
 Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 600.`,
-    img: skillImgNo,
+    img: shieldChain,
   },
 ];
 

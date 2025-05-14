@@ -3,6 +3,15 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import abracadabra from '../../img/icon_sag/icon_sag_17.gif'; 
+import indulge from '../../img/icon_pro/icon_pro_1.gif'; 
+import soulChange from '../../img/icon_pro/icon_pro_2.gif'; 
+import soulBurn from '../../img/icon_pro/icon_pro_3.gif'; 
+import mindBreaker from '../../img/icon_pro/icon_pro_4.gif'; 
+import memorize from '../../img/icon_pro/icon_pro_5.gif'; 
+import fogWall from '../../img/icon_pro/icon_pro_6.gif'; 
+import spiderWeb from '../../img/icon_pro/icon_pro_7.gif'; 
+import doubleCasting from '../../img/icon_pro/icon_pro_8.gif'; 
 
 // список скилов Professor
 export const skillsProfessort = [  
@@ -32,7 +41,7 @@ Description: Unleash a touch of magic mayhem. When you use an offensive skill af
 [Lv 8]: Spells Lv: 8, Number of Spells: 4,
 [Lv 9]: Spells Lv: 9, Number of Spells: 5,
 [Lv 10]: Spells Lv: 10, Number of Spells: 5`,
-    img: skillImgNo,
+    img: abracadabra,
   },
   {
     id: "doubleCasting",
@@ -55,7 +64,7 @@ Description: Provides a chance to repeat any Elemental skill cast for 90 seconds
 [Lv 3]: Chance to Repeat: 60%,
 [Lv 4]: Chance to Repeat: 70%,
 [Lv 5]: Chance to Repeat: 80%`,
-    img: skillImgNo,
+    img: doubleCasting,
   },
   {
     id: "fogWall",
@@ -77,7 +86,7 @@ Description: Creates a wall of fog in a 5x3 cell area that will cause the Blind 
 [Lv 3]: Max Fog Walls 3, Duration: 22 seconds,
 [Lv 4]: Max Fog Walls 4, Duration: 26 seconds,
 [Lv 5]: Max Fog Walls 5, Duration: 30 seconds`,
-    img: skillImgNo,
+    img: fogWall,
   },
   {
     id: "indulge",
@@ -101,7 +110,7 @@ Description: Consumes an amount of HP equal to 10% of MaxHP to restore an SP amo
 [Lv 3]: SP +30%,
 [Lv 4]: SP +40%,
 [Lv 5]: SP +50%`,
-    img: skillImgNo,
+    img: indulge,
   },
   {
     id: "memorize",
@@ -117,7 +126,7 @@ Type: Magical
 Target: Self
 Requirement: None
 Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, Variable cast time, and Fixed cast time by 50%. Max Stacks: 5`,
-    img: skillImgNo,
+    img: memorize,
   },
   {
     id: "mindBreaker",
@@ -142,7 +151,7 @@ Description: Induces mental turmoil in an enemy that will reduce it's MDEF, but 
 [Lv 3]: MATK +60%, MDEF -36%,
 [Lv 4]: MATK +80%, MDEF -48%,
 [Lv 5]: MATK +100%, MDEF -60%`,
-    img: skillImgNo,
+    img: mindBreaker,
   },
   {
     id: "soulBurn",
@@ -170,7 +179,7 @@ Description: Casts a spell that has a chance to burn the targets SP. The amount 
 [Lv 3]: 60% of user Max SP is Burned in Enemy current SP, Excess SP damage: x3,
 [Lv 4]: 80% of user Max SP is Burned in Enemy current SP, Excess SP damage: x4,
 [Lv 5]: 100% of user Max SP is Burned in Enemy current SP, Excess SP damage: x5`,
-    img: skillImgNo,
+    img: soulBurn,
   },
   {
     id: "soulChange",
@@ -190,7 +199,7 @@ Target: Enemy
 Range: 9
 Requirement: Magic Rod Lv: 3, Spell Breaker Lv: 2
 Description: Exchanges caster's remaining SP with target's remaining SP. The SP that the caster receives cannot exceed the caster's MaxSP limit.`,
-    img: skillImgNo,
+    img: soulChange,
   },
   {
     id: "spiderWeb",
@@ -207,7 +216,7 @@ Target: Enemy
 Range: 7
 Requirement: None
 Description: Shoots a spider web that will bind and immobilize a target and decrease it's FLEE rate by half for 8 seconds. Fire, Earth, Wind and Water elemental attacks will cause 75% more damage on Fiber Locked targets and cancel the Fiber Locked status. A maximum of 5 Spider Webs can be shot at once. Catalyst: 1x Cobweb.`,
-    img: skillImgNo,
+    img: spiderWeb,
   },
 ];
 

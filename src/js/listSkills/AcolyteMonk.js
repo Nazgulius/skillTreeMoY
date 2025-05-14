@@ -3,6 +3,17 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import ironHand from '../../img/icon_mon/icon_mon_1.gif'; 
+import spiritualCadence from '../../img/icon_mon/icon_mon_2.gif'; 
+import callSpiritSphere from '../../img/icon_mon/icon_mon_3.gif'; 
+import absorbSpiritSphere from '../../img/icon_mon/icon_mon_4.gif'; 
+import tripleAttack from '../../img/icon_mon/icon_mon_5.gif'; 
+import bodyRelocation from '../../img/icon_mon/icon_mon_6.gif'; 
+import occultImpaction from '../../img/icon_mon/icon_mon_8.gif'; 
+import throwSpiritSphere from '../../img/icon_mon/icon_mon_9.gif'; 
+import asuraStrike from '../../img/icon_mon/icon_mon_13.gif'; 
+import chainCombo from '../../img/icon_mon/icon_mon_14.gif'; 
+import comboFinish from '../../img/icon_mon/icon_mon_15.gif'; 
 
 // список скилов Monk
 export const skillsMonk = [  
@@ -23,7 +34,7 @@ Target: Ally
 Range: 9
 Requirement: Call Spirit Sphere Lv: 5
 Description: Allows the user to absorb Spirit Spheres, restoring their SP. Recovers 10 SP per absorbed Spirit Sphere. When used on monsters, it may restore SP equal to 0.5 to 2 times the monster level with a success rate dependent on the user's Base Level and the targets level. Chance: [25% + 1% Every 4 Base Level of user] - [1% Every 3 Level of Target]`,
-    img: skillImgNo,
+    img: absorbSpiritSphere,
   },
   {
     id: "asuraStrike",
@@ -42,7 +53,7 @@ Target: Enemy
 Range: 2
 Requirement: Furious Spirits Lv: 5
 Description: Unleash the full force of your spiritual energy, dealing devastating damage based on the number of Spirit Spheres consumed and your current SP spends. Requires the user to be in the Furious Spirits state. Can be performed Manually, after Pacify, or as part of a Combo. After use, all forms of SP recovery (Natural, Potion, Food, Skill, etc.) are penalized for 10 seconds. The penalty decreases progressively each second. Manually: Select Asura Strike via a hotkey and click on the desired target. This will consume the current number of Spirit Spheres. Each sphere consumed will use 10% of your current SP and put the skill on a 3-second cooldown per sphere used. Pacify: Can be used on a target immobilized by Pacify at Level 5, consuming only 1 Spirit Sphere and 10% of your current SP. The cooldown is 9 seconds. Combo: Can be used during the 'Combo Finish' cooldown, avoiding casting time. Consumes only 1 Spirit Sphere and 10% of current SP. Cooldown is 3 seconds.`,
-    img: skillImgNo,
+    img: asuraStrike,
   },
   {
     id: "bodyRelocation",
@@ -69,7 +80,7 @@ Description: Instantly teleport to a targeted spot if there are no obstacles bet
 [Lv 3]: Range: 7 cells, SP Cost: 10,
 [Lv 4]: Range: 9 cells, SP Cost: 12,
 [Lv 5]: Range: 11 cells, SP Cost: 14`,
-    img: skillImgNo,
+    img: bodyRelocation,
   },
   {
     id: "callSpiritSphere",
@@ -97,7 +108,7 @@ Description: Summons a Spirit Sphere that will orbit the user. Summoned sphere i
 [Lv 3]: Summon 3 Spirit Sphere,
 [Lv 4]: Summon 4 Spirit Sphere,
 [Lv 5]: Summon 5 Spirit Sphere`,
-    img: skillImgNo,
+    img: callSpiritSphere,
   },
   {
     id: "calmSpirits",
@@ -148,7 +159,7 @@ Description: Chain Combo is a powerful melee attack that can be used after Ragin
 [Lv 3]: Atk 500%, SP Cost: 11,
 [Lv 4]: Atk 650%, SP Cost: 13,
 [Lv 5]: Atk 700%, SP Cost: 15`,
-    img: skillImgNo,
+    img: chainCombo,
   },
   {
     id: "comboFinish",
@@ -175,7 +186,7 @@ Description: Combo Finish delivers a powerful melee strike that can be used afte
 [Lv 3]: Atk 900% + STR%, SP Cost: 8,
 [Lv 4]: Atk 1050% + STR%, SP Cost: 8,
 [Lv 5]: Atk 1200% + STR%, SP Cost: 8`,
-    img: skillImgNo,
+    img: comboFinish,
   },
   {
     id: "devaRetaliation",
@@ -274,7 +285,7 @@ Description: Increase attack with Knuckle Class Weapons or Bare Handed. When [Lv
 [Lv 8]: Bare Handed: Atk +48, Knuckle: Atk +24,
 [Lv 9]: Bare Handed: Atk +54, Knuckle: Atk +27,
 [Lv 10]: Bare Handed: Atk +60, Knuckle: Atk +30`,
-    img: skillImgNo,
+    img: ironHand,
   },
   {
     id: "occultImpaction",
@@ -300,7 +311,7 @@ Description: Strike with a force that scales with the targets DEF. Damage is alw
 [Lv 3]: Atk [Target DEF/2 x 3]%, SP Consumption: 13,
 [Lv 4]: Atk [Target DEF/2 x 4]%, SP Consumption: 14,
 [Lv 5]: Atk [Target DEF/2 x 5]%, SP Consumption: 15`,
-    img: skillImgNo,
+    img: occultImpaction,
   },
   {
     id: "pacify",
@@ -354,7 +365,7 @@ Description: Passively recovers HP and SP recovery every 10 seconds when the cha
 [Lv 3]: Passive: Recovers (30 +1.2% MaxHP) HP and (18 +1.2% MaxSP) SP, Active: Meditates for 6 seconds.
 [Lv 4]: Passive: Recovers (40 +1.6% MaxHP) HP and (24 +1.6% MaxSP) SP, Active: Meditates for 8 seconds.
 [Lv 5]: Passive: Recovers (50 +2% MaxHP) HP and (30 +2% MaxSP) SP, Active: Meditates for 10 seconds.`,
-    img: skillImgNo,
+    img: spiritualCadence,
   },
   {
     id: "throwSpiritSphere",
@@ -381,7 +392,7 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
 [Lv 3]: Sphere Hit 3 Times,
 [Lv 4]: Sphere Hit 4 Times,
 [Lv 5]: Sphere Hit 5 Times`,
-    img: skillImgNo,
+    img: throwSpiritSphere,
   },
   {
     id: "tripleAttack",
@@ -415,7 +426,7 @@ Description: Triple Attack provides a chance to automatically unleash a triple s
 [Lv 8]: 260% Atk, Manual Activation SP Cost: 10,
 [Lv 9]: 280% Atk, Manual Activation SP Cost: 11,
 [Lv 10]: 300% Atk, Manual Activation SP Cost: 12`,
-    img: skillImgNo,
+    img: tripleAttack,
   },
 ];
 

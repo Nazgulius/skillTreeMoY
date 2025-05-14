@@ -3,6 +3,9 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import arrowVulcan from '../../img/icon_cng/icon_cng_1.gif'; 
+import moonlitWaterMill from '../../img/icon_cng/icon_cng_2.gif'; 
+import tarotCardOfFate from '../../img/icon_cng/icon_cng_6.gif'; 
 
 // список скилов Clown
 export const skillsClown = [  
@@ -38,7 +41,7 @@ Description: Fires a rapid flurry of arrows at a targeted enemy, with damage inc
 New calculation: ATK% = (100 + (8 × Skill Lv)) × Hits.
 Details: HitCount of 9; AfterCastActDelay set as ASPD + 220; CastTime: 400 + (100 × Skill Lv); Fixed Cast Time: 600; Cooldown: 1500; AmmoAmount: 1.
 `,
-    img: skillImgNo,
+    img: arrowVulcan,
   },
   {
     id: "moonlitWaterMill",
@@ -62,7 +65,7 @@ Description: The Moonlight Watermill performance can be executed by both Minstre
 [Lv 3]: Atk or MAtk +18,
 [Lv 4]: Atk or MAtk +24,
 [Lv 5]: Atk or MAtk +30`,
-    img: skillImgNo,
+    img: moonlitWaterMill,
   },
   {
     id: "reverberation",
@@ -125,7 +128,7 @@ Description: When using [Tarot Card of Fate], the cards are drawn one by one, an
 [Lv 3]: Cooldown: 33 Seconds,
 [Lv 4]: Cooldown: 24 Seconds,
 [Lv 5]: Cooldown: 15 Seconds`,
-    img: skillImgNo,
+    img: tarotCardOfFate,
   },
 ];
 

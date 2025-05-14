@@ -3,6 +3,10 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import tripleStrafe from '../../img/no_img.png'; // заглушка
+import stealth from '../../img/icon_chs/icon_chs_1.gif'; 
+import counterInstinct from '../../img/icon_chs/icon_chs_2.gif'; 
+import fullStrip from '../../img/icon_chs/icon_chs_4.gif'; 
 
 // список скилов Stalker
 export const skillsStalker = [  
@@ -27,7 +31,7 @@ Description: Deflects incoming attacks, reducing damage by half. If the attacker
 [Lv 3]: Parry Chance: 70%, Duration: 8 seconds, Cooldown 18 seconds,
 [Lv 4]: Parry Chance: 60%, Duration: 11 seconds, Cooldown 21 seconds,
 [Lv 5]: Parry Chance: 50%, Duration: 15 seconds, Cooldown 25 seconds`,
-    img: skillImgNo,
+    img: counterInstinct,
   },
   {
     id: "fullStrip",
@@ -49,7 +53,7 @@ Target: Enemy
 Range: 1
 Requirement: Helm Stripping Lv: 2, Shield Stripping Lv: 2, Armor Stripping Lv: 2, Weapon Stripping Lv: 2
 Description: Attempts to forcibly remove the equipped weapon, shield, armor and headgear of a single target, temporarily preventing them from equipping it again. Does not work against monsters. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Success Chance: 10% + 1% for every level learned in Divest Helm, Divest Shield, Divest Armor, and Divest Weapon, Duration: 15 seconds`,
-    img: skillImgNo,
+    img: fullStrip,
   },
   {
     id: "simulation",
@@ -103,7 +107,7 @@ Description: Enter a special Hiding status in which caster can move without bein
 [Lv 3]: Stats Bonus: 6%, 80% Move Speed, SP cost: 16 every 10 seconds,
 [Lv 4]: Stats Bonus: 8%, 90% Move Speed, SP cost: 18 every 10 seconds,
 [Lv 5]: Stats Bonus: 10%, 100% Move Speed, SP cost: 20 every 10 seconds`,
-    img: skillImgNo,
+    img: stealth,
   },
   {
     id: "tripleStrafe",
@@ -132,7 +136,7 @@ Description: Shoots three arrows quickly at the same target. Learning this skill
 [Lv 8]: Atk 307% x 3 Hits,
 [Lv 9]: Atk 320% x 3 Hits,
 [Lv 10]: Atk 333% x 3 Hits`,
-    img: skillImgNo,
+    img: tripleStrafe,
   },
 ];
 

@@ -4,6 +4,17 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
+import enchantedStoneCraft from '../../img/icon_bsm/icon_bsm_3.gif'; 
+import hiltBinding from '../../img/icon_bsm/icon_bsm_12.gif'; 
+import weaponryResearch from '../../img/icon_bsm/icon_bsm_14.gif'; 
+import repairWeapon from '../../img/icon_bsm/icon_bsm_15.gif'; 
+import skinTempering from '../../img/icon_bsm/icon_bsm_16.gif'; 
+import hammerfall from '../../img/icon_bsm/icon_bsm_17.gif'; 
+import adrenalineRush from '../../img/icon_bsm/icon_bsm_18.gif'; 
+import weaponPerfection from '../../img/icon_bsm/icon_bsm_19.gif'; 
+import powerThrust from '../../img/icon_bsm/icon_bsm_20.gif'; 
+import maximizePower from '../../img/icon_bsm/icon_bsm_21.gif'; 
+import cartBoost from '../../img/icon_wsm/icon_wsm_2.gif'; 
 
 // список скилов Blacksmith
 export const skillsBlacksmith = [
@@ -29,7 +40,7 @@ Description: Requires Axes or Maces Class Weapon. Strikes the ground with great 
 [Lv 3]: Stun Chance 50%,
 [Lv 4]: Stun Chance 60%,
 [Lv 5]: Stun Chance 70%`,
-    img: skillImgNo,
+    img: hammerfall,
   },
   {
     id: "metalTempering",
@@ -74,7 +85,7 @@ Description: Enable to create [Elemental Stones] by using a Mini Furnace and 10 
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
 [Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: enchantedStoneCraft,
   },
   {
     id: "reforge",
@@ -261,7 +272,7 @@ Target: Ally
 Range: 2
 Requirement: Reforge Lv: 2
 Description: With an [Anvil] in your inventory, you can restore a single targets damaged equipment, making it usable once more. This process uses 2 Steels.`,
-    img: skillImgNo,
+    img: repairWeapon,
   },
   {
     id: "skinTempering",
@@ -285,7 +296,7 @@ Description: Harden your skin with the power of the forge, enhancing your resist
 [Lv 3]: Fire Res +12%, Neutral Res +3%,
 [Lv 4]: Fire Res +16%, Neutral Res +4%,
 [Lv 5]: Fire Res +20%, Neutral Res +5%`,
-    img: skillImgNo,
+    img: skinTempering,
   }, 
   {
     id: "adrenalineRush",
@@ -316,7 +327,7 @@ Description: Requires Axes or Maces Class Weapon. Temporarily boosts Attack spee
 [Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
 [Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
 [Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
-    img: skillImgNo,
+    img: adrenalineRush,
   },
   {
     id: "weaponPerfection",
@@ -342,7 +353,7 @@ Description: This skill temporarily erases any size penalties from the equipped 
 [Lv 3]: Lasts 90 seconds,
 [Lv 4]: Lasts 120 seconds,
 [Lv 5]: Lasts 150 seconds`,
-    img: skillImgNo,
+    img: weaponPerfection,
   },
   {
     id: "powerThrust",
@@ -374,7 +385,7 @@ Description: Unleash a surge of strength with Power Thrust. Temporarily amplify 
 [Lv 8]: Boosts Self Attack by 21% and Party Attack by 13%, lasting 130 seconds,
 [Lv 9]: Boosts Self Attack by 23% and Party Attack by 14%, lasting 140 seconds,
 [Lv 10]: Boosts Self Attack by 25% and Party Attack by 15%, lasting 150 seconds`,
-    img: skillImgNo,
+    img: powerThrust,
   },  
   {
     id: "maximizePower",
@@ -397,7 +408,7 @@ Description: Channel the full potential of your weapon with Maximize Power. This
 [Lv 3]: Drains 4 SP every 2 second,
 [Lv 4]: Drains 3 SP every 2 second,
 [Lv 5]: Drains 2 SP every 2 second`,
-    img: skillImgNo,
+    img: maximizePower,
   },
   {
     id: "hiltBinding",
@@ -418,7 +429,7 @@ Skill Form: Passive
 Type: Physical
 Requirement: Adrenaline Rush Lv: 7, Power Thrust Lv: 7, Weapon Perfection Lv: 3
 Description: Infuse your combat prowess. This skill prolongs the effects of Adrenaline Rush, Power Thrust, and Weapon Perfection by 20%, giving your buffs extra staying power. Plus, it enhances these abilities with a bonus +1 STR and +4 Atk.`,
-    img: skillImgNo,
+    img: hiltBinding,
   },
   {
     id: "weaponryResearch",
@@ -440,7 +451,7 @@ Description: Sharpens your understanding of weapon mechanics, boosting your Stat
 [Lv 3]: Status Atk +12, Hit Rate +12%,
 [Lv 4]: Status Atk +16, Hit Rate +16%,
 [Lv 5]: Status Atk +20, Hit Rate +20%`,
-    img: skillImgNo,
+    img: weaponryResearch,
   },
   {
     id: "cartBoost",
@@ -460,6 +471,6 @@ Type: Physical
 Target: Self
 Requirement: Pushcart Lv: 5
 Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
-    img: skillImgNo,
+    img: cartBoost,
   },
 ];
