@@ -11,9 +11,14 @@ import tripleAttack from '../../img/icon_mon/icon_mon_5.gif';
 import bodyRelocation from '../../img/icon_mon/icon_mon_6.gif'; 
 import occultImpaction from '../../img/icon_mon/icon_mon_8.gif'; 
 import throwSpiritSphere from '../../img/icon_mon/icon_mon_9.gif'; 
+import calmSpirits from '../../img/icon_mon/icon_mon_10.gif'; 
+import pacify from '../../img/icon_mon/icon_mon_11.gif'; 
 import asuraStrike from '../../img/icon_mon/icon_mon_13.gif'; 
 import chainCombo from '../../img/icon_mon/icon_mon_14.gif'; 
 import comboFinish from '../../img/icon_mon/icon_mon_15.gif'; 
+import devaRetaliation from '../../img/icon_mon/icon_mon_17.png'; 
+import fallingBlossoms from '../../img/icon_mon/icon_mon_18.png'; 
+import furiousSpirits from '../../img/icon_mon/icon_mon_19.png'; 
 
 // список скилов Monk
 export const skillsMonk = [  
@@ -133,7 +138,7 @@ Description: Enter a meditative state that greatly boosting your Physical and Ma
 [Lv 3]: Physical Defense +24%, Critical Defense +12%, Mitigates 6% of incoming damage. Attack -30%, Movement Speed -6%, Attack Speed -6%.
 [Lv 4]: Physical Defense +32%, Critical Defense +16%, Mitigates 8% of incoming damage. Attack -40%, Movement Speed -8%, Attack Speed -8%.
 [Lv 5]: Physical Defense +40%, Critical Defense +20%, Mitigates 10% of incoming damage. Attack -50%, Movement Speed -10%, Attack Speed -10%.`,
-    img: skillImgNo,
+    img: calmSpirits,
   },
   {
     id: "chainCombo",
@@ -205,7 +210,7 @@ Target: Enemy
 Range: 2
 Requirement: Calm Spirits Lv: 5
 Description: Release the pain accumulated during your battles while in a state of Calm Spirit, striking enemies with the full force based on the number of Spirit Spheres consumed and your Stored Suffering. Requires the user to be in the Calm Spirits state.Can be performed Manually, after Pacify, or as part of a Combo. After use, all forms of SP recovery (Natural, Potion, Food, Skill, etc.) are penalized for 10 seconds. The penalty decreases progressively each second. Manually: Select Deva Retaliation via a hotkey and click on the desired target. This will consume the current number of Spirit Spheres. Each sphere consumed will use 10% of your current Stored Suffering and put the skill on a 3-second cooldown per sphere used. Pacify: Can be used on a target immobilized by Pacify at Level 5, consuming only 1 Spirit Sphere and 10% of your current Stored Suffering. The cooldown is 9 seconds. Combo: Can be used during the 'Combo Finish' cooldown, avoiding casting time. Consumes only 1 Spirit Sphere and 10% of current Stored Suffering. Cooldown is 3 seconds.`,
-    img: skillImgNo,
+    img: devaRetaliation,
   },
   {
     id: "fallingBlossoms",
@@ -230,7 +235,7 @@ Description: Passively enhances evasion and grants a chance to dodge any physica
 [Lv 3]: Passive: Flee +12, Dodge 3%, Active: Nullify chance 30%, SP Cost: 22, HP Cost: 3%,
 [Lv 4]: Passive: Flee +16, Dodge 4%, Active: Nullify chance 40%, SP Cost: 26, HP Cost: 4%,
 [Lv 5]: Passive: Flee +20, Dodge 5%, Active: Nullify chance 50%, SP Cost: 30, HP Cost: 5%`,
-    img: skillImgNo,
+    img: fallingBlossoms,
   },
   {
     id: "furiousSpirits",
@@ -255,7 +260,7 @@ Description: Enter a heightened state of rage, boosting your Attack and Critical
 [Lv 3]: Attack +15%, Critical Hit Chance +15%, +1% Attack Speed every 7% HP lost, SP consumption +12%, SP regeneration -30% , Physical Defense -30%,
 [Lv 4]: Attack +20%, Critical Hit Chance +20%, +1% Attack Speed every 6% HP lost, SP consumption +8%, SP regeneration -40% , Physical Defense -40%, SP Consumption +16%, SP Regen -40%, Hard DEF -40%,
 [Lv 5]: Attack +25%, Critical Hit Chance +25%, +1% Attack Speed every 5% HP lost, SP consumption +20%, SP regeneration -50% , Physical Defense -50%`,
-    img: skillImgNo,
+    img: furiousSpirits,
   },
   {
     id: "ironHand",
@@ -340,7 +345,7 @@ Description: Temporarily halt the aggression of an enemy by capturing them in a 
 [Lv 4]: Reaction Time 1.1s, Duration 6.6s,
 [Lv 5]: Reaction Time 1.3s, Duration 7.0s
 Note: Duration is reduced to 2 seconds on elite, miniboss, and boss monsters.`,
-    img: skillImgNo,
+    img: pacify,
   },
   {
     id: "spiritualCadence",

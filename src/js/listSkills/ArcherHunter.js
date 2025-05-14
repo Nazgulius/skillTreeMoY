@@ -19,7 +19,8 @@ import shockwaveTrap from '../../img/icon_hnt/icon_hnt_13.png';
 import sandman from '../../img/icon_hnt/icon_hnt_14.png'; 
 import springTrap from '../../img/icon_hnt/icon_hnt_15.png'; 
 import steelCrow from '../../img/icon_hnt/icon_hnt_16.png'; 
-//import icon from '../../img/icon_hnt/icon_hnt_17.png'; 
+import trapResearch from '../../img/icon_hnt/icon_hnt_18.png'; 
+
 
 // список скилов Hunter
 export const skillsHunter = [ 
@@ -494,9 +495,22 @@ Description: Deploys trap that causes any enemy that steps on it to slip and sli
     element: null,
     skillName: "Trap Research",
     maxLevel: 5,
-    inform: `Max Lv: 5
-??????????`,
-    img: skillImgNo,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Type: Physical
+Description: Boosts the effectiveness of traps, Increases damage for Land Wine, Blast Mine, Freezing Trap, Claymore Trap, and Shockwave Trap. Extends the duration of Skid Trap, Ankle Snare, Flasher, Sandman, and Shockwave Trap. At levels 5 and 10, it expands the trap placement range, Every 2 levels alsa increase INT and DEX.
+[Level 1]; Trap Damage +20, Trap Duration +10 sec, INT/DEX +1
+[Level 2]: Trap Damage +40, Trap Duration +20 sec, INT/DEX +1
+[Level 3]: Trap Damage +60, Trap Duration +30 sec, INT/DEX +2
+[Level 4]: Trap Damage +80, Trap Duration +30 sec, INT/DEX +2
+[Level 5]: Trap Damage , Trap Duration , INT/DEX 
+[Level 6]: Trap Damage , Trap Duration , INT/DEX 
+[Level 7]: Trap Damage , Trap Duration , INT/DEX 
+[Level 8]: Trap Damage , Trap Duration , INT/DEX 
+[Level 9]: Trap Damage , Trap Duration , INT/DEX 
+[Level 10]: Trap Damage , Trap Duration , INT/DEX 
+`,
+    img: trapResearch,
   },
 ];
 
