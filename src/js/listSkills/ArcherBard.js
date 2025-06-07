@@ -19,6 +19,7 @@ import whistle from '../../img/icon_bnd/icon_bnd_14.gif';
 import assassinCrossOfSunset from '../../img/icon_bnd/icon_bnd_15.gif'; 
 import poemOfBragi from '../../img/icon_bnd/icon_bnd_16.gif'; 
 import appleOfIdun from '../../img/icon_bnd/icon_bnd_17.gif'; 
+import frostJoke from '../../img/icon_bnd/icon_bnd_19.png'; 
 
 // список скилов Bard
 export const skillsBard = [    
@@ -247,7 +248,7 @@ Description: Inflicts the Freezing status to enemies within the casters view.
 [Lv 3]: Chance: 30%,
 [Lv 4]: Chance: 35%,
 [Lv 5]: Chance: 40%`,
-    img: skillImgNo,
+    img: frostJoke,
   },
   {
     id: "whistle",
