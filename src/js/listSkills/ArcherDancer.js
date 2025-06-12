@@ -17,6 +17,9 @@ import slingingStrike from '../../img/icon_dan/icon_dan_2.gif';
 import humming from '../../img/icon_dan/icon_dan_5.gif';
 import dontForgetMe from '../../img/icon_dan/icon_dan_6.gif';
 import fortunesKiss from '../../img/icon_dan/icon_dan_7.gif';
+import cringeDance from '../../img/icon_dan/icon_dan_3.gif';
+import medusaScream from '../../img/icon_dan/icon_dan_4.gif';
+import bellyDance from '../../img/icon_dan/icon_dan_8.gif';
 
 // список скилов Dancer
 export const skillsDancer = [  
@@ -113,7 +116,7 @@ Hit/Sec = 1000 ÷ ((4000 - (20 × ASPD)) × 3).
 Now the skill can trigger autocast for both physical and magical modes.
 It does not disable SP regeneration, but reduces regeneration by 70% and increases the regeneration time by 30%.
 `,
-    img: skillImgNo,
+    img: cringeDance,
   },
   {
     id: "bellyDance",
@@ -145,7 +148,7 @@ Description: Performs a dance that will boost Max SP and reduce SP Cost of the u
 [Lv 10]: MaxSP +20%, SP consumption: -15%
 Additional Benefits and Adjustments: Increases MaxSP by (Skill Lv × 2)%; reduces SP Consumption by (Skill Lv × 2)%; increases SP Recovery by (Skill Lv × 2)%.
 `,
-    img: skillImgNo,
+    img: bellyDance,
   },
   {
     id: "drumOfBattlefield",
@@ -244,7 +247,7 @@ Description: Inflicts the Petrifying status to enemies within the casters view.
 [Lv 3]: Chance: 30%,
 [Lv 4]: Chance: 35%,
 [Lv 5]: Chance: 40%`,
-    img: skillImgNo,
+    img: medusaScream,
   },
   {
     id: "humming",

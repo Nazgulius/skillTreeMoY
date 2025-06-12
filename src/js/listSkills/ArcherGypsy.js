@@ -6,6 +6,7 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 import arrowVulcan from '../../img/icon_cng/icon_cng_1.gif'; 
 import moonlitWaterMill from '../../img/icon_cng/icon_cng_2.gif'; 
 import tarotCardOfFate from '../../img/icon_cng/icon_cng_6.gif'; 
+import reverberation from '../../img/icon_cng/icon_cng_7.png'; 
 
 // список скилов Gypsy
 export const skillsGypsy = [  
@@ -92,7 +93,7 @@ Description: Emits a high-frequency sound wave at an enemy, causing magical dama
 [Lv 5]: MAtk 1500%
 Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (200 × Skill Lv); Fixed Cast Time: 600; Cooldown: 1500.
 `,
-    img: skillImgNo,
+    img: reverberation,
   },
   {
     id: "tarotCardOfFate",

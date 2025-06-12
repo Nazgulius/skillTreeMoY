@@ -15,6 +15,14 @@ import weaponPerfection from '../../img/icon_bsm/icon_bsm_19.gif';
 import powerThrust from '../../img/icon_bsm/icon_bsm_20.gif'; 
 import maximizePower from '../../img/icon_bsm/icon_bsm_21.gif'; 
 import cartBoost from '../../img/icon_wsm/icon_wsm_2.gif'; 
+import metalTempering from '../../img/icon_bsm/icon_bsm_25.png'; 
+import reforge from '../../img/icon_bsm/icon_bsm_26.png'; 
+import bladeWeaponReforging from '../../img/icon_bsm/icon_bsm_27.png'; 
+import bluntWeaponReforging from '../../img/icon_bsm/icon_bsm_28.png'; 
+import pierceWeaponReforging from '../../img/icon_bsm/icon_bsm_29.png'; 
+import magicWeaponReforging from '../../img/icon_bsm/icon_bsm_32.png'; 
+import stringWeaponReforging from '../../img/icon_bsm/icon_bsm_30.png'; 
+import exoticWeaponReforging from '../../img/icon_bsm/icon_bsm_31.png'; 
 
 // список скилов Blacksmith
 export const skillsBlacksmith = [
@@ -63,7 +71,7 @@ Description: Become a master of metalworking by smelting Iron Ore into Iron, cra
 [Lv 3]: Additional Efficiency -50%,
 [Lv 4]: Additional Efficiency -25%,
 [Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: metalTempering,
   },
   {
     id: "enchantedStoneCraft",
@@ -119,7 +127,7 @@ Description: Allows the blacksmith to reforge weapons. Reforging lets you apply 
 [Lv 3]: Reforge Chance +9%,
 [Lv 4]: Reforge Chance +12%,
 [Lv 5]: Reforge Chance +15%`,
-    img: skillImgNo,
+    img: reforge,
   },  
   {
     id: "bladeWeaponReforging",
@@ -141,7 +149,7 @@ Description: With an [Anvil] in your inventory, you can reforge Dagger, Axes and
 [Lv 1]: Success Rate: 5%,
 [Lv 2]: Success Rate: 10%,
 [Lv 3]: Success Rate: 15%`,
-    img: skillImgNo,
+    img: bladeWeaponReforging,
   },
   {
     id: "bluntWeaponReforging",
@@ -163,7 +171,7 @@ Description: With an [Anvil] in your inventory, you can reforge Mace and Knuckle
 [Lv 1]: Success Rate: 5%,
 [Lv 2]: Success Rate: 10%,
 [Lv 3]: Success Rate: 15%`,
-    img: skillImgNo,
+    img: bluntWeaponReforging,
   },
   {
     id: "pierceWeaponReforging",
@@ -185,7 +193,7 @@ Description: With an [Anvil] in your inventory, you can reforge One and Two-Hand
 [Lv 1]: Success Rate: 5%,
 [Lv 2]: Success Rate: 10%,
 [Lv 3]: Success Rate: 15%`,
-    img: skillImgNo,
+    img: pierceWeaponReforging,
   },
   {
     id: "magicWeaponReforging",
@@ -207,7 +215,7 @@ Description: With an [Anvil] in your inventory, you can reforge One, Two Handed 
 [Lv 1]: Success Rate: 5%,
 [Lv 2]: Success Rate: 10%,
 [Lv 3]: Success Rate: 15%`,
-    img: skillImgNo,
+    img: magicWeaponReforging,
   },  
   {
     id: "stringWeaponReforging",
@@ -229,7 +237,7 @@ Description: With an [Anvil] in your inventory, you can reforge Bow, Musical Ins
 [Lv 1]: Success Rate: 5%,
 [Lv 2]: Success Rate: 10%,
 [Lv 3]: Success Rate: 15%`,
-    img: skillImgNo,
+    img: stringWeaponReforging,
   },
   {
     id: "exoticWeaponReforging",
@@ -251,7 +259,7 @@ Description: With an [Anvil] in your inventory, you can reforge Humma Shuriken, 
 [Lv 1]: Success Rate: 5%,
 [Lv 2]: Success Rate: 10%,
 [Lv 3]: Success Rate: 15%`,
-    img: skillImgNo,
+    img: exoticWeaponReforging,
   },
   {
     id: "repairWeapon",

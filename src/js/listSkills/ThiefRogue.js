@@ -17,6 +17,8 @@ import helmStripping from '../../img/icon_rog/icon_rog_13.gif';
 import intimidate from '../../img/icon_rog/icon_rog_14.gif'; 
 import gangsterParadise from '../../img/icon_rog/icon_rog_18.gif'; 
 import plagiarism from '../../img/icon_rog/icon_rog_20.gif'; 
+import gangland from '../../img/icon_rog/icon_rog_22.png'; 
+import gashingBlow from '../../img/icon_rog/icon_rog_23.png'; 
 
 // список скилов Rogue
 export const skillsRogue = [ 
@@ -210,7 +212,7 @@ Skill Form: Passive
 Type: Misc
 Requirement: Gangster Paradise Lv: 5
 Description: Increases the bonuses granted by Gangster Paradise for the user by +5%.`,
-    img: skillImgNo,
+    img: gangland,
   },
   {
     id: "gashingBlow",
@@ -241,7 +243,7 @@ Description: Delivers a powerful strike that has a chance to apply the Gashing W
 [Lv 8]: Atk 540%, Gashing Wound Chance: 26%,
 [Lv 9]: Atk 570%, Gashing Wound Chance: 28%,
 [Lv 10]: Atk 600%, Gashing Wound Chance: 30%`,
-    img: skillImgNo,
+    img: gashingBlow,
   },
   {
     id: "backStab",

@@ -4,13 +4,13 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import discount from '../../img/icon_mer/icon_mer_2.gif'; 
-import overcharge from '../../img/icon_mer/icon_mer_3.gif'; 
+import discount from '../../img/icon_mer/icon_mer_2.png'; 
+import overcharge from '../../img/icon_mer/icon_mer_3.png'; 
 import pushcart from '../../img/icon_mer/icon_mer_4.gif'; 
 import mammonite from '../../img/icon_mer/icon_mer_6.gif'; 
 import cartRevolution from '../../img/icon_mer/icon_mer_7.gif'; 
-import cartTwister from '../../img/icon_mer/icon_mer_8.gif'; 
-import axeMastery from '../../img/icon_mer/icon_mer_13.gif'; 
+import cartTwister from '../../img/icon_mer/icon_mer_8.png'; 
+import axeMastery from '../../img/icon_mer/icon_mer_13.png'; 
 
 // список скилов Merchant
 export const skillsMerchant = [  

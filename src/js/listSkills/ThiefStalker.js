@@ -3,9 +3,10 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import tripleStrafe from '../../img/no_img.png'; // заглушка
+import tripleStrafe from '../../img/icon_chs/icon_chs_5.png'; // заглушка
 import stealth from '../../img/icon_chs/icon_chs_1.gif'; 
 import counterInstinct from '../../img/icon_chs/icon_chs_2.gif'; 
+import simulation from '../../img/icon_chs/icon_chs_3.gif'; 
 import fullStrip from '../../img/icon_chs/icon_chs_4.gif'; 
 
 // список скилов Stalker
@@ -83,7 +84,7 @@ Description: Adds +5 True ATK and MATK per level learned. Each basic attack has 
 [Lv 10]: Auto-Cast Level: 7, Auto-Cast Chance: 15%, Auto-Cast SP Cost: +0%
 Now, Simulation opens up a list of possible skills to be autocast, including the user’s own skills.
 `,
-    img: skillImgNo,
+    img: simulation,
   },
   {
     id: "stealth",
