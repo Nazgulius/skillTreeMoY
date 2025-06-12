@@ -15,6 +15,12 @@ import weaponChemicalProtection from '../../img/icon_alc/icon_alc_8.gif';
 import shieldChemicalProtection from '../../img/icon_alc/icon_alc_9.gif'; 
 import armorChemicalProtection from '../../img/icon_alc/icon_alc_10.gif'; 
 import helmChemicalProtection from '../../img/icon_alc/icon_alc_11.gif'; 
+import throwingPotionsTechniques from '../../img/icon_alc/icon_alc_20.png'; 
+import chemicalReaction from '../../img/icon_alc/icon_alc_21.png'; 
+import deplant from '../../img/icon_alc/icon_alc_22.png'; 
+import briarVines from '../../img/icon_alc/icon_alc_23.png'; 
+import largeScalePharmacy from '../../img/icon_alc/icon_alc_24.png'; 
+import slingItem from '../../img/icon_alc/icon_alc_25.png'; 
 
 // список скилов Alchemist
 export const skillsAlchemist = [ 
@@ -42,7 +48,7 @@ Description: Master the art of potion-throwing with this skill, enhancing both t
 [Bio Cannibalize]: Increases Plant Status by 1.5% per Learned Level. [Deplant]: Increases chance of success by 1% per Learned Level.
 [Briar Vines]: Adds 10% of user MATK to damage per Learned Level.
 [Hyper Fertilize]: Increases Fertilization effect duration by 6 seconds per Learned Level.`,
-    img: skillImgNo,
+    img: throwingPotionsTechniques,
   },
    {
     id: "demonstration",
@@ -132,7 +138,7 @@ Description: Unleash explosive versatility with Chemical Reaction, altering the 
 [Lv 3] Smoke Powder: Burns plants and creates a dense smoke cloud, reducing physical damage taken by 20% and increasing evasion by 20%. Duration scales with Bombs level.
 [Lv 4] Tear Gas: Releases potent tear gas, lowering evasion and accuracy by 40%. Entities lose 3% of their max health every 3 seconds and are forced to use /snif. Duration scales with Bombs level.
 [Lv 5] Acid Bottle: Ignites a powerful explosion that spreads acid, transforming the Bombs area into an AoE Acid Terror. Replaces Bomb tiles and casts Acid Demonstration at level 5 or highest learned level.`,
-    img: skillImgNo,
+    img: chemicalReaction,
   },
   {
     id: "potionResearch",
@@ -326,7 +332,7 @@ Description: Removes Summon Flora plants within the selected area and grants a c
 [Lv 3]: Chance: 48%, AoE 7x7,
 [Lv 4]: Chance: 54%, AoE 9x9,
 [Lv 5]: Chance: 60%, AoE 11x11`,
-    img: skillImgNo,
+    img: deplant,
   },
   {
     id: "briarVines",
@@ -353,7 +359,7 @@ Description: Throws a vine bomb that immobilizes the target and deals damage ove
 [Lv 3]: Duration: 12 seconds,
 [Lv 4]: Duration: 16 seconds,
 [Lv 5]: Duration: 20 seconds`,
-    img: skillImgNo,
+    img: briarVines,
   },
   {
     id: "pharmacy",
@@ -399,7 +405,7 @@ Description: Brew a large batch of potions all at once, with each potions creati
 [Lv 3]: Requires materials for 60 crafting attempts,
 [Lv 4]: Requires materials for 80 crafting attempts,
 [Lv 5]: Requires materials for 100 crafting attempts`,
-    img: skillImgNo,
+    img: largeScalePharmacy,
   },
   {
     id: "marineSphereBomb",
@@ -487,6 +493,6 @@ Description: Throws Fruit Bombs or Throwing Items. Status reduction and damage f
 [Lv 3]: Stats Drop Duration: 30 Seconds, Cooldown: 2 S ,
 [Lv 4]: Stats Drop Duration: 40 Seconds, Cooldown: 1.5 S ,
 [Lv 5]: Stats Drop Duration: 50 Seconds, Cooldown: 1 S`,
-    img: skillImgNo,
+    img: slingItem,
   },
 ];

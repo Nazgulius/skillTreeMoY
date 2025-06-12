@@ -4,8 +4,10 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import fullChemicalProtection from '../../img/icon_cre/icon_cre_2.gif'; // заглушка
-import acidDemonstration from '../../img/icon_cre/icon_cre_3.gif'; // заглушка
+import potionSpreader from '../../img/icon_cre/icon_cre_1.gif'; 
+import fullChemicalProtection from '../../img/icon_cre/icon_cre_2.gif'; 
+import acidDemonstration from '../../img/icon_cre/icon_cre_3.gif'; 
+import hyperFertilize from '../../img/icon_cre/icon_cre_5.png'; 
 
 // список скилов Creator
 export const skillsCreator = [
@@ -92,7 +94,7 @@ Description: Fertilizes the ground to grow a variety of plants that deal Poison 
 [Lv 8]: MAtk 180% x Hits, Extends the duration of the plants by 20% seconds(up to maximum 600 Sec).
 [Lv 9]: MAtk 190% x Hits, If a plant receives fatal damage, it heals 30% of its HP.
 [Lv 10]: MAtk 200%, x Hits, If a plant receives fatal damage, it heals 15% of its HP.`,
-    img: skillImgNo,
+    img: hyperFertilize,
   },
   {
     id: "potionSpreader",
@@ -121,6 +123,6 @@ Description: Throws a potion in a 7x7 area, applying its effect instantly to all
 [Lv 6]: Green Thick Potion CD: 0.8 Sec,
 [Lv 9]: White Thick Potion CD: 2 Sec,
 [Lv 10]: White Thick Potion CD: 1 Sec`,
-    img: skillImgNo,
+    img: potionSpreader,
   },
 ];
