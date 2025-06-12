@@ -34,7 +34,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* классы стоячие при выборе, фокусе */
+/* классы сидячие при без действии */
 .button-select-mage-img {
   background-image: url(../img/mage_class_h_sits.png);
 }
@@ -87,7 +87,7 @@ body {
   background-image: url(../img/archer_class_h3_sits.png);
 }
 
-/* классы сидячие при без действии */
+/* классы стоячие при выборе, фокусе */
 .button-select-mage-img:hover {
   background-image: url(../img/mage_class_h.png);
 }
