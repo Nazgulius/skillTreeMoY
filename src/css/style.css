@@ -34,55 +34,109 @@ body {
   margin-bottom: 10px;
 }
 
+/* классы стоячие при выборе, фокусе */
 .button-select-mage-img {
-  background-image: url(../img/mage_class_h.png);
+  background-image: url(../img/mage_class_h_sits.png);
 }
 
 .button-select-sage-img {
-  background-image: url(../img/mage_class_h2.png);
+  background-image: url(../img/mage_class_h2_sits.png);
 }
 
 .button-select-merchant-alchemist-img {
-  background-image: url(../img/merchant_class_h1.png);
+  background-image: url(../img/merchant_class_h1_sits.png);
 }
 
 .button-select-merchant-blacksmith-img {
-  background-image: url(../img/merchant_class_h2.png);
+  background-image: url(../img/merchant_class_h2_sits.png);
 }
 
 .button-select-acolyte-priest-img {
-  background-image: url(../img/acolyte_class_h1.png);
+  background-image: url(../img/acolyte_class_h1_sits.png);
 }
 
 .button-select-acolyte-monk-img {
-  background-image: url(../img/acolyte_class_h2.png);
+  background-image: url(../img/acolyte_class_h2_sits.png);
 }
 
 .button-select-swordman-crusader-img {
-  background-image: url(../img/swordman_class_h1.png);
+  background-image: url(../img/swordman_class_h1_sits.png);
 }
 
 .button-select-swordman-knight-img {
-  background-image: url(../img/swordman_class_h2.png);
+  background-image: url(../img/swordman_class_h2_sits.png);
 }
 
 .button-select-thief-assassin-img {
-  background-image: url(../img/thief_class_h1.png);
+  background-image: url(../img/thief_class_h1_sits.png);
 }
 
 .button-select-thief-rogue-img {
-  background-image: url(../img/thief_class_h2.png);
+  background-image: url(../img/thief_class_h2_sits.png);
 }
 
 .button-select-archer-hunter-img {
-  background-image: url(../img/archer_class_h1.png);
+  background-image: url(../img/archer_class_h1_sits.png);
 }
 
 .button-select-archer-bard-img {
-  background-image: url(../img/archer_class_h2.png);
+  background-image: url(../img/archer_class_h2_sits.png);
 }
 
 .button-select-archer-dancer-img {
+  background-image: url(../img/archer_class_h3_sits.png);
+}
+
+/* классы сидячие при без действии */
+.button-select-mage-img:hover {
+  background-image: url(../img/mage_class_h.png);
+}
+
+.button-select-sage-img:hover {
+  background-image: url(../img/mage_class_h2.png);
+}
+
+.button-select-merchant-alchemist-img:hover {
+  background-image: url(../img/merchant_class_h1.png);
+}
+
+.button-select-merchant-blacksmith-img:hover {
+  background-image: url(../img/merchant_class_h2.png);
+}
+
+.button-select-acolyte-priest-img:hover {
+  background-image: url(../img/acolyte_class_h1.png);
+}
+
+.button-select-acolyte-monk-img:hover {
+  background-image: url(../img/acolyte_class_h2.png);
+}
+
+.button-select-swordman-crusader-img:hover {
+  background-image: url(../img/swordman_class_h1.png);
+}
+
+.button-select-swordman-knight-img:hover {
+  background-image: url(../img/swordman_class_h2.png);
+}
+
+.button-select-thief-assassin-img:hover {
+  background-image: url(../img/thief_class_h1.png);
+}
+
+.button-select-thief-rogue-img:hover {
+  background-image: url(../img/thief_class_h2.png);
+}
+
+.button-select-archer-hunter-img:hover {
+  background-image: url(../img/archer_class_h1.png);
+}
+
+.button-select-archer-bard-img:hover {
+  background-image: url(../img/archer_class_h2.png);
+}
+
+.button-select-archer-dancer-img:hover {
   background-image: url(../img/archer_class_h3.png);
 }
 
