@@ -5,6 +5,7 @@
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import meltdown from '../../img/icon_wsm/icon_wsm_1.gif'; 
+import foundryPowerUp from '../../img/icon_wsm/icon_wsm_3.gif'; 
 import cartTermination from '../../img/icon_wsm/icon_wsm_4.gif'; 
 import maximumPowerThrust from '../../img/icon_wsm/icon_wsm_5.gif'; 
 
@@ -65,7 +66,7 @@ Target: Ally
 Range: 2
 Requirement: Reforge Lv: 5, Exotic Weapon Reforging Lv: 1, Repair Weapon Lv: 1, Blade Weapon Reforging Lv: 1, Blunt Weapon Reforging Lv: 1, Pierce Weapon Reforging Lv: 1, Magic Weapon Reforging Lv: 1, String Weapon Reforging Lv: 1
 Description: Harness the power of the anvil to temporarily enhance a party member's equipment. This boosts weapon damage and shield damage mitigation. The upgrade might even reach Perfect Upgrade status, extending its duration and amplifying the bonuses. Weapon Enhancement increases final damage, shield Enhancement improves damage mitigation. Enhancement is linked to the equipment itself, so switching items won't remove the effect. Usable only on party members. [Perfect Upgrade Chance]: 10% plus [Skill Level] and bonuses from stats and anvil, minus any equipment penalty. 2x Phracon for Lv.1 Weapons, 2x Emveretarcon for Lv.2 Weapons, 2x Oridecon for Lv.3 ~ 4 Weapons, 2x Elunium for Shields`,
-    img: skillImgNo,
+    img: foundryPowerUp,
   },
   {
     id: "maximumPowerThrust",
