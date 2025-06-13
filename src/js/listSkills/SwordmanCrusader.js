@@ -11,14 +11,14 @@ import guard from '../../img/icon_cru/icon_cru_9.gif';
 import shieldCharge from '../../img/icon_cru/icon_cru_10.gif';
 import shieldBoomerang from '../../img/icon_cru/icon_cru_11.gif';
 import reflectorShield from '../../img/icon_cru/icon_cru_12.gif';
-import holyCross from '../../img/icon_cru/icon_cru_13.gif';
-import grandCross from '../../img/icon_cru/icon_cru_14.gif';
-import devotion from '../../img/icon_cru/icon_cru_15.gif';
-import martyrsHeal from '../../img/icon_cru/icon_cru_16.gif';
-import defender from '../../img/icon_cru/icon_cru_17.gif';
-import spearQuicken from '../../img/icon_cru/icon_cru_18.gif';
-import swordQuicken from '../../img/icon_cru/icon_cru_20.png';
-import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_21.png';
+import holyCross from '../../img/icon_cru/icon_cru_13.gif'; 
+import grandCross from '../../img/icon_cru/icon_cru_14.gif'; 
+import devotion from '../../img/icon_cru/icon_cru_15.gif'; 
+import martyrsHeal from '../../img/icon_cru/icon_cru_16.gif'; 
+import defender from '../../img/icon_cru/icon_cru_17.gif'; 
+import spearQuicken from '../../img/icon_cru/icon_cru_18.gif'; 
+import swordQuicken from '../../img/icon_cru/icon_cru_20.png'; 
+import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_21.png'; 
 
 // список скилов Crusader
 export const skillsCrusader = [ 
