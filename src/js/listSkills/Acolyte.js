@@ -15,7 +15,7 @@ import pneuma from '../../img/icon_aco/icon_aco_10.png';
 import ruwach from '../../img/icon_aco/icon_aco_11.png';
 import teleport from '../../img/icon_aco/icon_aco_13.png';
 import warpPortal from '../../img/icon_aco/icon_aco_14.png';
-import holyLight from '../../img/icon_aco/icon_aco_15.png';
+import holyLight from '../../img/icon_aco/icon_aco_16.png';
 
 
 // список скилов Acolyte
