@@ -6,6 +6,7 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 import mysticalAmplification from '../../img/icon_hwz/icon_hwz_2.png';
 import soulDrain from '../../img/icon_hwz/icon_hwz_1.png';
 import napalmVulcan from '../../img/icon_hwz/icon_hwz_3.png';
+import cataclys from '../../img/icon_wiz/icon_wiz_18.png';
 
 // skills Wizard Hight
 
@@ -87,6 +88,21 @@ Description: Increases MaxSP. Whenever you defeat an enemy with magical or physi
 [Lv 9]: MaxSP +18%,
 [Lv 10]: MaxSP +20%`,
     img: soulDrain,
+  },
+  {
+    id: "cataclysm",
+    level: 10,
+    dependencies: [
+      // { id: "increaseSPRecovery", minLevel: 5 }, 
+      // { id: "soulStrike", minLevel: 7 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Cataclysm",
+    maxLevel: 10,
+    inform: `...
+`,
+    img: cataclys,
   },
 ];
 

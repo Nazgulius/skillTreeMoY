@@ -13,9 +13,10 @@ import meteorStorm from '../../img/icon_wiz/icon_wiz_9.png';
 import quagmire from '../../img/icon_wiz/icon_wiz_10.png';
 import stormGust from '../../img/icon_wiz/icon_wiz_11.png';
 import waterBall from '../../img/icon_wiz/icon_wiz_13.png';
-import electricalInduction from '../../img/icon_wiz/icon_wiz_electricalinduction.png';
+// import electricalInduction from '../../img/icon_wiz/icon_wiz_electricalinduction.png';
 import gemmancy from '../../img/icon_wiz/icon_wiz_gemmancy.png';
 import violentQuake from '../../img/icon_wiz/icon_wiz_violentquake.png';
+import electricalInduction from '../../img/icon_wiz/icon_wiz_17.png';
 
 // skills Wizard
 
