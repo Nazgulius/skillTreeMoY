@@ -13,7 +13,7 @@ import lokisWail from '../../img/icon_bnd/icon_bnd_8.gif';
 import intoTheAbyss from '../../img/icon_bnd/icon_bnd_9.gif';
 import invulnerableSiegfried from '../../img/icon_bnd/icon_bnd_10.gif';
 import dancingLesson from '../../img/icon_dan/icon_dan_1.gif';
-import slingingStrike from '../../img/icon_dan/icon_dan_2.gif';
+import slingingStrike from '../../img/icon_dan/icon_dan_10.png';
 import humming from '../../img/icon_dan/icon_dan_5.gif';
 import dontForgetMe from '../../img/icon_dan/icon_dan_6.gif';
 import fortunesKiss from '../../img/icon_dan/icon_dan_7.gif';
