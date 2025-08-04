@@ -5,12 +5,12 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import doubleAttack from '../../img/icon_thf/icon_thf_1.png';
 import detoxify from '../../img/icon_thf/icon_thf_2.png';
-import envenom from '../../img/icon_thf/icon_thf_3.png';
+import envenom from '../../img/icon_thf/icon_thf_9.png';
 import hiding from '../../img/icon_thf/icon_thf_4.png';
 import improveDodge from '../../img/icon_thf/icon_thf_5.png';
 import steal from '../../img/icon_thf/icon_thf_6.png';
-import sprinkleSand from '../../img/icon_thf/icon_thf_8.png';
-import throwStone from '../../img/icon_thf/icon_thf_7.png';
+import sprinkleSand from '../../img/icon_thf/icon_thf_10.png';
+import throwStone from '../../img/icon_thf/icon_thf_11.png';
 
 // список скилов Thief
 export const skillsThief = [    

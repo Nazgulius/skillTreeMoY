@@ -12,9 +12,9 @@ import poisonReact from '../../img/icon_ass/icon_ass_6.png';
 import venomDust from '../../img/icon_ass/icon_ass_9.png'; 
 import venomSplasher from '../../img/icon_ass/icon_ass_10.png'; 
 import dualWieldingMastery from '../../img/icon_ass/icon_ass_11.png'; 
-import throwingKnife from '../../img/icon_ass/icon_ass_12.png'; 
+import throwingKnife from '../../img/icon_ass/icon_ass_15.png'; 
 import poisonery from '../../img/icon_ass/icon_ass_13.png'; 
-import vSAnticipation from '../../img/icon_ass/icon_ass_14.png'; 
+import vSAnticipation from '../../img/icon_ass/icon_ass_16.png'; 
 
 // список скилов Assassin
 export const skillsAssassin = [  
