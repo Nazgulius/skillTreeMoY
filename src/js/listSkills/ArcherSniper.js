@@ -8,7 +8,7 @@ import falconAssault from '../../img/icon_snp/icon_snp_2.png';
 import sharpShooting from '../../img/icon_snp/icon_snp_3.png';
 import windWalk from '../../img/icon_snp/icon_snp_4.png';
 import quickDraw from '../../img/icon_snp/icon_snp_5.png';
-import detonator from '../../img/icon_snp/icon_snp_6.png';
+import detonator from '../../img/icon_snp/icon_snp_7.png';
 
 // список скилов Sniper
 export const skillsSniper = [  
