@@ -13,13 +13,13 @@ import lokisWail from '../../img/icon_bnd/icon_bnd_8.gif';
 import intoTheAbyss from '../../img/icon_bnd/icon_bnd_9.gif';
 import invulnerableSiegfried from '../../img/icon_bnd/icon_bnd_10.gif';
 import musicalLesson from '../../img/icon_bnd/icon_bnd_11.gif';
-import musicalStrike from '../../img/icon_bnd/icon_bnd_12.gif'; 
+import musicalStrike from '../../img/icon_bnd/icon_bnd_20.png'; 
 import dissonance from '../../img/icon_bnd/icon_bnd_13.gif'; 
 import whistle from '../../img/icon_bnd/icon_bnd_14.gif'; 
 import assassinCrossOfSunset from '../../img/icon_bnd/icon_bnd_15.gif'; 
-import poemOfBragi from '../../img/icon_bnd/icon_bnd_16.gif'; 
+import poemOfBragi from '../../img/icon_bnd/icon_bnd_22.png'; 
 import appleOfIdun from '../../img/icon_bnd/icon_bnd_17.gif'; 
-import frostJoke from '../../img/icon_bnd/icon_bnd_19.png'; 
+import frostJoke from '../../img/icon_bnd/icon_bnd_21.png'; 
 
 // список скилов Bard
 export const skillsBard = [    
