@@ -17,12 +17,12 @@ import maximizePower from '../../img/icon_bsm/icon_bsm_21.gif';
 import cartBoost from '../../img/icon_wsm/icon_wsm_2.gif'; 
 import metalTempering from '../../img/icon_bsm/icon_bsm_25.png'; 
 import reforge from '../../img/icon_bsm/icon_bsm_26.png'; 
-import bladeWeaponReforging from '../../img/icon_bsm/icon_bsm_27.png'; 
-import bluntWeaponReforging from '../../img/icon_bsm/icon_bsm_28.png'; 
-import pierceWeaponReforging from '../../img/icon_bsm/icon_bsm_29.png'; 
-import magicWeaponReforging from '../../img/icon_bsm/icon_bsm_32.png'; 
-import stringWeaponReforging from '../../img/icon_bsm/icon_bsm_30.png'; 
-import exoticWeaponReforging from '../../img/icon_bsm/icon_bsm_31.png'; 
+import bluntWeaponReforging from '../../img/icon_bsm/icon_bsm_33.png'; 
+import pierceWeaponReforging from '../../img/icon_bsm/icon_bsm_34.png'; 
+import magicWeaponReforging from '../../img/icon_bsm/icon_bsm_35.png'; 
+import exoticWeaponReforging from '../../img/icon_bsm/icon_bsm_36.png'; 
+import stringWeaponReforging from '../../img/icon_bsm/icon_bsm_37.png'; 
+import bladeWeaponReforging from '../../img/icon_bsm/icon_bsm_38.png'; 
 
 // список скилов Blacksmith
 export const skillsBlacksmith = [
@@ -50,51 +50,51 @@ Description: Requires Axes or Maces Class Weapon. Strikes the ground with great 
 [Lv 5]: Stun Chance 70%`,
     img: hammerfall,
   },
-  {
-    id: "metalTempering",
-    level: 0,
-    dependencies: [],
-    dependent: [
-      { id: "reforge" },
-    ],
-    element: null,
-    skillName: "Metal Tempering",
-    maxLevel: 10,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: None
-Description: Become a master of metalworking by smelting Iron Ore into Iron, crafting Steel from it, and refining Rough Elunium and Rough Oridecon into Elunium and Oridecon. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with DEX being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Metal Tempering Guide ,
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
-    img: metalTempering,
-  },
-  {
-    id: "enchantedStoneCraft",
-    level: 0,
-    dependencies: [],
-    dependent: [
-      { id: "reforge" },
-    ],
-    element: null,
-    skillName: "Enchanted Stone Craft",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Description: Enable to create [Elemental Stones] by using a Mini Furnace and 10 [Elemental Ores]. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies.
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
-    img: enchantedStoneCraft,
-  },
+//   {
+//     id: "metalTempering",
+//     level: 0,
+//     dependencies: [],
+//     dependent: [
+//       { id: "reforge" },
+//     ],
+//     element: null,
+//     skillName: "Metal Tempering",
+//     maxLevel: 10,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Requirement: None
+// Description: Become a master of metalworking by smelting Iron Ore into Iron, crafting Steel from it, and refining Rough Elunium and Rough Oridecon into Elunium and Oridecon. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with DEX being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Metal Tempering Guide ,
+// [Lv 1]: No Additional Bonus,
+// [Lv 2]: Additional Efficiency -75%,
+// [Lv 3]: Additional Efficiency -50%,
+// [Lv 4]: Additional Efficiency -25%,
+// [Lv 5]: Full Efficiency`,
+//     img: metalTempering,
+//   },
+//   {
+//     id: "enchantedStoneCraft",
+//     level: 0,
+//     dependencies: [],
+//     dependent: [
+//       { id: "reforge" },
+//     ],
+//     element: null,
+//     skillName: "Enchanted Stone Craft",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Description: Enable to create [Elemental Stones] by using a Mini Furnace and 10 [Elemental Ores]. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies.
+// [Lv 1]: No Additional Bonus,
+// [Lv 2]: Additional Efficiency -75%,
+// [Lv 3]: Additional Efficiency -50%,
+// [Lv 4]: Additional Efficiency -25%,
+// [Lv 5]: Full Efficiency`,
+//     img: enchantedStoneCraft,
+//   },
   {
     id: "reforge",
     level: 0,
@@ -461,24 +461,24 @@ Description: Sharpens your understanding of weapon mechanics, boosting your Stat
 [Lv 5]: Status Atk +20, Hit Rate +20%`,
     img: weaponryResearch,
   },
-  {
-    id: "cartBoost",
-    level: 0,
-    dependencies: [
-      { id: "pushcart", minLevel: 5 },
-    ],
-    dependent: [
-      { id: "cartTermination" },
-    ],
-    element: null,
-    skillName: "Cart Boost",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Pushcart Lv: 5
-Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
-    img: cartBoost,
-  },
+//   {
+//     id: "cartBoost",
+//     level: 0,
+//     dependencies: [
+//       { id: "pushcart", minLevel: 5 },
+//     ],
+//     dependent: [
+//       { id: "cartTermination" },
+//     ],
+//     element: null,
+//     skillName: "Cart Boost",
+//     maxLevel: 1,
+//     inform: `Max Lv: 1
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Requirement: Pushcart Lv: 5
+// Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
+//     img: cartBoost,
+//   },
 ];
