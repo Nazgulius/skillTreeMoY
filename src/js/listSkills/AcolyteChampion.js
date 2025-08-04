@@ -7,8 +7,8 @@ import palmStrike from '../../img/icon_chp/icon_chp_1.gif';
 // import tigerFist from '../../img/icon_chp/icon_chp_2.gif'; 
 // import chainCrushCombo from '../../img/icon_chp/icon_chp_3.gif'; 
 import spiritSpheresCollect from '../../img/icon_chp/icon_chp_4.gif'; 
-import phoenix from '../../img/icon_chp/icon_chp_5.gif'; 
-import dragons from '../../img/icon_chp/icon_chp_6.gif'; 
+import phoenix from '../../img/icon_chp/icon_chp_5.png'; 
+import dragons from '../../img/icon_chp/icon_chp_6.png'; 
 
 // список скилов Champion
 export const skillsChampion = [  
