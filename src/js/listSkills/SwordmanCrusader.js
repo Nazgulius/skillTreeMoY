@@ -19,10 +19,11 @@ import spearQuicken from '../../img/icon_cru/icon_cru_18.gif';
 // import swordQuicken from '../../img/icon_cru/icon_cru_20.png'; 
 // import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_21.png'; 
 import swordQuicken from '../../img/icon_knt/icon_knt_14.png';
-import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_21.png'; 
-import faith from '../../img/icon_cru/icon_cru_22.png'; 
-import layonh from '../../img/icon_cru/icon_cru_23.png'; 
-import graceof from '../../img/icon_cru/icon_cru_24.png'; 
+import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_22.png'; 
+import faith from '../../img/icon_cru/icon_cru_23.png'; 
+import layonh from '../../img/icon_cru/icon_cru_24.png'; 
+import graceof from '../../img/icon_cru/icon_cru_25.png'; 
+
 
 // список скилов Crusader
 export const skillsCrusader = [ 
