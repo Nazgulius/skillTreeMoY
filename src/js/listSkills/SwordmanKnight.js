@@ -7,14 +7,13 @@ import pierce from '../../img/icon_knt/icon_knt_1.gif';
 import brandishSpear from '../../img/icon_knt/icon_knt_2.gif';
 import spearStab from '../../img/icon_knt/icon_knt_3.gif';
 import spearBoomerang from '../../img/icon_knt/icon_knt_4.gif';
-import swordQuicken from '../../img/icon_knt/icon_knt_5.gif';
 import counterAttack from '../../img/icon_knt/icon_knt_6.gif';
 import bowlingBash from '../../img/icon_knt/icon_knt_7.gif';
 import riding from '../../img/icon_knt/icon_knt_8.gif';
-import cavalryMastery from '../../img/icon_knt/icon_knt_9.gif';
 import twoHandedSwordMastery from '../../img/icon_knt/icon_knt_10.gif';
 import spearQuicken from '../../img/icon_knt/icon_knt_11.png';
-import dashingBash from '../../img/icon_knt/icon_knt_12.png';
+import dashingBash from '../../img/icon_knt/icon_knt_13.png';
+import swordQuicken from '../../img/icon_knt/icon_knt_14.png';
 
 // список скилов Knight
 export const skillsKnight = [  
@@ -182,28 +181,6 @@ Type: Physical
 Requirement: Endure Lv: 1
 Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750 but reduces ASPD and Flee by 50% while mounted. Riding affects Weapon Size Modifiers as follows:, One-Handed Sword: Small 100%, Medium 125%, Large 100%, Two-Handed Sword: Small 100%, Medium 100%, Large 125%, Spear: Small 100%, Medium 100%, Large 125%, PecoPeco Breeder.`,
     img: riding,
-  },
-  {
-    id: "cavalryMastery",
-    level: 0,
-    dependencies: [
-      { id: "riding", minLevel: 1 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Cavalry Mastery",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Passive
-Type: Physical
-Requirement: Riding Lv: 1
-Description: Reduces the ASPD and Flee penalty while mounted.
-[Lv 1]: -8% ASPD and Flee penalty.
-[Lv 2]: -16% ASPD and Flee penalty.
-[Lv 3]: -24% ASPD and Flee penalty.
-[Lv 4]: -32% ASPD and Flee penalty.
-[Lv 5]: -40% ASPD and Flee penalty.`,
-    img: cavalryMastery,
   },
   {
     id: "pierce",
