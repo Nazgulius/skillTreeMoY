@@ -4,37 +4,39 @@
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import palmStrike from '../../img/icon_chp/icon_chp_1.gif'; 
-import tigerFist from '../../img/icon_chp/icon_chp_2.gif'; 
-import chainCrushCombo from '../../img/icon_chp/icon_chp_3.gif'; 
+// import tigerFist from '../../img/icon_chp/icon_chp_2.gif'; 
+// import chainCrushCombo from '../../img/icon_chp/icon_chp_3.gif'; 
 import spiritSpheresCollect from '../../img/icon_chp/icon_chp_4.gif'; 
+import phoenix from '../../img/icon_chp/icon_chp_5.gif'; 
+import dragons from '../../img/icon_chp/icon_chp_6.gif'; 
 
 // список скилов Champion
 export const skillsChampion = [  
-  {
-    id: "chainCrushCombo",
-    level: 0,
-    dependencies: [
-      { id: "tripleAttack", minLevel: 8 },
-      { id: "comboFinish", minLevel: 4 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Chain Crush Combo",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Range: 2
-Requirement: Triple Attack Lv: 8, Combo Finish Lv: 4
-Description: Chain Crush Combo is a devastating melee attack that can be used after Combo Finish, delivering a series of rapid crushing blows. Attack power increases further based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 9x9 AoE. Each cast requires 2 Spirit Sphere.
-[Lv 1]: Atk 400%, SP Cost: 16,
-[Lv 2]: Atk 800%, SP Cost: 22,
-[Lv 3]: Atk 1200%, SP Cost: 28,
-[Lv 4]: Atk 1600%, SP Cost: 34,
-[Lv 5]: Atk 2000%, SP Cost: 40`,
-    img: chainCrushCombo, 
-  },
+//   {
+//     id: "chainCrushCombo",
+//     level: 0,
+//     dependencies: [
+//       { id: "tripleAttack", minLevel: 8 },
+//       { id: "comboFinish", minLevel: 4 },
+//     ],
+//     dependent: [],
+//     element: null,
+//     skillName: "Chain Crush Combo",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Range: 2
+// Requirement: Triple Attack Lv: 8, Combo Finish Lv: 4
+// Description: Chain Crush Combo is a devastating melee attack that can be used after Combo Finish, delivering a series of rapid crushing blows. Attack power increases further based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 9x9 AoE. Each cast requires 2 Spirit Sphere.
+// [Lv 1]: Atk 400%, SP Cost: 16,
+// [Lv 2]: Atk 800%, SP Cost: 22,
+// [Lv 3]: Atk 1200%, SP Cost: 28,
+// [Lv 4]: Atk 1600%, SP Cost: 34,
+// [Lv 5]: Atk 2000%, SP Cost: 40`,
+//     img: chainCrushCombo, 
+//   },
   {
     id: "palmStrike",
     level: 0,
@@ -83,30 +85,60 @@ Description: Extends the limit of Spirit Spheres the user can have and increases
 [Lv 5]: Spirit Spheres Limit: +5, Duration: 240 sec`,
     img: spiritSpheresCollect,
   },
+//   {
+//     id: "tigerFist",
+//     level: 0,
+//     dependencies: [
+//       { id: "tripleAttack", minLevel: 8 },
+//       { id: "comboFinish", minLevel: 4 },
+//     ],
+//     dependent: [],
+//     element: null,
+//     skillName: "Tiger Fist",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Range: 2
+// Requirement: Triple Attack Lv: 8, Combo Finish Lv: 4
+// Description: Tiger Fist is a powerful area-of-effect strike that can be used after Combo Finish, delivering a devastating blow within a 5x5 area and has a high chance of immobilizing enemies. Attack power increases further based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 9x9. Each cast requires 2 Spirit Sphere.
+// [Lv 1]: Atk 350%, SP Cost: 9,
+// [Lv 2]: Atk 500%, SP Cost: 13,
+// [Lv 3]: Atk 650%, SP Cost: 17,
+// [Lv 4]: Atk 800%, SP Cost: 21,
+// [Lv 5]: Atk 950%, SP Cost: 25`,
+//     img: tigerFist,
+//   },
   {
-    id: "tigerFist",
+    id: "phoenix",
     level: 0,
     dependencies: [
-      { id: "tripleAttack", minLevel: 8 },
-      { id: "comboFinish", minLevel: 4 },
+      // { id: "tripleAttack", minLevel: 8 },
+      // { id: "comboFinish", minLevel: 4 },
     ],
     dependent: [],
     element: null,
-    skillName: "Tiger Fist",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Range: 2
-Requirement: Triple Attack Lv: 8, Combo Finish Lv: 4
-Description: Tiger Fist is a powerful area-of-effect strike that can be used after Combo Finish, delivering a devastating blow within a 5x5 area and has a high chance of immobilizing enemies. Attack power increases further based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 9x9. Each cast requires 2 Spirit Sphere.
-[Lv 1]: Atk 350%, SP Cost: 9,
-[Lv 2]: Atk 500%, SP Cost: 13,
-[Lv 3]: Atk 650%, SP Cost: 17,
-[Lv 4]: Atk 800%, SP Cost: 21,
-[Lv 5]: Atk 950%, SP Cost: 25`,
-    img: tigerFist,
+    skillName: "Phoenix'...",
+    maxLevel: 10,
+    inform: `...
+`,
+    img: phoenix,
+  },
+  {
+    id: "dragons",
+    level: 0,
+    dependencies: [
+      // { id: "tripleAttack", minLevel: 8 },
+      // { id: "comboFinish", minLevel: 4 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Dragon's...",
+    maxLevel: 10,
+    inform: `...
+`,
+    img: dragons,
   },
 ];
 

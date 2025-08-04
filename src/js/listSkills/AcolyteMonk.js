@@ -4,7 +4,7 @@
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import ironHand from '../../img/icon_mon/icon_mon_1.gif'; 
-import spiritualCadence from '../../img/icon_mon/icon_mon_2.gif'; 
+import spiritualCadence from '../../img/icon_mon/icon_mon_24.png'; 
 import callSpiritSphere from '../../img/icon_mon/icon_mon_3.gif'; 
 import absorbSpiritSphere from '../../img/icon_mon/icon_mon_4.gif'; 
 import tripleAttack from '../../img/icon_mon/icon_mon_5.gif'; 
@@ -16,9 +16,13 @@ import pacify from '../../img/icon_mon/icon_mon_11.gif';
 import asuraStrike from '../../img/icon_mon/icon_mon_13.gif'; 
 import chainCombo from '../../img/icon_mon/icon_mon_14.gif'; 
 import comboFinish from '../../img/icon_mon/icon_mon_15.gif'; 
-import devaRetaliation from '../../img/icon_mon/icon_mon_17.png'; 
-import fallingBlossoms from '../../img/icon_mon/icon_mon_18.png'; 
-import furiousSpirits from '../../img/icon_mon/icon_mon_19.png'; 
+import devaRetaliation from '../../img/icon_mon/icon_mon_21.png'; 
+import fallingBlossoms from '../../img/icon_mon/icon_mon_22.png'; 
+import furiousSpirits from '../../img/icon_mon/icon_mon_23.png'; 
+import lotusPu from '../../img/icon_mon/icon_mon_25.png'; 
+import chainFi from '../../img/icon_mon/icon_mon_20.png'; 
+import flightF from '../../img/icon_mon/icon_mon_26.png'; 
+import fallenF from '../../img/icon_mon/icon_mon_27.png'; 
 
 // список скилов Monk
 export const skillsMonk = [  
@@ -97,7 +101,7 @@ Description: Instantly teleport to a targeted spot if there are no obstacles bet
       { id: "fallingBlossoms" },
       { id: "pacify" },
       { id: "spiritualCadence" },
-      { id: "tripleAttack" },
+      // { id: "tripleAttack" },
     ],
     element: null,
     skillName: "Call Spirit Sphere",
@@ -140,59 +144,59 @@ Description: Enter a meditative state that greatly boosting your Physical and Ma
 [Lv 5]: Physical Defense +40%, Critical Defense +20%, Mitigates 10% of incoming damage. Attack -50%, Movement Speed -10%, Attack Speed -10%.`,
     img: calmSpirits,
   },
-  {
-    id: "chainCombo",
-    level: 0,
-    dependencies: [
-      { id: "tripleAttack", minLevel: 5 },
-    ],
-    dependent: [
-      { id: "comboFinish" },
-    ],
-    element: null,
-    skillName: "Chain Combo",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Range: 2
-Requirement: Triple Attack Lv: 5
-Description: Chain Combo is a powerful melee attack that can be used after Raging Trifecta Blow, delivering a devastating follow-up strike. Attack power increases further if the user is a Champion, based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 5x5 AoE.
-[Lv 1]: Atk 350%, SP Cost: 7,
-[Lv 2]: Atk 450%, SP Cost: 9,
-[Lv 3]: Atk 500%, SP Cost: 11,
-[Lv 4]: Atk 650%, SP Cost: 13,
-[Lv 5]: Atk 700%, SP Cost: 15`,
-    img: chainCombo,
-  },
-  {
-    id: "comboFinish",
-    level: 0,
-    dependencies: [
-      { id: "chainCombo", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "tigerFist" },
-      { id: "chainCrushCombo" },      
-    ],
-    element: null,
-    skillName: "Combo Finish",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Range: 2
-Requirement: Chain Combo Lv: 3
-Description: Combo Finish delivers a powerful melee strike that can be used after Chain Combo, dealing substantial damage that scales with the user's STR. Attack power increases further if the user is a Champion, based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 7x7 AoE. Each cast requires 1 Spirit Sphere.
-[Lv 1]: Atk 600% + STR%, SP Cost: 8,
-[Lv 2]: Atk 750% + STR%, SP Cost: 8,
-[Lv 3]: Atk 900% + STR%, SP Cost: 8,
-[Lv 4]: Atk 1050% + STR%, SP Cost: 8,
-[Lv 5]: Atk 1200% + STR%, SP Cost: 8`,
-    img: comboFinish,
-  },
+//   {
+//     id: "chainCombo",
+//     level: 0,
+//     dependencies: [
+//       { id: "tripleAttack", minLevel: 5 },
+//     ],
+//     dependent: [
+//       { id: "comboFinish" },
+//     ],
+//     element: null,
+//     skillName: "Chain Combo",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Range: 2
+// Requirement: Triple Attack Lv: 5
+// Description: Chain Combo is a powerful melee attack that can be used after Raging Trifecta Blow, delivering a devastating follow-up strike. Attack power increases further if the user is a Champion, based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 5x5 AoE.
+// [Lv 1]: Atk 350%, SP Cost: 7,
+// [Lv 2]: Atk 450%, SP Cost: 9,
+// [Lv 3]: Atk 500%, SP Cost: 11,
+// [Lv 4]: Atk 650%, SP Cost: 13,
+// [Lv 5]: Atk 700%, SP Cost: 15`,
+//     img: chainCombo,
+//   },
+//   {
+//     id: "comboFinish",
+//     level: 0,
+//     dependencies: [
+//       { id: "chainCombo", minLevel: 3 },
+//     ],
+//     dependent: [
+//       { id: "tigerFist" },
+//       { id: "chainCrushCombo" },      
+//     ],
+//     element: null,
+//     skillName: "Combo Finish",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Range: 2
+// Requirement: Chain Combo Lv: 3
+// Description: Combo Finish delivers a powerful melee strike that can be used after Chain Combo, dealing substantial damage that scales with the user's STR. Attack power increases further if the user is a Champion, based on their Base Level. When wielding a Knuckle-class weapon, deals additional damage and reduces cast delay. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 7x7 AoE. Each cast requires 1 Spirit Sphere.
+// [Lv 1]: Atk 600% + STR%, SP Cost: 8,
+// [Lv 2]: Atk 750% + STR%, SP Cost: 8,
+// [Lv 3]: Atk 900% + STR%, SP Cost: 8,
+// [Lv 4]: Atk 1050% + STR%, SP Cost: 8,
+// [Lv 5]: Atk 1200% + STR%, SP Cost: 8`,
+//     img: comboFinish,
+//   },
   {
     id: "devaRetaliation",
     level: 0,
@@ -270,7 +274,7 @@ Description: Enter a heightened state of rage, boosting your Attack and Critical
       { id: "divineProtection", minLevel: 10 },      
     ],
     dependent: [
-      { id: "tripleAttack" },
+      // { id: "tripleAttack" },
     ],
     element: null,
     skillName: "Iron Hand",
@@ -292,32 +296,32 @@ Description: Increase attack with Knuckle Class Weapons or Bare Handed. When [Lv
 [Lv 10]: Bare Handed: Atk +60, Knuckle: Atk +30`,
     img: ironHand,
   },
-  {
-    id: "occultImpaction",
-    level: 0,
-    dependencies: [
-      { id: "pacify", minLevel: 1 },      
-    ],
-    dependent: [
-      { id: "throwSpiritSphere" },
-    ],
-    element: null,
-    skillName: "Occult Impaction",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 6
-Requirement: Pacify Lv: 1
-Description: Strike with a force that scales with the targets DEF. Damage is always Neutral. In Furious Spirits state, increases range to 6 cells. In Calm Spirits state, adds your Hard DEF as True Damage at the damage. Each cast requires 1 Spirit Sphere.
-[Lv 1]: Atk [Target DEF/2 x 1]%, SP Consumption: 11,
-[Lv 2]: Atk [Target DEF/2 x 2]%, SP Consumption: 12,
-[Lv 3]: Atk [Target DEF/2 x 3]%, SP Consumption: 13,
-[Lv 4]: Atk [Target DEF/2 x 4]%, SP Consumption: 14,
-[Lv 5]: Atk [Target DEF/2 x 5]%, SP Consumption: 15`,
-    img: occultImpaction,
-  },
+//   {
+//     id: "occultImpaction",
+//     level: 0,
+//     dependencies: [
+//       { id: "pacify", minLevel: 1 },      
+//     ],
+//     dependent: [
+//       { id: "throwSpiritSphere" },
+//     ],
+//     element: null,
+//     skillName: "Occult Impaction",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Physical
+// Target: Enemy
+// Range: 6
+// Requirement: Pacify Lv: 1
+// Description: Strike with a force that scales with the targets DEF. Damage is always Neutral. In Furious Spirits state, increases range to 6 cells. In Calm Spirits state, adds your Hard DEF as True Damage at the damage. Each cast requires 1 Spirit Sphere.
+// [Lv 1]: Atk [Target DEF/2 x 1]%, SP Consumption: 11,
+// [Lv 2]: Atk [Target DEF/2 x 2]%, SP Consumption: 12,
+// [Lv 3]: Atk [Target DEF/2 x 3]%, SP Consumption: 13,
+// [Lv 4]: Atk [Target DEF/2 x 4]%, SP Consumption: 14,
+// [Lv 5]: Atk [Target DEF/2 x 5]%, SP Consumption: 15`,
+//     img: occultImpaction,
+//   },
   {
     id: "pacify",
     level: 0,
@@ -376,7 +380,7 @@ Description: Passively recovers HP and SP recovery every 10 seconds when the cha
     id: "throwSpiritSphere",
     level: 0,
     dependencies: [
-      { id: "occultImpaction", minLevel: 3 },
+      // { id: "occultImpaction", minLevel: 3 },
       { id: "pacify", minLevel: 2 },
     ],
     dependent: [
@@ -399,39 +403,95 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
 [Lv 5]: Sphere Hit 5 Times`,
     img: throwSpiritSphere,
   },
+//   {
+//     id: "tripleAttack",
+//     level: 0,
+//     dependencies: [
+//       { id: "callSpiritSphere", minLevel: 5 },
+//       { id: "ironHand", minLevel: 3 },
+//     ],
+//     dependent: [
+//       { id: "tigerFist" },
+//       { id: "chainCrushCombo" },
+//       { id: "chainCombo" },
+//     ],
+//     element: null,
+//     skillName: "Triple Attack",
+//     maxLevel: 10,
+//     inform: `Max Lv: 10
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Range: 1
+// Requirement: Call Spirit Sphere Lv: 5, Iron Hand Lv: 3 
+// Description: Triple Attack provides a chance to automatically unleash a triple strike during battle or can be manually activated. When activated manually, it costs SP. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 3x3 AoE. Chance to automatically activate on normal attacks is 30%. Triple Attack can be used after any combo to reset the combo chain.
+// [Lv 1]: 120% Atk, Manual Activation SP Cost: 3,
+// [Lv 2]: 140% Atk, Manual Activation SP Cost: 4,
+// [Lv 3]: 160% Atk, Manual Activation SP Cost: 5,
+// [Lv 4]: 180% Atk, Manual Activation SP Cost: 6,
+// [Lv 5]: 200% Atk, Manual Activation SP Cost: 7,
+// [Lv 6]: 220% Atk, Manual Activation SP Cost: 8,
+// [Lv 7]: 240% Atk, Manual Activation SP Cost: 9,
+// [Lv 8]: 260% Atk, Manual Activation SP Cost: 10,
+// [Lv 9]: 280% Atk, Manual Activation SP Cost: 11,
+// [Lv 10]: 300% Atk, Manual Activation SP Cost: 12`,
+//     img: tripleAttack,
+//   },
   {
-    id: "tripleAttack",
+    id: "lotusPu",
     level: 0,
     dependencies: [
-      { id: "callSpiritSphere", minLevel: 5 },
-      { id: "ironHand", minLevel: 3 },
+      // { id: "tripleAttack", minLevel: 8 },
     ],
-    dependent: [
-      { id: "tigerFist" },
-      { id: "chainCrushCombo" },
-      { id: "chainCombo" },
-    ],
+    dependent: [],
     element: null,
-    skillName: "Triple Attack",
+    skillName: "Lotus Pu...",
     maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Self
-Range: 1
-Requirement: Call Spirit Sphere Lv: 5, Iron Hand Lv: 3 
-Description: Triple Attack provides a chance to automatically unleash a triple strike during battle or can be manually activated. When activated manually, it costs SP. In Furious Spirits state, Adds twice your CRIT as TRUE DAMAGE to skill hits. In Calm Spirits state, adds your Soft Defense and half of Hard Defense as Physical Damage and become 3x3 AoE. Chance to automatically activate on normal attacks is 30%. Triple Attack can be used after any combo to reset the combo chain.
-[Lv 1]: 120% Atk, Manual Activation SP Cost: 3,
-[Lv 2]: 140% Atk, Manual Activation SP Cost: 4,
-[Lv 3]: 160% Atk, Manual Activation SP Cost: 5,
-[Lv 4]: 180% Atk, Manual Activation SP Cost: 6,
-[Lv 5]: 200% Atk, Manual Activation SP Cost: 7,
-[Lv 6]: 220% Atk, Manual Activation SP Cost: 8,
-[Lv 7]: 240% Atk, Manual Activation SP Cost: 9,
-[Lv 8]: 260% Atk, Manual Activation SP Cost: 10,
-[Lv 9]: 280% Atk, Manual Activation SP Cost: 11,
-[Lv 10]: 300% Atk, Manual Activation SP Cost: 12`,
-    img: tripleAttack,
+    inform: `...
+`,
+    img: lotusPu,
+  },
+  {
+    id: "chainFi",
+    level: 0,
+    dependencies: [
+      // { id: "tripleAttack", minLevel: 8 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Chain Fi...",
+    maxLevel: 10,
+    inform: `...
+`,
+    img: chainFi,
+  },
+  {
+    id: "flightF",
+    level: 0,
+    dependencies: [
+      // { id: "tripleAttack", minLevel: 8 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Flight F...",
+    maxLevel: 10,
+    inform: `...
+`,
+    img: flightF,
+  },
+  {
+    id: "fallenF",
+    level: 0,
+    dependencies: [
+      // { id: "tripleAttack", minLevel: 8 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Fallen F...",
+    maxLevel: 10,
+    inform: `...
+`,
+    img: fallenF,
   },
 ];
 

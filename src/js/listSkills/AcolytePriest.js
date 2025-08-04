@@ -3,7 +3,7 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import aquaBenedicta from '../../img/icon_aco/icon_aco_19.png';
+import aquaBenedicta from '../../img/icon_pri/icon_pri_19.png';
 import aspersio from '../../img/icon_pri/icon_pri_1.png';
 import bSSacramenti from '../../img/icon_pri/icon_pri_2.png';
 import increaseSPRecovery from '../../img/icon_pri/icon_pri_3.png';
