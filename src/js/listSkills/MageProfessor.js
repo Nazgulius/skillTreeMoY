@@ -5,12 +5,12 @@
 import skillImgNo from '../../img/no_img.png'; // заглушка
 import abracadabra from '../../img/icon_sag/icon_sag_17.gif'; 
 import indulge from '../../img/icon_pro/icon_pro_1.gif'; 
-import soulChange from '../../img/icon_pro/icon_pro_2.gif'; 
+// import soulChange from '../../img/icon_pro/icon_pro_2.gif'; 
 import soulBurn from '../../img/icon_pro/icon_pro_3.gif'; 
 import mindBreaker from '../../img/icon_pro/icon_pro_4.gif'; 
-import memorize from '../../img/icon_pro/icon_pro_5.gif'; 
+// import memorize from '../../img/icon_pro/icon_pro_5.gif'; 
 import fogWall from '../../img/icon_pro/icon_pro_6.gif'; 
-import spiderWeb from '../../img/icon_pro/icon_pro_7.gif'; 
+// import spiderWeb from '../../img/icon_pro/icon_pro_7.gif'; 
 import doubleCasting from '../../img/icon_pro/icon_pro_8.gif'; 
 
 // список скилов Professor
@@ -112,22 +112,22 @@ Description: Consumes an amount of HP equal to 10% of MaxHP to restore an SP amo
 [Lv 5]: SP +50%`,
     img: indulge,
   },
-  {
-    id: "memorize",
-    level: 0,
-    dependencies: [],
-    dependent: [ ],
-    element: null,
-    skillName: "Memorize",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Magical
-Target: Self
-Requirement: None
-Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, Variable cast time, and Fixed cast time by 50%. Max Stacks: 5`,
-    img: memorize,
-  },
+//   {
+//     id: "memorize",
+//     level: 0,
+//     dependencies: [],
+//     dependent: [ ],
+//     element: null,
+//     skillName: "Memorize",
+//     maxLevel: 1,
+//     inform: `Max Lv: 1
+// Skill Form: Active
+// Type: Magical
+// Target: Self
+// Requirement: None
+// Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, Variable cast time, and Fixed cast time by 50%. Max Stacks: 5`,
+//     img: memorize,
+//   },
   {
     id: "mindBreaker",
     level: 0,
@@ -181,43 +181,43 @@ Description: Casts a spell that has a chance to burn the targets SP. The amount 
 [Lv 5]: 100% of user Max SP is Burned in Enemy current SP, Excess SP damage: x5`,
     img: soulBurn,
   },
-  {
-    id: "soulChange",
-    level: 0,
-    dependencies: [
-      { id: "magicRod", minLevel: 3 },
-      { id: "spellBreaker", minLevel: 2 },      
-    ],
-    dependent: [ ],
-    element: null,
-    skillName: "Soul Change",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Misc
-Target: Enemy
-Range: 9
-Requirement: Magic Rod Lv: 3, Spell Breaker Lv: 2
-Description: Exchanges caster's remaining SP with target's remaining SP. The SP that the caster receives cannot exceed the caster's MaxSP limit.`,
-    img: soulChange,
-  },
-  {
-    id: "spiderWeb",
-    level: 0,
-    dependencies: [],
-    dependent: [ ],
-    element: null,
-    skillName: "Spider Web",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Magical
-Target: Enemy
-Range: 7
-Requirement: None
-Description: Shoots a spider web that will bind and immobilize a target and decrease it's FLEE rate by half for 8 seconds. Fire, Earth, Wind and Water elemental attacks will cause 75% more damage on Fiber Locked targets and cancel the Fiber Locked status. A maximum of 5 Spider Webs can be shot at once. Catalyst: 1x Cobweb.`,
-    img: spiderWeb,
-  },
+//   {
+//     id: "soulChange",
+//     level: 0,
+//     dependencies: [
+//       { id: "magicRod", minLevel: 3 },
+//       { id: "spellBreaker", minLevel: 2 },      
+//     ],
+//     dependent: [ ],
+//     element: null,
+//     skillName: "Soul Change",
+//     maxLevel: 1,
+//     inform: `Max Lv: 1
+// Skill Form: Active
+// Type: Misc
+// Target: Enemy
+// Range: 9
+// Requirement: Magic Rod Lv: 3, Spell Breaker Lv: 2
+// Description: Exchanges caster's remaining SP with target's remaining SP. The SP that the caster receives cannot exceed the caster's MaxSP limit.`,
+//     img: soulChange,
+//   },
+//   {
+//     id: "spiderWeb",
+//     level: 0,
+//     dependencies: [],
+//     dependent: [ ],
+//     element: null,
+//     skillName: "Spider Web",
+//     maxLevel: 1,
+//     inform: `Max Lv: 1
+// Skill Form: Active
+// Type: Magical
+// Target: Enemy
+// Range: 7
+// Requirement: None
+// Description: Shoots a spider web that will bind and immobilize a target and decrease it's FLEE rate by half for 8 seconds. Fire, Earth, Wind and Water elemental attacks will cause 75% more damage on Fiber Locked targets and cancel the Fiber Locked status. A maximum of 5 Spider Webs can be shot at once. Catalyst: 1x Cobweb.`,
+//     img: spiderWeb,
+//   },
 ];
 
 

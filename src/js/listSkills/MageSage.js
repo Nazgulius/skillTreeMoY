@@ -15,9 +15,12 @@ import seismicWeapon from '../../img/icon_sag/icon_sag_10.gif';
 import volcano from '../../img/icon_sag/icon_sag_12.gif'; 
 import deluge from '../../img/icon_sag/icon_sag_13.gif'; 
 import whirlwind from '../../img/icon_sag/icon_sag_14.gif'; 
-import sandstorm from '../../img/icon_sag/icon_sag_15.gif'; 
+import sandstorm from '../../img/icon_sag/icon_sag_17.png'; 
 import landProtector from '../../img/icon_sag/icon_sag_15.gif'; 
 import dispell from '../../img/icon_sag/icon_sag_16.gif'; 
+import landDis from '../../img/icon_sag/icon_sag_18.png';
+import spellwish from '../../img/icon_sag/icon_sag_19.png';
+import scrollbending from '../../img/icon_sag/icon_sag_20.png';
 
 // список скилов Sage
 export const skillsSage = [  
@@ -435,33 +438,7 @@ Description: Grants the ability to automatically cast a spell when performing ba
 [Lv 8]: Chance of Autocast: 24%,
 [Lv 9]: Chance of Autocast: 27%,
 [Lv 10]: Chance of Autocast: 30%`,
-    img: skillImgNo,
-  },
-  {
-    id: "scrollbending",
-    level: 0,
-    dependencies: [
-      { id: "flameWeapon", minLevel: 4 },
-      { id: "frostWeapon", minLevel: 4 },
-      { id: "lightningWeapon", minLevel: 4 },
-      { id: "seismicWeapon", minLevel: 4 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Scrollbending",
-    maxLevel: 5,
-    inform: `Max Lv: 1 (or 5)
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Flame Weapon Lv: 4, Frost Weapon Lv: 4, Lightning Weapon Lv: 4, Seismic Weapon Lv: 4
-Description: Uses scrollbending techniques to bind a chosen element to a 1 blank scroll. The quantity of scrolls crafted receives an additional bonus based on Base Level, Job Level, and all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Scrollbending Creation Guide ,
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
-    img: skillImgNo,
+    img: spellwish,
   },
   {
     id: "landProtector",
@@ -488,34 +465,77 @@ Description: Creates a protective area on the targeted location that nullifies a
 [Lv 3]: Duration: 3 min, Effective AoE: 7x7,
 [Lv 4]: Duration: 4 min, Effective AoE: 9x9,
 [Lv 5]: Duration: 5 min, Effective AoE: 11x11`,
-    img: landProtector,
-  },
+img: landProtector,
+},
+{
+  id: "scrollbending",
+  level: 0,
+  dependencies: [
+    { id: "flameWeapon", minLevel: 4 },
+    { id: "frostWeapon", minLevel: 4 },
+    { id: "lightningWeapon", minLevel: 4 },
+    { id: "seismicWeapon", minLevel: 4 },
+  ],
+  dependent: [],
+  element: null,
+  skillName: "Scrollbending",
+  maxLevel: 5,
+  inform: `Max Lv: 1 (or 5)
+Skill Form: Active
+Type: Misc
+Target: Self
+Requirement: Flame Weapon Lv: 4, Frost Weapon Lv: 4, Lightning Weapon Lv: 4, Seismic Weapon Lv: 4
+Description: Uses scrollbending techniques to bind a chosen element to a 1 blank scroll. The quantity of scrolls crafted receives an additional bonus based on Base Level, Job Level, and all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Scrollbending Creation Guide ,
+[Lv 1]: No Additional Bonus,
+[Lv 2]: Additional Efficiency -75%,
+[Lv 3]: Additional Efficiency -50%,
+[Lv 4]: Additional Efficiency -25%,
+[Lv 5]: Full Efficiency`,
+  img: scrollbending,
+},
+//   {
+//     id: "psychicWave",
+//     level: 0,
+//     dependencies: [
+//       { id: "volcano", minLevel: 2 },
+//       { id: "deluge", minLevel: 2 },
+//       { id: "sandstorm", minLevel: 2 },
+//       { id: "whirlwind", minLevel: 2 },
+//     ],
+//     dependent: [],
+//     element: null,
+//     skillName: "Psychic Wave",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Magical
+// Target: Ground
+// Range: 9
+// Requirement: Volcano Lv: 2, Deluge Lv: 2, Sandstorm Lv: 2, Whirlwind Lv: 2
+// Description: Fires a wave of psychic energy at targets in an area to deal multiple hits of Neutral elemental magic. The element of this skill can be changed by applying Frost Weapon, Lightning Weapon, Seismic Weapon, or Flame Weapon. Damage additionally increases according to the skill level and caster's Base Level.
+// [Lv 1]: MAtk 120% x Hits,
+// [Lv 2]: MAtk 130% x Hits,
+// [Lv 3]: MAtk 140% x Hits,
+// [Lv 4]: MAtk 150% x Hits,
+// [Lv 5]: MAtk 160% x Hits`,
+//     img: skillImgNo,
+//   },
   {
-    id: "psychicWave",
-    level: 0,
+    id: "landDis...",
+    level: 10,
     dependencies: [
-      { id: "volcano", minLevel: 2 },
-      { id: "deluge", minLevel: 2 },
-      { id: "sandstorm", minLevel: 2 },
-      { id: "whirlwind", minLevel: 2 },
+      // { id: "volcano", minLevel: 2 },
+      // { id: "deluge", minLevel: 2 },
+      // { id: "sandstorm", minLevel: 2 },
+      // { id: "whirlwind", minLevel: 2 },
     ],
     dependent: [],
     element: null,
-    skillName: "Psychic Wave",
+    skillName: "Land Dis...",
     maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Magical
-Target: Ground
-Range: 9
-Requirement: Volcano Lv: 2, Deluge Lv: 2, Sandstorm Lv: 2, Whirlwind Lv: 2
-Description: Fires a wave of psychic energy at targets in an area to deal multiple hits of Neutral elemental magic. The element of this skill can be changed by applying Frost Weapon, Lightning Weapon, Seismic Weapon, or Flame Weapon. Damage additionally increases according to the skill level and caster's Base Level.
-[Lv 1]: MAtk 120% x Hits,
-[Lv 2]: MAtk 130% x Hits,
-[Lv 3]: MAtk 140% x Hits,
-[Lv 4]: MAtk 150% x Hits,
-[Lv 5]: MAtk 160% x Hits`,
-    img: skillImgNo,
+    inform: `...
+`,
+    img: landDis,
   },
 ];
 
