@@ -7,7 +7,7 @@ import skillImgNo from '../../img/no_img.png'; // заглушка
 import potionSpreader from '../../img/icon_cre/icon_cre_1.gif'; 
 import fullChemicalProtection from '../../img/icon_cre/icon_cre_2.gif'; 
 import acidDemonstration from '../../img/icon_cre/icon_cre_3.gif'; 
-import hyperFertilize from '../../img/icon_cre/icon_cre_5.png'; 
+import hyperFertilize from '../../img/icon_cre/icon_cre_6.png'; 
 
 // список скилов Creator
 export const skillsCreator = [

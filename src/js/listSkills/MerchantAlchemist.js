@@ -17,10 +17,10 @@ import armorChemicalProtection from '../../img/icon_alc/icon_alc_10.gif';
 import helmChemicalProtection from '../../img/icon_alc/icon_alc_11.gif'; 
 import throwingPotionsTechniques from '../../img/icon_alc/icon_alc_20.png'; 
 import chemicalReaction from '../../img/icon_alc/icon_alc_21.png'; 
-import deplant from '../../img/icon_alc/icon_alc_22.png'; 
-import briarVines from '../../img/icon_alc/icon_alc_23.png'; 
+import deplant from '../../img/icon_alc/icon_alc_26.png'; 
+import briarVines from '../../img/icon_alc/icon_alc_27.png'; 
 import largeScalePharmacy from '../../img/icon_alc/icon_alc_24.png'; 
-import slingItem from '../../img/icon_alc/icon_alc_25.png'; 
+import slingItem from '../../img/icon_alc/icon_alc_28.png'; 
 
 // список скилов Alchemist
 export const skillsAlchemist = [ 
@@ -384,29 +384,29 @@ Description: Allows the creation of Potions and Chemical Bottles. Requires the a
 [Lv 5]: Full Efficiency`,
     img: pharmacy,
   },
-  {
-    id: "largeScalePharmacy",
-    level: 0,
-    dependencies: [
-      { id: "pharmacy", minLevel: 5 },
-    ],
-    dependent: [ ],
-    element: null,
-    skillName: "Large Scale Pharmacy",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Misc
-Target: Self
-Requirement: Pharmacy Lv: 5
-Description: Brew a large batch of potions all at once, with each potions creation rate calculated individually. Requires a Large Scale Guide and 1 Cauldron in your inventory.
-[Lv 1]: Requires materials for 20 crafting attempts,
-[Lv 2]: Requires materials for 40 crafting attempts,
-[Lv 3]: Requires materials for 60 crafting attempts,
-[Lv 4]: Requires materials for 80 crafting attempts,
-[Lv 5]: Requires materials for 100 crafting attempts`,
-    img: largeScalePharmacy,
-  },
+//   {
+//     id: "largeScalePharmacy",
+//     level: 0,
+//     dependencies: [
+//       { id: "pharmacy", minLevel: 5 },
+//     ],
+//     dependent: [ ],
+//     element: null,
+//     skillName: "Large Scale Pharmacy",
+//     maxLevel: 5,
+//     inform: `Max Lv: 5
+// Skill Form: Active
+// Type: Misc
+// Target: Self
+// Requirement: Pharmacy Lv: 5
+// Description: Brew a large batch of potions all at once, with each potions creation rate calculated individually. Requires a Large Scale Guide and 1 Cauldron in your inventory.
+// [Lv 1]: Requires materials for 20 crafting attempts,
+// [Lv 2]: Requires materials for 40 crafting attempts,
+// [Lv 3]: Requires materials for 60 crafting attempts,
+// [Lv 4]: Requires materials for 80 crafting attempts,
+// [Lv 5]: Requires materials for 100 crafting attempts`,
+//     img: largeScalePharmacy,
+//   },
   {
     id: "marineSphereBomb",
     level: 0,
