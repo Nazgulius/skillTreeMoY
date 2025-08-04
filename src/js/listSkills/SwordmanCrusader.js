@@ -3,10 +3,9 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import heal from '../../img/icon_cru/icon_cru_3.gif';
-import cavalryMastery from '../../img/icon_cru/icon_cru_6.gif';
+// import heal from '../../img/icon_cru/icon_cru_3.gif'; //вроде как убран из игры
 import riding from '../../img/icon_cru/icon_cru_7.gif';
-import faith from '../../img/icon_cru/icon_cru_8.gif';
+// import faith from '../../img/icon_cru/icon_cru_8.gif';
 import guard from '../../img/icon_cru/icon_cru_9.gif';
 import shieldCharge from '../../img/icon_cru/icon_cru_10.gif';
 import shieldBoomerang from '../../img/icon_cru/icon_cru_11.gif';
@@ -14,11 +13,16 @@ import reflectorShield from '../../img/icon_cru/icon_cru_12.gif';
 import holyCross from '../../img/icon_cru/icon_cru_13.gif'; 
 import grandCross from '../../img/icon_cru/icon_cru_14.gif'; 
 import devotion from '../../img/icon_cru/icon_cru_15.gif'; 
-import martyrsHeal from '../../img/icon_cru/icon_cru_16.gif'; 
+// import martyrsHeal from '../../img/icon_cru/icon_cru_16.gif'; 
 import defender from '../../img/icon_cru/icon_cru_17.gif'; 
 import spearQuicken from '../../img/icon_cru/icon_cru_18.gif'; 
-import swordQuicken from '../../img/icon_cru/icon_cru_20.png'; 
+// import swordQuicken from '../../img/icon_cru/icon_cru_20.png'; 
+// import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_21.png'; 
+import swordQuicken from '../../img/icon_knt/icon_knt_14.png';
 import twoHandedSpearMastery from '../../img/icon_cru/icon_cru_21.png'; 
+import faith from '../../img/icon_cru/icon_cru_22.png'; 
+import layonh from '../../img/icon_cru/icon_cru_23.png'; 
+import graceof from '../../img/icon_cru/icon_cru_24.png'; 
 
 // список скилов Crusader
 export const skillsCrusader = [ 
@@ -125,35 +129,13 @@ Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750
     img: riding,
   },
   {
-    id: "cavalryMastery",
-    level: 0,
-    dependencies: [
-      { id: "riding", minLevel: 1 }
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Cavalry Mastery",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Passive
-Type: Physical
-Requirement: Riding Lv: 1
-Description: Removes the ASPD and Flee penalty while mounted. Increases Hit Rate and Flee Rate by 10% and Critical when not mounted.
-[Lv 1]: -8% ASPD and Flee penalty.
-[Lv 2]: -16% ASPD and Flee penalty.
-[Lv 3]: -24% ASPD and Flee penalty.
-[Lv 4]: -32% ASPD and Flee penalty.
-[Lv 5]: -40% ASPD and Flee penalty.`,
-    img: cavalryMastery,
-  },  
-  {
     id: "faith",
     level: 0,
     dependencies: [
     ],
     dependent: [
       { id: "defender" },
-      { id: "heal" },
+      // { id: "heal" },
       { id: "holyCross" },
       { id: "reflectorShield" },
       { id: "shieldCharge" },
@@ -243,37 +225,37 @@ Description: Channel a divine cross around yourself and sacrificing 10% of your 
 Details: AfterCastActDelay set as ASPD + 220; CastTime: 1100; Fixed Cast Time: 400; Cooldown: 1500.`,
     img: grandCross,
   },
-  {
-    id: "heal",
-    level: 0,
-    dependencies: [
-      { id: "faith", minLevel: 7 },      
-    ],
-    dependent: [
-      { id: "devotion" },
-    ],
-    element: null,
-    skillName: "Heal",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Ally
-Range: 9
-Requirement: Faith Lv: 7
-Description: Restores HP of a single target. This skill is affected by Base Level, INT and MAtk. Versus Corrupt property targets, inflicts Holy property damage equal 75% the amount of the HP restored.
-[Lv 1]: SP Cost: 13,
-[Lv 2]: SP Cost: 16,
-[Lv 3]: SP Cost: 19,
-[Lv 4]: SP Cost: 22,
-[Lv 5]: SP Cost: 25,
-[Lv 6]: SP Cost: 28,
-[Lv 7]: SP Cost: 31,
-[Lv 8]: SP Cost: 34,
-[Lv 9]: SP Cost: 37,
-[Lv 10]: SP Cost: 40`,
-    img: heal,
-  },
+//   {
+//     id: "heal",
+//     level: 0,
+//     dependencies: [
+//       { id: "faith", minLevel: 7 },      
+//     ],
+//     dependent: [
+//       { id: "devotion" },
+//     ],
+//     element: null,
+//     skillName: "Heal",
+//     maxLevel: 10,
+//     inform: `Max Lv: 10
+// Skill Form: Active
+// Type: Magical
+// Target: Ally
+// Range: 9
+// Requirement: Faith Lv: 7
+// Description: Restores HP of a single target. This skill is affected by Base Level, INT and MAtk. Versus Corrupt property targets, inflicts Holy property damage equal 75% the amount of the HP restored.
+// [Lv 1]: SP Cost: 13,
+// [Lv 2]: SP Cost: 16,
+// [Lv 3]: SP Cost: 19,
+// [Lv 4]: SP Cost: 22,
+// [Lv 5]: SP Cost: 25,
+// [Lv 6]: SP Cost: 28,
+// [Lv 7]: SP Cost: 31,
+// [Lv 8]: SP Cost: 34,
+// [Lv 9]: SP Cost: 37,
+// [Lv 10]: SP Cost: 40`,
+//     img: heal,
+//   },
   {
     id: "guard",
     level: 0,
@@ -332,11 +314,11 @@ Description: Requires the user to have a shield equipped. Produces an aura of pr
     id: "devotion",
     level: 0,
     dependencies: [
-      { id: "heal", minLevel: 5 },
+      // { id: "heal", minLevel: 5 },
       { id: "guard", minLevel: 3 },      
     ],
     dependent: [
-      { id: "martyrsHeal" },
+      // { id: "martyrsHeal" },
     ],
     element: null,
     skillName: "Devotion",
@@ -355,37 +337,37 @@ Description: Links to a single target to share part of its damage. The targets l
 [Lv 5]: Damage redirected 95%, +500 HP and 2% HP for every linked allie, Duration: 90sec`,
     img: devotion,
   },
-  {
-    id: "martyrsHeal",
-    level: 0,
-    dependencies: [
-      { id: "devotion", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "gospel" },
-    ],
-    element: null,
-    skillName: "Martyr's Heal",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Self
-Range: 9
-Requirement: Devotion Lv: 1
-Description: Center a divine cross on yourself, sacrificing HP and SP to heal allies around you over time. The cross moves with you and doesn't prevent the use of any attacks or skills. The healing is based on your learned Heal skill and your maximum HP. Allies under the effect of Devotion receive the healing even outside the area of effect. The user is not healed and has their movement speed reduced by 30%. This skill can be switched on and off.
-[Lv 1]: Heal every 10 seconds, Drain 19 SP and 1% HP every 10 seconds,
-[Lv 2]: Heal every 9 seconds, Drain 23 SP and 1% HP every 9 seconds,
-[Lv 3]: Heal every 8 seconds, Drain 27 SP and 1% HP every 8 seconds,
-[Lv 4]: Heal every 7 seconds, Drain 31 SP and 1% HP every 7 seconds,
-[Lv 5]: Heal every 6 seconds, Drain 35 SP and 1% HP every 6 seconds,
-[Lv 6]: Heal every 5 seconds, Drain 39 SP and 1% HP every 5 seconds,
-[Lv 7]: Heal every 4 seconds, Drain 43 SP and 1% HP every 4 seconds,
-[Lv 8]: Heal every 3 seconds, Drain 47 SP and 1% HP every 3 seconds,
-[Lv 9]: Heal every 2 seconds, Drain 51 SP and 1% HP every 2 seconds,
-[Lv 10]: Heal every 1 seconds, Drain 55 SP and 1% HP every 1 seconds`,
-    img: martyrsHeal,
-  },
+//   {
+//     id: "martyrsHeal",
+//     level: 0,
+//     dependencies: [
+//       { id: "devotion", minLevel: 1 },
+//     ],
+//     dependent: [
+//       { id: "gospel" },
+//     ],
+//     element: null,
+//     skillName: "Martyr's Heal",
+//     maxLevel: 10,
+//     inform: `Max Lv: 10
+// Skill Form: Active
+// Type: Magical
+// Target: Self
+// Range: 9
+// Requirement: Devotion Lv: 1
+// Description: Center a divine cross on yourself, sacrificing HP and SP to heal allies around you over time. The cross moves with you and doesn't prevent the use of any attacks or skills. The healing is based on your learned Heal skill and your maximum HP. Allies under the effect of Devotion receive the healing even outside the area of effect. The user is not healed and has their movement speed reduced by 30%. This skill can be switched on and off.
+// [Lv 1]: Heal every 10 seconds, Drain 19 SP and 1% HP every 10 seconds,
+// [Lv 2]: Heal every 9 seconds, Drain 23 SP and 1% HP every 9 seconds,
+// [Lv 3]: Heal every 8 seconds, Drain 27 SP and 1% HP every 8 seconds,
+// [Lv 4]: Heal every 7 seconds, Drain 31 SP and 1% HP every 7 seconds,
+// [Lv 5]: Heal every 6 seconds, Drain 35 SP and 1% HP every 6 seconds,
+// [Lv 6]: Heal every 5 seconds, Drain 39 SP and 1% HP every 5 seconds,
+// [Lv 7]: Heal every 4 seconds, Drain 43 SP and 1% HP every 4 seconds,
+// [Lv 8]: Heal every 3 seconds, Drain 47 SP and 1% HP every 3 seconds,
+// [Lv 9]: Heal every 2 seconds, Drain 51 SP and 1% HP every 2 seconds,
+// [Lv 10]: Heal every 1 seconds, Drain 55 SP and 1% HP every 1 seconds`,
+//     img: martyrsHeal,
+//   },
   {
     id: "reflectorShield",
     level: 0,
@@ -471,6 +453,38 @@ Description: Requires a Shield equipped. Hurls the equipped shield like a boomer
 [Lv 9]: Atk 415% + 90% of Shield Weight + Def + Refine ,
 [Lv 10]: Atk 450% + 100% of Shield Weight + Def + Refine`,
     img: shieldBoomerang,
+  },
+  {
+    id: "layonh",
+    level: 0,
+    dependencies: [
+      // { id: "shieldCharge", minLevel: 3 },
+    ],
+    dependent: [
+      // { id: "shieldChain" },
+    ],
+    element: null,
+    skillName: "Lay On H...",
+    maxLevel: 10,
+    inform: `....
+    `,
+    img: layonh,
+  },
+  {
+    id: "graceof",
+    level: 0,
+    dependencies: [
+      // { id: "shieldCharge", minLevel: 3 },
+    ],
+    dependent: [
+      // { id: "shieldChain" },
+    ],
+    element: null,
+    skillName: "Grace of...",
+    maxLevel: 10,
+    inform: `...
+    `,
+    img: graceof,
   },
 ];
 

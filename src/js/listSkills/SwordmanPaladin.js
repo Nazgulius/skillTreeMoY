@@ -40,7 +40,7 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime: 1400; Fixed Cast Time: 6
     id: "gospel",
     level: 0,
     dependencies: [
-      { id: "martyrsHeal", minLevel: 4 },
+      
     ],
     dependent: [],
     element: null,
