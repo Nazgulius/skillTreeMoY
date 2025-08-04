@@ -15,10 +15,10 @@ import shieldStripping from '../../img/icon_rog/icon_rog_11.gif';
 import armorStripping from '../../img/icon_rog/icon_rog_12.gif'; 
 import helmStripping from '../../img/icon_rog/icon_rog_13.gif'; 
 import intimidate from '../../img/icon_rog/icon_rog_14.gif'; 
-import gangsterParadise from '../../img/icon_rog/icon_rog_18.gif'; 
-import plagiarism from '../../img/icon_rog/icon_rog_20.gif'; 
+import gangsterParadise from '../../img/icon_rog/icon_rog_25.png'; 
+import plagiarism from '../../img/icon_rog/icon_rog_24.png'; 
 import gangland from '../../img/icon_rog/icon_rog_22.png'; 
-import gashingBlow from '../../img/icon_rog/icon_rog_23.png'; 
+import gashingBlow from '../../img/icon_rog/icon_rog_26.png'; 
 
 // список скилов Rogue
 export const skillsRogue = [ 

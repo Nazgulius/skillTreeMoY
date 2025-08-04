@@ -3,7 +3,7 @@
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import tripleStrafe from '../../img/icon_chs/icon_chs_5.png'; // заглушка
+import tripleStrafe from '../../img/icon_chs/icon_chs_6.png';
 import stealth from '../../img/icon_chs/icon_chs_1.gif'; 
 import counterInstinct from '../../img/icon_chs/icon_chs_2.gif'; 
 import simulation from '../../img/icon_chs/icon_chs_3.gif'; 
