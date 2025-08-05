@@ -38,19 +38,23 @@ export const skillsMage = [
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Fire
+After Cast Delay: 1.4s
 Range: 9
 Requirement: None
-Description: Attacks a target with arrow, made of fire inflicting 100% MATK Fire, elemental magic damage per Hit.
-[Lv 1]: 1 Hit, SP Consumption: 12,
-[Lv 2]: 2 Hits, SP Consumption: 14,
-[Lv 3]: 3 Hits, SP Consumption: 16,
-[Lv 4]: 4 Hits, SP Consumption: 18,
-[Lv 5]: 5 Hits, SP Consumption: 20,
-[Lv 6]: 6 Hits, SP Consumption: 22,
-[Lv 7]: 7 Hits, SP Consumption: 24,
-[Lv 8]: 8 Hits, SP Consumption: 26,
-[Lv 9]: 9 Hits, SP Consumption: 28,
-[Lv 10]: 10 Hits, SP Consumption: 30`,
+Description: Deals M.DMG to the target, scaling with Base Level when manually cast. VCT and FCT scale with skill level.
+[Lv 1]: 1 Hit, VCT: 0.50s, FCT: 0.30s SP Cost: 12,
+[Lv 2]: 2 Hits, VCT: 0.65s, FCT: 0.35s SP Cost: 14,
+[Lv 3]: 3 Hits, VCT: 0.80s, FCT: 0.40s SP Cost: 16,
+[Lv 4]: 4 Hits, VCT: 0.95s, FCT: 0.45s SP Cost: 18,
+[Lv 5]: 5 Hits, VCT: 1.25s, FCT: 0.55s SP Cost: 20,
+[Lv 6]: 6 Hits, VCT: 1.55s, FCT: 0.65s SP Cost: 22,
+[Lv 7]: 7 Hits, VCT: 1.85s, FCT: 0.75s SP Cost: 24,
+[Lv 8]: 8 Hits, VCT: 2.30s, FCT: 0.90s SP Cost: 26,
+[Lv 9]: 9 Hits, VCT: 2.75s, FCT: 1.05s SP Cost: 28,
+[Lv 10]: 10 Hits, VCT: 3.20s, FCT: 1.20s SP Cost: 30
+Formula: MATK (%): (100 + Manually Cast Bonus) x Hits
+Manually Cast Bonus: (100 x Base Lv^2) % 10000`,
     img: fireBolt,
   },
   {
@@ -70,19 +74,25 @@ Description: Attacks a target with arrow, made of fire inflicting 100% MATK Fire
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Fire
+Variable Cast Delay: 1.2s
+After Cast Delay: 0.5s
+Cooldown: 1s
 Range: 9
+Hit: 1
+SP Cost: 25
 Requirement: Fire Bolt Lv: 4
 Description: Unleashes a scorching fireball that explodes on impact, dealing Fire property magic damage to all enemies within its area of effect. The damage varies between the center [3x3 cells] and the edges [5x5 cells]. If theres fire present around the caster, multiple fireballs are conjured, with their number depending on the amount of natural fire in the terrain or the presence of Volcano or Fire Wall cells near the caster. Damage of the extra Fireballs is determined by the user's Base Level.
-[Lv 1]: Center: MAtk 120%, Edge: MAtk 60%,
-[Lv 2]: Center: MAtk 140%, Edge: MAtk 70%,
-[Lv 3]: Center: MAtk 160%, Edge: MAtk 80%,
-[Lv 4]: Center: MAtk 180%, Edge: MAtk 90%,
-[Lv 5]: Center: MAtk 200%, Edge: MAtk 100%,
-[Lv 6]: Center: MAtk 220%, Edge: MAtk 110%,
-[Lv 7]: Center: MAtk 240%, Edge: MAtk 120%,
-[Lv 8]: Center: MAtk 260%, Edge: MAtk 130%,
-[Lv 9]: Center: MAtk 280%, Edge: MAtk 140%,
-[Lv 10]: Center: MAtk 300%, Edge: MAtk 150%`,
+[Lv 1]: Center: MAtk 120%,
+[Lv 2]: Center: MAtk 140%,
+[Lv 3]: Center: MAtk 160%,
+[Lv 4]: Center: MAtk 180%,
+[Lv 5]: Center: MAtk 200%,
+[Lv 6]: Center: MAtk 220%,
+[Lv 7]: Center: MAtk 240%,
+[Lv 8]: Center: MAtk 260%,
+[Lv 9]: Center: MAtk 280%,
+[Lv 10]: Center: MAtk 300%`,
     img: fireBall,
   },
   {
