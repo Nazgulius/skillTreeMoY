@@ -25,15 +25,25 @@ export const skillsPaladin = [
 Skill Form: Active
 Type: Physical or Magical
 Target: Enemy
-Range: 9
+Element: Holy
+Variable Cast Time: 1.40s
+Fixed Cast Time: 0.60s
+After Cast Delay: A.Delay 0.40s
+Cooldown: 1s
+Range: 9 
+Hits: 3
 Requirement: Grand Cross Lv: 5
-Description: Unleashes a divine cross with immense pressure on a single target, dealing Holy Property Damage. Target have their holy resistance reduced by 20% for a few seconds. When wielding One-Handed Swords, Maces, or Daggers, the attack is Magical. When wielding Two-Handed Swords, Spears, or Axes, the attack is Physical. Damage is affected by STR and INT. For Physical, each point of STR increases Atk by 3%, with INT having half effectiveness. For Magical, each point of INT increases MAtk by 3%, with STR having half effectiveness. Against Shadow and Corrupt elements, it also drains a portion of the targets SP.
-[Lv 1]: Atk or MAtk 250%,
-[Lv 2]: Atk or MAtk 400%,
-[Lv 3]: Atk or MAtk 550%,
-[Lv 4]: Atk or MAtk 750%,
-[Lv 5]: Atk or MAtk 850%
-Details: AfterCastActDelay set as ASPD + 220; CastTime: 1400; Fixed Cast Time: 600.`,
+Description: Deals P.DMG or M.DMG to the target based on Weapon type, scaling with STR and INT.
+Reduces target's Holy property resistance by 20% for 5s.
+Drains SP when used against Shadow and Corrupt monsters.
+[Lv. 1]: ATK/MATK 350%, SP Cost: 20 
+[Lv. 2]: ATK/MATK 600%, SP Cost: 25 
+[Lv. 3]: ATK/MATK 850%, SP Cost: 30 
+[Lv. 4]: ATK/MATK 1100%, SP Cost: 35 
+[Lv. 5]: ATK/MATK 1350%, SP Cost: 40
+Formula: ATK (%): 100 + (250 x Skill Lv) + (STR + (INT / 2) x 3)
+MATK (%) 100 + (250 x Skill Lv) + (INT+ (STR / 2) x 3)
+Drained SP: (T.Max SP x. (5 x Skill Lv)) = 100 `,
     img: gloriaDomini,
   },
   {
@@ -50,13 +60,31 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime: 1400; Fixed Cast Time: 6
 Skill Form: Active
 Type: Misc
 Target: Self
+After Cast Delay: 0.30s
+Cooldown: 30s
+HP Cost: 5%
+
 Requirement: Martyr's Heal Lv: 4
-Description: Center a divine cross on yourself, granting various effects to party members within the area, depending on the skill level used. While active, a portion of your HP and SP is drained every 10 seconds. The aura moves with you and doesn't prevent the use of any skills or attacks. Allies under Devotion receive and emit the aura even outside the area of effect. Only one aura can be active at a time, and allies must be within a 10 base level difference for the effects to apply.
-[Lv 1]: Thorns Aura - Grants a Thorns bonus based on the users level and increases all Thorns effects on affected targets by 20%.
-[Lv 2]: Prestige Aura - Grants an All Stats bonus based on the users attributes and increases resistance to negative effects by 10%.
-[Lv 3]: Protection Aura - Grants a Physical Defense bonus based on the users defense and increases the Max HP of affected targets by 10%.
-[Lv 4]: Salvation Aura - Grants Property Resistance based on the users INT and increases Hard Magic Defense of affected targets by 10.
-[Lv 5]: Inspiration Aura - Grants a Sacred property bonus to magical and physical damage, and increases Attack and Magic Attack by 50.`,
+Description: Activates a 5x5 AoE aura, with effects based on selected skill level. Drains HP and SP every 10s while active.
+Allies under the effects of Devotion also emit the aura.
+Only affects allies within a 10 Base Level range.
+Thorns Aura: +20% Thorns and a bonus amount based on the caster's Base Level. Prestige Aura: +10% NSE Resistance and a bonus to all Stats based on the caster's base Stats and Base Level.
+Protection Aura: +10% Max HP and a bonus of H.DEF based on the caster's H.DEF.
+Salvation: +10 H.MDEF and a bonus resistance. to Fire, Water, Wind, and Earth based on the caster's base INT.
+Inspiration Aura: +50 B.ATK and B.MATK and a bonus of Holy P.DMG and M.DMG based on the caster's Base Level.
+[Lv. 1]: Thorns Aura. SP Cost: 19 
+[Lv. 2]: Prestige Aura. SP Cost: 23
+[Lv. 3]: Protection Aura. SP Cost: 27 
+[Lv. 4]: Salvation Aura. SP Cost: 31 
+[Lv. 5]: Inspiration Aura. SP Cost: 35
+
+Drained SP: 15+ (4 x Gospel Lv)
+Drained HP: 5% of MaxHP
+Thorns: (Base Lv 40) x Gospel Lv
+All Stats: ((((STR. + AGI + VIT + INT + DEX + LUK) + 6)^2) + (300 - Base Lv)) + Gospel Lv 
+H.DEF: HIDEF (8 - Gospel Lv)
+Property Resistance % 5 + (INT (15 Gospel Lv))
+Holy Damage %: 5 + (Base Lv / 10) `,
     img: gospel,
   },
   {
@@ -71,18 +99,19 @@ Description: Center a divine cross on yourself, granting various effects to part
     skillName: "Sacrifice",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
+Skill Form: Toggle 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
 Requirement: Faith Lv: 10, Moving HP Recovery Lv: 1
-Description: Embrace the power of sacrifice to boost your Attack and Skill Damage. Each Basic Attack or Skill empowered by Martyrs Reckoning drains 3% of your MaxHP.
-[Lv 1]: Extra Damage 1 x HP Drained,
-[Lv 2]: Extra Damage 1.1 x HP Drained,
-[Lv 3]: Extra Damage 1.2 x HP Drained,
-[Lv 4]: Extra Damage 1.3 x HP Drained,
-[Lv 5]: Extra Damage 1.4 x HP Drained
-Now, HP consumption occurs only once per use of the skill.
-`,
+Description: While active, drains HP on each attack or skill, increasing DMG by double the amount of drained HP. This bonus damage cannot miss.
+[Lv. 1]: Drained HP: 1% of MaxHP 
+[Lv. 2]: Drained HP: 2% of MaxHP
+[Lv. 3]: Drained HP: 3% of MaxHP 
+[Lv. 4]: Drained HP: 4% of MaxHP 
+[Lv. 5]: Drained HP: 5% of MaxHP
+Damage Bonus: ((0.01 x Skill Level) x Max HP) x 2 `,
     img: sacrifice,
   },
   {
@@ -99,20 +128,28 @@ Now, HP consumption occurs only once per use of the skill.
 Skill Form: Active
 Type: Physical
 Target: Enemy
-Range: 6 ~ 10
+Element: Elementless
+After Cast Delay: A.Delay 0.40s
+Fixed Cast Time: 0.60s
+Cooldown: 1s
+Range: 10
+Hits: 5
+SP Cost: 30
 Requirement: Shield Boomerang Lv: 5
-Description: Requires a Shield equipped. Enable the chance of striking an enemy 5 times with a Shield while in battle. Damage is greatly affected by Weight, Defense, Refine Level of the equipped Shield and Shield Boomerang skill level. If used on a target that was recently immobilized (up to 3 seconds after any immobilization), deals additional True Damage based on the Weight, Defense and Refine Level . Casting Time and Range increase with the level of this skill.
-[Lv 1]: Variable C.Time: 0.36 Seconds, Range: 6 cells,
-[Lv 2]: Variable C.Time: 0.36 Seconds, Range: 6 cells,
-[Lv 3]: Variable C.Time: 0.42 Seconds, Range: 7 cells,
-[Lv 4]: Variable C.Time: 0.42 Seconds, Range: 7 cells,
-[Lv 5]: Variable C.Time: 0.48 Seconds, Range: 8 cells,
-[Lv 6]: Variable C.Time: 0.48 Seconds, Range: 8 cells,
-[Lv 7]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
-[Lv 8]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
-[Lv 9]: Variable C.Time: 0.6 Seconds, Range: 10 cells,
-[Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
-Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 600.`,
+Description: Deals ranged P.DMG to the target, scaling with shield stats and the learned level of Shield Boomerang. Adds T.ATK based on shield stats if the target was Immobilized in the last 3s. VCT scales with skill level. 
+Requires a shield.
+[Lv. 1]: ATK 100% x Hits. VCT: 0.33s 
+[Lv. 2]: ATK 100% x Hits. VCT: 0.36s 
+[Lv. 3]: ATK 100% x Hits. VCT: 0.39s 
+[Lv. 4]: ATK 100% x Hits. VCT: 0.42s 
+[Lv. 5]: ATK 100% x Hits. VCT: 0.45s 
+[Lv. 6]: ATK 100% x Hits. VCT: 0.48s 
+[Lv. 7]: ATK 100% x Hits. VCT: 0.51s 
+[Lv. 8]: ATK 100% x Hits. VCT: 0.54s 
+[Lv. 9]: ATK 100% x Hits. VCT: 0.57s 
+[Lv.10]: ATK 100% x Hits. VCT: 0.60s
+ATK (%); 100 + (((S/weight + S.Defense+ (S.Refine^2)) / (20 - Shield Boomerang Lv)) x Skill Lv) x Hits 
+T.ATK: S.Weight + S.Defense + (SRefine^2) `,
     img: shieldChain,
   },
 ];
