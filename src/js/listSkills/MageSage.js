@@ -48,18 +48,19 @@ export const skillsSage = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Book
 Requirement: None
-Description: Increase magical attack and attack speed with Book Weapons. When [Lv 10], it increases MAtk in 6%.
-[Lv 1]: MAtk +3, Attack Speed +0.5%,
-[Lv 2]: MAtk +6, Attack Speed +1%,
-[Lv 3]: MAtk +9, Attack Speed +1.5%,
-[Lv 4]: MAtk +12, Attack Speed +2%,
-[Lv 5]: MAtk +15, Attack Speed +2.5%,
-[Lv 6]: MAtk +18, Attack Speed +3%,
-[Lv 7]: MAtk +21, Attack Speed +3.5%,
-[Lv 8]: MAtk +24, Attack Speed +4%,
-[Lv 9]: MAtk +27, Attack Speed +4.5%,
-[Lv 10]: MAtk +30, Attack Speed +5%`,
+Description: Increases B.MATK while wielding Books. At max level, also grants +6% B.MATK and decreases DAA by 5%,
+[Lv. 1]: B.MATK +3
+[Lv. 2]: B.MATK +6
+[Lv. 3]: B.MATK +9
+[Lv. 4]: B.MATK +12
+[Lv. 5]: B.MATK +15
+[Lv. 6]: B.MATK +18
+[Lv. 7]: B.MATK +21
+[Lv. 8]: B.MATK +24
+[Lv. 9]: B.MATK +27 
+[Lv.10]: B.MATK +30`,
     img: advancedBook,
   },
   {
