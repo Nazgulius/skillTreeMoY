@@ -283,10 +283,16 @@ Formula: MATK (%); 100 x Hits `,
 Skill Form: Active
 Type: Magical
 Target: Ground
-Range: 9
+Element: Wind
+After Cast Delay: 1s
+Cooldown: 65
+Range: 9 
+Hits: 4
 Requirement: Jupitel Thunder Lv: 3
-Description: Calls down devastating lightning bolts from the skies to strike a chosen area, dealing Wind property magic damage every 0.45 seconds to all enemies within a [13*13] radius for 4.5 seconds. Enemies hit by this storm have a chance to be blinded. The chance of blindness is mitigated by the targets resistances.
-[Lv 1]: MAtk 20% per Hit, Blind Chance:15%,
+Description: Deals M.DMG to enemies within a 13x13 AoE around the targeted location every 0.45s for 4.5s.
+Has a chance to inflict Blind for 20s.
+VCT and FCT scale with skill level.
+[Lv. 1]: MATK 20%, VCT: 2.60s. FCT: 0.78s Blind Chance: 15%, SP Cost: 60
 [Lv. 2]: MATK 40%, VCT: 2.90s. FCT: 0.82s Blind Chance: 20%, SP Cost: 64
 [Lv. 3]: MATK 60%, VCT: 3.20s. FCT: 0.86s Blind Chance: 25%, SP Cost: 68
 [Lv. 4]: MATK 80%, VCT: 3.50s. FCT: 0.90s Blind Chance: 30%, SP Cost: 72
@@ -296,7 +302,7 @@ Description: Calls down devastating lightning bolts from the skies to strike a c
 [Lv. 8]: MATK 160%, VCT: 6.20s. FCT: 1.26s Blind Chance: 50%, SP Cost: 88
 [Lv. 9]: MATK 180%, VCT: 7.10s. FCT: 1.38s Blind Chance: 55%, SP Cost: 92
 [Lv.10]: MATK 200%, VCT: 8.00s. FCT: 1.50s Blind Chance: 60%, SP Cost: 96
-Formula: ...`,
+Formula: MATK (%): Skill Lv x 20 `,
     img: lordOfVermilion,
   },
   {
