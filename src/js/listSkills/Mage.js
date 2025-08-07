@@ -360,7 +360,9 @@ Target: Enemy
 Variable Cast Time: 1s Cooldown: 0.50s 
 Range: 2
 Requirement: Earth Spike Lv: 4
-Variable Cast Time: 1s Cooldown: 0.50s Range: 2
+Variable Cast Time: 1s 
+Cooldown: 0.50s 
+Range: 2
 Description: Attempts to inflict Petrifying to the target for 3s. Inflicts Petrify on the target for 17s once the Petrifying effect ends.
 If the target is already petrifying or petrified, the skill fails but still consumes SP. When cast from skill level 5 or higher, consumes the Catalyst in a successful attempt only.
 Catalyst: 1x Red Gemstone
@@ -392,19 +394,22 @@ Catalyst: 1x Red Gemstone
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Ghost
+After Cast Delay: 1.40s
 Range: 9
 Requirement: None
-Description: Summon the Ancient Holy Spirit to deliver direct attacks, inflicting Ghost property magic damage.
-[Lv 1]: 100% Magic Attack / 1 Hit, SP Cost: 12,
-[Lv 2]: 200% Magic Attack / 1 Hit, SP Cost: 14,
-[Lv 3]: 300% Magic Attack / 2 Hits, SP Cost: 16,
-[Lv 4]: 400% Magic Attack / 2 Hits, SP Cost: 18,
-[Lv 5]: 500% Magic Attack / 3 Hits, SP Cost: 20,
-[Lv 6]: 600% Magic Attack / 3 Hits, SP Cost: 22,
-[Lv 7]: 700% Magic Attack / 4 Hits, SP Cost: 24,
-[Lv 8]: 800% Magic Attack / 4 Hits, SP Cost: 26,
-[Lv 9]: 900% Magic Attack / 5 Hits, SP Cost: 28,
-[Lv 10]: 1000% Magic Attack / 5 Hits, SP Cost: 30`,
+Description: Deals M.DMG to the target, scaling with Base Level when manually cast. VCT and FCT scale with skill level.
+[Lv. 1]: MATK 100%, VCT: 0.50s. FCT: 0.30s Hits: 1. SP Cost: 12
+[Lv. 2]: MATK 200%, VCT: 0.65s. FCT: 0.35s Hits: 1. SP Cost: 14
+[Lv. 3]: MATK 300%, VCT: 0.80s. FCT: 0.40s Hits: 2. SP Cost: 16
+[Lv. 4]: MATK 400%, VCT: 0.95s. FCT: 0.45s Hits: 2. SP Cost: 18
+[Lv. 5]: MATK 500%, VCT: 1.25s. FCT: 0.55s Hits: 3. SP Cost: 20
+[Lv. 6]: MATK 600%, VCT: 1.55s. FCT: 0.65s Hits: 3. SP Cost: 22
+[Lv. 7]: MATK 700%, VCT: 1.85s. FCT: 0.75s Hits: 4. SP Cost: 24
+[Lv. 8]: MATK 800%, VCT: 2.30s. FCT: 0.90s Hits: 4. SP Cost: 26
+[Lv. 9]: MATK 900%, VCT: 2.75s. FCT: 1.05s Hits: 5. SP Cost: 28
+[Lv.10]: MATK 1000%, VCT: 3.20s. FCT: 1.20s Hits: 5. SP Cost: 30
+Formula: MATK (%); (Skill Lv x 100) + Manually Cast Bonus Manually Cast Bonus: ((Skill Lv x 100) x Base Lv^2) = 10000`,
     img: soulStrike,
   },
   {
@@ -424,19 +429,26 @@ Description: Summon the Ancient Holy Spirit to deliver direct attacks, inflictin
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Ghost
+Variable Cast Time: 1.20s
+After Cast Delay: 0.50s 
+Cooldown: 1s
 Range: 9
+Hits: 1
 Requirement: Requirement: Soul Strike Lv: 4
-Description: Unleashes a surge of psychokinetic energy, striking a target with Ghost property magic damage and affecting all enemies within a 5x5 cells area. This skill deals extra damage to [Undead Race] or [Corrupt Property] entities. 
-[Lv 1] : MAtk 120%, Additional Damage: +10%, SP Cost: 9, 
-[Lv 2] : MAtk 140%, Additional Damage: +20%, SP Cost: 9, 
-[Lv 3] : MAtk 160%, Additional Damage: +30%, SP Cost: 9, 
-[Lv 4] : MAtk 180%, Additional Damage: +40%, SP Cost: 12, 
-[Lv 5] : MAtk 200%, Additional Damage: +50%, SP Cost: 12, 
-[Lv 6] : MAtk 220%, Additional Damage: +60%, SP Cost: 12, 
-[Lv 7] : MAtk 240%, Additional Damage: +70%, SP Cost: 15, 
-[Lv 8] : MAtk 260%, Additional Damage: +80%, SP Cost: 15, 
-[Lv 9] : MAtk 280%, Additional Damage: +90%, SP Cost: 15, 
-[Lv10] : MAtk 300%, Additional Damage: +100%, SP Cost: 18`,
+Description: Deals M.DMG to enemies within a 5x5 AoE around the target, increased against Undead and Corrupt enemies.
+[Lv. 1]: MATK 120%, SP Cost: 9 
+[Lv. 2]: MATK 140%, SP Cost: 9
+[Lv. 3]: MATK 160%, SP Cost: 9 
+[Lv. 4]: MATK 180%, SP Cost: 12 
+[Lv. 5]: MATK 200%, SP Cost: 12
+[Lv. 6]: MATK 220%, SP Cost: 12 
+[Lv. 7]: MATK 240%, SP Cost: 15 
+[Lv. 8]: MATK 260%, SP Cost: 15 
+[Lv. 9]: MATK 280%, SP Cost: 15 
+[Lv.10]: MATK 300%, SP Cost: 18
+Formula: MATK (%); 100+ (Skill Lv x 20) + Undead/Corrupt Bonus 
+Undead/Corrupt Bonus: Skill Lv x 10`,
     img: napalmBeat,
   },
   {
@@ -452,19 +464,27 @@ Description: Unleashes a surge of psychokinetic energy, striking a target with G
 Skill Form: Active
 Type: Magical
 Target: Ground
+After Cast Delay: 0.50s 
+Cooldown: 0.50s
+Max Instances: 4
 Range: 9
 Requirement: Napalm Beat Lv: 5, Soul Strike Lv: 7
-Description: Constructs a protective barrier at a targeted location that blocks all close-range physical damage until its durability is depleted or the skill expires. The walls durability and effectiveness are influenced by your INT, Base Level, and MaxSP. Only the initial impact is prevented beyond the total durability. A maximum of 4 Safety Walls can be active at once. Catalyst: 1x Blue Gemstone.
-[Lv 1]: Durability: 300, Blocks Damage 2 times,
-[Lv 2]: Durability: 600, Blocks Damage 3 times,
-[Lv 3]: Durability: 900, Blocks Damage 4 times,
-[Lv 4]: Durability: 1200, Blocks Damage 5 times,
-[Lv 5]: Durability: 1500, Blocks Damage 6 times,
-[Lv 6]: Durability: 1800, Blocks Damage 7 times,
-[Lv 7]: Durability: 2100, Blocks Damage 8 times,
-[Lv 8]: Durability: 2400, Blocks Damage 9 times,
-[Lv 9]: Durability: 2700, Blocks Damage 10 times,
-[Lv 10]: Durability: 3000, Blocks Damage 11 times`,
+Description: Creates a pillar at the targeted location, blocking all melee P.DMG until its durability runs out or it reaches the hit limit. The blocked damage is transferred to the pillar, reducing its durability.
+The durability scales with INT, Max SP and Base Level.
+Older instances are removed to create new ones when reaching the instance limit.
+VCT and FCT scale with skill level.
+Catalyst: 1x Blue Gemstone
+[Lv. 1]: VCT: 3.20s. FCT: 0.80s. Hits: 2 Durability: 300. Duration: 5s. SP Cost: 30 
+[Lv. 2]: VCT: 2.88s. FCT: 0.72s. Hits: 3 Durability: 600. Duration: 10s. SP Cost: 30 
+[Lv. 3]: VCT: 2.56s. FCT: 0.64s. Hits: 4 Durability: 900. Duration: 15s. SP Cost: 30 
+[Lv. 4]: VCT: 2.24s. FCT: 0.56s. Hits: 5 Durability: 1200. Duration: 20s. SP Cost: 35 
+[Lv. 5]: VCT: 1.92s. FCT: 0.48s. Hits: 6 Durability: 1500. Duration: 25s. SP Cost: 35 
+[Lv. 6]: VCT: 1.60s. FCT: 0.40s. Hits: 7 Durability: 1800. Duration: 30s. SP Cost: 35 
+[Lv. 7]: VCT: 1.28s. FCT: 0.32s. Hits: 8 Durability: 2100. Duration: 35s. SP Cost: 40 
+[Lv. 8]: VCT: 0.96s. FCT: 0.24s. Hits: 9 Durability: 2400. Duration: 40s. SP Cost: 40
+[Lv. 9]: VCT: 0.64s. FCT: 0.16s. Hits: 10 Durability: 2700. Duration: 45s. SP Cost: 40 
+[Lv.10]: VCT: 0.32s. FCT: 0.08s. Hits: 11 Durability: 3000. Duration: 50s. SP Cost: 40
+Durability: (Skill Lv x 300) + (65 x (INT + Base Lv)) + MaxSP Safety Wall`,
     img: safetyWall,
   },
   {
@@ -506,15 +526,13 @@ Description: Increases the amount of SP recovered through your natural SP regene
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Magical
+Type: Supportive
 Target: Self
 Requirement: None
-Description: Summons a fireball that reveals hidden characters within a 7x7 area around the caster. This skill can only be learned at level 1; higher levels are unlocked through items.
-[Lv 1]: Duration: 10 Seconds,
-[Lv 2]: Duration: 20 Seconds,
-[Lv 3]: Duration: 30 Seconds,
-[Lv 4]: Duration: 40 Seconds,
-[Lv 5]: Duration: 50 Seconds`,
+After Cast Delay: A.Delay - 0.285 
+Cooldown: A.Delay
+SP Cost: 10
+Description: Reveals Invisible enemies within a 7x7 AoE for 10s.`,
     img: sight,
   },
 ];
