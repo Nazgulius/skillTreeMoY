@@ -24,22 +24,24 @@ export const skillsLordKnight = [
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Weapon: Sword-Class 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
 Requirement: Sword Quicken Lv: 5
-Description: Requires Swords Class Weapon. Produces a special aura around the sword blade to strengthen its power temporarily. For every Job Level above 50, the user gains +25 True Damage.
-[Lv 1]: True Damage +50,
-[Lv 2]: True Damage +100,
-[Lv 3]: True Damage +150,
-[Lv 4]: True Damage +200,
-[Lv 5]: True Damage +250,
-[Lv 6]: True Damage +300,
-[Lv 7]: True Damage +350,
-[Lv 8]: True Damage +400,
-[Lv 9]: True Damage +450,
-[Lv 10]: True Damage +500
-Now, in addition to granting true damage, the skill also increases the user’s total true damage by (5 + Skill Lv)%.
-True Damage Bonus: 50 + Skill Lv + Crit (for Basic Attacks, the bonus is doubled).`,
+Description: Temporarily increases T.ATK, scaling with CRIT. Bonus is doubled for basic attacks.
+[Lv. 1]: T.ATK +5%, T.ATK +50 Duration: 60s. SP Cost: 23
+[Lv. 2]: T.ATK +10%, T.ATK +100 Duration: 80s. SP Cost: 26
+[Lv. 3]: T.ATK +15%, T.ATK +150 Duration: 100s. SP Cost: 29 
+[Lv. 4]: T.ATK +20%, T.ATK +200 Duration: 120s. SP Cost: 32
+[Lv. 5]: T.ATK +25%, T.ATK +250 Duration: 140s. SP Cost: 35 
+[Lv. 6]: T.ATK +30%, T.ATK +300 Duration: 160s. SP Cost: 38 
+[Lv. 7]: T.ATK +35%, T.ATK +350 Duration: 180s. SP Cost: 41
+[Lv. 8]: T.ATK +40%, T.ATK +400 Duration: 200s. SP Cost: 44
+[Lv. 9]: T.ATK +45%. T.ATK +450 Duration: 220s, SP Cost: 47
+[Lv.10]: T.ATK +50%, T.ATK +500 Duration: 240s. SP Cost: 50
+T.ATK: + ((T.ATK x (5 x Skill Lv)) / 100) + (50 x Skill Lv) + CRIT `,
     img: auraBlade,
   },
   {
@@ -51,21 +53,19 @@ True Damage Bonus: 50 + Skill Lv + Crit (for Basic Attacks, the bonus is doubled
     skillName: "Berserk",
     maxLevel: 10,
     inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
+Skill Form: Toggle
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s
 Requirement: None
-Description: Unleashes the power of rage to greatly enhance the user temporarily, at the cost of extreme vulnerability. Increases maximum HP, movement speed, attack speed by 30%, and attack power by 100%, while keeping the Endure state active. Reduces defense, magic defense, evasion, and healing received. Disables consumables, and attack skills. Disables switch of equipments.
-[Lv 1]: Max HP +60%, FLEE -95%, DEF/MDEF -95%, Received healing -90%,
-[Lv 2]: Max HP +70%, FLEE -90%, DEF/MDEF -95%, Received healing -90%,
-[Lv 3]: Max HP +80%, FLEE -85%, DEF/MDEF -90%, Received healing -80%,
-[Lv 4]: Max HP +90%, FLEE -80%, DEF/MDEF -90%, Received healing -80%,
-[Lv 5]: Max HP +100%, FLEE -75%, DEF/MDEF -85%, Received healing -70%,
-[Lv 6]: Max HP +110%, FLEE -70%, DEF/MDEF -85%, Received healing -70%,
-[Lv 7]: Max HP +120%, FLEE -65%, DEF/MDEF -80%, Received healing -60%,
-[Lv 8]: Max HP +130%, FLEE -60%, DEF/MDEF -80%, Received healing -60%,
-[Lv 9]: Max HP +140%, FLEE -55%, DEF/MDEF -75%, Received healing -50%,
-[Lv 10]: Max HP +150%, FLEE -50%, DEF/MDEF -75%, Received healing -50%`,
+Description: While active, grants +100% Max HP, +30% ASPD, +20% ATK for skills, +100% ATK for basic attacks, and -30% WD.
+Drains 1% of Max HP every 3s and reduces HP Recovery and SP Recovery by 90%. Also reduces Healing Eff, Life Steal, DEF, and FLEE.
+Cannot be used while mounted.
+[Lv. 1]: Heal. Eff/Life Steal/DEF -94% Flee -92%, Cooldown: 300s
+[Lv. 2]: Heal. Eff/Life Steal/DEF -88% Flee -84%, Cooldown: 240s
+[Lv. 3]: Heal. Eff/Life Steal/DEF -82% Flee -76%, Cooldown: 180s
+[Lv. 4]: Heal. Eff/Life Steal/DEF -76% Flee -68%, Cooldown: 120s
+[Lv. 5]: Heal. Eff/Life Steal/DEF -70% Flee -60%, Cooldown: 60s`,
     img: berserk,
   },
   {
@@ -79,21 +79,26 @@ Description: Unleashes the power of rage to greatly enhance the user temporarily
     skillName: "Concentration",
     maxLevel: 10,
     inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
+Skill Form: Active 
+Weapon: Spear-Class 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
 Requirement: Spear Quicken Lv: 5
-Description: Requires Spear Class Weapon. Boosts Attack Power and Hit Rate.
-[Lv 1]: Atk and Hit +2%,
-[Lv 2]: Atk and Hit +4%,
-[Lv 3]: Atk and Hit +6%,
-[Lv 4]: Atk and Hit +8%,
-[Lv 5]: Atk and Hit +10%,
-[Lv 6]: Atk and Hit +12%,
-[Lv 7]: Atk and Hit +14%,
-[Lv 8]: Atk and Hit +16%,
-[Lv 9]: Atk and Hit +18%,
-[Lv 10]: Atk and Hit +20%`,
+Description: Temporarily increases B.ATK,
+W.ATK and ACC.
+Also increases E.ATK based on 10% of ACC. 
+[Lv. 1]: B.ATK/W.ATK/ACC +7% Duration: 60s. SP Cost: 23
+[Lv. 2]: B.ATK/W.ATK/ACC +9% Duration: 80s. SP Cost: 26
+[Lv. 3]: B.ATK/W.ATK/ACC +11% Duration: 100s. SP Cost: 29
+[Lv. 4]: B.ATK/W.ATK/ACC +13% Duration: 120s. SP Cost: 32
+[Lv. 5]: B.ATK/W.ATK/ACC +15% Duration: 140s. SP Cost: 35 
+[Lv. 6]: B.ATK/W.ATK/ACC +17% Duration: 160s, SP Cost: 38 
+[Lv. 7]: B.ATK/W.ATK/ACC +19% Duration: 180s. SP Cost: 41 
+[Lv. 8]: B.ATK/W.ATK/ACC +21% Duration: 200s. SP Cost: 44 
+[Lv. 9]: B.ATK/W.ATK/ACC +23% Duration: 220s. SP Cost: 47
+[Lv.10]: B.ATK/W.ATK/ACC +25% Duration: 240s. SP Cost: 50`,
     img: concentration,
   },
   {
@@ -138,22 +143,19 @@ Description: Requires Spear Class Weapon. Executes precision strikes at an enemy
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Weapon: Sword-Class 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
+SP Cost: 30
 Requirement: Counter Attack Lv: 5, Two-Handed Sword Mastery Lv: 10
-Description: Requires Two-Handed Sword Class Weapon. Allows the user to block physical attacks with the equipped two-handed sword by chance temporarily. In PvP maps, the activation chance is influenced by your AGI and that of your opponent. For every 10 points of difference, the chance of blocking is reduced by 3%.
-[Lv 1]: Block +23%,
-[Lv 2]: Block +26%,
-[Lv 3]: Block +29%,
-[Lv 4]: Block +32%,
-[Lv 5]: Block +35%,
-[Lv 6]: Block +38%,
-[Lv 7]: Block +41%,
-[Lv 8]: Block +44%,
-[Lv 9]: Block +47%,
-[Lv 10]: Block +50%
-To prevent abuse, the user no longer dodges attacks; instead, they mitigate 50% of the damage received, and the mitigated damage is added as bonus damage (not exceeding the user’s maximum HP).
-Details: AfterCastActDelay set as ASPD + 220.`,
+Description: Grants a chance to fully block any incoming P.DMG. Block chance is halved while wielding a One-Handed Sword. Briefly immobilizes the character after a successful block.
+[Lv. 1]: Block Chance: 23%. Duration: 30s 
+[Lv. 2]: Block Chance: 26%, Duration: 40s 
+[Lv. 3]: Block Chance: 29%, Duration: 50s 
+[Lv. 4]: Block Chance: 32%, Duration: 60s 
+[Lv. 5]: Block Chance: 35%, Duration: 70s`,
     img: parry,
   },
   {
@@ -168,23 +170,30 @@ Details: AfterCastActDelay set as ASPD + 220.`,
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Spear-Class 
 Type: Physical
 Target: Enemy
-Range: 6 ~ 10
+After Cast Delay: A.Delay 0.445
+Fixed Cast Time: 0.60s
+Cooldown: 1s
+Range: 10
+Hits: 5
+SP Cost: 30
 Requirement: Spear Boomerang Lv: 5
-Description: Requires Spear Class Weapon. Throws your spear with a spiraling motion, piercing the target five times. Damage is greatly affected by the Weight of the equipped weapon and the Spear Boomerang Learned Level. If used on a target that was recently immobilized (up to 3 seconds after any immobilization), adds the weapon's Weight as True Damage at the end of each hit. Casting Time and Range increase with the level of this skill.
-[Lv 1]: Variable C.Time: 0.36 Seconds, Range: 6 cells,
-[Lv 2]: Variable C.Time: 0.36 Seconds, Range: 6 cells,
-[Lv 3]: Variable C.Time: 0.42 Seconds, Range: 7 cells,
-[Lv 4]: Variable C.Time: 0.42 Seconds, Range: 7 cells,
-[Lv 5]: Variable C.Time: 0.48 Seconds, Range: 8 cells,
-[Lv 6]: Variable C.Time: 0.48 Seconds, Range: 8 cells,
-[Lv 7]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
-[Lv 8]: Variable C.Time: 0.54 Seconds, Range: 9 cells,
-[Lv 9]: Variable C.Time: 0.6 Seconds, Range: 10 cells,
-[Lv 10]: Variable C.Time: 0.6 Seconds, Range: 10 cells
-Formula: ATK%: (100 + (((W.Weight / 10) + (20 - Spear Boomerang Lv)) x Skill Lv)) x Hits
-Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 600.`,
+Description: Deals ranged P.DMG to the target, scaling with weapon stats and the learned level of Spear Boomerang.
+Adds T.ATK based on weapon weight if the target was Immobilized in the last 3s.
+VCT scales with skill level.
+[Lv. 1]: ATK 110%, VCT: 0.33s
+[Lv. 2]: ATK 120%, VCT: 0.36s
+[Lv. 3]: ATK 130%, VCT: 0.39s 
+[Lv. 4]: ATK 140%, VCT: 0.42s 
+[Lv. 5]: ATK 150%, VCT: 0.45s 
+[Lv. 6]: ATK 160%, VCT: 0.48s 
+[Lv. 7]: ATK 170%, VCT: 0.51s 
+[Lv. 8]: ATK 180%, VCT: 0.54s 
+[Lv. 9]: ATK 190%, VCT: 0.57s 
+[Lv.10]: ATK 200%, VCT: 0.60s
+Formula: ATK (9%): (100 + (((W.Weight / (20 - Spear Boomerang Lv)) + 10) x Skill Lv)) x Hits `,
     img: spiralPierce,
   },
 ];
