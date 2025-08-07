@@ -38,13 +38,19 @@ export const skillsWizard = [
 Skill Form: Active
 Type: Magical
 Target: Self
+Element: Fire
+Variable Cast Time: 0.30s
+Fixed Cast Time: 0.10s 
+After Cast Delay: 2s
+Hits: 1
 Requirement: Fire Bolt Lv: 4, Fire Ball Lv: 3
-Description: Launches the fireball in 8 directions around the caster, dealing Fire property magic damage to all nearby enemies and pushing them 2 cells backward. After use, the fireball summoned by Sight disappears. Deals double damage to targets with any form of invisibility.
-[Lv 1]: MAtk 100%,
-[Lv 2]: MAtk 200%,
-[Lv 3]: MAtk 300%,
-[Lv 4]: MAtk 400%,
-[Lv 5]: MAtk 500%`,
+Description: Deals M.DMG to enemies within a 15x15 AoE, Knocking them back 5 cells. Double the damage against Invisible enemies. Consumes Sight if active.
+[Lv. 1]: MATK 100%, SP Cost: 40 
+[Lv. 2]: MATK 200%, SP Cost: 47
+[Lv. 3]: MATK 300%, SP Cost: 54 
+[Lv. 4]: MATK 400%, SP Cost: 61 
+[Lv. 5]: MATK 500%, SP Cost: 68
+Formula: MATK (%); (Skill Lv x 100) `,
     img: sightrasher,
   },
   {
@@ -63,19 +69,24 @@ Description: Launches the fireball in 8 directions around the caster, dealing Fi
 Skill Form: Active
 Type: Magical
 Target: Ground
+Element: Fire
+After Cast Delay: 1s 
+Cooldown: 65 
 Range: 9
 Requirement: Sightrasher Lv: 3
-Description: Calls down a rain of meteors upon a targeted area, dealing 125% Fire elemental magic damage to enemies within a 13x13 zone, with a chance to stun them. Each meteor affects a 7x7 area. The skill level determines the hits per meteor, and the chance to cause stun.
-[Lv 1]: Meteors: 2, Hits per Meteor: 2, Stun Chance: 3%,
-[Lv 2]: Meteors: 3, Hits per Meteor: 3, Stun Chance: 6%,
-[Lv 3]: Meteors: 3, Hits per Meteor: 3, Stun Chance: 9%,
-[Lv 4]: Meteors: 4, Hits per Meteor: 4, Stun Chance: 12%,
-[Lv 5]: Meteors: 4, Hits per Meteor: 4, Stun Chance: 15%,
-[Lv 6]: Meteors: 5, Hits per Meteor: 5, Stun Chance: 18%,
-[Lv 7]: Meteors: 5, Hits per Meteor: 5, Stun Chance: 21%,
-[Lv 8]: Meteors: 6, Hits per Meteor: 6, Stun Chance: 24%,
-[Lv 9]: Meteors: 6, Hits per Meteor: 6, Stun Chance: 27%,
-[Lv 10]: Meteors: 7, Hits per Meteor: 7, Stun Chance: 30%`,
+Description: Creates a 7x7 AoE at the targeted location that deals M.DMG to enemies within a random 7x7 AoE every 0.45s for 4.5s.
+Has a chance to inflict Burning for 100s. VCT and FCT scale with skill level.
+[Lv. 1]: MATK 330%, VCT: 2.60s. FCT: 0.78s Burning Chance: 3%, SP Cost: 60
+[Lv. 2]: MATK 360%, VCT: 2.90s. FCT: 0.82s Burning Chance: 6%, SP Cost: 64
+[Lv. 3]: MATK 390%, VCT: 3.20s. FCT: 0.86s Burning Chance: 9%, SP Cost: 68
+[Lv. 4]: MATK 420%, VCT: 3.50s. FCT: 0.90s Burning Chance: 12%, SP Cost: 72
+[Lv. 5]: MATK 450%, VCT: 4.10s. FCT: 0.98s Burning Chance: 15%, SP Cost: 76
+[Lv. 6]: MATK 480%, VCT: 4.70s. FCT: 1.06s Burning Chance: 18%, SP Cost: 80
+[Lv. 7]: MATK 510%, VCT: 5.30s. FCT: 1.14s Burning Chance: 21%, SP Cost: 84
+[Lv. 8]: MATK 540%, VCT: 6.20s. FCT: 1.26s Burning Chance: 24%, SP Cost: 88
+[Lv. 9]: MATK 570%, VCT: 7.10s. FCT: 1.38s Burning Chance: 27%, SP Cost: 92
+[Lv.10]: MATK 600%, VCT: 8.00s. FCT: 1.50s Burning Chance: 30%, SP Cost: 96
+Formula: MATK (%); 300+ (Skill Lv x. 30) `,
     img: meteorStorm,
   },
   {
@@ -92,19 +103,27 @@ Description: Calls down a rain of meteors upon a targeted area, dealing 125% Fir
 Skill Form: Active
 Type: Magical
 Target: Ground
+Element: Fire
+After Cast Delay: 1s 
+Max Instances: 5 
 Range: 9
 Requirement: Meteor Storm Lv: 7
-Description: Summons a towering pillar of flame at a designated location. The pillar erupts periodically, dealing piercing Fire property magic damage to all enemies in a 5x5 area. It will automatically disappear if not triggered within its maximum duration. A maximum of 5 pillars can be active at once. Additionally, Fire-damage abilities may trigger a Fire Pillar at the target, with the Auto-Cast chance based on the skill level. Catalyst: 1x Red Gemstone for Lvs. 6 or higher.
-[Lv 1]: Hits Inflicted: 3, Auto-Cast Chance: 1%, Duration: 36 seconds,
-[Lv 2]: Hits Inflicted: 4, Auto-Cast Chance: 2%, Duration: 42 seconds,
-[Lv 3]: Hits Inflicted: 5, Auto-Cast Chance: 3%, Duration: 48 seconds,
-[Lv 4]: Hits Inflicted: 6, Auto-Cast Chance: 4%, Duration: 54 seconds,
-[Lv 5]: Hits Inflicted: 7, Auto-Cast Chance: 5%, Duration: 60 seconds,
-[Lv 6]: Hits Inflicted: 8, Auto-Cast Chance: 6%, Duration: 66 seconds,
-[Lv 7]: Hits Inflicted: 9, Auto-Cast Chance: 7%, Duration: 72 seconds,
-[Lv 8]: Hits Inflicted: 10, Auto-Cast Chance: 8%, Duration: 78 seconds,
-[Lv 9]: Hits Inflicted: 11, Auto-Cast Chance: 9%, Duration: 84 seconds,
-[Lv 10]: Hits Inflicted: 12, Auto-Cast Chance: 10%, Duration: 90 seconds`,
+Description: Summons a temporary pillar at the targeted location that explodes when triggered, dealing M.DMG damage to all enemies within a 5x5 AoE.
+The damage is not multiplied by hits against players.
+Grants a chance to auto-cast Fire Pillar when casting Skills, with the auto-casted level being half of the skill's learned level.
+VCT and FCT scale with skill level.
+Catalyst: 1x Red Gemstone for Lv. 6 or higher.
+[Lv. 1]: MATK 80% x 3 Hits Duration: 36s. Chance: 1%, SP Cost: 39
+[Lv. 2]: MATK 100% x 4 Hits Duration: 42s. Chance: 2%, SP Cost: 43 
+[Lv. 3]: MATK 120% x 5 Hits Duration: 48s. Chance: 3%, SP Cost: 47 
+[Lv. 4]: MATK 140% x 6 Hits Duration: 54s. Chance: 4%, SP Cost: 51 
+[Lv. 5]: MATK 160% x 7 Hits Duration: 60s. Chance: 5%, SP Cost: 55 
+[Lv. 6]: MATK 180% x 8 Hits Duration: 66s. Chance: 6%, SP Cost: 59 
+[Lv. 7]: MATK 200% x 9 Hits Duration: 72s. Chance: 7%, SP Cost: 63 
+[Lv. 8]: MATK 220% x 10 Hits Duration: 78s. Chance: 8%, SP Cost: 67 
+[Lv. 9]: MATK 240% x 11 Hits Duration: 84s. Chance: 9%, SP Cost: 71 
+[Lv.10]: MATK 260% x 12 Hits Duration: 90s. Chance: 10%, SP Cost: 75
+Formula: MATK (%) (60+ (Skill Lv x. 20)) x Hits Against Players MATK (%); 60+ (Skill Lv x. 20)`,
     img: firePillar,
   },
   {
@@ -123,14 +142,23 @@ Description: Summons a towering pillar of flame at a designated location. The pi
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Water
+Variable Cast Time: 1.20s
+After Cast Delay: 0.50s 
+Cooldown: 1s
 Range: 9
+Hits: 1
+SP Cost: 25
 Requirement: Frost Diver Lv: 3
-Description: Launches a Water Ball to deal Water property magic damage to all enemies within its area of effect. Damage varies between the Center 3x3 Cells and Edge 5x5 Cells. If there is water around the caster, multiple Water Balls are conjured. The number of Water Balls depends on the amount of natural water in the terrain or the presence of Deluge/Ice Wall cells nearby. Each Waterball applies stacks of Wet, reducing Freeze resistance by 1% per stack. Against players, it also adds a chance to sit down by 0.5% per stack for each cell they move. Damage of the extra Water Balls is determined by the user's Base Level.
-[Lv 1]: Center: 140% MAtk, Edge: 70% MAtk,
-[Lv 2]: Center: 180% MAtk, Edge: 90% MAtk,
-[Lv 3]: Center: 220% MAtk, Edge: 110% MAtk,
-[Lv 4]: Center: 260% MAtk, Edge: 130% MAtk,
-[Lv 5]: Center: 300% MAtk, Edge: 150% MAtk`,
+Description: Deals M.DMG to enemies within a 7x7 AoE around the target. Enemies on the edge take half damage.
+Inflicts Wet for 10s, and each hit increases its stack by 1.
+Consumes nearby Ice Wall cells or the Deluge cell beneath the user to launch up to 9 additional Water Balls at the same target. The damage from additional Water Balls is split across all enemies hit.
+[Lv. 1]: MATK 140%
+[Lv. 2]: MATK 180%
+[Lv. 3]: MATK 220%
+[Lv. 4]: MATK 260% 
+[Lv. 5]: MATK 300%
+Formula: MATK (%): 100+ (Skill Lv x. 40) `,
     img: waterBall,
   },
   {
@@ -149,19 +177,27 @@ Description: Launches a Water Ball to deal Water property magic damage to all en
 Skill Form: Active
 Type: Magical
 Target: Ground
-Range: 9
+Element: Water
+After Cast Delay: 1s 
+Cooldown: 65 
+Range: 9 
+Hits: 1
 Requirement: Water Ball Lv: 3
-Description: Summons a fierce snowstorm in an 11x11 area, dealing Water magic damage every 0.45 seconds for 4.5 seconds. Pushes enemies 2 cells back and applies Freezing. Freezing lasts 5 seconds, and when it ends naturally, the target becomes Frozen. Enemies hit three times will Frozen, and Frozen enemies take no further damage from this skill.
-[Lv 1]: MAtk 120% per Hit,
-[Lv 2]: MAtk 170% per Hit,
-[Lv 3]: MAtk 220% per Hit,
-[Lv 4]: MAtk 270% per Hit,
-[Lv 5]: MAtk 320% per Hit,
-[Lv 6]: MAtk 370% per Hit,
-[Lv 7]: MAtk 420% per Hit,
-[Lv 8]: MAtk 470% per Hit,
-[Lv 9]: MAtk 520% per Hit,
-[Lv 10]: MAtk 570% per Hit`,
+Description: Deals M.DMG to enemies within a 9x9 AoE around the targeted location every 0.45s for 4.5s, knocking them back 2 cells. Has a chance to inflict Freezing for 5s. Inflicts Freeze on the target for 27s once the Freezing effect ends.
+Also inflicts Freeze immediately if the enemy is hit 3 times.
+Does not hit frozen enemies.
+VCT and FCT scale with skill level.
+[Lv. 1]: MATK 120%, VCT: 2.60s. FCT: 0.78s Freezing Chance: 60%, SP Cost: 60
+[Lv. 2]: MATK 170%, VCT: 2.90s. FCT: 0.825 Freezing Chance: 55%, SP Cost: 64
+[Lv. 3]: MATK 220%, VCT: 3.20s. FCT: 0.86s Freezing Chance: 50%, SP Cost: 68
+[Lv. 4]: MATK 270%, VCT: 3.50s. FCT: 0.90s Freezing Chance: 45%, SP Cost: 72
+[Lv. 5]: MATK 320%, VCT: 4.10s. FCT: 0.98s Freezing Chance: 40%, SP Cost: 76
+[Lv. 6]: MATK 370%, VCT: 4.70s. FCT: 1.06s Freezing Chance: 35%, SP Cost: 80
+[Lv. 7]: MATK 420%, VCT: 5.30s. FCT: 1.14s Freezing Chance: 30%, SP Cost: 84
+[Lv. 8]: MATK 470%, VCT: 6.20s. FCT: 1.26s Freezing Chance: 25%, SP Cost: 88
+[Lv. 9]: MATK 520%, VCT: 7.10s. FCT: 1.38s Freezing Chance: 20%, SP Cost: 92 
+[Lv.10]: MATK 570%, VCT: 8.00s. FCT: 1.50s Freezing Chance: 15%, SP Cost: 96
+Formula: MATK (%); 70+ (Skill Lv x 50) `,
     img: stormGust,
   },
   {
@@ -178,18 +214,25 @@ Description: Summons a fierce snowstorm in an 11x11 area, dealing Water magic da
 Skill Form: Active
 Type: Magical
 Target: Self
+Element: Water
+After Cast Delay: 0.14s 
+Cooldown: 0.30s
+Hits: 1
 Requirement: Storm Gust Lv: 7
-Description: Summons a ring of ice spikes around the user, dealing Water magic damage to nearby enemies with a chance to apply Freezing. Freezing lasts 5 seconds, and when it ends naturally, the target becomes Frozen. Higher skill levels increase the chance to Freezing and reduce cast time.
-[Lv 1]: MAtk 110%,
-[Lv 2]: MAtk 120%,
-[Lv 3]: MAtk 130%,
-[Lv 4]: MAtk 140%,
-[Lv 5]: MAtk 150%,
-[Lv 6]: MAtk 160%,
-[Lv 7]: MAtk 170%,
-[Lv 8]: MAtk 180%,
-[Lv 9]: MAtk 190%,
-[Lv 10]: MAtk 200%`,
+Description: Deals M.DMG to enemies within a 9x9 AoE.
+Has a chance to inflict Freezing for 5s. Inflicts Freeze on the target once the Freezing effect ends.
+VCT and FCT scale with skill level. 
+[Lv. 1]: MATK 110%, VCT/FCT: 0.57s Chance: 38%, Freeze Duration: 2.80s SP Cost: 35
+[Lv. 2]: MATK 120%, VCT/FCT: 0.54s Chance: 43%, Freeze Duration: 3.60s SP Cost: 34
+[Lv. 3]: MATK 130%, VCT/FCT: 0.51s Chance: 48%, Freeze Duration: 4.40s SP Cost: 33
+[Lv. 4]: MATK 140%, VCT/FCT: 0.48s Chance: 53%, Freeze Duration: 5.20s SP Cost: 32
+[Lv. 5]: MATK 150%, VCT/FCT: 0.45s Chance: 58%, Freeze Duration: 6.00s SP Cost: 31
+[Lv. 6]: MATK 160%, VCT/FCT: 0.42s Chance: 63%, Freeze Duration: 6.80s SP Cost: 30
+[Lv. 7]: MATK 170%, VCT/FCT: 0.39s Chance: 68%, Freeze Duration: 7.60s SP Cost: 29
+[Lv. 8]: MATK 180%, VCT/FCT: 0.36s Chance: 73%, Freeze Duration: 8.40s SP Cost: 28
+[Lv. 9]: MATK 190%, VCT/FCT: 0.33s Chance: 78%, Freeze Duration: 9.20s SP Cost: 27
+[Lv.10]: MATK 200%, VCT/FCT: 0.30s Chance: 83%, Freeze Duration: 10.00s SP Cost: 26
+Formula: MATK (%); 100+ (Skill Lv) `,
     img: frostNova,
   },
   {
