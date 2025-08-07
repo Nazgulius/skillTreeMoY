@@ -86,7 +86,7 @@ Has a chance to inflict Burning for 100s. VCT and FCT scale with skill level.
 [Lv. 8]: MATK 540%, VCT: 6.20s. FCT: 1.26s Burning Chance: 24%, SP Cost: 88
 [Lv. 9]: MATK 570%, VCT: 7.10s. FCT: 1.38s Burning Chance: 27%, SP Cost: 92
 [Lv.10]: MATK 600%, VCT: 8.00s. FCT: 1.50s Burning Chance: 30%, SP Cost: 96
-Formula: MATK (%); 300+ (Skill Lv x. 30) `,
+Formula: MATK (%); 300 + (Skill Lv x 30) `,
     img: meteorStorm,
   },
   {
@@ -123,7 +123,8 @@ Catalyst: 1x Red Gemstone for Lv. 6 or higher.
 [Lv. 8]: MATK 220% x 10 Hits Duration: 78s. Chance: 8%, SP Cost: 67 
 [Lv. 9]: MATK 240% x 11 Hits Duration: 84s. Chance: 9%, SP Cost: 71 
 [Lv.10]: MATK 260% x 12 Hits Duration: 90s. Chance: 10%, SP Cost: 75
-Formula: MATK (%) (60+ (Skill Lv x. 20)) x Hits Against Players MATK (%); 60+ (Skill Lv x. 20)`,
+Formula: MATK (%) (60+ (Skill Lv x 20)) x Hits 
+Against Players MATK (%): 60 + (Skill Lv x 20)`,
     img: firePillar,
   },
   {
@@ -158,7 +159,7 @@ Consumes nearby Ice Wall cells or the Deluge cell beneath the user to launch up 
 [Lv. 3]: MATK 220%
 [Lv. 4]: MATK 260% 
 [Lv. 5]: MATK 300%
-Formula: MATK (%): 100+ (Skill Lv x. 40) `,
+Formula: MATK (%): 100 + (Skill Lv x 40) `,
     img: waterBall,
   },
   {
@@ -197,7 +198,7 @@ VCT and FCT scale with skill level.
 [Lv. 8]: MATK 470%, VCT: 6.20s. FCT: 1.26s Freezing Chance: 25%, SP Cost: 88
 [Lv. 9]: MATK 520%, VCT: 7.10s. FCT: 1.38s Freezing Chance: 20%, SP Cost: 92 
 [Lv.10]: MATK 570%, VCT: 8.00s. FCT: 1.50s Freezing Chance: 15%, SP Cost: 96
-Formula: MATK (%); 70+ (Skill Lv x 50) `,
+Formula: MATK (%); 70 + (Skill Lv x 50) `,
     img: stormGust,
   },
   {
@@ -232,7 +233,7 @@ VCT and FCT scale with skill level.
 [Lv. 8]: MATK 180%, VCT/FCT: 0.36s Chance: 73%, Freeze Duration: 8.40s SP Cost: 28
 [Lv. 9]: MATK 190%, VCT/FCT: 0.33s Chance: 78%, Freeze Duration: 9.20s SP Cost: 27
 [Lv.10]: MATK 200%, VCT/FCT: 0.30s Chance: 83%, Freeze Duration: 10.00s SP Cost: 26
-Formula: MATK (%); 100+ (Skill Lv) `,
+Formula: MATK (%); 100 + (Skill Lv) `,
     img: frostNova,
   },
   {
@@ -251,14 +252,19 @@ Formula: MATK (%); 100+ (Skill Lv) `,
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Wind
+After Cast Delay: 0.14s 
+Cooldown: 0.30s 
 Range: 9
 Requirement: Thunderstorm Lv:3
-Description: Fires a ball of crackling lightning that inflicts 100% MATK Wind elemental magic damage and knock back the targeted enemy. The number of hits increases with the skill level.
-[Lv 1]: Hits: 2, Knockback: 3,
-[Lv 2]: Hits: 4, Knockback: 4,
-[Lv 3]: Hits: 6, Knockback: 5,
-[Lv 4]: Hits: 8, Knockback: 6,
-[Lv 5]: Hits: 10, Knockback: 7`,
+Description: Deals M.DMG to the target, Knocking it back.
+VCT and FCT scale with skill level. 
+[Lv. 1]: VCT: 2.00s. FCT: 0.30s. Hits: 2 Knockback: 3. SP Cost: 20
+[Lv. 2]: VCT: 2.10s. FCT: 0.35s. Hits: 4 Knockback: 4. SP Cost: 25
+[Lv. 3]: VCT: 2.30s. FCT: 0.40s. Hits: 6 Knockback: 5. SP Cost: 30
+[Lv. 4]: VCT: 2.60s. FCT: 0.45s. Hits: 8 Knockback: 6. SP Cost: 35
+[Lv. 5]: VCT: 3.00s. FCT: 0.50s. Hits: 10 Knockback: 7. SP Cost: 40
+Formula: MATK (%); 100 x Hits `,
     img: jupitelThunder,
   },
   {
@@ -281,15 +287,16 @@ Range: 9
 Requirement: Jupitel Thunder Lv: 3
 Description: Calls down devastating lightning bolts from the skies to strike a chosen area, dealing Wind property magic damage every 0.45 seconds to all enemies within a [13*13] radius for 4.5 seconds. Enemies hit by this storm have a chance to be blinded. The chance of blindness is mitigated by the targets resistances.
 [Lv 1]: MAtk 20% per Hit, Blind Chance:15%,
-[Lv 2]: MAtk 40% per Hit, Blind Chance:20%,
-[Lv 3]: MAtk 60% per Hit, Blind Chance:25%,
-[Lv 4]: MAtk 80% per Hit, Blind Chance:30%,
-[Lv 5]: MAtk 100% per Hit, Blind Chance:35%,
-[Lv 6]: MAtk 120% per Hit, Blind Chance:40%,
-[Lv 7]: MAtk 140% per Hit, Blind Chance:45%,
-[Lv 8]: MAtk 160% per Hit, Blind Chance:50%,
-[Lv 9]: MAtk 180% per Hit, Blind Chance:55%,
-[Lv 10]: MAtk 200% per Hit, Blind Chance:60%`,
+[Lv. 2]: MATK 40%, VCT: 2.90s. FCT: 0.82s Blind Chance: 20%, SP Cost: 64
+[Lv. 3]: MATK 60%, VCT: 3.20s. FCT: 0.86s Blind Chance: 25%, SP Cost: 68
+[Lv. 4]: MATK 80%, VCT: 3.50s. FCT: 0.90s Blind Chance: 30%, SP Cost: 72
+[Lv. 5]: MATK 100%, VCT: 4.10s. FCT: 0.98s Blind Chance: 35%, SP Cost: 76
+[Lv. 6]: MATK 120%, VCT: 4.70s. FCT: 1.06s Blind Chance: 40%, SP Cost: 80
+[Lv. 7]: MATK 140%, VCT: 5.30s. FCT: 1.14s Blind Chance: 45%, SP Cost: 84
+[Lv. 8]: MATK 160%, VCT: 6.20s. FCT: 1.26s Blind Chance: 50%, SP Cost: 88
+[Lv. 9]: MATK 180%, VCT: 7.10s. FCT: 1.38s Blind Chance: 55%, SP Cost: 92
+[Lv.10]: MATK 200%, VCT: 8.00s. FCT: 1.50s Blind Chance: 60%, SP Cost: 96
+Formula: ...`,
     img: lordOfVermilion,
   },
   {
@@ -306,19 +313,25 @@ Description: Calls down devastating lightning bolts from the skies to strike a c
 Skill Form: Active
 Type: Magical
 Target: Enemy
-Range: 11
+Element: Wind
+After Cast Delay: 1s 
+Range: 9
 Requirement: Lord of Vermilion Lv: 7
-Description: Unleashes a wave of electrical energy that inflicts Wind property magic damage. This skill bounces from target to target, with each jump increasing damage by 10%. If no other targets are nearby, all jumps will hit the initial target. Wind-damage abilities have a chance to trigger Electrical Induction at the target. The chance for auto-cast is half the skills level.
-[Lv 1]: MAtk 10%, Jumps: 3, Auto-Cast Chance: 1%,
-[Lv 2]: MAtk 10%, Jumps: 4, Auto-Cast Chance: 2%,
-[Lv 3]: MAtk 10%, Jumps: 5, Auto-Cast Chance: 3%,
-[Lv 4]: MAtk 10%, Jumps: 6, Auto-Cast Chance: 4%,
-[Lv 5]: MAtk 10%, Jumps: 7, Auto-Cast Chance: 5%,
-[Lv 6]: MAtk 10%, Jumps: 8, Auto-Cast Chance: 6%,
-[Lv 7]: MAtk 10%, Jumps: 9, Auto-Cast Chance: 7%,
-[Lv 8]: MAtk 10%, Jumps: 10, Auto-Cast Chance: 8%,
-[Lv 9]: MAtk 10%, Jumps: 11, Auto-Cast Chance: 9%,
-[Lv 10]: MAtk 10%, Jumps: 12, Auto-Cast Chance: 10%`,
+Description: Deals M.DMG to the target, and bounces to a random enemy within a 7x7 AoE after 2 hits. The damage increases by 10% with each bounce, and the bounce interval scales with A.Motion.
+Grants a chance to auto-cast Electrical Induction when casting Skills, and the auto- cast level being half of the skill's learned level.
+VCT and FCT scale with skill level.
+[Lv. 1]: MATK 20% x 3 Hits. VCT: 2.30s FCT: 0.55s. Chance: 1%, SP Cost: 39
+[Lv. 2]: MATK 30% x 4 Hits. VCT: 2.10s FCT: 0.50s. Chance: 2%, SP Cost: 43 
+[Lv. 3]: MATK 40% x 5 Hits. VCT: 1.90s FCT: 0.45s. Chance: 3%, SP Cost: 47 
+[Lv. 4]: MATK 50% x 6 Hits. VCT: 1.70s FCT: 0.40s. Chance: 4%, SP Cost: 51 
+[Lv. 5]: MATK 60% x 7 Hits, VCT: 1.50s FCT: 0.35s. Chance: 5%, SP Cost: 55
+[Lv. 6]: MATK 70% x 8 Hits. VCT: 1.30s FCT: 0.30s. Chance: 6%, SP Cost: 59 
+[Lv. 7]: MATK 80% x 9 Hits. VCT: 1.10s FCT: 0.25s. Chance: 7%, SP Cost: 63
+[Lv. 8]: MATK 90% x 10 Hits. VCT: 0.90s FCT: 0.20s. Chance: 8%, SP Cost: 67
+[Lv. 9]: MATK 100% x 11 Hits, VCT: 0.70s FCT: 0.15s. Chance: 9%, SP Cost: 71 
+[Lv.10]: MATK 110% x 12 Hits. VCT: 0.50s FCT: 0.10s. Chance: 10%, SP Cost: 75
+Formula: MATK (%); 10+ (Skill Lv x 10) + (Jumps x 10) 
+Interval (seconds): (A.Motion (Jumps x 20)) = 1000 `,
     img: electricalInduction,
   },
   {
@@ -337,14 +350,21 @@ Description: Unleashes a wave of electrical energy that inflicts Wind property m
 Skill Form: Active
 Type: Magical
 Target: Ground
-Range: 9
+Element: Earth
+After Cast Delay: 1s 
+Range: 9 
+Hits: 2
 Requirement: Stone Curse Lv: 3
-Description: Commands the earth to rise as spikes at a target location, dealing Earth Property Magic Damage to all enemies in a 5x10 area and pushing them 2 cells per hit. Can also hit hidden enemies.
-[Lv 1]: MAtk 50% x 5 Hits,
-[Lv 2]: MAtk 100% x 5 Hits,
-[Lv 3]: MAtk 150% x 5 Hits,
-[Lv 4]: MAtk 200% x 5 Hits,
-[Lv 5]: MAtk 250% x 5 Hits`,
+Description: Deals M.DMG to enemies within a 5x10 AoE at the targeted location, Knocking them back 2 cells.
+The cast direction determines the skill's path, starting 1 cell away from the caster.
+The skill moves 1 cell further every 0.3s, up to 5 times, dealing damage and knocking them back again.
+VCT and FCT scale with skill level.
+[Lv. 1]: MATK 25%, VCT: 0.70s. FCT: 0.10s SP Cost: 24
+[Lv. 2]: MATK 50%, VCT: 0.95s. FCT: 0.30s SP Cost: 28
+[Lv. 3]: MATK 75%, VCT: 1.20s. FCT: 0.40s SP Cost: 32
+[Lv. 4]: MATK 100%, VCT: 1.45s. FCT: 0.60s SP Cost: 36
+[Lv. 5]: MATK 125%, VCT: 1.70s. FCT: 0.70s SP Cost: 40
+Formula: MATK (%); Skill Lv x 25 `,
     img: heavensDrive,
   },
   {
@@ -363,19 +383,24 @@ Description: Commands the earth to rise as spikes at a target location, dealing 
 Skill Form: Active
 Type: Magical
 Target: Ground
+Element: Earth
+After Cast Delay: 1s 
+Cooldown: 65 
 Range: 9
 Requirement: Heaven's Drive Lv: 3
-Description: Causes an earthquake in the target area, with 10 rocks randomly rising during the skill's duration, dealing Earth magic damage to enemies in a 9x9 area. Each rock hit has a chance to inflict Confusion for a short time.
-[Lv 1]: MATK 330%, Confusion Chance: 5%,
-[Lv 2]: MATK 360%, Confusion Chance: 10%,
-[Lv 3]: MATK 390%, Confusion Chance: 15%,
-[Lv 4]: MATK 420%, Confusion Chance: 20%,
-[Lv 5]: MATK 450%, Confusion Chance: 25%,
-[Lv 6]: MATK 480%, Confusion Chance: 30%,
-[Lv 7]: MATK 510%, Confusion Chance: 35%,
-[Lv 8]: MATK 540%, Confusion Chance: 40%,
-[Lv 9]: MATK 570%, Confusion Chance: 45%,
-[Lv 10]: MATK 600%, Confusion Chance: 50%`,
+Description: Creates a 7x7 AoE at the targeted location that deals M.DMG to enemies within a random 7x7 AoE every 0.45s for 4.5s.
+Has a chance to inflict Stun for 5s. VCT and FCT scale with skill level.
+[Lv. 1]: MATK 230%, VCT: 2.60s. FCT: 0.78s Stun Chance: 3%, SP Cost: 60
+[Lv. 2]: MATK 260%, VCT: 2.90s. FCT: 0.82s Stun Chance: 6%, SP Cost: 64
+[Lv. 3]: MATK 290%, VCT: 3.20s. FCT: 0.86s Stun Chance: 9%, SP Cost: 68
+[Lv. 4]: MATK 320%, VCT: 3.50s. FCT: 0.90s Stun Chance: 12%, SP Cost: 72
+[Lv. 5]: MATK 350%, VCT: 4.10s. FCT: 0.98s Stun Chance: 15%, SP Cost: 76
+[Lv. 6]: MATK 380%, VCT: 4.70s. FCT: 1.06s Stun Chance: 18%, SP Cost: 80
+[Lv. 7]: MATK 410%, VCT: 5.30s. FCT: 1.14s Stun Chance: 21%, SP Cost: 84
+[Lv. 8]: MATK 440%, VCT: 6.20s. FCT: 1.26s Stun Chance: 24%, SP Cost: 88
+[Lv. 9]: MATK 470%, VCT: 7.10s. FCT: 1.38s Stun Chance: 27%, SP Cost: 92
+[Lv.10]: MATK 500%, VCT: 8.00s. FCT: 1.50s Stun Chance: 30%, SP Cost: 96
+Formula: MATK (%); 200 + (Skill Lv x 30) `,
     img: violentQuake,
   },
   {
@@ -392,19 +417,21 @@ Description: Causes an earthquake in the target area, with 10 rocks randomly ris
 Skill Form: Active
 Type: Magical
 Target: Ground
+After Cast Delay: 1s 
+Max Instances: 3 
 Range: 9
 Requirement: Violent Quake Lv: 7
-Description: Creates a swamp at a target location, slowing and reducing AGI and DEX of all enemies in the area. Stat reduction is capped at 50% for monsters and players. Also removes effects like Increase AGI, Sword/Spear Quicken, Wind Walker, and Adrenaline Rush. Up to three swamps can be active at once. Reductions only apply while enemies are in the Quagmire.
-[Lv 1]: AGI/DEX -15%, Duration: 8 seconds,
-[Lv 2]: AGI/DEX -20%, Duration: 11 seconds,
-[Lv 3]: AGI/DEX -25%, Duration: 14 seconds,
-[Lv 4]: AGI/DEX -30%, Duration: 17 seconds,
-[Lv 5]: AGI/DEX -35%, Duration: 20 seconds,
-[Lv 6]: AGI/DEX -40%, Duration: 23 seconds,
-[Lv 7]: AGI/DEX -45%, Duration: 26 seconds,
-[Lv 8]: AGI/DEX -50%, Duration: 29 seconds,
-[Lv 9]: AGI/DEX -55%, Duration: 32 seconds,
-[Lv 10]: AGI/DEX -60%, Duration: 35 seconds`,
+Description: Temporarily creates a 5x5 AoE at the targeted location, reducing AGI and DEX and increasing WD of enemies. Also removes some Status Effects from them. Older instances are removed to create new ones when reaching the instance limit. 
+[Lv. 1]: WD +26%, AGI/DEX -15% Duration: 8s. SP Cost: 8
+[Lv. 2]: WD +32%, AGI/DEX -20% Duration: 11s. SP Cost: 11
+[Lv. 3]: WD +38%, AGI/DEX -25% Duration: 14s. SP Cost: 14
+[Lv. 4]: WD +44%, AGI/DEX -30% Duration: 17s. SP Cost: 17
+[Lv. 5]: WD +50%, AGI/DEX -35% Duration: 20s. SP Cost: 20
+[Lv. 6]: WD +56%, AGI/DEX -40% Duration: 23s. SP Cost: 23
+[Lv. 7]: WD +62%, AGI/DEX -45% Duration: 26s. SP Cost: 26
+[Lv. 8]: WD +68%, AGI/DEX -50% Duration: 29s, SP Cost: 29
+[Lv. 9]: WD +74%, AGI/DEX -55% Duration: 32s. SP Cost: 32
+[Lv.10]: WD +80%, AGI/DEX -60% Duration: 35s, SP Cost: 35`,
     img: quagmire,
   },
   {
@@ -419,13 +446,32 @@ Description: Creates a swamp at a target location, slowing and reducing AGI and 
 Skill Form: Active
 Type: Magical
 Target: Self
+SP Cost: 5
 Requirement: None
-Description: Master the art of Gemmancy, converting gemstones and gaining the ability to create rarer gemstones. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with VIT being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Gemmancy Creation Guide
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
+Description: Crafts gemstones.
+Base Level, Job Level, and Stats increase the number of crafted gemstones, except for Blue, Red, and Yellow gemstones.
+Guide: Gemmancy Creation Guide
+[Lv. 1]: Bonus Efficiency: 0%
+[Lv. 2]: Bonus Efficiency: 25% 
+[Lv. 3]: Bonus Efficiency: 50% 
+[Lv. 4]: Bonus Efficiency: 75% 
+[Lv. 5]: Bonus Efficiency: 100%
+
+Crafted Gemstones :
+Base Amount + Bonus Amount
+
+Bonus Amount:
+((Base Amount x ((Level Bonus + Stats Bonus) x ((Skill Lv x 25) - 25))) = 100)
+
+Level Bonus:
+((Base Lv x 100) / 200) + ((Job Lv x 100) / 140) / 100 
+Stats Bonus:
+((STR^2 / 10) + (AGI^2 / 10) + (VIT^2) + (INT^2 / 10) + (DEX^2 / 10) + (LUK^2 / 10)) / 100
+
+Random Bonus Amount:
+10% chance for the bonus to be reduced to 25% 
+70% chance for the bonus to be reduced to 50% 
+20% chance for no reductions`,
     img: gemmancy,
   },
 ];
