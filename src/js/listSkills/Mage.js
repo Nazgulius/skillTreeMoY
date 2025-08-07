@@ -82,17 +82,19 @@ Range: 9
 Hit: 1
 SP Cost: 25
 Requirement: Fire Bolt Lv: 4
-Description: Unleashes a scorching fireball that explodes on impact, dealing Fire property magic damage to all enemies within its area of effect. The damage varies between the center [3x3 cells] and the edges [5x5 cells]. If theres fire present around the caster, multiple fireballs are conjured, with their number depending on the amount of natural fire in the terrain or the presence of Volcano or Fire Wall cells near the caster. Damage of the extra Fireballs is determined by the user's Base Level.
-[Lv 1]: Center: MAtk 120%,
-[Lv 2]: Center: MAtk 140%,
-[Lv 3]: Center: MAtk 160%,
-[Lv 4]: Center: MAtk 180%,
-[Lv 5]: Center: MAtk 200%,
-[Lv 6]: Center: MAtk 220%,
-[Lv 7]: Center: MAtk 240%,
-[Lv 8]: Center: MAtk 260%,
-[Lv 9]: Center: MAtk 280%,
-[Lv 10]: Center: MAtk 300%`,
+Description: Deals M.DMG to enemies within a 7x7 AoE around the target. Enemies on the edge take half damage.
+Consumes nearby Fire Wall cells or the Volcano cell beneath the user to launch up to 9 additional Fire Balls at the same target. The damage from additional Fire Balls is split across all enemies hit.
+[Lv 1]: MATK 120%,
+[Lv 2]: MATK 140%,
+[Lv 3]: MATK 160%,
+[Lv 4]: MATK 180%,
+[Lv 5]: MATK 200%,
+[Lv 6]: MATK 220%,
+[Lv 7]: MATK 240%,
+[Lv 8]: MATK 260%,
+[Lv 9]: MATK 280%,
+[Lv 10]: MATK 300%
+Formula: MATK (%): 100 + (Skill Lv x 20)`,
     img: fireBall,
   },
   {
@@ -108,19 +110,24 @@ Description: Unleashes a scorching fireball that explodes on impact, dealing Fir
 Skill Form: Active
 Type: Magical
 Target: Ground
+Element: Fire
+Cooldown: 0.20s 
 Range: 9
+SP Cost: 20
 Requirement: Fire Ball Lv: 5
-Description: Conjures a blazing wall of flames at a targeted location, dealing 50% Fire property magic damage and pushing enemies back two cells upon contact. However, targets of the [Corrupt] element cannot be pushed.
-[Lv 1]: Max Fire Wall up: 1, Duration: 5 sec, Attacks per wall: 3,
-[Lv 2]: Max Fire Wall up: 1, Duration: 5 sec, Attacks per wall: 4,
-[Lv 3]: Max Fire Wall up: 1, Duration: 5 sec, Attacks per wall: 5,
-[Lv 4]: Max Fire Wall up: 2, Duration: 10 sec, Attacks per wall: 6,
-[Lv 5]: Max Fire Wall up: 2, Duration: 10 sec, Attacks per wall: 7,
-[Lv 6]: Max Fire Wall up: 2, Duration: 10 sec, Attacks per wall: 8,
-[Lv 7]: Max Fire Wall up: 3, Duration: 15 sec, Attacks per wall: 9,
-[Lv 8]: Max Fire Wall up: 3, Duration: 15 sec, Attacks per wall: 10,
-[Lv 9]: Max Fire Wall up: 3, Duration: 15 sec, Attacks per wall: 11,
-[Lv 10]: Max Fire Wall up: 4, Duration: 20 sec, Attacks per wall: 12`,
+Description: Creates a 3x1 AoE wall at the targeted location, dealing M.DMG and Knocking enemies back 2 cells until it expires or its hit limit is reached.
+Cannot knock Undead and Corrupt enemies. Older instances are removed to create new ones when reaching the instance limit.
+[Lv. 1]: VCT: 2.00s. Max Instances: 1 Hits: 3. Duration: 55
+[Lv. 2]: VCT: 1.80s. Max Instances: 1 Hits: 4. Duration: 55
+[Lv. 3]: VCT: 1.60s. Max Instances: 1 Hits: 5. Duration: 5s
+[Lv. 4]: VCT: 1.40s. Max Instances: 2 Hits: 6. Duration: 10s
+[Lv. 5]: VCT: 1.20s. Max Instances: 2 Hits: 7. Duration: 10s
+[Lv. 6]: VCT: 1.10s. Max Instances: 2 Hits: 8. Duration: 10s
+[Lv. 7]: VCT: 1.00s. Max Instances: 3 Hits: 9. Duration: 15s
+[Lv. 8]: VCT: 0.90s. Max Instances: 3 Hits: 10. Duration: 15s
+[Lv. 9]: VCT: 0.80s. Max Instances: 3 Hits: 11. Duration: 15s
+[Lv.10]: VCT: 0.70s. Max Instances: 4 Hits: 12. Duration: 20s
+Formula: MATK (%): 50 `,
     img: fireWall,
   },
   {
@@ -138,19 +145,23 @@ Description: Conjures a blazing wall of flames at a targeted location, dealing 5
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Water
+After Cast Delay: 1.40s 
 Range: 9
 Requirement: None
-Description: Summons bolts of frigid ice to strike at an enemy which inflicts 100% MATK Water elemental magic damage per Hit.
-[Lv 1]: 1 Hit, 12 SP Consumption,
-[Lv 2]: 2 Hits, 14 SP Consumption,
-[Lv 3]: 3 Hits, 16 SP Consumption,
-[Lv 4]: 4 Hits, 18 SP Consumption,
-[Lv 5]: 5 Hits, 20 SP Consumption,
-[Lv 6]: 6 Hits, 22 SP Consumption,
-[Lv 7]: 7 Hits, 24 SP Consumption,
-[Lv 8]: 8 Hits, 26 SP Consumption,
-[Lv 9]: 9 Hits, 28 SP Consumption,
-[Lv 10]: 10 Hits, 30 SP Consumption`,
+Description: Deals M.DMG to the target, scaling with Base Level when manually cast.
+VCT and FCT scale with skill level.
+[Lv. 1]: VCT: 0.50s. FCT: 0.30s Hits: 1. SP Cost: 12
+[Lv. 2]: VCT: 0.65s. FCT: 0.35s Hits: 2. SP Cost: 14
+[Lv. 3]: VCT: 0.80s. FCT: 0.40s Hits: 3. SP Cost: 16
+[Lv. 4]: VCT: 0.95s. FCT: 0.45s Hits: 4. SP Cost: 18
+[Lv. 5]: VCT: 1.25s. FCT: 0.55s Hits: 5. SP Cost: 20
+[Lv. 6]: VCT: 1.55s. FCT: 0.65s Hits: 6. SP Cost: 22
+[Lv. 7]: VCT: 1.85s. FCT: 0.75s Hits: 7. SP Cost: 24
+[Lv. 8]: VCT: 2.30s. FCT: 0.90s Hits: 8. SP Cost: 26
+[Lv. 9]: VCT: 2.75s. FCT: 1.05s Hits: 9. SP Cost: 28
+[Lv.10]: VCT: 3.20s. FCT: 1.20s Hits: 10. SP Cost: 30
+Formula: MATK (%) (100+ Manually Cast Bonus) x. Hits Manually Cast Bonus: (100 x Base Lv^2) % 10000`,
     img: coldBolt,
   },
   {
@@ -170,19 +181,24 @@ Description: Summons bolts of frigid ice to strike at an enemy which inflicts 10
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Water
+Variable Cast Time: 1.20s 
+Cooldown: 0.30s
 Range: 9
 Requirement: Cold Bolt Lv: 4
-Description: Inflicts Water Property Magic Damage with a chance to leave the target Freezing. Freezing lasts for 5 seconds. When it ends naturally, the inflicted target becomes Frozen. If the target is already Frozen, the skill will fail but still consume SP.
-[Lv 1]: MAtk 110%, Chance of Freezing: 38%,
-[Lv 2]: MAtk 120%, Chance of Freezing: 41%,
-[Lv 3]: MAtk 130%, Chance of Freezing: 44%,
-[Lv 4]: MAtk 140%, Chance of Freezing: 47%,
-[Lv 5]: MAtk 150%, Chance of Freezing: 50%,
-[Lv 6]: MAtk 160%, Chance of Freezing: 53%,
-[Lv 7]: MAtk 170%, Chance of Freezing: 56%,
-[Lv 8]: MAtk 180%, Chance of Freezing: 59%,
-[Lv 9]: MAtk 190%, Chance of Freezing: 62%,
-[Lv 10]: MAtk 200%, Chance of Freezing: 65%`,
+Description: Deals M.DMG to the target. Has a chance to inflict Freezing for 3s. Inflicts Freeze on the target once the Freezing effect ends.
+If the target is already frozen, the skill fails but still consumes SP.
+[Lv. 1]: MATK 110%, Chance: 38% Freeze Duration: 3s
+[Lv. 2]: MATK 120%, Chance: 41% Freeze Duration: 6s
+[Lv. 3]: MATK 130%, Chance: 44% Freeze Duration: 9s
+[Lv. 4]: MATK 140%, Chance: 47% Freeze Duration: 12s
+[Lv. 5]: MATK 150%, Chance: 50% Freeze Duration: 15s
+[Lv. 6]: MATK 160%, Chance: 53% Freeze Duration: 18s
+[Lv. 7]: MATK 170%, Chance: 56% Freeze Duration: 21s
+[Lv. 8]: MATK 180%, Chance: 59% Freeze Duration: 24s
+[Lv. 9]: MATK 190%, Chance: 62% Freeze Duration: 27s
+[Lv.10]: MATK 200%, Chance: 65% Freeze Duration: 30s
+Formula: MATK (%); 100 + (Skill Lv x 10)`,
     img: frostDiver,
   },
   {
@@ -199,11 +215,15 @@ Description: Inflicts Water Property Magic Damage with a chance to leave the tar
 Skill Form: Active
 Type: Magical
 Target: Ground
+Cooldown: 0.20s 
 Range: 9
+SP Cost: 20
 Requirement: Frost Diver Lv: 5
-Description: Conjures a solid wall of ice in a 1x5 cell area, blocking enemies but susceptible to destruction by attacks. The walls HP and number of walls that can be created increase with skill level, and the wall will vanish once its HP reaches zero.
-[Lv 1]: Max Walls: 1, Duration: 5 sec, Wall HP: 400,
-[Lv 2]: Max Walls: 1, Duration: 5 sec, Wall HP: 600,
+Description: Creates a 5x1 AoE wall at the targeted location, blocking the path until its durability runs out or it expires.
+The durability decreases by 50 every second and can receive DMG.
+Older instances are removed to create new ones when reaching the instance limit.
+[Lv. 1]: VCT: 2.00s. Max Instances: 1 Durability: 400. Duration: 5s
+[Lv. 2]: VCT: 1.80s. Max Instances: 1 Durability: 600. Duration: 5s
 [Lv 3]: Max Walls: 1, Duration: 5 sec, Wall HP: 800,
 [Lv 4]: Max Walls: 2, Duration: 10 sec, Wall HP: 1000,
 [Lv 5]: Max Walls: 2, Duration: 10 sec, Wall HP: 1200,
@@ -211,7 +231,8 @@ Description: Conjures a solid wall of ice in a 1x5 cell area, blocking enemies b
 [Lv 7]: Max Walls: 3, Duration: 15 sec, Wall HP: 1600,
 [Lv 8]: Max Walls: 3, Duration: 15 sec, Wall HP: 1800,
 [Lv 9]: Max Walls: 3, Duration: 15 sec, Wall HP: 2000,
-[Lv 10]: Max Walls: 4, Duration: 20 sec, Wall HP: 2200`,
+[Lv 10]: Max Walls: 4, Duration: 20 sec, Wall HP: 2200
+Durability: 200+ (Skill Lv x 200)`,
     img: iceWall,
   },
   {
@@ -229,19 +250,23 @@ Description: Conjures a solid wall of ice in a 1x5 cell area, blocking enemies b
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Wind
+After Cast Delay: 1.40s
 Range: 9
 Requirement: None
-Description: Drops lightning on target inflicting 100% MATK Wind elemental magic damage per Hit.
-[Lv 1]: 1 Hit, SP Consumption: 12,
-[Lv 2]: 2 Hits, SP Consumption: 14,
-[Lv 3]: 3 Hits, SP Consumption: 16,
-[Lv 4]: 4 Hits, SP Consumption: 18,
-[Lv 5]: 5 Hits, SP Consumption: 20,
-[Lv 6]: 6 Hits, SP Consumption: 22,
-[Lv 7]: 7 Hits, SP Consumption: 24,
-[Lv 8]: 8 Hits, SP Consumption: 26,
-[Lv 9]: 9 Hits, SP Consumption: 28,
-[Lv 10]: 10 Hits, SP Consumption: 30`,
+Description: Deals M.DMG to the target, scaling with Base Level when manually cast.
+VCT and FCT scale with skill level.
+[Lv. 1]: VCT: 0.50s. FCT: 0.30s Hits: 1. SP Cost: 12
+[Lv. 2]: VCT: 0.65s. FCT: 0.35s Hits: 2. SP Cost: 14
+[Lv. 3]: VCT: 0.80s. FCT: 0.40s Hits: 3. SP Cost: 16
+[Lv. 4]: VCT: 0.95s. FCT: 0.45s Hits: 4. SP Cost: 18
+[Lv. 5]: VCT: 1.25s. FCT: 0.55s Hits: 5. SP Cost: 20
+[Lv. 6]: VCT: 1.55s. FCT: 0.65s Hits: 6. SP Cost: 22
+[Lv. 7]: VCT: 1.85s. FCT: 0.75s Hits: 7. SP Cost: 24
+[Lv. 8]: VCT: 2.30s. FCT: 0.90s Hits: 8. SP Cost: 26
+[Lv. 9]: VCT: 2.75s. FCT: 1.05s Hits: 9. SP Cost: 28
+[Lv.10]: VCT: 3.20s. FCT: 1.20s Hits: 10. SP Cost: 30
+Formula: MATK (%); (100+ Manually Cast Bonus) x. Hits Manually Cast Bonus: (100 x Base Lv^2) = 10000`,
     img: lightningBolt,
   },
   {
@@ -260,19 +285,27 @@ Description: Drops lightning on target inflicting 100% MATK Wind elemental magic
 Skill Form: Active
 Type: Magical
 Target: Ground
-Range: 9
+Eelement: Wind
+Variable Cast Time: 1.20s
+After Cast Delay: 0.50s 
+Cooldown: 1s
+Range: 9 
+Hits: 3
+SP Cost: 25
 Requirement: Lightning Bolt Lv: 4
-Description: Summons a lightning bolt to strike a specific location, dealing Wind elemental magic damage to all enemies within a 5x5 cells area.
-[Lv 1]: MAtk 100% 2 Hits, SP Cost: 24,
-[Lv 2]: MAtk 200% 2 Hits, SP Cost: 28,
-[Lv 3]: MAtk 300% 4 Hits, SP Cost: 32,
-[Lv 4]: MAtk 400% 4 Hits, SP Cost: 36,
-[Lv 5]: MAtk 500% 6 Hits, SP Cost: 40,
-[Lv 6]: MAtk 600% 6 Hits, SP Cost: 44,
-[Lv 7]: MAtk 700% 8 Hits, SP Cost: 48,
-[Lv 8]: MAtk 800% 8 Hits, SP Cost: 52,
-[Lv 9]: MAtk 900% 10 Hits, SP Cost: 56,
-[Lv 10]: MAtk 1000% 10 Hits, SP Cost: 60`,
+Description: Deals M.DMG to enemies within a 5x5 AoE around the targeted location. Consumes the Whirlwind cell beneath the user to launch up to 9 additional Thunder Storm at the same location.
+The damage from additional Thunder Storm is split across all enemies hit.
+[Lv. 1]: MATK 120%
+[Lv. 2]: MATK 140%
+[Lv. 3]: MATK 160%
+[Lv. 4]: MATK 180%
+[Lv. 5]: MATK 200%
+[Lv. 6]: MATK 220%
+[Lv. 7]: MATK 240%
+[Lv. 8]: MATK 260% 
+[Lv. 9]: MATK 280% 
+[Lv.10]: MATK 300%
+Formula: MATK (%); 100+ (Skill Lv x. 20) `,
     img: thunderstorm,
   },
   {
@@ -290,19 +323,22 @@ Description: Summons a lightning bolt to strike a specific location, dealing Win
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Earth
+After Cast Delay: 1.40s
 Range: 9
 Requirement: None
-Description: Summons spikes from the ground beneath a single target, each dealing 100% Earth property magic damage.
-[Lv 1]: 1 Hit, SP Cost: 12,
-[Lv 2]: 2 Hits, SP Cost: 14,
-[Lv 3]: 3 Hits, SP Cost: 16,
-[Lv 4]: 4 Hits, SP Cost: 18,
-[Lv 5]: 5 Hits, SP Cost: 20,
-[Lv 6]: 6 Hits, SP Cost: 22,
-[Lv 7]: 7 Hits, SP Cost: 24,
-[Lv 8]: 8 Hits, SP Cost: 26,
-[Lv 9]: 9 Hits, SP Cost: 28,
-[Lv 10]: 10 Hits, SP Cost: 30`,
+Description: Deals M.DMG to the target, scaling with Base Level when manually cast. VCT and FCT scale with skill level.
+[Lv. 1]: VCT: 0.50s. FCT: 0.30s Hits: 1. SP Cost: 12
+[Lv. 2]: VCT: 0.65s. FCT: 0.35s Hits: 2. SP Cost: 14
+[Lv. 3]: VCT: 0.80s. FCT: 0.40s Hits: 3. SP Cost: 16
+[Lv. 4]: VCT: 0.95s. FCT: 0.45s Hits: 4. SP Cost: 18
+[Lv. 5]: VCT: 1.25s. FCT: 0.55s Hits: 5. SP Cost: 20
+[Lv. 6]: VCT: 1.55s. FCT: 0.65s Hits: 6. SP Cost: 22
+[Lv. 7]: VCT: 1.85s. FCT: 0.75s Hits: 7. SP Cost: 24
+[Lv. 8]: VCT: 2.30s. FCT: 0.90s Hits: 8. SP Cost: 26
+[Lv. 9]: VCT: 2.75s. FCT: 1.05s Hits: 9. SP Cost: 28
+[Lv.10]: VCT: 3.20s. FCT: 1.20s Hits: 10. SP Cost: 30
+Formula: MATK (%); (100 + Manually Cast Bonus) x Hits Manually Cast Bonus: (100 x Base Lv^2) = 10000`,
     img: earthSpike,
   },
   {
@@ -321,19 +357,23 @@ Description: Summons spikes from the ground beneath a single target, each dealin
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Variable Cast Time: 1s Cooldown: 0.50s 
 Range: 2
 Requirement: Earth Spike Lv: 4
-Description: Attempts to Petrifying a single target. If used on an already petrified target, the skill will fail. Catalyst: 1x Red Gemstone.
-[Lv 1]: Consumption: Per Use, Petrifying Chance: 24%,
-[Lv 2]: Consumption: Per Use, Petrifying Chance: 28%,
-[Lv 3]: Consumption: Per Use, Petrifying Chance: 32%,
-[Lv 4]: Consumption: Per Use, Petrifying Chance: 36%,
-[Lv 5]: Consumption: Per Use, Petrifying Chance: 40%,
-[Lv 6]: Consumption: On Success, Petrifying Chance: 44%,
-[Lv 7]: Consumption: On Success, Petrifying Chance: 48%,
-[Lv 8]: Consumption: On Success, Petrifying Chance: 52%,
-[Lv 9]: Consumption: On Success, Petrifying Chance: 56%,
-[Lv 10]: Consumption: On Success, Petrifying Chance: 60%`,
+Variable Cast Time: 1s Cooldown: 0.50s Range: 2
+Description: Attempts to inflict Petrifying to the target for 3s. Inflicts Petrify on the target for 17s once the Petrifying effect ends.
+If the target is already petrifying or petrified, the skill fails but still consumes SP. When cast from skill level 5 or higher, consumes the Catalyst in a successful attempt only.
+Catalyst: 1x Red Gemstone
+[Lv. 1]: Petrifying Chance: 24%, SP Cost: 25 
+[Lv. 2]: Petrifying Chance: 28%, SP Cost: 24 
+[Lv. 3]: Petrifying Chance: 32%, SP Cost: 23 
+[Lv. 4]: Petrifying Chance: 36%, SP Cost: 22 
+[Lv. 5]: Petrifying Chance: 40%, SP Cost: 21 
+[Lv. 6]: Petrifying Chance: 44%, SP Cost: 20 
+[Lv. 7]: Petrifying Chance: 48%, SP Cost: 19 
+[Lv. 8]: Petrifying Chance: 52%, SP Cost: 18 
+[Lv. 9]: Petrifying Chance: 56%, SP Cost: 17 
+[Lv.10]: Petrifying Chance: 60%, SP Cost: 16`,
     img: stoneCurse,
   },
   {
