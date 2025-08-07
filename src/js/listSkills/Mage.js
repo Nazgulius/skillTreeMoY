@@ -214,7 +214,7 @@ Formula: MATK (%); 100 + (Skill Lv x 10) `,
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Magical
+Type: Supportive
 Target: Ground
 Cooldown: 0.20s 
 Range: 9
@@ -225,14 +225,14 @@ The durability decreases by 50 every second and can receive DMG.
 Older instances are removed to create new ones when reaching the instance limit.
 [Lv. 1]: VCT: 2.00s. Max Instances: 1 Durability: 400. Duration: 5s
 [Lv. 2]: VCT: 1.80s. Max Instances: 1 Durability: 600. Duration: 5s
-[Lv 3]: Max Walls: 1, Duration: 5 sec, Wall HP: 800,
-[Lv 4]: Max Walls: 2, Duration: 10 sec, Wall HP: 1000,
-[Lv 5]: Max Walls: 2, Duration: 10 sec, Wall HP: 1200,
-[Lv 6]: Max Walls: 2, Duration: 10 sec, Wall HP: 1400,
-[Lv 7]: Max Walls: 3, Duration: 15 sec, Wall HP: 1600,
-[Lv 8]: Max Walls: 3, Duration: 15 sec, Wall HP: 1800,
-[Lv 9]: Max Walls: 3, Duration: 15 sec, Wall HP: 2000,
-[Lv 10]: Max Walls: 4, Duration: 20 sec, Wall HP: 2200
+[Lv. 3]: VCT: 1.60s. Max Instances: 1 Durability: 800. Duration: 5s
+[Lv. 4]: VCT: 1.40s. Max Instances: 2 Durability: 1000. Duration: 10s
+[Lv. 5]: VCT: 1.20s. Max Instances: 2 Durability: 1200. Duration: 10s
+[Lv. 6]: VCT: 1.10s. Max Instances: 2 Durability: 1400. Duration: 10s
+[Lv. 7]: VCT: 1.00s. Max Instances: 3 Durability: 1600. Duration: 15s
+[Lv. 8]: VCT: 0.90s. Max Instances: 3 Durability: 1800. Duration: 15s
+[Lv. 9]: VCT: 0.80s. Max Instances: 3 Durability: 2000. Duration: 15s 
+[Lv.10]: VCT: 0.70s. Max Instances: 4 Durability: 2200. Duration: 20s
 Durability: 200 + (Skill Lv x 200) `,
     img: iceWall,
   },
