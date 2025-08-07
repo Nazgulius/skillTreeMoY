@@ -54,7 +54,7 @@ Description: Deals M.DMG to the target, scaling with Base Level when manually ca
 [Lv 9]: 9 Hits, VCT: 2.75s, FCT: 1.05s SP Cost: 28,
 [Lv 10]: 10 Hits, VCT: 3.20s, FCT: 1.20s SP Cost: 30
 Formula: MATK (%): (100 + Manually Cast Bonus) x Hits
-Manually Cast Bonus: (100 x Base Lv^2) % 10000`,
+Manually Cast Bonus: (100 x Base Lv^2) / 10000`,
     img: fireBolt,
   },
   {
@@ -94,7 +94,7 @@ Consumes nearby Fire Wall cells or the Volcano cell beneath the user to launch u
 [Lv 8]: MATK 260%,
 [Lv 9]: MATK 280%,
 [Lv 10]: MATK 300%
-Formula: MATK (%): 100 + (Skill Lv x 20)`,
+Formula: MATK (%): 100 + (Skill Lv x 20) `,
     img: fireBall,
   },
   {
@@ -161,7 +161,8 @@ VCT and FCT scale with skill level.
 [Lv. 8]: VCT: 2.30s. FCT: 0.90s Hits: 8. SP Cost: 26
 [Lv. 9]: VCT: 2.75s. FCT: 1.05s Hits: 9. SP Cost: 28
 [Lv.10]: VCT: 3.20s. FCT: 1.20s Hits: 10. SP Cost: 30
-Formula: MATK (%) (100+ Manually Cast Bonus) x. Hits Manually Cast Bonus: (100 x Base Lv^2) % 10000`,
+Formula: MATK (%) (100+ Manually Cast Bonus) x Hits 
+Manually Cast Bonus: (100 x Base Lv^2) / 10000`,
     img: coldBolt,
   },
   {
@@ -198,7 +199,7 @@ If the target is already frozen, the skill fails but still consumes SP.
 [Lv. 8]: MATK 180%, Chance: 59% Freeze Duration: 24s
 [Lv. 9]: MATK 190%, Chance: 62% Freeze Duration: 27s
 [Lv.10]: MATK 200%, Chance: 65% Freeze Duration: 30s
-Formula: MATK (%); 100 + (Skill Lv x 10)`,
+Formula: MATK (%); 100 + (Skill Lv x 10) `,
     img: frostDiver,
   },
   {
@@ -232,7 +233,7 @@ Older instances are removed to create new ones when reaching the instance limit.
 [Lv 8]: Max Walls: 3, Duration: 15 sec, Wall HP: 1800,
 [Lv 9]: Max Walls: 3, Duration: 15 sec, Wall HP: 2000,
 [Lv 10]: Max Walls: 4, Duration: 20 sec, Wall HP: 2200
-Durability: 200+ (Skill Lv x 200)`,
+Durability: 200 + (Skill Lv x 200) `,
     img: iceWall,
   },
   {
@@ -266,7 +267,8 @@ VCT and FCT scale with skill level.
 [Lv. 8]: VCT: 2.30s. FCT: 0.90s Hits: 8. SP Cost: 26
 [Lv. 9]: VCT: 2.75s. FCT: 1.05s Hits: 9. SP Cost: 28
 [Lv.10]: VCT: 3.20s. FCT: 1.20s Hits: 10. SP Cost: 30
-Formula: MATK (%); (100+ Manually Cast Bonus) x. Hits Manually Cast Bonus: (100 x Base Lv^2) = 10000`,
+Formula: MATK (%); (100 + Manually Cast Bonus) x Hits 
+Manually Cast Bonus: (100 x Base Lv^2) = 10000 `,
     img: lightningBolt,
   },
   {
@@ -305,7 +307,7 @@ The damage from additional Thunder Storm is split across all enemies hit.
 [Lv. 8]: MATK 260% 
 [Lv. 9]: MATK 280% 
 [Lv.10]: MATK 300%
-Formula: MATK (%); 100+ (Skill Lv x. 20) `,
+Formula: MATK (%); 100 + (Skill Lv x 20) `,
     img: thunderstorm,
   },
   {
@@ -338,7 +340,8 @@ Description: Deals M.DMG to the target, scaling with Base Level when manually ca
 [Lv. 8]: VCT: 2.30s. FCT: 0.90s Hits: 8. SP Cost: 26
 [Lv. 9]: VCT: 2.75s. FCT: 1.05s Hits: 9. SP Cost: 28
 [Lv.10]: VCT: 3.20s. FCT: 1.20s Hits: 10. SP Cost: 30
-Formula: MATK (%); (100 + Manually Cast Bonus) x Hits Manually Cast Bonus: (100 x Base Lv^2) = 10000`,
+Formula: MATK (%); (100 + Manually Cast Bonus) x Hits 
+Manually Cast Bonus: (100 x Base Lv^2) = 10000 `,
     img: earthSpike,
   },
   {
@@ -409,7 +412,8 @@ Description: Deals M.DMG to the target, scaling with Base Level when manually ca
 [Lv. 8]: MATK 800%, VCT: 2.30s. FCT: 0.90s Hits: 4. SP Cost: 26
 [Lv. 9]: MATK 900%, VCT: 2.75s. FCT: 1.05s Hits: 5. SP Cost: 28
 [Lv.10]: MATK 1000%, VCT: 3.20s. FCT: 1.20s Hits: 5. SP Cost: 30
-Formula: MATK (%); (Skill Lv x 100) + Manually Cast Bonus Manually Cast Bonus: ((Skill Lv x 100) x Base Lv^2) = 10000`,
+Formula: MATK (%); (Skill Lv x 100) + Manually Cast Bonus 
+Manually Cast Bonus: ((Skill Lv x 100) x Base Lv^2) = 10000 `,
     img: soulStrike,
   },
   {
@@ -448,7 +452,7 @@ Description: Deals M.DMG to enemies within a 5x5 AoE around the target, increase
 [Lv. 9]: MATK 280%, SP Cost: 15 
 [Lv.10]: MATK 300%, SP Cost: 18
 Formula: MATK (%); 100+ (Skill Lv x 20) + Undead/Corrupt Bonus 
-Undead/Corrupt Bonus: Skill Lv x 10`,
+Undead/Corrupt Bonus: Skill Lv x 10 `,
     img: napalmBeat,
   },
   {
@@ -484,7 +488,7 @@ Catalyst: 1x Blue Gemstone
 [Lv. 8]: VCT: 0.96s. FCT: 0.24s. Hits: 9 Durability: 2400. Duration: 40s. SP Cost: 40
 [Lv. 9]: VCT: 0.64s. FCT: 0.16s. Hits: 10 Durability: 2700. Duration: 45s. SP Cost: 40 
 [Lv.10]: VCT: 0.32s. FCT: 0.08s. Hits: 11 Durability: 3000. Duration: 50s. SP Cost: 40
-Durability: (Skill Lv x 300) + (65 x (INT + Base Lv)) + MaxSP Safety Wall`,
+Durability: (Skill Lv x 300) + (65 x (INT + Base Lv)) + MaxSP `,
     img: safetyWall,
   },
   {
