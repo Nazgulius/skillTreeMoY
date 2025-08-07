@@ -102,35 +102,6 @@ Also increases E.ATK based on 10% of ACC.
     img: concentration,
   },
   {
-    id: "jointBeat",
-    level: 0,
-    dependencies: [
-      { id: "brandishSpear", minLevel: 7 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Joint Beat",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Enemy
-Range: 3
-Requirement: Brandish Spear Lv: 7
-Description: Requires Spear Class Weapon. Executes precision strikes at an enemys vital points, inflicting various debilitating effects.The skills ratio is influenced by the users Vitality minus the targets Vitality. Targets with higher Vitality may exhibit increased resistance against the debilitating effects, potentially reducing the skills efficacy.
-[Lv 1]: Atk 110%, Random Break,
-[Lv 2]: Atk 120%, Random Break,
-[Lv 3]: Atk 130%, Random Break,
-[Lv 4]: Atk 140%, Random Break,
-[Lv 5]: Atk 150%, Ankle Break: Halves Move Speed,
-[Lv 6]: Atk 160%, Wrist Break: Decreases Aspd by 25%,
-[Lv 7]: Atk 170%, Knee Break: Decreases Move Speed by 30% and Aspd by 10%,
-[Lv 8]: Atk 180%, Shoulder Break: Halves soft defense,
-[Lv 9]: Atk 190%, Waist Break: Decreases soft defense by 25% and attack by 25%,
-[Lv 10]: Atk 200%, Neck Break: Doubles damage from this skill and inflicts Bleeding`,
-    img: jointBeat,
-  },
-  {
     id: "parry",
     level: 0,
     dependencies: [
