@@ -507,17 +507,18 @@ Durability: (Skill Lv x 300) + (65 x (INT + Base Lv)) + MaxSP `,
 Skill Form: Passive
 Type: Misc
 Requirement: None
-Description: Increases the amount of SP recovered through your natural SP regeneration. Increases SP Potions healing in 3% per Skill Level.
-[Lv 1]: SP Recovery +[3 + 0.1% of MaxSP],
-[Lv 2]: SP Recovery +[6 + 0.2% of MaxSP],
-[Lv 3]: SP Recovery +[9 + 0.3% of MaxSP],
-[Lv 4]: SP Recovery +[12 + 0.4% of MaxSP],
-[Lv 5]: SP Recovery +[15 + 0.5% of MaxSP],
-[Lv 6]: SP Recovery +[18 + 0.6% of MaxSP],
-[Lv 7]: SP Recovery +[21 + 0.7% of MaxSP],
-[Lv 8]: SP Recovery +[24 + 0.8% of MaxSP],
-[Lv 9]: SP Recovery +[27 + 0.9% of MaxSP],
-[Lv 10]: SP Recovery +[30 + 1% of MaxSP]`,
+Description: Boosts SP Recovery and increases SP potion healing.
+Also gains SP Recovery based on Max HP. 
+[Lv. 1]; Recovery: +3. Potion: +3% 
+[Lv. 2]; Recovery: +6. Potion: +6% 
+[Lv. 3]; Recovery: +9. Potion: +9% 
+[Lv. 4]: Recovery: +12. Potion: +12% 
+[Lv. 5]; Recovery: +15. Potion: +15% 
+[Lv. 6]; Recovery: +18. Potion: +18% 
+[Lv. 7]; Recovery: +21. Potion: +21% 
+[Lv. 8]: Recovery: +24. Potion: +24% 
+[Lv. 9]; Recovery: +27. Potion: +27% 
+[Lv.10]: Recovery: +30. Potion: +30%`,
     img: increaseSPRecovery,
   },
   {
