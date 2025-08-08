@@ -119,7 +119,7 @@ Ranged Basic Attacks Darnage: -75% ACC: -50% `,
     dependent: [ ],
     element: null,
     skillName: "Indulge",
-    maxLevel: 10,
+    maxLevel: 5,
     inform: `Max Level: 5
 Skill Form: Active
 Type: Supportive 
