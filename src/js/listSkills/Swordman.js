@@ -28,18 +28,20 @@ export const skillsSwordman = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: One-Handed Sword
 Requirement: None
-Description: Increase Attack with One Handed Sword. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10], it increases Attack in 6%. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +2, 2nd Class Additional Atk +1,
-[Lv 2]: Atk +4, 2nd Class Additional Atk +2,
-[Lv 3]: Atk +6, 2nd Class Additional Atk +3,
-[Lv 4]: Atk +8, 2nd Class Additional Atk +4,
-[Lv 5]: Atk +10, 2nd Class Additional Atk +5,
-[Lv 6]: Atk +12, 2nd Class Additional Atk +6,
-[Lv 7]: Atk +14, 2nd Class Additional Atk +7,
-[Lv 8]: Atk +16, 2nd Class Additional Atk +8,
-[Lv 9]: Atk +18, 2nd Class Additional Atk +9,
-[Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
+Description: Increases E.ATK while wielding a One-Handed Sword. Knights, Crusaders and Rogues gain extra E.ATK. At max level, also grants +6% ACC.
+[Lv. 1]: E.ATK +2
+[Lv. 2]: E.ATK +4
+[Lv. 3]: E.ATK +6
+[Lv. 4]: E.ATK +8
+[Lv. 5]: E.ATK +10
+[Lv. 6]: E.ATK +12
+[Lv. 7]: E.ATK +14
+[Lv. 8]: E.ATK +16 
+[Lv. 9]: E.ATK +18 
+[Lv.10]: E.ATK +20
+E.ATK Bonus: Skill Lv x 1 `,
     img: oneHandedSwordMastery,
   },
   {
@@ -57,18 +59,21 @@ Description: Increase Attack with One Handed Sword. The benefits of this skill a
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Skill Form: Passive
+Weapon: One-Handed Spear
 Requirement: None
-Description: Increase Attack with One-Handed Spear Weapons. Second Class The benefits of this skill are improved upon reaching 2nd class. When [Lv 10], it increases Hit Rate in 6%. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +2, 2nd Class Additional Atk +1,
-[Lv 2]: Atk +4, 2nd Class Additional Atk +2,
-[Lv 3]: Atk +6, 2nd Class Additional Atk +3,
-[Lv 4]: Atk +8, 2nd Class Additional Atk +4,
-[Lv 5]: Atk +10, 2nd Class Additional Atk +5,
-[Lv 6]: Atk +12, 2nd Class Additional Atk +6,
-[Lv 7]: Atk +14, 2nd Class Additional Atk +7,
-[Lv 8]: Atk +16, 2nd Class Additional Atk +8,
-[Lv 9]: Atk +18, 2nd Class Additional Atk +9,
-[Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
+Description: Increases E.ATK while wielding a One-Handed Spear. Knights and Crusaders gain extra E.ATK. At max level, also grants +6% ACC.
+[Lv. 1]: E.ATK +2
+[Lv. 2]: E.ATK +4
+[Lv. 3]: E.ATK +6
+[Lv. 4]: E.ATK +8
+[Lv. 5]: E.ATK +10
+[Lv. 6]: E.ATK +12
+[Lv. 7]: E.ATK +14
+[Lv. 8]: E.ATK +16 
+[Lv. 9]: E.ATK +18 
+[Lv.10]: E.ATK +20
+E.ATK Bonus: Skill Lv x 1 `,
     img: oneSpearMastery,
   },
   {
