@@ -27,20 +27,29 @@ export const skillsProfessort = [
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Magical
+Type: Supportive 
 Target: Self
+Variable Cast Time: 2.40s
+Fixed Cast Time: 0.60s
+After Cast Delay: 1s 
+Cooldown: 10s
+SP Cost: 60
 Requirement: Dispell Lv: 1
-Description: Unleash a touch of magic mayhem. When you use an offensive skill after casting Abracadabra, a random spell from offensive arsenal is unleashed. If you use a support skill, a random spell from your support arsenal is unleashed. Buffs targeting only yourself will activate on self-casts or self-targeted skills. While Abracadabra is active, adds 0.5 seconds to Fixed Cast Time for skills without it, applies an extra SP cost to other abilities and increases Variable Cast Time by 10%. Catalyst: 2x Yellow Gemstone.
-[Lv 1]: Spells Lv: 1, Number of Spells: 1,
-[Lv 2]: Spells Lv: 2, Number of Spells: 1,
-[Lv 3]: Spells Lv: 3, Number of Spells: 2,
-[Lv 4]: Spells Lv: 4, Number of Spells: 2,
-[Lv 5]: Spells Lv: 5, Number of Spells: 3,
-[Lv 6]: Spells Lv: 6, Number of Spells: 3,
-[Lv 7]: Spells Lv: 7, Number of Spells: 4,
-[Lv 8]: Spells Lv: 8, Number of Spells: 4,
-[Lv 9]: Spells Lv: 9, Number of Spells: 5,
-[Lv 10]: Spells Lv: 10, Number of Spells: 5`,
+Description: While active, every time a skill is cast or a basic attack is performed, there is a chance to auto-cast an additional skill of a similar type.
+The auto-cast skill scales with the learned level of Abracadabra.
+Increases VCT by 10%, adds 0.5s FCT to instant skills, and raises all SP Cost relative to the active level of Abracadabra. 
+Abracadabra ends after casting a number of skills based on its level.
+Catalyst: 2x Yellow Gemstone
+[Lv. 1]: Amount: 1. Max Lv: 1. SP Cost +1 Attacking Chance: 1%, Casting Chance: 5% 
+[Lv. 2]: Amount: 1. Max Lv: 2. SP Cost +2 Attacking Chance: 2%, Casting Chance: 10% 
+[Lv. 3]: Amount: 2. Max Lv: 3. SP Cost +3 Attacking Chance: 3%, Casting Chance: 15% 
+[Lv. 4]: Amount: 2. Max Lv: 4. SP Cost +4 Attacking Chance: 4%, Casting Chance: 20% 
+[Lv. 5]: Amount: 3. Max Lv: 5. SP Cost +5 Attacking Chance: 5%, Casting Chance: 25% 
+[Lv. 6]: Amount: 3. Max Lv: 6. SP Cost +6 Attacking Chance: 6%, Casting Chance: 30% 
+[Lv. 7]: Amount: 4. Max Lv: 7. SP Cost +7 Attacking Chance: 7%, Casting Chance: 35%
+[Lv. 8]: Amount: 4. Max Lv: 8. SP Cost +8 Attacking Chance: 8%, Casting Chance: 40% 
+[Lv. 9]: Amount: 5. Max Lv: 9. SP Cost +9 Attacking Chance: 9%, Casting Chance: 45% 
+[Lv.10]: Amount: 5. Max Lv: 10. SP Cost +10 Attacking Chance: 10%, Casting Chance: 50%`,
     img: abracadabra,
   },
   {
@@ -55,15 +64,20 @@ Description: Unleash a touch of magic mayhem. When you use an offensive skill af
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Magical
+Type: Supportive 
 Target: Self
+Variable Cast Time: 1.40s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
 Requirement: Free Cast Lv: 5
-Description: Provides a chance to repeat any Elemental skill cast for 90 seconds. The skills eligible for this effect are Cold Bolt, Frost Driver, Fire Bolt, Fire Ball, Fire Wall, Lightning Bolt, Thunder Storm, Soul Strike, Napalm Beat, and Earth Spike.
-[Lv 1]: Chance to Repeat: 40%,
-[Lv 2]: Chance to Repeat: 50%,
-[Lv 3]: Chance to Repeat: 60%,
-[Lv 4]: Chance to Repeat: 70%,
-[Lv 5]: Chance to Repeat: 80%`,
+Description: Grants a chance to cast certain Skills twice for the next 90s.
+This effect applies to both manually casted skills as well as auto-casted skills.
+[Lv. 1]: Chance: 40%, SP Cost: 40
+[Lv. 2]: Chance: 50%, SP Cost: 45
+[Lv. 3]: Chance: 60%, SP Cost: 50 
+[Lv. 4]: Chance: 70%, SP Cost: 55 
+[Lv. 5]: Chance: 80%, SP Cost: 60`,
     img: doubleCasting,
   },
   {
@@ -74,18 +88,25 @@ Description: Provides a chance to repeat any Elemental skill cast for 90 seconds
     element: null,
     skillName: "Fog Wall",
     maxLevel: 5,
-    inform: `Max Lv: 5
+    inform: `Max Level: 5
 Skill Form: Active
-Type: Magical
+Type: Supportive
 Target: Ground
-Range: 9
+After Cast Delay: A.Delay - 0.425
+Cooldown: 1s
+Range: 9 
+SP Cost: 25
 Requirement: None
-Description: Creates a wall of fog in a 5x3 cell area that will cause the Blind status on players and monsters. All long ranged attacks targeted at players within the skill's range will have a greater chance of missing and have apply to monsters in normal fields, but will also apply to players in PvP zones.
-[Lv 1]: Max Fog Walls 1, Duration: 14 seconds,
-[Lv 2]: Max Fog Walls 2, Duration: 18 seconds,
-[Lv 3]: Max Fog Walls 3, Duration: 22 seconds,
-[Lv 4]: Max Fog Walls 4, Duration: 26 seconds,
-[Lv 5]: Max Fog Walls 5, Duration: 30 seconds`,
+Description: Creates a 5x3 AoE at the targeted location that temporarily inflicts Blind on enemies.
+Reduces the P.DMG taken and ACC of ranged basic attacks and skills launched against entities within the area.
+Older instances are removed to create new ones when reaching the instance limit. 
+[Lv. 1]: Max Instances: 1. Duration: 14s 
+[Lv. 2]: Max Instances: 2. Duration: 18s 
+[Lv. 3]: Max Instances: 3. Duration: 22s 
+[Lv. 4]: Max Instances: 4. Duration: 26s 
+[Lv. 5]: Max Instances: 5. Duration: 30s
+Ranged Skills Damage: -25%
+Ranged Basic Attacks Darnage: -75% ACC: -50% `,
     img: fogWall,
   },
   {
@@ -99,35 +120,20 @@ Description: Creates a wall of fog in a 5x3 cell area that will cause the Blind 
     element: null,
     skillName: "Indulge",
     maxLevel: 10,
-    inform: `Max Lv: 5
+    inform: `Max Level: 5
 Skill Form: Active
-Type: Magical
+Type: Supportive 
 Target: Self
-Requirement: Increase SP Recovery Lv: 1, Magic Rod Lv: 1
-Description: Consumes an amount of HP equal to 10% of MaxHP to restore an SP amount determined by the skill's level.
-[Lv 1]: SP +10%,
-[Lv 2]: SP +20%,
-[Lv 3]: SP +30%,
-[Lv 4]: SP +40%,
-[Lv 5]: SP +50%`,
+After Cast Delay: A.Delay - 0.42s
+Cooldown: A.Delay
+Description: Drains 10% of Max HP, and restores SP based on the drained amount. 
+[Lv. 1]; SP Restore: 10% of drained HP 
+[Lv. 2]: SP Restore: 20% of drained HP 
+[Lv. 3]: SP Restore: 30% of drained HP 
+[Lv. 4]: SP Restore: 40% of drained HP 
+[Lv. 5]: SP Restore: 50% of drained HP`,
     img: indulge,
   },
-//   {
-//     id: "memorize",
-//     level: 0,
-//     dependencies: [],
-//     dependent: [ ],
-//     element: null,
-//     skillName: "Memorize",
-//     maxLevel: 1,
-//     inform: `Max Lv: 1
-// Skill Form: Active
-// Type: Magical
-// Target: Self
-// Requirement: None
-// Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, Variable cast time, and Fixed cast time by 50%. Max Stacks: 5`,
-//     img: memorize,
-//   },
   {
     id: "mindBreaker",
     level: 0,
@@ -141,16 +147,17 @@ Description: Consumes an amount of HP equal to 10% of MaxHP to restore an SP amo
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive
 Target: Enemy
+After Cast Delay: 1s 
 Range: 9
 Requirement: Increase SP Recovery Lv: 3, Soul Burn Lv: 2
-Description: Induces mental turmoil in an enemy that will reduce it's MDEF, but will also increases it's MATK. This skill's level affects the success rate.
-[Lv 1]: MATK +20%, MDEF -12%,
-[Lv 2]: MATK +40%, MDEF -24%,
-[Lv 3]: MATK +60%, MDEF -36%,
-[Lv 4]: MATK +80%, MDEF -48%,
-[Lv 5]: MATK +100%, MDEF -60%`,
+Description: Attempts to reduce the target's M.DEF, but increases its B.MATK. Does not work on Bosses, Undead and Corrupt monsters.
+[Lv. 1]: B.MATK +32%, M.DEF -16% SP Cost: 12
+[Lv. 2]: B.MATK +44%, M.DEF -22% SP Cost: 15
+[Lv. 3]: B.MATK +56%, M.DEF -28% SP Cost: 18
+[Lv. 4]: B.MATK +68%, M.DEF -34% SP Cost: 21
+[Lv. 5]: B.MATK +80%, M.DEF -40% SP Cost: 24`,
     img: mindBreaker,
   },
   {
@@ -171,16 +178,51 @@ Description: Induces mental turmoil in an enemy that will reduce it's MDEF, but 
 Skill Form: Active
 Type: Magical
 Target: Enemy
-Range: 10
+Element: Neutral
+After Cast Delay: 0.30s
+Cooldown: 10s 
+Range: 10 
+Hits: 1
 Requirement: Cast Cancel Lv: 5, Magic Rod Lv: 3, Dispell Lv: 3
-Description: Casts a spell that has a chance to burn the targets SP. The amount of SP burned is based on the users maximum SP and skill level. Any excess SP burned is converted into magical neutral property damage to the targets health. Against Monsters: 100% success rate. Against Players: 70% success rate. If the spell fails, the caster receives the excess damage. In GvG/PvP maps, the cooldown of this skill is increased by 10 times.
-[Lv 1]: 20% of user Max SP is Burned in Enemy current SP, Excess SP damage: x1,
-[Lv 2]: 40% of user Max SP is Burned in Enemy current SP, Excess SP damage: x2,
-[Lv 3]: 60% of user Max SP is Burned in Enemy current SP, Excess SP damage: x3,
-[Lv 4]: 80% of user Max SP is Burned in Enemy current SP, Excess SP damage: x4,
-[Lv 5]: 100% of user Max SP is Burned in Enemy current SP, Excess SP damage: x5`,
+Description: Deals M.DMG to the SP of single target, scaling with Max SP. 
+If the damage exceeds the target's SP, the remaining damage is dealt to their HP.
+The damage is based on the target's INT and Level against monsters. 
+This skill has a 30% chance for the damage to be dealt back to the caster against players.
+VCT scales with skill level.
+[Lv. 1]: MATK 100%, MaxSP: 20%, VCT: 0,50s SP Cost: 30
+[Lv. 2]: MATK 200%, MaxSP: 40%, VCT: 1.00s SP Cost: 35
+[Lv. 3]: MATK 300%, MaxSP: 60%, VCT: 1.50s SP Cost: 40
+[Lv. 4]: MATK 400%, MaxSP: 80%, VCT: 2.00s SP Cost: 45
+[Lv. 5]: MATK 500%, MaxSP: 100%, VCT: 2.50s SP Cost: 50
+Formula: 
+SP Damage: (MaxSP x (Skill Lv x 20)) / 100
+HP Damage: (Exceeded Damage x (Skill Lv x 100)) / 100 
+SP Monsters: (3 + (INT / 10)) x Lv `,
     img: soulBurn,
   },
+];
+
+
+
+  /*  author Chalykh Maksim 
+  # data 10.02.2025 
+  # email: chalyh.maksim.88@mail.ru */
+//   {
+//     id: "memorize",
+//     level: 0,
+//     dependencies: [],
+//     dependent: [ ],
+//     element: null,
+//     skillName: "Memorize",
+//     maxLevel: 1,
+//     inform: `Max Lv: 1
+// Skill Form: Active
+// Type: Magical
+// Target: Self
+// Requirement: None
+// Description: Charges for 0.5 sec to gain a stack that reduces After-cast delay, Variable cast time, and Fixed cast time by 50%. Max Stacks: 5`,
+//     img: memorize,
+//   },
 //   {
 //     id: "soulChange",
 //     level: 0,
@@ -218,10 +260,3 @@ Description: Casts a spell that has a chance to burn the targets SP. The amount 
 // Description: Shoots a spider web that will bind and immobilize a target and decrease it's FLEE rate by half for 8 seconds. Fire, Earth, Wind and Water elemental attacks will cause 75% more damage on Fiber Locked targets and cancel the Fiber Locked status. A maximum of 5 Spider Webs can be shot at once. Catalyst: 1x Cobweb.`,
 //     img: spiderWeb,
 //   },
-];
-
-
-
-  /*  author Chalykh Maksim 
-  # data 10.02.2025 
-  # email: chalyh.maksim.88@mail.ru */
