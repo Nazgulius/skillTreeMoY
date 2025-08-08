@@ -18,8 +18,8 @@ export const skillsWizardHight = [
     dependent: [],
     element: null,
     skillName: "Mystical Amplification",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Active
 Type: Magical
 Target: Self
@@ -77,8 +77,8 @@ Formula: MATK (%): (100 + (Napalm Beat Lv x 20)); x Hits `,
     dependent: [],
     element: null,
     skillName: "Soul Drain",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Passive
 Type: Magical
 Requirement: Increase SP Recovery Lv: 5, Soul Strike Lv: 7
@@ -100,7 +100,7 @@ Formula: SP Drain: (Target Lv x (95 + (Skill Lv x 30)) = 100 `,
     dependent: [],
     element: null,
     skillName: "Cataclysm",
-    maxLevel: 10,
+    maxLevel: 5,
     inform: `Max Level: 5
 Skill Form: Active Type: Magical
 Target: Enemy
