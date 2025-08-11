@@ -31,11 +31,14 @@ export const skillsSniper = [
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
+After Cast Delay: A.Delay 0.34s 
+Cooldown: A.Delay
 Range: 9
+SP Cost: 15
 Requirement: Land Mine Lv: 4, Skid Trap Lv: 4, Blast Mine Lv: 3, Ankle Snare Lv: 3, Glacial Trap Lv: 2, Flasher Lv: 2, Claymore Trap Lv: 1, Sandman Lv: 1
-Description: Instantly activates all traps within a 7x7 area. Traps triggered by this skill have their detonation area expanded to 7x7. This skill does not activate traps set by other players. Can activate the following traps: Glacial Trap, Blast Mine, Land Mine, Claymore Trap, Flasher, Sandman.`,
+Description: Activates all owned traps within a 7x7 AoE. Triggered traps expand their AoE to 7x7.`,
     img: detonator,
   },
   {
@@ -51,25 +54,32 @@ Description: Instantly activates all traps within a 7x7 area. Traps triggered by
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Enemy
+Variable Cast Time: 1.20s
+After Cast Delay: A.Delay - 0.14s
+Cooldown: 10s
 Range: 12
+Hits: 1
 Requirement: Steel Crow Lv: 6, Blitz Beat Lv: 7
-Description: Command your falcon to execute a swift dive, delivering a physical attack that bypasses both defense and evasion on a single target. Falcon Assault has a chance to automatically trigger Blitz Beat. The damage is based on Blitz Beat's damage.
-[Lv 1]: Blitz Beat Damage x [1.1 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 1% + one third of the Auto-Blitz Beat chance.
-[Lv 2]: Blitz Beat Damage x [1.2 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 2% + one third of the Auto-Blitz Beat chance.
-[Lv 3]: Blitz Beat Damage x [1.3 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 3% + one third of the Auto-Blitz Beat chance.
-[Lv 4]: Blitz Beat Damage x [1.4 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 4% + one third of the Auto-Blitz Beat chance.
-[Lv 5]: Blitz Beat Damage x [1.5 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 5% + one third of the Auto-Blitz Beat chance.
-[Lv 6]: Blitz Beat Damage x [1.6 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 6% + one third of the Auto-Blitz Beat chance.
-[Lv 7]: Blitz Beat Damage x [1.7 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 7% + one third of the Auto-Blitz Beat chance.
-[Lv 8]: Blitz Beat Damage x [1.8 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 8% + one third of the Auto-Blitz Beat chance.
-[Lv 9]: Blitz Beat Damage x [1.9 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 9% + one third of the Auto-Blitz Beat chance.
-[Lv 10]: Blitz Beat Damage x [2 + 0.1 every 8 INT], Blitz Beat auto-trigger chance 10% + one third of the Auto-Blitz Beat chance.
-New calculation:
-Damage = ((Skill Lv × 10) + (Steel Crow Lv × 10) + Agi + (Dex ÷ 5) + (Luk ÷ 3) + (Matk × (Int / 80)) × BlitzBeat Hits) × ((Int / 80) + (Skill Lv × 0.1)).
-Details: AfterCastActDelay set as ASPD + 220; CastTime varying between 410 and 1400; Fixed Cast Time: 600; Cooldown: 1500.
-`,
+Description: Marks a Monster or Job Class for the next 300s.
+The Falcon will automatically and randomly attack any nearby marked enemy, dealing M.DMG that scales with Base Level and the learned levels of Blitz Beat and Steel Crow. Has a chance to inflict Bleeding for 20s. Attack interval scales with LUK, skill level, VCT reductions and the learned level of Falconry Mastery.
+Effect is canceled if used on the same target.
+Requires a Falcon.
+[Lv. 1]: Bleeding Chance: 2%, SP Cost: 7 
+[Lv. 2]: Bleeding Chance: 4%, SP Cost: 14 
+[Lv. 3]: Bleeding Chance: 6%, SP Cost: 21 
+[Lv. 4]: Bleeding Chance: 8%, SP Cost: 28 
+[Lv. 5]: Bleeding Chance: 10%, SP Cost: 35 
+[Lv. 6]: Bleeding Chance: 12%, SP Cost: 42 
+[Lv. 7]: Bleeding Chance: 14%, SP Cost: 49 
+[Lv. 8]: Bleeding Chance: 16%, SP Cost: 56 
+[Lv. 9]: Bleeding Chance: 18%, SP Cost: 63 
+[Lv.10]: Bleeding Chance: 20%, SP Cost: 70
+Formula: MATK (%): (50 x Blitz Beat Lv) + (Base Lv x 3)
+Interval (s): 4500 - (Skill Lv x 150) + (750 - Reductions) + (750 - (750 x Bonus) / 100) / 1000
+Bonus: (LUK / 3) + (2 x Falconry Mastery Lv)
+The bonus doubles while wielding a Dagger or bare handed `,
     img: falconAssault,
   },
   {
@@ -85,21 +95,27 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime varying between 410 and 1
     skillName: "Quick Draw",
     maxLevel: 10,
     inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
+Skill Form: Toggle 
+Type: Supportive 
 Target: Self
+Variable Cast Time: 2s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s
+Cooldown: A.Delay + 35
 Requirement: Owl's Eye Lv: 10, Vulture's Eye Lv: 10, Improve Concentration Lv: 10
-Description: Enters the Quickdraw state, reducing your Flee Rate to increase your Attack Speed and Critical. Also provides a chance to unleash a second attack with basic attacks.
-[Lv 1]: Flee -47%, Aspd +2%, Crit +2, Double Attack Chance 7%,
-[Lv 2]: Flee -44%, Aspd +4%, Crit +4, Double Attack Chance 9%,
-[Lv 3]: Flee -41%, Aspd +6%, Crit +6, Double Attack Chance 11%,
-[Lv 4]: Flee -38%, Aspd +8%, Crit +8, Double Attack Chance 13%,
-[Lv 5]: Flee -35%, Aspd +10%, Crit +10, Double Attack Chance 15%,
-[Lv 6]: Flee -32%, Aspd +12%, Crit +12, Double Attack Chance 17%,
-[Lv 7]: Flee -29%, Aspdt +14%, Crit +14, Double Attack Chance 19%,
-[Lv 8]: Flee -26%, Aspd +16%, Crit +16, Double Attack Chance 21%,
-[Lv 9]: Flee -23%, Aspd +18%, Crit +18, Double Attack Chance 23%,
-[Lv 10]: Flee -20%, Aspd +20%, Crit +20, Double Attack Chance 25%`,
+Description: Increases ASPD and CRIT, but reduces FLEE.
+Grants a chance to hit twice when performing basic attacks.
+Cancels the effect of True Sight.
+[Lv. 1]: ASPD +2%, CRIT +2. SP Cost: 13 Double Chance: 7%, FLEE -47%
+[Lv. 2]: ASPD +4%, CRIT +4. SP Cost: 16 Double Chance: 9%, FLEE -44%
+[Lv. 3]: ASPD +6%, CRIT +6. SP Cost: 19 Double Chance: 11%, FLEE -41%
+[Lv. 4]: ASPD +8%, CRIT +8. SP Cost: 22 Double Chance: 13%, FLEE -38%
+[Lv. 5]: ASPD +10%, CRIT +10. SP Cost: 25 Double Chance: 15%, FLEE -35%
+[Lv. 6]: ASPD +12%, CRIT +12. SP Cost: 28 Double Chance: 17%, FLEE -32%
+[Lv. 7]: ASPD +14%, CRIT +14. SP Cost: 31 Double Chance: 19%, FLEE -29%
+[Lv. 8]: ASPD +16%, CRIT +16. SP Cost: 34 Double Chance: 21%, FLEE -26%
+[Lv. 9]: ASPD +18%, CRIT +18. SP Cost: 37 Double Chance: 23%, FLEE -23%
+[Lv.10]: ASPD +20%, CRIT +20. SP Cost: 40 Double Chance: 25%, FLEE -20%`,
     img: quickDraw,
   },
   {
@@ -116,22 +132,32 @@ Description: Enters the Quickdraw state, reducing your Flee Rate to increase you
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Bow 
 Type: Physical
 Target: Enemy
-Range: 1
+Element: Ammunition
+Fixed Cast Time: 0.60s
+After Cast Delay: A.Delay 0.14s
+Cooldown: 2s
+Max Instances: 20
+Range: 1 + Weapon's range
+Hits: 1
 Requirement: Improve Concentration Lv: 10, Double Strafe Lv: 7, Charge Arrow Lv: 10
-Description: Fires a powerful arrow towards a target point, dealing heavy damage to all enemies in its path. Each Base Level above 80 increases the skill damage. Consumes: 1x Arrow.
-[Lv 1]: Atk 210%,
-[Lv 2]: Atk 320%,
-[Lv 3]: Atk 430%,
-[Lv 4]: Atk 540%,
-[Lv 5]: Atk 650%,
-[Lv 6]: Atk 760%,
-[Lv 7]: Atk 870%,
-[Lv 8]: Atk 980%,
-[Lv 9]: Atk 1090%,
-[Lv 10]: Atk 1200%
-Details: AfterCastActDelay set as ASPD + 220; CastTime: 200 + (100 × Skill Lv); Fixed Cast Time: 500; Cooldown: 2000.`,
+Description: Deals ranged P.DMG to enemies in the direction of the target, scaling with Base Level.
+Damage is reduced by 5% for each enemy hit.
+VCT scales with skill level.
+Catalyst: 1x Arrow
+[Lv. 1]: ATK 210%, VCT: 0.50s. SP Cost: 14 
+[Lv. 2]: ATK 320%, VCT: 0.60s. SP Cost: 16 
+[Lv. 3]: ATK 430%, VCT: 0.70s. SP Cost: 18 
+[Lv. 4]: ATK 540%, VCT: 0.80s, SP Cost: 20 
+[Lv. 5]: ATK 650%, VCT: 0.90s. SP Cost: 22 
+[Lv. 6]: ATK 760%, VCT: 1.00s. SP Cost: 24 
+[Lv. 7]: ATK 870%, VCT: 1.10s. SP Cost: 26 
+[Lv. 8]: ATK 980%, VCT: 1.20s. SP Cost: 28 
+[Lv. 9]: ATK 1090%, VCT: 1.30s. SP Cost: 30 
+[Lv.10]: ATK 1200%, VCT: 1.40s, SP Cost: 32
+Formula: ATK (%): ((100 + (110 x Skill Lv)) x Base Lv) / 80 `,
     img: sharpShooting,
   },
   {
@@ -148,20 +174,25 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime: 200 + (100 × Skill Lv);
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Self
+Variable Cast Time: 2s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s
+Cooldown: A.Delay + 35
 Requirement: Owl's Eye Lv: 10, Vulture's Eye Lv: 10, Improve Concentration Lv: 10
-Description: Enters the True Sight state, reducing your attack speed to increase your hit rate , damage and Critical.
-[Lv 1]: Aspd -47%, Hit +2%, Damage +7%, Crit +2,
-[Lv 2]: Aspd -44%, Hit +4%, Damage +9%, Crit +4,
-[Lv 3]: Aspd -41%, Hit +6%, Damage +11%, Crit +6,
-[Lv 4]: Aspd -38%, Hit +8%, Damage +13%, Crit +8,
-[Lv 5]: Aspd -35%, Hit +10%, Damage +15%, Crit +10,
-[Lv 6]: Aspd -32%, Hit +12%, Damage +17%, Crit +12,
-[Lv 7]: Aspd -29%, Hit +14%, Damage +19%, Crit +14,
-[Lv 8]: Aspd -26%, Hit +16%, Damage +21%, Crit +16,
-[Lv 9]: Aspd -23%, Hit +18%, Damage +23%, Crit +18,
-[Lv 10]: Aspd -20%, Hit +20%, Damage +25%, Crit +20`,
+Description: Increases ACC, CRIT and P.DMG, but reduces ASPD. Does not increase Trap and Falcon skill P.DMG.
+Cancels the effect of Quick Draw.
+[Lv. 1]: ACC +2%, CRIT +2. P.DMG +7% ASPD -47%, SP Cost: 13
+[Lv. 2]: ACC +4%, CRIT +4. P.DMG +9% ASPD -44%, SP Cost: 16
+[Lv. 3]: ACC +6%, CRIT +6. P.DMG +11% ASPD -41%, SP Cost: 19
+[Lv. 4]: ACC +8%, CRIT +8. P.DMG +13% ASPD -38%, SP Cost: 22
+[Lv. 5]: ACC +10%, CRIT +10. P.DMG +15% ASPD -35%, SP Cost: 25
+[Lv. 6]: ACC +12%, CRIT +12. P.DMG +17% ASPD -32%, SP Cost: 28
+[Lv. 7]: ACC +14%, CRIT +14. P.DMG +19% ASPD -29%, SP Cost: 31
+[Lv. 8]: ACC +16%, CRIT +16. P.DMG +21% ASPD -26%, SP Cost: 34
+[Lv. 9]: ACC +18%, CRIT +18. P.DMG +23% ASPD -23%, SP Cost: 37
+[Lv.10]: ACC +20%, CRIT +20. P.DMG +25% ASPD -20%, SP Cost: 40`,
     img: trueSight,
   },
   {
@@ -176,22 +207,23 @@ Description: Enters the True Sight state, reducing your attack speed to increase
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Self
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
 Requirement: Improve Concentration Lv: 9
-Description: Increases Movement Speed and Flee Rate for you and party members for 210 seconds. Movement speed boosts from different skills do not stack; only the highest bonus applies. Skills that reduce Movement Speed, like Quagmire, cancel Wind Walk.
-[Lv 1]: Move Speed +17%, Flee Rate +1%,
-[Lv 2]: Move Speed +19%, Flee Rate +2%,
-[Lv 3]: Move Speed +21%, Flee Rate +3%,
-[Lv 4]: Move Speed +23%, Flee Rate +4%,
-[Lv 5]: Move Speed +25%, Flee Rate +5%,
-[Lv 6]: Move Speed +27%, Flee Rate +6%,
-[Lv 7]: Move Speed +29%, Flee Rate +7%,
-[Lv 8]: Move Speed +31%, Flee Rate +8%,
-[Lv 9]: Move Speed +33%, Flee Rate +9%,
-[Lv 10]: Move Speed +35%, Flee Rate +10%
-New calculation: Bonus% = 5 + (Skill Lv × 2).
-`,
+Description: Reduces WD and increases FLEE of nearby allies for 210s.
+VCT and FCT scales with skill level.
+[Lv. 1]: VCT: 1.50s. FCT: 0.30s. SP Cost: 26 WD -12%, FLEE +1%
+[Lv. 2]: VCT: 1.80s. FCT: 0.40s. SP Cost: 32 WD -14%, FLEE +2%
+[Lv. 3]: VCT: 2.10s. FCT: 0.50s. SP Cost: 38 WD -16%, FLEE +3%
+[Lv. 4]: VCT: 2.40s. FCT: 0.60s. SP Cost: 44 WD -18%, FLEE +4%
+[Lv. 5]: VCT: 2.70s. FCT: 0.70s. SP Cost: 50 WD -20%, FLEE +5%
+[Lv. 6]: VCT: 3.00s. FCT: 0.80s. SP Cost: 56 WD -22%, FLEE +6%
+[Lv. 7]: VCT: 3.30s. FCT: 0.90s. SP Cost: 62 WD -24%, FLEE +7%
+[Lv. 8]: VCT: 3.60s. FCT: 1.00s. SP Cost: 68 WD -26%, FLEE +8%
+[Lv. 9]: VCT: 3.90s. FCT: 1.10s. SP Cost: 74 WD -28%, FLEE +9%
+[Lv.10]: VCT: 4.20s. FCT: 1.20s. SP Cost: 80 WD -30%, FLEE +10%`,
     img: windWalk,
   },
 ];
