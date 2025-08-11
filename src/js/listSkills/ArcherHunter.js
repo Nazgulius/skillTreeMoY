@@ -40,8 +40,10 @@ export const skillsHunter = [
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Passive
-Type: Misc
-Requirement: None
+Description: Grants the ability to command a Falcon.
+Rental with: Falcon Breeder
+
+*** Old note: ***
 Description: Master the art of Falcon command. Increasing the chance to auto-cast Blitz Beat. Falcon Breeder.
 [Lv 1]: Auto Blitz chance +2%,
 [Lv 2]: Auto Blitz chance +4%,
@@ -93,17 +95,19 @@ Description: Amplify the might of your falcon attacks.
 Skill Form: Passive
 Type: Physical
 Requirement: Falconry Mastery Lv: 1
-Description: Harness the power of the falcon to deliver devastating strikes against Beast and Insect monsters. Mastery attack increases when accompanied by a falcon, enhancing the damage of your birds attacks.
-[Lv 1]: Damage +4, Falcon skills damage +1%,
-[Lv 2]: Damage +8, Falcon skills damage +2%,
-[Lv 3]: Damage +12, Falcon skills damage +3%,
-[Lv 4]: Damage +16, Falcon skills damage +4%,
-[Lv 5]: Damage +20, Falcon skills damage +5%,
-[Lv 6]: Damage +24, Falcon skills damage +6%,
-[Lv 7]: Damage +28, Falcon skills damage +7%,
-[Lv 8]: Damage +32, Falcon skills damage +8%,
-[Lv 9]: Damage +36, Falcon skills damage +9%,
-[Lv 10]: Damage +40, Falcon skills damage +10%`,
+Description: Boosts the DMG of Falcon Skills.
+Also increases Mastery ATK against Brute
+and Insect monsters.
+[Lv. 1]: Falcon skills DMG: +1% Mastery ATK +4
+[Lv. 2]: Falcon skills DMG: +2% Mastery ATK +8
+[Lv. 3]: Falcon skills DMG: +3% Mastery ATK +12
+[Lv. 4]: Falcon skills DMG: +4% Mastery ATK +16
+[Lv. 5]: Falcon skills DMG: +5% Mastery ATK +20
+[Lv. 6]: Falcon skills DMG: +6% Mastery ATK +24
+[Lv. 7]: Falcon skills DMG: +7% Mastery ATK +28
+[Lv. 8]: Falcon skills DMG: +8% Mastery ATK +32
+[Lv. 9]: Falcon skills DMG: +9% Mastery ATK +36
+[Lv.10]: Falcon skills DMG: +10% Mastery ATK +40`,
     img: beastBane,
   },
   {
@@ -137,8 +141,7 @@ The skill no longer ignores DEF.
 [Lv 9]: Hits: 6,
 [Lv 10]: Hits: 6
 New calculation: Damage = (Skill Lv × 10) + (Steel Crow Lv × 10) + Agi + (Dex ÷ 5) + (Luk ÷ 3) + (Matk × (Int / 80)).
-Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (50 × Skill Lv); Fixed Cast Time: 600.
-`,
+Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (50 × Skill Lv); Fixed Cast Time: 600. `,
     img: blitzBeat,
   },
   {
@@ -153,15 +156,17 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (50 × Skill Lv); 
     maxLevel: 4,
     inform: `Max Lv: 4
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
-Range: 6
+After Cast Delay: A.Delay - 0.14s 
+Cooldown: A.Delay
+SP Cost: 8
 Requirement: Falconry Mastery Lv: 5
-Description: Commands a Falcon to detect hidden characters from a distance.
-[Lv 1]: Range: 6 cells,
-[Lv 2]: Range: 7 cells,
-[Lv 3]: Range: 8 cells,
-[Lv 4]: Range: 9 cells`,
+Description: Reveals Invisible entities within a 7x7 AoE around the targeted location. Requires a Falcon.
+[Lv. 1]: Range: 6 cells
+[Lv. 2]: Range: 7 cells
+[Lv. 3]: Range: 8 cells 
+[Lv. 4]: Range: 9 cells`,
     img: detect,
   },
   {
