@@ -195,8 +195,8 @@ Cooldown: 25s
 SP Cost: 10
 Requirement: Provoke Lv: 5
 Description: Resists Flinching from attacks. Increases H.DEF and C.DEF.
-[Lv. 1]: H.DEF +5. C.DEF +1. Duration: 75 
-[Lv. 2]: H.DEF +10. C.DEF +2. Duration: 95 
+[Lv. 1]: H.DEF +5. C.DEF +1. Duration: 7s 
+[Lv. 2]: H.DEF +10. C.DEF +2. Duration: 9s 
 [Lv. 3]: H.DEF +15. C.DEF +3. Duration: 11s 
 [Lv. 4]: H.DEF +20. C.DEF +4. Duration: 13s 
 [Lv. 5]: H.DEF +25. C.DEF +5. Duration: 15s 
@@ -252,14 +252,14 @@ Type: Misc
 Requirement: Increase HP Recovery Lv: 5
 Description: HP Recovery also heals HP while moving or fighting.
 [Lv. 1]: Recovery every 24s 
-[Lv. 2]: Recovery every 225 
+[Lv. 2]: Recovery every 22s 
 [Lv. 3]: Recovery every 20s 
 [Lv. 4]: Recovery every 18s 
 [Lv. 5]: Recovery every 16s 
 [Lv. 6]: Recovery every 14s 
 [Lv. 7]: Recovery every 12s 
 [Lv. 8]: Recovery every 10s 
-[Lv. 9]: Recovery every 85 
+[Lv. 9]: Recovery every 8s 
 [Lv.10]: Recovery every 6s`,
     img: movingHPRecovery,
   },
