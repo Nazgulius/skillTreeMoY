@@ -32,18 +32,19 @@ export const skillsKnight = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Two-Handed Sword
 Requirement: One-Handed Sword Mastery Lv: 5
-Description: Increase Attack with Two-Handed Sword Weapons. When [Lv 10], it increases Crital Rate in +6. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +4,
-[Lv 2]: Atk +8,
-[Lv 3]: Atk +12,
-[Lv 4]: Atk +16,
-[Lv 5]: Atk +20,
-[Lv 6]: Atk +24,
-[Lv 7]: Atk +28,
-[Lv 8]: Atk +32,
-[Lv 9]: Atk +36,
-[Lv 10]: Atk +40`,
+Description: Increases E.ATK while wielding a Two-Handed Sword. At max level, also grants +6 CRIT.
+[Lv. 1]: E.ATK +4
+[Lv. 2]: E.ATK +8
+[Lv. 3]: E.ATK +12
+[Lv. 4]: E.ATK +16
+[Lv. 5]: E.ATK +20
+[Lv. 6]: E.ATK +24
+[Lv. 7]: E.ATK +28
+[Lv. 8]: E.ATK +32
+[Lv. 9]: E.ATK +36 
+[Lv.10]: E.ATK +40`,
     img: twoHandedSwordMastery,
   },
   {
@@ -63,14 +64,22 @@ Description: Increase Attack with Two-Handed Sword Weapons. When [Lv 10], it inc
     inform: `Max Lv: 5
 Skill Form: Active
 Type: Physical
+Weapon: Sword-Class
 Target: Self
+After Cast Delay: A.Delay 0.44s
+Cooldown: A.Delay + 0.26s
+Hits: 1
+SP Cost: 9
 Requirement: Sword Quicken Lv: 5
-Description: Requires Swords Class Weapon. If an opponent physically attacks a player casting Auto Counter while facing it, the attack will be blocked and the caster will perform one Critical attack on them. Weapon Attack plus Weapon Weight increase the attack multiplier for this skill.
-[Lv 1]: Auto Counter Duration: 0.4 sec,
-[Lv 2]: Auto Counter Duration: 0.6 sec,
-[Lv 3]: Auto Counter Duration: 0.8 sec,
-[Lv 4]: Auto Counter Duration: 1.0 sec,
-[Lv 5]: Auto Counter Duration: 1.2 sec`,
+Description: Temporarily enters a stance that blocks 50% of the next attack's P.DMG and counters by dealing the same amount of P.DMG back to the attacker.
+The counter will always CRIT and scales with weapon.
+Must face the attacker to retaliate.
+[Lv. 1]: Duration: 0.40s
+[Lv. 2]: Duration: 0.60s
+[Lv. 2]: Duration: 0.80s
+[Lv. 3]: Duration: 1.00s
+[Lv. 4]: Duration: 1.20s
+ATK (%): 100 + (W.Weight + W.Attack + (100 x (W.Level X (W.Refine x 6))) + Countered Damage `,
     img: counterAttack,
   },
   {
@@ -86,23 +95,29 @@ Description: Requires Swords Class Weapon. If an opponent physically attacks a p
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Sword-Class 
 Type: Physical
 Target: Enemy
-Range: 2
+Variable Cast Time: 0.20s
+After Cast Delay: A.Delay + 0.22s
+Cooldown: 1s
+Range: 2 Weapon's range
 Requirement: Sword Quicken Lv: 10, Counter Attack Lv: 5
-Description: Requires a Sword-class weapon. Deals physical damage to all enemies within range and pushes them backward. The number of hits depends on the weapon type and the number of targets, up to a maximum of four hits. For every level of Bash learned, the skill damage increases by 10%. Additionally, every 5 Base Levels above 50 increase the skill damage by 10%. One-Handed Sword: 2 ~ 3 targets: 2 hits, 4 ~ 5 targets: 3 hits, 6+ targets: 4 hits. Two-Handed Sword: 1 target: 2 hits, 2 ~ 3 targets: 3 hits, 4+ targets: 4 hits.
-[Lv 1]: Atk 110% x Hits,
-[Lv 2]: Atk 120% x Hits,
-[Lv 3]: Atk 130% x Hits,
-[Lv 4]: Atk 140% x Hits,
-[Lv 5]: Atk 150% x Hits,
-[Lv 6]: Atk 160% x Hits,
-[Lv 7]: Atk 170% x Hits,
-[Lv 8]: Atk 180% x Hits,
-[Lv 9]: Atk 190% x Hits,
-[Lv 10]: Atk 200% x Hits
-Details: AfterCastActDelay set as ASPD + 220; CastTime: 200; Fixed Cast Time: 400; Cooldown: 1000.
-`,
+Description: Deals P.DMG to enemies within a 5x5 AoE around the target, Knocking them back 2 cells.
+The damage scales with Base Level and the learned level of Bash.
+Hits depend on the Weapon and the number of targets.
+[Lv. 1]: ATK 110% x Hits. SP Cost: 13
+[Lv. 2]: ATK 120% x Hits. SP Cost: 14 
+[Lv. 3]: ATK 130% x Hits. SP Cost: 15 
+[Lv. 4]: ATK 140% x Hits. SP Cost: 16 
+[Lv. 5]: ATK 150% x Hits. SP Cost: 17 
+[Lv. 6]: ATK 160% x Hits. SP Cost: 18 
+[Lv. 7]: ATK 170% x Hits. SP Cost: 19 
+[Lv. 8]: ATK 180% x Hits. SP Cost: 20 
+[Lv. 9]: ATK 190% x Hits. SP Cost: 21 
+[Lv.10]: ATK 200% x Hits. SP Cost: 22
+Formula: ATK (%): (100 + (10 x Skill Lv) + (10 x Bash Lv)) > Hits
+Base Level higher than 50: + ((((Base Lv - 50) / 5) x 10) x Hits)`,
     img: bowlingBash,
   },
   {
@@ -118,16 +133,24 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime: 200; Fixed Cast Time: 40
     inform: `Max Lv: 5
 Skill Form: Active
 Type: Physical
+Weapon: Sword-Class 
 Target: Enemy
-Range: 6 ~ 10
+Hits: 1
+Variable Cast Time: A.Delay
+After Cast Delay: A.Delay 0.44s 
+Cooldown: A.Delay + 0.365
+SP Cost: 18
 Requirement: Counter Attack Lv: 5
-Description: Requires Swords Class Weapon. Quickly approach and attack a distant target. Movement Speed multiplies the skill's damage, and can even double it.
-[Lv 1]: Atk 200%, Range: 6,
-[Lv 2]: Atk 300%, Range: 7,
-[Lv 3]: Atk 400%, Range: 8,
+Description: Charges at the target.
+Deals P.DMG, scaling with WD.
+VCT cannot be reduced by stats or gear. The skill's Range is further increased by the equipped weapon's range.
+[Lv. 1]: ATK 200%, Range: 6 
+[Lv. 2]: ATK 300%, Range: 7
+[Lv. 3]: ATK 400%, Range: 8
+
 [Lv 4]: Atk 500%, Range: 9,
 [Lv 5]: Atk 600%, Range: 10
-Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 400.`,
+Formula: ATK (%): (100 + (100 x Skill Lv)) x (2.5 (0.01 x Walk Delay)); (Max 1200%) `,
     img: dashingBash,
   },
   {
@@ -147,19 +170,23 @@ Details: AfterCastActDelay set as ASPD + 220; Fixed Cast Time: 400.`,
     inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
+Weapon: Sword-Class 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
 Requirement: One-Handed Sword Mastery Lv: 5
-Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Critcal and Hit. This effect is also knocked off by Decrease AGI and Quagmire.
-[Lv 1]: Duration: 84sec, Critcal +1, Hit +2,
-[Lv 2]: Duration: 108sec, Critcal +2, Hit +4,
-[Lv 3]: Duration: 132sec, Critcal +3, Hit +6,
-[Lv 4]: Duration: 156sec, Critcal +4, Hit +8,
-[Lv 5]: Duration: 180sec, Critcal +5, Hit +10,
-[Lv 6]: Duration: 204sec, Critcal +6, Hit +12,
-[Lv 7]: Duration: 228sec, Critcal +7, Hit +14,
-[Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
-[Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
-[Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
+Description: Temporarily reduces DAA by 10% and increases ASPD by 20%. Also boosts CRIT and ACC. 
+[Lv. 1]: CRIT +1. ACC +2 Duration: 84s. SP Cost: 12 
+[Lv. 2]: CRIT +2. ACC +4 Duration: 108s. SP Cost: 14 
+[Lv. 3]: CRIT +3. ACC +6 Duration: 132s. SP Cost: 16 
+[Lv. 4]: CRIT +4. ACC +8 Duration: 156s. SP Cost: 18 
+[Lv. 5]: CRIT +5, ACC +10 Duration: 180s. SP Cost: 20 
+[Lv. 6]: CRIT +6, ACC +12 Duration: 204s. SP Cost: 22 
+[Lv. 7]: CRIT +7. ACC +14 Duration: 228s. SP Cost: 24 
+[Lv. 8]: CRIT +8. ACC +16 Duration: 252s. SP Cost: 26 
+[Lv. 9]: CRIT +9. ACC +18 Duration: 276s. SP Cost: 28 
+[Lv.10]: CRIT +10. ACC +20 Duration: 300s, SP Cost: 30`,
     img: swordQuicken,
   },
   
@@ -174,12 +201,18 @@ Description: Requires Swords Class Weapon. Temporarily boosts Attack Speed, Crit
     ],
     element: null,
     skillName: "Riding",
-    maxLevel: 1,
-    inform: `Max Lv: 1
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Passive
 Type: Physical
 Requirement: Endure Lv: 1
-Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750 but reduces ASPD and Flee by 50% while mounted. Riding affects Weapon Size Modifiers as follows:, One-Handed Sword: Small 100%, Medium 125%, Large 100%, Two-Handed Sword: Small 100%, Medium 100%, Large 125%, Spear: Small 100%, Medium 100%, Large 125%, PecoPeco Breeder.`,
+Description: Lets the user ride a Peco Peco. While mounted, reduces WD and Flee. While not mounted, increases CRIT and ACC. 
+Rental with: PecoPeco Breeder
+[Lv. 1]: Mounted: WD -13%, Flee -6% Unmounted: CRIT +2. ACC +4. 
+[Lv. 2]: Mounted: WD -16%, Flee -7% Unmounted: CRIT +4. ACC +8. 
+[Lv. 3]: Mounted: WD -19%, Flee -8% Unmounted: CRIT +6. ACC +12. 
+[Lv. 4]: Mounted: WD -22%, Flee -9% Unmounted: CRIT +8. ACC +16. 
+[Lv. 5]: Mounted: WD -25%, Flee -10% Unmounted: CRIT +10. ACC +20.`,
     img: riding,
   },
   {
@@ -197,21 +230,26 @@ Description: Enables the user to ride a Peco Peco. Increases Weight Limit by 750
     inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
+Weapon: Spear-Class 
 Target: Enemy
-Range: Weapon
+After Cast Delay: A.Delay 0.44s 
+Cooldown: A.Delay
+Range: 1+ Weapon's range
+SP Cost: 5
 Requirement: One-Spear Mastery Lv: 5
-Description: Requires Spear Class Weapon. Thrusts the equipped spear into a single target to deal Ranged Physical Damage. Each successful hit with this skill grants Stabbing stacks for 60 seconds, which can accumulate up to 50 times. Stabbing stacks increases the number of hits and damage dealt. Stabbing stacks: 0 to 10 stacks result in 1 hit, 11 to 30 stacks result in 2 hits, and 31 to 50 stacks result in 3 hits. Also, every 10 stacks gain +2% Aspd.
-[Lv 1]: Atk 110% x Hits,
-[Lv 2]: Atk 120% x Hits,
-[Lv 3]: Atk 130% x Hits,
-[Lv 4]: Atk 140% x Hits,
-[Lv 5]: Atk 150% x Hits,
-[Lv 6]: Atk 160% x Hits,
-[Lv 7]: Atk 170% x Hits,
-[Lv 8]: Atk 180% x Hits,
-[Lv 9]: Atk 190% x Hits,
-[Lv 10]: Atk 200% x Hits
-New calculation: ATK% = (20 × Skill Lv) + (Stabbing Stacks × 2).`,
+Description: Deals ranged P.DMG to the target.
+Each hit grants 1 Stabbing stack for 60s. Gaining more Stacks adds additional hits. 
+[Lv. 1]: ATK 120% x Hits
+[Lv. 2]: ATK 140% x Hits
+[Lv. 3]: ATK 160% x Hits 
+[Lv. 4]: ATK 180% x Hits 
+[Lv. 5]: ATK 200% x Hits
+[Lv. 6]: ATK 220% x Hits
+[Lv. 7]: ATK 240% x Hits
+[Lv. 8]: ATK 260% x Hits
+[Lv. 9]: ATK 280% x Hits
+[Lv. 10]: ATK 300% x Hits
+Formula: ATK (%): (100 + (20 x Skill Lv) + (Stabbing Stacks x 2)) x Hits `,
     img: pierce,
   },
   
@@ -229,21 +267,26 @@ New calculation: ATK% = (20 × Skill Lv) + (Stabbing Stacks × 2).`,
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Spear-Class 
 Type: Physical
 Target: Enemy
-Range: 6 ~ 10
+After Cast Delay: A.Delay
+Cooldown: A.Delay + 0.265 
+Hits: 1
 Requirement: Spear Stab Lv: 3
-Description: Requires Spear Class Weapon. Throws a spear at a target like a boomerang to inflict Ranged Physical Damage. Damage is greatly affected by Weight of equipped weapon. If used against targets with reduced Move Speed, it causes Immobilization for 0.5 seconds. Immobilized status is applied to the target even if it is immune to immobilizations.
-[Lv 1]: Atk 135% + 10% of Weapon Weight,
-[Lv 2]: Atk 170% + 20% of Weapon Weight,
-[Lv 3]: Atk 205% + 30% of Weapon Weight,
-[Lv 4]: Atk 240% + 40% of Weapon Weight,
-[Lv 5]: Atk 275% + 50% of Weapon Weight,
-[Lv 6]: Atk 310% + 60% of Weapon Weight,
-[Lv 7]: Atk 345% + 70% of Weapon Weight,
-[Lv 8]: Atk 380% + 80% of Weapon Weight,
-[Lv 9]: Atk 415% + 90% of Weapon Weight,
-[Lv 10]: Atk 450% + 100% of Weapon Weight`,
+Description: Deals ranged P.DMG to the target, scaling with weapon stats.
+If the target's WD is increased by a status effect, they become Immobilized for 0.5s. 
+[Lv. 1]: ATK 135%, Range: 5. SP Cost: 6 
+[Lv. 2]: ATK 170%, Range: 6. SP Cost: 7 
+[Lv. 3]: ATK 205%, Range: 6. SP Cost: 8 
+[Lv. 4]: ATK 240%, Range: 7. SP Cost: 9 
+[Lv. 5]: ATK 275%, Range: 7. SP Cost: 10 
+[Lv. 6]: ATK 310%, Range: 8. SP Cost: 11
+[Lv. 7]: ATK 345%, Range: 8. SP Cost: 12 
+[Lv. 8]: ATK 380%, Range: 9. SP Cost: 13 
+[Lv. 9]: ATK 415%, Range: 9. SP Cost: 14 
+[Lv.10]: ATK 450%, Range: 10. SP Cost: 15
+Formula: ATK (%): 100 + (((Weapon Weight / 10) + 35) Skill Lv) `,
     img: spearBoomerang,
   },
   {
@@ -260,20 +303,23 @@ Description: Requires Spear Class Weapon. Throws a spear at a target like a boom
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Weapon: Spear-Class 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
 Requirement: One-Spear Mastery Lv: 5
-Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critcal and Hit. This effect is also knocked off by Decrease AGI and Quagmire.
-[Lv 1]: Duration: 84sec, Critcal +1, Hit +2,
-[Lv 2]: Duration: 108sec, Critcal +2, Hit +4,
-[Lv 3]: Duration: 132sec, Critcal +3, Hit +6,
-[Lv 4]: Duration: 156sec, Critcal +4, Hit +8,
-[Lv 5]: Duration: 180sec, Critcal +5, Hit +10,
-[Lv 6]: Duration: 204sec, Critcal +6, Hit +12,
-[Lv 7]: Duration: 228sec, Critcal +7, Hit +14,
-[Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
-[Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
-[Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
+Description: Temporarily reduces DAA by 10% and increases ASPD by 20%, Also boosts CRIT and ACC 
+[Lv. 1]: CRIT +1, ACC +2 Duration: 84s. SP Cost: 12 
+[Lv. 2]: CRIT +2. ACC +4 Duration: 108s. SP Cost: 14 
+[Lv. 3]: CRIT +3, ACC +6 Duration: 132s. SP Cost: 16 
+[Lv. 4]: CRIT +4. ACC +8 Duration: 156s. SP Cost: 18
+[Lv. 5]: CRIT +5. ACC +10 Duration: 180s, SP Cost: 20 
+[Lv. 6]: CRIT +6. ACC +12 Duration: 204s, SP Cost: 22 
+[Lv. 7]: CRIT +7. ACC +14 Duration: 228s. SP Cost: 24 
+[Lv. 8]: CRIT +8. ACC +16 Duration: 252s. SP Cost: 26 
+[Lv. 9]: CRIT +9. ACC +18 Duration: 276s, SP Cost: 28 
+[Lv.10]: CRIT +10, ACC +20 Duration: 300s, SP Cost: 30`,
     img: spearQuicken,
   },
   {
@@ -291,16 +337,22 @@ Description: Requires Spear Class Weapon. Temporarily boosts Attack speed, Critc
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
+Weapon: Spear-Class 
 Type: Physical
 Target: Enemy
-Range: 4
+After Cast Delay: A.Delay 0.44s
+Cooldown: A.Delay + 0.36s
+Range: 4 + Weapon's range 
+Hits: 1
 Requirement: Pierce Lv: 5
-Description: Requires Spear Class Weapon. Thrusts the equipped spear against a single target to deal Ranged Physical Damage, knockback it and reducing its Move Speed by 15% for 8 seconds. If the target collides with any obstacle, there is a 12% chance per skill level of being Stunned. Slow caused by this skill works on any type of monster.
-[Lv 1]: Atk 180%, Knockback: 5 cells,
-[Lv 2]: Atk 260%, Knockback: 6 cells,
-[Lv 3]: Atk 340%, Knockback: 7 cells,
-[Lv 4]: Atk 420%, Knockback: 8 cells,
-[Lv 5]: Atk 500%, Knockback: 9 cells`,
+Description: Deals ranged P.DMG to enemies within a 3x3 AoE around the target, Knocking them back and increasing their WD by 15% for 8s.
+Has a chance to inflict Stun on any target that collides with an obstacle.
+[Lv. 1]: ATK 180%, Knockback: 5 Stun Chance: 12%, SP Cost: 7
+[Lv. 2]: ATK 260%, Knockback: 6 Stun Chance: 24%, SP Cost: 9 
+[Lv. 3]: ATK 340%, Knockback: 7 Stun Chance: 36%, SP Cost: 11 
+[Lv. 4]: ATK 420%, Knockback: 8 Stun Chance: 48%, SP Cost: 13 
+[Lv. 5]: ATK 500%, Knockback: 9 Stun Chance: 60%, SP Cost: 15
+Formula: ATK (%): 100 + (80 x skill Lv) `,
     img: spearStab,
   },
   {
@@ -317,22 +369,30 @@ Description: Requires Spear Class Weapon. Thrusts the equipped spear against a s
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Spear-Class 
 Type: Physical
 Target: Enemy
+Variable Cast Time: 0.20s
+Fixed Cast Time: 0.40s
+After Cast Delay: A.Delay 0.445
+Cooldown: 1s
 Range: 3
+Hits: 3
+SP Cost: 24
 Requirement: Spear Stab Lv: 5
-Description: Requires Spear Class Weapon. Swings the equipped spear forward to a single target to inflict Ranged Physical Damage to all enemies in front of the user. Every 30 VIT increases the SkillRatio by 1% per Base Level. The player cannot change weapons during this time.
-[Lv 1]: Atk 130% + VIT and B. Level Bonus,
-[Lv 2]: Atk 160% + VIT and B. Level Bonus,
-[Lv 3]: Atk 190% + VIT and B. Level Bonus,
-[Lv 4]: Atk 220% + VIT and B. Level Bonus,
-[Lv 5]: Atk 250% + VIT and B. Level Bonus,
-[Lv 6]: Atk 280% + VIT and B. Level Bonus,
-[Lv 7]: Atk 310% + VIT and B. Level Bonus,
-[Lv 8]: Atk 340% + VIT and B. Level Bonus,
-[Lv 9]: Atk 370% + VIT and B. Level Bonus,
-[Lv 10]: Atk 400% + VIT and B. Level Bonus
-Details: AfterCastActDelay set as ASPD + 220; Note: Has Hit -4.`,
+Description: Deals ranged P.DMG to enemies within a 7x7 AoE around the target, Knocking them back 2 cells. Damage scales with VIT and Base Level.
+Only enemies in front of the user are affected.
+[Lv. 1]: ATK 130%
+[Lv. 2]: ATK 160%
+[Lv. 3]: ATK 190%
+[Lv. 4]: ATK 220%
+[Lv. 5]: ATK 250%
+[Lv. 6]: ATK 280%
+[Lv. 7]: ATK 310%
+[Lv. 8]: ATK 340% 
+[Lv. 9]: ATK 370% 
+[Lv.10]: ATK 400%
+Formula: ATK (%): 100 + (30 x Skill Lv x (1 + ((VIT + 30) x (Base Lv = 100))))) `,
     img: brandishSpear,
   },
 ];
