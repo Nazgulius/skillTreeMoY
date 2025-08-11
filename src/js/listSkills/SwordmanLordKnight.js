@@ -164,7 +164,7 @@ VCT scales with skill level.
 [Lv. 8]: ATK 180%, VCT: 0.54s 
 [Lv. 9]: ATK 190%, VCT: 0.57s 
 [Lv.10]: ATK 200%, VCT: 0.60s
-Formula: ATK (9%): (100 + (((W.Weight / (20 - Spear Boomerang Lv)) + 10) x Skill Lv)) x Hits `,
+Formula: ATK (%): (100 + (((W.Weight / (20 - Spear Boomerang Lv)) + 10) x Skill Lv)) x Hits `,
     img: spiralPierce,
   },
 ];
