@@ -68,17 +68,19 @@ Description: Master the art of Falcon command. Increasing the chance to auto-cas
 Skill Form: Passive
 Type: Misc
 Requirement: Falconry Mastery Lv: 1
-Description: Amplify the might of your falcon attacks.
-[Lv 1]: Damage: +10,
-[Lv 2]: Damage: +20,
-[Lv 3]: Damage: +30,
-[Lv 4]: Damage: +40,
-[Lv 5]: Damage: +50,
-[Lv 6]: Damage: +60,
-[Lv 7]: Damage: +70,
-[Lv 8]: Damage: +80,
-[Lv 9]: Damage: +90,
-[Lv 10]: Damage: +100`,
+Description: Increases the damage of Blitz
+Beat and Falcon Assault skills.
+These skills also start ignoring part of the target's M.DEF.
+[Lv. 1]: Damage +1%, MDEF -1% 
+[Lv. 2]: Damage +2%, MDEF -2%
+[Lv. 3]: Damage +3%, MDEF -3% 
+[Lv. 4]: Damage +4%, MDEF -4% 
+[Lv. 5]: Damage +5%, MDEF -5% 
+[Lv. 6]: Damage +6%, MDEF -6% 
+[Lv. 7]: Damage +7%, MDEF -7% 
+[Lv. 8]: Damage +8%, MDEF -8% 
+[Lv. 9]: Damage +9%, MDEF -9% 
+[Lv.10]: Damage +10%, MDEF -10%`,
     img: steelCrow,
   },
   {
@@ -124,24 +126,34 @@ and Insect monsters.
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Magical 
 Target: Enemy
+Element: Neutral
+Fixed Cast Time: 0.60s
+After Cast Delay: A.Delay 0.14s 
+Cooldown: A.Delay + 0.365
 Range: 12
+Hits: 6
 Requirement: Falconry Mastery Lv: 1
-Description: Commands the Falcon to dive at a single target and strike repeatedly to inflict special ranged damage to all enemies in a [3*3] area around the target. Falcon damage increases with owners AGI, DEX, INT and MATK. For Bows: Every 3 LUK points, auto-cast chance is increased by 1%. For Daggers: Every 2 LUK points, auto-cast chance is increased by 1%.
-The skill no longer ignores DEF.
-[Lv 1]: Hits: 2,
-[Lv 2]: Hits: 2,
-[Lv 3]: Hits: 3,
-[Lv 4]: Hits: 3,
-[Lv 5]: Hits: 4,
-[Lv 6]: Hits: 4,
-[Lv 7]: Hits: 5,
-[Lv 8]: Hits: 5,
-[Lv 9]: Hits: 6,
-[Lv 10]: Hits: 6
-New calculation: Damage = (Skill Lv × 10) + (Steel Crow Lv × 10) + Agi + (Dex ÷ 5) + (Luk ÷ 3) + (Matk × (Int / 80)).
-Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (50 × Skill Lv); Fixed Cast Time: 600. `,
+Description: Deals M.DMG to enemies within a 3x3 AoE around the target, scaling with Base Level.
+Has a chance to auto-cast on basic attacks, scaling with the weapon's stats and the learned level of Falconry Mastery.
+When this skill is auto-cast, it only targets a single enemy.
+The auto-cast chance doubles while wielding a Dagger or bare handed.
+VCT scales with skill level.
+[Lv. 1]: VCT: 0.75s. SP Cost: 9
+[Lv. 2]: VCT: 0.80s. SP Cost: 11
+[Lv. 3]: VCT: 0.85s. SP Cost: 13 
+[Lv. 4]: VCT: 0.90s. SP Cost: 15 
+[Lv. 5]: VCT: 0.95s. SP Cost: 17 
+[Lv. 6]: VCT: 1.00s. SP Cost: 19 
+[Lv. 7]: VCT: 1.05s. SP Cost: 21 
+[Lv. 8]: VCT: 1.10s. SP Cost: 23 
+[Lv. 9]: VCT: 1.15s. SP Cost: 25 
+[Lv.10]: VCT: 1.20s. SP Cost: 27
+Formula: MATK (%): 100 + (Skill Lv x 50) + (Base Lv x 3) 
+ Auto-cast chance: (LUK / 3) + (2 x Falconry Mastery Lv)
+
+`,
     img: blitzBeat,
   },
   {
@@ -181,16 +193,18 @@ Description: Reveals Invisible entities within a 7x7 AoE around the targeted loc
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive
 Target: Trap
-Range: 5
+After Cast Delay: A.Delay 0.44s 
+Cooldown: A.Delay
+SP Cost: 10
 Requirement: Falconry Mastery Lv: 3
-Description: Commands Falcon to remove a set Trap from a distance.
-[Lv 1]: Range: 5 cells,
-[Lv 2]: Range: 6 cells,
-[Lv 3]: Range: 7 cells,
-[Lv 4]: Range: 8 cells,
-[Lv 5]: Range: 9 cells`,
+Description: Removes a targeted trap. Requires a Falcon.
+[Lv. 1]: Range: 5 cells
+[Lv. 2]: Range: 6 cells
+[Lv. 3]: Range: 7 cells
+[Lv. 4]: Range: 8 cells 
+[Lv. 5]: Range: 9 cells`,
     img: springTrap,
   },
   {
@@ -210,17 +224,27 @@ Description: Commands Falcon to remove a set Trap from a distance.
     skillName: "Blast Mine",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
+Skill Form: Active 
+Type: Offensive 
 Target: Ground
-Range: 2
+Element: Wind
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.34s
+Cooldown: 0.50s
+Range: 4 Hits: 1
+SP Cost: 15
 Requirement: Trap Research Lv: 1, Land Mine Lv: 1
-Description: Deploys a trap that explodes when triggered, dealing piercing Wind damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5,
-[Lv 2]: Trap HP: 10,
-[Lv 3]: Trap HP: 15,
-[Lv 4]: Trap HP: 20,
-[Lv 5]: Trap HP: 25`,
+Description: Sets a trap at the targeted location. When triggered, deals P.DMG to enemies within a 5x5 AoE, scaling with Max SP, Base Level and the learned level of Trap Research. Also reduces their Wind property damage resistance by 5% for 10s.
+Lasts 90s on the ground and can be pushed back 3 cells by attacks.
+Ignores FLEE, Auto Guard, Parry and Weapon Blocking.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: ATK 100%, Trap HP: 5 
+[Lv. 2]: ATK 200%, Trap HP: 10
+[Lv. 3]: ATK 300%, Trap HP: 15 
+[Lv. 4]: ATK 400%, Trap HP: 20 
+[Lv. 5]: ATK 500%, Trap HP: 25
+Formula: ATK%: (Skill Lv x 100) + (Base Lv x 6) + (Trap Research Lv x 10) + (Max SP / 4) `,
     img: blastMine,
   },
   {
@@ -241,16 +265,27 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Wind 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Offensive
 Target: Ground
-Range: 2
+Element: Fire
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.345
+Cooldown: 0.50s
+Range: 4
+Hits: 1
+SP Cost: 15
 Requirement: Trap Research Lv: 1, Land Mine Lv: 3, Blast Mine Lv: 2, Glacial Trap Lv: 1
-Description: Deploys a trap that explodes when triggered, dealing piercing Fire damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5,
-[Lv 2]: Trap HP: 10,
-[Lv 3]: Trap HP: 15,
-[Lv 4]: Trap HP: 20,
-[Lv 5]: Trap HP: 25`,
+Description: Sets a trap at the targeted location. When triggered, deals P.DMG to enemies within a 5x5 AoE, scaling with Max SP, Base Level and the learned level of Trap Research. Also reduces their Fire property damage resistance by 5% for 10s.
+Lasts 90s on the ground and can be pushed back 3 cells by attacks.
+Ignores FLEE, Auto Guard, Parry and Weapon Blocking.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: ATK 100%, Trap HP: 5 
+[Lv. 2]: ATK 200%, Trap HP: 10 
+[Lv. 3]: ATK 300%, Trap HP: 15 
+[Lv. 4]: ATK 400%, Trap HP: 20 
+[Lv. 5]: ATK 500%, Trap HP: 25
+Formula: ATK%: (Skill Lv x 100) + (Base Lv x 6) + (Trap Research Lv x 10) + (Max SP / 4) `,
     img: claymoreTrap,
   },
   {
@@ -270,16 +305,22 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Fire 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
-Range: 2
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay - 0.44s
+Cooldown: 0.50s
+Range: 4
+SP Cost: 12
 Requirement: Trap Research Lv: 1
-Description: Deploys trap at a targeted location that immobilizes any enemy that steps on it. The duration of immobilization decreases based on the targets AGI. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5, Duration: 28 sec,
-[Lv 2]: Trap HP: 10, Duration: 56 sec,
-[Lv 3]: Trap HP: 15, Duration: 84 sec,
-[Lv 4]: Trap HP: 20, Duration: 112 sec,
-[Lv 5]: Trap HP: 25, Duration: 140 sec`,
+Description: Sets a trap at the targeted location that lasts 20s. When triggered, has a chance to inflict Immobilized for 10s.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: Immobilization Chance: 10% Trap HP: 5
+[Lv. 2]: Immobilization Chance: 20% Trap HP: 10
+[Lv. 3]: Immobilization Chance: 30% Trap HP: 15
+[Lv. 4]: Immobilization Chance: 40% Trap HP: 20
+[Lv. 5]: Immobilization Chance: 50% Trap HP: 25`,
     img: ankleSnare,
   },
   {
@@ -300,16 +341,22 @@ Description: Deploys trap at a targeted location that immobilizes any enemy that
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
-Range: 2
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay - 0.44s
+Cooldown: 0.50s
+Range: 4
+SP Cost: 12
 Requirement: Trap Research Lv: 1, Skid Trap Lv: 2, Ankle Snare Lv: 1
-Description: Deploys trap at a targeted location that releases a blinding flash when triggered, potentially causing all enemies within the area to become blind for 18 seconds. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5, Duration: 28 sec, Blind chance: 50%,
-[Lv 2]: Trap HP: 10, Duration: 56 sec, Blind chance: 60%,
-[Lv 3]: Trap HP: 15, Duration: 84 sec, Blind chance: 70%,
-[Lv 4]: Trap HP: 20, Duration: 112 sec, Blind chance: 80%,
-[Lv 5]: Trap HP: 25, Duration: 140 sec, Blind chance: 90%`,
+Description: Sets a trap at the targeted location that lasts for 20s. When triggered, has a chance to inflict Blind on enemies within a 5x5 AoE for 10s.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: Trap HP: 5. Blind Chance: 10%
+[Lv. 2]: Trap HP: 10. Blind Chance: 20% 
+[Lv. 3]: Trap HP: 15. Blind Chance: 30% 
+[Lv. 4]: Trap HP: 20. Blind Chance: 40% 
+[Lv. 5]: Trap HP: 25. Blind Chance: 50%`,
     img: flasher,
   },
   {
@@ -330,16 +377,27 @@ Description: Deploys trap at a targeted location that releases a blinding flash 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Offensive
 Target: Ground
-Range: 2
+Element: Water
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.34s
+Cooldown: 0.50s
+Range: 4
+Hits: 1
+SP Cost: 15
 Requirement: Trap Research Lv: 1, Land Mine Lv: 2, Blast Mine Lv: 1
-Description: Deploys a trap that explodes when triggered, dealing piercing Water damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5,
-[Lv 2]: Trap HP: 10,
-[Lv 3]: Trap HP: 15,
-[Lv 4]: Trap HP: 20,
-[Lv 5]: Trap HP: 25`,
+Description: Sets a trap at the targeted location. When triggered, deals P.DMG to enemies within a 5x5 AoE, scaling with Max SP, Base Level and the learned level of Trap Research. Also reduces their Water property damage resistance by 5% for 10s.
+Lasts 90s on the ground and can be pushed back 3 cells by attacks.
+Ignores FLEE, Auto Guard, Parry and Weapon Blocking.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: ATK 100%, Trap HP: 5 
+[Lv. 2]: ATK 200%, Trap HP: 10
+[Lv. 3]: ATK 300%, Trap HP: 15 
+[Lv. 4]: ATK 400%, Trap HP: 20 
+[Lv. 5]: ATK 500%, Trap HP: 25
+Formula: ATK%: (Skill Lv x 100) + (Base Lv x 6) + (Trap Research Lv x 10) + (Max SP / 4) `,
     img: glacialTrap,
   },
   {
@@ -360,16 +418,27 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Water
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Offensive 
 Target: Ground
-Range: 2
+Element: Earth
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.34s
+Cooldown: 0.50s
+Range: 4
+Hits: 1
+SP Cost: 15
 Requirement: Trap Research Lv: 1
-Description: Deploys a trap that explodes when triggered, dealing piercing Earth damage to all enemies in a 5x5 area. Damage increases upon skill level, users base level, DEX and INT. Traps ignores accuracy checks and lasts for 90 seconds, and can be placed directly under enemies. It can be pushed 3 cells back with basic attacks. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5,
-[Lv 2]: Trap HP: 10,
-[Lv 3]: Trap HP: 15,
-[Lv 4]: Trap HP: 20,
-[Lv 5]: Trap HP: 25`,
+Description: Sets a trap at the targeted location. When triggered, deals P.DMG to enemies within a 5x5 AoE, scaling with Max SP, Base Level and the learned level of Trap Research. Also reduces their Earth property damage resistance by 5% for 10s.
+Lasts 90s on the ground and can be pushed back 3 cells by attacks.
+Ignores FLEE, Auto Guard, Parry and Weapon Blocking.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: ATK 100%, Trap HP: 5 
+[Lv. 2]: ATK 200%, Trap HP: 10
+[Lv. 3]: ATK 300%, Trap HP: 15 
+[Lv. 4]: ATK 400%, Trap HP: 20 
+[Lv. 5]: ATK 500%, Trap HP: 25
+Formula: ATK%: (Skill Lv x 100) + (Base Lv x 6) + (Trap Research Lv x 10) + (Max SP / 4) `,
     img: landMine,
   },
   {
@@ -384,11 +453,13 @@ Description: Deploys a trap that explodes when triggered, dealing piercing Earth
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Trap
+After Cast Delay: 0.60s
 Range: 2
+SP Cost: 5
 Requirement: Trap Research Lv: 5
-Description: Removes a trap that has been set on the ground, as well as regain that Trap.`,
+Description: Removes the targeted trap and returns it to the inventory.`,
     img: removeTrap,
   },
   {
@@ -409,16 +480,22 @@ Description: Removes a trap that has been set on the ground, as well as regain t
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
-Range: 2
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.445
+Cooldown: 0.50s
+Range: 4
+SP Cost: 12
 Requirement: Trap Research Lv: 1, Skid Trap Lv: 3, Ankle Snare Lv: 2, Flasher Lv: 1
-Description: Deploys trap at a targeted location that releases a sedative when triggered, potentially putting all enemies within the area to sleep for 18 seconds. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5, Duration: 28 sec, Sleep chance: 50%,
-[Lv 2]: Trap HP: 10, Duration: 56 sec, Sleep chance: 60%,
-[Lv 3]: Trap HP: 15, Duration: 84 sec, Sleep chance: 70%,
-[Lv 4]: Trap HP: 20, Duration: 112 sec, Sleep chance: 80%,
-[Lv 5]: Trap HP: 25, Duration: 140 sec, Sleep chance: 90%`,
+Description: Sets a trap at the targeted location that lasts for 20s. When triggered, has a chance to inflict Sleep on enemies within a 5x5 AoE for 10s.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: Trap HP: 5. Sleep Chance: 10%
+[Lv. 2]: Trap HP: 10. Sleep Chance: 20% 
+[Lv. 3]: Trap HP: 15. Sleep Chance: 30% 
+[Lv. 4]: Trap HP: 20. Sleep Chance: 40% 
+[Lv. 5]: Trap HP: 25. Sleep Chance: 50%`,
     img: sandman,
   },
   {
@@ -440,16 +517,26 @@ Description: Deploys trap at a targeted location that releases a sedative when t
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Offensive
 Target: Ground
-Range: 2
+Element: Elementless
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.34s
+Cooldown: 0.50s
+Range: 4
+SP Cost: 45
 Requirement: Land Mine Lv: 4, Skid Trap Lv: 4, Blast Mine Lv: 3, Ankle Snare Lv: 3, Glacial Trap Lv: 2, Flasher Lv: 2, Claymore Trap Lv: 1, Sandman Lv: 1
-Description: Deploys trap that releases a shockwave when triggered, drains the target's SP every 2 seconds for 20 seconds. Deals damage equal to double the SP burned. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5, Duration: 23 sec, SP Burn: 4%,
-[Lv 2]: Trap HP: 10, Duration: 46 sec, SP Burn: 5%,
-[Lv 3]: Trap HP: 15, Duration: 69 sec, SP Burn: 6%,
-[Lv 4]: Trap HP: 20, Duration: 92 sec, SP Burn: 7%,
-[Lv 5]: Trap HP: 25, Duration: 115 sec, SP Burn: 8%`,
+Description: Sets a trap at the targeted location that lasts for 20s. When triggered, deals P.DMG to enemies within a 5x5 AoE, scaling with Max SP, Base Level and the learned level of Trap Research. Also reduces their Neutral property damage resistance by 5% for 10s.
+Has a chance to inflict Shockwave for 10s. While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: ATK 100%, Trap HP: 5 
+[Lv. 2]: ATK 200%, Trap HP: 10
+[Lv. 3]: ATK 300%, Trap HP: 15 
+[Lv. 4]: ATK 400%, Trap HP: 20 
+[Lv. 5]: ATK 500%, Trap HP: 25
+Formula: ATK%: (Skill Lv x 100) + (Base Lv x 6) + (Trap Research Lv x 10) + (Max SP / 4) 
+Burned SP (%): 3 + Skill Lv
+Shockwave Damage: (Burned SP x 2) + (Trap Research Lv x 50) `,
     img: shockwaveTrap,
   },
   {
@@ -469,16 +556,22 @@ Description: Deploys trap that releases a shockwave when triggered, drains the t
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
-Range: 2
+Fixed Cast Time: 1s
+After Cast Delay: A.Delay 0.44s
+Cooldown: 0.50s
+Range: 4
+SP Cost: 10
 Requirement: Trap Research Lv: 1
-Description: Deploys trap that causes any enemy that steps on it to slip and slide in a certain direction. Catalyst: 1x Trap.
-[Lv 1]: Trap HP: 5, Duration: 28 sec, Knock Back: 6 cells,
-[Lv 2]: Trap HP: 10, Duration: 56 sec, Knock Back: 7 cells,
-[Lv 3]: Trap HP: 15, Duration: 84 sec, Knock Back: 8 cells,
-[Lv 4]: Trap HP: 20, Duration: 112 sec, Knock Back: 9 cells,
-[Lv 5]: Trap HP: 25, Duration: 140 sec, Knock Back: 10 cells`,
+Description: Sets a trap at the targeted location that lasts for 20s. When triggered, Knocks the enemy back 7 cells.
+While wielding a Dagger or bare handed, doubles the skill's Range and halves its FCT and CD.
+Catalyst: 1x Trap
+[Lv. 1]: Trap HP: 5
+[Lv. 2]: Trap HP: 10
+[Lv. 3]: Trap HP: 15
+[Lv. 4]: Trap HP: 20
+[Lv. 5]: Trap HP: 25`,
     img: skidTrap,
   },
   {
@@ -503,18 +596,18 @@ Description: Deploys trap that causes any enemy that steps on it to slip and sli
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
-Description: Boosts the effectiveness of traps, Increases damage for Land Wine, Blast Mine, Freezing Trap, Claymore Trap, and Shockwave Trap. Extends the duration of Skid Trap, Ankle Snare, Flasher, Sandman, and Shockwave Trap. At levels 5 and 10, it expands the trap placement range, Every 2 levels alsa increase INT and DEX.
-[Level 1]; Trap Damage +20, Trap Duration +10 sec, INT/DEX +1
-[Level 2]: Trap Damage +40, Trap Duration +20 sec, INT/DEX +1
-[Level 3]: Trap Damage +60, Trap Duration +30 sec, INT/DEX +2
-[Level 4]: Trap Damage +80, Trap Duration +30 sec, INT/DEX +2
-[Level 5]: Trap Damage , Trap Duration , INT/DEX 
-[Level 6]: Trap Damage , Trap Duration , INT/DEX 
-[Level 7]: Trap Damage , Trap Duration , INT/DEX 
-[Level 8]: Trap Damage , Trap Duration , INT/DEX 
-[Level 9]: Trap Damage , Trap Duration , INT/DEX 
-[Level 10]: Trap Damage , Trap Duration , INT/DEX 
-`,
+Description: Increases the duration and the property resistance drop of Offensive traps. Also boosts and the NSE chance of Supportive traps.
+Also increases INT.
+[Lv. 1]: INT +1. NSE Chance +5% Duration +10s. Resistance Drop +1% 
+[Lv. 2]: INT +2. NSE Chance +10% Duration +20s. Resistance Drop +2% 
+[Lv. 3]: INT +3. NSE Chance +15% Duration +30s. Resistance Drop +3% 
+[Lv. 4]: INT +4. NSE Chance +20% Duration +40s. Resistance Drop +4% 
+[Lv. 5]: INT +5. NSE Chance +25% Duration +50s. Resistance Drop +5% 
+[Lv. 6]: INT +6. NSE Chance +30% Duration +60s. Resistance Drop +6%
+[Lv. 7]: INT +7. NSE Chance +35% Duration +70s. Resistance Drop +7% 
+[Lv. 8]: INT +8. NSE Chance +40% Duration +80s. Resistance Drop +8% 
+[Lv. 9]: INT +9, NSE Chance +45% Duration +90s. Resistance Drop +9% 
+[Lv.10]: INT +10. NSE Chance +50% Duration +100s. Resistance Drop +10%`,
     img: trapResearch,
   },
 ];
