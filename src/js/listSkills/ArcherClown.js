@@ -24,24 +24,31 @@ export const skillsClown = [
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Instrument/Whip 
 Type: Physical
 Target: Enemy
+Element: Ammunition
+After Cast Delay: A.Delay - 0.26s
+Fixed Cast Time: 0.60s
+Cooldown: 1.50s
 Range: 12
+Hits: 9
 Requirement: Arrow Shower Lv: 5, Musical Strike Lv: 1, Double Strafe Lv: 5
-Description: Fires a rapid flurry of arrows at a targeted enemy, with damage increasing based on your Base Level. This skill requires a Musical Instrument Class Weapon for Minstrels or a Whip Class Weapon for Gypsies. If used after Musical Strike or Slinging Strike, halves the fixed and variable cast times and removes the after-cast delay. Consumes: 3x Arrow.
-[Lv 1]: Atk 610%,
-[Lv 2]: Atk 720%,
-[Lv 3]: Atk 830%,
-[Lv 4]: Atk 940%,
-[Lv 5]: Atk 1050%,
-[Lv 6]: Atk 1160%,
-[Lv 7]: Atk 1270%,
-[Lv 8]: Atk 1380%,
-[Lv 9]: Atk 1490%,
-[Lv 10]: Atk 1600%
-New calculation: ATK% = (100 + (8 × Skill Lv)) × Hits.
-Details: HitCount of 9; AfterCastActDelay set as ASPD + 220; CastTime: 400 + (100 × Skill Lv); Fixed Cast Time: 600; Cooldown: 1500; AmmoAmount: 1.
-`,
+Description: Deals ranged P.DMG to the target.
+Grants +3 hits if used after Musical Strike or Slinging Strike.
+VCT scales with skill level.
+Catalyst: 1x Arrow
+[Lv. 1]: ATK 108% x Hits, VCT: 0.50s SP Cost: 17
+[Lv. 2]: ATK 116% x Hits. VCT: 0.60s SP Cost: 19
+[Lv. 3]: ATK 124% x Hits, VCT: 0.70s SP Cost: 21
+[Lv. 4]: ATK 132% x Hits, VCT: 0.80s SP Cost: 23
+[Lv. 5]: ATK 140% x Hits, VCT: 0.90s SP Cost: 25
+[Lv. 6]: ATK 148% x Hits. VCT: 1.00s SP Cost: 27
+[Lv. 7]: ATK 156% x Hits. VCT: 1.10s SP Cost: 29
+[Lv. 8]: ATK 164% x Hits. VCT: 1.20s SP Cost: 31
+[Lv. 9]: ATK 172% x Hits. VCT: 1.30s SP Cost: 33
+[Lv.10]: ATK 180% x Hits. VCT: 1.40s SP Cost: 35
+Formula: ATK (%): (100 + (Skill Lv x 8)) x Hits `,
     img: arrowVulcan,
   },
   {
@@ -57,15 +64,21 @@ Details: HitCount of 9; AfterCastActDelay set as ASPD + 220; CastTime: 400 + (10
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+ype: Supportive
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Improve Concentration Lv: 5, Musical Lesson Lv: 7
-Description: The Moonlight Watermill performance can be executed by both Minstrels and Gypsies, providing inspiration to the group. However, the characteristics of this performance vary depending on the performer. Both effects share the same type, preventing simultaneous activation of both. When performed by Minstrels, it grants an Atk, whereas when executed by Gypsies, it offers an MAtk. The granted bonuses are influenced by the presence of additional Minstrels or Gypsies in the group. The more Minstrels in the group, the higher the Atk, and the same principle applies to Gypsies for the MAtk. Additionally, the users job level and the level of [Musical Lesson] or [Dancing Lesson] also contribute to increasing the bonuses provided by the performance. Requires Musical Instrument Class Weapon for Minstrels and Whip Class Weapon for Gypsies.
-[Lv 1]: Atk or MAtk +6,
-[Lv 2]: Atk or MAtk +12,
-[Lv 3]: Atk or MAtk +18,
-[Lv 4]: Atk or MAtk +24,
-[Lv 5]: Atk or MAtk +30`,
+Description: Increases B.ATK or B.MATK of nearby allies for 180s, depending on Class. Scales with Job Level, Musical Lesson, Dancing Lesson, and number of party members. 
+[Lv 1]: B.ATK or B.MATK +6. SP Cost: 30 
+[Lv 2]: B.ATK or B.MATK +12. SP Cost: 40 
+[Lv 3]: B.ATK or B.MATK +18. SP Cost: 50 
+[Lv 4]: B.ATK or B.MATK +24. SP Cost: 60 
+[Lv 5]: B.ATK or B.MATK +30. SP Cost: 70
+Formula: BATK: + (Skill Lv x 6) + (Job Lv / 7) + Musical Lesson Lv + Number of Bards in the party 
+       B.MATK: + (Skill Lv x 6) + (Job Lv / 7) + Dancing Lesson Ly + Number of Dancers in the party `,
     img: moonlitWaterMill,
   },
   {
@@ -80,17 +93,23 @@ Description: The Moonlight Watermill performance can be executed by both Minstre
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
+Weapon: Instrument/Whip
 Type: Magical
 Target: Enemy
+Element: Ammunition.
+After Cast Delay: 1s 
+Fixed Cast Time: 0.60s 
+Cooldown: 1.50s
 Range: 9
 Requirement: Dissonance Lv: 5
-Description: Emits a high-frequency sound wave at an enemy, causing magical damage to the target and all enemies within a 5x5 area. Skills element is determined by the arrows element.
-[Lv 1]: MAtk 700%,
-[Lv 2]: MAtk 900%,
-[Lv 3]: MAtk 1100%,
-[Lv 4]: MAtk 1300%,
-[Lv 5]: MAtk 1500%
-Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (200 × Skill Lv); Fixed Cast Time: 600; Cooldown: 1500.`,
+Description: Deals M.DMG to enemies within a 5x5 AoE around the target.
+VCT scales with skill level.
+Catalyst: 1x Arrow
+[Lv. 1]: MATK 700%, VCT: 1.10s SP Cost: 30
+[Lv. 2]: MATK 900%, VCT: 1.30s SP Cost: 35
+[Lv. 3]: MATK 1100%, VCT: 1.50s SP Cost: 40
+[Lv. 4]: MATK 1300%, VCT: 1.70s SP Cost: 45
+[Lv. 5]: MATK 1500%, VCT: 1.90s SP Cost: 50`,
     img: reverberation,
   },
   {
@@ -106,9 +125,36 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime: 700 + (200 × Skill Lv);
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Self
+SP Cost: 70
 Requirement: Improve Concentration Lv: 10, Dissonance Lv: 3
+Description: When activated for the first time, Tarot Cards are displayed in order above the user's head for 30s.
+Upon second activation, the displayed card is used on allies and enemies within an 11x11 AoE.
+After a card is used, it is removed from the list and replaced by a random card on the next skill use.
+CD scales with skill level.
+The Lovers: Heals allies 20% Max HP. Inflicts Seduction on enemies for 5s. 
+The Fool: Heals allies 20% Max SP. Burns enemies' SP by 20%, 
+The Chariot: Removes movement NSE and reduces WD by 20% for allies for 60s. Also grants 2s immunity to movement NSE. Increases WD by 20% for enemies for 30s. 
+The Hanged Man: Removes control NSE from allies and grants 10s immunity. Inflicts Hallucination and Chaos on allies and enemies for 10s.
+The High Priestess: Grants allies immunity to the next NSE for 60s. Ignores enemies' resistance to the next NSE for 30s.
+The Tower: Increases allies' S.DEF by 150 for 60s. Reduces enemies' S.DEF by 300 for 30s. 
+The Temperance: Grants +20% Healing Received Effectiveness to allies for 60s. Prevents user and enemies from hurting each other for 5s.
+The Sun: Increases allies' B.ATK, W.ATK, B.MATK, H.DEF, H.MDEF, FLEE, and ACC by 5% for 60s. Decreases these stats for enemies by 5% for 30s.
+The Devil: Increases allies' B.ATK, W.ATK and B.MATK by 10% for 60s. Decreases these stats for enemies by 5% and deals 666 T.DMG every 1.5s for 30s. 
+Wheel of Fortune: Applies effects of two random cards to allies and enemies.
+The Star: Decreases allies' FCT by 20% for 60s. Increases enemies' FCT by 20% for 30s. 
+The Strength: Increases allies' B.ATK and W.ATK by 20% for 60s. Reduces enemies' B.ATK and W.ATK by 20% for 30s.
+The Magician: Increases allies' B.MATK by 20% for 60s. Decreases enemies' B.MATK by 20% for 30s. 
+Death: Resurrects allies and changes their property to Corrupt for 60s. Deals 1000 T.DMG as Corrupt property and changes enemies' property to Corrupt for 30s.
+Catalyst: 1x 'Tarot Cards
+[Lv. 1]: CD: 90s
+[Lv. 2]: CD: 75s
+[Lv. 3]: CD: 60s
+[Lv. 4]: CD: 45s
+[Lv. 5]: CD: 30s
+
+*** Old note ***
 Description: When using [Tarot Card of Fate], the cards are drawn one by one, and the drawn cards appear above your head. Upon using [Tarot Card of Fate] again, you select the card to be used. After that, you can choose the target for the Tarot card, whether it be yourself, an ally, or an enemy. The cooldown, cast time, and cast delay of [Tarot Card of Fate] are applied after choosing a target for the card. The effects of tarot cards are:
 [The Fool]: Allies: If your current SP percentage is higher than the targets, transfer yours to the target. When used on yourself, restores 20% of maximum SP. Enemies: If your current SP percentage is higher than the targets, removes the same amount of SP from the target.
 [The Magician]: Allies: Increases MATK by 20% for 15 seconds. Enemies: Decreases MATK by 20% for 15 seconds.
