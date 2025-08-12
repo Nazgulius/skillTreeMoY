@@ -39,19 +39,19 @@ export const skillsBard = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Instrument
 Requirement: None
-Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. When [Lv 10], it increases Max SP in 6%.
-[Lv 1]: Atk +2, MAtk +2, Aspd +1%,
-[Lv 2]: Atk +4, MAtk +4, Aspd +2%,
-[Lv 3]: Atk +6, MAtk +6, Aspd +3%,
-[Lv 4]: Atk +8, MAtk +8, Aspd +4%,
-[Lv 5]: Atk +10, MAtk +10, Aspd +5%,
-[Lv 6]: Atk +12, MAtk +12, Aspd +6%,
-[Lv 7]: Atk +14, MAtk +14, Aspd +7%,
-[Lv 8]: Atk +16, MAtk +16, Aspd +8%,
-[Lv 9]: Atk +18, MAtk +18, Aspd +9%,
-[Lv 10]: Atk +20, MAtk +20, Aspd +10%
-`,
+Description: Increases E.ATK, E.MATK and decreases DAA while wielding an Instrument. At max level, also grants +6% Max SP. 
+[Lv. 1]: E.ATK +2. E.MATK +2. DAA -1% 
+[Lv. 2]: E.ATK +4. E.MATK +4. DAA -2% 
+[Lv. 3]: E.ATK +6. E.MATK +6. DAA -3% 
+[Lv. 4]: E.ATK +8. E.MATK +8. DAA -4% 
+[Lv. 5]: E.ATK +10. E.MATK +10. DAA -5% 
+[Lv. 6]: E.ATK +12. E.MATK +12. DAA -6% 
+[Lv. 7]: E.ATK +14. E.MATK +14. DAA -7% 
+[Lv. 8]: E.ATK +16. E.MATK +16. DAA -8% 
+[Lv. 9]: E.ATK +18. E.MATK +18. DAA -9% 
+[Lv.10]: E.ATK +20. E.MATK +20. DAA -10%`,
     img: musicalLesson,
   },
   {
@@ -68,19 +68,25 @@ Description: Increase Atk, MAtk and Aspd with Musical Instruments Class Weapon. 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
+Weapon: Instrument 
 Type: Physical
 Target: Enemy
+Element: Ammunition
+Fixed Cast Time: 0.30s
+After Cast Delay: A.Delay - 0.26s
+Cooldown: A.Delay
 Range: 12
+Hits: 2
 Requirement: Musical Lesson Lv: 3
-Description: Fires a powerful volley of arrows using an instrument. The Arrows element determines the element of this attack. Consumes: 2x Arrow.
-[Lv 1]: Atk 130% x 2 Hits,
-[Lv 2]: Atk 160% x 2 Hits,
-[Lv 3]: Atk 190% x 2 Hits,
-[Lv 4]: Atk 220% x 2 Hits,
-[Lv 5]: Atk 250% x 2 Hits
-New calculation: ATK% = (50 + Crit) + (30 × Skill Lv).
-Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed Cast Time: 400; AmmoAmount: 1.
-`,
+Description: Deals ranged P.DMG to the target, scaling with CRIT.
+VCT scales with skill level.
+Catalyst: 1x Arrow
+[Lv. 1]: ATK 180% x Hits. VCT: 0.30s SP Cost: 8
+[Lv. 2]: ATK 210% x Hits. VCT: 0.40s SP Cost: 11
+[Lv. 3]: ATK 240% x Hits, VCT: 0.50s SP Cost: 14
+[Lv. 4]: ATK 270% x Hits, VCT: 0.60s SP Cost: 17
+[Lv. 5]: ATK 300% x Hits, VCT: 0.70s SP Cost: 20
+Formula: ATK (%): (50 + CRIT + (Skill Lv x 30)) x Hits `,
     img: musicalStrike,
   },
   {
@@ -101,21 +107,26 @@ Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Toggle
+Weapon: Instrument 
 Type: Magical
 Target: Self
+Element: Neutral
+Variable Cast Time: 0.70s 
+Fixed Cast Time: 0.30s
+After Cast Delay: 0.30s 
+Cooldown: 10s
 Requirement: Musical Lesson Lv: 2
-Description: Plays a discordant tune, dealing Neutral magic damage to all enemies in a 9x9 radius every 3 seconds. Reduces movement speed by 25% and consumes 3 SP per second while active. Can trigger auto-cast items. You can still use basic attacks and skills while active. Requires a Musical Instrument class weapon. Cannot switch weapons while active.
-[Lv 1]: (Atk + MAtk) x 30% every 3 seconds,
-[Lv 2]: (Atk + MAtk) x 60% every 3 seconds,
-[Lv 3]: (Atk + MAtk) x 90% every 3 seconds,
-[Lv 4]: (Atk + MAtk) x 120% every 3 seconds,
-[Lv 5]: (Atk + MAtk) x 150% every 3 seconds
-The interval between hits is now calculated based on the user’s attack speed.
-New Hit/Sec calculation:
-Hit/Sec = 1000 ÷ ((4000 - (20 × ASPD)) × 3).
-Now the skill can trigger autocast for both physical and magical modes.
-It does not disable SP regeneration, but reduces regeneration by 70% and increases the regeneration time by 30%.
-`,
+Description: Deals M.DMG to enemies within a 9x9 AoE, scaling with ATK and Musical Lesson level. Damage interval is based on A.Delay, and can trigger auto-cast.
+While active, increases WD by 25% and SP Recovery Interval by 30%, reduces SP Recovery by 70%, and drains SP every second.
+Switching to a non-instrument weapon cancel the skill.
+[Lv. 1]: ATK/MATK 30%, SP Cost: 28 
+[Lv. 2]: ATK/MATK 60%, SP Cost: 31 
+[Lv. 3]: ATK/MATK 90%, SP Cost: 34 
+[Lv. 4]: ATK/MATK 120%, SP Cost: 37 
+[Lv. 5]: ATK/MATK 150%, SP Cost: 40
+Damage: (((Skill Lv x 30) + (ATK + MATK x (Skill Lv x 0,3))) x (100+ (Musical Lesson Lv x 3))) / 100
+SP Consumption: (5 + Max SP / 500)
+Interval (seconds): A.Delay x 3 `,
     img: dissonance,
   },
   {
@@ -132,22 +143,26 @@ It does not disable SP regeneration, but reduces regeneration by 70% and increas
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Instrument 
+Type: Song
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Dissonance Lv: 3
-Description: Performs a song that will boost Max HP and Healings Received of the user and nearby party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: MaxHP +10%, Healings Received + 2%,
-[Lv 2]: MaxHP +11%, Healings Received + 4%,
-[Lv 3]: MaxHP +12%, Healings Received + 6%,
-[Lv 4]: MaxHP +13%, Healings Received + 8%,
-[Lv 5]: MaxHP +14%, Healings Received +10%,
-[Lv 6]: MaxHP +15%, Healings Received +12%,
-[Lv 7]: MaxHP +16%, Healings Received +14%,
-[Lv 8]: MaxHP +17%, Healings Received +16%,
-[Lv 9]: MaxHP +18%, Healings Received +18%,
-[Lv 10]: MaxHP +20%, Healings Received +20%
-Additional Benefits and Adjustments: Heals 5% of allies’ HP when using the skill; increases MaxHP by (2 × Skill Lv)%; heals 2% of the user’s HP every (25 - (Skill Lv × 2)) seconds.
-`,
+Description: Instantly recovers 5% Max HP of nearby allies.
+Also increases their Max HP and restores 2% over time for 180s.
+Only 3 songs can be active at a time.
+[Lv. 1]: MaxHP +2%, Interval: 23s SP Cost: 33
+[Lv. 2]: MaxHP +4%, Interval: 21s SP Cost: 36
+[Lv. 3]: MaxHP +6%, Interval: 19s SP Cost: 39
+[Lv. 4]: MaxHP +8%, Interval: 17s SP Cost: 42
+[Lv. 5]: MaxHP +10%, Interval: 15s SP Cost: 45
+[Lv. 6]: MaxHP +12%, Interval: 13s SP Cost: 48
+[Lv. 7]: MaxHP +14%, Interval: 11s SP Cost: 51
+[Lv. 8]: MaxHP +16%, Interval: 9s SP Cost: 54
+[Lv. 9]: MaxHP +18%, Interval: 75 SP Cost: 57
+[Lv.10]: MaxHP +20%, Interval: 5s SP Cost: 60`,
     img: appleOfIdun,
   },
   {
@@ -164,15 +179,21 @@ Additional Benefits and Adjustments: Heals 5% of allies’ HP when using the ski
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Duet
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s 
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Apple of Idun Lv: 10
-Description: Initiates a battle duet that temporarily increases both physical and magical attack power for you and your party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.
-[Lv 1]: Atk +15, MAtk +15,
-[Lv 2]: Atk +20, MAtk +20,
-[Lv 3]: Atk +25, MAtk +25,
-[Lv 4]: Atk +30, MAtk +30,
-[Lv 5]: Atk +35, MAtk +35`,
+Description: Increases B.ATK and B.MATK of nearby allies for 60s.
+Requires an Artist ally in an adjacent cell to activate, and only 1 duet can be active at a time.
+[Lv. 1]: B.ATK +20. B.MATK +20, SP Cost: 38 
+[Lv. 2]: B.ATK +25. B.MATK +25, SP Cost: 46 
+[Lv. 3]: B.ATK +30. B.MATK +30, SP Cost: 54 
+[Lv. 4]; B.ATK +35. B.MATK +35, SP Cost: 62 
+[Lv. 5]: B.ATK +40. B.MATK +40. SP Cost: 70`,
     img: drumOfBattlefield,
   },
   {
@@ -187,10 +208,17 @@ Description: Initiates a battle duet that temporarily increases both physical an
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip
+Type: Ground Duet
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s 
+Cooldown: 30s
+SP Cost: 40
 Requirement: Drum of Battlefield Lv: 3
-Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 35% chance to fail when activating their skills. Upon activation, it also has a 100% chance to inflict Chaos. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.`,
+Description: Creates a 9x9 AoE that lasts for 180s, inflicting Loki's Wail to enemies inside.
+Also inflicts Chaos on enemies on activation. Requires an Artist ally in an adjacent cell to activate, and the duet ends if either the user or the artist who activated it leaves the AoE.`,
     img: lokisWail,
   },
   {
@@ -207,23 +235,20 @@ Description: Initiates a frenzied duet that gives opponents within a 9x9 area a 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip
+Type: Supportive
 Target: Self
+After Cast Delay: 0.30s
+Cooldown: 20s
+SP Cost: 70
 Requirement: Musical Lesson Lv: 5
-Description: Extends the duration of all active songs, dances, and party buff duets for you and your allies by 15 seconds. Upon use, you gain a special status effect that enhances your abilities based on the number of active songs, dances, and duets. For Melody Strike and Slinging Strike, it increases skill damage by +10%. For Dissonance and Cringe Dance, it reduces the interval between attacks by 0.4 seconds. For Arrow Vulcan and Reverberation, it reduces the cooldown by 0.107 seconds. SP cost increases by 35 for each active song, dance, and duet. SP cost increases by 35 for each active song, dance, and duet.
-[Lv 1]: Encore duration: 40 seconds,
-[Lv 2]: Encore duration: 60 seconds,
-[Lv 3]: Encore duration: 80 seconds,
-[Lv 4]: Encore duration: 100 seconds,
-[Lv 5]: Encore duration: 120 seconds
-The functionality has been modified to improve usability.
-When activated, it reduces the Cooldown of all active songs/dances by 50% and increases their duration by 50% (based on their current duration).
-Synergies:
-Slinging/Musical Strike: increases the final ATK% by 10% per active song/dance.
-Arrow Vulcan: increases the final ATK% by 5% per active song/dance.
-Reverberation: reduces SP cost and Cooldown by 5% per active song/dance.
-Dissonance/Cringe Dance: reduces physical damage received by 5% per active song/dance.
-`,
+Description: Increases duration and reduces CD of all Songs and Dances by 50%.
+Also boosts the effectiveness of Bard and Dancer Skills.
+[Lv 1]: Duration: 40s
+[Lv 2]: Duration: 60s
+[Lv 3]: Duration: 80s
+[Lv 4]: Duration: 100s 
+[Lv 5]: Duration: 120s`,
     img: encore,
   },
   
@@ -239,15 +264,18 @@ Dissonance/Cringe Dance: reduces physical damage received by 5% per active song/
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Self
+After Cast Delay: A.Delay - 0.26s 
+Cooldown: A.Delay + 25
 Requirement: Encore Lv: 3
-Description: Inflicts the Freezing status to enemies within the casters view.
-[Lv 1]: Chance: 20%,
-[Lv 2]: Chance: 25%,
-[Lv 3]: Chance: 30%,
-[Lv 4]: Chance: 35%,
-[Lv 5]: Chance: 40%`,
+Description: Has a chance to inflict Freezing on nearby enemies.
+When freezing ends, inflicts Freeze for 275. 
+[Lv. 1]: Freezing Chance: 20%, SP Cost: 12 
+[Lv. 2]: Freezing Chance: 25%, SP Cost: 14 
+[Lv. 3]: Freezing Chance: 30%, SP Cost: 16 
+[Lv. 4]: Freezing Chance: 35%, SP Cost: 18 
+[Lv. 5]: Freezing Chance: 40%, SP Cost: 20`,
     img: frostJoke,
   },
   {
@@ -264,22 +292,25 @@ Description: Inflicts the Freezing status to enemies within the casters view.
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Instrument 
+Type: Song 
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s 
+Cooldown: 20s
 Requirement: Dissonance Lv: 3
-Description: Performs a song that will boost Flee and Perfect Dodge of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: Flee +20, Perfect Dodge +1,
-[Lv 2]: Flee +22, Perfect Dodge +2,
-[Lv 3]: Flee +24, Perfect Dodge +3,
-[Lv 4]: Flee +26, Perfect Dodge +4,
-[Lv 5]: Flee +28, Perfect Dodge +5,
-[Lv 6]: Flee +30, Perfect Dodge +6,
-[Lv 7]: Flee +32, Perfect Dodge +7,
-[Lv 8]: Flee +34, Perfect Dodge +8,
-[Lv 9]: Flee +36, Perfect Dodge +9,
-[Lv 10]: Flee +40, Perfect Dodge +10
-Additional Benefits and Adjustments: Perfect Dodge +1 × Skill Lv; Flee: +20 + (Skill Lv × 2); adds 1% × Skill Lv chance to dodge any damage.
-`,
+Description: Increases FLEE and P.FLEE of nearby allies for 180s.
+Only 3 songs can be active at a time. 
+[Lv. 1]: FLEE +22. P.FLEE +1. SP Cost: 33 
+[Lv. 2]: FLEE +24. P.FLEE +2. SP Cost: 36 
+[Lv. 3]: FLEE +26. P.FLEE +3. SP Cost: 39 
+[Lv. 4]: FLEE +28. P.FLEE +4. SP Cost: 42 
+[Lv. 5]: FLEE +30. P.FLEE +5. SP Cost: 45 
+[Lv. 6]: FLEE +32. P.FLEE +6. SP Cost: 48 
+[Lv. 7]: FLEE +34. P.FLEE +7. SP Cost: 51 
+[Lv. 8]: FLEE +36. P.FLEE +8. SP Cost: 54
+[Lv. 9]: FLEE +38. P.FLEE +9. SP Cost: 57 
+[Lv.10]: FLEE +40. P.FLEE +10. SP Cost: 60`,
     img: whistle,
   },
   {
@@ -296,15 +327,21 @@ Additional Benefits and Adjustments: Perfect Dodge +1 × Skill Lv; Flee: +20 + (
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Duet
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s 
+Cooldown: 20s
 Requirement: Whistle Lv: 10
-Description: Initiates an ambitious duet that grants a temporary effect, giving you and your party members within a 25x25 area a chance to negate the consumption of catalysts when using skills. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. You must have the skills catalyst to use it. Catalysts That Can Have Consumption Negated: Arrows, Gems, Zeny Pouch, Vials, Potions, Traps, Spider Web, Sage Points, Throwing Knives, Poison Bottle, Stones, Spirit Orbs and any type of ammunition.
-[Lv 1]: Grants a 4% chance to negate catalyst consumption.
-[Lv 2]: Grants a 8% chance to negate catalyst consumption.
-[Lv 3]: Grants a 12% chance to negate catalyst consumption.
-[Lv 4]: Grants a 16% chance to negate catalyst consumption.
-[Lv 5]: Grants a 20% chance to negate catalyst consumption.`,
+Description: Grants nearby allies a chance to not consume skill Catalyst for 60s.
+Requires an Artist ally in an adjacent cell to activate, and only 1 duet can be active at a time.
+[Lv. 1]: Chance: 4%, SP Cost: 38 
+[Lv. 2]: Chance: 8%, SP Cost: 46 
+[Lv. 3]: Chance: 12%, SP Cost: 54 
+[Lv. 4]: Chance: 16%, SP Cost: 62 
+[Lv. 5]: Chance: 20%, SP Cost: 70`,
     img: intoTheAbyss,
   },
   {
@@ -319,10 +356,17 @@ Description: Initiates an ambitious duet that grants a temporary effect, giving 
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Ground Duet 
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s 
+Cooldown: 30s
+SP Cost: 40
 Requirement: Into the Abyss Lv: 3
-Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 100% chance to be inflicted with Sleep every 10 seconds while they remain in the area. The Sleep effect lasts for 4 seconds. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown`,
+Description: Creates a 9x9 AoE that lasts for 180s, inflicting Sleep on enemies inside for 4s every 10s.
+Requires an Artist ally in an adjacent cell to activate, and the duet ends if either the user or the artist who activated it leaves the AoE.`,
     img: lullaby,
   },
   {
@@ -339,22 +383,25 @@ Description: Initiates a sleepy duet that gives opponents within a 9x9 area a 10
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Instrument 
+Type: Song
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Dissonance Lv: 3
-Description: Performs a song that will shorten Variable Cast Time and After Cast Delay of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: VCT -2%, Cast Delay -3%,
-[Lv 2]: VCT -4%, Cast Delay -6%,
-[Lv 3]: VCT -6%, Cast Delay -9%,
-[Lv 4]: VCT -8%, Cast Delay -12%,
-[Lv 5]: VCT -10%, Cast Delay -15%,
-[Lv 6]: VCT -12%, Cast Delay -18%,
-[Lv 7]: VCT -14%, Cast Delay -21%,
-[Lv 8]: VCT -16%, Cast Delay -24%,
-[Lv 9]: VCT -18%, Cast Delay -27%,
-[Lv 10]: VCT -20%, Cast Delay -30%
-Additional Benefits and Adjustments: Reduces VariableCastTime, FixedCastTime, and AfterCastDelay by (5 + (Skill Lv × 2))%.
-`,
+Description: Reduces VCT, FCT and ACD of nearby allies for 180s.
+Only 3 songs can be active at a time.
+[Lv. 1]: VCT/FCT/ACD -7%, SP Cost: 33 
+[Lv. 2]: VCT/FCT/ACD -9%, SP Cost: 36 
+[Lv. 3]: VCT/FCT/ACD -11%, SP Cost: 39 
+[Lv. 4]: VCT/FCT/ACD -13%, SP Cost: 42 
+[Lv. 5]: VCT/FCT/ACD -15%, SP Cost: 45 
+[Lv. 6]: VCT/FCT/ACD -17%, SP Cost: 48 
+[Lv. 7]: VCT/FCT/ACD -19%, SP Cost: 51 
+[Lv. 8]: VCT/FCT/ACD -21%, SP Cost: 54
+[Lv. 9]: VCT/FCT/ACD -23%, SP Cost: 57 
+[Lv.10]: VCT/FCT/ACD -25%, SP Cost: 60`,
     img: poemOfBragi,
   },
   {
@@ -371,15 +418,21 @@ Additional Benefits and Adjustments: Reduces VariableCastTime, FixedCastTime, an
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Duet
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Poem of Bragi Lv: 10
-Description: Initiates a comforting duet that grants temporary resistance to various negative effects and increases Fire, Water, Wind, and Earth resistances for you and party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Negative Effects Affected: Blind, Petrification, Freezing, Stun, Curse, Sleep, Silence, Chaos,
-[Lv 1]: Elemental Resistences +3%, Tolerance to negative effects +5%,
-[Lv 2]: Elemental Resistences +6%, Tolerance to negative effects +10%,
-[Lv 3]: Elemental Resistences +9%, Tolerance to negative effects +15%,
-[Lv 4]: Elemental Resistences +12%, Tolerance to negative effects +20%,
-[Lv 5]: Elemental Resistences +15%, Tolerance to negative effects +25%`,
+Description: Grants nearby allies both NSE and ELE resistance for 60s.
+Requires an Artist ally in an adjacent cell to activate, and only 1 duet can be active at a time.
+[Lv. 1]; NSE +3%, ELE +5%, SP Cost: 38 
+[Lv. 2]: NSE. +6%, ELE +10%, SP Cost: 46 
+[Lv. 3]; NSE. +9%, ELE +15%, SP Cost: 54 
+[Lv. 4]: NSE. +12%, ELE +20%, SP Cost: 62 
+[Lv. 5]; NSE. +15%, ELE +25%, SP Cost: 70`,
     img: invulnerableSiegfried,
   }, 
   {
@@ -394,10 +447,17 @@ Description: Initiates a comforting duet that grants temporary resistance to var
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Ground Duet 
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s 
+Cooldown: 30s
+SP Cost: 40
 Requirement: Invulnerable Siegfried Lv: 3
-Description: Initiates a greedy duet that increases Base and Job experience gain for you and players within the 9x9 area of effect who defeat monsters. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area, but if either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Increases base and class experience from defeating monsters by 40%`,
+Description: Creates a 9x9 AoE that lasts for 180s, granting Mr. Kim A Rich Man to allies inside.
+Requires an Artist ally in an adjacent cell to activate, and the duet ends if either the user or the artist who activated it leaves the AoE.`,
     img: mrKimARichMan,
   },
   {
@@ -412,23 +472,25 @@ Description: Initiates a greedy duet that increases Base and Job experience gain
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Instrument 
+Type: Song
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s 
+Cooldown: 20s
 Requirement: None
-Description: Performs a song that will boost attack speed of the user and party members around the performer. The duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Musical Instrument Class Weapon.
-[Lv 1]: Aspd +2%,
-[Lv 2]: Aspd +4%,
-[Lv 3]: Aspd +6%,
-[Lv 4]: Aspd +8%,
-[Lv 5]: Aspd +10%,
-[Lv 6]: Aspd +12%,
-[Lv 7]: Aspd +14%,
-[Lv 8]: Aspd +16%,
-[Lv 9]: Aspd +18%,
-[Lv 10]: Aspd +20%
-Additional Benefits and Adjustments: Reduces the user’s After Attack Delay by 5 + (Skill Lv × 2)%; increases enemies’ After Attack Delay by 5 + (Skill Lv × 2)% for 5 seconds (only for the summoner); True ATK/MATK +10 × Skill Lv.
-
-`,
+Description: Reduces DAA and increases T.DMG of nearby allies for 180s.
+Also increases DAA of nearby enemies for 5s, and while active, this effect is reapplied whenever an enemy deals P.DMG to the user. Only 3 songs can be active at a time.
+[Lv. 1]: DAA -7%, T.DMG +10. SP Cost: 33 Enemies DAA +7%
+[Lv. 2]: DAA -9%, T.DMG +20. SP Cost: 36 Enemies DAA +9%
+[Lv. 3]: DAA -11%, T.DMG +30. SP Cost: 39 Enemies DAA +11%
+[Lv. 4]: DAA -13%, T.DMG +40. SP Cost: 42 Enemies DAA +13%
+[Lv. 5]: DAA -15%, T.DMG +50. SP Cost: 45 Enemies DAA +15%
+[Lv. 6]: DAA -17%, T.DMG +60. SP Cost: 48 Enemies DAA +17%
+[Lv. 7]: DAA -19%, T.DMG +70. SP Cost: 51 Enemies DAA +19%
+[Lv. 8]: DAA -21%, T.DMG +80. SP Cost: 54 Enemies DAA +21%
+[Lv. 9]: DAA -23%, T.DMG +90. SP Cost: 57 Enemies DAA +23%
+[Lv.10]: DAA -25%, T.DMG +100. SP Cost: 60 Enemies DAA +25%`,
     img: assassinCrossOfSunset,
   },
   {
@@ -445,15 +507,21 @@ Additional Benefits and Adjustments: Reduces the user’s After Attack Delay by 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Duet
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Assassin Cross of Sunset Lv: 10
-Description: Initiates a refined duet that grants a random temporary effect to you and your party members within a 25x25 area. Both users must be in the same group and adjacent to each other, and the partner must have learned the duet. Duet level matches the initiator skill level. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown.
-[Lv 1]: Attack Speed +4%, Atk +4%, MAtk +4%, Max HP +6%, Max SP +6%, All Stats +3, Hit +10, Flee +10, SP consumption -6%, HP recovery +20%, SP recovery +20%,
-[Lv 2]: Attack Speed +8%, Atk +8%, MAtk +8%, Max HP +12%, Max SP +12%, All Stats +6, Hit +20, Flee +20, SP consumption -12%, HP recovery +40%, SP recovery +40%,
-[Lv 3]: Attack Speed +12%, Atk +12%, MAtk +12%, Max HP +18%, Max SP +18%, All Stats +9, Hit +30, Flee +30, SP consumption -18%, HP recovery +60%, SP recovery +60%,
-[Lv 4]: Attack Speed +16%, Atk +16%, MAtk +16%, Max HP +24%, Max SP +24%, All Stats +12, Hit +40, Flee +40, SP consumption -24%, HP recovery +80%, SP recovery +80%,
-[Lv 5]: Attack Speed +20%, Atk +20%, MAtk +20%, Max HP +30%, Max SP +30%, All Stats +15, Hit +50, Flee +50, SP consumption -30%, HP recovery +100%, SP recovery +100%`,
+Description: Grants nearby allies a random Effect for 60s.
+Requires an Artist ally in an adjacent cell to activate, and only 1 duet can be active at a time.
+[Lv. 1]: SP Cost: 38
+[Lv. 2]: SP Cost: 46
+[Lv. 3]: SP Cost: 54
+[Lv. 4]: SP Cost: 62 
+[Lv. 5]: SP Cost: 70`,
     img: theRingOfNibelungen,
   },
   {
@@ -468,10 +536,17 @@ Description: Initiates a refined duet that grants a random temporary effect to y
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Misc
+Weapon: Instrument/Whip 
+Type: Ground Duet 
 Target: Self
+Variable Cast Time: 1.50s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s 
+Cooldown: 30s
+SP Cost: 40
 Requirement: The Ring of Nibelungen Lv: 3
-Description: Initiates a discordant duet that randomly reduces the physical and magical defenses of opponents within a 9x9 area. Both users must be in the same group and adjacent to each other. Duet lasts for 180 seconds, and both partners can move freely and use skills within the area. If either leaves the area, the effect ends. Only one duet can be active at a time, but it can coexist with other songs or dances. Using the duet puts both partners skills on cooldown. Reduces physical and magical defenses by a random percentage between 10% and 50%.`,
+Description: Creates a 9x9 AoE that lasts for 180s, inflicting Eternal Chaos to enemies inside.
+Requires an Artist ally in an adjacent cell to activate, and the duet ends if either the user or the artist who activated it leaves the AoE.`,
     img: eternalChaos,
   },
 ];
