@@ -78,7 +78,7 @@ Description: Increases B.ATK or B.MATK of nearby allies for 180s, depending on C
 [Lv 4]: B.ATK or B.MATK +24. SP Cost: 60 
 [Lv 5]: B.ATK or B.MATK +30. SP Cost: 70
 Formula: BATK: + (Skill Lv x 6) + (Job Lv / 7) + Musical Lesson Lv + Number of Bards in the party 
-       B.MATK: + (Skill Lv x 6) + (Job Lv / 7) + Dancing Lesson Ly + Number of Dancers in the party `,
+B.MATK: + (Skill Lv x 6) + (Job Lv / 7) + Dancing Lesson Ly + Number of Dancers in the party `,
     img: moonlitWaterMill,
   },
   {
