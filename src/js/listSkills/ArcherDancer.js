@@ -39,18 +39,19 @@ export const skillsDancer = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Whip
 Requirement: None
-Description: Increase Atk, MAtk and Aspd with Whip Class Weapon. When [Lv 10], it increases Max SP in 6%.
-[Lv 1]: Atk +2, MAtk +2, Aspd +1%,
-[Lv 2]: Atk +4, MAtk +4, Aspd +2%,
-[Lv 3]: Atk +6, MAtk +6, Aspd +3%,
-[Lv 4]: Atk +8, MAtk +8, Aspd +4%,
-[Lv 5]: Atk +10, MAtk +10, Aspd +5%,
-[Lv 6]: Atk +12, MAtk +12, Aspd +6%,
-[Lv 7]: Atk +14, MAtk +14, Aspd +7%,
-[Lv 8]: Atk +16, MAtk +16, Aspd +8%,
-[Lv 9]: Atk +18, MAtk +18, Aspd +9%,
-[Lv 10]: Atk +20, MAtk +20, Aspd +10%`,
+Description: Increases E.ATK, E.MATK, and reduces DAA while wielding a Whip. At max level, also grants +6% Max SP.
+[Lv. 1]: E.ATK +2. E.MATK +2. DAA -1% 
+[Lv. 2]: E.ATK +4. E.MATK +4. DAA -2% 
+[Lv. 3]: E.ATK +6. E.MATK +6. DAA -3% 
+[Lv. 4]: E.ATK +8. E.MATK +8. DAA -4% 
+[Lv. 5]: E.ATK +10. E.MATK +10. DAA -5% 
+[Lv. 6]: E.ATK +12. E.MATK +12. DAA -6% 
+[Lv. 7]: E.ATK +14. EMATK +14. DAA -7% 
+[Lv. 8]: E.ATK +16. E.MATK +16. DAA -8% 
+[Lv. 9]: E.ATK +18. E.MATK +18. DAA -9% 
+[Lv.10]: E.ATK +20. E.MATK +20. DAA -10%`,
     img: dancingLesson,
   },
   {
@@ -68,18 +69,24 @@ Description: Increase Atk, MAtk and Aspd with Whip Class Weapon. When [Lv 10], i
     inform: `Max Lv: 5
 Skill Form: Active
 Type: Physical
+Weapon: Whip (or Instrument)
 Target: Enemy
+Element: Ammunition
+Fixed Cast Time: 0.30s
+After Cast Delay: A.Delay - 0.26s
+Cooldown: A.Delay
 Range: 12
+Hits: 2
 Requirement: Dancing Lesson Lv: 3
-Description: Fires a powerful volley of arrows using an whip. The Arrows element determines the element of this attack. Consumes: 2x Arrow.
-[Lv 1]: Atk 130% x 2 Hits,
-[Lv 2]: Atk 160% x 2 Hits,
-[Lv 3]: Atk 190% x 2 Hits,
-[Lv 4]: Atk 220% x 2 Hits,
-[Lv 5]: Atk 250% x 2 Hits
-New calculation: ATK% = (50 + Crit) + (30 × Skill Lv).
-Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed Cast Time: 400; AmmoAmount: 1.
-`,
+Description: Deals ranged P.DMG to the target, scaling with CRIT.
+VCT scales with skill level.
+Catalyst: 1x Arrow
+[Lv. 1]: ATK 180% x Hits. VCT: 0.30s SP Cost: 8
+[Lv. 2]: ATK 210% x Hits. VCT: 0.40s SP Cost: 11
+[Lv. 3]: ATK 240% x Hits. VCT: 0.50s SP Cost: 14
+[Lv. 4]: ATK 270% x Hits, VCT: 0.60s SP Cost: 17
+[Lv. 5]: ATK 300% x Hits, VCT: 0.70s SP Cost: 20
+Formula: ATK (%): (50 + CRIT + (Skill Lv x 30)) x Hits `,
     img: slingingStrike,
   },
   {
@@ -101,21 +108,26 @@ Details: AfterCastActDelay set as ASPD; CastTime: 350 + (50 × Skill Lv); Fixed 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
+Weapon: Whip
 Type: Magical
 Target: Self
+Element: Neutral
+Variable Cast Time: 0.70s
+Fixed Cast Time: 0.30s
+After Cast Delay: 0.30s
+Cooldown: 10s
 Requirement: Dancing Lesson Lv: 2
-Description: Performs a corny dance, dealing Neutral magic damage to all enemies in a 9x9 radius every 3 seconds. Reduces movement speed by 25% and consumes 3 SP per second while active. Can trigger auto-cast items. You can still use basic attacks and skills while active. Requires a Whip class weapon. Cannot switch weapons while active.
-[Lv 1]: (Atk + MAtk) x 30% every 3 seconds,
-[Lv 2]: (Atk + MAtk) x 60% every 3 seconds,
-[Lv 3]: (Atk + MAtk) x 90% every 3 seconds,
-[Lv 4]: (Atk + MAtk) x 120% every 3 seconds,
-[Lv 5]: (Atk + MAtk) x 150% every 3 seconds
-The interval between hits is now calculated based on the user’s attack speed.
-New Hit/Sec calculation:
-Hit/Sec = 1000 ÷ ((4000 - (20 × ASPD)) × 3).
-Now the skill can trigger autocast for both physical and magical modes.
-It does not disable SP regeneration, but reduces regeneration by 70% and increases the regeneration time by 30%.
-`,
+Description: Deals M.DMG to enemies within a 9x9 AoE, scaling with ATK and Musical Lesson level. Damage interval is based on A.Delay, and can trigger auto-cast.
+While active, increases WD by 25% and SP Recovery Interval by 30%, reduces SP Recovery by 70%, and drains SP every second.
+Switching to a non-whip weapon cancel the skill.
+[Lv. 1]: ATK/MATK 30%, SP Cost: 28 
+[Lv. 2]: ATK/MATK 60%, SP Cost: 31 
+[Lv. 3]: ATK/MATK 90%, SP Cost: 34 
+[Lv. 4]: ATK/MATK 120%, SP Cost: 37 
+[Lv. 5]: ATK/MATK 150%, SP Cost: 40
+Damage: (((Skill Lv x 30) + (ATK + MATK x (Skill Lv x 0.3))) x (100 + (Musical Lesson Lv x 3))) / 100 
+SP Consumption: (5 + Max SP / 500)
+Interval (seconds): A.Delay x 3 `,
     img: cringeDance,
   },
   {
@@ -132,22 +144,25 @@ It does not disable SP regeneration, but reduces regeneration by 70% and increas
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Whip 
+Type: Dance 
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Cringe Dance Lv: 3
-Description: Performs a dance that will boost Max SP and reduce SP Cost of the user and party members around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: MaxSP +10%, SP consumption: -6%,
-[Lv 2]: MaxSP +11%, SP consumption: -7%,
-[Lv 3]: MaxSP +12%, SP consumption: -8%,
-[Lv 4]: MaxSP +13%, SP consumption: -9%,
-[Lv 5]: MaxSP +14%, SP consumption: -10%,
-[Lv 6]: MaxSP +15%, SP consumption: -11%,
-[Lv 7]: MaxSP +16%, SP consumption: -12%,
-[Lv 8]: MaxSP +17%, SP consumption: -13%,
-[Lv 9]: MaxSP +18%, SP consumption: -14%,
-[Lv 10]: MaxSP +20%, SP consumption: -15%
-Additional Benefits and Adjustments: Increases MaxSP by (Skill Lv × 2)%; reduces SP Consumption by (Skill Lv × 2)%; increases SP Recovery by (Skill Lv × 2)%.
-`,
+Description: Increases SP Recovery and Max SP, and reduces SP Cost of nearby allies for 180s.
+Only 3 dances can be active at a time.
+[Lv 1]: MaxSP +2%, SP Cost: -2% SP Recovery: +2%
+[Lv 2]: MaxSP +4%, SP Cost: -4% SP Recovery: +4%
+[Lv 3]: MaxSP +6%, SP Cost: -6% SP Recovery: +6%
+[Lv 4]: MaxSP +8%, SP Cost: -8% SP Recovery: +8%
+[Lv 5]: MaxSP +10%, SP Cost: -10% SP Recovery: +10%
+[Lv 6]: MaxSP +12%, SP Cost: -12% SP Recovery: +12%
+[Lv 7]: MaxSP +14%, SP Cost: -14% SP Recovery: +14%
+[Lv 8]: MaxSP +16%, SP Cost: -16% SP Recovery: +16%
+[Lv 9]: MaxSP +18%, SP Cost: -18% SP Recovery: +18%
+[Lv10]: MaxSP +20%, SP Cost: -20% SP Recovery: +20%`,
     img: bellyDance,
   },
   {
@@ -248,15 +263,18 @@ Also boosts the effectiveness of Bard and Dancer Skills.
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Self
+After Cast Delay: A.Delay - 0.26s 
+Cooldown: A.Delay + 25
 Requirement: Encore Lv: 3
-Description: Inflicts the Petrifying status to enemies within the casters view.
-[Lv 1]: Chance: 20%,
-[Lv 2]: Chance: 25%,
-[Lv 3]: Chance: 30%,
-[Lv 4]: Chance: 35%,
-[Lv 5]: Chance: 40%`,
+Description: Has a chance to inflict Petrifying on nearby enemies.
+When petrifying ends, inflicts Petrify for 27s. 
+[Lv. 1]: Petrifying Chance: 20%, SP Cost: 12 
+[Lv. 2]: Petrifying Chance: 25%, SP Cost: 14 
+[Lv. 3]: Petrifying Chance: 30%, SP Cost: 16 
+[Lv. 4]: Petrifying Chance: 35%, SP Cost: 18 
+[Lv. 5]: Petrifying Chance: 40%, SP Cost: 20`,
     img: medusaScream,
   },
   {
@@ -271,22 +289,25 @@ Description: Inflicts the Petrifying status to enemies within the casters view.
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Whip 
+Type: Dance 
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Cringe Dance Lv: 3
-Description: Performs a dance that will boost Hit and Long Range Damage of all players around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: Perfect Hit +1, Ranged Damage +2%,
-[Lv 2]: Perfect Hit +2, Ranged Damage +4%,
-[Lv 3]: Perfect Hit +3, Ranged Damage +6%,
-[Lv 4]: Perfect Hit +4, Ranged Damage +8%,
-[Lv 5]: Perfect Hit +5, Ranged Damage +10%,
-[Lv 6]: Perfect Hit +6, Ranged Damage +12%,
-[Lv 7]: Perfect Hit +7, Ranged Damage +14%,
-[Lv 8]: Perfect Hit +8, Ranged Damage +16%,
-[Lv 9]: Perfect Hit +9, Ranged Damage +18%,
-[Lv 10]: Perfect Hit +10, Ranged Damage +20%
-Additional Benefits and Adjustments: Perfect Hit +1 × Skill Lv; Ranged Damage: +(5 + Skill Lv)%; adds 1% × Skill Lv chance to ignore the target’s defense.
-`,
+Description: Increases P.ACC and ranged P.DMG of nearby allies for 180s. Also grants Armor Pierce.
+Only 3 dances can be active at a time. 
+[Lv. 1]: P.ACC +1. Ranged P.DMG: +2% Armor Pierce: +1%, SP Cost: 33 
+[Lv. 2]: P.ACC +2. Ranged P.DMG: +4% Armor Pierce: +2%, SP Cost: 36 
+[Lv. 3]: P.ACC +3. Ranged P.DMG: +6% Armor Pierce: +3%, SP Cost: 39
+[Lv. 4]: P.ACC +4. Ranged P.DMG: +8% Armor Pierce: +4%, SP Cost: 42 
+[Lv. 5]: P.ACC +5. Ranged P.DMG: +10% Armor Pierce: +5%, SP Cost: 45 
+[Lv. 6]: P.ACC +6. Ranged P.DMG: +12% Armor Pierce: +6%, SP Cost: 48 
+[Lv. 7]: P.ACC +7. Ranged P.DMG: +14% Armor Pierce: +7%, SP Cost: 51 
+[Lv. 8]: P.ACC +8. Ranged P.DMG: +16% Armor Pierce: +8%, SP Cost: 54 
+[Lv. 9]: P.ACC +9. Ranged P.DMG: +18% Armor Pierce: +9%, SP Cost: 57 
+[Lv.10]: P.ACC +10. Ranged P.DMG: +20% Armor Pierce: +10%, SP Cost: 60`,
     img: humming,
   },
   {
@@ -359,21 +380,25 @@ Requires an Artist ally in an adjacent cell to activate, and the duet ends if ei
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Whip 
+Type: Dance 
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Cringe Dance Lv: 3
-Description: Performs a dance that will boost the Crit and Critical Damage of the user and party members around the performer. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: Crit +1, Critical Damage + 2%,
-[Lv 2]: Crit +2, Critical Damage + 4%,
-[Lv 3]: Crit +3, Critical Damage + 6%,
-[Lv 4]: Crit +4, Critical Damage + 8%,
-[Lv 5]: Crit +5, Critical Damage + 10%,
-[Lv 6]: Crit +6, Critical Damage + 12%,
-[Lv 7]: Crit +7, Critical Damage + 14%,
-[Lv 8]: Crit +8, Critical Damage + 16%,
-[Lv 9]: Crit +9, Critical Damage + 18%,
-[Lv 10]: Crit +10, Critical Damage + 20%
-Additional Benefits and Adjustments: Crit +1 × Skill Lv; Critical Shield +1 × Skill Lv; Critical Damage + (5 + Skill Lv)%.`,
+Description: Increases CRIT and C.DMG of nearby allies for 180s.
+Only 3 dances can be active at a time. 
+[Lv. 1]: CRIT +1. C.DMG +2%, SP Cost: 33 
+[Lv. 2]: CRIT +2. C.DMG +4%, SP Cost: 36 
+[Lv. 3]: CRIT +3. C.DMG +6%, SP Cost: 39 
+[Lv. 4]: CRIT +4. C.DMG +8%, SP Cost: 42 
+[Lv. 5]: CRIT +5. C.DMG +10%, SP Cost: 45 
+[Lv. 6]: CRIT +6. C.DMG +12%, SP Cost: 48 
+[Lv. 7]: CRIT +7, C.DMG +14%, SP Cost: 51 
+[Lv. 8]: CRIT +8. C.DMG +16%, SP Cost: 54 
+[Lv. 9]: CRIT +9. C.DMG +18%, SP Cost: 57 
+[Lv.10]: CRIT +10. C.DMG +20%, SP Cost: 60`,
     img: fortunesKiss,
   },
   {
@@ -446,21 +471,25 @@ Requires an Artist ally in an adjacent cell to activate, and the duet ends if ei
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Weapon: Whip 
+Type: Dance
 Target: Self
+Variable Cast Time: 1s
+After Cast Delay: 0.30s
+Cooldown: 20s
 Requirement: Cringe Dance Lv: 3
-Description: Perform a dance that increases the movement speed of you and your party around the performer. While the effect is active, when you take damage, the attackers movement speed and attack speed are reduced. Duration of this skill is 180 seconds and is reduced by 60 seconds for each subsequent music used after it. Requires Whip Class Weapon.
-[Lv 1]: Allies MS +7%, Attacker MS and ASPD -11% for 9.5 seconds,
-[Lv 2]: Allies MS +9%, Attacker MS and ASPD -12% for 9 seconds,
-[Lv 3]: Allies MS +11%, Attacker MS and ASPD -13% for 8.5 seconds,
-[Lv 4]: Allies MS +13%, Attacker MS and ASPD -14% for 8 seconds,
-[Lv 5]: Allies MS +15%, Attacker MS and ASPD -15% for 7.5 seconds,
-[Lv 6]: Allies MS +17%, Attacker MS and ASPD -16% for 7 seconds,
-[Lv 7]: Allies MS +19%, Attacker MS and ASPD -17% for 6.5 seconds,
-[Lv 8]: Allies MS +21%, Attacker MS and ASPD -18% for 6 seconds,
-[Lv 9]: Allies MS +23%, Attacker MS and ASPD -19% for 5.5 seconds,
-[Lv 10]: Allies MS +25%, Attacker MS and ASPD -20% for 5 seconds
-Additional Benefits and Adjustments: Increases movement speed by (5 + (Skill Lv × 2))%; reduces enemies’ movement speed by 5 + (Skill Lv × 2)% for 5 seconds (only for the summoner); True Defense +10 × Skill Lv.`,
+Description: Reduces WD and increases T.DEF of nearby allies for 180s.
+Also increases WD of nearby enemies for 5s, and while active, this effect is reapplied whenever an enemy deals P.DMG to the user. Only 3 dances can be active at a time.
+[Lv. 1]: WD -7%, T.DEF +10. SP Cost: 33 Enemies WD +7%
+[Lv. 2]: WD -9%, T.DEF +20. SP Cost: 36 Enemies WD +9%
+[Lv. 3]: WD -11%, T.DEF +30. SP Cost: 39 Enemies WD +11%
+[Lv. 4]: WD -13%, T.DEF +40. SP Cost: 42 Enemies WD +13%
+[Lv. 5]: WD -15%, T.DEF +50. SP Cost: 45 Enemies WD +15%
+[Lv. 6]: WD -17%, T.DEF +60. SP Cost: 48 Enemies WD +17%
+[Lv. 7]: WD -19%, T.DEF +70. SP Cost: 51 Enemies WD +19%
+[Lv. 8]: WD -21%, T.DEF +80. SP Cost: 54 Enemies WD +21%
+[Lv. 9]: WD -23%, T.DEF +90. SP Cost: 57 Enemies WD +23%
+[Lv.10]: WD -25%, T.DEF +100, SP Cost: 60 Enemies WD +25%`,
     img: dontForgetMe,
   },
   {
