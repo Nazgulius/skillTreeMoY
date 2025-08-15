@@ -38,18 +38,432 @@ export const skillsBlacksmith = [
     maxLevel: 10,
     inform: `Max Lv: 5
 Skill Form: Active
+Weapon: Axes/Maces 
 Type: Physical
 Target: Ground
+After Cast Delay: A.Delay - 0.22s
+Cooldown: A.Delay + 0.36s
 Range: 1
+SP Cost: 10
 Requirement: None
-Description: Requires Axes or Maces Class Weapon. Strikes the ground with great force, with a chance to Stun all targets in a 5x5 area.
-[Lv 1]: Stun Chance 30%,
-[Lv 2]: Stun Chance 40%,
-[Lv 3]: Stun Chance 50%,
-[Lv 4]: Stun Chance 60%,
-[Lv 5]: Stun Chance 70%`,
+Description: Attempts to Stun enemies within a 5x5 AoE around the targeted location for 4.5s.
+[Lv. 1]: Stun Chance: 30%
+[Lv. 2]: Stun Chance: 40%
+[Lv. 3]: Stun Chance: 50% 
+[Lv. 4]: Stun Chance: 60% 
+[Lv. 5]: Stun Chance: 70%`,
     img: hammerfall,
   },
+  {
+    id: "reforge",
+    level: 0,
+    dependencies: [
+      { id: "enchantedStoneCraft", minLevel: 1 },
+      { id: "metalTempering", minLevel: 1 },
+    ],
+    dependent: [      
+      { id: "foundryPowerUp" },
+      { id: "bladeWeaponReforging" },
+      { id: "bluntWeaponReforging" },
+      { id: "pierceWeaponReforging" },
+      { id: "magicWeaponReforging" },
+      { id: "stringWeaponReforging" },
+      { id: "exoticWeaponReforging" },
+      { id: "repairWeapon" },
+      { id: "skinTempering" },
+    ],
+    element: null,
+    skillName: "Reforge",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Supportive 
+Target: Self
+Requirement: Enchanted Stone Craft Lv: 1, Metal Tempering Lv: 1
+Description: Grants the ability to reforge weapons.
+The reforge's success rate scales with DEX, LUK, Job Level, skill level and Anvil type.
+Reforging a reforged weapon will override its reforge.
+Requires any type of Anvil in the inventory. 
+[Lv. 1]: Success Rate +3%
+[Lv. 2]: Success Rate +6%
+[Lv. 3]: Success Rate +9% 
+[Lv. 4]: Success Rate +12% 
+[Lv. 5]: Success Rate +15%
+Formula: Success Rate (%): (Reforge Lv x 3) + (Job Lv x 0.2) + ((DEX + LUK) x 0.1) + Anvil Bonus
+Anvil Bonus:
+Emperium Anvil 10
+Golden Anvil: 5
+Oridecon Anvil: 3
+Anvil: 0
+*Only the highest one is considered `,
+    img: reforge,
+  },  
+  {
+    id: "bladeWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Blade Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Blade-type weapons. Also increases the success rate of reforging Blade-type weapons.
+[Lv. 1]: Blade Success Rate +5% 
+[Lv. 2]: Blade Success Rate +10% 
+[Lv. 3]: Blade Success Rate +15%`,
+    img: bladeWeaponReforging,
+  },
+  {
+    id: "bluntWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Blunt Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Blunt-type weapons. Also increases the success rate of reforging Blunt-type weapons.
+[Lv. 1]: Blunt Success Rate +5% 
+[Lv. 2]: Blunt Success Rate +10% 
+[Lv. 3]: Blunt Success Rate +15%`,
+    img: bluntWeaponReforging,
+  },
+  {
+    id: "pierceWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Pierce Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Pierce-type weapons. Also increases the success rate of reforging Pierce-type weapons.
+[Lv. 1]: Pierce Success Rate +5% 
+[Lv. 2]: Pierce Success Rate +10% 
+[Lv. 3]: Pierce Success Rate +15%`,
+    img: pierceWeaponReforging,
+  },
+  {
+    id: "magicWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Magic Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Magic-type weapons. Also increases the success rate of reforging Magic-type weapons.
+[Lv. 1]: Magic Success Rate +5% 
+[Lv. 2]: Magic Success Rate +10% 
+[Lv. 3]: Magic Success Rate +15%`,
+    img: magicWeaponReforging,
+  },  
+  {
+    id: "stringWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "String Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on String-type weapons. Also increases the success rate of reforging String-type weapons.
+[Lv. 1]: String Success Rate +5% 
+[Lv. 2]: String Success Rate +10% 
+[Lv. 3]: String Success Rate +15%`,
+    img: stringWeaponReforging,
+  },
+  {
+    id: "exoticWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Exotic Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Exotic-type weapons. Also increases the success rate of reforging Exotic-type weapons.
+[Lv. 1]: Exotic Success Rate +5% 
+[Lv. 2]: Exotic Success Rate +10% 
+[Lv. 3]: Exotic Success Rate +15%`,
+    img: exoticWeaponReforging,
+  },
+  {
+    id: "repairWeapon",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Repair Weapon",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Active
+Type: Supportive
+Target: Ally
+Range: 2
+Requirement: Reforge Lv: 2
+Description: Repairs the damaged equipment of the target, allowing it to be usable again. Requires any type of Anvil in the inventory.
+Catalyst: 2x Steel `,
+    img: repairWeapon,
+  },
+  {
+    id: "skinTempering",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 2 },
+    ],
+    dependent: [
+      { id: "meltdown" },
+    ],
+    element: null,
+    skillName: "Skin Tempering",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 2
+Description: Reduces the DMG taken from basic attacks and skills of Fire and Neutral property.
+[Lv. 1]: Fire +4%, Neutral +1% 
+[Lv. 2]: Fire +8%, Neutral +2% 
+[Lv. 3]: Fire +12%, Neutral +3% 
+[Lv. 4]: Fire +16%, Neutral +4% 
+[Lv. 5]: Fire +20%, Neutral +5%`,
+    img: skinTempering,
+  }, 
+  {
+    id: "adrenalineRush",
+    level: 0,
+    dependencies: [
+      { id: "axeMastery", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "hiltBinding" },
+      { id: "weaponPerfection" },
+    ],
+    element: null,
+    skillName: "Adrenaline Rush",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active 
+Weapon: Axes/Maces 
+Type: Supportive 
+Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
+Requirement: Axe Mastery Lv: 3
+Description: Temporarily increases nearby allies' ASPD by 20%,
+Also increases their CRIT and ACC. [Lv. 1]: CRIT +1. ACC +2. SP Cost: 16 Duration: 84s
+[Lv. 2]: CRIT +2. ACC +4. SP Cost: 18 Duration: 108s
+[Lv. 3]: CRIT +3. ACC +6. SP Cost: 20 Duration: 132s
+[Lv. 4]: CRIT +4. ACC +8. SP Cost: 22 Duration: 156s
+[Lv. 5]: CRIT +5. ACC +10. SP Cost: 24 Duration: 180s
+[Lv. 6]: CRIT +6. ACC +12. SP Cost: 26 Duration: 204s
+[Lv. 7]: CRIT +7. ACC +14. SP Cost: 28 Duration: 228s
+[Lv. 8]: CRIT +8. ACC +16. SP Cost: 30 Duration: 252s
+[Lv. 9]: CRIT +9. ACC +18, SP Cost: 32 Duration: 2765
+[Lv.10]: CRIT +10. ACC +20. SP Cost: 34 Duration: 300s`,
+    img: adrenalineRush,
+  },
+  {
+    id: "weaponPerfection",
+    level: 0,
+    dependencies: [
+      { id: "adrenalineRush", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "hiltBinding" },
+      { id: "powerThrust" },
+    ],
+    element: null,
+    skillName: "Weapon Perfection",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Supportive 
+Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
+Requirement: Adrenaline Rush Lv: 3
+Description: Temporarily increases nearby allies' Weapon Size Modifier.
+[Lv. 1]: Modifier +5%, SP Cost: 18 Duration: 30s
+[Lv. 2]: Modifier +10%, SP Cost: 16 Duration: 60s
+[Lv. 3]: Modifier +15%, SP Cost: 14 Duration: 90s
+[Lv. 4]: Modifier +20%, SP Cost: 12 Duration: 120s
+[Lv. 5]: Modifier +25%, SP Cost: 10 Duration: 150s`,
+    img: weaponPerfection,
+  },
+  {
+    id: "powerThrust",
+    level: 0,
+    dependencies: [
+      { id: "weaponPerfection", minLevel: 3 },
+    ],
+    dependent: [
+      { id: "maximumPowerThrust" },
+      { id: "hiltBinding" },
+      { id: "maximizePower" },
+    ],
+    element: null,
+    skillName: "Power Thrust",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Supportive 
+Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
+Requirement: Weapon Perfection Lv: 3
+Description: Temporarily increases nearby allies' R.ATK.
+[Lv. 1]: R.ATK +7%, SP Cost: 19 Duration: 60s
+[Lv. 2]: R.ATK +9%, SP Cost: 18 Duration: 70s
+[Lv. 3]: R.ATK +11%, SP Cost: 17 Duration: 80s
+[Lv. 4]: R.ATK +13%, SP Cost: 16 Duration: 90s
+[Lv. 5]: R.ATK +15%, SP Cost: 15 Duration: 100s
+[Lv. 6]: R.ATK +17%, SP Cost: 14 Duration: 110s
+[Lv. 7]: R.ATK +19%, SP Cost: 13 Duration: 120s
+[Lv. 8]: R.ATK +21%, SP Cost: 12 Duration: 130s
+[Lv. 9]: R.ATK +23%, SP Cost: 11 Duration: 140s
+[Lv.10]: R.ATK +25%, SP Cost: 10 Duration: 150s`,
+    img: powerThrust,
+  },  
+  {
+    id: "maximizePower",
+    level: 0,
+    dependencies: [
+      { id: "powerThrust", minLevel: 5 },
+    ],
+    dependent: [ ],
+    element: null,
+    skillName: "Maximize Power",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Skill Form: Toggle
+Type: Supportive 
+Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
+Requirement: Power Thrust Lv: 5
+Description: Removes P.DMG Variance, ensuring maximum damage while active, but drains SP every 2s.
+Also makes Discount and Overcharge always apply their max bonus.
+[Lv. 1]: SP Drain: 6
+[Lv. 2]: SP Drain: 5
+[Lv. 3]: SP Drain: 4
+[Lv. 4]: SP Drain: 3 
+[Lv. 5]: SP Drain: 2`,
+    img: maximizePower,
+  },
+  {
+    id: "hiltBinding",
+    level: 0,
+    dependencies: [
+      { id: "adrenalineRush", minLevel: 7 },
+      { id: "powerThrust", minLevel: 7 },
+      { id: "weaponPerfection", minLevel: 3 },
+    ],
+    dependent: [      
+      { id: "weaponryResearch" },
+    ],
+    element: null,
+    skillName: "Hilt Binding",
+    maxLevel: 1,
+    inform: `Max Lv: 1
+Skill Form: Passive
+Type: Physical
+Requirement: Adrenaline Rush Lv: 7, Power Thrust Lv: 7, Weapon Perfection Lv: 3
+Description: Infuse your combat prowess. This skill prolongs the effects of Adrenaline Rush, Power Thrust, and Weapon Perfection by 20%, giving your buffs extra staying power. Plus, it enhances these abilities with a bonus +1 STR and +4 Atk.`,
+    img: hiltBinding,
+  },
+  {
+    id: "weaponryResearch",
+    level: 0,
+    dependencies: [
+      { id: "hiltBinding", minLevel: 1 },
+    ],
+    dependent: [ ],
+    element: null,
+    skillName: "Weaponry Research",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Passive
+Type: Physical
+Requirement: Hilt Binding Lv: 1
+Description: Increases B.ATK and ACC. 
+[Lv. 1]: B.ATK +4, ACC +4% 
+[Lv. 2]: B.ATK +8, ACC +8% 
+[Lv. 3]: B.ATK +12. ACC +12% 
+[Lv. 4]: B.ATK +16. ACC +16% 
+[Lv. 5]: B.ATK +20. ACC +20%`,
+    img: weaponryResearch,
+  },
+];
+
+//   {
+//     id: "cartBoost",
+//     level: 0,
+//     dependencies: [
+//       { id: "pushcart", minLevel: 5 },
+//     ],
+//     dependent: [
+//       { id: "cartTermination" },
+//     ],
+//     element: null,
+//     skillName: "Cart Boost",
+//     maxLevel: 1,
+//     inform: `Max Lv: 1
+// Skill Form: Active
+// Type: Physical
+// Target: Self
+// Requirement: Pushcart Lv: 5
+// Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
+//     img: cartBoost,
+//   },
 //   {
 //     id: "metalTempering",
 //     level: 0,
@@ -95,390 +509,3 @@ Description: Requires Axes or Maces Class Weapon. Strikes the ground with great 
 // [Lv 5]: Full Efficiency`,
 //     img: enchantedStoneCraft,
 //   },
-  {
-    id: "reforge",
-    level: 0,
-    dependencies: [
-      { id: "enchantedStoneCraft", minLevel: 1 },
-      { id: "metalTempering", minLevel: 1 },
-    ],
-    dependent: [      
-      { id: "foundryPowerUp" },
-      { id: "bladeWeaponReforging" },
-      { id: "bluntWeaponReforging" },
-      { id: "pierceWeaponReforging" },
-      { id: "magicWeaponReforging" },
-      { id: "stringWeaponReforging" },
-      { id: "exoticWeaponReforging" },
-      { id: "repairWeapon" },
-      { id: "skinTempering" },
-    ],
-    element: null,
-    skillName: "Reforge",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Enchanted Stone Craft Lv: 1, Metal Tempering Lv: 1
-Description: Allows the blacksmith to reforge weapons. Reforging lets you apply one enhancement to a weapon from a list of possible upgrades. These enhancements can either boost the weapon's stats, like increasing bonuses, or even change the weapon's behavior. Each weapon can only be reforged once.
-[Lv 1]: Reforge Chance +3%,
-[Lv 2]: Reforge Chance +6%,
-[Lv 3]: Reforge Chance +9%,
-[Lv 4]: Reforge Chance +12%,
-[Lv 5]: Reforge Chance +15%`,
-    img: reforge,
-  },  
-  {
-    id: "bladeWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Blade Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: With an [Anvil] in your inventory, you can reforge Dagger, Axes and Swords class weapons. This process requires a forging hammer and all necessary materials. Your DEX and LUK will further influence the success rate.
-[Lv 1]: Success Rate: 5%,
-[Lv 2]: Success Rate: 10%,
-[Lv 3]: Success Rate: 15%`,
-    img: bladeWeaponReforging,
-  },
-  {
-    id: "bluntWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Blunt Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: With an [Anvil] in your inventory, you can reforge Mace and Knuckle class weapons. This process requires a forging hammer and all necessary materials. Your DEX and LUK will further influence the success rate.
-[Lv 1]: Success Rate: 5%,
-[Lv 2]: Success Rate: 10%,
-[Lv 3]: Success Rate: 15%`,
-    img: bluntWeaponReforging,
-  },
-  {
-    id: "pierceWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Pierce Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: With an [Anvil] in your inventory, you can reforge One and Two-Handed Spear class weapons. This process requires a forging hammer and all necessary materials. Your DEX and LUK will further influence the success rate.
-[Lv 1]: Success Rate: 5%,
-[Lv 2]: Success Rate: 10%,
-[Lv 3]: Success Rate: 15%`,
-    img: pierceWeaponReforging,
-  },
-  {
-    id: "magicWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Magic Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: With an [Anvil] in your inventory, you can reforge One, Two Handed Staff and Book class weapons. This process requires a forging hammer and all necessary materials. Your DEX and LUK will further influence the success rate.
-[Lv 1]: Success Rate: 5%,
-[Lv 2]: Success Rate: 10%,
-[Lv 3]: Success Rate: 15%`,
-    img: magicWeaponReforging,
-  },  
-  {
-    id: "stringWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "String Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: With an [Anvil] in your inventory, you can reforge Bow, Musical Instrument and Whip class weapons. This process requires a forging hammer and all necessary materials. Your DEX and LUK will further influence the success rate.
-[Lv 1]: Success Rate: 5%,
-[Lv 2]: Success Rate: 10%,
-[Lv 3]: Success Rate: 15%`,
-    img: stringWeaponReforging,
-  },
-  {
-    id: "exoticWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Exotic Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: With an [Anvil] in your inventory, you can reforge Humma Shuriken, Katar and Gun class weapons. This process requires a forging hammer and all necessary materials. Your DEX and LUK will further influence the success rate.
-[Lv 1]: Success Rate: 5%,
-[Lv 2]: Success Rate: 10%,
-[Lv 3]: Success Rate: 15%`,
-    img: exoticWeaponReforging,
-  },
-  {
-    id: "repairWeapon",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 2 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Repair Weapon",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Active
-Type: Physical
-Target: Ally
-Range: 2
-Requirement: Reforge Lv: 2
-Description: With an [Anvil] in your inventory, you can restore a single targets damaged equipment, making it usable once more. This process uses 2 Steels.`,
-    img: repairWeapon,
-  },
-  {
-    id: "skinTempering",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 2 },
-    ],
-    dependent: [
-      { id: "meltdown" },
-    ],
-    element: null,
-    skillName: "Skin Tempering",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 2
-Description: Harden your skin with the power of the forge, enhancing your resistance to Fire and Neutral property damage.
-[Lv 1]: Fire Res +4%, Neutral Res +1%,
-[Lv 2]: Fire Res +8%, Neutral Res +2%,
-[Lv 3]: Fire Res +12%, Neutral Res +3%,
-[Lv 4]: Fire Res +16%, Neutral Res +4%,
-[Lv 5]: Fire Res +20%, Neutral Res +5%`,
-    img: skinTempering,
-  }, 
-  {
-    id: "adrenalineRush",
-    level: 0,
-    dependencies: [
-      { id: "axeMastery", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "hiltBinding" },
-      { id: "weaponPerfection" },
-    ],
-    element: null,
-    skillName: "Adrenaline Rush",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Axe Mastery Lv: 3
-Description: Requires Axes or Maces Class Weapon. Temporarily boosts Attack speed, Critcal and Hit for all party members. This effect is also knocked off by Decrease AGI and Quagmire.
-[Lv 1]: Duration: 84sec, Critcal +1, Hit +2,
-[Lv 2]: Duration: 108sec, Critcal +2, Hit +4,
-[Lv 3]: Duration: 132sec, Critcal +3, Hit +6,
-[Lv 4]: Duration: 156sec, Critcal +4, Hit +8,
-[Lv 5]: Duration: 180sec, Critcal +5, Hit +10,
-[Lv 6]: Duration: 204sec, Critcal +6, Hit +12,
-[Lv 7]: Duration: 228sec, Critcal +7, Hit +14,
-[Lv 8]: Duration: 252sec, Critcal +8, Hit +16,
-[Lv 9]: Duration: 276sec, Critcal +9, Hit +18,
-[Lv 10]: Duration: 300sec, Critcal +10, Hit +20`,
-    img: adrenalineRush,
-  },
-  {
-    id: "weaponPerfection",
-    level: 0,
-    dependencies: [
-      { id: "adrenalineRush", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "hiltBinding" },
-      { id: "powerThrust" },
-    ],
-    element: null,
-    skillName: "Weapon Perfection",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Adrenaline Rush Lv: 3
-Description: This skill temporarily erases any size penalties from the equipped weapon for you and your party members, making your strikes more effective.
-[Lv 1]: Lasts 30 seconds,
-[Lv 2]: Lasts 60 seconds,
-[Lv 3]: Lasts 90 seconds,
-[Lv 4]: Lasts 120 seconds,
-[Lv 5]: Lasts 150 seconds`,
-    img: weaponPerfection,
-  },
-  {
-    id: "powerThrust",
-    level: 0,
-    dependencies: [
-      { id: "weaponPerfection", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "maximumPowerThrust" },
-      { id: "hiltBinding" },
-      { id: "maximizePower" },
-    ],
-    element: null,
-    skillName: "Power Thrust",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Weapon Perfection Lv: 3
-Description: Unleash a surge of strength with Power Thrust. Temporarily amplify your own attack power and that of your party members.
-[Lv 1]: Boosts Self Attack by 7% and Party Attack by 6%, lasting 60 seconds,
-[Lv 2]: Boosts Self Attack by 9% and Party Attack by 7%, lasting 70 seconds,
-[Lv 3]: Boosts Self Attack by 11% and Party Attack by 8%, lasting 80 seconds,
-[Lv 4]: Boosts Self Attack by 13% and Party Attack by 9%, lasting 90 seconds,
-[Lv 5]: Boosts Self Attack by 15% and Party Attack by 10%, lasting 100 seconds,
-[Lv 6]: Boosts Self Attack by 17% and Party Attack by 11%, lasting 110 seconds,
-[Lv 7]: Boosts Self Attack by 19% and Party Attack by 12%, lasting 120 seconds,
-[Lv 8]: Boosts Self Attack by 21% and Party Attack by 13%, lasting 130 seconds,
-[Lv 9]: Boosts Self Attack by 23% and Party Attack by 14%, lasting 140 seconds,
-[Lv 10]: Boosts Self Attack by 25% and Party Attack by 15%, lasting 150 seconds`,
-    img: powerThrust,
-  },  
-  {
-    id: "maximizePower",
-    level: 0,
-    dependencies: [
-      { id: "powerThrust", minLevel: 5 },
-    ],
-    dependent: [ ],
-    element: null,
-    skillName: "Maximize Power",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Target: Self
-Requirement: Power Thrust Lv: 5
-Description: Channel the full potential of your weapon with Maximize Power. This skill ensures your weapon delivers its maximum damage output for 240 seconds. As you harness its full might, your SP will steadily drain. Discoun and Overcharge will aways give maximum bonus.
-[Lv 1]: Drains 6 SP every 2 second,
-[Lv 2]: Drains 5 SP every 2 second,
-[Lv 3]: Drains 4 SP every 2 second,
-[Lv 4]: Drains 3 SP every 2 second,
-[Lv 5]: Drains 2 SP every 2 second`,
-    img: maximizePower,
-  },
-  {
-    id: "hiltBinding",
-    level: 0,
-    dependencies: [
-      { id: "adrenalineRush", minLevel: 7 },
-      { id: "powerThrust", minLevel: 7 },
-      { id: "weaponPerfection", minLevel: 3 },
-    ],
-    dependent: [      
-      { id: "weaponryResearch" },
-    ],
-    element: null,
-    skillName: "Hilt Binding",
-    maxLevel: 1,
-    inform: `Max Lv: 1
-Skill Form: Passive
-Type: Physical
-Requirement: Adrenaline Rush Lv: 7, Power Thrust Lv: 7, Weapon Perfection Lv: 3
-Description: Infuse your combat prowess. This skill prolongs the effects of Adrenaline Rush, Power Thrust, and Weapon Perfection by 20%, giving your buffs extra staying power. Plus, it enhances these abilities with a bonus +1 STR and +4 Atk.`,
-    img: hiltBinding,
-  },
-  {
-    id: "weaponryResearch",
-    level: 0,
-    dependencies: [
-      { id: "hiltBinding", minLevel: 1 },
-    ],
-    dependent: [ ],
-    element: null,
-    skillName: "Weaponry Research",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Passive
-Type: Physical
-Requirement: Hilt Binding Lv: 1
-Description: Sharpens your understanding of weapon mechanics, boosting your Status Attack and Hit Rate with any weapon.
-[Lv 1]: Status Atk +4, Hit Rate +4%,
-[Lv 2]: Status Atk +8, Hit Rate +8%,
-[Lv 3]: Status Atk +12, Hit Rate +12%,
-[Lv 4]: Status Atk +16, Hit Rate +16%,
-[Lv 5]: Status Atk +20, Hit Rate +20%`,
-    img: weaponryResearch,
-  },
-//   {
-//     id: "cartBoost",
-//     level: 0,
-//     dependencies: [
-//       { id: "pushcart", minLevel: 5 },
-//     ],
-//     dependent: [
-//       { id: "cartTermination" },
-//     ],
-//     element: null,
-//     skillName: "Cart Boost",
-//     maxLevel: 1,
-//     inform: `Max Lv: 1
-// Skill Form: Active
-// Type: Physical
-// Target: Self
-// Requirement: Pushcart Lv: 5
-// Description: Increase Move Speed for 30 Seconds when a Pushcart is equipped.`,
-//     img: cartBoost,
-//   },
-];
