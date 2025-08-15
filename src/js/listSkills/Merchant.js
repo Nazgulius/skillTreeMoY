@@ -27,18 +27,20 @@ export const skillsMerchant = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Axe
 Requirement: None
-Description: Increase attack with One Handed or Two Handed Axes Weapons. Second Class The benefits of this skill are improved upon reaching 2nd class. When [Lv 10], it increases damage on All Size in 6%. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: One Handed Atk +2, Two Handed Atk +3, 2nd Class Additional Atk +1,
-[Lv 2]: One Handed Atk +4, Two Handed Atk +6, 2nd Class Additional Atk +2,
-[Lv 3]: One Handed Atk +6, Two Handed Atk +9, 2nd Class Additional Atk +3,
-[Lv 4]: One Handed Atk +8, Two Handed Atk +12, 2nd Class Additional Atk +4,
-[Lv 5]: One Handed Atk +10, Two Handed Atk +15, 2nd Class Additional Atk +5,
-[Lv 6]: One Handed Atk +12, Two Handed Atk +18, 2nd Class Additional Atk +6,
-[Lv 7]:One Handed Atk +14, Two Handed Atk +21, 2nd Class Additional Atk +7,
-[Lv 8]: One Handed Atk +16, Two Handed Atk +24, 2nd Class Additional Atk +8,
-[Lv 9]: One Handed Atk +18, Two Handed Atk +27, 2nd Class Additional Atk +9,
-[Lv 10]: One Handed Atk +20, Two Handed Atk +30, 2nd Class Additional Atk +10`,
+Description: Increases E.ATK while wielding Axes. Blacksmiths and Alchemists gain extra E.ATK. At max level, also grants +6% P.DMG on all sizes.
+[Lv. 1]: One-Handed Axes: E.ATK +2 Two-Handed Axes: E.ATK +3
+[Lv. 2]: One-Handed Axes: E.ATK +4 Two-Handed Axes: E.ATK +6
+[Lv. 3]: One-Handed Axes: E.ATK +6 Two-Handed Axes: E.ATK +9
+[Lv. 4]: One-Handed Axes: E.ATK +8 Two-Handed Axes: E.ATK +12
+[Lv. 5]: One-Handed Axes: E.ATK +10 Two-Handed Axes: E.ATK +15
+[Lv. 6]: One-Handed Axes: E.ATK +12 Two-Handed Axes: E.ATK +18
+[Lv. 7]: One-Handed Axes: E.ATK +14 Two-Handed Axes: E.ATK +21
+[Lv. 8]: One-Handed Axes: E.ATK +16 Two-Handed Axes: E.ATK +24
+[Lv. 9]: One-Handed Axes: E.ATK +18 Two-Handed Axes: E.ATK +27
+[Lv.10]: One-Handed Axes: E.ATK +20 Two-Handed Axes: E.ATK +30
+Formula: E.ATK Bonus: Skill Lv x 1 `,
     img: axeMastery,
   },
   {
@@ -53,19 +55,25 @@ Description: Increase attack with One Handed or Two Handed Axes Weapons. Second 
 Skill Form: Active
 Type: Physical
 Target: Enemy
-Range: 1
+After Cast Delay: A.Delay - 0.28s
+Cooldown: A.Delay
+Range: 1 + Weapon's range
+Hits: 1
+SP Cost: 8
 Requirement: None
-Description: Harness the power of greed to deliver a devastating blow to a single target, dealing physical damage. At skill level 6 or higher has a chance to Stun. Consumes 2x Zeny Pouch at Lvs. 6 ~ 10.
-[Lv 1]: Atk 150%,
-[Lv 2]: Atk 200%,
-[Lv 3]: Atk 250%,
-[Lv 4]: Atk 300%,
-[Lv 5]: Atk 350%,
-[Lv 6]: Atk 400%, Stun chance 4%,
-[Lv 7]: Atk 450%, Stun chance 8%,
-[Lv 8]: Atk 500%, Stun chance 12%,
-[Lv 9]: Atk 550%, Stun chance 16%,
-[Lv 10]: Atk 600%, Stun chance 20%`,
+Description: Deals P.DMG to the target.
+Has a chance to inflict Stun for 4.5s at level 6 or higher.
+Catalyst: 2x Zeny Pouch for Lv. 6 or higher.
+[Lv. 1]: ATK 150%
+[Lv. 2]: ATK 200%
+[Lv. 3]: ATK 250% 
+[Lv. 4]: ATK 300%
+[Lv. 5]: ATK 350%
+[Lv. 6]: ATK 400%, Stun chance 4% 
+[Lv. 7]: ATK 450%, Stun chance 8% 
+[Lv. 8]: ATK 500%, Stun chance 12% 
+[Lv. 9]: ATK 550%, Stun chance 16% 
+[Lv.10]: ATK 600%, Stun chance 20%`,
     img: mammonite,
   },
   {
@@ -86,17 +94,19 @@ Description: Harness the power of greed to deliver a devastating blow to a singl
 Skill Form: Passive
 Type: Misc
 Requirement: None
-Description: Enables to rent a Pushcart and Increases maximum player Weight Limit. Pushcart Assembler.
-[Lv 1]: Maximum player Weight +200,
-[Lv 2]: Maximum player Weight +400,
-[Lv 3]: Maximum player Weight +600,
-[Lv 4]: Maximum player Weight +800,
-[Lv 5]: Maximum player Weight +1000,
-[Lv 6]: Maximum player Weight +1200,
-[Lv 7]: Maximum player Weight +1400,
-[Lv 8]: Maximum player Weight +1600,
-[Lv 9]: Maximum player Weight +1800,
-[Lv 10]: Maximum player Weight +2000`,
+Description: Grants the ability to push a cart. Also increases Max Weight.
+Use Decoration Tools to change its appearance.
+Rental at: Pushcart Assembler
+[Lv. 1]: Maximum Weight +200 
+[Lv. 2]: Maximum Weight +400 
+[Lv. 3]: Maximum Weight +600 
+[Lv. 4]: Maximum Weight +800 
+[Lv. 5]: Maximum Weight +1000 
+[Lv. 6]: Maximum Weight +1200 
+[Lv. 7]: Maximum Weight +1400 
+[Lv. 8]: Maximum Weight +1600 
+[Lv. 9]: Maximum Weight +1800 
+[Lv.10]: Maximum Weight +2000`,
     img: pushcart,
   },
   {
@@ -114,19 +124,25 @@ Description: Enables to rent a Pushcart and Increases maximum player Weight Limi
 Skill Form: Active
 Type: Physical
 Target: Enemy
+After Cast Delay: A.Delay - 0.28s
+Cooldown: A.Delay
 Range: 1
+Hits: 1
 Requirement: Pushcart Lv: 1
-Description: Slam your pushcart into a single target, dealing physical damage and Knockback them 3 cells. Cart Weight and the Number of different Items in it affect the base skill ratio, because nothing says power like a well-packed pushcart.
-[Lv 1]: Atk 100% + 1% for every 200 of Cart Weight,
-[Lv 2]: Atk 100% + 2% for every 200 of Cart Weight,
-[Lv 3]: Atk 100% + 3% for every 200 of Cart Weight,
-[Lv 4]: Atk 100% + 4% for every 200 of Cart Weight,
-[Lv 5]: Atk 100% + 5% for every 200 of Cart Weight,
-[Lv 6]: Atk 100% + 6% for every 200 of Cart Weight,
-[Lv 7]: Atk 100% + 7% for every 200 of Cart Weight,
-[Lv 8]: Atk 100% + 8% for every 200 of Cart Weight,
-[Lv 9]: Atk 100% + 9% for every 200 of Cart Weight,
-[Lv 10]: Atk 100% + 10% for every 200 of Cart Weight`,
+Description: Deals P.DMG to the target, Knocking it back 3 cells.
+The damage scales with the number of different items in the Pushcart and its current weight.
+Requires a Pushcart.
+[Lv. 1]: SP Cost: 8
+[Lv. 2]: SP Cost: 8
+[Lv. 3]: SP Cost: 9 
+[Lv. 4]: SP Cost: 9 
+[Lv. 5]: SP Cost: 10
+[Lv. 6]: SP Cost: 10
+[Lv. 7]: SP Cost: 11 
+[Lv. 8]: SP Cost: 11 
+[Lv. 9]: SP Cost: 12 
+[Lv.10]: SP Cost: 12
+Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight / 200) x Skill Lv) `,
     img: cartRevolution,
   },
   {
@@ -145,18 +161,20 @@ Description: Slam your pushcart into a single target, dealing physical damage an
 Skill Form: Active
 Type: Physical
 Target: Self
+After Cast Delay: A.Delay 0.225
+Cooldown: 1.50s
+Range: 1
+Hits: 3
 Requirement: Cart Revolution Lv: 5
-Description: Grab your cart and spin it like a whirlwind, dealing melee physical damage to all enemies within a 5x5 cell area around you. Cart Weight and the Number of different Items in it affect the base skill ratio. Every 30 VIT increases the SkillRatio by 1% per Base Level.
-[Lv 1]: Atk 100% + 1% for every 400 of Cart Weight,
-[Lv 2]: Atk 100% + 2% for every 400 of Cart Weight,
-[Lv 3]: Atk 100% + 3% for every 400 of Cart Weight,
-[Lv 4]: Atk 100% + 4% for every 400 of Cart Weight,
-[Lv 5]: Atk 100% + 5% for every 400 of Cart Weight,
-[Lv 6]: Atk 100% + 6% for every 400 of Cart Weight,
-[Lv 7]: Atk 100% + 7% for every 400 of Cart Weight,
-[Lv 8]: Atk 100% + 8% for every 400 of Cart Weight,
-[Lv 9]: Atk 100% + 9% for every 400 of Cart Weight,
-[Lv 10]: Atk 100% + 10% for every 400 of Cart Weight`,
+Description: Deals P.DMG to enemies within a 5x5 AoE, Knocking them back 1 cell.
+The damage scales with VIT, Base Level, the number of different items in the Pushcart and its current weight.
+Requires a Pushcart.
+[Lv. 1]: SP Cost: 6
+[Lv. 2]: SP Cost: 7
+[Lv. 3]: SP Cost: 8 
+[Lv. 4]: SP Cost: 9 
+[Lv. 5]: SP Cost: 10
+Formula: ATK (%): 100 + ((Pushcart Weight / (400 - Number of Different Items)) x Skill Lv) x (1 + ((VIT / 30) x (Base Lv / 100)))) `,
     img: cartTwister,
   },
   {
@@ -171,20 +189,23 @@ Description: Grab your cart and spin it like a whirlwind, dealing melee physical
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s
+Cooldown: A.Delay
 Requirement: Pushcart Lv: 3
-Description: Activate this skill to receive a buff that randomly slashes the SP Cost of your abilities. The reduction varies based on the skill level, giving you a chance to save a small, medium, or large amount of SP. However, this cannot be used at the same time as Overcharge.
-[Lv 1]: SP reduction: 1%, 2%, or 5%,
-[Lv 2]: SP reduction: 2%, 4%, or 10%,
-[Lv 3]: SP reduction: 3%, 6%, or 15%,
-[Lv 4]: SP reduction: 4%, 8%, or 20%,
-[Lv 5]: SP reduction: 5%, 10%, or 25%,
-[Lv 6]: SP reduction: 6%, 12%, or 30%,
-[Lv 7]: SP reduction: 7%, 14%, or 35%,
-[Lv 8]: SP reduction: 8%, 16%, or 40%,
-[Lv 9]: SP reduction: 9%, 18%, or 45%,
-[Lv 10]: SP reduction: 10%, 20%, or 50%`,
+Description: Grants a chance to randomly reduce all skills' SP Cost by 10%, 20% or 50% while active.
+Cancels the effect of Overcharge. 
+[Lv. 1]: Chance: 10%
+[Lv. 2]: Chance: 20%
+[Lv. 3]: Chance: 30%
+[Lv. 4]: Chance: 40%
+[Lv. 5]: Chance: 50%
+[Lv. 6]: Chance: 60%
+[Lv. 7]: Chance: 70%
+[Lv. 8]: Chance: 80% 
+[Lv. 9]: Chance: 90% 
+[Lv.10]: Chance: 100%`,
     img: discount,
   },
   {
@@ -199,20 +220,21 @@ Description: Activate this skill to receive a buff that randomly slashes the SP 
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Self
 Requirement: Discount Lv: 3
-Description: Activate this skill to unleash a buff that ramps up the SP Cost of your abilities, but in return, boosts their Status Attack. The increase in SP cost is random, and the Status Attack scales accordingly. However, this cannot be used at the same time as Discount.
-[Lv 1]: SP increase cost: 1%, 2%, or 5%, Status Attack: +1, +2, or +5,
-[Lv 2]: SP increase cost: 2%, 4%, or 10%, Status Attack: +2, +4, or +10,
-[Lv 3]: SP increase cost: 3%, 6%, or 15%, Status Attack: +3, +6, or +15,
-[Lv 4]: SP increase cost: 4%, 8%, or 20%, Status Attack: +4, +8, or +20,
-[Lv 5]: SP increase cost: 5%, 10%, or 25%, Status Attack: +5, +10, or +25,
-[Lv 6]: SP increase cost: 6%, 12%, or 30%, Status Attack: +6, +12, or +30,
-[Lv 7]: SP increase cost: 7%, 14%, or 35%, Status Attack: +7, +14, or +35,
-[Lv 8]: SP increase cost: 8%, 16%, or 40%, Status Attack: +8, +16, or +40,
-[Lv 9]: SP increase cost: 9%, 18%, or 45%, Status Attack: +9, +18, or +45,
-[Lv 10]: SP increase cost: 10%, 20%, or 50%, Status Attack: +10, +20, or +50,`,
+Description: Grants a chance to randomly increase all skills' SP Cost by 10%, 20%, or 50% while active, and also increases W.ATK by the same numerical value as the SP Cost increase percentage.
+Cancels the effect of Discount.
+[Lv. 1]: Chance: 10%
+[Lv. 2]: Chance: 20%
+[Lv. 3]: Chance: 30%
+[Lv. 4]: Chance: 40%
+[Lv. 5]: Chance: 50%
+[Lv. 6]: Chance: 60%
+[Lv. 7]: Chance: 70%
+[Lv. 8]: Chance: 80% 
+[Lv. 9]: Chance: 90% 
+[Lv.10]: Chance: 100%`,
     img: overcharge,
   },
 ];
