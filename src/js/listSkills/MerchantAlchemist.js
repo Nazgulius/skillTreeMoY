@@ -617,7 +617,7 @@ Formula: Healing (%): 100 + INT + Target VIT + (T. P. Techniques Lv x 5) `,
     element: null,
     skillName: "Sling Item",
     maxLevel: 5,
-    inform: `Max Lv: 1 (or 5)
+    inform: `Max Lv: 5
 Skill Form: Active
 Type: Supportive
 Target: Enemy/Ally
