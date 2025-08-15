@@ -16,7 +16,7 @@ import powerThrust from '../../img/icon_bsm/icon_bsm_20.gif';
 import maximizePower from '../../img/icon_bsm/icon_bsm_21.gif'; 
 import cartBoost from '../../img/icon_wsm/icon_wsm_2.gif'; 
 import metalTempering from '../../img/icon_bsm/icon_bsm_25.png'; 
-import reforge from '../../img/icon_bsm/icon_bsm_38.png'; 
+import reforge from '../../img/icon_bsm/icon_bsm_39.png'; 
 import bluntWeaponReforging from '../../img/icon_bsm/icon_bsm_33.png'; 
 import pierceWeaponReforging from '../../img/icon_bsm/icon_bsm_34.png'; 
 import magicWeaponReforging from '../../img/icon_bsm/icon_bsm_35.png'; 
