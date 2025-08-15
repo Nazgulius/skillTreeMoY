@@ -38,11 +38,17 @@ export const skillsMonk = [
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Physical
-Target: Ally
+Type: Supportive 
+Target: Self/Enemy
+Fixed Cast Time: 0.60s
+After Cast Delay: A.Delay - 0.18s 
+Cooldown: A.Delay
 Range: 9
 Requirement: Call Spirit Sphere Lv: 5
-Description: Allows the user to absorb Spirit Spheres, restoring their SP. Recovers 10 SP per absorbed Spirit Sphere. When used on monsters, it may restore SP equal to 0.5 to 2 times the monster level with a success rate dependent on the user's Base Level and the targets level. Chance: [25% + 1% Every 4 Base Level of user] - [1% Every 3 Level of Target]`,
+Description: Absorbs the target's Spirit Spheres, recovering 10 SP per sphere.
+Against monsters, has a chance to recover SP based on the user's Base Level and the monster's Level. 
+Formula: Chance (%): 25 + ((Base Lv / 4) - (Monster Level / 3))
+SP Recover: ((5~10) Monster Level) / 10 `,
     img: absorbSpiritSphere,
   },
   {
@@ -59,9 +65,24 @@ Description: Allows the user to absorb Spirit Spheres, restoring their SP. Recov
 Skill Form: Active
 Type: Physical
 Target: Enemy
-Range: 2
+After Cast Delay: 1.50s
+Cooldown: 3s
+Range: 2 + Weapon's range
+SP Cost: 20
 Requirement: Furious Spirits Lv: 5
-Description: Unleash the full force of your spiritual energy, dealing devastating damage based on the number of Spirit Spheres consumed and your current SP spends. Requires the user to be in the Furious Spirits state. Can be performed Manually, after Pacify, or as part of a Combo. After use, all forms of SP recovery (Natural, Potion, Food, Skill, etc.) are penalized for 10 seconds. The penalty decreases progressively each second. Manually: Select Asura Strike via a hotkey and click on the desired target. This will consume the current number of Spirit Spheres. Each sphere consumed will use 10% of your current SP and put the skill on a 3-second cooldown per sphere used. Pacify: Can be used on a target immobilized by Pacify at Level 5, consuming only 1 Spirit Sphere and 10% of your current SP. The cooldown is 9 seconds. Combo: Can be used during the 'Combo Finish' cooldown, avoiding casting time. Consumes only 1 Spirit Sphere and 10% of current SP. Cooldown is 3 seconds.`,
+Description: Deals P.DMG to the target, ignoring its FLEE.
+This skill is unaffected by Damage Modifiers. While in Furious Spirits stance, it passively grants Asura Strike Charge. After casting, the caster is temporarily afflicted with Asura Strike Recoil, for a duration equal to half of the skill's cooldown.
+If Spirit Spheres Collect is active, both the Spirit Sphere and max SP Cost are doubled. This skill can be cast on targets trapped by Pacify.
+Requires Furious Spirits stance to use.
+CD increases by 1s for each Spirit Sphere consumed.
+VCT and FCT scale with skill level.
+[Lv. 1]: VCT/FCT: 1.20s. Spheres Cost: 1 MaxSP Cost: 1%
+[Lv. 2]: VCT/FCT: 1.40s. Spheres Cost: 2 MaxSP Cost: 2%
+[Lv. 3]: VCT/FCT: 1.60s. Spheres Cost: 3 MaxSP Cost: 3%
+[Lv. 4]: VCT/FCT: 1.80s. Spheres Cost: 4 MaxSP Cost: 4%
+[Lv. 5]: VCT/FCT: 2.00s. Spheres Cost: 5 MaxSP Cost: 5%
+Formula: Damage: ATK x 25 + ((Stack x (Consumed Spheres x 10)) / 100) 
+Max Damage Stack: (100000 x ((STR + Base Lv) / 150)) + (MaxSP x 20) `,
     img: asuraStrike,
   },
   {
@@ -78,17 +99,22 @@ Description: Unleash the full force of your spiritual energy, dealing devastatin
     skillName: "Body Relocation",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
+Skill Form: Active 
 Type: Physical
 Target: Ground
-Range: 3
+After Cast Delay: A.Delay - 0.18s
 Requirement: Throw Spirit Sphere Lv: 3, Pacify Lv: 3
-Description: Instantly teleport to a targeted spot if there are no obstacles between the caster and the destination. After using this skill, [Asura Strike] and [Deva Retaliation] have a cooldown of 2 seconds. Each cast requires 1 Spirit Sphere. In Furious Spirits state, removes the Spirit Sphere cost. In Calm Spirits state, adds a 2 second cooldown, deals area damage 3x3 cells based on the distance between the user and the target, user weight and DEF, and pushes enemies and objects by 2 cells.
-[Lv 1]: Range: 3 cells, SP Cost: 6,
-[Lv 2]: Range: 5 cells, SP Cost: 8,
-[Lv 3]: Range: 7 cells, SP Cost: 10,
-[Lv 4]: Range: 9 cells, SP Cost: 12,
-[Lv 5]: Range: 11 cells, SP Cost: 14`,
+Description: Charges to the targeted location.
+if the path has no obstacles.
+After casting this skill, puts Asura Strike and Deva Retaliation in a 2s CD.
+Furious Spirits: Removes the Spirit Sphere cost.
+Calm Spirits: Deals P.DMG to enemies within a 3x3 AoE, knocking them back 2 cells. The damage scales with VIT, P.DEF, Base Level, Weight and the distance to the targets. Requires 1 Spirit Sphere.
+[Lv. 1]: Range: 3. SP Cost: 6 
+[Lv. 2]: Range: 5. SP Cost: 8 
+[Lv. 3]: Range: 7. SP Cost: 10
+[Lv. 4]: Range: 9. SP Cost: 12 
+[Lv. 5]: Range: 11. SP Cost: 14
+Calm Spirits: ATK (%): ((((Weight / 200) x Distance) x (1 + ((VIT / 30) x (Base Lv / 100)))) x (S.DEF + H.DEF)) / 100 `,
     img: bodyRelocation,
   },
   {
@@ -108,15 +134,21 @@ Description: Instantly teleport to a targeted spot if there are no obstacles bet
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive
 Target: Self
+After Cast Delay: A.Delay 0.18s
+Cooldown: A.Delay
+Max Instances: 5
 Requirement: None
-Description: Summons a Spirit Sphere that will orbit the user. Summoned sphere is maintained for 10 minutes. Each sphere increases Atk and DEF by 3.
-[Lv 1]: Summon 1 Spirit Sphere,
-[Lv 2]: Summon 2 Spirit Sphere,
-[Lv 3]: Summon 3 Spirit Sphere,
-[Lv 4]: Summon 4 Spirit Sphere,
-[Lv 5]: Summon 5 Spirit Sphere`,
+Description: Summons Spirit Spheres for 600s, which increases Mastery ATK and S.DEF The Mastery ATK bonus increases while in Furious Spirit stance.
+VCT and FCT scale with skill level.
+[Lv. 1]: VCT: 0.10s. FCT: 0.10s Spheres: 1. SP Cost: 5
+[Lv. 2]: VCT: 0.20s. FCT: 0.20s Spheres: 2. SP Cost: 10
+[Lv. 3]: VCT: 0.30s. FCT: 0.30s Spheres: 3. SP Cost: 15
+[Lv. 4]: VCT: 0.40s. FCT: 0.40s Spheres: 4. SP Cost: 20
+[Lv. 5]: VCT: 0.50s. FCT: 0.50s Spheres: 5. SP Cost: 25
+Formula: Mastery ATK & S.DEF: Spirit Spheres x 3 
+Furious Spirits Bonus: Furious Spirits Lv x 6 `,
     img: callSpiritSphere,
   },
   {
@@ -132,16 +164,23 @@ Description: Summons a Spirit Sphere that will orbit the user. Summoned sphere i
     skillName: "Calm Spirits",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
+Skill Form: Toggle
+Type: Supportive 
 Target: Self
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
 Requirement: Spiritual Cadence Lv: 3
-Description: Enter a meditative state that greatly boosting your Physical and Magical Defenses and Mitigates Damage received. This also adds effects to certain skills but comes with drawbacks such as reduces Attack, Movement Speed and Attack speed. Additionally, grants a bonus of +80 Hard Defense and +10 Critical Defense. Each cast requires 5 Spirit Sphere.
-[Lv 1]: Physical Defense +8%, Critical Defense +4%, Mitigates 2% of incoming damage. Attack -10%, Movement Speed -2%, Attack Speed -2%.
-[Lv 2]: Physical Defense +16%, Critical Defense +8%, Mitigates 4% of incoming damage. Attack -20%, Movement Speed -4%, Attack Speed -4%.
-[Lv 3]: Physical Defense +24%, Critical Defense +12%, Mitigates 6% of incoming damage. Attack -30%, Movement Speed -6%, Attack Speed -6%.
-[Lv 4]: Physical Defense +32%, Critical Defense +16%, Mitigates 8% of incoming damage. Attack -40%, Movement Speed -8%, Attack Speed -8%.
-[Lv 5]: Physical Defense +40%, Critical Defense +20%, Mitigates 10% of incoming damage. Attack -50%, Movement Speed -10%, Attack Speed -10%.`,
+Description: Increases C.DEF and resistance to both P.DMG and M.DMG while active, but reduces ATK.
+Also grants +10 C.DEF.
+Requires 5 Spirit Spheres.
+Cancels the effect of Furious Spirits. 
+[Lv. 1]: Resistance: P.DMG: 6%, M.DMG: 2% C.DEF +5%, ATK -12%, SP Cost: 2% 
+[Lv. 2]: Resistance: P.DMG: 12%, M.DMG: 4% C.DEF +10%, ATK -24%, SP Cost: 4%
+[Lv. 3]: Resistance: P.DMG: 18%, M.DMG: 6% C.DEF +15%, ATK -36%, SP Cost: 6% 
+[Lv. 4]: Resistance: P.DMG: 24%, M.DMG: 8% C.DEF +20%, ATK -48%, SP Cost: 8% 
+[Lv. 5]: Resistance: P.DMG: 30%, M.DMG: 10% C.DEF +25%, ATK -60%, SP Cost: 10%`,
     img: calmSpirits,
   },
 //   {
@@ -211,9 +250,24 @@ Description: Enter a meditative state that greatly boosting your Physical and Ma
 Skill Form: Active
 Type: Physical
 Target: Enemy
-Range: 2
+After Cast Delay: 1.50s
+Cooldown: 3s
+Range: 2 + Weapon's range
+SP Cost: 20
 Requirement: Calm Spirits Lv: 5
-Description: Release the pain accumulated during your battles while in a state of Calm Spirit, striking enemies with the full force based on the number of Spirit Spheres consumed and your Stored Suffering. Requires the user to be in the Calm Spirits state.Can be performed Manually, after Pacify, or as part of a Combo. After use, all forms of SP recovery (Natural, Potion, Food, Skill, etc.) are penalized for 10 seconds. The penalty decreases progressively each second. Manually: Select Deva Retaliation via a hotkey and click on the desired target. This will consume the current number of Spirit Spheres. Each sphere consumed will use 10% of your current Stored Suffering and put the skill on a 3-second cooldown per sphere used. Pacify: Can be used on a target immobilized by Pacify at Level 5, consuming only 1 Spirit Sphere and 10% of your current Stored Suffering. The cooldown is 9 seconds. Combo: Can be used during the 'Combo Finish' cooldown, avoiding casting time. Consumes only 1 Spirit Sphere and 10% of current Stored Suffering. Cooldown is 3 seconds.`,
+Description: Deals P.DMG to the target, ignoring its FLEE.
+This skill is unaffected by Damage Modifiers. While in Calm Spirits stance, it passively grants Deva Retaliation Charge. After casting, the caster is temporarily afflicted with Deva Retaliation Recoil, for a duration equal to half of the skill's cooldown.
+If Spirit Spheres Collect is active, both the Spirit Sphere and max SP Cost are doubled. This skill can be cast on targets trapped by Pacify.
+Requires Calm Spirits stance to use.
+CD increases by 1s for each Spirit Sphere consumed.
+VCT and FCT scale with skill level.
+[Lv. 1]: VCT/FCT: 1.20s. Spheres Cost: 1 MaxSP Cost: 1%
+[Lv. 2]: VCT/FCT: 1.40s. Spheres Cost: 2 MaxSP Cost: 2%
+[Lv. 3]: VCT/FCT: 1.60s. Spheres Cost: 3 MaxSP Cost: 3%
+[Lv. 4]: VCT/FCT: 1.80s. Spheres Cost: 4 MaxSP Cost: 4%
+[Lv. 5]: VCT/FCT: 2.00s. Spheres Cost: 5 MaxSP Cost: 5%
+Formula: Damage: (((S.DEF / 8) + (H.DEF / 4)) x 25) + ((Stack x (Consumed Spheres x 10)) / 100) 
+Max Damage Stack: (100000 x ((VIT + Base Lv) / 150)) + (MaxSP x 20) `,
     img: devaRetaliation,
   },
   {
@@ -230,15 +284,20 @@ Description: Release the pain accumulated during your battles while in a state o
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Self
+After Cast Delay: 1s
+Cooldown: 20s
 Requirement: Call Spirit Sphere Lv: 5
-Description: Passively enhances evasion and grants a chance to dodge any physical attack. Requires Furious Spirits to activate, it allows the user have a chance to nullify a ranged physical attack by instantly leaping towards the attacker.
-[Lv 1]: Passive: Flee +4, Dodge 1%, Active: Nullify chance 10%, SP Cost: 14, HP Cost: 1%,
-[Lv 2]: Passive: Flee +8, Dodge 2%, Active: Nullify chance 20%, SP Cost: 18, HP Cost: 2%,
-[Lv 3]: Passive: Flee +12, Dodge 3%, Active: Nullify chance 30%, SP Cost: 22, HP Cost: 3%,
-[Lv 4]: Passive: Flee +16, Dodge 4%, Active: Nullify chance 40%, SP Cost: 26, HP Cost: 4%,
-[Lv 5]: Passive: Flee +20, Dodge 5%, Active: Nullify chance 50%, SP Cost: 30, HP Cost: 5%`,
+Description: Grants a chance to block ranged P.DMG once, charging toward the attacker when triggered.
+Passively increases FLEE and grants a chance to avoid P.DMG.
+Requires Furious Spirit stance.
+VCT scales with skill level.
+[Lv. 1]: Block Chance 10%, VCT: 2.00s Duration: 6s. HP Cost: 1%, SP Cost: 14 Flee +4. Avoid Chance: 1%
+[Lv. 2]: Block Chance 20%, VCT: 1.50s Duration: 7s. HP Cost: 2%, SP Cost: 18 Flee +8. Avoid Chance: 2%
+[Lv. 3]: Block Chance 30%, VCT: 1.00s Duration: 8s. HP Cost: 3%, SP Cost: 22 Flee +12. Avoid Chance: 3%
+[Lv. 4]: Block Chance 40%, VCT: 0.50s Duration: 9s. HP Cost: 4%, SP Cost: 26 Flee +16. Avoid Chance: 4%
+[Lv. 5]: Block Chance 50%, VCT: 0.00s Duration: 10s. HP Cost: 5%, SP Cost: 30 Flee +20. Avoid Chance: 5%`,
     img: fallingBlossoms,
   },
   {
@@ -254,16 +313,23 @@ Description: Passively enhances evasion and grants a chance to dodge any physica
     skillName: "Furious Spirits",
     maxLevel: 5,
     inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
+Skill Form: Toggle 
+Type: Supportive 
 Target: Self
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
 Requirement: Falling Blossoms Lv: 3
-Description: Enter a heightened state of rage, boosting your Attack and Critical Hit Chance while increasing Attack Speed based on lost HP. This also adds effects to certain skills but comes with drawbacks such as increased SP consumption, reduced SP regeneration, and decreased physical defense. Additionally, grants a bonus of +50 Weapon Attack and +10 Critical Chance. Each cast requires 5 Spirit Sphere.
-[Lv 1]: Attack +5%, Critical Hit Chance +5%, +1% Attack Speed every 9% HP lost, SP consumption +4%, SP regeneration -10% , Physical Defense -10%,
-[Lv 2]: Attack +10%, Critical Hit Chance +10%, +1% Attack Speed every 8% HP lost, SP consumption +8%, SP regeneration -20% , Physical Defense -20%, SP Consumption +18%, SP Regen -20%, Hard DEF -20%,
-[Lv 3]: Attack +15%, Critical Hit Chance +15%, +1% Attack Speed every 7% HP lost, SP consumption +12%, SP regeneration -30% , Physical Defense -30%,
-[Lv 4]: Attack +20%, Critical Hit Chance +20%, +1% Attack Speed every 6% HP lost, SP consumption +8%, SP regeneration -40% , Physical Defense -40%, SP Consumption +16%, SP Regen -40%, Hard DEF -40%,
-[Lv 5]: Attack +25%, Critical Hit Chance +25%, +1% Attack Speed every 5% HP lost, SP consumption +20%, SP regeneration -50% , Physical Defense -50%`,
+Description: Increases ATK and CRIT, and reduces DAA while active, but reduces P.DEF.
+Also grants +10 CRIT.
+Requires 5 Spirit Spheres.
+Cancels the effect of Calm Spirits. 
+[Lv. 1]: ATK +6%, CRIT +5%, DAA -2% DEF -12%, SP Cost: 2%
+[Lv. 2]: ATK +12%, CRIT +10%, DAA -4% DEF -24%, SP Cost: 4%
+[Lv. 3]: ATK +18%, CRIT +15%, DAA -6% DEF -36%, SP Cost: 6%
+[Lv. 4]: ATK +24%, CRIT +20%, DAA -8% DEF -48%, SP Cost: 8%
+[Lv. 5]: ATK +30%, CRIT +25%, DAA -10% DEF -60%, SP Cost: 10%`,
     img: furiousSpirits,
   },
   {
@@ -282,18 +348,21 @@ Description: Enter a heightened state of rage, boosting your Attack and Critical
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Knuckle/Bare Hands
 Requirement: Demon Bane Lv: 10, Divine Protection Lv: 10
-Description: Increase attack with Knuckle Class Weapons or Bare Handed. When [Lv 10], it increases Aspd in 6%. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Bare Handed: Atk +6, Knuckle: Atk +3,
-[Lv 2]: Bare Handed: Atk +12, Knuckle: Atk +6,
-[Lv 3]: Bare Handed: Atk +18, Knuckle: Atk +9,
-[Lv 4]: Bare Handed: Atk +24, Knuckle: Atk +12,
-[Lv 5]: Bare Handed: Atk +30, Knuckle: Atk +15,
-[Lv 6]: Bare Handed: Atk +36, Knuckle: Atk +18,
-[Lv 7]: Bare Handed: Atk +42, Knuckle: Atk +21,
-[Lv 8]: Bare Handed: Atk +48, Knuckle: Atk +24,
-[Lv 9]: Bare Handed: Atk +54, Knuckle: Atk +27,
-[Lv 10]: Bare Handed: Atk +60, Knuckle: Atk +30`,
+Description: Increases E.ATK while wielding.
+Knuckles or Bare-Handed. At max level, also reduces DAA by 6%.
+Double the E.ATK bonus while bare-handed. 
+[Lv. 1]: E.ATK +3
+[Lv. 2]: E.ATK +6
+[Lv. 3]: E.ATK +9
+[Lv. 4]: E.ATK +12
+[Lv. 5]: E.ATK +15
+[Lv. 6]: E.ATK +18
+[Lv. 7]: E.ATK +21
+[Lv. 8]: E.ATK +24
+[Lv. 9]: E.ATK +27 
+[Lv.10]: E.ATK +30`,
     img: ironHand,
   },
 //   {
@@ -339,16 +408,25 @@ Description: Increase attack with Knuckle Class Weapons or Bare Handed. When [Lv
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.50s
+SP Cost: 10
 Requirement: Call Spirit Sphere Lv: 5
-Description: Temporarily halt the aggression of an enemy by capturing them in a Pacify status when they attempt a melee attack during Reaction Time. Only melee physical attacks can activate this skill, although it can be used against ranged attacks if the user is within melee range. In Furious Spirits state, damage of skills (except Asura Strike and Deva Retaliation) is increased by 4% per level learned of Pacify when used against a target captured by the Pacify skill. In Calm Spirits state, receive half of your Hard Defense and a quarter of your Soft Defense as True Defense for 0.8 seconds per level learned in Pacify.
-[Lv 1]: Reaction Time 0.5s, Duration 5.4s,
-[Lv 2]: Reaction Time 0.7s, Duration 5.8s,
-[Lv 3]: Reaction Time 0.9s, Duration 6.2s,
-[Lv 4]: Reaction Time 1.1s, Duration 6.6s,
-[Lv 5]: Reaction Time 1.3s, Duration 7.0s
-Note: Duration is reduced to 2 seconds on elite, miniboss, and boss monsters.`,
+Description: Enters a stance that temporarily traps the next enemy that uses a basic attacks against the caster, provided it happens within the skill's time frame. The trap duration is reduced to 2s against Elite and Boss monsters.
+Furious Spirits: Increases the next damage against the target while trapped.
+Calm Spirits: Grants T.DEF while trapped, scaling with P.DEF.
+[Lv. 1]: Time Frame: 0.7s. Duration: 5.4s 
+[Lv. 2]: Time Frame: 0.9s. Duration: 5.8s 
+[Lv. 3]: Time Frame: 1.1s. Duration: 6.25
+[Lv. 4]: Time Frame: 1.3s. Duration: 6.65 
+[Lv. 5]: Time Frame: 1.5s. Duration: 7.0s
+Formula: Furious Spirit:
+ATK (%): Skill Lv x 4 
+MATK (%): Skill Lv x 10 
+Calm Spirits:
+True Defense: (H.DEF / 2) + (S.DEF / 4) 
+Duration (seconds): Skill Lv x 0.8 `,
     img: pacify,
   },
   {
@@ -365,15 +443,22 @@ Note: Duration is reduced to 2 seconds on elite, miniboss, and boss monsters.`,
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Self
+After Cast Delay: 1s 
+Cooldown: 20s
 Requirement: Call Spirit Sphere Lv: 5
-Description: Passively recovers HP and SP recovery every 10 seconds when the characte its not walking. Requires Calm Spirits to activate, forces the player into a deep meditation, greatly accelerating recovery. The player remains seated even if attacked and cannot move until the meditation is complete.
-[Lv 1]: Passive: Recovers (10 +0.4% MaxHP) HP and (6 +0.4% MaxSP) SP, Active: Meditates for 2 seconds.
-[Lv 2]: Passive: Recovers (20 +0.8% MaxHP) HP and (12 +0.8% MaxSP) SP, Active: Meditates for 4 seconds.
-[Lv 3]: Passive: Recovers (30 +1.2% MaxHP) HP and (18 +1.2% MaxSP) SP, Active: Meditates for 6 seconds.
-[Lv 4]: Passive: Recovers (40 +1.6% MaxHP) HP and (24 +1.6% MaxSP) SP, Active: Meditates for 8 seconds.
-[Lv 5]: Passive: Recovers (50 +2% MaxHP) HP and (30 +2% MaxSP) SP, Active: Meditates for 10 seconds.`,
+Description: Sits down temporarily, triggering HP Recovery and SP Recovery every 1s. Cannot be interrupted by damage or actions while active.
+Passively recovers HP and SP every 10s while not walking.
+Requires Calm Spirit stance.
+VCT scales with skill level.
+[Lv. 1]: VCT: 2.00s. Duration: 6s. SP Cost: 14 
+[Lv. 2]: VCT: 1.50s. Duration: 7s. SP Cost: 18 
+[Lv. 3]: VCT: 1.00s. Duration: 8s. SP Cost: 22 
+[Lv. 4]: VCT: 0.50s. Duration: 9s. SP Cost: 26 
+[Lv. 5]: VCT: 0.00s. Duration: 10s, SP Cost: 30
+Formula: Passive HP Recover: (Skill Lv x 10) + (((Skill Lv x 4) x MaxHP) / 1000) 
+Passive SP Recover: (Skill Lv x 6) + (((Skill Lv x 4) x MaxSP) / 1000) `,
     img: spiritualCadence,
   },
   {
@@ -393,14 +478,22 @@ Description: Passively recovers HP and SP recovery every 10 seconds when the cha
 Skill Form: Active
 Type: Physical
 Target: Enemy
-Range: 6
+After Cast Delay: A.Delay 0.18s
+Cooldown: A.Delay
+Range: 9
 Requirement: Occult Impaction Lv: 3, Pacify Lv: 2
-Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. The number of hits depends on the skill level. Damage is influenced by the users Base Level. In Furious Spirits state, increases range by 6 cells. In Calm Spirits state, adds your Hard DEF as True Damage at the damage. Each cast requires 1 Spirit Sphere.
-[Lv 1]: Sphere Hit 1 Time,
-[Lv 2]: Sphere Hit 2 Times,
-[Lv 3]: Sphere Hit 3 Times,
-[Lv 4]: Sphere Hit 4 Times,
-[Lv 5]: Sphere Hit 5 Times`,
+Description: Deals ranged P.DMG to the target.
+Requires 1 Spirit Sphere.
+VCT and FCT scale with skill level.
+Furious Spirits: The damage scales with STR. Calm Spirits: The damage scales with P.DEF. 
+[Lv. 1]: VCT: 0.30s. FCT: 0.10s Hits: 1. SP Cost: 12
+[Lv. 2]: VCT: 0.40s. FCT: 0.15s Hits: 2. SP Cost: 14
+[Lv. 3]: VCT: 0.50s. FCT: 0.20s Hits: 3. SP Cost: 16
+[Lv. 4]: VCT: 0.60s. FCT: 0.25s Hits: 4. SP Cost: 18
+[Lv. 5]: VCT: 0.70s. FCT: 0.30s Hits: 5. SP Cost: 20
+Formula: ATK (%): 200 x Hits 
+Furious Spirits: ATK Bonus (%): STR
+Calm Spirits: Damage Bonus: ((S.DEF + H.DEF) - Target Defense) x Hits `,
     img: throwSpiritSphere,
   },
 //   {
@@ -445,10 +538,25 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
     ],
     dependent: [],
     element: null,
-    skillName: "Lotus Pu...",
-    maxLevel: 10,
-    inform: `...
-`,
+    skillName: "Lotus Pulse",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Target: Self
+After Cast Delay: 1s
+Cooldown: 2s
+Hits: 1
+Description: Consumes all Spirit Spheres to deal P.DMG to enemies within a 7x7 AoE, scaling with Base Level and the amount of consumed spheres.
+Requires at least 1 Spirit Sphere to cast. Furious Spirits: Knocks enemies back 2 cells. Calm Spirits: Pulls enemies toward the caster, granting a chance to inflict Stun for 1s. 
+[Lv. 1]: ATK 200%, SP Cost: 11
+[Lv. 2]: ATK 300%, SP Cost: 12
+[Lv. 3]: ATK 400%, SP Cost: 13
+[Lv. 4]: ATK 500%, SP Cost: 14
+[Lv. 5]: ATK 600%, SP Cost: 15
+Formula: ATK (%): 100 + (100 x Skill Lv) + (Base Lv x Spirit Spheres)
+Calm Spirits:
+Stun Chance (%): 20 + (Skill Lv x 10) `,
     img: lotusPu,
   },
   {
@@ -459,10 +567,34 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
     ],
     dependent: [],
     element: null,
-    skillName: "Chain Fi...",
+    skillName: "Chain Fist",
     maxLevel: 10,
-    inform: `...
-`,
+    inform: `Max Level: 10
+Skill Form: Active 
+Weapon: Knuckle 
+Type: Physical
+Target: Enemy
+After Cast Delay: A.Delay - 0.18s
+Cooldown: A.Delay + 0.32
+Range: 1
+Hits: 3
+Description: Deals P.DMG to the target. Grants a 30% chance to auto-cast it at the learned level on performing basic attacks. Furious Spirits: Grants +50% HCM and the damage scales with CRIT.
+Calm Spirits: Becomes a 3x3 AoE around the target, and the damage scales with P.DEF. 
+[Lv. 1]: ATK: 55% x Hits. SP Cost: 6 
+[Lv. 2]: ATK: 60% x Hits. SP Cost: 7 
+[Lv. 3]: ATK: 65% x Hits. SP Cost: 8
+[Lv. 4]: ATK: 70% x Hits. SP Cost: 9 
+[Lv. 5]: ATK: 75% x Hits. SP Cost: 10 
+[Lv. 6]: ATK: 80% x Hits. SP Cost: 11 
+[Lv. 7]: ATK: 85% x Hits. SP Cost: 12 
+[Lv. 8]: ATK: 90% x Hits. SP Cost: 13 
+[Lv. 9]: ATK: 95% x Hits. SP Cost: 14 
+[Lv.10]: ATK: 100% x Hits. SP Cost: 15
+Formula: ATK (%): (50 + (Skill Lv x 5)) x Hits 
+Furious Spirits: 
+ATK Bonus (%): ((Skill Lv x CRIT) / 10) x Hits 
+Calmt Spirits:
+Darnage Bonus: ((S.DEF + H.DEF) - Target Defense) x Hits `,
     img: chainFi,
   },
   {
@@ -473,10 +605,30 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
     ],
     dependent: [],
     element: null,
-    skillName: "Flight F...",
-    maxLevel: 10,
-    inform: `...
-`,
+    skillName: "Flight Fist",
+    maxLevel: 5,
+    inform: `Max Level: 5
+Skill Form: Active 
+Weapon: Knuckle 
+Type: Physical
+Target: Enemy
+After Cast Delay: A.Delay - 0.18s 
+Cooldown: A.Delay
+Range: 2 + Weapon's range 
+Hits: 4
+Description: Deals P.DMG to the target. Can be activated immediately after Chain Fist and Pacify. Also can be activated after Fallen Fist, but requires 1 Spirit Sphere.
+Furious Spirits: Grants +50% HCM and the damage scales with CRIT.
+Calm Spirits: Becomes a 3x3 AoE around the target, and the damage scales with P.DEF. 
+[Lv. 1]: ATK: 115% x Hits. SP Cost: 5
+[Lv. 2]: ATK: 130% x Hits. SP Cost: 10
+[Lv. 3]: ATK: 145% x Hits. SP Cost: 15 
+[Lv. 4]: ATK: 160% x Hits. SP Cost: 20 
+[Lv. 5]: ATK: 175% x Hits. SP Cost: 25
+Formula: ATK (%): (100 + (Skill Lv x 15)) x Hits 
+Furious Spirits:
+ATK Bonus (%): ((Skill Lv x CRIT) / 5) x Hits
+Calm Spirits:
+Damage Bonus: ((S.DEF+ H.DEF) - Target Defense) x Hits `,
     img: flightF,
   },
   {
@@ -487,10 +639,28 @@ Description: Hurl spirit spheres at your enemy, dealing 200% damage per sphere. 
     ],
     dependent: [],
     element: null,
-    skillName: "Fallen F...",
-    maxLevel: 10,
-    inform: `...
-`,
+    skillName: "Fallen Fist",
+    maxLevel: 5,
+    inform: `Max Level: 5
+Skill Form: Active 
+Weapon: Knuckle 
+Type: Physical
+Target: Enemy
+After Cast Delay: A.Delay - 0.18s
+Cooldown: A.Delay
+Range: 2 + Weapon's range Hits: 1
+Description: Deals P.DMG to the target. Can be activated immediately after Chain Fist and Pacify. Also can be activated after Flight Fist, but requires 1 Spirit Sphere. Furious Spirits: Grants +50% HCM and the damage scales with CRIT.
+Calm Spirits: Becomes a 3x3 AoE around the target, and the damage scales with P.DEF.
+[Lv. 1]: ATK: 400%, SP Cost: 5
+[Lv. 2]: ATK: 550%, SP Cost: 10
+[Lv. 3]: ATK: 700%, SP Cost: 15 
+[Lv. 4]: ATK: 850%, SP Cost: 20 
+[Lv. 5]: ATK: 1000%, SP Cost: 25
+Formula: ATK (%): (250 + (Skill Lv x 150))
+Furious Spirits:
+ATK Bonus (%): Skill Lv x STR
+Calm Spirits:
+Damage Bonus: ((S.DEF + H.DEF) - Target Defense) x Hits `,
     img: fallenF,
   },
 ];
