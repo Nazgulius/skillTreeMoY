@@ -40,14 +40,17 @@ export const skillsAlchemist = [
 Skill Form: Passive
 Type: Physical
 Requirement: None
-Description: Master the art of potion-throwing with this skill, enhancing both the efficiency and impact of your potion and bottle-based abilities. This technique has a chance to recover empty bottles or empty potion bottles used in your throws, while boosting the healing, damage, and duration of a variety of related skills. [Demonstration]: Adds +1% damage per Learned Level for every 10 Base Levels.
-[Acid Terror]: Adds +1% damage per Learned Level for each Base Level.
-[Marine Sphere Bomb]: Increases Marine Sphere Base HP by +1 per Learned Level.
-[Potion Pitcher]: Increases Healing Value by 5% per Learned Level.
-[Potion Spreader]: Increases Healing Value by 5% per Learned Level.
-[Bio Cannibalize]: Increases Plant Status by 1.5% per Learned Level. [Deplant]: Increases chance of success by 1% per Learned Level.
-[Briar Vines]: Adds 10% of user MATK to damage per Learned Level.
-[Hyper Fertilize]: Increases Fertilization effect duration by 6 seconds per Learned Level.`,
+Description: Grants a chance to recover Empty Bottle and Empty Potion Bottle on casting skills that consume them as Catalysts.
+[Lv. 1]; Recover Chance: 2% 
+[Lv. 2]: Recover Chance: 4%
+[Lv. 3]: Recover Chance: 6% 
+[Lv. 4]: Recover Chance: 8% 
+[Lv. 5]: Recover Chance: 10% 
+[Lv. 6]: Recover Chance: 12% 
+[Lv. 7]: Recover Chance: 14% 
+[Lv. 8]: Recover Chance: 16% 
+[Lv. 9]: Recover Chance: 18% 
+[Lv.10]: Recover Chance: 20%`,
     img: throwingPotionsTechniques,
   },
    {
@@ -65,21 +68,35 @@ Description: Master the art of potion-throwing with this skill, enhancing both t
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
-Target: Ground
-Range: 9
+Type: Physical 
+Target: Ground 
+Element: Fire
+Variable Cast Time: 0.70s
+Fixed Cast Time: 0.30s 
+After Cast Delay: 0.50s 
+Cooldown: 0.60s 
+Max Instances: 9 
+Range: 9 
+Hits: 1
+SP Cost: 10
 Requirement: Throwing Potions Techniques Lv: 3
-Description: Unleash fiery devastation with a bottle of flammable liquid, hurling it at a target location to inflict Fire property physical damage every half second to all enemies within the area. If the target is affected by [Chemical Corrosion], theres a chance to break their weapon. A maximum of 9 Demonstrations can be active at once. Mini Fire Bottle at Lv.1 ~ 5, Fire Bottle at Lv.6 ~ 10,
-[Lv 1]: Atk 120%,
-[Lv 2]: Atk 140%,
-[Lv 3]: Atk 160%,
-[Lv 4]: Atk 180%,
-[Lv 5]: Atk 200%,
-[Lv 6]: Atk 220%,
-[Lv 7]: Atk 240%,
-[Lv 8]: Atk 260%,
-[Lv 9]: Atk 280%,
-[Lv 10]: Atk 300%`,
+Description: Stances a temporary 3x3 AoE at the targeted location that deals P.DMG to enemies every 0.5s, scaling with STR, Base Level and the learned level of Throwing Potions Techniques.
+The damage is increased on enemies affected by Chemical Corrosion, and has a chance to Break their weapon.
+Ignores Auto Guard.
+Catalyst: 
+  1x Mini Fire Bottle for Lv. 1~5
+  1x Fire Bottle for Lv. 6~10
+[Lv. 1]: ATK 120%, Break Chance: 1% Duration: 42s
+[Lv. 2]: ATK 140%, Break Chance: 2% Duration: 44s
+[Lv. 3]: ATK 160%, Break Chance: 3% Duration: 46s
+[Lv. 4]: ATK 180%, Break Chance: 4% Duration: 48s
+[Lv. 5]: ATK 200%, Break Chance: 5% Duration: 50s
+[Lv. 6]: ATK 220%, Break Chance: 6% Duration: 52s
+[Lv. 7]: ATK 240%, Break Chance: 7% Duration: 54s
+[Lv. 8]: ATK 260%, Break Chance: 8% Duration: 56s
+[Lv. 9]: ATK 280%, Break Chance: 9% Duration: 58s
+[Lv.10]: ATK 300%, Break Chance: 10% Duration: 60s
+Formula: ATK (%): 100 + (Skill Lv x 20) + (T. P. Techniques Lv x (Base Lv / 10)) + (STR / 2) + (Chemical Corrosion Stacks) `,
     img: demonstration,
   },
   {
@@ -97,21 +114,31 @@ Description: Unleash fiery devastation with a bottle of flammable liquid, hurlin
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Physical 
 Target: Enemy
-Range: 9
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Range: 9 
+Hits: 1
+SP Cost: 15
 Requirement: Demonstration Lv: 5
-Description: Unleash a bottle of corrosive acid on a single target, causing severe damage and applying the Chemical Corrosion debuff with a chance that scales with the skill level. If the target is already affected by Chemical Corrosion, this skill also has a chance to break their armor. Mini Acid Bottle at Lv.1 ~ 5, Acid Bottle at Lv.6 ~ 10,
-[Lv 1]: Atk 100%,
-[Lv 2]: Atk 200%,
-[Lv 3]: Atk 300%,
-[Lv 4]: Atk 400%,
-[Lv 5]: Atk 500%,
-[Lv 6]: Atk 600%,
-[Lv 7]: Atk 700%,
-[Lv 8]: Atk 800%,
-[Lv 9]: Atk 900%,
-[Lv 10]: Atk 1000%`,
+Description: Deals ranged P.DMG to the target, scaling with Base Level and the learned level of Throwing Potions Techniques. Has a chance to inflict Chemical Corrosion for 635.
+If the enemy is affected by Chemical Corrosion, has a chance to Break the armor. Ignores Auto Guard and S.DEF.
+Catalyst:
+  1x Mini Acid Bottle for Lv. 1~5
+  1x Acid Bottle for Lv. 6~10
+[Lv. 1]: ATK 100% Corrosion/Break Chance: 1%
+[Lv. 2]: ATK 200% Corrosion/Break Chance: 2% 
+[Lv. 3]: ATK 300% Corrosion/Break Chance: 3% 
+[Lv. 4]: ATK 400% Corrosion/Break Chance: 4%
+[Lv. 5]: ATK 500% Corrosion/Break Chance: 5%
+[Lv. 6]: ATK 600% Corrosion/Break Chance: 6%
+[Lv. 7]: ATK 700% Corrosion/Break Chance: 7%
+[Lv. 8]: ATK 800% Corrosion/Break Chance: 8%
+[Lv. 9]: ATK 900% Corrosion/Break Chance: 9%
+[Lv.10]: ATK 1000% Corrosion/Break Chance: 10%
+Formula: ATK (%): (Skill Lv x 100) + (T. P. Techniques x Base Lv) + Chemical Corrosion Stacks `,
     img: acidTerror,
   },
   {
@@ -128,16 +155,30 @@ Description: Unleash a bottle of corrosive acid on a single target, causing seve
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Magical
+Type: Magical 
 Target: Ground
+Variable Cast Time: 0.30s
+Fixed Cast Time: 0.30s
+After Cast Delay: 0.50s 
 Range: 9
+SP Cost: 35
 Requirement: Acid Terror Lv: 5
-Description: Unleash explosive versatility with Chemical Reaction, altering the Bomb skills effects by tossing specialized Chemical Bottles into the mix, each providing unique and powerful results.
-[Lv 1] Oil Bottle: Bombs Damage is boosted by Strength and base level.
-[Lv 2] Explosive Powder: Triggers a massive fiery explosion with fire magic damage, pushing targets 4 cells away. Damage is enhanced by Strength.
-[Lv 3] Smoke Powder: Burns plants and creates a dense smoke cloud, reducing physical damage taken by 20% and increasing evasion by 20%. Duration scales with Bombs level.
-[Lv 4] Tear Gas: Releases potent tear gas, lowering evasion and accuracy by 40%. Entities lose 3% of their max health every 3 seconds and are forced to use /snif. Duration scales with Bombs level.
-[Lv 5] Acid Bottle: Ignites a powerful explosion that spreads acid, transforming the Bombs area into an AoE Acid Terror. Replaces Bomb tiles and casts Acid Demonstration at level 5 or highest learned level.`,
+Description: Throws resources into Demonstration cells, causing chemical reactions in the area.
+[Lv. 1]: Oil Bottle: Increases Demonstration damage.
+[Lv. 2]: Explosive Powder: Deals M.DMG damage to enemies within a 7x7 AoE and Knocks them back 4 cells. Ignores Auto Guard.
+[Lv. 3]: Smoke Powder: Reduces P.DMG damage taken by 20% and increases FLEE by 20% for all entities within its 5x5 AoE. Ends all Demonstration cells within the area.
+[Lv. 4]: Tear Gas: Reduces FLEE and ACC by 40% for enemies within its 7x7 AoE. Also drains 3% of their Max HP every 3s. Ends all Demonstration cells within the area.
+[Lv. 5]: Acid Bottle: Deals ranged P.DMG damage to enemies standing on a Demonstration cell within a 7x7 AoE. Ends all Demonstration cells within the area.
+Formula: 
+Oil Bottle:
+Demonstration ATK (%): + Base Lv + STR
+Explosive Powder:
+ATK (%): STR x 10
+Smoke Powder & Tear Gas:
+Duration (seconds): Demonstration Lv x 5
+Acid Bottle:
+ATK (%): ((900 + (Higher Lv x 150)) x (1 + (Target VIT / 100))) + Chemical Corrosion Stacks
+Higher Lv: The highest value between 5 and the learned level of Acid Demonstration `,
     img: chemicalReaction,
   },
   {
@@ -154,17 +195,18 @@ Description: Unleash explosive versatility with Chemical Reaction, altering the 
 Skill Form: Passive
 Type: Misc
 Requirement: None
-Description: Boosts the success rate for creating potions and chemicals while also enhancing the effectiveness of healing potions consumed. Your expertise in potion-making not only improves your chances of crafting success but also amplifies the benefits of the potions you use.
-[Lv 1]: Rate Bonus: +1%, Potion Effectiveness: +8%,
-[Lv 2]: Rate Bonus: +2%, Potion Effectiveness: +11%,
-[Lv 3]: Rate Bonus: +3%, Potion Effectiveness: +14%,
-[Lv 4]: Rate Bonus: +4%, Potion Effectiveness: +17%,
-[Lv 5]: Rate Bonus: +5%, Potion Effectiveness: +20%,
-[Lv 6]: Rate Bonus: +6%, Potion Effectiveness: +23%,
-[Lv 7]: Rate Bonus: +7%, Potion Effectiveness: +26%,
-[Lv 8]: Rate Bonus: +8%, Potion Effectiveness: +29%,
-[Lv 9]: Rate Bonus: +9%, Potion Effectiveness: +32%,
-[Lv 10]: Rate Bonus: +10%, Potion Effectiveness: +35%`,
+Description: Increases the success rate of Potion and Bottles creation.
+Also increases the effectiveness of potions. 
+[Lv. 1]: Rate +1%, Effectiveness +8% 
+[Lv. 2]: Rate +2%, Effectiveness +11% 
+[Lv. 3]: Rate +3%, Effectiveness +14% 
+[Lv. 4]: Rate +4%, Effectiveness +17% 
+[Lv. 5]: Rate +5%, Effectiveness +20% 
+[Lv. 6]: Rate +6%, Effectiveness +23% 
+[Lv. 7]: Rate +7%, Effectiveness +26% 
+[Lv. 8]: Rate +8%, Effectiveness +29% 
+[Lv. 9]: Rate +9%, Effectiveness +32% 
+[Lv.10]: Rate +10%, Effectiveness +35%`,
     img: potionResearch,
   },
   {
@@ -182,16 +224,25 @@ Description: Boosts the success rate for creating potions and chemicals while al
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Ally
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Cooldown: A.Delay
 Range: 1
+SP Cost: 20
 Requirement: Potion Research Lv: 5
-Description: Temporarily protects the equipped headgear of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
+Description: Protects the target's equipped helm, preventing Break and Remove.
+Also increases H.MDEF and reduces the damage from Chemical Corrosion by 25%. At level 4 or higher, the protection cannot be canceled upon death or Dispel.
+Catalyst: 
+  1x Mini Glistening Bottle for Lv. 1~3
+  1x Glistening Bottle for Lv. 4~5
+[Lv. 1]: H.MDEF +3. Duration: 60s 
+[Lv. 2]: H.MDEF +4. Duration: 120s 
+[Lv. 3]: H.MDEF +5. Duration: 180s 
+[Lv. 4]: H.MDEF +7. Duration: 360s 
+[Lv. 5]: H.MDEF +10. Duration: 720s`,
     img: helmChemicalProtection,
   },
   {
@@ -209,16 +260,25 @@ Description: Temporarily protects the equipped headgear of a single target from 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Ally
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Cooldown: A.Delay 
 Range: 1
+SP Cost: 20
 Requirement: Helm Chemical Protection Lv: 1
-Description: Temporarily protects the equipped shield of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
+Description: Protects the target's equipped shield, preventing Break and Remove.
+Also increases H.DEF and reduces the damage from Chemical Corrosion by 25%, At level 4 or higher, the protection cannot be canceled upon death or Dispel.
+Catalyst:
+  1x Mini Glistening Bottle for Lv. 1~3
+  1x Glistening Bottle for Lv. 4~5
+[Lv. 1]: H.DEF +12. Duration: 60s 
+[Lv. 2]: H.DEF +16. Duration: 120s
+[Lv. 3]: H.DEF +20. Duration: 180s 
+[Lv. 4]: H.DEF +28. Duration: 360s 
+[Lv. 5]: H.DEF +40. Duration: 720s`,
     img: shieldChemicalProtection,
   },
   {
@@ -236,16 +296,25 @@ Description: Temporarily protects the equipped shield of a single target from da
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Ally
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Cooldown: A.Delay
 Range: 1
+SP Cost: 20
 Requirement: Shield Chemical Protection Lv: 1
-Description: Temporarily protects the equipped armor of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
+Description: Protects the target's equipped armor, preventing Break and Remove. Also increases HP and reduces the damage from Chemical Corrosion by 25%,
+At level 4 or higher, the protection cannot be canceled upon death or Dispel. 
+Catalyst:
+  1x Mini Glistening Bottle for Lv. 1~3
+  1x Glistening Bottle for Lv. 4~5
+[Lv. 1]: HP +300. Duration: 60s 
+[Lv. 2]: HP +400. Duration: 120s 
+[Lv. 3]: HP +500. Duration: 180s 
+[Lv. 4]: HP +700. Duration: 360s 
+[Lv. 5]: HP +1000. Duration: 720s`,
     img: armorChemicalProtection,
   },
   {
@@ -262,16 +331,25 @@ Description: Temporarily protects the equipped armor of a single target from dam
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Ally
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Cooldown: A.Delay 
 Range: 1
+SP Cost: 20
 Requirement: Armor Chemical Protection Lv: 1
-Description: Temporarily protects the equipped weapon of a single target from damage and removal. At levels 1 to 3, the protection is removed upon death, dispel, or Chemical Corrosion without stacking. Mini Glistening Bottle at Lv.1 ~ 5, Glistening Bottle at Lv.6 ~ 10,
-[Lv 1]: Duration: 60 seconds,
-[Lv 2]: Duration: 120 seconds,
-[Lv 3]: Duration: 180 seconds,
-[Lv 4]: Duration: 360 seconds,
-[Lv 5]: Duration: 720 seconds`,
+Description: Protects the target's equipped weapon, preventing Break and Remove. Also increases B.ATK and B.MATK, and reduces the damage from Chemical Corrosion by 25%,
+At level 4 or higher, the protection cannot be canceled upon death or Dispel. 
+Catalyst:
+  1x Mini Glistening Bottle for Lv. 1~3
+  1x Glistening Bottle for Lv. 4~5
+[Lv. 1]: B.ATK/B.MATK +6. Duration: 60s 
+[Lv. 2]: B.ATK/B.MATK +8. Duration: 120s 
+[Lv. 3]: B.ATK/B.MATK +10. Duration: 180s 
+[Lv. 4]: B.ATK/B.MATK +14. Duration: 360s 
+[Lv. 5]: B.ATK/B.MATK +20. Duration: 720s`,
     img: weaponChemicalProtection,
   },
   {
@@ -290,21 +368,33 @@ Description: Temporarily protects the equipped weapon of a single target from da
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
+Variable Cast Time: 1.40s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
 Range: 4
+SP Cost: 20
 Requirement: Throwing Potions Techniques Lv: 3
-Description: Summons a living plant at the target location to assist the user in combat for 300 seconds. The created plant depends on skill level, with stronger plants available from levels 5~10. Plant level scales with the user's base and job level, while each plant's traits are influenced by the user's INT, DEX, and Throwing Potions Techniques skill level. Grants 40 Plant Points upon learning, increased by the user's INT. Each plant consumes Plant Points: Mandragora 8, Hydra and Flora 10, Parasite 12, and Geographer 15. Mini Plant Bottle at Lv.1 ~ 5, Plant Bottle at Lv.6 ~ 10,
-[Lv 1]: Summons Little Mandragora,
-[Lv 2]: Summons Little Hydra,
-[Lv 3]: Summons Little Flora,
-[Lv 4]: Summons Little Parasite,
-[Lv 5]: Summons Little Geographer,
-[Lv 6]: Summons Mandragora,
-[Lv 7]: Summons Hydra,
-[Lv 8]: Summons Flora,
-[Lv 9]: Summons Parasite,
-[Lv 10]: Summons Geographer`,
+Description: Summons a familiar at the targeted location for 300s.
+The familiar's stats scale with the equipped Armor, Shield, Garment, and Weapon. Its basic attacks' property depends on the weapon's property, and it cannot target enemies far from its master.
+Mini familiars deal half the damage and have half the HP.
+Requires Cannibalize Peak.
+Catalyst: 
+  1x Mini Plant Bottle for Lv. 1~5
+  1x Plant Bottle for Lv. 6~10
+[Lv. 1]: Mini Mandragora
+[Lv. 2]: Mini Hydra
+[Lv. 3]: Mini Flora
+[Lv. 4]: Mini Parasite
+[Lv. 5]: Mini Geographer
+[Lv. 6]: Mandragora
+[Lv. 7]: Hydra
+[Lv. 8]: Flora
+[Lv. 9]: Parasite
+[Lv.10]: Geographer
+Formla:  Plant Stats Scaling: (((((INT / 2) + (DEX / 10)) x Stat) / 100) x ((T. P. Techniques Lv x 15) / 100)) + ((Plant Lv x Stat) / 100) 
+Plant Level: ((Base Lv x 60) / 100) + ((Job Lv x 50) / 100) `,
     img: bioCannibalize,
   },
   {
@@ -322,16 +412,21 @@ Description: Summons a living plant at the target location to assist the user in
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Magical
+Type: Supportive 
 Target: Ground
+Variable Cast Time: 0.30s
+Fixed Cast Time: 0.30s
+After Cast Delay: 0.50s 
+Cooldown: 10s
 Range: 2
 Requirement: Bio Cannibalize Lv: 5
-Description: Removes Summon Flora plants within the selected area and grants a chance to recover the potion used.
-[Lv 1]: Chance: 36%, AoE 3x3,
-[Lv 2]: Chance: 42%, AoE 5x5,
-[Lv 3]: Chance: 48%, AoE 7x7,
-[Lv 4]: Chance: 54%, AoE 9x9,
-[Lv 5]: Chance: 60%, AoE 11x11`,
+Description: Removes all owned Cannibalize familiars within the AoE at the targeted location.
+Grants a chance to recover Mini Plant Bottle or Plant Bottle from each familiar, depending on its type.
+[Lv. 1]: Chance: 36%, AoE 3x3, SP Cost: 30
+[Lv. 2]: Chance: 42%, AoE 5x5. SP Cost: 35
+[Lv. 3]: Chance: 48%, AoE 7x7. SP Cost: 40
+[Lv. 4]: Chance: 54%, AoE 9x9, SP Cost: 45
+[Lv. 5]: Chance: 60%, AoE 11x11. SP Cost: 50`,
     img: deplant,
   },
   {
@@ -349,16 +444,26 @@ Description: Removes Summon Flora plants within the selected area and grants a c
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive
 Target: Enemy
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Max Instances: 3
 Range: 9
 Requirement: Deplant Lv: 3, Bio Cannibalize Lv: 7
-Description: Throws a vine bomb that immobilizes the target and deals damage over time. The target will attack the vines to break free. Summoned plants by Bio Cannibalize automatically attack the target. Fire-element attacks and skills like Acid Terror and Acid Demonstration will burn the vines, dealing Fire damage and removing effect. Up to 3 Briar Vines can be active simultaneously. Effective on boss monsters, but with half duration. Catalyst: 1x Briar Seed.
-[Lv 1]: Duration: 4 seconds,
-[Lv 2]: Duration: 8 seconds,
-[Lv 3]: Duration: 12 seconds,
-[Lv 4]: Duration: 16 seconds,
-[Lv 5]: Duration: 20 seconds`,
+Description: Throws a seed at the target which drains HP every 0.65s, scaling with INT, Base Level and the learned level of Throwing Potions Techniques. Increases its WD by 90% while active.
+Also changes the target of the caster's Cannibalize familiars to the enemy if the caster is within their attack range.
+Acid Terror, Acid Demonstration, or any Fire property damage burns the seed, dealing Fire M.DMG to the target and canceling the effect.
+The duration is halved on bosses. 
+Catalyst: 1x Briar Seed
+[Lv. 1]: Duration: 4s. SP Cost: 22 
+[Lv. 2]: Duration: 8s. SP Cost: 26 
+[Lv. 3]: Duration: 12s. SP Cost: 30 
+[Lv. 4]: Duration: 16s. SP Cost: 34 
+[Lv. 5]: Duration: 20s. SP Cost: 38
+Formula: Damage: ((((Skill Lv x 100) + INT + Base Lv) + ((MATK / 2) x T. P. Techniques Lv) / 10))) x 65) / 100 
+Fire Property MATK (%): 500% `,
     img: briarVines,
   },
   {
@@ -373,15 +478,32 @@ Description: Throws a vine bomb that immobilizes the target and deals damage ove
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Self
+SP Cost: 5
 Requirement: None
-Description: Allows the creation of Potions and Chemical Bottles. Requires the appropriate Potion Creation Guide for each specific potion. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with LUK being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Pharmacy Creation Guide ,
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency`,
+Description: Crafts potions and bottles from items.
+Base Level, Job Level, and Stats increase the number of crafted items.
+Guide: Pharmacy Creation Guide 
+Catalyst: 1x Medicine Bowl
+[Lv. 1]: Bonus Efficiency: 0% 
+[Lv. 2]: Bonus Efficiency: 25% 
+[Lv. 3]: Bonus Efficiency: 50% 
+[Lv. 4]: Bonus Efficiency: 75% 
+[Lv. 5]: Bonus Efficiency: 100%
+Formula:
+Crafted Arrows:
+Base Amount + Bonus Amount
+Bonus Amount:
+((Base Amount x ((Level Bonus + Stats Bonus) x ((Skill Lv x 25) - 25))) / 100)
+Level Bonus:
+((Base Lv x 100) / 200) + ((Job Lv x 100) / 140) / 100
+Stats Bonus:
+((STR^2 / 10) + (AGI^2 / 10) + (VIT^2 / 10) + (INT^2 / 10) + (DEX^2 / 10) + (LUK^2)) / 100
+Random Bonus Amount:
+10% chance for the bonus to be reduced to 25% 
+70% chance for the bonus to be reduced to 50% 
+20% chance for no reductions `,
     img: pharmacy,
   },
 //   {
@@ -421,21 +543,32 @@ Description: Allows the creation of Potions and Chemical Bottles. Requires the a
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Ground
 Target: Enemy
+Element: Neutral
+Variable Cast Time: 1.40s
+Fixed Cast Time: 0.60s 
+After Cast Delay: 0.50s 
 Range: 7
+Hits: 1
+SP Cost: 10
 Requirement: Throwing Potions Techniques Lv: 3
-Description: Summons a Marine Sphere that moves toward the target and then uses Self Destruction, dealing damage based on its HP. Marine Sphere's base HP increases with skill level and is further multiplied by the caster's level. Each point of INT or VIT boosts the Marine Sphere's HP by 0.5%. The explosion deals neutral property damage. Mini Marine Sphere Bottle at Lv.1 ~ 5, Marine Sphere Bottle at Lv.6 ~ 10,
-[Lv 1]: Sphere Base HP: 4 x Base Level,
-[Lv 2]: Sphere Base HP: 8 x Base Level,
-[Lv 3]: Sphere Base HP: 12 x Base Level,
-[Lv 4]: Sphere Base HP: 16 x Base Level,
-[Lv 5]: Sphere Base HP: 20 x Base Level,
-[Lv 6]: Sphere Base HP: 24 x Base Level,
-[Lv 7]: Sphere Base HP: 28 x Base Level,
-[Lv 8]: Sphere Base HP: 32 x Base Level,
-[Lv 9]: Sphere Base HP: 36 x Base Level,
-[Lv 10]: Sphere Base HP: 40 x Base Level`,
+Description: Command a Marine Sphere to explode after 0.7s at the targeted location, dealing P.DMG to enemies within an 11x11 AoE.
+The damage scales with INT, VIT, Base Level and the learned level of Throwing Potions Techniques, and the Sphere's HP.
+Catalyst:
+  1x Mini Marine Sphere Bottle for Lv. 1~5
+  1x Marine Sphere Bottle for Lv. 6~10
+[Lv. 1]: Sphere Base HP: 4
+[Lv. 2]: Sphere Base HP: 8
+[Lv. 3]: Sphere Base HP: 12 
+[Lv. 4]: Sphere Base HP: 16 
+[Lv. 5]: Sphere Base HP: 20 
+[Lv. 6]: Sphere Base HP: 24 
+[Lv. 7]: Sphere Base HP: 28 
+[Lv. 8]: Sphere Base HP: 32 
+[Lv. 9]: Sphere Base HP: 36 
+[Lv.10]: Sphere Base HP: 40
+Formula: Sphere HP: ((((Skill Lv x 4) + T. P. Techniques Lv) x Base Lv) x (100+ ((VIT + INT) / 2))) / 100 `,
     img: marineSphereBomb,
   },
   {
@@ -452,21 +585,24 @@ Description: Summons a Marine Sphere that moves toward the target and then uses 
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ally
+After Cast Delay: 0.50s 
 Range: 9
+SP Cost: 5
 Requirement: Marine Sphere Bomb Lv: 5
-Description: Throws a potion at a single target, instantly applying a healing effect. Healing is increased by 1% per point of the caster's INT, 1% per point of the target's VIT, 5% per skill level, and 5% per level of Throwing Potions Techniques. Cast delay is halved at levels above 5.
-[Lv 1]: Red Potion,
-[Lv 2]: Orange Potion,
-[Lv 3]: Yellow Potion,
-[Lv 4]: Green Potion,
-[Lv 5]: White Potion,
-[Lv 6]: Condensed Red Potion,
-[Lv 7]: Condensed Orange Potion,
-[Lv 8]: Condensed Yellow Potion,
-[Lv 9]: Condensed Green Potion,
-[Lv 10]: Condensed White Potion`,
+Description: Consumes a Potion to restore the target's HP, scaling with the user's INT, the learned level of Throwing Potions Techniques and skill level, and the target's VIT.
+[Lv. 1]: Red Potion.
+[Lv. 2]: Orange Potion
+[Lv. 3]: Yellow Potion
+[Lv. 4]: Green Potion
+[Lv. 5]: White Potion
+[Lv. 6]: Condensed Red Potion
+[Lv. 7]: Condensed Orange Potion
+[Lv. 8]: Condensed Yellow Potion
+[Lv. 9]: Condensed Green Potion
+[Lv.10]: Condensed White Potion
+Formula: Healing (%): 100 + INT + Target VIT + (T. P. Techniques Lv x 5) `,
     img: potionPitcher,
   },
   {
@@ -483,16 +619,21 @@ Description: Throws a potion at a single target, instantly applying a healing ef
     maxLevel: 5,
     inform: `Max Lv: 1 (or 5)
 Skill Form: Active
-Type: Misc
-Target: Ally
-Range: 11
+Type: Supportive
+Target: Enemy/Ally
+After Cast Delay: A.Delay - 0.28s
+Cooldown: A.Delay + 0.36s
+Range: 9
+Hits: 1
 Requirement: Potion Pitcher Lv: 5
-Description: Throws Fruit Bombs or Throwing Items. Status reduction and damage from fruit bombs are influenced by the user's INT. Chance to apply Status reduction decreases on targets with a higher level than the user. [Fruit Bombs]: , Apple Bomb , Coconut Bomb , Melon Bomb , Pineapple Bomb , Banana Bomb , [Throwing Items]: , Throwing Concentration Potion , Throwing Awakening Potion , Throwing Berserk Potion ,
-[Lv 1]: Stats Drop Duration: 10 Seconds, Cooldown: 3 S ,
-[Lv 2]: Stats Drop Duration: 20 Seconds, Cooldown: 2.5 S ,
-[Lv 3]: Stats Drop Duration: 30 Seconds, Cooldown: 2 S ,
-[Lv 4]: Stats Drop Duration: 40 Seconds, Cooldown: 1.5 S ,
-[Lv 5]: Stats Drop Duration: 50 Seconds, Cooldown: 1 S`,
+Description: Throws items to the target. Offensive items deals ranged P.DMG, scaling with INT.
+Catalyst: 1x Sling Item
+[Lv. 1]: SP Cost: 25 
+[Lv. 2]: SP Cost: 30
+[Lv. 3]: SP Cost: 35
+[Lv. 4]: SP Cost: 40 
+[Lv. 5]: SP Cost: 45
+Formula: ATK (%): 100 + (Skill Lv x (100 + INT)) `,
     img: slingItem,
   },
 ];
