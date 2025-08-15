@@ -27,20 +27,33 @@ export const skillsCreator = [
 Skill Form: Active
 Type: Physical
 Target: Enemy
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s
+Cooldown: 1s
 Range: 9
+Hits: 10
+SP Cost: 15
 Requirement: Demonstration Lv: 10, Acid Terror Lv: 10, Chemical Reaction Lv: 5
-Description: Toss 1 Bottle Grenade and 1 Acid Bottle at a targeted enemy, unleashing a powerful ranged attack that inflicts physical damage and add a chance to applies [Chemical Corrosion] debuff that scales with skill level. Damage is influenced by the targets VIT, and if the target is already under Chemical Corrosion, there's also a chance to break their armor. Catalyst: 1x Fire Bottle and 1x Acid Bottle.
-[Lv 1]: 1 Hit, Chemical Corrosion chance: 1%,
-[Lv 2]: 2 Hits, Chemical Corrosion chance: 2%,
-[Lv 3]: 3 Hits, Chemical Corrosion chance: 3%,
-[Lv 4]: 4 Hits, Chemical Corrosion chance: 4%,
-[Lv 5]: 5 Hits, Chemical Corrosion chance: 5%,
-[Lv 6]: 6 Hits, Chemical Corrosion chance: 6%,
-[Lv 7]: 7 Hits, Chemical Corrosion chance: 7%,
-[Lv 8]: 8 Hits, Chemical Corrosion chance: 8%,
-[Lv 9]: 9 Hits, Chemical Corrosion chance: 9%,
-[Lv 10]: 10 Hits, Chemical Corrosion chance: 10%
-New calculation: ATK% = ((1000 + (150 × Skill Lv)) × T.Vit) / 100.`,
+Description: Deals ranged P.DMG to the target, scaling with the target's VIT, Chemical Corrosion Stacks and Neutral property resistance.
+Has a chance to inflict Chemical Corrosion for 63s, and if the enemy is already affected by it, has a chance to Break its armor.
+Catalysts:
+  1x Mini Fire Bottle for Lv. 1~5
+  1x Mini Acid Bottle for Lv. 1~5
+  1x Fire Bottle for Lv. 6~10
+  1x Acid Bottle for Lv. 6~10
+[Lv. 1]: ATK 1050%, Corrosion Chance: 1% 
+[Lv. 2]: ATK 1200%, Corrosion Chance: 2% 
+[Lv. 3]: ATK 1350%, Corrosion Chance: 3% 
+[Lv. 4]: ATK 1500%, Corrosion Chance: 4% 
+[Lv. 5]: ATK 1650%, Corrosion Chance: 5% 
+[Lv. 6]: ATK 1800%, Corrosion Chance: 6% 
+[Lv. 7]: ATK 1950%, Corrosion Chance: 7% 
+[Lv. 8]: ATK 2100%, Corrosion Chance: 8% 
+[Lv. 9]: ATK 2250%, Corrosion Chance: 9% 
+[Lv.10]: ATK 2400%, Corrosion Chance: 10%
+Formula: ATK (%): ((900 + (Skill Lv x 150)) x (1 + (Target VIT / 100))) + Chemical Corrosion Stacks
+ATK (%) against Boss: ((900 + (Skill Lv x 150)) x (1 + ((Target VIT / 2) 100))) + Chemical Corrosion Stacks `,
     img: acidDemonstration,
   },
   {
@@ -58,11 +71,18 @@ New calculation: ATK% = ((1000 + (150 × Skill Lv)) × T.Vit) / 100.`,
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Ally
+Variable Cast Time: 0.90s
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s 
+Cooldown: A.Delay 
 Range: 1
+SP Cost: 40
 Requirement: Weapon Chemical Protection Lv: 1, Shield Chemical Protection Lv: 1, Armor Chemical Protection Lv: 1, Helm Chemical Protection Lv: 1
-Description: Temporarily protects the target's equipped weapon, shield, armor, and helmet from damage and removal. Protection level and duration depend on the learned level of individual protections. Catalyst: 1x Glistening Bottle.`,
+Description: Protects the target's equipment, activating Helm, Shield, Armor, and Weapon Chemical Protection effects.
+The effects and duration depend on the learned level of each corresponding skill. 
+Catalyst: 1x Glistening Bottle `,
     img: fullChemicalProtection,
   },
   {
@@ -79,21 +99,32 @@ Description: Temporarily protects the target's equipped weapon, shield, armor, a
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Magical
-Target: Ground
+Type: Supportive 
+Target: Ground 
+Element: Earth
+Variable Cast Time: 2s
+Fixed Cast Time: 0.60s
+After Cast Delay: A.Delay + 1s
+Cooldown: 5s
 Range: 2
+Hits: 1
+SP Cost: 35
 Requirement: Bio Cannibalize Lv: 10, Briar Vines Lv: 5, Deplant Lv: 5
-Description: Fertilizes the ground to grow a variety of plants that deal Poison magic damage in a 9x9 area over 5 seconds. Plants within the area, including Summoned Floras, receive the Fertilization buff, with its duration increased by 6 seconds per skill level. Caster's INT boosts the damage dealt. Plant-type monsters are immune to this skill's damage. Catalyst: 1x Fertilizer Bag.
-[Lv 1]: MAtk 110% x Hits, Enhances plant basic attacks with 120% of the caster's MAtk as Poison damage.
-[Lv 2]: MAtk 120% x Hits, Enhances plant basic attacks with 60% of the caster's MAtk as Poison damage.
-[Lv 3]: MAtk 130% x Hits, Increases plants Max HP by 30%, DEF by 30%, and MDEF by 30%.
-[Lv 4]: MAtk 140% x Hits, Increases plants Max HP by 15%, DEF by 15%, and MDEF by 15%.
-[Lv 5]: MAtk 150% x Hits, Plant attacks ignore 60% of targets def and mdef.
-[Lv 6]: MAtk 160% x Hits, Plant attacks ignore 30% of targets def and mdef.
-[Lv 7]: MAtk 170% x Hits, Extends the duration of the plants by 50% seconds(up to maximum 600 Sec).
-[Lv 8]: MAtk 180% x Hits, Extends the duration of the plants by 20% seconds(up to maximum 600 Sec).
-[Lv 9]: MAtk 190% x Hits, If a plant receives fatal damage, it heals 30% of its HP.
-[Lv 10]: MAtk 200%, x Hits, If a plant receives fatal damage, it heals 15% of its HP.`,
+Description: Fertilizes a 9x9 AoE for 5s, dealing M.DMG to enemies every 0.5s. Also applies a bonus effect on plant monsters within the area based on its cast level.
+The bonus duration scales with learned level of Throwing Potions Techniques.
+Catalyst: 1x Fertilizer Bag
+[Lv. 1]: MATK 110%, Poison Injection 120% VCT: 2.90s. Bonus Duration: 6s. SP Cost: 22 
+[Lv. 2]: MATK 120%, Poison Injection 60% VCT: 2.80s. Bonus Duration: 12s. SP Cost: 24 
+[Lv. 3]: MATK 130%, Harden 30% VCT: 2.70s. Bonus Duration: 18s. SP Cost: 26 
+[Lv. 4]: MATK 140%, Harden 15% VCT: 2.60s. Bonus Duration: 24s. SP Cost: 28 
+[Lv. 5]: MATK 150%, Penetration 60% VCT: 2.50s. Bonus Duration: 30s. SP Cost: 30 
+[Lv. 6]: MATK 160%, Penetration 30% VCT: 2.40s. Bonus Duration: 36s. SP Cost: 32 
+[Lv. 7]: MATK 170%, Long Live 50% VCT: 2.30s. Bonus Duration: 42s. SP Cost: 34 
+[Lv. 8]: MATK 180%, Long Live 25% VCT: 2.20s. Bonus Duration: 48s. SP Cost: 36
+[Lv. 9]: MATK 190%, Undying 30% VCT: 2.10s. Bonus Duration: 54s. SP Cost: 38 
+[Lv.10]: MATK 200%, Undying 15% VCT: 2.00s. Bonus Duration: 60s. SP Cost: 40
+Formula: MATK (%): 100 + (Skill Lv x 10)
+Duration (seconds): (Skill Lv x 6) + (T. P. Techniques Lv x 6) `,
     img: hyperFertilize,
   },
   {
@@ -108,21 +139,27 @@ Description: Fertilizes the ground to grow a variety of plants that deal Poison 
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Misc
+Type: Supportive 
 Target: Ground
+Variable Cast Time: 1.10s
+Fixed Cast Time: 0.90s
+After Cast Delay: 1s 
 Range: 3
+SP Cost: 30
 Requirement: Sling Item Lv: 5
-Description: Throws a potion in a 7x7 area, applying its effect instantly to all targets within. Healing is increased by 1% per point of the caster's INT, 1% per point of the target's VIT, 5% per skill level, and 5% per level of Throwing Potions Techniques.
-[Lv 1]: Red Thick Potion CD: 0.4 Sec,
-[Lv 2]: Red Thick Potion CD: 0.2 Sec,
-[Lv 3]: Orange Thick Potion CD: 0.8 Sec,
-[Lv 4]: Orange Thick Potion CD: 0.4 Sec,
-[Lv 7]: Yellow Thick Potion CD: 1.2 Sec,
-[Lv 8]: Yellow Thick Potion CD: 0.6 Sec,
-[Lv 5]: Green Thick Potion CD: 1.6 Sec,
-[Lv 6]: Green Thick Potion CD: 0.8 Sec,
-[Lv 9]: White Thick Potion CD: 2 Sec,
-[Lv 10]: White Thick Potion CD: 1 Sec`,
+Description: Consumes a potion to restore HP of allies within a 7x7 AoE around the targeted location, scaling with the user's INT, the learned level of Throwing Potions Techniques and Potion Pitcher, and the target's VIT.
+CD scales with skill level.
+[Lv. 1]: Red Thick Potion CD: 0.40s
+[Lv. 2]: Red Thick Potion CD: 0.20s
+[Lv. 3]: Orange Thick Potion CD: 0.80s
+[Lv. 4]: Orange Thick Potion CD: 0.40s
+[Lv. 5]: Yellow Thick Potion CD: 1.20s
+[Lv. 6]: Yellow Thick Potion CD: 0.60s
+[Lv. 7]: Green Thick Potion CD: 1.60s
+[Lv. 8]: Green Thick Potion CD: 0.80s
+[Lv. 9]: White Thick Potion CD: 2.00s
+[Lv.10]: White Thick Potion CD: 1.00s
+Formula: Healing: (Potion Healing x (100 + INT + Target Vit + (Potion Pitcher Lv x 5) + (T. P. Techniques Lv x 5))) / 100 `,
     img: potionSpreader,
   },
 ];
