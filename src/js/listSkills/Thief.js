@@ -255,7 +255,8 @@ Target: Enemy
 Element: Neutral
 After Cast Delay: A.Delay - 0.26s 
 Cooldown: A.Delay + 0.36s
-Range: 7 Hits: 1
+Range: 7 
+Hits: 1
 SP Cost: 4
 Requirement: None
 Description: Deals ranged P.DMG scaling with STR and has a chance to inflict Stun.
