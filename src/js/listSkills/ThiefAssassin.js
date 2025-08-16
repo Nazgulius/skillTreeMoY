@@ -32,18 +32,19 @@ export const skillsAssassin = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Katar
 Requirement: None
-Description: Increase attack with Katars Weapons. When [Lv 10], it increases Attack in 6%. Also increases the Critical rate when using Katars Class Weapons. Unlike other two-handed weapons, the katar allows assassins to strike twice with each basic attack, once with the right hand and once with the left. Each hit deals 60% of the normal damage. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +4, Critical Rate +10%,
-[Lv 2]: Atk +8, Critical Rate +20%,
-[Lv 3]: Atk +12, Critical Rate +30%,
-[Lv 4]: Atk +16, Critical Rate +40%,
-[Lv 5]: Atk +20, Critical Rate +50%,
-[Lv 6]: Atk +24, Critical Rate +60%,
-[Lv 7]: Atk +28, Critical Rate +70%,
-[Lv 8]: Atk +32, Critical Rate +80%,
-[Lv 9]: Atk +36, Critical Rate +90%,
-[Lv 10]: Atk +40, Critical Rate +100%`,
+Description: Increases E.ATK and CRIT while wielding a Katar. At max level, also grants +6% ATK.
+[Lv. 1]: E.ATK +4. CRIT +10% 
+[Lv. 2]: E.ATK +8. CRIT +20% 
+[Lv. 3]: E.ATK +12. CRIT +30% 
+[Lv. 4]: E.ATK +16. CRIT +40% 
+[Lv. 5]: E.ATK +20. CRIT +50% 
+[Lv. 6]: E.ATK +24. CRIT +60% 
+[Lv. 7]: E.ATK +28. CRIT +70% 
+[Lv. 8]: E.ATK +32. CRIT +80% 
+[Lv. 9]: E.ATK +36. CRIT +90% 
+[Lv.10]: E.ATK +40. CRIT +100%`,
     img: katarMastery,
   },
   {
@@ -62,21 +63,25 @@ Description: Increase attack with Katars Weapons. When [Lv 10], it increases Att
     skillName: "Cloaking",
     maxLevel: 10,
     inform: `Max Lv: 10
-Skill Form: Active
-Type: Physical
+Skill Form: Toggle 
+Type: Supportive 
 Target: Self
+After Cast Delay: 0.30s 
+Cooldown: A.Delay
+SP Cost: 15
 Requirement: Hiding Lv: 1
-Description: Conceals yourself, allowing movement while hidden. Movement Speed is enhanced when attached to a wall but reduced when not. Initially, the skill requires proximity to a wall. While active, SP is drained. Demon, Insect race monsters, and boss monsters can detect the user. After the effect ends, the item cannot be picked up for 3 seconds.
-[Lv 1]: Off Wall:Not available, On Wall:103%, 1 SP per 0.5sec,
-[Lv 2]: Off Wall: 76%, On Wall:106%, 1 SP per 1.0sec,
-[Lv 3]: Off Wall: 79%, On Wall:109%, 1 SP per 2.0sec,
-[Lv 4]: Off Wall: 82%, On Wall:112%, 1 SP per 3.0sec,
-[Lv 5]: Off Wall: 85%, On Wall:115%, 1 SP per 4.0sec,
-[Lv 6]: Off Wall: 88%, On Wall:118%, 1 SP per 5.0sec,
-[Lv 7]: Off Wall: 91%, On Wall:121%, 1 SP per 6.0sec,
-[Lv 8]: Off Wall: 94%, On Wall:124%, 1 SP per 7.0sec,
-[Lv 9]: Off Wall: 97%, On Wall:127%, 1 SP per 8.0sec,
-[Lv 10]: Off Wall:100%, On Wall:130%, 1 SP per 9.0sec`,
+Description: Becomes Invisible, reducing WD while near walls and increasing it while far. While active, drains 1 SP over time.
+At level 1, can only be used near walls. 
+[Lv. 1]: Near -3% SP Drain: every 0.5s
+[Lv. 2]: Far +24%, Near -6% SP Drain: every 1s
+[Lv. 3]: Far +21%, Near -9% SP Drain: every 2s
+[Lv. 4]: Far +18%, Near -12% SP Drain: every 3s
+[Lv. 5]: Far +15%, Near -15% SP Drain: every 4s
+[Lv. 6]: Far +12%, Near -18% SP Drain: every 5s
+[Lv. 7]: Far +9%, Near -21% SP Drain: every 6s
+[Lv. 8]: Far +6%, Near -24% SP Drain: every 7s
+[Lv. 9]: Far +3%, Near -27% SP Drain: every 8s
+[Lv.10]: Far +0%, Near -30% SP Drain: every 9s `,
     img: cloaking,
   },
   {
@@ -94,18 +99,19 @@ Description: Conceals yourself, allowing movement while hidden. Movement Speed i
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: Dual-Wielded
 Requirement: None
-Description: Increase attack with Dual Wielding Weapons. Equipping two weapons at once reduces the Attack Power of the weapons in 50%, this skill restores damage that is reduced.
-[Lv 1]: Atk +4, Dual Wielding Penalty -5%,
-[Lv 2]: Atk +8, Dual Wielding Penalty -10%,
-[Lv 3]: Atk +12, Dual Wielding Penalty -15%,
-[Lv 4]: Atk +16, Dual Wielding Penalty -20%,
-[Lv 5]: Atk +20, Dual Wielding Penalty -25%,
-[Lv 6]: Atk +24, Dual Wielding Penalty -30%,
-[Lv 7]: Atk +28, Dual Wielding Penalty -35%,
-[Lv 8]: Atk +32, Dual Wielding Penalty -40%,
-[Lv 9]: Atk +36, Dual Wielding Penalty -45%,
-[Lv 10]: Atk +40, Dual Wielding Penalty -50%`,
+Description: Increases E.ATK while Dual Wielding. Also reduces their damage penalty. 
+[Lv. 1]: E.ATK +4. Penalty -10%
+[Lv. 2]: E.ATK +8. Penalty -20% 
+[Lv. 3]: E.ATK +12. Penalty -30% 
+[Lv. 4]: E.ATK +16. Penalty -40% 
+[Lv. 5]: E.ATK +20. Penalty -50% 
+[Lv. 6]: E.ATK +24. Penalty -60% 
+[Lv. 7]: E.ATK +28. Penalty -70% 
+[Lv. 8]: E.ATK +32. Penalty -80% 
+[Lv. 9]: E.ATK +36. Penalty -90% 
+[Lv.10]: E.ATK +40. Penalty -100%`,
     img: dualWieldingMastery,
   },
   {
@@ -123,19 +129,32 @@ Description: Increase attack with Dual Wielding Weapons. Equipping two weapons a
 Skill Form: Active
 Type: Physical
 Target: Enemy
+Element: Ammunition
+After Cast Delay: A.Delay - 0.22s
+Cooldown: A.Delay
 Range: 12
+Hits: 1
 Requirement: Dual Wielding Mastery Lv: 5, Cloaking Lv: 5
-Description: Precisely aims and throws a knife at the target, inflicting physical ranged damage. Damage increases based on the target lost HP and ignores 1% of Defense for every 1% of target's HP lost. Status effects depend on the type of Throwing Knife used.
-[Lv 1]: Atk 115%,
-[Lv 2]: Atk 130%,
-[Lv 3]: Atk 145%,
-[Lv 4]: Atk 160%,
-[Lv 5]: Atk 175%,
-[Lv 6]: Atk 190%,
-[Lv 7]: Atk 205%,
-[Lv 8]: Atk 220%,
-[Lv 9]: Atk 235%,
-[Lv 10]: Atk 250%`,
+Description: Deals ranged P.DMG to the target, scaling with their missing HP.
+Also ignores 1% of their P.DEF for each 1% HP missing.
+This skill has HCM based on CRIT.
+Catalyst: 1x Throwing Knife
+[Lv. 1]: ATK 140%, SP Cost: 6 
+[Lv. 2]: ATK 180%, SP Cost: 7 
+[Lv. 3]: ATK 220%, SP Cost: 8 
+[Lv. 4]: ATK 260%, SP Cost: 9 
+[Lv. 5]: ATK 300%, SP Cost: 10 
+[Lv. 6]: ATK 340%, SP Cost: 11 
+[Lv. 7]: ATK 380%, SP Cost: 12 
+[Lv. 8]: ATK 420%, SP Cost: 13 
+[Lv. 9]: ATK 460%, SP Cost: 14 
+[Lv.10]: ATK 500%, SP Cost: 15
+Formula: ATK (%): 100 + (Skill Lv x 40) + Target Missing HP bonus 
+HCM (%): 100 + (CRIT / 2)
+Target Missing HP bonus:
+If the target's HP is below 25%: 100% bonus 
+If the target's HP is below 50%: 60% bonus 
+If the target's HP is below 75%: 30% bonus `,
     img: throwingKnife,
   },
   {
@@ -153,21 +172,29 @@ Description: Precisely aims and throws a knife at the target, inflicting physica
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Katar 
 Type: Physical
 Target: Enemy
-Range: 5 ~ 9
+After Cast Delay: A.Delay - 0.22s 
+Cooldown: A.Delay
+Hits: 1
 Requirement: Cloaking Lv: 2, Katar Mastery Lv: 4
-Description: Strikes a single target with the equipped katar while hidden, dealing physical damage to all enemies in a 3x3 area. User AGI increases the damage. When used against normal monsters, it reduces their Move Speed by 50% for 1 second. Can be used from Cloaking, but this negates the AGI scaling, and doubles the SP cost.
-[Lv 1]: Atk (120 + AGI)%, Range 5 cells,
-[Lv 2]: Atk (140 + AGI)%, Range 5 cells,
-[Lv 3]: Atk (160 + AGI)%, Range 6 cells,
-[Lv 4]: Atk (180 + AGI)%, Range 6 cells,
-[Lv 5]: Atk (200 + AGI)%, Range 7 cells,
-[Lv 6]: Atk (220 + AGI)%, Range 7 cells,
-[Lv 7]: Atk (240 + AGI)%, Range 8 cells,
-[Lv 8]: Atk (260 + AGI)%, Range 8 cells,
-[Lv 9]: Atk (280 + AGI)%, Range 9 cells,
-[Lv 10]: Atk (300 + AGI)%, Range 9 cells`,
+Description: Deals ranged P.DMG to enemies between the user and the target, scaling with AGI when used from Hiding.
+Also increases WD of normal monsters by 50% for 1s.
+This skill has HCM based on CRIT. Requires Hiding or Cloaking state.
+[Lv. 1]: ATK 120%, Range: 5. SP Cost: 4 
+[Lv. 2]: ATK 140%, Range: 5. SP Cost: 4 
+[Lv. 3]: ATK 160%, Range: 6. SP Cost: 5 
+[Lv. 4]: ATK 180%, Range: 6. SP Cost: 5
+[Lv. 5]: ATK 200%, Range: 7. SP Cost: 6 
+[Lv. 6]: ATK 220%, Range: 7. SP Cost: 6 
+[Lv. 7]: ATK 240%, Range: 8. SP Cost: 7 
+[Lv. 8]: ATK 260%, Range: 8. SP Cost: 7 
+[Lv. 9]: ATK 280%, Range: 9. SP Cost: 8 
+[Lv.10]: ATK 300%, Range: 9. SP Cost: 8
+Formula: ATK (%): 100 + (Skill Lv x 20) 
+HCM (%) 100 + (CRIT / 2)
+Hiding ATK (%): 100 + (Skill Lv x 20) + AGI `,
     img: grimtooth,
   },
   {
@@ -182,21 +209,29 @@ Description: Strikes a single target with the equipped katar while hidden, deali
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Weapon: Katar 
+Type: Physical 
 Target: Enemy
+After Cast Delay: A.Delay 0.22s 
+Cooldown: A.Delay + 0.66s
 Range: 1
+Hits: 8
 Requirement: Grimtooth Lv: 5
-Description: Unleashes a flurry of rapid Katar strikes on the target, with a chance to inflict the Stun status.
-[Lv 1]: Atk 300%, Stun Chance: 12%,
-[Lv 2]: Atk 400%, Stun Chance: 14%,
-[Lv 3]: Atk 500%, Stun Chance: 16%,
-[Lv 4]: Atk 600%, Stun Chance: 18%,
-[Lv 5]: Atk 700%, Stun Chance: 20%,
-[Lv 6]: Atk 800%, Stun Chance: 22%,
-[Lv 7]: Atk 900%, Stun Chance: 24%,
-[Lv 8]: Atk 1000%, Stun Chance: 26%,
-[Lv 9]: Atk 1100%, Stun Chance: 28%,
-[Lv 10]: Atk 1200%, Stun Chance: 30%`,
+Description: Deals P.DMG to the target. Has a chance to inflict Stun for 4.5s. Hits scales with A.Delay.
+This skill has HCM based on CRIT.
+[Lv. 1]: ATK 60% x Hits. SP Cost: 16 Stun Chance: 12%
+[Lv. 2]: ATK 70% x Hits. SP Cost: 17 Stun Chance: 14%
+[Lv. 3]: ATK 80% x Hits. SP Cost: 18 Stun Chance: 16%
+[Lv. 4]: ATK 90% x Hits. SP Cost: 19 Stun Chance: 18%
+[Lv. 5]: ATK 100% x Hits. SP Cost: 20 Stun Chance: 20%
+[Lv. 6]: ATK 110% x Hits. SP Cost: 21 Stun Chance: 22%
+[Lv. 7]: ATK 120% x Hits. SP Cost: 22 Stun Chance: 24%
+[Lv. 8]: ATK 130% x Hits. SP Cost: 23 Stun Chance: 26%
+[Lv. 9]: ATK 140% x Hits. SP Cost: 24 Stun Chance: 28%
+[Lv.10]: ATK 150% x Hits. SP Cost: 25 Stun Chance: 30%
+Formula: ATK (%): (50 + (Skill Lv x 10)) x Hits 
+HCM (%): 100 + (CRIT / 2) 
+Hits: 8 + (1000 + A.Delay) `,
     img: sonicBlow,
   },
    {
@@ -217,16 +252,21 @@ Description: Unleashes a flurry of rapid Katar strikes on the target, with a cha
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Ally
+Variable Cast Time: 1s
+After Cast Delay: A.Delay + 2s
 Range: 9
 Requirement: Envenom Lv: 1
-Description: Temporarily imbue a single target weapon with the Poison property, giving a chance to poison enemies upon physical attack. At Lv 5, the effect expands to a 5x5 area around the target but costs double the SP and triple the catalyst. Catalyst: 1x Condensed Poison.
-[Lv 1]: Poison Damage by 2%, Duration: 75 secs, Poisoning chance: 2%,
-[Lv 2]: Poison Damage by 3%, Duration: 150 secs, Poisoning chance: 4%,
-[Lv 3]: Poison Damage by 4%, Duration: 225 secs, Poisoning chance: 6%,
-[Lv 4]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 8%,
-[Lv 5]: Poison Damage by 5%, Duration: 300 secs, Poisoning chance: 10%`,
+Description: Endows the weapon with Poison property, granting a chance to inflict Poison for 60s on attacks.
+Also increases the DMG of Poison property basic attacks and skills.
+From level 5, affects allies within a 5x5 AoE around the target, but has a 0.6s FCT, doubles SP Cost and triples the Catalyst required.
+Catalyst: 1x Condensed Poison
+[Lv. 1]: Poison Damage +2%, Chance: 4% Duration: 75s. SP Cost: 19
+[Lv. 2]: Poison Damage +3%, Chance: 6% Duration: 150s. SP Cost: 23
+[Lv. 3]: Poison Damage +4%, Chance: 8% Duration: 225s. SP Cost: 27
+[Lv. 4]: Poison Damage +5%, Chance: 10% Duration: 300s. SP Cost: 31
+[Lv. 5]: Poison Damage +5%, Chance: 10% Duration: 300s. SP Cost: 62 `,
     img: poisonWeapon,
   },
   {
@@ -241,20 +281,25 @@ Description: Temporarily imbue a single target weapon with the Poison property, 
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Self
+After Cast Delay: A.Delay - 0.22s
 Requirement: Poison Weapon Lv: 3
-Description: Amplifies and redirects 70% of the Poison damage received as magic damage to the attacker. When attacked by other properties, casts Envenom at the learned level. Reflection and auto-casting chances are influenced by Venom Dust and Venom Splasher levels. Chance to cast Envenom is reduced to 1/3 if the target misses.
-[Lv 1]: Amplifies in 130%, Chance: 6%, Duration: 20 sec,
-[Lv 2]: Amplifies in 160%, Chance: 12%, Duration: 20 sec,
-[Lv 3]: Amplifies in 190%, Chance: 18%, Duration: 30 sec,
-[Lv 4]: Amplifies in 220%, Chance: 24%, Duration: 30 sec,
-[Lv 5]: Amplifies in 250%, Chance: 30%, Duration: 40 sec,
-[Lv 6]: Amplifies in 280%, Chance: 36%, Duration: 40 sec,
-[Lv 7]: Amplifies in 310%, Chance: 42%, Duration: 50 sec,
-[Lv 8]: Amplifies in 340%, Chance: 48%, Duration: 50 sec,
-[Lv 9]: Amplifies in 370%, Chance: 54%, Duration: 60 sec,
-[Lv 10]: Amplifies in 400%, Chance: 60%, Duration: 60 sec`,
+Description: Amplifies and reflects 70% of Poison property DMG as M.DMG to the attacker, while only taking 30% of the original DMG. Ends after reflecting.
+Has a chance to auto-cast Envenom at its learned level when taking non-Poison property damage, if the attacker is within Envenom range.
+Chance scales with Venom Dust and Venom Splasher levels, and is reduced to one-third if the attack misses.
+CD scales with skill level.
+[Lv. 1]: Amplify: 130%, CD: 1s. SP Cost: 15 Envenom Chance: 6%, Duration: 15s
+[Lv. 2]: Amplify: 160%, CD: 2s. SP Cost: 20 Envenom Chance: 12%, Duration: 20s
+[Lv. 3]: Amplify: 190%, CD: 3s. SP Cost: 25 Envenom Chance: 18%, Duration: 25s
+[Lv. 4]: Amplify: 220%, CD: 4s. SP Cost: 30 Envenom Chance: 24%, Duration: 30s
+[Lv. 5]: Amplify: 250%, CD: 5s. SP Cost: 35 Envenom Chance: 30%, Duration: 35s
+[Lv. 6]: Amplify: 280%, CD: 6s, SP Cost: 40 Envenom Chance: 36%, Duration: 40s 
+[Lv. 7]: Amplify: 310%, CD: 7s. SP Cost: 45 Envenom Chance: 42%, Duration: 45s
+[Lv. 8]: Amplify: 340%, CD: 8s. SP Cost: 50 Envenom Chance: 48%, Duration: 50s
+[Lv. 9]: Amplify: 370%, CD: 9s, SP Cost: 55 Envenom Chance: 54%, Duration: 55s 
+[Lv.10]: Amplify: 400%, CD: 10s. SP Cost: 60 Envenom Chance: 60%, Duration: 60s
+Formula: Redirect and Envenom Chance (%): (Skill Lv x 6) + ((Venom Dust Lv + Venom Splasher Lv) x 2) `,
     img: poisonReact,
   },
   {
@@ -273,21 +318,32 @@ Description: Amplifies and redirects 70% of the Poison damage received as magic 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Magical
+Type: Supportive 
 Target: Self
+SP Cost: 5
 Requirement: Envenom Lv: 10, Detoxify Lv: 1, Poison Weapon Lv: 5
-Description: Creates Poison Bottles. The success rate is determined by your Base Level and Job Level, reaching up to 100%. The amount produced receives an additional bonus based on all attributes, with DEX being the most influential. The relevance of attributes increases exponentially as they grow. The skill level affects the efficiency of the additional production. Regardless of the skill level, the additional production varies. Poisonery Creation Guide ,
-[Lv 1]: No Additional Bonus,
-[Lv 2]: Additional Efficiency -75%,
-[Lv 3]: Additional Efficiency -50%,
-[Lv 4]: Additional Efficiency -25%,
-[Lv 5]: Full Efficiency
+Description: Crafts Poison Bottles.
+Base Level, Job Level and Stats increase the number of crafted bottles.
+Guide: Poisonery Creation Guide
+[Lv. 1]: Bonus Efficiency: 0% 
+[Lv. 2]: Bonus Efficiency: 25% 
+[Lv. 3]: Bonus Efficiency: 50% 
+[Lv. 4]: Bonus Efficiency: 75% 
+[Lv. 5]: Bonus Efficiency: 100%
+Formula: 
+Crafted Bottles: 
+1 + Bonus Amount
+Bonus Amount:
+((1 x ((Level Bonus + Stats Bonus) x ((Skill Lv x 25) - 25))) / 100)
+Level Bonus: 
+((Base Lv x 100) / 200) + ((Job Lv x 100) / 140) / 100
+Stats Bonus:
+((STR2^ / 10) + (AGI^2 / 10) + (VIT^2 / 10) + (INT^2 / 10) + (DEX^2) + (LUK^2 / 10)) / 100
 
-Poison Bottle
-New calculation:
-For Basic Attacks: ATK% + (15 + Skill Lv × 7),
-For Skills: ATK%/MATK% + (5 + Skill Lv × 7)
-`,
+Random Bonus Amount:
+10% chance for the bonus to be reduced to 25%
+70% chance for the bonus to be reduced to 50% 
+20% chance for no reductions `,
     img: poisonery,
   },  
   {
@@ -302,21 +358,32 @@ For Skills: ATK%/MATK% + (5 + Skill Lv × 7)
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Ground
+Fixed Cast Time: 0.50s
+After Cast Delay: A.Delay 0.22s
 Range: 9
+SP Cost: 40
 Requirement: Poison Weapon Lv: 5
-Description: Contaminates a targeted location with a toxic cloud, reducing the resistance to poisoning and poison property of all enemies within the area. The resistance drop is more severe at the center of the cloud. Increases the activation chance of Poison React by 2% per level learned. Catalyst: 1x Noxious Powder Bottle.
-[Lv 1]: Poison resistance Drop: 5% ~ 1%, Durarion: 6 sec,
-[Lv 2]: Poison resistance Drop: 10% ~ 2% Durarion: 12 sec,
-[Lv 3]: Poison resistance Drop: 15% ~ 3%, Durarion: 18 sec,
-[Lv 4]: Poison resistance Drop: 20% ~ 4%, Durarion: 24 sec,
-[Lv 5]: Poison resistance Drop: 25% ~ 5%, Durarion: 30 sec,
-[Lv 6]: Poison resistance Drop: 30% ~ 6%, Durarion: 36 sec,
-[Lv 7]: Poison resistance Drop: 35% ~ 7%, Durarion: 42 sec,
-[Lv 8]: Poison resistance Drop: 40% ~ 8%, Durarion: 48 sec,
-[Lv 9]: Poison resistance Drop: 45% ~ 9%, Durarion: 54 sec,
-[Lv 10]: Poison resistance Drop: 50% ~ 10%, Durarion: 60 sec`,
+Description: Creates a 7x7 AoE that inflicts. Poison on enemies for 18s.
+Also reduces their resistance to Poison property and to Poison status, strongest at the center.
+VCT and CD scales with skill level.
+Catalyst: 1x Noxious Powder Bottle
+[Lv 1]: VCT: 0.10s. CD: 6s Duration: 6s
+[Lv 2]; VCT: 0.20s. CD: 12s Duration: 12s
+[Lv 3]: VCT: 0.30s, CD: 18s Duration: 18s
+[Lv 4]: VCT: 0.40s. CD: 24s Duration: 24s
+[Lv 5]: VCT: 0.50s. CD: 30s Duration: 30s
+[Lv 6]: VCT: 0.60s. CD: 36s Duration: 36s
+[Lv 7]: VCT: 0.70s. CD: 42s Duration: 42s
+[Lv 8]: VCT: 0.80s. CD: 48s Duration: 48s
+[Lv 9]: VCT: 0.90s. CD: 54s  Duration: 54s
+[Lv.10]: VCT: 1.00s. CD: 60s Duration: 60s
+Formula: 
+Poison status and property resistance reduce (%):
+  Center: Skill Lv x 5
+  Around the Center: Skill Lv x 3
+  Outer area: Skill Lv x 1 `,
     img: venomDust,
   },
   {
@@ -334,19 +401,28 @@ Description: Contaminates a targeted location with a toxic cloud, reducing the r
 Skill Form: Active
 Type: Magical
 Target: Enemy
+Element: Poison
+Variable Cast Time: 1s
+Fixed Cast Time: 0.30s 
+After Cast Delay: 0.14s 
+Max Instances: 5
 Range: 4
+Hits: 1
 Requirement: Poison React Lv: 5, Venom Dust Lv: 5
-Description: Attaches a deadly toxin to a single target, causing a venomous explosion after 90 seconds. Use V.S Anticipation to detonate Venom Splasher early. Explosion deals Magical Poison Damage to all enemies around the target. If the target is poisoned, the poison spreads to nearby enemies. Up to 5 Venom Splashers can be set on different targets. Increases Poison React activation chance by 2% per level.
-[Lv 1]: MAtk 610%, Cooldown: 2 sec,
-[Lv 2]: MAtk 700%, Cooldown: 4 sec,
-[Lv 3]: MAtk 800%, Cooldown: 6 sec,
-[Lv 4]: MAtk 900%, Cooldown: 8 sec,
-[Lv 5]: MAtk 1000%, Cooldown: 10 sec,
-[Lv 6]: MAtk 1100%, Cooldown: 12 sec,
-[Lv 7]: MAtk 1200%, Cooldown: 14 sec,
-[Lv 8]: MAtk 1300%, Cooldown: 16 sec,
-[Lv 9]: MAtk 1400%, Cooldown: 18 sec,
-[Lv 10]: MAtk 1500%, Cooldown: 20 sec`,
+Description: Plants a bomb on a single target which explodes after 90s, dealing M.DMG to enemies within a 5x5 AoE around the target. The user's ATK is added to the damage as T.MATK.
+Has a chance to inflict Poison for 20s, which spreads to enemies in the area if the target is already poisoned.
+CD scales with skill level. 
+[Lv. 1]: MATK 600%, CD: 2s Poison Chance: 14%, SP Cost: 17 
+[Lv. 2]: MATK 700%, CD: 4s Poison Chance: 18%, SP Cost: 19 
+[Lv. 3]: MATK 800%, CD: 6s Poison Chance: 22%, SP Cost: 21 
+[Lv. 4]: MATK 900%, CD: 8s Poison Chance: 26%, SP Cost: 23 
+[Lv. 5]: MATK 1000%, CD: 10s Poison Chance: 30%, SP Cost: 25 
+[Lv. 6]: MATK 1100%, CD: 12s Poison Chance: 34%, SP Cost: 27 
+[Lv. 7]: MATK 1200%, CD: 14s Poison Chance: 38%, SP Cost: 29 
+[Lv. 8]: MATK 1300%, CD: 16s Poison Chance: 42%, SP Cost: 31 
+[Lv. 9]: MATK 1400%, CD: 18s Poison Chance: 46%, SP Cost: 33 
+[Lv.10]: MATK 1500%, CD: 20s Poison Chance: 50%, SP Cost: 35
+Formula: MATK (%): 500 + (Skill Lv x 100) `,
     img: venomSplasher,
   },  
   {
@@ -359,16 +435,17 @@ Description: Attaches a deadly toxin to a single target, causing a venomous expl
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active 
-Type: Misc 
-Target: Self 
-Range: 9 
-Cooldown: 3.0 s
-Description: Instantly detonates your Venom Splasher in a large 21x21 area and reduces its cooldown. Can be used while Cloaking without breaking it.
-[Lv 1]: Cooldown Reduction: 4 secs 
-[Lv 2]: Cooldown Reduction: 8 secs 
-[Lv 3]: Cooldown Reduction: 12 secs 
-[Lv 4]: Cooldown Reduction: 16 secs 
-[Lv 5]: Cooldown Reduction: 20 secs`,
+Type: Supportive 
+Target: Self
+After Cast Delay: 0.14s
+Cooldown: 3s
+SP Cost: 5
+Description: Instantly triggers user's Venom Splasher within a 21x21 AoE, reducing its CD. Can be used while in Cloaking.
+[Lv. 1]: CD Reduction: 4s 
+[Lv. 2]: CD Reduction: 85 
+[Lv. 3]: CD Reduction: 12s 
+[Lv. 4]: CD Reduction: 16s 
+[Lv. 5]: CD Reduction: 20s`,
     img: vSAnticipation,
   },
 ];
