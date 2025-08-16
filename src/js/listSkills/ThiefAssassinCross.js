@@ -24,13 +24,14 @@ export const skillsAssassinCross = [
     inform: `Max Lv: 5
 Skill Form: Passive
 Type: Physical
+Weapon: Katar/Dual-Wielded
 Requirement: Dual Wielding Mastery Lv: 5, Katar Mastery Lv: 5
-Description: Equipping Katars Class Weapons reduces the Attack Power of the weapon in 40%, this skill restores Attack Power that is reduced. Also increases the Critical rate when Dual Wielding Weapons.
-[Lv 1]: Katar Penalty -4%, Dual Wielding Critical Rate +10%,
-[Lv 2]: Katar Penalty -8%, Dual Wielding Critical Rate +20%,
-[Lv 3]: Katar Penalty -12%, Dual Wielding Critical Rate +30%,
-[Lv 4]: Katar Penalty -16%, Dual Wielding Critical Rate +40%,
-[Lv 5]: Katar Penalty -20%, Dual Wielding Critical Rate +50%`,
+Description: Reduces the damage penalty while wielding Katars. Also increases CRIT while Dual Wielding.
+[Lv. 1]: Penalty -20%, CRIT +10% 
+[Lv. 2]: Penalty -40%, CRIT +20%
+[Lv. 3]: Penalty -60%, CRIT +30% 
+[Lv. 4]: Penalty -80%, CRIT +40% 
+[Lv. 5]: Penalty -100%, CRIT +50%`,
     img: crossLethality,
   },
   {
@@ -41,19 +42,17 @@ Description: Equipping Katars Class Weapons reduces the Attack Power of the weap
     ],
     dependent: [],
     element: null,
-    skillName: "Deadly Poison Mastery",
+    skillName: "Advanced Poison Mastery",
     maxLevel: 5,
-    inform: `Max Lv: 5
-Advanced..
+    inform: `Max Level: 5
 Skill Form: Passive
-Type: Physical
 Requirement: Poisonery Lv: 1
-Description: Grants advanced expertise with poisons, enabling the creation of strong poisons using the Poisonery skill. Learning this provides the necessary knowledge to utilize strong poisons, which offer positive effects to the user and a chance to poison targets with extraordinary toxins.
-[Lv 1]: Strong Poisons Apply Chance: 4%, User Duration: 52 sec, Target Duration: 20 sec,
-[Lv 2]: Strong Poisons Apply Chance: 8%, User Duration: 84 sec, Target Duration: 30 sec,
-[Lv 3]: Strong Poisons Apply Chance: 12%, User Duration: 116 sec, Target Duration: 40 sec,
-[Lv 4]: Strong Poisons Apply Chance: 16%, User Duration: 148 sec, Target Duration: 50 sec,
-[Lv 5]: Strong Poisons Apply Chance: 20%, User Duration: 180 sec, Target Duration: 60 sec`,
+Description: Allows the creation and consumption of Advanced Poison Bottles. Duration scales with the skill level.
+[Lv. 1]: Duration: 100s
+[Lv. 2]: Duration: 120s
+[Lv. 3]: Duration: 140s 
+[Lv. 4]: Duration: 160s 
+[Lv. 5]: Duration: 180s`,
     img: deadlyPoisonMastery,
   },
   {
@@ -70,22 +69,29 @@ Description: Grants advanced expertise with poisons, enabling the creation of st
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Dual-Wielded 
 Type: Physical
 Target: Self
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.50s
+Cooldown: 1s
+Hits: 1
 Requirement: Dual Wielding Mastery Lv: 10, Cloaking Lv: 5, Poison Weapon Lv: 5
-Description: Unleashes a powerful attack that damages all enemies in a 5x5 area around the caster, with a chance to cause statuses such as Stun, Blind, or Bleed. Requires dual wielding.
-[Lv 1]: Atk 320%, Status Chance: 10%,
-[Lv 2]: Atk 440%, Status Chance: 15%,
-[Lv 3]: Atk 560%, Status Chance: 20%,
-[Lv 4]: Atk 680%, Status Chance: 25%,
-[Lv 5]: Atk 800%, Status Chance: 30%,
-[Lv 6]: Atk 920%, Status Chance: 35%,
-[Lv 7]: Atk 1040%, Status Chance: 40%,
-[Lv 8]: Atk 1160%, Status Chance: 45%,
-[Lv 9]: Atk 1280%, Status Chance: 50%,
-[Lv 10]: Atk 1400%, Status Chance: 55%
-Details: AfterCastActDelay set as ASPD + 220; CastTime and Fixed Cast Time of 500; Cooldown of 1000.
-`,
+Description: Deals P.DMG to enemies within a 5x5 AoE.
+This skill has HCM based on CRIT.
+[Lv. 1]: ATK 320%
+[Lv. 2]: ATK 440%
+[Lv. 3]: ATK 560%
+[Lv. 4]: ATK 680%
+[Lv. 5]: ATK 800%
+[Lv. 6]: ATK 920% 
+[Lv. 7]: ATK 1040%
+[Lv. 8]: ATK 1160% 
+[Lv. 9]: ATK 1280% 
+[Lv.10]: ATK 1400%
+Formula: 
+ATK (%): 200 + (Skill Lv x 120)
+HCM (%): 100 + (CRIT / 2) `,
     img: meteorAssault,
   },
   {
@@ -103,23 +109,29 @@ Details: AfterCastActDelay set as ASPD + 220; CastTime and Fixed Cast Time of 50
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Element: Elementless 
 Type: Magical
 Target: Enemy
-Range: 4 ~ 9
+Fixed Cast Time: 0.60s
+After Cast Delay: 0.90s
+Cooldown: 1s
+Range: 10
+Hits: 1
 Requirement: Double Attack Lv: 5, Cloaking Lv: 3, Poison Weapon Lv: 5, Envenom Lv: 5
-Description: Deals powerful Magical Poison Damage to a target. Damage scales with Weapon Attack and INT.
-[Lv 1]: Matk 630%,
-[Lv 2]: Matk 760%,
-[Lv 3]: Matk 890%,
-[Lv 4]: Matk 1020%,
-[Lv 5]: Matk 1150%,
-[Lv 6]: Matk 1280%,
-[Lv 7]: Matk 1410%,
-[Lv 8]: Matk 1540%,
-[Lv 9]: Matk 1670%,
-[Lv 10]: Matk 1800%
-Details: AfterCastActDelay set as ASPD + 220; CastTime of 500 + (100 × Skill Lv); Fixed Cast Time: 500; Cooldown of 1500.
-`,
+Description: Deals M.DMG to the target,
+scaling with INT, WATK and Base Level. Becomes Poison property if Poison Weapon is active.
+VCT scales with skill level.
+[Lv. 1]: MATK 600%, VCT: 0.36s
+[Lv. 2]: MATK 700%, VCT: 0.42s
+[Lv. 3]: MATK 800%, VCT: 0.48s
+[Lv. 4]: MATK 900%, VCT: 0.54s
+[Lv. 5]: MATK 1000%, VCT: 0.60s 
+[Lv. 6]: MATK 1200%, VCT: 0.66s 
+[Lv. 7]: MATK 1300%, VCT: 0.72s 
+[Lv. 8]: MATK 1400%, VCT: 0.78s 
+[Lv. 9]: MATK 1500%, VCT: 0.84s 
+[Lv.10]: MATK 1600%, VCT: 0.90s
+Formula: MATK (%): ((500 + (Skill Lv x 100) + W.ATK + ((INT x 3) / 2)) x Base Lv) / 100 `,
     img: soulDestroyer,
   },
 ];
