@@ -35,18 +35,20 @@ export const skillsRogue = [
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
+Weapon: One-Handed Sword
 Requirement: None
-Description: Increase Attack with One Handed Sword. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10], it increases Attack in 6%. Attack bonus granted by this skill is of the Equipment type.
-[Lv 1]: Atk +2, 2nd Class Additional Atk +1,
-[Lv 2]: Atk +4, 2nd Class Additional Atk +2,
-[Lv 3]: Atk +6, 2nd Class Additional Atk +3,
-[Lv 4]: Atk +8, 2nd Class Additional Atk +4,
-[Lv 5]: Atk +10, 2nd Class Additional Atk +5,
-[Lv 6]: Atk +12, 2nd Class Additional Atk +6,
-[Lv 7]: Atk +14, 2nd Class Additional Atk +7,
-[Lv 8]: Atk +16, 2nd Class Additional Atk +8,
-[Lv 9]: Atk +18, 2nd Class Additional Atk +9,
-[Lv 10]: Atk +20, 2nd Class Additional Atk +10`,
+Description: Increases E.ATK while wielding a One-Handed Sword. Knights, Crusaders and Rogues gain extra E.ATK. At max level, also grants +6% ACC
+[Lv. 1]: E.ATK +2
+[Lv. 2]: E.ATK +4
+[Lv. 3]: E.ATK +6
+[Lv. 4]: E.ATK +8
+[Lv. 5]: E.ATK +10
+[Lv. 6]: E.ATK +12
+[Lv. 7]: E.ATK +14
+[Lv. 8]: E.ATK +16
+[Lv. 9]: E.ATK +18 
+[Lv.10]: E.ATK +20
+Formula: E.ATK Bonus: Skill Lv x 1 `,
 img: oneHandedSwordMastery,
   },
   {
@@ -64,18 +66,20 @@ img: oneHandedSwordMastery,
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Misc
+Weapon: Bow/Instrument/Whip
 Requirement: Throw Stone Lv: 7
-Description: Enhances Attack and Attack Range with Bow class weapons. The benefits of this skill are improved upon reaching 2nd class. When [Lv 10] increases Hit Rate in 6%.
-[Lv 1]: Atk +2, Range +2, 2nd Class Additional Atk +1,
-[Lv 2]: Atk +4, Range +2, 2nd Class Additional Atk +2,
-[Lv 3]: Atk +6, Range +3, 2nd Class Additional Atk +3,
-[Lv 4]: Atk +8, Range +3, 2nd Class Additional Atk +4,
-[Lv 5]: Atk +10, Range +4, 2nd Class Additional Atk +5,
-[Lv 6]: Atk +12, Range +4, 2nd Class Additional Atk +6,
-[Lv 7]: Atk +14, Range +5, 2nd Class Additional Atk +7,
-[Lv 8]: Atk +16, Range +5, 2nd Class Additional Atk +8,
-[Lv 9]: Atk +18, Range +6, 2nd Class Additional Atk +9,
-[Lv 10]: Atk +20, Range +6, 2nd Class Additional Atk +10`,
+Description: Increases E.ATK and Range while wielding a Bow, Instrument or Whip. Hunters, Bards and Gypsies gain extra E.ATK. At max level, also grants +6% ACC.
+[Lv. 1]: E.ATK +2. Range +2
+[Lv. 2]: E.ATK +4. Range +2
+[Lv. 3]: E.ATK +6. Range +3 
+[Lv. 4]: E.ATK +8. Range +3 
+[Lv. 5]: E.ATK +10. Range +4 
+[Lv. 6]: E.ATK +12. Range +4 
+[Lv. 7]: E.ATK +14. Range +5 
+[Lv. 8]: E.ATK +16. Range +5 
+[Lv. 9]: E.ATK +18. Range +6 
+[Lv.10]: E.ATK +20. Range +6
+Formula: E.ATK Bonus: Skill Lv x 1 `,
     img: vulturesEye,
   },
   {
@@ -92,21 +96,29 @@ Description: Enhances Attack and Attack Range with Bow class weapons. The benefi
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Weapon: Bow 
 Type: Physical
 Target: Enemy
+Element: Ammunition
+After Cast Delay: A.Delay - 0.22s
+Cooldown: A.Delay
+Range: Weapon's range
+Hits: 2
 Range: Bow + Vulture's Eye Range
 Requirement: Vulture's Eye Lv: 5
-Description: Double Strafe unleashes a powerful arrow shot that deals double damage to the target. Consumes: 2x Arrow.
-[Lv 1]: Atk 110% x 2 Hits,
-[Lv 2]: Atk 120% x 2 Hits,
-[Lv 3]: Atk 130% x 2 Hits,
-[Lv 4]: Atk 140% x 2 Hits,
-[Lv 5]: Atk 150% x 2 Hits,
-[Lv 6]: Atk 160% x 2 Hits,
-[Lv 7]: Atk 170% x 2 Hits,
-[Lv 8]: Atk 180% x 2 Hits,
-[Lv 9]: Atk 190% x 2 Hits,
-[Lv 10]: Atk 200% x 2 Hits`,
+Description: Deals ranged P.DMG to the target.
+Catalyst: 1x Arrow
+[Lv. 1]: ATK 110% x Hits. SP Cost: 6 
+[Lv. 2]: ATK 120% x Hits. SP Cost: 6 
+[Lv. 3]: ATK 130% x Hits. SP Cost: 7 
+[Lv. 4]: ATK 140% x Hits. SP Cost: 7 
+[Lv. 5]: ATK 150% x Hits. SP Cost: 8
+[Lv. 6]: ATK 160% x Hits. SP Cost: 8 
+[Lv. 7]: ATK 170% x Hits. SP Cost: 9 
+[Lv. 8]: ATK 180% x Hits. SP Cost: 9 
+[Lv. 9]: ATK 190% x Hits. SP Cost: 10 
+[Lv.10]: ATK 200% x Hits. SP Cost: 10
+Formula: ATK (%): (100 + (10 x Skill Lv)) x Hits `,
     img: doubleStrafe,
   },
   {
@@ -125,19 +137,21 @@ Description: Double Strafe unleashes a powerful arrow shot that deals double dam
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Passive
-Type: Physical
 Requirement: Steal Lv: 1
-Description: Automatically steals items, from a monster while attacking it with, physical melee attacks. The success, rate of stealing items is affected by, the skill level of the Thief skill, , Steal and by this skill's level.
-[Lv 1]: Steal Chance: 7%,
-[Lv 2]: Steal Chance: 8%,
-[Lv 3]: Steal Chance: 10%,
-[Lv 4]: Steal Chance: 11%,
-[Lv 5]: Steal Chance: 13%,
-[Lv 6]: Steal Chance: 14%,
-[Lv 7]: Steal Chance: 16%,
-[Lv 8]: Steal Chance: 17%,
-[Lv 9]: Steal Chance: 19%,
-[Lv 10]: Steal Chance: 20%`,
+Description: Grants a chance to auto-cast
+Steal while performing basic attacks.
+Chance scales with the learned level of Steal.
+[Lv. 1]: Steal Chance: 7.00%
+[Lv. 2]: Steal Chance: 8.50% 
+[Lv. 3]: Steal Chance: 10.00% 
+[Lv. 4]: Steal Chance: 11.50% 
+[Lv. 5]: Steal Chance: 13.00% 
+[Lv. 6]: Steal Chance: 14.50% 
+[Lv. 7]: Steal Chance: 16.00% 
+[Lv. 8]: Steal Chance: 17.50% 
+[Lv. 9]: Steal Chance: 19.00% 
+[Lv.10]: Steal Chance: 20.50%
+Formula: Steal Chance (%): (55 + (Skill Lv x 15) + (Steal Lv x 10)) / 1000 `,
     img: snatcher,
   },
   {
@@ -156,21 +170,24 @@ Description: Automatically steals items, from a monster while attacking it with,
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Magical
-Target: Ally
+Type: Supportive 
+Target: Ally/Enemy
+After Cast Delay: A.Delay 0.10s 
+Cooldown: A.Delay
 Range: 9
 Requirement: Steal Lv: 10, Snatcher Lv: 4
-Description: Copies a skill from an ally, enemy, or monster by selecting from a list of eligible skills they have learned. The level of the copied skill matches the level learned by the target. It cannot exceed the Maximum level of this skill. Skills already possessed by the user, including those from equipment, cannot be copied.
-[Lv 1]: Lv. 1 Able to memorize, Increase Atk Speed: 1%,
-[Lv 2]: Lv. 2 Able to memorize, Increase Atk Speed: 2%,
-[Lv 3]: Lv. 3 Able to memorize, Increase Atk Speed: 3%,
-[Lv 4]: Lv. 4 Able to memorize, Increase Atk Speed: 4%,
-[Lv 5]: Lv. 5 Able to memorize, Increase Atk Speed: 5%,
-[Lv 6]: Lv. 6 Able to memorize, Increase Atk Speed: 6%,
-[Lv 7]: Lv. 7 Able to memorize, Increase Atk Speed: 7%,
-[Lv 8]: Lv. 8 Able to memorize, Increase Atk Speed: 8%,
-[Lv 9]: Lv. 9 Able to memorize, Increase Atk Speed: 9%,
-[Lv 10]: Lv.10 Able to memorize, Increase Atk Speed: 10%`,
+Description: Plagiarizes a skill from the target at its highest possible level, limited by the skill's learned level.
+Passively decreases DAA.
+[Lv. 1]: DAA -1%, SP Cost: 18 
+[Lv. 2]: DAA -2%, SP Cost: 21
+[Lv. 3]: DAA -3%, SP Cost: 24 
+[Lv. 4]: DAA -4%, SP Cost: 27 
+[Lv. 5]: DAA -5%, SP Cost: 30 
+[Lv. 6]: DAA -6%, SP Cost: 33 
+[Lv. 7]: DAA -7%, SP Cost: 36 
+[Lv. 8]: DAA -8%, SP Cost: 39 
+[Lv. 9]: DAA -9%, SP Cost: 42 
+[Lv.10]: DAA -10%, SP Cost: 45`,
     img: plagiarism,
   },
   {
@@ -187,14 +204,23 @@ Description: Copies a skill from an ally, enemy, or monster by selecting from a 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Passive
-Type: Misc
+Type: Supportive 
+Target: Ally
+Variable Cast Time: 1s
+Fixed Cast Time: 0.50s
+After Cast Delay: 0.30s
+SP Cost: 10
 Requirement: Plagiarism Lv: 5
-Description: When two or more Rogues with this skill sit next to each other, and at least one knows the skill, monsters will not attack them. This effect extends to any party member sitting next to the Rogues but does not affect boss monsters. Also if a Rogue is the party leader, they can grant benefits to a member. Skill level determines which benefit is granted, and the number of party members influences the benefit's value. Rogues who have learned Gangster Paradise count as two for increasing the bonus.
-[Lv 1]: +Hard Def% and +Hard Mdef%,
-[Lv 2]: Reduces V.Cast Time% and After Cast Delay%,
-[Lv 3]: +HP% and +SP%,
-[Lv 4]: +Hit Rate% and +Critical Rate%,
-[Lv 5]: +Atk% and +MAtk%`,
+Description: Recruits allies into a gang, granting different benefits based on the skill's level.
+Effectiveness scales with the number of party members; those with Gangster Paradise learned count twice.
+The caster and target must be on the same map.
+Passively, normal monsters will not attack Rogues sitting side by side. Nearby sitting allies are also affected.
+[Lv. 1] Ironveil: Increases H.DEF and H.MDEF. 
+[Lv. 2] Spellrush: Reduces VCT and ACD. 
+[Lv. 3] Syndicate: Increases HP and SP. 
+[Lv. 4] Truefang: Increases ACC and CRIT. 
+[Lv. 5] Brutal: Increases B.ATK and B.MATK.
+Formula: Bonus effect (%): 1 + (Skill Lv / 2) + (PartyMembers / 2) + Paradise PartyMembers`,
     img: gangsterParadise,
   },
   {
@@ -211,7 +237,7 @@ Description: When two or more Rogues with this skill sit next to each other, and
 Skill Form: Passive
 Type: Misc
 Requirement: Gangster Paradise Lv: 5
-Description: Increases the bonuses granted by Gangster Paradise for the user by +5%.`,
+Description: Increases the effectiveness of bonuses granted by Gangster Paradise by 5%.`,
     img: gangland,
   },
   {
@@ -230,19 +256,24 @@ Description: Increases the bonuses granted by Gangster Paradise for the user by 
 Skill Form: Active
 Type: Physical
 Target: Enemy
+After Cast Delay: A.Delay 
 Range: 1
+Hits: 1
 Requirement: Snatcher Lv: 4
-Description: Delivers a powerful strike that has a chance to apply the Gashing Wound effect on the target. Attacking targets affected by Gashing Wound grants a chance to cause Bleeding. Gashing Wound also increases the chance to inflict negative effects on the target and boosts the damage of Gashing Blow by 50% plus an additional 15% for each negative effect on the target.
-[Lv 1]: Atk 330%, Gashing Wound Chance: 12%,
-[Lv 2]: Atk 360%, Gashing Wound Chance: 14%,
-[Lv 3]: Atk 390%, Gashing Wound Chance: 16%,
-[Lv 4]: Atk 420%, Gashing Wound Chance: 18%,
-[Lv 5]: Atk 450%, Gashing Wound Chance: 20%,
-[Lv 6]: Atk 480%, Gashing Wound Chance: 22%,
-[Lv 7]: Atk 510%, Gashing Wound Chance: 24%,
-[Lv 8]: Atk 540%, Gashing Wound Chance: 26%,
-[Lv 9]: Atk 570%, Gashing Wound Chance: 28%,
-[Lv 10]: Atk 600%, Gashing Wound Chance: 30%`,
+Description: Deals P.DMG to the target. Has a chance to inflict Gashing Wound for 10s.
+If the target has Gashing Wound, the damage scales with the number of the target's active NSE, and has a chance to inflict Bleeding for 120s.
+[Lv. 1]: ATK 330%, SP Cost: 12 Gashing Wound/Bleeding Chance: 12% 
+[Lv. 2]: ATK 360%, SP Cost: 13 Gashing Wound/Bleeding Chance: 14% 
+[Lv. 3]: ATK 390%, SP Cost: 13 Gashing Wound/Bleeding Chance: 16% 
+[Lv. 4]: ATK 420%, SP Cost: 14 Gashing Wound/Bleeding Chance: 18% 
+[Lv. 5]: ATK 450%, SP Cost: 14 Gashing Wound/Bleeding Chance: 20% 
+[Lv. 6]: ATK 480%, SP Cost: 15 Gashing Wound/Bleeding Chance: 22% 
+[Lv. 7]: ATK 510%, SP Cost: 15 Gashing Wound/Bleeding Chance: 24% 
+[Lv. 8]: ATK 540%, SP Cost: 16 Gashing Wound/Bleeding Chance: 26% 
+[Lv. 9]: ATK 570%, SP Cost: 16 Gashing Wound/Bleeding Chance: 28% 
+[Lv.10]: ATK 600%, SP Cost: 17 Gashing Wound/Bleeding Chance: 30%
+Formula: ATK (%): 300 + (Skill Lv x 30) + (15 x Active Negative Effects)
+Targets with Gashing Wound ATK (%): 350 + (Skill Lv x 30) + (15 x Negative Effects) `,
     img: gashingBlow,
   },
   {
@@ -259,21 +290,29 @@ Description: Delivers a powerful strike that has a chance to apply the Gashing W
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Physical 
 Target: Enemy
-Range: 1
+After Cast Delay: A.Delay - 0.10s
+Cooldown: A.Delay + 0.36s
+Range: 1 + Weapon's range 
+Hits: 1
+SP Cost: 16
 Requirement: Gashing Blow Lv: 4
-Description: Attacks the target from behind, causing physical damage. The skill teleports the caster immediately behind the enemy. When used with a Dagger class weapon, the damage is doubled. When in Hiding status, this skill deals additional damage equal to the casters STR.
-[Lv 1]: Atk 330%,
-[Lv 2]: Atk 360%,
-[Lv 3]: Atk 390%,
-[Lv 4]: Atk 420%,
-[Lv 5]: Atk 450%,
-[Lv 6]: Atk 480%,
-[Lv 7]: Atk 510%,
-[Lv 8]: Atk 540%,
-[Lv 9]: Atk 570%,
-[Lv 10]: Atk 600%`,
+Description: Charges behind the target. Deals P.DMG, with damage scaling with STR if used while Hiding.
+Has a chance to inflict Stun for 4.5s.
+Adds an additional hit when wielding a Dagger. This skill has an extra HC bonus.
+[Lv. 1]: ATK 330%, Chance: 7%, HC +1% 
+[Lv. 2]: ATK 360%, Chance: 9%, HC +2% 
+[Lv. 3]: ATK 390%, Chance: 11%, HC +3% 
+[Lv. 4]: ATK 420%, Chance: 13%, HC +4%
+[Lv. 5]: ATK 450%, Chance: 15%, HC +5% 
+[Lv. 6]: ATK 480%, Chance: 17%, HC +6% 
+[Lv. 7]: ATK 510%, Chance: 19%, HC +7% 
+[Lv. 8]: ATK 540%, Chance: 21%, HC +8% 
+[Lv. 9]: ATK 570%, Chance: 23%, HC +9% 
+[Lv.10]: ATK 600%, Chance: 25%, HC +10%
+Formula: ATK (%): (300 + (Skill Lv x 30)) x Hits
+Hiding ATK (%): (300 + (Skill Lv x 30) + STR) x Hits `,
     img: backStab,
   },
   {
@@ -293,12 +332,12 @@ Description: Attacks the target from behind, causing physical damage. The skill 
 Skill Form: Passive
 Type: Misc
 Requirement: Hiding Lv: 1
-Description: Enables Movement while in, Hiding status. Movement Speed is slower, than normal walk.
-[Lv 1]: Movement Speed: 26%,
-[Lv 2]: Movement Speed: 32%,
-[Lv 3]: Movement Speed: 38%,
-[Lv 4]: Movement Speed: 44%,
-[Lv 5]: Movement Speed: 50%`,
+Description: Allows movement while Hiding, during which WD is increased.
+[Lv. 1]: WD +114%
+[Lv. 2]: WD +108%
+[Lv. 3]: WD +102% 
+[Lv. 4]: WD +96% 
+[Lv. 5]: WD +90%`,
     img: tunnelDrive,
   },
   {
@@ -317,15 +356,23 @@ Description: Enables Movement while in, Hiding status. Movement Speed is slower,
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Physical 
 Target: Self
+After Cast Delay: 0.14s
+Cooldown: 1s
+Hits: 1
+SP Cost: 15
 Requirement: Sprinkle Sand Lv: 5, Back Stab Lv: 2, Tunnel Drive Lv: 2
-Description: Execute a sneak attack on nearby enemies within a [7*7] area. If used from a hidden state, this ability has no cooldown, and affected enemies receives amplified damage for a short period. Cooldown of this ability can be reduced based on the level of [Hiding] Skill. Amplified damage has half for Boss Protocol monsters.
-[Lv 1]: Atk 200%, Amplified Damage +6%, Duration: 1 Second,
-[Lv 2]: Atk 350%, Amplified Damage +12%, Duration: 2 Second,
-[Lv 3]: Atk 500%, Amplified Damage +18%, Duration: 3 Second,
-[Lv 4]: Atk 650%, Amplified Damage +24%, Duration: 4 Second,
-[Lv 5]: Atk 800%, Amplified Damage +30%, Duration: 5 Second`,
+Description: Deals P.DMG to enemies within a 7x7 AoE. Has a chance to inflict Stun for 5s and Blind for 20s.
+If cast from Hiding, this skill has no CD and increases damage taken by enemies for 10s. This amplified damage is reduced by half for boss monsters.
+CD scales with the learned level of Hiding. 
+[Lv 1]: ATK 200%, Damage +6% Stun/Blind Chance: 13%
+[Lv 2]: ATK 350%, Damage +12% Stun/Blind Chance: 16%
+[Lv 3]: ATK 500%, Damage +18% Stun/Blind Chance: 19%
+[Lv 4]: ATK 650%, Damage +24% Stun/Blind Chance: 22%
+[Lv 5]: ATK 800%, Damage +30% Stun/Blind Chance: 25%
+Formula: ATK (%): 50 + (Skill Lv x 150) 
+Cooldown (seconds): 1 - (Hiding Lv x 0,1) `,
     img: raid,
   },
   {
@@ -342,14 +389,20 @@ Description: Execute a sneak attack on nearby enemies within a [7*7] area. If us
 Skill Form: Active
 Type: Physical
 Target: Enemy
+After Cast Delay: A.Delay
+Cooldown: A.Delay + 0.36s 
 Range: 1
+Hits: 1
 Requirement: Raid Lv: 5
-Description: Strikes a target and, forcibly teleport it with the caster to, a random location on the same map. This skill's success rate is affected by, the level of the skill. Boss monsters, are unaffected by Intimidate.
-[Lv 1]: ATK 130%,
-[Lv 2]: ATK 160%,
-[Lv 3]: ATK 190%,
-[Lv 4]: ATK 220%,
-[Lv 5]: ATK 250%`,
+Description: Deals P.DMG to the target. Has a chance to teleport both caster and target to a random location on the same map. Chance scales with the Base Level difference between the caster and target.
+Boss and Elite monsters cannot be teleported.
+[Lv. 1]: ATK 130%, Chance: 55% 
+[Lv. 2]: ATK 160%, Chance: 60%
+[Lv. 3]: ATK 190%, Chance: 65% 
+[Lv. 4]: ATK 220%, Chance: 70% 
+[Lv. 5]: ATK 250%, Chance: 75%
+Formula: ATK (%): 100 + (Skill Lv x 30)
+Chance (%): 50 + (Skill Lv x 5) + (Base Lv - Target Base Lv) `,
     img: intimidate,
   },
   {
@@ -367,16 +420,22 @@ Description: Strikes a target and, forcibly teleport it with the caster to, a ra
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Enemy
+After Cast Delay: A.Delay + 0.50s 
+Cooldown: A.Delay
 Range: 1
 Requirement: Snatcher Lv: 5
-Description: Attempts to forcibly remove the equipped helmet of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total MATK temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster MATK -5%,
-[Lv 2]: Success Chance: 13%, Monster MATK -10%,
-[Lv 3]: Success Chance: 17%, Monster MATK -15%,
-[Lv 4]: Success Chance: 21%, Monster MATK -20%,
-[Lv 5]: Success Chance: 25%, Monster MATK -25%`,
+Description: Attempts to Remove the target's helmet for 60s.
+Success rate scales with the Base Level difference between the caster and target. Duration is reduced by the target's Base Level.
+Against monsters, decreases M.ATK for 60s, with double success rate and duration. Against bosses, duration is reduced to a quarter.
+[Lv. 1]: VCT: 0.56s. FCT: 0.14s. MATK -5% Chance: 9%, SP Cost: 12
+[Lv. 2]: VCT: 0.72s. FCT: 0.18s. MATK -10% Chance: 13%, SP Cost: 14
+[Lv. 3]: VCT: 0.88s. FCT: 0.22s. MATK -15% Chance: 17%, SP Cost: 16
+[Lv. 4]: VCT: 1.14s. FCT: 0.26s. MATK -20% Chance: 21%, SP Cost: 18
+[Lv. 5]: VCT: 1.20s. FCT: 0.30s. MATK -25% Chance: 25%, SP Cost: 20
+Formula: Chance (%): (50 + (Skill Lv x 40) + ((Base Lv - Target Base Lv) x 10)) / 1000
+Duration (seconds): 60 - ((60 x (Target Base Lv x 0.5)) / 100) `,
     img: helmStripping,
   },
   {
@@ -394,16 +453,22 @@ Description: Attempts to forcibly remove the equipped helmet of a single target,
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Enemy
+After Cast Delay: A.Delay + 0.50s 
+Cooldown: A.Delay
 Range: 1
 Requirement: Helm Stripping Lv: 2
-Description: Attempts to forcibly remove the equipped shield of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total MDEF temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster MDEF -5%,
-[Lv 2]: Success Chance: 13%, Monster MDEF -10%,
-[Lv 3]: Success Chance: 17%, Monster MDEF -15%,
-[Lv 4]: Success Chance: 21%, Monster MDEF -20%,
-[Lv 5]: Success Chance: 25%, Monster MDEF -25%`,
+Description: Attempts to forcibly Remove the target's shield for 60s.
+Success rate scales with the Base Level difference between the caster and target. Duration is reduced by the target's Base Level.
+Against monsters, decreases M.DEF for 60s, with double success rate and duration. Against bosses, duration is reduced to a quarter.
+[Lv. 1]: VCT: 0.56s. FCT: 0.14s. M.DEF -5% Chance: 9%, SP Cost: 12
+[Lv. 2]: VCT: 0.72s. FCT: 0.18s. M.DEF -10% Chance: 13%, SP Cost: 14
+[Lv. 3]: VCT: 0.88s. FCT: 0.22s. M.DEF -15% Chance: 17%, SP Cost: 16
+[Lv. 4]: VCT: 1.14s. FCT: 0.26s. M.DEF -20% Chance: 21%, SP Cost: 18
+[Lv. 5]: VCT: 1.20s. FCT: 0.30s. M.DEF -25% Chance: 25%, SP Cost: 20
+Formula: Chance (%): (50 + (Skill Lv x 40) + ((Base Lv - Target Base Lv) x 10)) / 1000 
+Duration (seconds): 60 - ((60 x (Target Base Lv x 0.5)) / 100) `,
     img: shieldStripping,
   },
   {
@@ -421,16 +486,22 @@ Description: Attempts to forcibly remove the equipped shield of a single target,
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Enemy
+After Cast Delay: A.Delay + 0.50s 
+Cooldown: A.Delay
 Range: 1
 Requirement: Shield Stripping Lv: 2
-Description: Attempts to forcibly remove the equipped armor of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total DEF temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster DEF -5%,
-[Lv 2]: Success Chance: 13%, Monster DEF -10%,
-[Lv 3]: Success Chance: 17%, Monster DEF -15%,
-[Lv 4]: Success Chance: 21%, Monster DEF -20%,
-[Lv 5]: Success Chance: 25%, Monster DEF -25%`,
+Description: Attempts to forcibly remove the equipped armor of a single target, temporarily preventing them from equipping it again for 60 Description: Attempts to forcibly Remove the target's armor for 60s.
+Success rate scales with the Base Level difference between the caster and target. Duration is reduced by the target's Base Level.
+Against monsters, decreases P.DEF for 60s, with double success rate and duration. Against bosses, duration is reduced to a quarter.
+[Lv. 1]: VCT: 0.56s. FCT: 0.14s. P.DEF -5% Chance: 9%, SP Cost: 12
+[Lv. 2]: VCT: 0.72s. FCT: 0.18s. P.DEF -10% Chance: 13%, SP Cost: 14
+[Lv. 3]: VCT: 0.88s. FCT: 0.22s. P.DEF -15% Chance: 17%, SP Cost: 16
+[Lv. 4]: VCT: 1.14s. FCT: 0.26s. P.DEF -20% Chance: 21%, SP Cost: 18
+[Lv. 5]: VCT: 1.20s. FCT: 0.30s. P.DEF -25% Chance: 25%, SP Cost: 20
+Formula: Chance (%): (50 + (Skill Lv x 40) + ((Base Lv - Target Base Lv) x 10)) / 1000 
+Duration (seconds): 60 - ((60 x (Target Base Lv x 0.5)) / 100) `,
     img: armorStripping,
   },
   {
@@ -447,16 +518,22 @@ Description: Attempts to forcibly remove the equipped armor of a single target, 
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Physical
+Type: Supportive 
 Target: Enemy
+After Cast Delay: A.Delay + 0.50s 
+Cooldown: A.Delay
 Range: 1
 Requirement: Armor Stripping Lv: 2
-Description: Attempts to forcibly remove the equipped weapon of a single target, temporarily preventing them from equipping it again for 60 seconds. The success rate is influenced by the difference between the users and the targets Base Level. Each level of the target reduces the duration by 0.5%. Against monsters, this will decrease their total ATK temporarily. Has double base chance of success.
-[Lv 1]: Success Chance: 9%, Monster ATK -5%,
-[Lv 2]: Success Chance: 13%, Monster ATK -10%,
-[Lv 3]: Success Chance: 17%, Monster ATK -15%,
-[Lv 4]: Success Chance: 21%, Monster ATK -20%,
-[Lv 5]: Success Chance: 25%, Monster ATK -25%`,
+Description: Attempts to forcibly Remove the target's weapon for 60s.
+Success rate scales with the Base Level difference between the caster and target. Duration is reduced by the target's Base Level.
+Against monsters, decreases W.ATK for 60s, with double success rate and duration. Against bosses, duration is reduced to a quarter.
+[Lv. 1]: VCT: 0.56s. FCT: 0.14s. W.ATK -5% Chance: 9%, SP Cost: 12
+[Lv. 2]: VCT: 0.72s. FCT: 0.18s. W.ATK -10% Chance: 13%, SP Cost: 14
+[Lv. 3]: VCT: 0.88s. FCT: 0.22s. W.ATK -15% Chance: 17%, SP Cost: 16
+[Lv. 4]: VCT: 1.14s. FCT: 0.26s. W.ATK -20% Chance: 21%, SP Cost: 18
+[Lv. 5]: VCT: 1.20s. FCT: 0.30s. W.ATK -25% Chance: 25%, SP Cost: 20
+Formula: Chance (%): (50 + (Skill Lv x 40) + ((Base Lv - Target Base Lv) x 10)) / 1000 
+Duration (seconds): 60 - ((60 x (Target Base Lv x 0.5)) / 100) `,
     img: weaponStripping,
   },
 ];
