@@ -26,17 +26,17 @@ export const skillsThief = [
 Skill Form: Passive
 Type: Physical
 Requirement: None
-Description: Increases FLEE and Movement Speed.
-[Lv 1]: FLEE +3, Movement Speed: +1%,
-[Lv 2]: FLEE +6, Movement Speed: +2%,
-[Lv 3]: FLEE +9, Movement Speed: +3%,
-[Lv 4]: FLEE +12, Movement Speed: +4%,
-[Lv 5]: FLEE +15, Movement Speed: +5%,
-[Lv 6]: FLEE +18, Movement Speed: +6%,
-[Lv 7]: FLEE +21, Movement Speed: +7%,
-[Lv 8]: FLEE +24, Movement Speed: +8%,
-[Lv 9]: FLEE +27, Movement Speed: +9%,
-[Lv 10]: FLEE +30, Movement Speed: +10%`,
+Description: Increases FLEE and reduces WD.
+[Lv. 1]: FLEE +3. WD -1%
+[Lv. 2]: FLEE +6. WD -2%
+[Lv. 3]: FLEE +9. WD -3%
+[Lv. 4]: FLEE +12. WD -4% 
+[Lv. 5]: FLEE +15. WD -5% 
+[Lv. 6]: FLEE +18. WD -6% 
+[Lv. 7]: FLEE +21. WD -7% 
+[Lv. 8]: FLEE +24. WD -8% 
+[Lv. 9]: FLEE +27. WD -9% 
+[Lv. 10]: FLEE +30. WD -10%`,
     img: improveDodge,
   },
   {
@@ -51,20 +51,21 @@ Description: Increases FLEE and Movement Speed.
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Passive
+Weapon: Dagger
 Type: Physical
 Range: 1
 Requirement: None
-Description: Grants a chance to inflict two hits instead of one when attacking with Dagger class weapons. Allows the use of Double Attack with bows at the level learned of Vulture Eye and with swords at the level learned of Sword Mastery.
-[Lv 1]: 7% chance,
-[Lv 2]: 14% chance,
-[Lv 3]: 21% chance,
-[Lv 4]: 28% chance,
-[Lv 5]: 35% chance,
-[Lv 6]: 42% chance,
-[Lv 7]: 49% chance,
-[Lv 8]: 56% chance,
-[Lv 9]: 63% chance,
-[Lv 10]: 70% chance`,
+Description: Grants a chance for basic attacks to hit twice. When this happens, both hits have increased ACC
+[Lv. 1]: Chance: 7%, ACC +1 
+[Lv. 2]: Chance: 14%, ACC +2
+[Lv. 3]: Chance: 21%, ACC +3 
+[Lv. 4]: Chance: 28%, ACC +4 
+[Lv. 5]: Chance: 35%, ACC +5 
+[Lv. 6]: Chance: 42%, ACC +6 
+[Lv. 7]: Chance: 49%, ACC +7 
+[Lv. 8]: Chance: 56%, ACC +8 
+[Lv. 9]: Chance: 63%, ACC +9 
+[Lv.10]: Chance: 70%, ACC +10`,
     img: doubleAttack,
   },
   {
@@ -85,17 +86,27 @@ Skill Form: Active
 Type: Magical
 Target: Enemy
 Range: 2
-**Requirement:*Description: Unleash a toxic assault with Poison elemental magic damage on your target, with a chance to inflict Poison status. Each level increases chance to poison the target. Every Base Level increases Skill Ratio by 3%.
-[Lv 1]: MAtk 120%, Poison Chance: 14%,
-[Lv 2]: MAtk 140%, Poison Chance: 18%,
-[Lv 3]: MAtk 160%, Poison Chance: 22%,
-[Lv 4]: MAtk 180%, Poison Chance: 26%,
-[Lv 5]: MAtk 200%, Poison Chance: 30%,
-[Lv 6]: MAtk 220%, Poison Chance: 34%,
-[Lv 7]: MAtk 240%, Poison Chance: 38%,
-[Lv 8]: MAtk 260%, Poison Chance: 42%,
-[Lv 9]: MAtk 280%, Poison Chance: 46%,
-[Lv 10]: MAtk 300%, Poison Chance: 50%`,
+Type: Magical
+Target: Enemy
+Element: Poison
+After Cast Delay: A.Delay 0.265
+Cooldown: A.Delay
+Range: 2+ Weapon's range
+Hits: 1
+Requirement: none
+Description: Deals M.DMG to the target, scaling with Base Level.
+Has a chance to inflict Poison for 60s.
+[Lv. 1]: MATK 120%, SP Cost: 7 Poison Chance: 14%
+[Lv. 2]: MATK 140%, SP Cost: 8 Poison Chance: 18%
+[Lv. 3]: MATK 160%, SP Cost: 9 Poison Chance: 22%
+[Lv. 4]: MATK 180%, SP Cost: 10 Poison Chance: 26%
+[Lv. 5]: MATK 200%, SP Cost: 11 Poison Chance: 30%
+[Lv. 6]: MATK 220%, SP Cost: 12 Poison Chance: 34%
+[Lv. 7]: MATK 240%, SP Cost: 13 Poison Chance: 38%
+[Lv. 8]: MATK 260%, SP Cost: 14 Poison Chance: 42%
+[Lv. 9]: MATK 280%, SP Cost: 15 Poison Chance: 46%
+[Lv. 10]: MATK 300%, SP Cost: 16 Poison Chance: 50%
+Formula: MATK (%): 100 + (Skill Lv x 20) + (Base Lv x 3) `,
     img: envenom,
   },
   {
@@ -112,16 +123,15 @@ Range: 2
     maxLevel: 1,
     inform: `Max Lv: 1
 Skill Form: Active
-Type: Physical
-Target: Ally
+Type: Supportive 
 Range: 9
+After Cast Delay: 1s
+Cooldown: 3s
+SP Cost: 10
 Requirement: Envenom Lv: 3
-Description: Attempts to cleanse a single target from the Poison status. If successful, it grants a temporary boost to Poison status resistance by 20%. Caster INT and Base Level, target VIT and Base Level increases chance of cleanse. This skill is initially learned at level 1, with higher levels unlocked through special items.
-[Lv 1]: Resistance duration: 10 seconds. Cooldown: 3 seconds,
-[Lv 2]: Resistance duration: 20 seconds. Cooldown: 2.5 seconds,
-[Lv 3]: Resistance duration: 30 seconds. Cooldown: 2 seconds,
-[Lv 4]: Resistance duration: 40 seconds. Cooldown: 1.5 seconds,
-[Lv 5]: Resistance duration: 50 seconds. Cooldown: 1 seconds`,
+Description: Has a chance to clear Poison, scaling with both the user's INT and Base Level, as well as the target's VIT and Base Level.
+If successful, grants +20% Poison resistance.
+Formula: Chance (%): (Base Lv x 10) + (INT x 40)) + (Target Base Lv x 10) + (Target VIT x 40) `,
     img: detoxify,
   },
   {
@@ -138,21 +148,25 @@ Description: Attempts to cleanse a single target from the Poison status. If succ
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
-Type: Physical
+Type: Supportive
 Target: Enemy
+After Cast Delay: A.Delay 0.26s
+Cooldown: A.Delay
 Range: 1
 Requirement: None
-Description: Steals an item from a specified target. If target's DEX is higher than the caster, the success rate of stealing an item is decreased. This skill can't be used on Boss monsters and Players.
-[Lv 1]: 8% Base Chance,
-[Lv 2]: 14% Base Chance,
-[Lv 3]: 20% Base Chance,
-[Lv 4]: 26% Base Chance,
-[Lv 5]: 32% Base Chance,
-[Lv 6]: 38% Base Chance,
-[Lv 7]: 44% Base Chance,
-[Lv 8]: 50% Base Chance,
-[Lv 9]: 56% Base Chance,
-[Lv 10]: 62% Base Chance`,
+Description: Has a chance to steal an item
+from normal monsters. Success chance scales with the level difference between user and monster.
+[Lv. 1]: Steal Chance: 6%
+[Lv. 2]: Steal Chance: 12% 
+[Lv. 3]: Steal Chance: 18% 
+[Lv. 4]: Steal Chance: 24% 
+[Lv. 5]: Steal Chance: 30% 
+[Lv. 6]: Steal Chance: 36% 
+[Lv. 7]: Steal Chance: 42% 
+[Lv. 8]: Steal Chance: 48% 
+[Lv. 9]: Steal Chance: 54% 
+[Lv.10]: Steal Chance: 60%
+Formula: Steal Chance (%): (Skill Lv x 6) + ((Base Lv - Target Lv) / 2) `,
     img: steal,
   },
   {
@@ -170,22 +184,24 @@ Description: Steals an item from a specified target. If target's DEX is higher t
     skillName: "Hiding",
     maxLevel: 10,
     inform: `Max Lv: 10
-Skill Form: Active
-Type: Misc
+Skill Form: Toggle
+Type: Supportive 
 Target: Self
-Range: 1
+SP Cost: 10
 Requirement: Steal Lv: 4
-Description: Burrow underground to evade enemy attacks. The hidden status can be disrupted by detection skills, and certain enemies, like Insect, Demon, and Boss Protocol monsters, can still detect you. The skill can be canceled by using it again. SP is gradually drained while hiding.
-[Lv 1]: SP Drain: 1 SP every 1 seconds. After-cast delay: 1 second,
-[Lv 2]: SP Drain: 1 SP every 2 seconds. After-cast delay: 0.9 seconds,
-[Lv 3]: SP Drain: 1 SP every 3 seconds. After-cast delay: 0.8 seconds,
-[Lv 4]: SP Drain: 1 SP every 4 seconds. After-cast delay: 0.7 seconds,
-[Lv 5]: SP Drain: 1 SP every 5 seconds. After-cast delay: 0.6 seconds,
-[Lv 6]: SP Drain: 1 SP every 6 seconds. After-cast delay: 0.5 seconds,
-[Lv 7]: SP Drain: 1 SP every 7 seconds. After-cast delay: 0.4 seconds,
-[Lv 8]: SP Drain: 1 SP every 8 seconds. After-cast delay: 0.3 seconds,
-[Lv 9]: SP Drain: 1 SP every 9 seconds. After-cast delay: 0.2 seconds,
-[Lv 10]: SP Drain: 1 SP every 10 second. After-cast delay: 0.1 seconds`,
+Description: Becomes Invisible and dodges enemy attacks.
+While active, drains 1 SP per second and prevents any action. 
+ACD scales with skill level.
+[Lv. 1]: ACD: 1.00s. SP Drain: every 1s Duration: 30s
+[Lv. 2]: ACD: 0.90s. SP Drain: every 2s Duration: 60s
+[Lv. 3]: ACD: 0.80s. SP Drain: every 3s Duration: 90s
+[Lv. 4]: ACD: 0.70s. SP Drain: every 4s Duration: 120s
+[Lv. 5]: ACD: 0.60s. SP Drain: every 5s Duration: 150s
+[Lv. 6]: ACD: 0.50s. SP Drain: every 6s Duration: 180s
+[Lv. 7]: ACD: 0.40s. SP Drain: every 7s Duration: 210s
+[Lv. 8]: ACD: 0.30s. SP Drain: every 8s Duration: 240s
+[Lv. 9]: ACD: 0.20s. SP Drain: every 9s Duration: 270s
+[Lv.10]: ACD: 0.10s. SP Drain: every 10s Duration: 300s`,
     img: hiding,
   },
   {
@@ -202,20 +218,23 @@ Description: Burrow underground to evade enemy attacks. The hidden status can be
 Skill Form: Active
 Type: Physical
 Target: Enemy
+Element: Earth
+After Cast Delay: A.Delay - 0.26s
+Cooldown: A.Delay + 1s
 Range: 3
 Requirement: None
-Description: Kick up a cloud of sand, dealing Earth elemental damage to enemies in a [3x3] area and potentially leaving them Blind.
-[Lv 1]: Atk 120%,
-[Lv 2]: Atk 140%,
-[Lv 3]: Atk 160%,
-[Lv 4]: Atk 180%,
-[Lv 5]: Atk 200%,
-[Lv 6]: Atk 220%,
-[Lv 7]: Atk 240%,
-[Lv 8]: Atk 260%,
-[Lv 9]: Atk 280%,
-[Lv 10]: Atk 300%
-Details: AfterCastActDelay set as ASPD; Cooldown of 1000.`,
+Description: Deals P.DMG to enemies within a 3x3 AoE around the target. Has a 20% chance to inflict Blind on them for 20s. 
+[Lv. 1]: ATK 120%, SP Cost: 6
+[Lv. 2]: ATK 140%, SP Cost: 6
+[Lv. 3]: ATK 160%, SP Cost: 7
+[Lv. 4]: ATK 180%, SP Cost: 7 
+[Lv. 5]: ATK 200%, SP Cost: 8 
+[Lv. 6]: ATK 220%, SP Cost: 8 
+[Lv. 7]: ATK 240%, SP Cost: 9 
+[Lv. 8]: ATK 260%, SP Cost: 9 
+[Lv. 9]: ATK 280%, SP Cost: 10 
+[Lv.10]: ATK 300%, SP Cost: 10
+Formula: ATK (%): 100 + (Skill Lv x 20) `,
     img: sprinkleSand,
   },
   
@@ -233,19 +252,25 @@ Details: AfterCastActDelay set as ASPD; Cooldown of 1000.`,
 Skill Form: Active
 Type: Physical
 Target: Enemy
-Range: 7
+Element: Neutral
+After Cast Delay: A.Delay - 0.26s 
+Cooldown: A.Delay + 0.36s
+Range: 7 Hits: 1
+SP Cost: 4
 Requirement: None
-Description: Flings a stone at a single target, dealing damage that ignores defense and has a chance to Stun the target. Your STR increases Skill Ratio. Stunned targets take 30% more damage.
-[Lv 1]: Atk 110 + STR%, Stun chance: 13%,
-[Lv 2]: Atk 120 + STR%, Stun chance: 16%,
-[Lv 3]: Atk 130 + STR%, Stun chance: 19%,
-[Lv 4]: Atk 140 + STR%, Stun chance: 22%,
-[Lv 5]: Atk 150 + STR%, Stun chance: 25%,
-[Lv 6]: Atk 160 + STR%, Stun chance: 28%,
-[Lv 7]: Atk 170 + STR%, Stun chance: 31%,
-[Lv 8]: Atk 180 + STR%, Stun chance: 34%,
-[Lv 9]: Atk 190 + STR%, Stun chance: 37%,
-[Lv 10]: Atk 200 + STR%, Stun chance: 40%`,
+Description: Deals ranged P.DMG scaling with STR and has a chance to inflict Stun.
+Also deals 30% increased P.DMG to stunned enemies.
+[Lv. 1]: ATK 110%, Stun Chance: 13% 
+[Lv. 2]: ATK 120%, Stun Chance: 16% 
+[Lv. 3]: ATK 130%, Stun Chance: 19% 
+[Lv. 4]: ATK 140%, Stun Chance: 22% 
+[Lv. 5]: ATK 150%, Stun Chance: 25%
+[Lv. 6]: ATK 160%, Stun Chance: 28% 
+[Lv. 7]: ATK 170%, Stun Chance: 31% 
+[Lv. 8]: ATK 180%, Stun Chance: 34% 
+[Lv. 9]: ATK 190%, Stun Chance: 37% 
+[Lv.10]: ATK 200%, Stun Chance: 40%
+Formula: MATK (%): 100 + (Skill Lv x 10) + STR `,
     img: throwStone,
   },
 ];
