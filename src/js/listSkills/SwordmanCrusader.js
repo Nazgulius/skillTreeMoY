@@ -555,7 +555,7 @@ Cooldown (seconds): 10 - (2 x Devoted Allies) `,
       { id: "devotion", minLevel: 1 },
     ],
     dependent: [
-      // { id: "shieldChain" },
+      { id: "gospel" },
     ],
     element: null,
     skillName: "Grace of the Martyr",
