@@ -460,6 +460,7 @@ Undead/Corrupt Bonus: Skill Lv x 10 `,
     level: 0,
     dependencies: [
       { id: "napalmBeat", minLevel: 5 },
+      { id: "soulStrike", minLevel: 7 },
     ],
     element: null,
     skillName: "Safety Wall",
