@@ -136,7 +136,7 @@ Catalyst: 5x Zeny Pouch
     level: 0,
     dependencies: [
       { id: "skinTempering", minLevel: 5 },
-      { id: "hammerfall", minLevel: 5 },
+      { id: "hammerfall", minLevel: 1 },
     ],
     dependent: [ ],
     element: null,
