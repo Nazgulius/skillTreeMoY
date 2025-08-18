@@ -330,6 +330,7 @@ Does not affect targets that are already silenced.
     ],
     dependent: [
       { id: "manaRecharge" }, 
+      { id: "penitent" }, 
     ],
     element: null,
     skillName: "Mace Mastery",
@@ -389,7 +390,8 @@ Formula: Duration (seconds); 15 + (Skill Lv x 15) + Job Level `,
       { id: "aspersio", minLevel: 3 },
       { id: "turnUndead", minLevel: 3 }, 
     ],
-    dependent: [      
+    dependent: [    
+      { id: "exsuffla" },
     ],
     element: null,
     skillName: "Magnus Exorcismus",
