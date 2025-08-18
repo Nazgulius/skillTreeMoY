@@ -15,9 +15,9 @@ export const skillsWhitesmith = [
     id: "cartTermination",
     level: 0,
     dependencies: [
-      { id: "cartRevolution", minLevel: 10 },
-      { id: "cartBoost", minLevel: 1 },
-      { id: "cartTwister", minLevel: 5 },
+      // { id: "cartRevolution", minLevel: 10 },
+      // { id: "cartBoost", minLevel: 1 },
+      // { id: "cartTwister", minLevel: 5 },
     ],
     dependent: [ ],
     element: null,
@@ -32,7 +32,7 @@ Cooldown: A.Delay
 Range: 2
 Hits: 1
 SP Cost: 15
-Requirement: Cart Revolution Lv: 10, Cart Boost Lv: 1, Cart Twister Lv: 5
+Requirement: None
 Description: Deals P.DMG to the target, scaling with Pushcart's current weight. Ignores Auto Guard, Parry, and Weapon Blocking.
 Requires a Pushcart.
 Can be cast up to 9 cells, transforming into High Speed Cart Ram if cast from more than 3 cells.
@@ -52,7 +52,7 @@ High Speed Cart Ram Cooldown (seconds): 2 x Number of Cells
 True ATK: ((Cart Weight / 20) x STR) / 100 
 Duration (seconds): 1 x Skill Lv `,
     img: cartTermination,
-  },
+  }, // Requirement: Cart Revolution Lv: 10, Cart Boost Lv: 1, Cart Twister Lv: 5
   {
     id: "foundryPowerUp",
     level: 0,
