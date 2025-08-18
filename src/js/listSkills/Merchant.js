@@ -115,7 +115,7 @@ Rental at: Pushcart Assembler
     dependencies: [{ id: "pushcart", minLevel: 1 }],
     dependent: [
       { id: "cartTwister" },
-      { id: "cartTermination" },
+      // { id: "cartTermination" },
     ],
     element: null,
     skillName: "Cart Revolution",
