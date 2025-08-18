@@ -86,7 +86,8 @@ Description: Grants a status that temporarily increases Max HP and Max SP, as we
     id: "phoenix",
     level: 0,
     dependencies: [
-      // { id: "tripleAttack", minLevel: 8 },
+      { id: "flightF", minLevel: 5 },
+      { id: "ironHand", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -117,7 +118,8 @@ Combo ATK (%): (Skill Lv x 400) x (1.3 + ((100 - ((HP x 100) / MaxHP)) / 100)) `
     id: "dragons",
     level: 0,
     dependencies: [
-      // { id: "tripleAttack", minLevel: 8 },
+      { id: "fallenF", minLevel: 5 },
+      { id: "ironHand", minLevel: 5 },
     ],
     dependent: [],
     element: null,
