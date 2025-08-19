@@ -261,7 +261,7 @@ export default class App {
         ];
         const dependentSkill = allSkills.find((s) => s.id === dep.id);
         if (!dependentSkill) {
-          console.warn(Dependent skill not found: ${dep.id});
+          console.warn(`Dependent skill not found: ${dep.id}`);
           return;
         }
     
