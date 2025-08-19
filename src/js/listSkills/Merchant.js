@@ -152,7 +152,7 @@ Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight / 200) x S
       { id: "cartRevolution", minLevel: 5 },
     ],
     dependent: [
-      { id: "cartTermination" },
+      // { id: "cartTermination" },
     ],
     element: null,
     skillName: "Cart Twister",
