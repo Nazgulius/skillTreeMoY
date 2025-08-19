@@ -36,7 +36,7 @@ export const skillsBlacksmith = [
     element: null,
     skillName: "Hammerfall",
     maxLevel: 10,
-    inform: `Max Lv: 5
+    inform: `Max Lv: 10
 Skill Form: Active
 Weapon: Axes/Maces 
 Type: Physical
@@ -58,8 +58,8 @@ Description: Attempts to Stun enemies within a 5x5 AoE around the targeted locat
     id: "reforge",
     level: 0,
     dependencies: [
-      { id: "enchantedStoneCraft", minLevel: 1 },
-      { id: "metalTempering", minLevel: 1 },
+      // { id: "enchantedStoneCraft", minLevel: 1 },
+      // { id: "metalTempering", minLevel: 1 },
     ],
     dependent: [      
       { id: "foundryPowerUp" },
@@ -213,7 +213,7 @@ Description: Grants the ability to perform extraordinary reforges on String-type
     level: 0,
     dependencies: [
       { id: "reforge", minLevel: 1 },
-    ],
+    ],f
     dependent: [
       { id: "foundryPowerUp" },
     ],
