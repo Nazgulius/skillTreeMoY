@@ -79,7 +79,7 @@ Description: Attempts to Stun enemies within a 5x5 AoE around the targeted locat
 Skill Form: Active
 Type: Supportive 
 Target: Self
-Requirement: Enchanted Stone Craft Lv: 1, Metal Tempering Lv: 1
+Requirement: None
 Description: Grants the ability to reforge weapons.
 The reforge's success rate scales with DEX, LUK, Job Level, skill level and Anvil type.
 Reforging a reforged weapon will override its reforge.
@@ -213,7 +213,7 @@ Description: Grants the ability to perform extraordinary reforges on String-type
     level: 0,
     dependencies: [
       { id: "reforge", minLevel: 1 },
-    ],f
+    ],
     dependent: [
       { id: "foundryPowerUp" },
     ],
