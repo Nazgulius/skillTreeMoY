@@ -59,7 +59,6 @@ E.ATK Bonus: Skill Lv x 1 `,
     inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
-Skill Form: Passive
 Weapon: One-Handed Spear
 Requirement: None
 Description: Increases E.ATK while wielding a One-Handed Spear. Knights and Crusaders gain extra E.ATK. At max level, also grants +6% ACC.
@@ -88,8 +87,9 @@ E.ATK Bonus: Skill Lv x 1 `,
     maxLevel: 10,
     inform: `Max Lv: 10
 Skill Form: Active
+Type: Physical
 Target: Enemy
-After Cast Delay: A.Delay 0.48s
+After Cast Delay: A.Delay - 0.48s
 Cooldown: A.Delay
 Range: 1 + Weapon's range
 Hits: 1
@@ -121,13 +121,13 @@ Skill Form: Active
 Type: Physical
 Target: Self
 Element: Fire
-After Cast Delay: A.Delay 0.44s
+After Cast Delay: A.Delay - 0.44s
 Cooldown: 1s
 Hits: 1
 Requirement: Bash Lv: 5
 Description: Deals P.DMG to enemies within a 7x7 AoE and Knocks them back 2 cells. Enemies at the edge take less damage.
 Also grants +20% P.DMG as Fire property temporarily.
-This skill has HCM.
+This skill has HCM bonus.
 [Lv. 1]: ATK 120%, HCM: 110% HP Cost: 30. SP Cost: 6 Property Damage Duration: 10s 
 [Lv. 2]: ATK 140%, HCM: 120% HP Cost: 29. SP Cost: 6 Property Damage Duration: 20s 
 [Lv. 3]: ATK 160%, HCM: 130% HP Cost: 28. SP Cost: 7 Property Damage Duration: 30s 
