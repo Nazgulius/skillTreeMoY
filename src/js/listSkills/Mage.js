@@ -21,7 +21,26 @@ import sight from '../../img/icon_mag/icon_mag_10.png';
 
 
 // skills Mage
-export const skillsMage = [
+export const skillsMage = [  
+  { 
+    id: "staffMastery",
+    level: 0,
+    dependencies: [],
+    dependent: [
+    ],
+    element: null,
+    skillName: "Staff Mastery",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Requirement: None
+Description: 
+One-Handed Staffs: B.MATK + (3 × Skill Lv)
+Two-Handed Staffs: B.MATK + (4 × Skill Lv)
+When the skill is maxed: Cooldown -6%
+Formula: `,
+    img: skillImgNo,
+  },
   { 
     id: "fireBolt",
     level: 0,
