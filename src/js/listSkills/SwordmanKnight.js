@@ -24,7 +24,7 @@ export const skillsKnight = [
       { id: "oneHandedSwordMastery", minLevel: 5 },      
     ],
     dependent: [
-      { id: "parry" },
+      
     ],
     element: null,
     skillName: "Two-Handed Sword Mastery",
@@ -162,6 +162,7 @@ Base Level higher than 50: + ((((Base Lv - 50) / 5) x 10) x Hits)`,
       { id: "auraBlade" },
       { id: "bowlingBash" },
       { id: "counterAttack" },
+      { id: "parry" },
     ],
     element: null,
     skillName: "Sword Quicken",
