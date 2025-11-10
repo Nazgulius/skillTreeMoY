@@ -393,7 +393,9 @@ Poison status and property resistance reduce (%):
       { id: "poisonReact", minLevel: 5 },
       { id: "venomDust", minLevel: 5 },
     ],
-    dependent: [],
+    dependent: [      
+      { id: "vSAnticipation" },
+    ],
     element: null,
     skillName: "Venom Splasher",
     maxLevel: 10,
@@ -428,7 +430,9 @@ Formula: MATK (%): 500 + (Skill Lv x 100) `,
   {
     id: "vSAnticipation",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "venomSplasher", minLevel: 1 },
+    ],
     dependent: [],
     element: null,
     skillName: "V.S. Anticipation",

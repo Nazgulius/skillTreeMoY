@@ -83,7 +83,10 @@ This effect applies to both manually casted skills as well as auto-casted skills
   {
     id: "fogWall",
     level: 0,
-    dependencies: [],
+    dependencies: [
+      { id: "deluge", minLevel: 2 },
+      { id: "whirlwind", minLevel: 2 },  
+    ],
     dependent: [ ],
     element: null,
     skillName: "Fog Wall",

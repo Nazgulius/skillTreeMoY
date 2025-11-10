@@ -50,7 +50,7 @@ Drained SP: (T.Max SP x. (5 x Skill Lv)) = 100 `,
     id: "gospel",
     level: 0,
     dependencies: [
-      
+      { id: "graceofthemartyr", minLevel: 4 },
     ],
     dependent: [],
     element: null,

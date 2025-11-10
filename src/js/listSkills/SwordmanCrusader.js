@@ -358,7 +358,7 @@ Requires a Shield.
       { id: "guard", minLevel: 3 },      
     ],
     dependent: [
-      // { id: "martyrsHeal" },
+      { id: "graceofthemartyr" },
     ],
     element: null,
     skillName: "Devotion",
@@ -552,10 +552,10 @@ Cooldown (seconds): 10 - (2 x Devoted Allies) `,
     id: "graceofthemartyr",
     level: 0,
     dependencies: [
-      // { id: "shieldCharge", minLevel: 3 },
+      { id: "devotion", minLevel: 1 },
     ],
     dependent: [
-      // { id: "shieldChain" },
+      { id: "gospel" },
     ],
     element: null,
     skillName: "Grace of the Martyr",

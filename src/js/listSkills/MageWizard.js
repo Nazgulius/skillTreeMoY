@@ -22,6 +22,33 @@ import electricalInduction from '../../img/icon_wiz/icon_wiz_17.png';
 
 export const skillsWizard = [   
   { 
+    id: "staffMastery",
+    level: 0,
+    dependencies: [],
+    dependent: [
+    ],
+    element: null,
+    skillName: "Staff Mastery",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Passive
+Weapon: Staff
+Requirement: None
+Description: Increases Extra Magical Attack while wielding a Staff. At max level, also grants -6% Cooldown.
+When the skill is maxed: Cooldown -6%
+[Lv. 1]: One-Handed Staff: E.MATK +3, Tho-Handed Staff: E.MATK +4
+[Lv. 2]: One-Handed Staff: E.MATK +6, Tho-Handed Staff: E.MATK +8
+[Lv. 3]: One-Handed Staff: E.MATK +9, Tho-Handed Staff: E.MATK +12
+[Lv. 4]: One-Handed Staff: E.MATK +12, Tho-Handed Staff: E.MATK +16
+[Lv. 5]: One-Handed Staff: E.MATK +15 Tho-Handed Staff: E.MATK +20
+[Lv. 6]: One-Handed Staff: E.MATK +18, Tho-Handed Staff: E.MATK +24
+[Lv. 7]: One-Handed Staff: E.MATK +21, Tho-Handed Staff: E.MATK +28
+[Lv. 8]: One-Handed Staff: E.MATK +24, Tho-Handed Staff: E.MATK +32
+[Lv. 9]: One-Handed Staff: E.MATK +27, Tho-Handed Staff: E.MATK +36
+[Lv.10]: One-Handed Staff: E.MATK +30, Tho-Handed Staff: E.MATK +40`,
+    img: skillImgNo,
+  },
+  { 
     id: "sightrasher",
     level: 0,
     dependencies: [
@@ -29,7 +56,7 @@ export const skillsWizard = [
       { id: "fireBall", minLevel: 3 },
     ],
     dependent: [
-      { id: "meteorStorm" },
+      { id: "firePillar" },
     ],
     element: null,
     skillName: "Sightrasher",
@@ -54,52 +81,18 @@ Formula: MATK (%); (Skill Lv x 100) `,
     img: sightrasher,
   },
   {
-    id: "meteorStorm",
-    level: 0,
-    dependencies: [
-      { id: "sightrasher", minLevel: 3 },
-    ],
-    dependent: [
-      { id: "firePillar" },
-    ],
-    element: null,
-    skillName: "Meteor Storm",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Ground
-Element: Fire
-After Cast Delay: 1s 
-Cooldown: 65 
-Range: 9
-Requirement: Sightrasher Lv: 3
-Description: Creates a 7x7 AoE at the targeted location that deals M.DMG to enemies within a random 7x7 AoE every 0.45s for 4.5s.
-Has a chance to inflict Burning for 100s. VCT and FCT scale with skill level.
-[Lv. 1]: MATK 330%, VCT: 2.60s. FCT: 0.78s Burning Chance: 3%, SP Cost: 60
-[Lv. 2]: MATK 360%, VCT: 2.90s. FCT: 0.82s Burning Chance: 6%, SP Cost: 64
-[Lv. 3]: MATK 390%, VCT: 3.20s. FCT: 0.86s Burning Chance: 9%, SP Cost: 68
-[Lv. 4]: MATK 420%, VCT: 3.50s. FCT: 0.90s Burning Chance: 12%, SP Cost: 72
-[Lv. 5]: MATK 450%, VCT: 4.10s. FCT: 0.98s Burning Chance: 15%, SP Cost: 76
-[Lv. 6]: MATK 480%, VCT: 4.70s. FCT: 1.06s Burning Chance: 18%, SP Cost: 80
-[Lv. 7]: MATK 510%, VCT: 5.30s. FCT: 1.14s Burning Chance: 21%, SP Cost: 84
-[Lv. 8]: MATK 540%, VCT: 6.20s. FCT: 1.26s Burning Chance: 24%, SP Cost: 88
-[Lv. 9]: MATK 570%, VCT: 7.10s. FCT: 1.38s Burning Chance: 27%, SP Cost: 92
-[Lv.10]: MATK 600%, VCT: 8.00s. FCT: 1.50s Burning Chance: 30%, SP Cost: 96
-Formula: MATK (%); 300 + (Skill Lv x 30) `,
-    img: meteorStorm,
-  },
-  {
     id: "firePillar",
     level: 0,
     dependencies: [
-      { id: "meteorStorm", minLevel: 7 },
+      { id: "sightrasher", minLevel: 2 },
     ],
-    dependent: [],
+    dependent: [
+      { id: "meteorStorm" },
+    ],
     element: null,
     skillName: "Fire Pillar",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Active
 Type: Magical
 Target: Ground
@@ -107,7 +100,7 @@ Element: Fire
 After Cast Delay: 1s 
 Max Instances: 5 
 Range: 9
-Requirement: Meteor Storm Lv: 7
+Requirement: Sightrasher Lv: 2
 Description: Summons a temporary pillar at the targeted location that explodes when triggered, dealing M.DMG damage to all enemies within a 5x5 AoE.
 The damage is not multiplied by hits against players.
 Grants a chance to auto-cast Fire Pillar when casting Skills, with the auto-casted level being half of the skill's learned level.
@@ -123,10 +116,45 @@ Catalyst: 1x Red Gemstone for Lv. 6 or higher.
 [Lv. 8]: MATK 220% x 10 Hits Duration: 78s. Chance: 8%, SP Cost: 67 
 [Lv. 9]: MATK 240% x 11 Hits Duration: 84s. Chance: 9%, SP Cost: 71 
 [Lv.10]: MATK 260% x 12 Hits Duration: 90s. Chance: 10%, SP Cost: 75
-Formula: MATK (%) (60+ (Skill Lv x 20)) x Hits 
-Against Players MATK (%): 60 + (Skill Lv x 20)`,
+Formula: MATK (%) 100 + (Skill Lv x 100)`,
     img: firePillar,
   },
+  {
+    id: "meteorStorm",
+    level: 0,
+    dependencies: [
+      { id: "firePillar", minLevel: 3 },
+    ],
+    dependent: [
+    ],
+    element: null,
+    skillName: "Meteor Storm",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Magical
+Target: Ground
+Element: Fire
+After Cast Delay: 1s 
+Cooldown: 65 
+Range: 9
+Requirement: Fire Pillar Lv: 3
+Description: Creates a 7x7 AoE at the targeted location that deals M.DMG to enemies within a random 7x7 AoE every 0.45s for 4.5s.
+Has a chance to inflict Burning for 100s. VCT and FCT scale with skill level.
+[Lv. 1]: MATK 330%, VCT: 2.60s. FCT: 0.78s Burning Chance: 3%, SP Cost: 60
+[Lv. 2]: MATK 360%, VCT: 2.90s. FCT: 0.82s Burning Chance: 6%, SP Cost: 64
+[Lv. 3]: MATK 390%, VCT: 3.20s. FCT: 0.86s Burning Chance: 9%, SP Cost: 68
+[Lv. 4]: MATK 420%, VCT: 3.50s. FCT: 0.90s Burning Chance: 12%, SP Cost: 72
+[Lv. 5]: MATK 450%, VCT: 4.10s. FCT: 0.98s Burning Chance: 15%, SP Cost: 76
+[Lv. 6]: MATK 480%, VCT: 4.70s. FCT: 1.06s Burning Chance: 18%, SP Cost: 80
+[Lv. 7]: MATK 510%, VCT: 5.30s. FCT: 1.14s Burning Chance: 21%, SP Cost: 84
+[Lv. 8]: MATK 540%, VCT: 6.20s. FCT: 1.26s Burning Chance: 24%, SP Cost: 88
+[Lv. 9]: MATK 570%, VCT: 7.10s. FCT: 1.38s Burning Chance: 27%, SP Cost: 92
+[Lv.10]: MATK 600%, VCT: 8.00s. FCT: 1.50s Burning Chance: 30%, SP Cost: 96
+Formula: MATK (%); 300 + (Skill Lv x 30) `,
+    img: meteorStorm,
+  },
+  
   {
     id: "waterBall",
     level: 0,
@@ -134,7 +162,7 @@ Against Players MATK (%): 60 + (Skill Lv x 20)`,
       { id: "frostDiver", minLevel: 3 }, 
     ],
     dependent: [
-      { id: "stormGust" },
+      { id: "frostNova" },
     ],
     element: null,
     skillName: "Water Ball",
@@ -163,13 +191,49 @@ Formula: MATK (%): 100 + (Skill Lv x 40) `,
     img: waterBall,
   },
   {
+    id: "frostNova",
+    level: 0,
+    dependencies: [
+      { id: "waterBall", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "stormGust" },
+    ],
+    element: null,
+    skillName: "Frost Nova",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Self
+Element: Water
+After Cast Delay: 0.14s 
+Cooldown: 0.30s
+Hits: 1
+Requirement: Water Ball Lv: 2
+Description: Deals M.DMG to enemies within a 9x9 AoE.
+Has a chance to inflict Freezing for 5s. Inflicts Freeze on the target once the Freezing effect ends.
+VCT and FCT scale with skill level. 
+[Lv. 1]: MATK 110%, VCT/FCT: 0.57s Chance: 38%, Freeze Duration: 2.80s SP Cost: 35
+[Lv. 2]: MATK 120%, VCT/FCT: 0.54s Chance: 43%, Freeze Duration: 3.60s SP Cost: 34
+[Lv. 3]: MATK 130%, VCT/FCT: 0.51s Chance: 48%, Freeze Duration: 4.40s SP Cost: 33
+[Lv. 4]: MATK 140%, VCT/FCT: 0.48s Chance: 53%, Freeze Duration: 5.20s SP Cost: 32
+[Lv. 5]: MATK 150%, VCT/FCT: 0.45s Chance: 58%, Freeze Duration: 6.00s SP Cost: 31
+[Lv. 6]: MATK 160%, VCT/FCT: 0.42s Chance: 63%, Freeze Duration: 6.80s SP Cost: 30
+[Lv. 7]: MATK 170%, VCT/FCT: 0.39s Chance: 68%, Freeze Duration: 7.60s SP Cost: 29
+[Lv. 8]: MATK 180%, VCT/FCT: 0.36s Chance: 73%, Freeze Duration: 8.40s SP Cost: 28
+[Lv. 9]: MATK 190%, VCT/FCT: 0.33s Chance: 78%, Freeze Duration: 9.20s SP Cost: 27
+[Lv.10]: MATK 200%, VCT/FCT: 0.30s Chance: 83%, Freeze Duration: 10.00s SP Cost: 26
+Formula: MATK (%): 100 + (100 x Skill Lv) `,
+    img: frostNova,
+  },
+  {
     id: "stormGust",
     level: 0,
     dependencies: [
-      { id: "waterBall", minLevel: 3 }, 
+      { id: "frostNova", minLevel: 3 }, 
     ],
-    dependent: [
-      { id: "frostNova" },
+    dependent: [      
     ],
     element: null,
     skillName: "Storm Gust",
@@ -183,7 +247,7 @@ After Cast Delay: 1s
 Cooldown: 65 
 Range: 9 
 Hits: 1
-Requirement: Water Ball Lv: 3
+Requirement: Frost Nova Lv: 3
 Description: Deals M.DMG to enemies within a 9x9 AoE around the targeted location every 0.45s for 4.5s, knocking them back 2 cells. Has a chance to inflict Freezing for 5s. Inflicts Freeze on the target for 27s once the Freezing effect ends.
 Also inflicts Freeze immediately if the enemy is hit 3 times.
 Does not hit frozen enemies.
@@ -198,43 +262,8 @@ VCT and FCT scale with skill level.
 [Lv. 8]: MATK 470%, VCT: 6.20s. FCT: 1.26s Freezing Chance: 25%, SP Cost: 88
 [Lv. 9]: MATK 520%, VCT: 7.10s. FCT: 1.38s Freezing Chance: 20%, SP Cost: 92 
 [Lv.10]: MATK 570%, VCT: 8.00s. FCT: 1.50s Freezing Chance: 15%, SP Cost: 96
-Formula: MATK (%); 70 + (Skill Lv x 50) `,
+Formula: MATK per Tick (%): 100 + (60 x Skill Lv)`,
     img: stormGust,
-  },
-  {
-    id: "frostNova",
-    level: 0,
-    dependencies: [
-      { id: "stormGust", minLevel: 7 }, 
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Frost Nova",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Self
-Element: Water
-After Cast Delay: 0.14s 
-Cooldown: 0.30s
-Hits: 1
-Requirement: Storm Gust Lv: 7
-Description: Deals M.DMG to enemies within a 9x9 AoE.
-Has a chance to inflict Freezing for 5s. Inflicts Freeze on the target once the Freezing effect ends.
-VCT and FCT scale with skill level. 
-[Lv. 1]: MATK 110%, VCT/FCT: 0.57s Chance: 38%, Freeze Duration: 2.80s SP Cost: 35
-[Lv. 2]: MATK 120%, VCT/FCT: 0.54s Chance: 43%, Freeze Duration: 3.60s SP Cost: 34
-[Lv. 3]: MATK 130%, VCT/FCT: 0.51s Chance: 48%, Freeze Duration: 4.40s SP Cost: 33
-[Lv. 4]: MATK 140%, VCT/FCT: 0.48s Chance: 53%, Freeze Duration: 5.20s SP Cost: 32
-[Lv. 5]: MATK 150%, VCT/FCT: 0.45s Chance: 58%, Freeze Duration: 6.00s SP Cost: 31
-[Lv. 6]: MATK 160%, VCT/FCT: 0.42s Chance: 63%, Freeze Duration: 6.80s SP Cost: 30
-[Lv. 7]: MATK 170%, VCT/FCT: 0.39s Chance: 68%, Freeze Duration: 7.60s SP Cost: 29
-[Lv. 8]: MATK 180%, VCT/FCT: 0.36s Chance: 73%, Freeze Duration: 8.40s SP Cost: 28
-[Lv. 9]: MATK 190%, VCT/FCT: 0.33s Chance: 78%, Freeze Duration: 9.20s SP Cost: 27
-[Lv.10]: MATK 200%, VCT/FCT: 0.30s Chance: 83%, Freeze Duration: 10.00s SP Cost: 26
-Formula: MATK (%); 100 + (Skill Lv) `,
-    img: frostNova,
   },
   {
     id: "jupitelThunder",
@@ -267,62 +296,26 @@ VCT and FCT scale with skill level.
 Formula: MATK (%); 100 x Hits `,
     img: jupitelThunder,
   },
-  {
-    id: "lordOfVermilion",
-    level: 0,
-    dependencies: [
-      { id: "jupitelThunder", minLevel: 3 }, 
-    ],
-    dependent: [
-      { id: "electricalInduction" },
-    ],
-    element: null,
-    skillName: "Lord of Vermilion",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Ground
-Element: Wind
-After Cast Delay: 1s
-Cooldown: 65
-Range: 9 
-Hits: 4
-Requirement: Jupitel Thunder Lv: 3
-Description: Deals M.DMG to enemies within a 13x13 AoE around the targeted location every 0.45s for 4.5s.
-Has a chance to inflict Blind for 20s.
-VCT and FCT scale with skill level.
-[Lv. 1]: MATK 20%, VCT: 2.60s. FCT: 0.78s Blind Chance: 15%, SP Cost: 60
-[Lv. 2]: MATK 40%, VCT: 2.90s. FCT: 0.82s Blind Chance: 20%, SP Cost: 64
-[Lv. 3]: MATK 60%, VCT: 3.20s. FCT: 0.86s Blind Chance: 25%, SP Cost: 68
-[Lv. 4]: MATK 80%, VCT: 3.50s. FCT: 0.90s Blind Chance: 30%, SP Cost: 72
-[Lv. 5]: MATK 100%, VCT: 4.10s. FCT: 0.98s Blind Chance: 35%, SP Cost: 76
-[Lv. 6]: MATK 120%, VCT: 4.70s. FCT: 1.06s Blind Chance: 40%, SP Cost: 80
-[Lv. 7]: MATK 140%, VCT: 5.30s. FCT: 1.14s Blind Chance: 45%, SP Cost: 84
-[Lv. 8]: MATK 160%, VCT: 6.20s. FCT: 1.26s Blind Chance: 50%, SP Cost: 88
-[Lv. 9]: MATK 180%, VCT: 7.10s. FCT: 1.38s Blind Chance: 55%, SP Cost: 92
-[Lv.10]: MATK 200%, VCT: 8.00s. FCT: 1.50s Blind Chance: 60%, SP Cost: 96
-Formula: MATK (%): Skill Lv x 20 `,
-    img: lordOfVermilion,
-  },
-  {
+   {
     id: "electricalInduction",
     level: 0,
     dependencies: [
-      { id: "lordOfVermilion", minLevel: 7 }, 
+      { id: "jupitelThunder", minLevel: 2 }, 
     ],
-    dependent: [],
+    dependent: [
+      { id: "lordOfVermilion" },
+    ],
     element: null,
     skillName: "Electrical Induction",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Active
 Type: Magical
 Target: Enemy
 Element: Wind
 After Cast Delay: 1s 
 Range: 9
-Requirement: Lord of Vermilion Lv: 7
+Requirement: Jupitel Thunder Lv: 2
 Description: Deals M.DMG to the target, and bounces to a random enemy within a 7x7 AoE after 2 hits. The damage increases by 10% with each bounce, and the bounce interval scales with A.Motion.
 Grants a chance to auto-cast Electrical Induction when casting Skills, and the auto- cast level being half of the skill's learned level.
 VCT and FCT scale with skill level.
@@ -336,10 +329,48 @@ VCT and FCT scale with skill level.
 [Lv. 8]: MATK 90% x 10 Hits. VCT: 0.90s FCT: 0.20s. Chance: 8%, SP Cost: 67
 [Lv. 9]: MATK 100% x 11 Hits, VCT: 0.70s FCT: 0.15s. Chance: 9%, SP Cost: 71 
 [Lv.10]: MATK 110% x 12 Hits. VCT: 0.50s FCT: 0.10s. Chance: 10%, SP Cost: 75
-Formula: MATK (%); 10+ (Skill Lv x 10) + (Jumps x 10) 
-Interval (seconds): (A.Motion (Jumps x 20)) = 1000 `,
+Formula: MATK (%): 100 + (Skill Lv x 10) + (Jumps x 10) 
+Interval (seconds): (A.Motion (Jumps x 20)) / 1000 `,
     img: electricalInduction,
   },
+  {
+    id: "lordOfVermilion",
+    level: 0,
+    dependencies: [
+      { id: "electricalInduction", minLevel: 3 }, 
+    ],
+    dependent: [      
+    ],
+    element: null,
+    skillName: "Lord of Vermilion",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Magical
+Target: Ground
+Element: Wind
+After Cast Delay: 1s
+Cooldown: 65
+Range: 9 
+Hits: 4
+Requirement: Electrical Induction Lv: 3
+Description: Deals M.DMG to enemies within a 13x13 AoE around the targeted location every 0.45s for 4.5s.
+Has a chance to inflict Blind for 20s.
+VCT and FCT scale with skill level.
+[Lv. 1]: MATK 20%, VCT: 2.60s. FCT: 0.78s Blind Chance: 15%, SP Cost: 60
+[Lv. 2]: MATK 40%, VCT: 2.90s. FCT: 0.82s Blind Chance: 20%, SP Cost: 64
+[Lv. 3]: MATK 60%, VCT: 3.20s. FCT: 0.86s Blind Chance: 25%, SP Cost: 68
+[Lv. 4]: MATK 80%, VCT: 3.50s. FCT: 0.90s Blind Chance: 30%, SP Cost: 72
+[Lv. 5]: MATK 100%, VCT: 4.10s. FCT: 0.98s Blind Chance: 35%, SP Cost: 76
+[Lv. 6]: MATK 120%, VCT: 4.70s. FCT: 1.06s Blind Chance: 40%, SP Cost: 80
+[Lv. 7]: MATK 140%, VCT: 5.30s. FCT: 1.14s Blind Chance: 45%, SP Cost: 84
+[Lv. 8]: MATK 160%, VCT: 6.20s. FCT: 1.26s Blind Chance: 50%, SP Cost: 88
+[Lv. 9]: MATK 180%, VCT: 7.10s. FCT: 1.38s Blind Chance: 55%, SP Cost: 92
+[Lv.10]: MATK 200%, VCT: 8.00s. FCT: 1.50s Blind Chance: 60%, SP Cost: 96
+Formula: MATK per Tick(%): 100 + (60 x Skill Lv)`,
+    img: lordOfVermilion,
+  },
+ 
   {
     id: "heavensDrive",
     level: 0,
@@ -352,7 +383,7 @@ Interval (seconds): (A.Motion (Jumps x 20)) = 1000 `,
     element: null,
     skillName: "Heaven's Drive ",
     maxLevel: 5,
-    inform: `Max Lv: 10
+    inform: `Max Lv: 5
 Skill Form: Active
 Type: Magical
 Target: Ground
@@ -370,63 +401,29 @@ VCT and FCT scale with skill level.
 [Lv. 3]: MATK 75%, VCT: 1.20s. FCT: 0.40s SP Cost: 32
 [Lv. 4]: MATK 100%, VCT: 1.45s. FCT: 0.60s SP Cost: 36
 [Lv. 5]: MATK 125%, VCT: 1.70s. FCT: 0.70s SP Cost: 40
-Formula: MATK (%); Skill Lv x 25 `,
+Formula: MATK (%): Skill Lv x 25 `,
     img: heavensDrive,
-  },
-  {
-    id: "violentQuake",
-    level: 0,
-    dependencies: [
-      { id: "heavensDrive", minLevel: 3 }, 
-    ],
-    dependent: [
-      { id: "quagmire" }
-    ],
-    element: null,
-    skillName: "Violent Quake",
-    maxLevel: 10,
-    inform: `Max Lv: 10
-Skill Form: Active
-Type: Magical
-Target: Ground
-Element: Earth
-After Cast Delay: 1s 
-Cooldown: 65 
-Range: 9
-Requirement: Heaven's Drive Lv: 3
-Description: Creates a 7x7 AoE at the targeted location that deals M.DMG to enemies within a random 7x7 AoE every 0.45s for 4.5s.
-Has a chance to inflict Stun for 5s. VCT and FCT scale with skill level.
-[Lv. 1]: MATK 230%, VCT: 2.60s. FCT: 0.78s Stun Chance: 3%, SP Cost: 60
-[Lv. 2]: MATK 260%, VCT: 2.90s. FCT: 0.82s Stun Chance: 6%, SP Cost: 64
-[Lv. 3]: MATK 290%, VCT: 3.20s. FCT: 0.86s Stun Chance: 9%, SP Cost: 68
-[Lv. 4]: MATK 320%, VCT: 3.50s. FCT: 0.90s Stun Chance: 12%, SP Cost: 72
-[Lv. 5]: MATK 350%, VCT: 4.10s. FCT: 0.98s Stun Chance: 15%, SP Cost: 76
-[Lv. 6]: MATK 380%, VCT: 4.70s. FCT: 1.06s Stun Chance: 18%, SP Cost: 80
-[Lv. 7]: MATK 410%, VCT: 5.30s. FCT: 1.14s Stun Chance: 21%, SP Cost: 84
-[Lv. 8]: MATK 440%, VCT: 6.20s. FCT: 1.26s Stun Chance: 24%, SP Cost: 88
-[Lv. 9]: MATK 470%, VCT: 7.10s. FCT: 1.38s Stun Chance: 27%, SP Cost: 92
-[Lv.10]: MATK 500%, VCT: 8.00s. FCT: 1.50s Stun Chance: 30%, SP Cost: 96
-Formula: MATK (%); 200 + (Skill Lv x 30) `,
-    img: violentQuake,
   },
   {
     id: "quagmire",
     level: 0,
     dependencies: [
-      { id: "violentQuake", minLevel: 7 }, 
+      { id: "heavensDrive", minLevel: 2 }, 
     ],
-    dependent: [],
+    dependent: [
+      { id: "violentQuake" }
+    ],
     element: null,
     skillName: "Quagmire",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Active
 Type: Magical
 Target: Ground
 After Cast Delay: 1s 
 Max Instances: 3 
 Range: 9
-Requirement: Violent Quake Lv: 7
+Requirement: Heaven's Drive Lv: 2
 Description: Temporarily creates a 5x5 AoE at the targeted location, reducing AGI and DEX and increasing WD of enemies. Also removes some Status Effects from them. Older instances are removed to create new ones when reaching the instance limit. 
 [Lv. 1]: WD +26%, AGI/DEX -15% Duration: 8s. SP Cost: 8
 [Lv. 2]: WD +32%, AGI/DEX -20% Duration: 11s. SP Cost: 11
@@ -440,6 +437,42 @@ Description: Temporarily creates a 5x5 AoE at the targeted location, reducing AG
 [Lv.10]: WD +80%, AGI/DEX -60% Duration: 35s, SP Cost: 35`,
     img: quagmire,
   },
+  {
+    id: "violentQuake",
+    level: 0,
+    dependencies: [
+      { id: "quagmire", minLevel: 3 }, 
+    ],
+    dependent: [      
+    ],
+    element: null,
+    skillName: "Violent Quake",
+    maxLevel: 10,
+    inform: `Max Lv: 10
+Skill Form: Active
+Type: Magical
+Target: Ground
+Element: Earth
+After Cast Delay: 1s 
+Cooldown: 3s 
+Range: 9
+Requirement: Quagmire Lv: 3
+Description: Creates a 9x9 AoE at the targeted location that deals M.DMG to enemies within a random 9x9 AoE every.
+Has a 15% chance to inflict Stun (for 5s).
+ VCT and FCT scale with skill level.
+[Lv. 1]: MATK 230%, VCT: 2.60s. FCT: 0.78s Stun Chance: 3%, SP Cost: 60
+[Lv. 2]: MATK 260%, VCT: 2.90s. FCT: 0.82s Stun Chance: 6%, SP Cost: 64
+[Lv. 3]: MATK 290%, VCT: 3.20s. FCT: 0.86s Stun Chance: 9%, SP Cost: 68
+[Lv. 4]: MATK 320%, VCT: 3.50s. FCT: 0.90s Stun Chance: 12%, SP Cost: 72
+[Lv. 5]: MATK 350%, VCT: 4.10s. FCT: 0.98s Stun Chance: 15%, SP Cost: 76
+[Lv. 6]: MATK 380%, VCT: 4.70s. FCT: 1.06s Stun Chance: 18%, SP Cost: 80
+[Lv. 7]: MATK 410%, VCT: 5.30s. FCT: 1.14s Stun Chance: 21%, SP Cost: 84
+[Lv. 8]: MATK 440%, VCT: 6.20s. FCT: 1.26s Stun Chance: 24%, SP Cost: 88
+[Lv. 9]: MATK 470%, VCT: 7.10s. FCT: 1.38s Stun Chance: 27%, SP Cost: 92
+[Lv.10]: MATK 500%, VCT: 8.00s. FCT: 1.50s Stun Chance: 30%, SP Cost: 96
+Formula: MATK per Tick(%): 100 + (60 x Skill Lv)`,
+    img: violentQuake,
+  },  
   {
     id: "gemmancy",
     level: 0,

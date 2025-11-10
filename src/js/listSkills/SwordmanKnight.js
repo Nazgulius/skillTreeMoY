@@ -24,7 +24,7 @@ export const skillsKnight = [
       { id: "oneHandedSwordMastery", minLevel: 5 },      
     ],
     dependent: [
-      { id: "parry" },
+      
     ],
     element: null,
     skillName: "Two-Handed Sword Mastery",
@@ -83,10 +83,42 @@ ATK (%): 100 + (W.Weight + W.Attack + (100 x (W.Level X (W.Refine x 6))) + Count
     img: counterAttack,
   },
   {
+    id: "dashingBash",
+    level: 0,
+    dependencies: [
+      { id: "counterAttack", minLevel: 5 },
+    ],
+    dependent: [],
+    element: null,
+    skillName: "Dashing Bash",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Physical
+Weapon: Sword-Class 
+Target: Enemy
+Hits: 1
+Variable Cast Time: A.Delay
+After Cast Delay: A.Delay 0.44s 
+Cooldown: A.Delay + 0.365
+SP Cost: 18
+Requirement: Counter Attack Lv: 5
+Description: Charges at the target.
+Deals P.DMG, scaling with WD.
+VCT cannot be reduced by stats or gear. The skill's Range is further increased by the equipped weapon's range.
+[Lv. 1]: ATK 200%, Range: 6 
+[Lv. 2]: ATK 300%, Range: 7
+[Lv. 3]: ATK 400%, Range: 8
+[Lv. 4]: ATK 500%, Range: 9
+[Lv. 5]: ATK 600%, Range: 10
+Formula: ATK (%): (100 + (100 x Skill Lv)) x (2.5 (0.01 x Walk Delay)); (Max 1200%) `,
+    img: dashingBash,
+  },
+  {
     id: "bowlingBash",
     level: 0,
     dependencies: [
-      { id: "swordQuicken", minLevel: 10 },
+      { id: "swordQuicken", minLevel: 5 },
       { id: "counterAttack", minLevel: 5 },
     ],
     dependent: [],
@@ -121,39 +153,6 @@ Base Level higher than 50: + ((((Base Lv - 50) / 5) x 10) x Hits)`,
     img: bowlingBash,
   },
   {
-    id: "dashingBash",
-    level: 0,
-    dependencies: [
-      { id: "counterAttack", minLevel: 5 },
-    ],
-    dependent: [],
-    element: null,
-    skillName: "Dashing Bash",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Physical
-Weapon: Sword-Class 
-Target: Enemy
-Hits: 1
-Variable Cast Time: A.Delay
-After Cast Delay: A.Delay 0.44s 
-Cooldown: A.Delay + 0.365
-SP Cost: 18
-Requirement: Counter Attack Lv: 5
-Description: Charges at the target.
-Deals P.DMG, scaling with WD.
-VCT cannot be reduced by stats or gear. The skill's Range is further increased by the equipped weapon's range.
-[Lv. 1]: ATK 200%, Range: 6 
-[Lv. 2]: ATK 300%, Range: 7
-[Lv. 3]: ATK 400%, Range: 8
-
-[Lv 4]: Atk 500%, Range: 9,
-[Lv 5]: Atk 600%, Range: 10
-Formula: ATK (%): (100 + (100 x Skill Lv)) x (2.5 (0.01 x Walk Delay)); (Max 1200%) `,
-    img: dashingBash,
-  },
-  {
     id: "swordQuicken",
     level: 0,
     dependencies: [
@@ -163,6 +162,7 @@ Formula: ATK (%): (100 + (100 x Skill Lv)) x (2.5 (0.01 x Walk Delay)); (Max 120
       { id: "auraBlade" },
       { id: "bowlingBash" },
       { id: "counterAttack" },
+      { id: "parry" },
     ],
     element: null,
     skillName: "Sword Quicken",

@@ -106,7 +106,7 @@ Also increases E.ATK based on 10% of ACC.
     level: 0,
     dependencies: [
       { id: "counterAttack", minLevel: 5 },
-      { id: "twoHandedSwordMastery", minLevel: 10 },
+      { id: "swordQuicken", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -120,13 +120,15 @@ Target: Self
 After Cast Delay: 0.30s 
 Cooldown: A.Delay
 SP Cost: 30
-Requirement: Counter Attack Lv: 5, Two-Handed Sword Mastery Lv: 10
+Duration: (60 + (24 × Skill Lv))s
+Requirement: Counter Attack Lv: 5, Sword Quicken Lv: 5
 Description: Grants a chance to fully block any incoming P.DMG. Block chance is halved while wielding a One-Handed Sword. Briefly immobilizes the character after a successful block.
 [Lv. 1]: Block Chance: 23%. Duration: 30s 
 [Lv. 2]: Block Chance: 26%, Duration: 40s 
 [Lv. 3]: Block Chance: 29%, Duration: 50s 
 [Lv. 4]: Block Chance: 32%, Duration: 60s 
-[Lv. 5]: Block Chance: 35%, Duration: 70s`,
+[Lv. 5]: Block Chance: 35%, Duration: 70s
+Block Chance (1H Sword): ((20 + (3 × Skill Lv)) - 10)%`,
     img: parry,
   },
   {

@@ -71,7 +71,9 @@ Description: Increases Max SP, SP Recovery and Skill Healing Eff.
     id: "penitent",
     level: 0,
     dependencies: [
-      // { id: "impositioManus", minLevel: 3 },
+      { id: "maceMastery", minLevel: 10 },
+      { id: "divineProtection", minLevel: 3 },
+      { id: "demonBane", minLevel: 7 },
     ],
     dependent: [],
     element: null,
@@ -98,7 +100,9 @@ Catalyst: 1x Holy Water
     id: "exsuffla",
     level: 0,
     dependencies: [
-      // { id: "impositioManus", minLevel: 3 },
+      { id: "magnusExorcismus", minLevel: 1 },
+      { id: "ruwach", minLevel: 1 },
+      { id: "holyLight", minLevel: 10 },
     ],
     dependent: [],
     element: null,

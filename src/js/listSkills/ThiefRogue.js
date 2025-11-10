@@ -345,7 +345,6 @@ Description: Allows movement while Hiding, during which WD is increased.
     level: 0,
     dependencies: [
       { id: "sprinkleSand", minLevel: 5 },
-      { id: "backStab", minLevel: 2 },
       { id: "tunnelDrive", minLevel: 2 },
     ],
     dependent: [

@@ -260,9 +260,15 @@ export default class App {
           ...this._skillsJobTwoHight,
         ];
         const dependentSkill = allSkills.find((s) => s.id === dep.id);
-  
+        if (!dependentSkill) {
+          console.warn(`Dependent skill not found: ${dep.id}`);
+          return;
+        }
+    
         // Проверяем, достигнут ли минимальный уровень
-        const isLevelMet = dependentSkill.level > dep.minLevel;
+        const depLevel = dependentSkill?.level ?? 0;
+        const isLevelMet = depLevel > dep.minLevel;
+        // const isLevelMet = dependentSkill.level > dep.minLevel;
   
         if (isLevelMet && dependentSkill.element) {
           // Если зависимый скил больше нужного, ...
