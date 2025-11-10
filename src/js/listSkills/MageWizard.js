@@ -418,23 +418,22 @@ Formula: MATK (%): Skill Lv x 25 `,
     maxLevel: 5,
     inform: `Max Lv: 5
 Skill Form: Active
-Type: Magical
+Type: Supportive 
 Target: Ground
-After Cast Delay: 1s 
+Variable Cast Time: 0.15s
+Fixed Cast Time: 0.15s
+After Cast Delay: 0.30s 
+Cooldown: 0.30s
 Max Instances: 3 
 Range: 9
 Requirement: Heaven's Drive Lv: 2
-Description: Temporarily creates a 5x5 AoE at the targeted location, reducing AGI and DEX and increasing WD of enemies. Also removes some Status Effects from them. Older instances are removed to create new ones when reaching the instance limit. 
-[Lv. 1]: WD +26%, AGI/DEX -15% Duration: 8s. SP Cost: 8
-[Lv. 2]: WD +32%, AGI/DEX -20% Duration: 11s. SP Cost: 11
-[Lv. 3]: WD +38%, AGI/DEX -25% Duration: 14s. SP Cost: 14
-[Lv. 4]: WD +44%, AGI/DEX -30% Duration: 17s. SP Cost: 17
-[Lv. 5]: WD +50%, AGI/DEX -35% Duration: 20s. SP Cost: 20
-[Lv. 6]: WD +56%, AGI/DEX -40% Duration: 23s. SP Cost: 23
-[Lv. 7]: WD +62%, AGI/DEX -45% Duration: 26s. SP Cost: 26
-[Lv. 8]: WD +68%, AGI/DEX -50% Duration: 29s, SP Cost: 29
-[Lv. 9]: WD +74%, AGI/DEX -55% Duration: 32s. SP Cost: 32
-[Lv.10]: WD +80%, AGI/DEX -60% Duration: 35s, SP Cost: 35`,
+Description: Creates a 5x5 Area of Effect that reduces enemies' Agility and Dexterity, as well as increases their Walk Delay.
+Also clears some Status Effects from them. This skill is Replaceable.
+[Lv. 1]: WD +40%, AGI/DEX -10% Duration: 10s. SP Cost: 14
+[Lv. 2]: WD +50%, AGI/DEX -20% Duration: 15s. SP Cost: 18
+[Lv. 3]: WD +60%, AGI/DEX -30% Duration: 20s. SP Cost: 22
+[Lv. 4]: WD +70%, AGI/DEX -40% Duration: 25s. SP Cost: 26
+[Lv. 5]: WD +80%, AGI/DEX -50% Duration: 30s. SP Cost: 30`,
     img: quagmire,
   },
   {
