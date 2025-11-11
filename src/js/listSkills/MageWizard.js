@@ -136,17 +136,17 @@ Range: 9
 Requirement: Fire Pillar Lv: 3
 Description: Creates a 7x7 AoE at the targeted location that deals M.DMG to enemies within a random 7x7 AoE every 0.45s for 4.5s.
 Has a chance to inflict Burning for 100s. VCT and FCT scale with skill level.
-[Lv. 1]: MATK 330%, VCT: 2.60s. FCT: 0.78s Burning Chance: 3%, SP Cost: 60
-[Lv. 2]: MATK 360%, VCT: 2.90s. FCT: 0.82s Burning Chance: 6%, SP Cost: 64
-[Lv. 3]: MATK 390%, VCT: 3.20s. FCT: 0.86s Burning Chance: 9%, SP Cost: 68
-[Lv. 4]: MATK 420%, VCT: 3.50s. FCT: 0.90s Burning Chance: 12%, SP Cost: 72
-[Lv. 5]: MATK 450%, VCT: 4.10s. FCT: 0.98s Burning Chance: 15%, SP Cost: 76
-[Lv. 6]: MATK 480%, VCT: 4.70s. FCT: 1.06s Burning Chance: 18%, SP Cost: 80
-[Lv. 7]: MATK 510%, VCT: 5.30s. FCT: 1.14s Burning Chance: 21%, SP Cost: 84
-[Lv. 8]: MATK 540%, VCT: 6.20s. FCT: 1.26s Burning Chance: 24%, SP Cost: 88
-[Lv. 9]: MATK 570%, VCT: 7.10s. FCT: 1.38s Burning Chance: 27%, SP Cost: 92
-[Lv.10]: MATK 600%, VCT: 8.00s. FCT: 1.50s Burning Chance: 30%, SP Cost: 96
-Formula: MATK (%); 300 + (Skill Lv x 30) `,
+[Lv. 1]: MATK 160%, VCT: 2.40s. FCT: 0.3s Duration: 4.7s. Damage Interval: 0.47s. SP Cost: 36. Passive Bonus: 6%
+[Lv. 2]: MATK 220%, VCT: 2.80s. FCT: 0.4s Duration: 4.4s. Damage Interval: 0.44s. SP Cost: 42. Passive Bonus: 7%
+[Lv. 3]: MATK 280%, VCT: 3.20s. FCT: 0.5s Duration: 4.1s. Damage Interval: 0.41s. SP Cost: 48. Passive Bonus: 8%
+[Lv. 4]: MATK 340%, VCT: 3.60s. FCT: 0.6s Duration: 3.8s. Damage Interval: 0.38s. SP Cost: 54. Passive Bonus: 9%
+[Lv. 5]: MATK 400%, VCT: 4.00s. FCT: 0.75 Duration: 3.5s. Damage Interval: 0.35s. SP Cost: 60. Passive Bonus: 10%
+[Lv. 6]: MATK 460%, VCT: 4.40s. FCT: 0.8s Duration: 3.2s. Damage Interval: 0.32s. SP Cost: 66. Passive Bonus: 11%
+[Lv. 7]: MATK 520%, VCT: 4.80s. FCT: 0.9s Duration: 2.9s. Damage Interval: 0.29s. SP Cost: 72. Passive Bonus: 12%
+[Lv. 8]: MATK 580%, VCT: 5.20s. FCT: 1.0s Duration: 2.6s. Damage Interval: 0.26s. SP Cost: 78. Passive Bonus: 13%
+[Lv. 9]: MATK 640%, VCT: 5.60s. FCT: 1.1s Duration: 2.3s. Damage Interval: 0.235. SP Cost: 84. Passive Bonus: 14%
+[Lv.10]: MATK 700%, VCT: 6.00s. FCT: 1.2s Duration: 2.0s. Damage Interval: 0.20s. SP Cost: 90. Passive Bonus: 15%
+Formula: MATK per Tick (%): 100 + (60 x Skill Lv) `,
     img: meteorStorm,
   },
   
