@@ -153,25 +153,23 @@ Edge ATK (%): 100 + (Skill Lv x 10) `,
     inform: `Max Lv: 10
 Skill Form: Active
 Type: Supportive 
-Target: Enemy
-After Cast Delay: A.Delay 0.445 
-Cooldown: A.Delay
+Target: Ally/Enemy
+After Cast Delay: Attack Delay - 0.44s 
+Cooldown: Attack Delay
 Range: 9
 Requirement: None
-Description: Attempts to provoke the target for 30s, reducing its P.DEF, and increasing its B.ATK and W.ATK.
-Forces monsters to attack the user.
-Against players, only S.DEF is reduced. Does not affect Undead, Corrupt or Boss
-monsters.
-[Lv. 1]: ATK +13%, P.DEF -15% Provoke Chance: 55%, SP Cost: 1 
-[Lv. 2]: ATK +16%, P.DEF -20% Provoke Chance: 60%, SP Cost: 2 
-[Lv. 3]: ATK +19%, P.DEF -25% Provoke Chance: 65%, SP Cost: 3 
-[Lv. 4]: ATK +22%, P.DEF -30% Provoke Chance: 70%, SP Cost: 4 
-[Lv. 5]: ATK +25%, P.DEF -35% Provoke Chance: 75%, SP Cost: 5 
-[Lv. 6]: ATK +28%, P.DEF -40% Provoke Chance: 80%, SP Cost: 6 
-[Lv. 7]: ATK +31%, P.DEF -45% Provoke Chance: 85%, SP Cost: 7 
-[Lv. 8]: ATK +34%, P.DEF -50% Provoke Chance: 90%, SP Cost: 8 
-[Lv. 9]: ATK +37%, P.DEF -55% Provoke Chance: 95%, SP Cost: 9 
-[Lv.10]: ATK +40%, P.DEF -60% Provoke Chance: 100%, SP Cost: 10`,
+Description: Increases Physical Damage dealt and taken for 30s. It also provokes the enemy, drawing its aggro.
+Does not affect Undead, Corrupt or Boss monsters, and provoked targets.
+[Lv. 1]: Dealt +6%, Taken +1% SP Cost: 1
+[Lv. 2]: Dealt +7%. Taken +2% SP Cost: 2
+[Lv. 3]: Dealt +8%, Taken +3% SP Cost: 3
+[Lv. 4]: Dealt +9%, Taken +4% SP Cost: 4
+[Lv. 5]: Dealt +10%, Taken +5% SP Cost: 5
+[Lv. 6]: Dealt +11%, Taken +6% SP Cost: 6
+[Lv. 7]: Dealt +12%, Taken +7% SP Cost: 7
+[Lv. 8]: Dealt +13%, Taken +8% SP Cost: 8
+[Lv. 9]: Dealt +14%, Taken +9% SP Cost: 9
+[Lv.10]: Dealt +15%, Taken +10% SP Cost: 10`,
     img: provoke,
   },
   {

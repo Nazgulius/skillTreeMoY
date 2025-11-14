@@ -123,16 +123,21 @@ Weapon: Sword-Class
 Type: Supportive 
 Target: Self
 After Cast Delay: 0.30s 
-Cooldown: A.Delay
+Cooldown: Attack Delay
 SP Cost: 30
 Duration: (60 + (24 × Skill Lv))s
 Requirement: Counter Attack Lv: 5, Sword Quicken Lv: 5
-Description: Grants a chance to fully block any incoming P.DMG. Block chance is halved while wielding a One-Handed Sword. Briefly immobilizes the character after a successful block.
-[Lv. 1]: Block Chance: 23%. Duration: 30s 
-[Lv. 2]: Block Chance: 26%, Duration: 40s 
-[Lv. 3]: Block Chance: 29%, Duration: 50s 
-[Lv. 4]: Block Chance: 32%, Duration: 60s 
-[Lv. 5]: Block Chance: 35%, Duration: 70s
+Description: Grants a chance to fully block any incoming Physical Damage. Block chance is reduced by 10% when wielding a One- Handed Sword.
+[Lv. 1]: Block Chance: 23%, Duration: 84s 
+[Lv. 2]: Block Chance: 26%, Duration: 108s 
+[Lv. 3]: Block Chance: 29%, Duration: 132s 
+[Lv. 4]: Block Chance: 32%, Duration: 156s 
+[Lv. 5]: Block Chance: 35%, Duration: 180s 
+[Lv. 6]: Block Chance: 38%, Duration: 204s 
+[Lv. 7]: Block Chance: 41%, Duration: 228s
+[Lv. 8]: Block Chance: 44%, Duration: 252s 
+[Lv. 9]: Block Chance: 47%, Duration: 276s 
+[Lv.10]: Block Chance: 50%, Duration: 300s
 Block Chance (1H Sword): ((20 + (3 × Skill Lv)) - 10)%`,
     img: parry,
   },
