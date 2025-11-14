@@ -76,9 +76,9 @@ The counter will always CRIT and scales with weapon.
 Must face the attacker to retaliate.
 [Lv. 1]: Duration: 0.40s
 [Lv. 2]: Duration: 0.60s
-[Lv. 2]: Duration: 0.80s
-[Lv. 3]: Duration: 1.00s
-[Lv. 4]: Duration: 1.20s
+[Lv. 3]: Duration: 0.80s
+[Lv. 4]: Duration: 1.00s
+[Lv. 5]: Duration: 1.20s
 ATK (%): 100 + (W.Weight + W.Attack + (100 x (W.Level X (W.Refine x 6))) + Countered Damage `,
     img: counterAttack,
   },
@@ -103,15 +103,14 @@ After Cast Delay: A.Delay 0.44s
 Cooldown: A.Delay + 0.365
 SP Cost: 18
 Requirement: Counter Attack Lv: 5
-Description: Charges at the target.
-Deals P.DMG, scaling with WD.
-VCT cannot be reduced by stats or gear. The skill's Range is further increased by the equipped weapon's range.
-[Lv. 1]: ATK 200%, Range: 6 
-[Lv. 2]: ATK 300%, Range: 7
-[Lv. 3]: ATK 400%, Range: 8
-[Lv. 4]: ATK 500%, Range: 9
-[Lv. 5]: ATK 600%, Range: 10
-Formula: ATK (%): (100 + (100 x Skill Lv)) x (2.5 (0.01 x Walk Delay)); (Max 1200%) `,
+Description: Charges at the target, dealing P.DMG, scaling with WD.
+VCT cannot be reduced by stats or gear.
+[Lv. 1]: ATK 200%, Range: 6 + Weapon's range
+[Lv. 2]: ATK 300%, Range: 7 + Weapon's range
+[Lv. 3]: ATK 400%, Range: 8 + Weapon's range
+[Lv. 4]: ATK 500%, Range: 9 + Weapon's range
+[Lv. 5]: ATK 600%, Range: 10 + Weapon's range
+Formula: ATK (%): (100 + (100 x Skill Lv)) x (2.5 - (0.01 x Walk Delay)); (Max 1200%) `,
     img: dashingBash,
   },
   {
@@ -148,7 +147,7 @@ Hits depend on the Weapon and the number of targets.
 [Lv. 8]: ATK 180% x Hits. SP Cost: 20 
 [Lv. 9]: ATK 190% x Hits. SP Cost: 21 
 [Lv.10]: ATK 200% x Hits. SP Cost: 22
-Formula: ATK (%): (100 + (10 x Skill Lv) + (10 x Bash Lv)) > Hits
+Formula: ATK (%): (100 + (10 x Skill Lv) + (10 x Bash Lv)) x Hits
 Base Level higher than 50: + ((((Base Lv - 50) / 5) x 10) x Hits)`,
     img: bowlingBash,
   },
@@ -230,7 +229,7 @@ Rental with: PecoPeco Breeder
     inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
-Weapon: Spear-Class 
+Weapon: Spear-Class and Dagger
 Target: Enemy
 After Cast Delay: A.Delay 0.44s 
 Cooldown: A.Delay
@@ -249,7 +248,7 @@ Each hit grants 1 Stabbing stack for 60s. Gaining more Stacks adds additional hi
 [Lv. 8]: ATK 260% x Hits
 [Lv. 9]: ATK 280% x Hits
 [Lv. 10]: ATK 300% x Hits
-Formula: ATK (%): (100 + (20 x Skill Lv) + (Stabbing Stacks x 2)) x Hits `,
+Formula: ATK (%): (100 + (20 x Skill Lv) + ((Agility / 100) x Stabbing Stacks)) x Hits `,
     img: pierce,
   },
   
@@ -382,17 +381,17 @@ SP Cost: 24
 Requirement: Spear Stab Lv: 5
 Description: Deals ranged P.DMG to enemies within a 7x7 AoE around the target, Knocking them back 2 cells. Damage scales with VIT and Base Level.
 Only enemies in front of the user are affected.
-[Lv. 1]: ATK 130%
-[Lv. 2]: ATK 160%
-[Lv. 3]: ATK 190%
-[Lv. 4]: ATK 220%
-[Lv. 5]: ATK 250%
-[Lv. 6]: ATK 280%
-[Lv. 7]: ATK 310%
-[Lv. 8]: ATK 340% 
-[Lv. 9]: ATK 370% 
-[Lv.10]: ATK 400%
-Formula: ATK (%): 100 + (30 x Skill Lv x (1 + ((VIT + 30) x (Base Lv = 100))))) `,
+[Lv. 1]: ATK 140% SP Cost: 11
+[Lv. 2]: ATK 180% SP Cost: 12
+[Lv. 3]: ATK 220% SP Cost: 13
+[Lv. 4]: ATK 260% SP Cost: 14
+[Lv. 5]: ATK 300% SP Cost: 15
+[Lv. 6]: ATK 340% SP Cost: 16
+[Lv. 7]: ATK 380% SP Cost: 17
+[Lv. 8]: ATK 420% SP Cost: 18
+[Lv. 9]: ATK 460% SP Cost: 19
+[Lv.10]: ATK 500% SP Cost: 20
+Formula: ATK (%): 100 + (40 x Skill Lv x (1 + ((VIT + 30) x (Base Lv / 100)))) `,
     img: brandishSpear,
   },
 ];
