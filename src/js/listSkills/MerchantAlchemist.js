@@ -1,34 +1,34 @@
 
-/*  author Chalykh Maksim 
-  # data 10.02.2025 
+/*  author Chalykh Maksim
+  # data 10.02.2025
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import potionResearch from '../../img/icon_alc/icon_alc_1.gif'; 
-import pharmacy from '../../img/icon_alc/icon_alc_2.gif'; 
-import demonstration from '../../img/icon_alc/icon_alc_3.gif'; 
-import acidTerror from '../../img/icon_alc/icon_alc_4.gif'; 
-import potionPitcher from '../../img/icon_alc/icon_alc_5.gif'; 
-import bioCannibalize from '../../img/icon_alc/icon_alc_6.gif'; 
-import marineSphereBomb from '../../img/icon_alc/icon_alc_7.gif'; 
-import weaponChemicalProtection from '../../img/icon_alc/icon_alc_8.gif'; 
-import shieldChemicalProtection from '../../img/icon_alc/icon_alc_9.gif'; 
-import armorChemicalProtection from '../../img/icon_alc/icon_alc_10.gif'; 
-import helmChemicalProtection from '../../img/icon_alc/icon_alc_11.gif'; 
-import throwingPotionsTechniques from '../../img/icon_alc/icon_alc_20.png'; 
-import chemicalReaction from '../../img/icon_alc/icon_alc_21.png'; 
-import deplant from '../../img/icon_alc/icon_alc_26.png'; 
-import briarVines from '../../img/icon_alc/icon_alc_27.png'; 
-import largeScalePharmacy from '../../img/icon_alc/icon_alc_24.png'; 
-import slingItem from '../../img/icon_alc/icon_alc_28.png'; 
+import potionResearch from '../../img/icon_alc/icon_alc_1.gif';
+import pharmacy from '../../img/icon_alc/icon_alc_2.gif';
+import demonstration from '../../img/icon_alc/icon_alc_3.gif';
+import acidTerror from '../../img/icon_alc/icon_alc_4.gif';
+import potionPitcher from '../../img/icon_alc/icon_alc_5.gif';
+import bioCannibalize from '../../img/icon_alc/icon_alc_6.gif';
+import marineSphereBomb from '../../img/icon_alc/icon_alc_7.gif';
+import weaponChemicalProtection from '../../img/icon_alc/icon_alc_8.gif';
+import shieldChemicalProtection from '../../img/icon_alc/icon_alc_9.gif';
+import armorChemicalProtection from '../../img/icon_alc/icon_alc_10.gif';
+import helmChemicalProtection from '../../img/icon_alc/icon_alc_11.gif';
+import throwingPotionsTechniques from '../../img/icon_alc/icon_alc_20.png';
+import chemicalReaction from '../../img/icon_alc/icon_alc_21.png';
+import deplant from '../../img/icon_alc/icon_alc_26.png';
+import briarVines from '../../img/icon_alc/icon_alc_27.png';
+import largeScalePharmacy from '../../img/icon_alc/icon_alc_24.png';
+import slingItem from '../../img/icon_alc/icon_alc_28.png';
 
 // список скилов Alchemist
-export const skillsAlchemist = [ 
+export const skillsAlchemist = [
   {
     id: "throwingPotionsTechniques",
     level: 0,
     dependencies: [],
-    dependent: [      
+    dependent: [
       { id: "bioCannibalize" },
       { id: "demonstration" },
       { id: "marineSphereBomb" },
@@ -59,7 +59,7 @@ Description: Grants a chance to recover Empty Bottle and Empty Potion Bottle on 
     dependencies: [
       { id: "throwingPotionsTechniques", minLevel: 3 },
     ],
-    dependent: [      
+    dependent: [
       { id: "acidDemonstration" },
       { id: "acidTerror" },
     ],
@@ -190,30 +190,25 @@ Higher Lv: The highest value between 5 and the learned level of Acid Demonstrati
     ],
     element: null,
     skillName: "Potion Research",
-    maxLevel: 10,
-    inform: `Max Lv: 10
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Passive
 Type: Misc
 Requirement: None
 Description: Increases the success rate of Potion and Bottles creation.
 Also increases the effectiveness of potions. 
-[Lv. 1]: Rate +1%, Effectiveness +8% 
-[Lv. 2]: Rate +2%, Effectiveness +11% 
-[Lv. 3]: Rate +3%, Effectiveness +14% 
-[Lv. 4]: Rate +4%, Effectiveness +17% 
-[Lv. 5]: Rate +5%, Effectiveness +20% 
-[Lv. 6]: Rate +6%, Effectiveness +23% 
-[Lv. 7]: Rate +7%, Effectiveness +26% 
-[Lv. 8]: Rate +8%, Effectiveness +29% 
-[Lv. 9]: Rate +9%, Effectiveness +32% 
-[Lv.10]: Rate +10%, Effectiveness +35%`,
+[Lv. 1]: Rate +2%, Effectiveness +5% 
+[Lv. 2]: Rate +4%, Effectiveness +10% 
+[Lv. 3]: Rate +6%, Effectiveness +15% 
+[Lv. 4]: Rate +8%, Effectiveness +20% 
+[Lv. 5]: Rate +10%, Effectiveness +25%`,
     img: potionResearch,
   },
   {
     id: "helmChemicalProtection",
     level: 0,
     dependencies: [
-      { id: "potionResearch", minLevel: 5 },
+      { id: "potionResearch", minLevel: 3 },
     ],
     dependent: [
       { id: "fullChemicalProtection" },
@@ -232,7 +227,7 @@ After Cast Delay: 0.50s
 Cooldown: A.Delay
 Range: 1
 SP Cost: 20
-Requirement: Potion Research Lv: 5
+Requirement: Potion Research Lv: 3
 Description: Protects the target's equipped helm, preventing Break and Remove.
 Also increases H.MDEF and reduces the damage from Chemical Corrosion by 25%. At level 4 or higher, the protection cannot be canceled upon death or Dispel.
 Catalyst: 
@@ -268,7 +263,7 @@ After Cast Delay: 0.50s
 Cooldown: A.Delay 
 Range: 1
 SP Cost: 20
-Requirement: Helm Chemical Protection Lv: 1
+Requirement: Potion Research Lv: 3, Helm Chemical Protection Lv: 1
 Description: Protects the target's equipped shield, preventing Break and Remove.
 Also increases H.DEF and reduces the damage from Chemical Corrosion by 25%, At level 4 or higher, the protection cannot be canceled upon death or Dispel.
 Catalyst:
@@ -304,7 +299,7 @@ After Cast Delay: 0.50s
 Cooldown: A.Delay
 Range: 1
 SP Cost: 20
-Requirement: Shield Chemical Protection Lv: 1
+Requirement: Potion Research Lv: 3, Helm Chemical Protection Lv: 1, Shield Chemical Protection Lv: 1
 Description: Protects the target's equipped armor, preventing Break and Remove. Also increases HP and reduces the damage from Chemical Corrosion by 25%,
 At level 4 or higher, the protection cannot be canceled upon death or Dispel. 
 Catalyst:
@@ -323,7 +318,7 @@ Catalyst:
     dependencies: [
       { id: "armorChemicalProtection", minLevel: 1 },
     ],
-    dependent: [      
+    dependent: [
       { id: "fullChemicalProtection" },
     ],
     element: null,
@@ -339,7 +334,7 @@ After Cast Delay: 0.50s
 Cooldown: A.Delay 
 Range: 1
 SP Cost: 20
-Requirement: Armor Chemical Protection Lv: 1
+Requirement: Potion Research Lv: 3, Helm Chemical Protection Lv: 1, Shield Chemical Protection Lv: 1, Armor Chemical Protection Lv: 1
 Description: Protects the target's equipped weapon, preventing Break and Remove. Also increases B.ATK and B.MATK, and reduces the damage from Chemical Corrosion by 25%,
 At level 4 or higher, the protection cannot be canceled upon death or Dispel. 
 Catalyst:
@@ -358,7 +353,7 @@ Catalyst:
     dependencies: [
       { id: "throwingPotionsTechniques", minLevel: 3 },
     ],
-    dependent: [      
+    dependent: [
       { id: "hyperFertilize" },
       { id: "briarVines" },
       { id: "deplant" },
@@ -470,7 +465,7 @@ Fire Property MATK (%): 500% `,
     id: "pharmacy",
     level: 0,
     dependencies: [],
-    dependent: [      
+    dependent: [
       { id: "largeScalePharmacy" },
     ],
     element: null,
@@ -535,7 +530,7 @@ Random Bonus Amount:
     dependencies: [
       { id: "throwingPotionsTechniques", minLevel: 3 },
     ],
-    dependent: [      
+    dependent: [
       { id: "potionPitcher" },
     ],
     element: null,
@@ -592,17 +587,25 @@ Range: 9
 SP Cost: 5
 Requirement: Marine Sphere Bomb Lv: 5
 Description: Consumes a Potion to restore the target's HP, scaling with the user's INT, the learned level of Throwing Potions Techniques and skill level, and the target's VIT.
-[Lv. 1]: Red Potion.
-[Lv. 2]: Orange Potion
-[Lv. 3]: Yellow Potion
-[Lv. 4]: Green Potion
-[Lv. 5]: White Potion
-[Lv. 6]: Condensed Red Potion
-[Lv. 7]: Condensed Orange Potion
-[Lv. 8]: Condensed Yellow Potion
-[Lv. 9]: Condensed Green Potion
-[Lv.10]: Condensed White Potion
-Formula: Healing (%): 100 + INT + Target VIT + (T. P. Techniques Lv x 5) `,
+[Lv. 1]: Red Potion. CD - 2s. ACD - 1s.
+[Lv. 2]: Red Potion. CD - 1s. ACD - 0.5s.
+[Lv. 3]: Orange Potion. CD - 2s. ACD - 1s.
+[Lv. 4]: Orange Potion. CD - 1s. ACD - 0.5s.
+[Lv. 5]: Yellow Potion. CD - 2s. ACD - 1s.
+[Lv. 6]: Yellow Potion. CD - 1s. ACD - 0.5s.
+[Lv. 7]: Green Potion. CD - 2s. ACD - 1s.
+[Lv. 8]: Green Potion. CD - 1s. ACD - 0.5s.
+[Lv. 9]: White Potion. CD - 2s. ACD - 1s.
+[Lv.10]: White Potion. CD - 1s. ACD - 0.5s.
+
+Base Healing:
+Red Potion - (5 * Target Base Lv) + 120 
+Orange Potion - (4 * Target Base Lv) + 240 
+Yellow Potion - (3 * Target Base Lv) + 480 
+Green Potion - (2 * Target Base Lv) + 960 
+White Potion - (1 * Target Base Lv) + 1920 
+
+Formula: Final Heal: (((Base Healing * (100 + INT + (Target VIT / 2))) / 100) * ((Skill Lv * 5) + (T. P. Techniques Lv x 5))) / 100 `,
     img: potionPitcher,
   },
   {
@@ -611,7 +614,7 @@ Formula: Healing (%): 100 + INT + Target VIT + (T. P. Techniques Lv x 5) `,
     dependencies: [
       { id: "potionPitcher", minLevel: 5 },
     ],
-    dependent: [      
+    dependent: [
       { id: "potionSpreader" },
     ],
     element: null,
@@ -626,14 +629,14 @@ Cooldown: A.Delay + 0.36s
 Range: 9
 Hits: 1
 Requirement: Potion Pitcher Lv: 5
-Description: Throws items to the target. Offensive items deals ranged P.DMG, scaling with INT.
+Description: Deals Magical Damage to the target, scaling with INT.
 Catalyst: 1x Sling Item
 [Lv. 1]: SP Cost: 25 
 [Lv. 2]: SP Cost: 30
 [Lv. 3]: SP Cost: 35
 [Lv. 4]: SP Cost: 40 
 [Lv. 5]: SP Cost: 45
-Formula: ATK (%): 100 + (Skill Lv x (100 + INT)) `,
+Formula: MATK (%): 100 + (Skill Lv x (100 + INT)) `,
     img: slingItem,
   },
 ];
