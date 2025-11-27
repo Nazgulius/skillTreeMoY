@@ -243,14 +243,14 @@ SP Cost: 20
 Duration: 60 + (48 × Skill Lv) seconds
 Requirement: None
 Description: Protects the target's equipped helm, preventing Break and Remove.
-Also decreases Magic Damage Taken and reduces the damage from Chemical Corrosion by 25%.
+Also increases H.MDEF and reduces the damage from Chemical Corrosion by 25%.
 Catalyst: 
   1x Mini Glistening Bottle
-[Lv. 1]: reduce Magic Damage Taken by 1%. Duration: 108s 
-[Lv. 2]: reduce Magic Damage Taken by 2%. Duration: 156s 
-[Lv. 3]: reduce Magic Damage Taken by 3%. Duration: 204s 
-[Lv. 4]: reduce Magic Damage Taken by 4%. Duration: 252s 
-[Lv. 5]: reduce Magic Damage Taken by 5%. Duration: 300s`,
+[Lv. 1]: H.MDEF +3. Duration: 108s 
+[Lv. 2]: H.MDEF +4. Duration: 156s 
+[Lv. 3]: H.MDEF +5. Duration: 204s 
+[Lv. 4]: H.MDEF +7. Duration: 252s 
+[Lv. 5]: H.MDEF +10. Duration: 300s`,
     img: helmChemicalProtection,
   },
   {
@@ -277,14 +277,14 @@ SP Cost: 20
 Duration: 60 + (48 × Skill Lv) seconds
 Requirement: None
 Description: Protects the target's equipped shield, preventing Break and Remove.
-Also decreases Physical Damage Taken and reduces the damage from Chemical Corrosion by 25%.
+Also increases H.DEF and reduces the damage from Chemical Corrosion by 25%.
 Catalyst: 
   1x Mini Glistening Bottle
-[Lv. 1]: reduce Physical Damage Taken by 1%. Duration: 108s 
-[Lv. 2]: reduce Physical Damage Taken by 2%. Duration: 156s 
-[Lv. 3]: reduce Physical Damage Taken by 3%. Duration: 204s 
-[Lv. 4]: reduce Physical Damage Taken by 4%. Duration: 252s 
-[Lv. 5]: reduce Physical Damage Taken by 5%. Duration: 300s`,
+[Lv. 1]: H.DEF +12. Duration: 108s 
+[Lv. 2]: H.DEF +16. Duration: 156s 
+[Lv. 3]: H.DEF +20. Duration: 204s 
+[Lv. 4]: H.DEF +28. Duration: 252s 
+[Lv. 5]: H.DEF +40. Duration: 300s`,
     img: shieldChemicalProtection,
   },
   {
@@ -311,14 +311,14 @@ SP Cost: 20
 Duration: 60 + (48 × Skill Lv) seconds
 Requirement: None
 Description: Protects the target's equipped armor, preventing Break and Remove. 
-Also increases Max HP and reduces the damage from Chemical Corrosion by 25%. 
+Also increases HP and reduces the damage from Chemical Corrosion by 25%. 
 Catalyst:
   1x Mini Glistening Bottle
-[Lv. 1]: increases Max HP by 1%. Duration: 108s 
-[Lv. 2]: increases Max HP by 2%. Duration: 156s 
-[Lv. 3]: increases Max HP by 3%. Duration: 204s 
-[Lv. 4]: increases Max HP by 4%. Duration: 252s 
-[Lv. 5]: increases Max HP by 5%. Duration: 300s`,
+[Lv. 1]: HP +300. Duration: 108s 
+[Lv. 2]: HP +400. Duration: 156s 
+[Lv. 3]: HP +500. Duration: 204s 
+[Lv. 4]: HP +700. Duration: 252s 
+[Lv. 5]: HP +1000. Duration: 300s`,
     img: armorChemicalProtection,
   },
   {
@@ -345,14 +345,14 @@ SP Cost: 20
 Duration: 60 + (48 × Skill Lv) seconds
 Requirement: None
 Description: Protects the target's equipped weapon, preventing Break and Remove. 
-Also increases Damage Dealt, and reduces the damage from Chemical Corrosion by 25%. 
+Also increases Extra ATK/MATK, and reduces the damage from Chemical Corrosion by 25%. 
 Catalyst:
   1x Mini Glistening Bottle
-[Lv. 1]: increases Damage Dealt by 1%. Duration: 108s 
-[Lv. 2]: increases Damage Dealt by 2%. Duration: 156s 
-[Lv. 3]: increases Damage Dealt by 3%. Duration: 204s 
-[Lv. 4]: increases Damage Dealt by 4%. Duration: 252s 
-[Lv. 5]: increases Damage Dealt by 5%. Duration: 300s`,
+[Lv. 1]: E.ATK/E.MATK +6. Duration: 108s 
+[Lv. 2]: E.ATK/E.MATK +8. Duration: 156s 
+[Lv. 3]: E.ATK/E.MATK +10. Duration: 204s 
+[Lv. 4]: E.ATK/E.MATK +14. Duration: 252s 
+[Lv. 5]: E.ATK/E.MATK +20. Duration: 300s`,
     img: weaponChemicalProtection,
   },
   {
