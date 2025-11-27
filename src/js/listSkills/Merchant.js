@@ -1,19 +1,19 @@
 
-/*  author Chalykh Maksim 
-  # data 10.02.2025 
+/*  author Chalykh Maksim
+  # data 10.02.2025
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import discount from '../../img/icon_mer/icon_mer_2.png'; 
-import overcharge from '../../img/icon_mer/icon_mer_3.png'; 
-import pushcart from '../../img/icon_mer/icon_mer_4.gif'; 
-import mammonite from '../../img/icon_mer/icon_mer_6.gif'; 
-import cartRevolution from '../../img/icon_mer/icon_mer_7.gif'; 
-import cartTwister from '../../img/icon_mer/icon_mer_8.png'; 
-import axeMastery from '../../img/icon_mer/icon_mer_13.png'; 
+import discount from '../../img/icon_mer/icon_mer_2.png';
+import overcharge from '../../img/icon_mer/icon_mer_3.png';
+import pushcart from '../../img/icon_mer/icon_mer_4.gif';
+import mammonite from '../../img/icon_mer/icon_mer_6.gif';
+import cartRevolution from '../../img/icon_mer/icon_mer_7.gif';
+import cartTwister from '../../img/icon_mer/icon_mer_8.png';
+import axeMastery from '../../img/icon_mer/icon_mer_13.png';
 
 // список скилов Merchant
-export const skillsMerchant = [  
+export const skillsMerchant = [
   {
     id: "axeMastery",
     level: 0,
@@ -62,18 +62,21 @@ Hits: 1
 SP Cost: 8
 Requirement: None
 Description: Deals P.DMG to the target.
-Has a chance to inflict Stun for 4.5s at level 6 or higher.
-Catalyst: 2x Zeny Pouch for Lv. 6 or higher.
-[Lv. 1]: ATK 150%
-[Lv. 2]: ATK 200%
-[Lv. 3]: ATK 250% 
-[Lv. 4]: ATK 300%
-[Lv. 5]: ATK 350%
-[Lv. 6]: ATK 400%, Stun chance 4% 
-[Lv. 7]: ATK 450%, Stun chance 8% 
-[Lv. 8]: ATK 500%, Stun chance 12% 
-[Lv. 9]: ATK 550%, Stun chance 16% 
-[Lv.10]: ATK 600%, Stun chance 20%`,
+
+With Zeny Pouch cost (Skill Lv x 2):
+- Adds (Skill Lv × 60) damage
+- Adds chance to inflict stun for 4.5s
+
+[Lv. 1]: ATK 130%. HCM: 105%
+[Lv. 2]: ATK 160%. HCM: 110%
+[Lv. 3]: ATK 190%. HCM: 115%
+[Lv. 4]: ATK 220%. HCM: 120%
+[Lv. 5]: ATK 250%. HCM: 125%
+[Lv. 6]: ATK 280%. HCM: 130 
+[Lv. 7]: ATK 310%. HCM: 135%
+[Lv. 8]: ATK 340%. HCM: 140%
+[Lv. 9]: ATK 370%. HCM: 145%
+[Lv.10]: ATK 400%. HCM: 150%`,
     img: mammonite,
   },
   {
@@ -131,6 +134,12 @@ Hits: 1
 Requirement: Pushcart Lv: 1
 Description: Deals P.DMG to the target, Knocking it back 3 cells.
 The damage scales with the number of different items in the Pushcart and its current weight.
+
+With Zeny Pouch cost (Skill Lv ÷ 2):
+- Cart is treated as if containing 100 different items.
+- If the target collides with an obstacle (wall), it takes damage again.
+- Targets that cannot be pushed always take the bonus damage.
+
 Requires a Pushcart.
 [Lv. 1]: SP Cost: 8
 [Lv. 2]: SP Cost: 8
@@ -142,7 +151,7 @@ Requires a Pushcart.
 [Lv. 8]: SP Cost: 11 
 [Lv. 9]: SP Cost: 12 
 [Lv.10]: SP Cost: 12
-Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight / 200) x Skill Lv) `,
+Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight ÷ 200) x Skill Lv) `,
     img: cartRevolution,
   },
   {
@@ -156,8 +165,8 @@ Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight / 200) x S
     ],
     element: null,
     skillName: "Cart Twister",
-    maxLevel: 5,
-    inform: `Max Lv: 5
+    maxLevel: 10,
+    inform: `Max Lv: 10
 Skill Form: Active
 Type: Physical
 Target: Self
@@ -165,23 +174,33 @@ After Cast Delay: A.Delay 0.225
 Cooldown: 1.50s
 Range: 1
 Hits: 3
-Requirement: Cart Revolution Lv: 5
+Requirement: Pushcart Lv: 1, Cart Revolution Lv: 5
 Description: Deals P.DMG to enemies within a 5x5 AoE, Knocking them back 1 cell.
 The damage scales with VIT, Base Level, the number of different items in the Pushcart and its current weight.
+
+With Zeny Pouch cost (Skill Lv):
+- Cart is treated as if containing 100 different items.
+- Increases skill AoE: 5×5 → 7×7
+
 Requires a Pushcart.
 [Lv. 1]: SP Cost: 6
 [Lv. 2]: SP Cost: 7
 [Lv. 3]: SP Cost: 8 
 [Lv. 4]: SP Cost: 9 
 [Lv. 5]: SP Cost: 10
-Formula: ATK (%): 100 + ((Pushcart Weight / (400 - Number of Different Items)) x Skill Lv) x (1 + ((VIT / 30) x (Base Lv / 100)))) `,
+[Lv. 6]: SP Cost: 11
+[Lv. 7]: SP Cost: 12
+[Lv. 8]: SP Cost: 13
+[Lv. 9]: SP Cost: 14
+[Lv. 10]: SP Cost: 15
+Formula: ATK (%): 200 + ((Pushcart Weight ÷ (500 - Number of Different Items)) x Skill Lv) x (1 + ((VIT ÷ 30) x (Base Lv ÷ 100)))) `,
     img: cartTwister,
   },
   {
     id: "discount",
     level: 0,
     dependencies: [{ id: "pushcart", minLevel: 3 },],
-    dependent: [      
+    dependent: [
       { id: "overcharge" },
     ],
     element: null,
@@ -193,19 +212,25 @@ Type: Supportive
 Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
+Duration: 300 Seconds
+SP Cost: 5 + (2 × Skill Lv)
 Requirement: Pushcart Lv: 3
-Description: Grants a chance to randomly reduce all skills' SP Cost by 10%, 20% or 50% while active.
-Cancels the effect of Overcharge. 
-[Lv. 1]: Chance: 10%
-[Lv. 2]: Chance: 20%
-[Lv. 3]: Chance: 30%
-[Lv. 4]: Chance: 40%
-[Lv. 5]: Chance: 50%
-[Lv. 6]: Chance: 60%
-[Lv. 7]: Chance: 70%
-[Lv. 8]: Chance: 80% 
-[Lv. 9]: Chance: 90% 
-[Lv.10]: Chance: 100%`,
+Description: 
+Reduces SP Cost by (10 + (2 × Skill Lv))%
+
+With Zeny Pouch cost (Skill Lv x 2):
+- Increases Spell Point Cost reduction by 10%
+
+[Lv. 1]: SP reduction: 12%
+[Lv. 2]: SP reduction: 14%
+[Lv. 3]: SP reduction: 16%
+[Lv. 4]: SP reduction: 18%
+[Lv. 5]: SP reduction: 20%
+[Lv. 6]: SP reduction: 22%
+[Lv. 7]: SP reduction: 24%
+[Lv. 8]: SP reduction: 26% 
+[Lv. 9]: SP reduction: 28% 
+[Lv.10]: SP reduction: 30%`,
     img: discount,
   },
   {
@@ -222,19 +247,29 @@ Cancels the effect of Overcharge.
 Skill Form: Active
 Type: Supportive 
 Target: Self
-Requirement: Discount Lv: 3
-Description: Grants a chance to randomly increase all skills' SP Cost by 10%, 20%, or 50% while active, and also increases W.ATK by the same numerical value as the SP Cost increase percentage.
-Cancels the effect of Discount.
-[Lv. 1]: Chance: 10%
-[Lv. 2]: Chance: 20%
-[Lv. 3]: Chance: 30%
-[Lv. 4]: Chance: 40%
-[Lv. 5]: Chance: 50%
-[Lv. 6]: Chance: 60%
-[Lv. 7]: Chance: 70%
-[Lv. 8]: Chance: 80% 
-[Lv. 9]: Chance: 90% 
-[Lv.10]: Chance: 100%`,
+SP Cost: 5 + (2 × Skill Lv)
+Duration: 300 Seconds
+Requirement: Pushcart Lv: 3, Discount Lv: 3
+Description:
+Basic attacks consume 3 SP (Flat)
+Skills have their SP Cost increased by:
+- (10 + (2 × Skill Lv))% + 3 Flat SP
+Flat SP is applied at the end and is not affected by the skill itself
+Increases Extra Attack / Extra Magical Attack by (10 + (2 × Skill Lv))
+
+With Zeny Pouch cost (Skill Lv x 2):
+- Increases Extra Attack / Extra Magical Attack by +10
+
+[Lv. 1]: SP increase: 12% + 3 SP, E.ATK/MATK Increase: 12
+[Lv. 2]: SP increase: 14% + 3 SP, E.ATK/MATK Increase: 14
+[Lv. 3]: SP increase: 16% + 3 SP, E.ATK/MATK Increase: 16
+[Lv. 4]: SP increase: 18% + 3 SP, E.ATK/MATK Increase: 18
+[Lv. 5]: SP increase: 20% + 3 SP, E.ATK/MATK Increase: 20
+[Lv. 6]: SP increase: 22% + 3 SP, E.ATK/MATK Increase: 22
+[Lv. 7]: SP increase: 24% + 3 SP, E.ATK/MATK Increase: 24
+[Lv. 8]: SP increase: 26% + 3 SP, E.ATK/MATK Increase: 26
+[Lv. 9]: SP increase: 28% + 3 SP, E.ATK/MATK Increase: 28
+[Lv.10]: SP increase: 30% + 3 SP, E.ATK/MATK Increase: 30`,
     img: overcharge,
   },
 ];
