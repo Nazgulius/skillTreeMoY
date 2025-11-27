@@ -173,8 +173,11 @@ After Cast Delay: 0.50s
 Range: 9
 SP Cost: 35
 Requirement: Acid Terror Lv: 5
-Description: Throws resources into Demonstration cells, causing chemical reactions in the area.
+Description: 
+Throws resources into Demonstration cells, causing chemical reactions in the area.
+
 Never Miss
+
 [Lv. 1]: Oil Bottle: Increases Demonstration damage.
 [Lv. 2]: Explosive Powder: Deals M.DMG damage to enemies within a 7x7 AoE and Knocks them back 4 cells. Ignores Auto Guard.
 [Lv. 3]: Smoke Powder: Reduces P.DMG damage taken by 20% and increases FLEE by 20% for all entities within its 5x5 AoE. Ends all Demonstration cells within the area.
@@ -649,17 +652,25 @@ Range: 9
 SP Cost: 5
 Requirement: Sling Item Lv: 3
 Description: Consumes a Potion to restore the target's HP, scaling with the user's INT, the learned level of Throwing Potions Techniques and skill level, and the target's VIT.
-[Lv. 1]: Red Potion.
-[Lv. 2]: Orange Potion
-[Lv. 3]: Yellow Potion
-[Lv. 4]: Green Potion
-[Lv. 5]: White Potion
-[Lv. 6]: Condensed Red Potion
-[Lv. 7]: Condensed Orange Potion
-[Lv. 8]: Condensed Yellow Potion
-[Lv. 9]: Condensed Green Potion
-[Lv.10]: Condensed White Potion
-Formula: Healing (%): 100 + INT + Target VIT + (T. P. Techniques Lv x 5) `,
+[Lv. 1]: Red Potion. CD - 2s. ACD - 1s.
+[Lv. 2]: Red Potion. CD - 1s. ACD - 0.5s.
+[Lv. 3]: Orange Potion. CD - 2s. ACD - 1s.
+[Lv. 4]: Orange Potion. CD - 1s. ACD - 0.5s.
+[Lv. 5]: Yellow Potion. CD - 2s. ACD - 1s.
+[Lv. 6]: Yellow Potion. CD - 1s. ACD - 0.5s.
+[Lv. 7]: Green Potion. CD - 2s. ACD - 1s.
+[Lv. 8]: Green Potion. CD - 1s. ACD - 0.5s.
+[Lv. 9]: White Potion. CD - 2s. ACD - 1s.
+[Lv.10]: White Potion. CD - 1s. ACD - 0.5s.
+
+Base Healing:
+Red Potion - (5 * Target Base Lv) + 120 
+Orange Potion - (4 * Target Base Lv) + 240 
+Yellow Potion - (3 * Target Base Lv) + 480 
+Green Potion - (2 * Target Base Lv) + 960 
+White Potion - (1 * Target Base Lv) + 1920 
+
+Formula: Final Heal: (((Base Healing * (100 + INT + (Target VIT / 2))) / 100) * ((Skill Lv * 5) + (T. P. Techniques Lv x 5))) / 100 `,
     img: potionPitcher,
   },
   {

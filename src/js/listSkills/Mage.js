@@ -21,7 +21,7 @@ import sight from '../../img/icon_mag/icon_mag_10.png';
 
 
 // skills Mage
-export const skillsMage = [
+export const skillsMage = [    
   { 
     id: "fireBolt",
     level: 0,
@@ -53,8 +53,9 @@ Description: Deals M.DMG to the target, scaling with Base Level when manually ca
 [Lv 8]: 8 Hits, VCT: 2.30s, FCT: 0.90s SP Cost: 26,
 [Lv 9]: 9 Hits, VCT: 2.75s, FCT: 1.05s SP Cost: 28,
 [Lv 10]: 10 Hits, VCT: 3.20s, FCT: 1.20s SP Cost: 30
-Formula: MATK (%): (100 + Manually Cast Bonus) x Hits
-Manually Cast Bonus: (100 x Base Lv^2) / 10000`,
+Formula: MATK (%): (100 + Base Lv Bonus) x Hits
+Base Lv Bonus: (100 x Base Lv^2) / 10000
+The Base Lv Bonus is not consider on auto-cast`,
     img: fireBolt,
   },
   {

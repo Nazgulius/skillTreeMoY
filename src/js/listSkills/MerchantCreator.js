@@ -172,17 +172,25 @@ SP Cost: 30
 Requirement: Potion Pitcher Lv: 5
 Description: Consumes a potion to restore HP of allies within a 7x7 AoE around the targeted location, scaling with the user's INT, the learned level of Throwing Potions Techniques and Potion Pitcher, and the target's VIT.
 CD scales with skill level.
-[Lv. 1]: Red Thick Potion CD: 0.40s
-[Lv. 2]: Red Thick Potion CD: 0.20s
-[Lv. 3]: Orange Thick Potion CD: 0.80s
-[Lv. 4]: Orange Thick Potion CD: 0.40s
-[Lv. 5]: Yellow Thick Potion CD: 1.20s
-[Lv. 6]: Yellow Thick Potion CD: 0.60s
-[Lv. 7]: Green Thick Potion CD: 1.60s
-[Lv. 8]: Green Thick Potion CD: 0.80s
-[Lv. 9]: White Thick Potion CD: 2.00s
-[Lv.10]: White Thick Potion CD: 1.00s
-Formula: Healing: (Potion Healing x (100 + INT + Target Vit + (Potion Pitcher Lv x 5) + (T. P. Techniques Lv x 5))) / 100 `,
+[Lv. 1]: Red Potion. CD - 2s. ACD - 1s.
+[Lv. 2]: Red Potion. CD - 1s. ACD - 0.5s.
+[Lv. 3]: Orange Potion. CD - 2s. ACD - 1s.
+[Lv. 4]: Orange Potion. CD - 1s. ACD - 0.5s.
+[Lv. 5]: Yellow Potion. CD - 2s. ACD - 1s.
+[Lv. 6]: Yellow Potion. CD - 1s. ACD - 0.5s.
+[Lv. 7]: Green Potion. CD - 2s. ACD - 1s.
+[Lv. 8]: Green Potion. CD - 1s. ACD - 0.5s.
+[Lv. 9]: White Potion. CD - 2s. ACD - 1s.
+[Lv.10]: White Potion. CD - 1s. ACD - 0.5s.
+
+Base Healing:
+Red Potion - (5 * Target Base Lv) + 120 
+Orange Potion - (4 * Target Base Lv) + 240 
+Yellow Potion - (3 * Target Base Lv) + 480 
+Green Potion - (2 * Target Base Lv) + 960 
+White Potion - (1 * Target Base Lv) + 1920 
+
+Formula: Final Heal: (((Base Healing * (100 + INT + (Target VIT / 2))) / 100) * ((Skill Lv * 5) + (T. P. Techniques Lv x 5))) / 100 `,
     img: potionSpreader,
   },
 ];

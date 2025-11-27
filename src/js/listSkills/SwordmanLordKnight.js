@@ -30,18 +30,18 @@ Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
 Requirement: Sword Quicken Lv: 5
-Description: Temporarily increases T.ATK, scaling with CRIT. Bonus is doubled for basic attacks.
-[Lv. 1]: T.ATK +5%, T.ATK +50 Duration: 60s. SP Cost: 23
-[Lv. 2]: T.ATK +10%, T.ATK +100 Duration: 80s. SP Cost: 26
-[Lv. 3]: T.ATK +15%, T.ATK +150 Duration: 100s. SP Cost: 29 
-[Lv. 4]: T.ATK +20%, T.ATK +200 Duration: 120s. SP Cost: 32
-[Lv. 5]: T.ATK +25%, T.ATK +250 Duration: 140s. SP Cost: 35 
-[Lv. 6]: T.ATK +30%, T.ATK +300 Duration: 160s. SP Cost: 38 
-[Lv. 7]: T.ATK +35%, T.ATK +350 Duration: 180s. SP Cost: 41
-[Lv. 8]: T.ATK +40%, T.ATK +400 Duration: 200s. SP Cost: 44
-[Lv. 9]: T.ATK +45%. T.ATK +450 Duration: 220s, SP Cost: 47
-[Lv.10]: T.ATK +50%, T.ATK +500 Duration: 240s. SP Cost: 50
-T.ATK: + ((T.ATK x (5 x Skill Lv)) / 100) + (50 x Skill Lv) + CRIT `,
+Description: Temporarily increases True Physical Damage, scaling with CRIT. Bonus is doubled for basic attacks.
+[Lv. 1]: TPD +5%, TPD +50 Duration: 60s. SP Cost: 23
+[Lv. 2]: TPD +10%, TPD +100 Duration: 80s. SP Cost: 26
+[Lv. 3]: TPD +15%, TPD +150 Duration: 100s. SP Cost: 29 
+[Lv. 4]: TPD +20%, TPD +200 Duration: 120s. SP Cost: 32
+[Lv. 5]: TPD +25%, TPD +250 Duration: 140s. SP Cost: 35 
+[Lv. 6]: TPD +30%, TPD +300 Duration: 160s. SP Cost: 38 
+[Lv. 7]: TPD +35%, TPD +350 Duration: 180s. SP Cost: 41
+[Lv. 8]: TPD +40%, TPD +400 Duration: 200s. SP Cost: 44
+[Lv. 9]: TPD +45%. TPD +450 Duration: 220s, SP Cost: 47
+[Lv.10]: TPD +50%, TPD +500 Duration: 240s. SP Cost: 50
+TPD: + ((TPD x (5 x Skill Lv)) / 100) + (50 x Skill Lv) + (CRIT x 2)`,
     img: auraBlade,
   },
   {
@@ -59,13 +59,18 @@ Target: Self
 After Cast Delay: 0.30s
 Requirement: None
 Description: While active, grants +100% Max HP, +30% ASPD, +20% ATK for skills, +100% ATK for basic attacks, and -30% WD.
-Drains 1% of Max HP every 3s and reduces HP Recovery and SP Recovery by 90%. Also reduces Healing Eff, Life Steal, DEF, and FLEE.
+Drains 1% of Max HP every 3s and disabled HP Recovery and SP Recovery. Also reduces Healing received from potions, food, items, and skill, as well as Physical Defense.
 Cannot be used while mounted.
-[Lv. 1]: Heal. Eff/Life Steal/DEF -94% Flee -92%, Cooldown: 300s
-[Lv. 2]: Heal. Eff/Life Steal/DEF -88% Flee -84%, Cooldown: 240s
-[Lv. 3]: Heal. Eff/Life Steal/DEF -82% Flee -76%, Cooldown: 180s
-[Lv. 4]: Heal. Eff/Life Steal/DEF -76% Flee -68%, Cooldown: 120s
-[Lv. 5]: Heal. Eff/Life Steal/DEF -70% Flee -60%, Cooldown: 60s`,
+[Lv. 1]: Heal. Eff/Life Steal/DEF -90%, Cooldown: 300s
+[Lv. 2]: Heal. Eff/Life Steal/DEF -80%, Cooldown: 240s
+[Lv. 3]: Heal. Eff/Life Steal/DEF -70%, Cooldown: 180s
+[Lv. 4]: Heal. Eff/Life Steal/DEF -60%, Cooldown: 120s
+[Lv. 5]: Heal. Eff/Life Steal/DEF -50%, Cooldown: 60s
+Max HP (%): +(base Vitality / 2)
+Attack Speed (%): +(Base Agility / 4)
+Basic Attacks Bonus: +100%
+Critical Basic Attacks Bonus: +125%
+Skill Attack Bonus: +25% `,
     img: berserk,
   },
   {
@@ -89,16 +94,16 @@ Requirement: Spear Quicken Lv: 5
 Description: Temporarily increases B.ATK,
 W.ATK and ACC.
 Also increases E.ATK based on 10% of ACC. 
-[Lv. 1]: B.ATK/W.ATK/ACC +7% Duration: 60s. SP Cost: 23
-[Lv. 2]: B.ATK/W.ATK/ACC +9% Duration: 80s. SP Cost: 26
-[Lv. 3]: B.ATK/W.ATK/ACC +11% Duration: 100s. SP Cost: 29
-[Lv. 4]: B.ATK/W.ATK/ACC +13% Duration: 120s. SP Cost: 32
-[Lv. 5]: B.ATK/W.ATK/ACC +15% Duration: 140s. SP Cost: 35 
-[Lv. 6]: B.ATK/W.ATK/ACC +17% Duration: 160s, SP Cost: 38 
-[Lv. 7]: B.ATK/W.ATK/ACC +19% Duration: 180s. SP Cost: 41 
-[Lv. 8]: B.ATK/W.ATK/ACC +21% Duration: 200s. SP Cost: 44 
-[Lv. 9]: B.ATK/W.ATK/ACC +23% Duration: 220s. SP Cost: 47
-[Lv.10]: B.ATK/W.ATK/ACC +25% Duration: 240s. SP Cost: 50`,
+[Lv. 1]: B.ATK +12% ACC +2% Duration: 84s. SP Cost: 23
+[Lv. 2]: B.ATK +14% ACC +4% Duration: 80s. SP Cost: 26
+[Lv. 3]: B.ATK +16% ACC +6% Duration: 100s. SP Cost: 29
+[Lv. 4]: B.ATK +18% ACC +8% Duration: 120s. SP Cost: 32
+[Lv. 5]: B.ATK +20% ACC +10% Duration: 140s. SP Cost: 35 
+[Lv. 6]: B.ATK +22% ACC +12% Duration: 160s, SP Cost: 38 
+[Lv. 7]: B.ATK +24% ACC +14% Duration: 180s. SP Cost: 41 
+[Lv. 8]: B.ATK +26% ACC +16% Duration: 200s. SP Cost: 44 
+[Lv. 9]: B.ATK +28% ACC +18% Duration: 220s. SP Cost: 47
+[Lv.10]: B.ATK +30% ACC +20% Duration: 240s. SP Cost: 50`,
     img: concentration,
   },
   {
@@ -106,7 +111,7 @@ Also increases E.ATK based on 10% of ACC.
     level: 0,
     dependencies: [
       { id: "counterAttack", minLevel: 5 },
-      { id: "twoHandedSwordMastery", minLevel: 10 },
+      { id: "swordQuicken", minLevel: 5 },
     ],
     dependent: [],
     element: null,
@@ -118,15 +123,22 @@ Weapon: Sword-Class
 Type: Supportive 
 Target: Self
 After Cast Delay: 0.30s 
-Cooldown: A.Delay
+Cooldown: Attack Delay
 SP Cost: 30
-Requirement: Counter Attack Lv: 5, Two-Handed Sword Mastery Lv: 10
-Description: Grants a chance to fully block any incoming P.DMG. Block chance is halved while wielding a One-Handed Sword. Briefly immobilizes the character after a successful block.
-[Lv. 1]: Block Chance: 23%. Duration: 30s 
-[Lv. 2]: Block Chance: 26%, Duration: 40s 
-[Lv. 3]: Block Chance: 29%, Duration: 50s 
-[Lv. 4]: Block Chance: 32%, Duration: 60s 
-[Lv. 5]: Block Chance: 35%, Duration: 70s`,
+Duration: (60 + (24 × Skill Lv))s
+Requirement: Counter Attack Lv: 5, Sword Quicken Lv: 5
+Description: Grants a chance to fully block any incoming Physical Damage. Block chance is reduced by 10% when wielding a One- Handed Sword.
+[Lv. 1]: Block Chance: 23%, Duration: 84s 
+[Lv. 2]: Block Chance: 26%, Duration: 108s 
+[Lv. 3]: Block Chance: 29%, Duration: 132s 
+[Lv. 4]: Block Chance: 32%, Duration: 156s 
+[Lv. 5]: Block Chance: 35%, Duration: 180s 
+[Lv. 6]: Block Chance: 38%, Duration: 204s 
+[Lv. 7]: Block Chance: 41%, Duration: 228s
+[Lv. 8]: Block Chance: 44%, Duration: 252s 
+[Lv. 9]: Block Chance: 47%, Duration: 276s 
+[Lv.10]: Block Chance: 50%, Duration: 300s
+Block Chance (1H Sword): ((20 + (3 × Skill Lv)) - 10)%`,
     img: parry,
   },
   {
