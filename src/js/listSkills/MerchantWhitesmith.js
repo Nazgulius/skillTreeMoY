@@ -1,13 +1,13 @@
 
-/*  author Chalykh Maksim 
-  # data 10.02.2025 
+/*  author Chalykh Maksim
+  # data 10.02.2025
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import meltdown from '../../img/icon_wsm/icon_wsm_1.gif'; 
-import foundryPowerUp from '../../img/icon_wsm/icon_wsm_3.gif'; 
-import cartTermination from '../../img/icon_wsm/icon_wsm_4.gif'; 
-import maximumPowerThrust from '../../img/icon_wsm/icon_wsm_5.gif'; 
+import meltdown from '../../img/icon_wsm/icon_wsm_1.gif';
+import foundryPowerUp from '../../img/icon_wsm/icon_wsm_3.gif';
+import cartTermination from '../../img/icon_wsm/icon_wsm_4.gif';
+import maximumPowerThrust from '../../img/icon_wsm/icon_wsm_5.gif';
 
 // список скилов Whitesmith
 export const skillsWhitesmith = [
@@ -41,10 +41,9 @@ Has a chance to inflict Stun for 4.5s.
 Also temporarily grants T.ATK bonus to pushcart Skills.
 VCT scales with WD and the distance from the target, and cannot be decreased by stats or gear.
 High Speed Cart Ram has its own CD, scaling with the distance from the target.
-Catalyst: 3x Zeny Pouch
 
 Formula:
-ATK (%): (((Cart Weight  / (15 - Skill Lv)) x 8000) / 8000) - 100 
+ATK (%): (Skill Lv × 70) + (700 × (Cart Weight ÷ 10000)) + (Weapon Lv × 100)
 VCT (seconds): WD x Skill Lv
 Special Effect:
 Stun Chance (%): 10 + (Skill Lv x 7)
@@ -62,8 +61,8 @@ Duration (seconds): 1 x Skill Lv `,
       { id: "repairWeapon", minLevel: 1 },
       { id: "bladeWeaponReforging", minLevel: 1 },
       { id: "bluntWeaponReforging", minLevel: 1 },
-      { id: "pierceWeaponReforging", minLevel: 1 }, 
-      { id: "magicWeaponReforging", minLevel: 1 }, 
+      { id: "pierceWeaponReforging", minLevel: 1 },
+      { id: "magicWeaponReforging", minLevel: 1 },
       { id: "stringWeaponReforging", minLevel: 1 },
     ],
     dependent: [ ],
@@ -80,10 +79,10 @@ After Cast Delay: 0.30s
 Requirement: Reforge Lv: 5, Exotic Weapon Reforging Lv: 1, Repair Weapon Lv: 1, Blade Weapon Reforging Lv: 1, Blunt Weapon Reforging Lv: 1, Pierce Weapon Reforging Lv: 1, Magic Weapon Reforging Lv: 1, String Weapon Reforging Lv: 1
 Description: Enhances the target's Weapon or Shield for 30s.
 Has a chance for a perfect enhancement, increasing its effectiveness and doubling duration. The chance scales with DEX, LUK, Anvil type, equipment stats and skill level. Requires any type of Anvil in the inventory. Catalyst: 
-  2x Rough Oridecon for Lv. 1~2 Weapons
-  2x Oridecon for Lv. 3~4 Weapons
-  2x Rough Elunium for Lv. 1~2 Shields
-  2x Elunium for Lv. 3~4 Shields
+  Lv 1–2 Weapons: 1× Rough Oridecon, 25× Zeny Pouch
+  Lv 3–4 Weapons: 2× Rough Oridecon, 50× Zeny Pouch
+  Lv 1–2 Shields: 1× Rough Elunium, 25× Zeny Pouch
+  Lv 3–4 Shields: 2× Rough Elunium, 50× Zeny Pouch
 [Lv. 1]: SP Cost: 33
 [Lv. 2]: SP Cost: 36
 [Lv. 3]: SP Cost: 39
@@ -123,7 +122,7 @@ Cooldown: A.Delay
 SP Cost: 15
 Requirement: Power Thrust Lv: 10
 Description: Increases the allies' refine bonus received from their weapon.
-Catalyst: 5x Zeny Pouch
+Catalyst: (Skill Lv × 10) × Zeny Pouch
 [Lv. 1]: Refine Bonus +10%, Duration: 156s 
 [Lv. 2]: Refine Bonus +20%, Duration: 192s 
 [Lv. 3]: Refine Bonus +30%, Duration: 228s 

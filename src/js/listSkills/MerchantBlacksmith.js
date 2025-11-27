@@ -1,28 +1,28 @@
 
-/*  author Chalykh Maksim 
-  # data 10.02.2025 
+/*  author Chalykh Maksim
+  # data 10.02.2025
   # email: chalyh.maksim.88@mail.ru */
 
 import skillImgNo from '../../img/no_img.png'; // заглушка
-import enchantedStoneCraft from '../../img/icon_bsm/icon_bsm_3.gif'; 
-import hiltBinding from '../../img/icon_bsm/icon_bsm_12.gif'; 
-import weaponryResearch from '../../img/icon_bsm/icon_bsm_14.gif'; 
-import repairWeapon from '../../img/icon_bsm/icon_bsm_15.gif'; 
-import skinTempering from '../../img/icon_bsm/icon_bsm_16.gif'; 
-import hammerfall from '../../img/icon_bsm/icon_bsm_17.gif'; 
-import adrenalineRush from '../../img/icon_bsm/icon_bsm_18.gif'; 
-import weaponPerfection from '../../img/icon_bsm/icon_bsm_19.gif'; 
-import powerThrust from '../../img/icon_bsm/icon_bsm_20.gif'; 
-import maximizePower from '../../img/icon_bsm/icon_bsm_21.gif'; 
-import cartBoost from '../../img/icon_wsm/icon_wsm_2.gif'; 
-import metalTempering from '../../img/icon_bsm/icon_bsm_25.png'; 
-import reforge from '../../img/icon_bsm/icon_bsm_39.png'; 
-import bluntWeaponReforging from '../../img/icon_bsm/icon_bsm_33.png'; 
-import pierceWeaponReforging from '../../img/icon_bsm/icon_bsm_34.png'; 
-import magicWeaponReforging from '../../img/icon_bsm/icon_bsm_35.png'; 
-import exoticWeaponReforging from '../../img/icon_bsm/icon_bsm_36.png'; 
-import stringWeaponReforging from '../../img/icon_bsm/icon_bsm_37.png'; 
-import bladeWeaponReforging from '../../img/icon_bsm/icon_bsm_38.png'; 
+import enchantedStoneCraft from '../../img/icon_bsm/icon_bsm_3.gif';
+import hiltBinding from '../../img/icon_bsm/icon_bsm_12.gif';
+import weaponryResearch from '../../img/icon_bsm/icon_bsm_14.gif';
+import repairWeapon from '../../img/icon_bsm/icon_bsm_15.gif';
+import skinTempering from '../../img/icon_bsm/icon_bsm_16.gif';
+import hammerfall from '../../img/icon_bsm/icon_bsm_17.gif';
+import adrenalineRush from '../../img/icon_bsm/icon_bsm_18.gif';
+import weaponPerfection from '../../img/icon_bsm/icon_bsm_19.gif';
+import powerThrust from '../../img/icon_bsm/icon_bsm_20.gif';
+import maximizePower from '../../img/icon_bsm/icon_bsm_21.gif';
+import cartBoost from '../../img/icon_wsm/icon_wsm_2.gif';
+import metalTempering from '../../img/icon_bsm/icon_bsm_25.png';
+import reforge from '../../img/icon_bsm/icon_bsm_39.png';
+import bluntWeaponReforging from '../../img/icon_bsm/icon_bsm_33.png';
+import pierceWeaponReforging from '../../img/icon_bsm/icon_bsm_34.png';
+import magicWeaponReforging from '../../img/icon_bsm/icon_bsm_35.png';
+import exoticWeaponReforging from '../../img/icon_bsm/icon_bsm_36.png';
+import stringWeaponReforging from '../../img/icon_bsm/icon_bsm_37.png';
+import bladeWeaponReforging from '../../img/icon_bsm/icon_bsm_38.png';
 
 // список скилов Blacksmith
 export const skillsBlacksmith = [
@@ -61,7 +61,7 @@ Description: Attempts to Stun enemies within a 5x5 AoE around the targeted locat
       // { id: "enchantedStoneCraft", minLevel: 1 },
       // { id: "metalTempering", minLevel: 1 },
     ],
-    dependent: [      
+    dependent: [
       { id: "foundryPowerUp" },
       { id: "bladeWeaponReforging" },
       { id: "bluntWeaponReforging" },
@@ -97,7 +97,7 @@ Oridecon Anvil: 3
 Anvil: 0
 *Only the highest one is considered `,
     img: reforge,
-  },  
+  },
   {
     id: "bladeWeaponReforging",
     level: 0,
@@ -185,7 +185,7 @@ Description: Grants the ability to perform extraordinary reforges on Magic-type 
 [Lv. 2]: Magic Success Rate +10% 
 [Lv. 3]: Magic Success Rate +15%`,
     img: magicWeaponReforging,
-  },  
+  },
   {
     id: "stringWeaponReforging",
     level: 0,
@@ -275,17 +275,14 @@ Description: Reduces the DMG taken from basic attacks and skills of Fire and Neu
 [Lv. 4]: Fire +16%, Neutral +4% 
 [Lv. 5]: Fire +20%, Neutral +5%`,
     img: skinTempering,
-  }, 
+  },
   {
     id: "adrenalineRush",
     level: 0,
     dependencies: [
-      { id: "axeMastery", minLevel: 3 },
+      { id: "maximizePower", minLevel: 1 },
     ],
-    dependent: [
-      { id: "hiltBinding" },
-      { id: "weaponPerfection" },
-    ],
+    dependent: [],
     element: null,
     skillName: "Adrenaline Rush",
     maxLevel: 10,
@@ -296,30 +293,35 @@ Type: Supportive
 Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
-Requirement: Axe Mastery Lv: 3
-Description: Temporarily increases nearby allies' ASPD by 20%,
-Also increases their CRIT and ACC. [Lv. 1]: CRIT +1. ACC +2. SP Cost: 16 Duration: 84s
-[Lv. 2]: CRIT +2. ACC +4. SP Cost: 18 Duration: 108s
-[Lv. 3]: CRIT +3. ACC +6. SP Cost: 20 Duration: 132s
-[Lv. 4]: CRIT +4. ACC +8. SP Cost: 22 Duration: 156s
-[Lv. 5]: CRIT +5. ACC +10. SP Cost: 24 Duration: 180s
-[Lv. 6]: CRIT +6. ACC +12. SP Cost: 26 Duration: 204s
-[Lv. 7]: CRIT +7. ACC +14. SP Cost: 28 Duration: 228s
-[Lv. 8]: CRIT +8. ACC +16. SP Cost: 30 Duration: 252s
-[Lv. 9]: CRIT +9. ACC +18, SP Cost: 32 Duration: 2765
-[Lv.10]: CRIT +10. ACC +20. SP Cost: 34 Duration: 300s`,
+SP Cost: 10 + (2 × Skill Lv)
+Catalyst: (Skill Lv ÷ 2) × Zeny Pouch
+Duration: 180 Seconds
+Requirement: Maximize Power Lv: 1
+Description:
+Increases nearby allies ASPD, CRIT and ACC. 
+- Attack Speed + (10 + Skill Lv)%
+- Accuracy + (2 × Skill Lv)
+- Critical + Skill Lv
+
+[Lv. 1]: ASPD 11%. CRIT +1. ACC +2. SP Cost: 12
+[Lv. 2]: ASPD 12%. CRIT +2. ACC +4. SP Cost: 14
+[Lv. 3]: ASPD 13%. CRIT +3. ACC +6. SP Cost: 16
+[Lv. 4]: ASPD 14%. CRIT +4. ACC +8. SP Cost: 18
+[Lv. 5]: ASPD 15%. CRIT +5. ACC +10. SP Cost: 20
+[Lv. 6]: ASPD 16%. CRIT +6. ACC +12. SP Cost: 22
+[Lv. 7]: ASPD 17%. CRIT +7. ACC +14. SP Cost: 24
+[Lv. 8]: ASPD 18%. CRIT +8. ACC +16. SP Cost: 26
+[Lv. 9]: ASPD 19%. CRIT +9. ACC +18, SP Cost: 28
+[Lv.10]: ASPD 20%. CRIT +10. ACC +20. SP Cost: 30`,
     img: adrenalineRush,
   },
   {
     id: "weaponPerfection",
     level: 0,
     dependencies: [
-      { id: "adrenalineRush", minLevel: 3 },
+      { id: "maximizePower", minLevel: 3 },
     ],
-    dependent: [
-      { id: "hiltBinding" },
-      { id: "powerThrust" },
-    ],
+    dependent: [],
     element: null,
     skillName: "Weapon Perfection",
     maxLevel: 5,
@@ -329,25 +331,26 @@ Type: Supportive
 Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
-Requirement: Adrenaline Rush Lv: 3
+SP Cost: 15 + (2 × Skill Lv)
+Catalyst: Skill Lv × Zeny Pouch
+Duration: 180 Seconds
+Requirement: Maximize Power Lv: 3
 Description: Temporarily increases nearby allies' Weapon Size Modifier.
-[Lv. 1]: Modifier +5%, SP Cost: 18 Duration: 30s
-[Lv. 2]: Modifier +10%, SP Cost: 16 Duration: 60s
-[Lv. 3]: Modifier +15%, SP Cost: 14 Duration: 90s
-[Lv. 4]: Modifier +20%, SP Cost: 12 Duration: 120s
-[Lv. 5]: Modifier +25%, SP Cost: 10 Duration: 150s`,
+[Lv. 1]: Modifier +5%, SP Cost: 17
+[Lv. 2]: Modifier +10%, SP Cost: 19
+[Lv. 3]: Modifier +15%, SP Cost: 21
+[Lv. 4]: Modifier +20%, SP Cost: 23
+[Lv. 5]: Modifier +25%, SP Cost: 25`,
     img: weaponPerfection,
   },
   {
     id: "powerThrust",
     level: 0,
     dependencies: [
-      { id: "weaponPerfection", minLevel: 3 },
+      { id: "maximizePower", minLevel: 2 },
     ],
     dependent: [
-      { id: "maximumPowerThrust" },
-      { id: "hiltBinding" },
-      { id: "maximizePower" },
+
     ],
     element: null,
     skillName: "Power Thrust",
@@ -358,25 +361,28 @@ Type: Supportive
 Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
-Requirement: Weapon Perfection Lv: 3
+SP Cost: 10 + (2 × Skill Lv)
+Catalyst: (Skill Lv ÷ 2) × Zeny Pouch
+Duration: 180 Seconds
+Requirement: Maximize Power Lv: 2
 Description: Temporarily increases nearby allies' R.ATK.
-[Lv. 1]: R.ATK +7%, SP Cost: 19 Duration: 60s
-[Lv. 2]: R.ATK +9%, SP Cost: 18 Duration: 70s
-[Lv. 3]: R.ATK +11%, SP Cost: 17 Duration: 80s
-[Lv. 4]: R.ATK +13%, SP Cost: 16 Duration: 90s
-[Lv. 5]: R.ATK +15%, SP Cost: 15 Duration: 100s
-[Lv. 6]: R.ATK +17%, SP Cost: 14 Duration: 110s
-[Lv. 7]: R.ATK +19%, SP Cost: 13 Duration: 120s
-[Lv. 8]: R.ATK +21%, SP Cost: 12 Duration: 130s
-[Lv. 9]: R.ATK +23%, SP Cost: 11 Duration: 140s
-[Lv.10]: R.ATK +25%, SP Cost: 10 Duration: 150s`,
+[Lv. 1]: R.ATK +7%, SP Cost: 12
+[Lv. 2]: R.ATK +9%, SP Cost: 14
+[Lv. 3]: R.ATK +11%, SP Cost: 16
+[Lv. 4]: R.ATK +13%, SP Cost: 18
+[Lv. 5]: R.ATK +15%, SP Cost: 20
+[Lv. 6]: R.ATK +17%, SP Cost: 22
+[Lv. 7]: R.ATK +19%, SP Cost: 24
+[Lv. 8]: R.ATK +21%, SP Cost: 26
+[Lv. 9]: R.ATK +23%, SP Cost: 28
+[Lv.10]: R.ATK +25%, SP Cost: 30`,
     img: powerThrust,
-  },  
+  },
   {
     id: "maximizePower",
     level: 0,
     dependencies: [
-      { id: "powerThrust", minLevel: 5 },
+      { id: "weaponryResearch", minLevel: 3 },
     ],
     dependent: [ ],
     element: null,
@@ -389,57 +395,69 @@ Type: Supportive
 Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
-Requirement: Power Thrust Lv: 5
+SP Cost: 15 + (2 × Skill Lv)
+Catalyst: Skill Lv × Zeny Pouch
+Duration: 180 Seconds
+Requirement: Weaponry Research Lv: 3
 Description: Removes P.DMG Variance, ensuring maximum damage while active, but drains SP every 2s.
-Also makes Discount and Overcharge always apply their max bonus.
-[Lv. 1]: SP Drain: 6
-[Lv. 2]: SP Drain: 5
-[Lv. 3]: SP Drain: 4
-[Lv. 4]: SP Drain: 3 
-[Lv. 5]: SP Drain: 2`,
+[Lv. 1]: SP Drain: 17
+[Lv. 2]: SP Drain: 19
+[Lv. 3]: SP Drain: 21
+[Lv. 4]: SP Drain: 23
+[Lv. 5]: SP Drain: 25`,
     img: maximizePower,
   },
   {
     id: "hiltBinding",
     level: 0,
     dependencies: [
-      { id: "adrenalineRush", minLevel: 7 },
-      { id: "powerThrust", minLevel: 7 },
+      { id: "adrenalineRush", minLevel: 3 },
+      { id: "powerThrust", minLevel: 3 },
       { id: "weaponPerfection", minLevel: 3 },
+      { id: "maximizePower", minLevel: 3 },
     ],
-    dependent: [      
-      { id: "weaponryResearch" },
+    dependent: [
     ],
     element: null,
     skillName: "Hilt Binding",
-    maxLevel: 1,
-    inform: `Max Lv: 1
+    maxLevel: 5,
+    inform: `Max Lv: 5
 Skill Form: Passive
 Type: Physical
-Requirement: Adrenaline Rush Lv: 7, Power Thrust Lv: 7, Weapon Perfection Lv: 3
-Description: Infuse your combat prowess. This skill prolongs the effects of Adrenaline Rush, Power Thrust, and Weapon Perfection by 20%, giving your buffs extra staying power. Plus, it enhances these abilities with a bonus +1 STR and +4 Atk.`,
+Requirement: Adrenaline Rush Lv: 3, Power Thrust Lv: 3, Weapon Perfection Lv: 3, Maximize Power Lv: 3
+Description: 
+Increases duration of Maximize Power, Adrenaline Rush, Power Thrust and Weapon Perfection by:
+- (20 + (20 × Skill Lv)) Seconds
+- Grants Strength + (Skill Lv) for each active buff for the user (those four skills)
+`,
     img: hiltBinding,
   },
   {
     id: "weaponryResearch",
     level: 0,
-    dependencies: [
-      { id: "hiltBinding", minLevel: 1 },
-    ],
+    dependencies: [],
     dependent: [ ],
     element: null,
     skillName: "Weaponry Research",
-    maxLevel: 5,
-    inform: `Max Lv: 5
+    maxLevel: 10,
+    inform: `Max Lv: 10
 Skill Form: Passive
 Type: Physical
 Requirement: Hilt Binding Lv: 1
-Description: Increases B.ATK and ACC. 
-[Lv. 1]: B.ATK +4, ACC +4% 
-[Lv. 2]: B.ATK +8, ACC +8% 
-[Lv. 3]: B.ATK +12. ACC +12% 
-[Lv. 4]: B.ATK +16. ACC +16% 
-[Lv. 5]: B.ATK +20. ACC +20%`,
+Description: Increases E.ATK and ACC. 
+- Extra ATK + (2 × Skill Lv)
+- Accuracy + (10 + Skill Lv)%
+
+[Lv. 1]: E.ATK +2, ACC +2% 
+[Lv. 2]: E.ATK +4, ACC +4% 
+[Lv. 3]: E.ATK +6. ACC +6% 
+[Lv. 4]: E.ATK +8. ACC +8% 
+[Lv. 5]: E.ATK +10. ACC +10%
+[Lv. 6]: E.ATK +12. ACC +12%
+[Lv. 7]: E.ATK +14. ACC +14%
+[Lv. 8]: E.ATK +16. ACC +16%
+[Lv. 9]: E.ATK +18. ACC +18%
+[Lv. 10]: E.ATK +20. ACC +20%`,
     img: weaponryResearch,
   },
 ];
