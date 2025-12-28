@@ -8,8 +8,13 @@ p {
 }
 
 body {
-  background-color: #e4e4e7;
+  /* background-color: #e4e4e7; */
+  background-color: rgba(230, 230, 230, 0.8);
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .centre {
@@ -19,6 +24,8 @@ body {
 
 .title-select {
   text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #fff;
 }
 
 .class-list {
@@ -254,7 +261,7 @@ body {
   }
 
   .panel-statistic {
-    max-width: 360px;
+    max-width: 360px;    
   }
 
   
@@ -314,12 +321,33 @@ body {
     background-color: blue;
   }
 
+  .header {
+    border-radius: 30px;    
+    margin: 5px auto;
+    padding: 5px 2% 5px 2%;
+    background: #e6e7e8; /*Запасной однотонный цвет для очень старых браузеров */
+    background: -webkit-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых WebKit (Safari ≤5.1, Chrome ≤25) */
+    background: -moz-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых Firefox (≤3.6) */
+    background: -o-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых Opera (≤12) */
+    background: linear-gradient(to bottom, #e6e7e8, #d1d2d3); /* Стандартный синтаксис (все современные браузеры) */
+ 
+  }
+
   .panel-statistic {
     display: flex;
     width: 710px;
     align-items: center;
-    border: solid 1px;
+    /* border: solid 1px; */
     margin-bottom: 10px;
+    padding-left: 2%;
+
+    border-radius: 30px;    
+    margin: 5px auto;
+    background: #e6e7e8; /*Запасной однотонный цвет для очень старых браузеров */
+    background: -webkit-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых WebKit (Safari ≤5.1, Chrome ≤25) */
+    background: -moz-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых Firefox (≤3.6) */
+    background: -o-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых Opera (≤12) */
+    background: linear-gradient(to bottom, #e6e7e8, #d1d2d3); /* Стандартный синтаксис (все современные браузеры) */
   }
 
   .bnt-reset {
@@ -329,6 +357,20 @@ body {
 
   .statistic-text {
     margin-right: 5px;
+  }
+
+  .statistic-text-head {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #fff;
+    color: #555555;
+  }
+
+  .btn-in-img {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+    color: #0095b6;
+    font-weight: bold;
   }
 
   .red {
