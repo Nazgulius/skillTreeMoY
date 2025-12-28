@@ -216,7 +216,7 @@ export default class App {
     btnHome.textContent = 'Home';    
     btnHome.addEventListener('click', (e) => { 
       e.preventDefault();
-      window.location.href = '/';
+      window.location.href = '/skillTreeMoY/';
     });
     document.body.append(btnHome);
 
