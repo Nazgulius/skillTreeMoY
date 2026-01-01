@@ -40,7 +40,11 @@ Description: Increases E.ATK while wielding Axes. Blacksmiths and Alchemists gai
 [Lv. 8]: One-Handed Axes: E.ATK +16 Two-Handed Axes: E.ATK +24
 [Lv. 9]: One-Handed Axes: E.ATK +18 Two-Handed Axes: E.ATK +27
 [Lv.10]: One-Handed Axes: E.ATK +20 Two-Handed Axes: E.ATK +30
-Formula: E.ATK Bonus: Skill Lv x 1 `,
+Formula: E.ATK Bonus: Skill Lv x 1 
+Effects:
+ - One-Handed Axes: E.ATK and E.MATK +(2 × Skill Lv)
+ - Two-Handed Axes: E.ATK and E.MATK +(4 × Skill Lv)
+Max bonus: +6% Damage on all sizes`,
     img: axeMastery,
   },
   {
@@ -73,7 +77,8 @@ Catalyst: 2x Zeny Pouch for Lv. 6 or higher.
 [Lv. 7]: ATK 450%, Stun chance 8% 
 [Lv. 8]: ATK 500%, Stun chance 12% 
 [Lv. 9]: ATK 550%, Stun chance 16% 
-[Lv.10]: ATK 600%, Stun chance 20%`,
+[Lv.10]: ATK 600%, Stun chance 20%
+Formula: skill lv x 60`,
     img: mammonite,
   },
   {
@@ -142,7 +147,11 @@ Requires a Pushcart.
 [Lv. 8]: SP Cost: 11 
 [Lv. 9]: SP Cost: 12 
 [Lv.10]: SP Cost: 12
-Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight / 200) x Skill Lv) `,
+Formula: ATK (%): 100 + Number of Different Items + ((Pushcart Weight / 200) x Skill Lv)
+Adds cost: (Skill Lv ÷ 2) Zeny Pouch
+Pushcart always counts as 100 different items
+Targets colliding with obstacles take the damage again
+Targets that cannot be pushed always receive the bonus damage `,
     img: cartRevolution,
   },
   {
@@ -166,7 +175,7 @@ Cooldown: 1.50s
 Range: 1
 Hits: 3
 Requirement: Cart Revolution Lv: 5
-Description: Deals P.DMG to enemies within a 5x5 AoE, Knocking them back 1 cell.
+Description: Deals P.DMG to enemies within a 7x7 AoE, Knocking them back 1 cell.
 The damage scales with VIT, Base Level, the number of different items in the Pushcart and its current weight.
 Requires a Pushcart.
 [Lv. 1]: SP Cost: 6
@@ -174,7 +183,9 @@ Requires a Pushcart.
 [Lv. 3]: SP Cost: 8 
 [Lv. 4]: SP Cost: 9 
 [Lv. 5]: SP Cost: 10
-Formula: ATK (%): 100 + ((Pushcart Weight / (400 - Number of Different Items)) x Skill Lv) x (1 + ((VIT / 30) x (Base Lv / 100)))) `,
+Formula: ATK (%): 200 + ((Pushcart Weight ÷ (500 - Number of Different Items)) × Skill Lv) × (1 + ((VIT ÷ 30) × (Base Lv ÷ 100))) 
+Adds cost: (Skill Lv) Zeny Pouch
+Pushcart always counts as 100 different items`,
     img: cartTwister,
   },
   {
@@ -193,6 +204,8 @@ Type: Supportive
 Target: Self
 After Cast Delay: 0.30s
 Cooldown: A.Delay
+SP Cost: 5 + (2 × Skill Lv)
+Duration: 300 seconds
 Requirement: Pushcart Lv: 3
 Description: Grants a chance to randomly reduce all skills' SP Cost by 10%, 20% or 50% while active.
 Cancels the effect of Overcharge. 
@@ -205,7 +218,10 @@ Cancels the effect of Overcharge.
 [Lv. 7]: Chance: 70%
 [Lv. 8]: Chance: 80% 
 [Lv. 9]: Chance: 90% 
-[Lv.10]: Chance: 100%`,
+[Lv.10]: Chance: 100%
+Adds cost: (Skill Lv × 2) Zeny Pouch
+SP Cost reduction increased by +10%
+Effect: Reduces SP Cost by (10 + (2 × Skill Lv))%.`,
     img: discount,
   },
   {
@@ -222,6 +238,8 @@ Cancels the effect of Overcharge.
 Skill Form: Active
 Type: Supportive 
 Target: Self
+SP Cost: 5 + (2 × Skill Lv)
+Duration: 300 seconds
 Requirement: Discount Lv: 3
 Description: Grants a chance to randomly increase all skills' SP Cost by 10%, 20%, or 50% while active, and also increases W.ATK by the same numerical value as the SP Cost increase percentage.
 Cancels the effect of Discount.
@@ -234,7 +252,14 @@ Cancels the effect of Discount.
 [Lv. 7]: Chance: 70%
 [Lv. 8]: Chance: 80% 
 [Lv. 9]: Chance: 90% 
-[Lv.10]: Chance: 100%`,
+[Lv.10]: Chance: 100%
+Adds cost: (Skill Lv × 2) Zeny Pouch
+Extra Attack and Extra Magical Attack increased by +10
+Effect:
+- Basic attacks consume 3 SP (flat)
+- Skills have their SP Cost increased by (10 + (2 × Skill Lv))% + 3 SP (flat)
+  (flat value applied at the end of the calculation)
+- Increases Extra Attack / Extra Magical Attack by (10 + (2 × Skill Lv))`,
     img: overcharge,
   },
 ];

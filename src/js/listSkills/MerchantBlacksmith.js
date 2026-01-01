@@ -95,141 +95,13 @@ Emperium Anvil 10
 Golden Anvil: 5
 Oridecon Anvil: 3
 Anvil: 0
-*Only the highest one is considered `,
+*Only the highest one is considered 
+- UPDATE:
+All versions of Weapon Reforging have been removed from the skill tree.
+Their effects now belong to Reforge.`,
     img: reforge,
   },  
-  {
-    id: "bladeWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Blade Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: Grants the ability to perform extraordinary reforges on Blade-type weapons. Also increases the success rate of reforging Blade-type weapons.
-[Lv. 1]: Blade Success Rate +5% 
-[Lv. 2]: Blade Success Rate +10% 
-[Lv. 3]: Blade Success Rate +15%`,
-    img: bladeWeaponReforging,
-  },
-  {
-    id: "bluntWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Blunt Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: Grants the ability to perform extraordinary reforges on Blunt-type weapons. Also increases the success rate of reforging Blunt-type weapons.
-[Lv. 1]: Blunt Success Rate +5% 
-[Lv. 2]: Blunt Success Rate +10% 
-[Lv. 3]: Blunt Success Rate +15%`,
-    img: bluntWeaponReforging,
-  },
-  {
-    id: "pierceWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Pierce Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: Grants the ability to perform extraordinary reforges on Pierce-type weapons. Also increases the success rate of reforging Pierce-type weapons.
-[Lv. 1]: Pierce Success Rate +5% 
-[Lv. 2]: Pierce Success Rate +10% 
-[Lv. 3]: Pierce Success Rate +15%`,
-    img: pierceWeaponReforging,
-  },
-  {
-    id: "magicWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Magic Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: Grants the ability to perform extraordinary reforges on Magic-type weapons. Also increases the success rate of reforging Magic-type weapons.
-[Lv. 1]: Magic Success Rate +5% 
-[Lv. 2]: Magic Success Rate +10% 
-[Lv. 3]: Magic Success Rate +15%`,
-    img: magicWeaponReforging,
-  },  
-  {
-    id: "stringWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "String Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: Grants the ability to perform extraordinary reforges on String-type weapons. Also increases the success rate of reforging String-type weapons.
-[Lv. 1]: String Success Rate +5% 
-[Lv. 2]: String Success Rate +10% 
-[Lv. 3]: String Success Rate +15%`,
-    img: stringWeaponReforging,
-  },
-  {
-    id: "exoticWeaponReforging",
-    level: 0,
-    dependencies: [
-      { id: "reforge", minLevel: 1 },
-    ],
-    dependent: [
-      { id: "foundryPowerUp" },
-    ],
-    element: null,
-    skillName: "Exotic Weapon Reforging",
-    maxLevel: 3,
-    inform: `Max Lv: 3
-Skill Form: Passive
-Type: Physical
-Requirement: Reforge Lv: 1
-Description: Grants the ability to perform extraordinary reforges on Exotic-type weapons. Also increases the success rate of reforging Exotic-type weapons.
-[Lv. 1]: Exotic Success Rate +5% 
-[Lv. 2]: Exotic Success Rate +10% 
-[Lv. 3]: Exotic Success Rate +15%`,
-    img: exoticWeaponReforging,
-  },
+  
   {
     id: "repairWeapon",
     level: 0,
@@ -441,6 +313,138 @@ Description: Increases B.ATK and ACC.
 [Lv. 4]: B.ATK +16. ACC +16% 
 [Lv. 5]: B.ATK +20. ACC +20%`,
     img: weaponryResearch,
+  },
+  {
+    id: "bladeWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Blade Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Blade-type weapons. Also increases the success rate of reforging Blade-type weapons.
+[Lv. 1]: Blade Success Rate +5% 
+[Lv. 2]: Blade Success Rate +10% 
+[Lv. 3]: Blade Success Rate +15%`,
+    img: bladeWeaponReforging,
+  },
+  {
+    id: "bluntWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Blunt Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Blunt-type weapons. Also increases the success rate of reforging Blunt-type weapons.
+[Lv. 1]: Blunt Success Rate +5% 
+[Lv. 2]: Blunt Success Rate +10% 
+[Lv. 3]: Blunt Success Rate +15%`,
+    img: bluntWeaponReforging,
+  },
+  {
+    id: "pierceWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Pierce Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Pierce-type weapons. Also increases the success rate of reforging Pierce-type weapons.
+[Lv. 1]: Pierce Success Rate +5% 
+[Lv. 2]: Pierce Success Rate +10% 
+[Lv. 3]: Pierce Success Rate +15%`,
+    img: pierceWeaponReforging,
+  },
+  {
+    id: "magicWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Magic Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Magic-type weapons. Also increases the success rate of reforging Magic-type weapons.
+[Lv. 1]: Magic Success Rate +5% 
+[Lv. 2]: Magic Success Rate +10% 
+[Lv. 3]: Magic Success Rate +15%`,
+    img: magicWeaponReforging,
+  },  
+  {
+    id: "stringWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "String Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on String-type weapons. Also increases the success rate of reforging String-type weapons.
+[Lv. 1]: String Success Rate +5% 
+[Lv. 2]: String Success Rate +10% 
+[Lv. 3]: String Success Rate +15%`,
+    img: stringWeaponReforging,
+  },
+  {
+    id: "exoticWeaponReforging",
+    level: 0,
+    dependencies: [
+      { id: "reforge", minLevel: 1 },
+    ],
+    dependent: [
+      { id: "foundryPowerUp" },
+    ],
+    element: null,
+    skillName: "Exotic Weapon Reforging",
+    maxLevel: 3,
+    inform: `Max Lv: 3
+Skill Form: Passive
+Type: Physical
+Requirement: Reforge Lv: 1
+Description: Grants the ability to perform extraordinary reforges on Exotic-type weapons. Also increases the success rate of reforging Exotic-type weapons.
+[Lv. 1]: Exotic Success Rate +5% 
+[Lv. 2]: Exotic Success Rate +10% 
+[Lv. 3]: Exotic Success Rate +15%`,
+    img: exoticWeaponReforging,
   },
 ];
 
