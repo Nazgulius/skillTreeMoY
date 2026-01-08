@@ -13,10 +13,10 @@ import meteorStorm from '../../img/icon_wiz/icon_wiz_9.png';
 import quagmire from '../../img/icon_wiz/icon_wiz_10.png';
 import stormGust from '../../img/icon_wiz/icon_wiz_11.png';
 import waterBall from '../../img/icon_wiz/icon_wiz_13.png';
-// import electricalInduction from '../../img/icon_wiz/icon_wiz_electricalinduction.png';
 import gemmancy from '../../img/icon_wiz/icon_wiz_gemmancy.png';
 import violentQuake from '../../img/icon_wiz/icon_wiz_violentquake.png';
 import electricalInduction from '../../img/icon_wiz/icon_wiz_17.png';
+import staffMastery from '../../img/icon_wiz/icon_wiz_staffMastery.png';
 
 // skills Wizard
 
@@ -46,7 +46,7 @@ When the skill is maxed: Cooldown -6%
 [Lv. 8]: One-Handed Staff: E.MATK +24, Tho-Handed Staff: E.MATK +32
 [Lv. 9]: One-Handed Staff: E.MATK +27, Tho-Handed Staff: E.MATK +36
 [Lv.10]: One-Handed Staff: E.MATK +30, Tho-Handed Staff: E.MATK +40`,
-    img: skillImgNo,
+    img: staffMastery,
   },
   { 
     id: "sightrasher",
