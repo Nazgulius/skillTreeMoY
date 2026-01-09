@@ -157,8 +157,16 @@ a {
   box-shadow: 4px 3px 3px 3px gray;
 }
 
+.btn-in-img {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 22px;
+  color: #0095b6;
+  font-weight: bold;
+}
+
 .button-select-img:hover {
-  background-color: #c6c4e6;
+  background-color: #bab7e2;
 }
 
 .job-tree {
@@ -253,7 +261,9 @@ a {
   background-color: #add8e6;
 }
 
-@media (max-width: 699px) {
+
+
+@media (max-width: 699px) { 
   .job-tree {
     display: flex;
     flex-direction: column;
@@ -323,7 +333,7 @@ a {
 
   .header {
     border-radius: 30px;    
-    margin: 5px auto;
+    margin: 5px 22%;
     padding: 5px 2% 5px 2%;
     background: #e6e7e8; /*Запасной однотонный цвет для очень старых браузеров */
     background: -webkit-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых WebKit (Safari ≤5.1, Chrome ≤25) */
@@ -331,6 +341,20 @@ a {
     background: -o-linear-gradient(top, #e6e7e8, #d1d2d3); /* Для старых Opera (≤12) */
     background: linear-gradient(to bottom, #e6e7e8, #d1d2d3); /* Стандартный синтаксис (все современные браузеры) */
  
+  }
+
+  @media (max-width: 1155px) {
+    .header {
+      margin: 0 10%;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .header {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .panel-statistic {
@@ -365,13 +389,7 @@ a {
     color: #555555;
   }
 
-  .btn-in-img {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 22px;
-    color: #0095b6;
-    font-weight: bold;
-  }
+  
 
   .red {
     background-color: red;  

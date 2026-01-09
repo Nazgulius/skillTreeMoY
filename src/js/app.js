@@ -151,8 +151,8 @@ export default class App {
         ePopDiv.style.position = 'absolute';
 
         // Вычисляем позицию попапа  
-        const popX = e.clientX;  
-        const popY = e.clientY + 30;  
+        const popX = e.target.offsetLeft;
+        const popY = e.target.offsetTop + e.target.height + 5; 
 
         // Проверка границ экрана  
         const popDivWidth = 200; // Ширина попапа (max-width в CSS)  
