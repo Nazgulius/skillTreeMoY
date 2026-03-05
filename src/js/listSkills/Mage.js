@@ -18,6 +18,7 @@ import napalmBeat from '../../img/icon_mag/icon_mag_11.png';
 import safetyWall from '../../img/icon_mag/icon_mag_9.png';
 import increaseSPRecovery from '../../img/icon_mag/icon_mag_5.png';
 import sight from '../../img/icon_mag/icon_mag_10.png';
+import waterBall from '../../img/icon_wiz/icon_wiz_13.png';
 
 
 // skills Mage
@@ -138,6 +139,7 @@ Formula: MATK (%): 50 `,
     dependent: [
       { id: "frostDiver" }, 
       { id: "frostWeapon" },
+      { id: "waterBall" },
     ],
     element: null,
     skillName: "Cold Bolt",
@@ -173,8 +175,6 @@ Manually Cast Bonus: (100 x Base Lv^2) / 10000`,
       { id: "coldBolt", minLevel: 4 },
     ],
     dependent: [
-      { id: "iceWall" }, 
-      { id: "waterBall" }, 
     ],
     element: null,
     skillName: "Frost Diver",
@@ -204,10 +204,46 @@ Formula: MATK (%); 100 + (Skill Lv x 10) `,
     img: frostDiver,
   },
   {
+    id: "waterBall",
+    level: 0,
+    dependencies: [
+      { id: "coldBolt", minLevel: 4 }, 
+    ],
+    dependent: [
+      { id: "iceWall" },
+      { id: "frostNova" },
+    ],
+    element: null,
+    skillName: "Water Ball",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Enemy
+Element: Water
+Variable Cast Time: 1.20s
+After Cast Delay: 0.50s 
+Cooldown: 1s
+Range: 9
+Hits: 1
+SP Cost: 25
+Requirement: Frost Diver Lv: 3
+Description: Deals M.DMG to enemies within a 7x7 AoE around the target. Enemies on the edge take half damage.
+Inflicts Wet for 10s, and each hit increases its stack by 1.
+Consumes nearby Ice Wall cells or the Deluge cell beneath the user to launch up to 9 additional Water Balls at the same target. The damage from additional Water Balls is split across all enemies hit.
+[Lv. 1]: MATK 140%
+[Lv. 2]: MATK 180%
+[Lv. 3]: MATK 220%
+[Lv. 4]: MATK 260% 
+[Lv. 5]: MATK 300%
+Formula: MATK (%): 100 + (Skill Lv x 40) `,
+    img: waterBall,
+  },
+  {
     id: "iceWall",
     level: 0,
     dependencies: [       
-      { id: "frostDiver", minLevel: 5 },
+      { id: "waterBall", minLevel: 5 },
     ],
     dependent: [],
     element: null,

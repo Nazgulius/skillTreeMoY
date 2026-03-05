@@ -12,11 +12,11 @@ import lordOfVermilion from '../../img/icon_wiz/icon_wiz_8.png';
 import meteorStorm from '../../img/icon_wiz/icon_wiz_9.png';
 import quagmire from '../../img/icon_wiz/icon_wiz_10.png';
 import stormGust from '../../img/icon_wiz/icon_wiz_11.png';
-import waterBall from '../../img/icon_wiz/icon_wiz_13.png';
 import gemmancy from '../../img/icon_wiz/icon_wiz_gemmancy.png';
 import violentQuake from '../../img/icon_wiz/icon_wiz_violentquake.png';
 import electricalInduction from '../../img/icon_wiz/icon_wiz_17.png';
 import staffMastery from '../../img/icon_wiz/icon_wiz_staffMastery.png';
+import iceBlock from '../../img/icon_wiz/icon_wiz_iceBlock.png';
 
 // skills Wizard
 
@@ -149,50 +149,14 @@ Has a chance to inflict Burning for 100s. VCT and FCT scale with skill level.
 Formula: MATK per Tick (%): 100 + (60 x Skill Lv) `,
     img: meteorStorm,
   },
-  
-  {
-    id: "waterBall",
-    level: 0,
-    dependencies: [
-      { id: "frostDiver", minLevel: 3 }, 
-    ],
-    dependent: [
-      { id: "frostNova" },
-    ],
-    element: null,
-    skillName: "Water Ball",
-    maxLevel: 5,
-    inform: `Max Lv: 5
-Skill Form: Active
-Type: Magical
-Target: Enemy
-Element: Water
-Variable Cast Time: 1.20s
-After Cast Delay: 0.50s 
-Cooldown: 1s
-Range: 9
-Hits: 1
-SP Cost: 25
-Requirement: Frost Diver Lv: 3
-Description: Deals M.DMG to enemies within a 7x7 AoE around the target. Enemies on the edge take half damage.
-Inflicts Wet for 10s, and each hit increases its stack by 1.
-Consumes nearby Ice Wall cells or the Deluge cell beneath the user to launch up to 9 additional Water Balls at the same target. The damage from additional Water Balls is split across all enemies hit.
-[Lv. 1]: MATK 140%
-[Lv. 2]: MATK 180%
-[Lv. 3]: MATK 220%
-[Lv. 4]: MATK 260% 
-[Lv. 5]: MATK 300%
-Formula: MATK (%): 100 + (Skill Lv x 40) `,
-    img: waterBall,
-  },
   {
     id: "frostNova",
     level: 0,
     dependencies: [
-      { id: "waterBall", minLevel: 2 }, 
+      { id: "waterBall", minLevel: 3 }, 
     ],
     dependent: [
-      { id: "stormGust" },
+      { id: "iceBlock" },
     ],
     element: null,
     skillName: "Frost Nova",
@@ -218,10 +182,44 @@ Formula: MATK (%): 100 + (100 x Skill Lv) `,
     img: frostNova,
   },
   {
+    id: "iceBlock",
+    level: 0,
+    dependencies: [
+      { id: "frostNova", minLevel: 2 }, 
+    ],
+    dependent: [
+      { id: "stormGust" },
+    ],
+    element: null,
+    skillName: "Ice Block",
+    maxLevel: 5,
+    inform: `Max Lv: 5
+Skill Form: Active
+Type: Magical
+Target: Self
+Fixed Cooldown: 30s
+SP Cost: 20%
+Hits: 3
+Requirement: Frost Nova Lv. 2
+Description: Freezes the user, creating a shield based on Max Health Points.
+While the shield is active, restores 6% Max Health Points every 2s.
+Nearby enemies and enemies that attack the user receive increased Walk Delay by 35%, and reduced Attack Speed by 20% for 5s. 
+While active, the user's element becomes Water.
+Cannot move or use skills while the shield is active.
+Variable Cast Time, Fixed Cast Time and After Cast Delay scale with skill level. 
+[Lv. 1]: VCT: 0.10s. FCT: 0.10s. ACD: 3.00s Duration: 2s
+[Lv. 2]: VCT: 0.20s. FCT: 0.20s. ACD: 6.00s Duration: 4s
+[Lv. 3]: VCT: 0.30s. FCT: 0.30s. ACD: 9.00s Duration: 6s
+[Lv. 4]: VCT: 0.40s. FCT: 0.40s. ACD: 12.00s Duration: 8s
+[Lv. 5]: VCT: 0.50s. FCT: 0.50s. ACD: 15.00s Duration: 10s
+Shield Durability: Ice Block Leanerd Lv x Max HP `,
+    img: iceBlock,
+  },
+  {
     id: "stormGust",
     level: 0,
     dependencies: [
-      { id: "frostNova", minLevel: 3 }, 
+      { id: "iceBlock", minLevel: 3 }, 
     ],
     dependent: [      
     ],
