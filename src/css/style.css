@@ -229,10 +229,17 @@ a {
   background-color: rgb(255, 255, 255);
   position: relative;
   box-sizing: border-box; 
+  transition: 0.2s;
 }
 
 .skill-img:hover {
-  border: solid rgb(252, 229, 127) 3px;  
+  transform:translateY(-2px);
+  box-shadow: 0 2px 0 rgb(192, 192, 192);    
+}
+
+.skill-img:active {
+  transform:translateY(-1px);
+  box-shadow: 0 1px 0 rgb(158, 158, 158);    
 }
 
 .skill-block {
@@ -309,14 +316,25 @@ a {
     height: 12px;
     border-radius: 50%;
     background-color: gray;
-    margin: 3px 2px;
+    margin: 3px 2px 2px;
     cursor: pointer;
+    outline: none;
+    transition: 0.2s;
   }
 
   .dot:hover {
-    background-color: rgb(81, 81, 252);
+    /* background-color: rgb(81, 81, 252); */
+    background-color: rgb(0, 0, 255);
+    transform:translateY(-2px);
+    box-shadow: 0 3px 0 darkblue;    
+
   }
-  
+
+  .dot:active {
+    background-color: rgb(81, 81, 252);
+    transform:translateY(-1px);
+    box-shadow: 0 2px 0 darkblue;    
+  }
   
   .dot-reset {
     width: 15px;
@@ -325,6 +343,19 @@ a {
     background-color: red;
     margin: 2px 2px 0 0;
     cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+  }
+
+  .dot-reset:hover {
+    background-color: red;
+    transform:translateY(-2px);
+    box-shadow: 0 3px 0 darkred;
+  }
+
+  .dot-reset:active {
+    transform:translateY(-1px);
+    box-shadow: 0 2px 0 darkred;
   }
 
   .hidden {
@@ -377,6 +408,40 @@ a {
   .bnt-reset {
     margin: 5px;
     cursor: pointer;
+    border: none;
+    background-color: lightcoral;
+    border-radius: 20px;    
+    outline: none;
+    transform: 0.2s;
+  }
+
+  .bnt-reset:hover {
+    background-color: lightcoral;
+    transform:translateY(-2px);
+    box-shadow: 0 3px 0 #CF524E;
+  }
+
+  .bnt-reset:active {
+    transform:translateY(-1px);
+    box-shadow: 0 2px 0 #CF524E;
+  }
+
+  .btn-home {
+    cursor: pointer;
+    border-radius: 20px;    
+    outline: none;
+    transform: 0.2s;
+  }
+
+  .bnt-home:hover {
+    background-color: darkgray;
+    transform:translateY(-2px);
+    box-shadow: 0 2px 0 gray;
+  }
+
+  .bnt-home:active {
+    transform:translateY(-1px);
+    box-shadow: 0 1px 0 gray;
   }
 
   .statistic-text {

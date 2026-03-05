@@ -99,7 +99,7 @@ export default class App {
 
           //const skillReset = this._skills.find((s) => s.id === skillDiv.id);
 
-          console.log("skillReset:", skillReset);
+          // console.log("skillReset:", skillReset);  // проверка скиллов, которые сбрасываются
 
           if (skillReset) {
             // Сбрасываем уровень скилла и его зависимостей  
