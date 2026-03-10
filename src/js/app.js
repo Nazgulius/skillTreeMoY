@@ -75,7 +75,7 @@ export default class App {
           this.dotToggle(dot);
           skill.level = index +1;
           this.checkDependencies(skill); // Проверяем зависимости
-          //this.checkDependent(skill); // Проверяем зависимых
+          this.checkDependent(skill); // Проверяем зависимых
 
           // считаем количество поинтов
           this.calcUsed();
@@ -228,7 +228,7 @@ export default class App {
 
   resetSkillLevel(skillReset) {  
       skillReset.level = 0;  
-      console.log("skillReset:", skillReset);  
+      // console.log("skillReset:", skillReset);  
     
       if (skillReset.dependent) {  
         skillReset.dependent.forEach((sr) => {  
@@ -239,9 +239,9 @@ export default class App {
           ];  
           const sReset = allSkills.find((s) => s.id === sr.id);  
     
-          console.log("sReset:", sReset);  
+          // console.log("sReset:", sReset);  
           if (sReset) {  
-            console.log("sReset: OK");  
+            // console.log("sReset: OK");  
             this.resetSkillLevel(sReset); // Рекурсивный вызов для зависимых  
           } else {  
             console.warn("Dependent skill not found:", sr.id);  
@@ -283,6 +283,7 @@ export default class App {
           });
         }
 
+        // реиспользование
         if(Boolean(dependentSkill && dependentSkill.dependencies)){
           this.checkDependencies(dependentSkill);
         }
@@ -290,7 +291,7 @@ export default class App {
     }
   }
 
-  // метод для сброса зависимых скиллов
+  // метод для сброса зависимых скиллов (реиспользование внутри себя)
   checkDependent(skill) {
     if (skill.dependent) {
       skill.dependent.forEach((dep) => {
@@ -299,14 +300,28 @@ export default class App {
           ...this._skillsJobTwo,
           ...this._skillsJobTwoHight,
         ];
-        const dependentSkill = allSkills.find((s) => s.id === dep.id);
 
-        if (dependentSkill && dependentSkill.element) {
-          dependentSkill.element.querySelectorAll('.dot').forEach((dot) => {
-            dot.classList.remove("hidden");
-          });
+        // находим наш зависимый скилл
+        const dependentSkill = allSkills.find((s) => s.id === dep.id);
+        if (!dependentSkill) {
+          console.warn(`Dependent skill not found: ${dep.id}`);
+          return;
         }
 
+        // получаем необходимый минимальный левел для зависимого скилла 
+        const ddd = dependentSkill?.dependencies.find((s) => s.id === skill.id).minLevel;
+        
+        // если текущий левел скилла меньше необходимого для зависимого скилла, то обнуляем
+        if (skill.level < ddd) {
+          dependentSkill.level = 0; // обнуляем
+
+          // снимаем точки
+          dependentSkill.element.querySelectorAll('.dot').forEach((dot) => {
+              dot.classList.remove("hidden");
+          }); 
+        } 
+
+        // реиспользование
         if(Boolean(dependentSkill && dependentSkill.dependent)){
           this.checkDependent(dependentSkill);
         }
