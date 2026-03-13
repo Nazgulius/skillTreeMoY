@@ -61,7 +61,9 @@ Formula: S.DEF/S.MDEF: (Skill Lv x 3) + Base Lv `,
   {
     id: "demonBane",
     level: 0,
-    dependencies: [{ id: "divineProtection", minLevel: 3 }],
+    dependencies: [
+      { id: "divineProtection", minLevel: 3 },
+    ],
     dependent: [
       { id: "maceMastery" },
       { id: "basilica" },

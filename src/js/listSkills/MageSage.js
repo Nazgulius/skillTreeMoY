@@ -207,7 +207,6 @@ Catalyst: 1x Scarlet Point
     ],
     dependent: [
       { id: "landProtector" },
-      { id: "psychicWave" },
     ],
     element: null,
     skillName: "Deluge",
@@ -240,7 +239,6 @@ img: deluge,
     ],
     dependent: [
       { id: "landProtector" },
-      { id: "psychicWave" },
     ],
     element: null,
     skillName: "Whirlwind",
@@ -274,7 +272,6 @@ Catalyst: 3x Canary Point
     ],
     dependent: [
       { id: "landProtector" },
-      { id: "psychicWave" },
     ],
     element: null,
     skillName: "Sandstorm",
@@ -307,7 +304,6 @@ Catalyst: 3x Verdant Point
     ],
     dependent: [
       { id: "landProtector" },
-      { id: "psychicWave" },
     ],
     element: null,
     skillName: "Volcano",

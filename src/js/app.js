@@ -306,13 +306,19 @@ export default class App {
         if (!dependentSkill) {
           console.warn(`Dependent skill not found: ${dep.id}`);
           return;
-        }
+        }       
 
         // получаем необходимый минимальный левел для зависимого скилла 
-        const ddd = dependentSkill?.dependencies.find((s) => s.id === skill.id).minLevel;
-        
+        const ddd = dependentSkill?.dependencies.find((s) => s.id === skill.id);
+
+        // если зависимого скилла нет, то не проверяем
+        if (!ddd) {
+          console.warn(`ddd skill not found: ${dep.id}`);
+          return;
+        }
+
         // если текущий левел скилла меньше необходимого для зависимого скилла, то обнуляем
-        if (skill.level < ddd) {
+        if (skill.level < ddd.minLevel) {
           dependentSkill.level = 0; // обнуляем
 
           // снимаем точки
